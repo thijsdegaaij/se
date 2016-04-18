@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Organisatie.create(naam: 'Bakker Bart', bedrijfstak_id: 1, rechtsvorm_id: 1)
-Organisatie.create(naam: 'MediaMarkt', bedrijfstak_id: 1, rechtsvorm_id: 1)
-Organisatie.create(naam: 'Shell', bedrijfstak_id: 1, rechtsvorm_id: 1)
+Organisatie.create(naam: 'Bakker Bart', bedrijfstak_id: 1, rechtsvorm_id: 1, voorkant_image: File.open(Rails.root + "public/uploads/organisatie/voorkant_image/1/bakkerbuitenkant.jpeg"))
+Organisatie.create(naam: 'MediaMarkt', bedrijfstak_id: 1, rechtsvorm_id: 2)
+Organisatie.create(naam: 'Shell', bedrijfstak_id: 1, rechtsvorm_id: 3)
 
 
 Rechtsvorm.create(naam: 'Eenmanszaak', afkorting: 'zzp')

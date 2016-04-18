@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @organisatie.naam %>
+</p>
+
+<p>
+  <strong>Bedrijfstak:</strong>
+  <%= @organisatie.bedrijfstak_id %>
+</p>
+
+<p>
+  <strong>Rechtsvorm:</strong>
+  <%= @organisatie.rechtsvorm_id %>
+</p>
+
+<%= link_to 'Edit', edit_organisatie_path(@organisatie) %> |
+<%= link_to 'Back', organisaties_path %>

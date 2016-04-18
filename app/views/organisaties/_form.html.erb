@@ -1,0 +1,34 @@
+<%= form_for(@organisatie) do |f| %>
+  <% if @organisatie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organisatie.errors.count, "error") %> prohibited this organisatie from being saved:</h2>
+
+      <ul>
+      <% @organisatie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <p><%= f.label "Rechtsvorm?" %></p>
+    <p><%= f.select :rechtsvorm_id, Rechtsvorm.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label "Bedrijfstak?" %></p>
+    <p><%= f.select :bedrijfstak_id, Bedrijfstak.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
+    <%= f.file_field :voorkant_image %>
+    <%= image_tag f.object.voorkant_image_url(:thumb).to_s %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

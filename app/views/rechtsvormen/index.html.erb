@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rechtsvormen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rechtsvormen.each do |rechtsvorm| %>
+      <tr>
+        <td><%= rechtsvorm.naam %></td>
+        <td><%= link_to 'Show', rechtsvorm %></td>
+        <td><%= link_to 'Edit', edit_rechtsvorm_path(rechtsvorm) %></td>
+        <td><%= link_to 'Destroy', rechtsvorm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rechtsvorm', new_rechtsvorm_path %>

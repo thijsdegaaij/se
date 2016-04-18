@@ -1,0 +1,21 @@
+<%= form_for(@bedrijfstak) do |f| %>
+  <% if @bedrijfstak.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bedrijfstak.errors.count, "error") %> prohibited this bedrijfstak from being saved:</h2>
+
+      <ul>
+      <% @bedrijfstak.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

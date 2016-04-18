@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  naam: MyString
+  bedrijfstak_id: 1
+  rechtsvorm_id: 1
+
+two:
+  naam: MyString
+  bedrijfstak_id: 1
+  rechtsvorm_id: 1

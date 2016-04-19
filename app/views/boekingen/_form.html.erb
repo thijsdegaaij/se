@@ -1,0 +1,57 @@
+<%= form_for(@boeking) do |f| %>
+  <% if @boeking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boeking.errors.count, "error") %> prohibited this boeking from being saved:</h2>
+
+      <ul>
+      <% @boeking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :boek_type_id %><br>
+    <%= f.number_field :boek_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :grootboekrekening_id %><br>
+    <%= f.number_field :grootboekrekening_id %>
+  </div>
+  <div class="field">
+    <%= f.label :overeenkomst_id %><br>
+    <%= f.number_field :overeenkomst_id %>
+  </div>
+  <div class="field">
+    <%= f.label :product_id %><br>
+    <%= f.number_field :product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :datum %><br>
+    <%= f.date_select :datum %>
+  </div>
+  <div class="field">
+    <%= f.label :icoon %><br>
+    <%= f.text_field :icoon %>
+  </div>
+  <div class="field">
+    <%= f.label :bij_af %><br>
+    <%= f.text_field :bij_af %>
+  </div>
+  <div class="field">
+    <%= f.label :waarde %><br>
+    <%= f.number_field :waarde %>
+  </div>
+  <div class="field">
+    <%= f.label :p_inkoop %><br>
+    <%= f.number_field :p_inkoop %>
+  </div>
+  <div class="field">
+    <%= f.label :hoeveelheid %><br>
+    <%= f.number_field :hoeveelheid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,11 +2,18 @@ Rails.application.routes.draw do
   
   root "home#index"
   
+  resources :grootboektypes
+  resources :boektypes
+  resources :producten
+  resources :grootboekrekeningen
+  resources :boekingen
+  resources :rechtsvormen
+  resources :bedrijfstakken
+  
   get 'organisaties/h_organisatie'
 
   resources :organisaties
-  resources :rechtsvormen
-  resources :bedrijfstakken
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

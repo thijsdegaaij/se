@@ -16,6 +16,10 @@
 # end
 
 ActiveSupport::Inflector.inflections do |inflect|
+  inflect.singular 'organisaties', 'organisatie'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'bedrijfstak', 'bedrijfstakken'
 end
 
@@ -24,5 +28,22 @@ ActiveSupport::Inflector.inflections do |inflect|
 end
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.singular 'organisaties', 'organisatie'
+  inflect.irregular 'boeking', 'boekingen'
 end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'grootboekrekening', 'grootboekrekeningen'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'grootboektype', 'grootboektypes'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'boektype', 'boektypes'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'product', 'producten'
+end
+

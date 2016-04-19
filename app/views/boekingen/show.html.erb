@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Boek type:</strong>
+  <%= @boeking.boek_type_id %>
+</p>
+
+<p>
+  <strong>Grootboekrekening:</strong>
+  <%= @boeking.grootboekrekening_id %>
+</p>
+
+<p>
+  <strong>Overeenkomst:</strong>
+  <%= @boeking.overeenkomst_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @boeking.product_id %>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @boeking.datum %>
+</p>
+
+<p>
+  <strong>Icoon:</strong>
+  <%= @boeking.icoon %>
+</p>
+
+<p>
+  <strong>Bij af:</strong>
+  <%= @boeking.bij_af %>
+</p>
+
+<p>
+  <strong>Waarde:</strong>
+  <%= @boeking.waarde %>
+</p>
+
+<p>
+  <strong>P inkoop:</strong>
+  <%= @boeking.p_inkoop %>
+</p>
+
+<p>
+  <strong>Hoeveelheid:</strong>
+  <%= @boeking.hoeveelheid %>
+</p>
+
+<%= link_to 'Edit', edit_boeking_path(@boeking) %> |
+<%= link_to 'Back', boekingen_path %>

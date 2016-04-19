@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Grootboektypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Icoon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grootboektypes.each do |grootboektype| %>
+      <tr>
+        <td><%= grootboektype.naam %></td>
+        <td><%= grootboektype.icoon %></td>
+        <td><%= link_to 'Show', grootboektype %></td>
+        <td><%= link_to 'Edit', edit_grootboektype_path(grootboektype) %></td>
+        <td><%= link_to 'Destroy', grootboektype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grootboektype', new_grootboektype_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@grootboekrekening) do |f| %>
+  <% if @grootboekrekening.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grootboekrekening.errors.count, "error") %> prohibited this grootboekrekening from being saved:</h2>
+
+      <ul>
+      <% @grootboekrekening.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <%= f.label :gbr_categorie_id %><br>
+    <%= f.number_field :gbr_categorie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :organisatie_id %><br>
+    <%= f.text_field :organisatie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :icoon %><br>
+    <%= f.text_field :icoon %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

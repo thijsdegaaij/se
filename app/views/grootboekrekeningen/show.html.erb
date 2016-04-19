@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @grootboekrekening.naam %>
+</p>
+
+<p>
+  <strong>Gbr categorie:</strong>
+  <%= @grootboekrekening.gbr_categorie_id %>
+</p>
+
+<p>
+  <strong>Organisatie:</strong>
+  <%= @grootboekrekening.organisatie_id %>
+</p>
+
+<p>
+  <strong>Icoon:</strong>
+  <%= @grootboekrekening.icoon %>
+</p>
+
+<%= link_to 'Edit', edit_grootboekrekening_path(@grootboekrekening) %> |
+<%= link_to 'Back', grootboekrekeningen_path %>

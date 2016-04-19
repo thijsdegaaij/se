@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  boek_type_id: 1
+  grootboekrekening_id: 1
+  overeenkomst_id: 1
+  product_id: 1
+  datum: 2016-04-19
+  icoon: MyString
+  bij_af: MyString
+  waarde: 1
+  p_inkoop: 1
+  hoeveelheid: 1
+
+two:
+  boek_type_id: 1
+  grootboekrekening_id: 1
+  overeenkomst_id: 1
+  product_id: 1
+  datum: 2016-04-19
+  icoon: MyString
+  bij_af: MyString
+  waarde: 1
+  p_inkoop: 1
+  hoeveelheid: 1

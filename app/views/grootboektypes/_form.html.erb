@@ -1,0 +1,25 @@
+<%= form_for(@grootboektype) do |f| %>
+  <% if @grootboektype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grootboektype.errors.count, "error") %> prohibited this grootboektype from being saved:</h2>
+
+      <ul>
+      <% @grootboektype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <%= f.label :icoon %><br>
+    <%= f.text_field :icoon %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

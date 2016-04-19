@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  naam: MyString
+  gbr_categorie_id: 1
+  organisatie_id: MyString
+  icoon: MyString
+
+two:
+  naam: MyString
+  gbr_categorie_id: 1
+  organisatie_id: MyString
+  icoon: MyString

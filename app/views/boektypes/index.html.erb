@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Boektypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boektypes.each do |boektype| %>
+      <tr>
+        <td><%= boektype.naam %></td>
+        <td><%= link_to 'Show', boektype %></td>
+        <td><%= link_to 'Edit', edit_boektype_path(boektype) %></td>
+        <td><%= link_to 'Destroy', boektype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boektype', new_boektype_path %>

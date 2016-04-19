@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Boekingen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Boek type</th>
+      <th>Grootboekrekening</th>
+      <th>Overeenkomst</th>
+      <th>Product</th>
+      <th>Datum</th>
+      <th>Icoon</th>
+      <th>Bij af</th>
+      <th>Waarde</th>
+      <th>P inkoop</th>
+      <th>Hoeveelheid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boekingen.each do |boeking| %>
+      <tr>
+        <td><%= boeking.boek_type_id %></td>
+        <td><%= boeking.grootboekrekening_id %></td>
+        <td><%= boeking.overeenkomst_id %></td>
+        <td><%= boeking.product_id %></td>
+        <td><%= boeking.datum %></td>
+        <td><%= boeking.icoon %></td>
+        <td><%= boeking.bij_af %></td>
+        <td><%= boeking.waarde %></td>
+        <td><%= boeking.p_inkoop %></td>
+        <td><%= boeking.hoeveelheid %></td>
+        <td><%= link_to 'Show', boeking %></td>
+        <td><%= link_to 'Edit', edit_boeking_path(boeking) %></td>
+        <td><%= link_to 'Destroy', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boeking', new_boeking_path %>

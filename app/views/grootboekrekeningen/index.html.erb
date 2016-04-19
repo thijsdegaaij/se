@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Grootboekrekeningen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Gbr categorie</th>
+      <th>Organisatie</th>
+      <th>Icoon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grootboekrekeningen.each do |grootboekrekening| %>
+      <tr>
+        <td><%= grootboekrekening.naam %></td>
+        <td><%= grootboekrekening.gbr_categorie_id %></td>
+        <td><%= grootboekrekening.organisatie_id %></td>
+        <td><%= grootboekrekening.icoon %></td>
+        <td><%= link_to 'Show', grootboekrekening %></td>
+        <td><%= link_to 'Edit', edit_grootboekrekening_path(grootboekrekening) %></td>
+        <td><%= link_to 'Destroy', grootboekrekening, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grootboekrekening', new_grootboekrekening_path %>

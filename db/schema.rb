@@ -11,10 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418145507) do
+ActiveRecord::Schema.define(version: 20160419134419) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "boekingen", force: :cascade do |t|
+    t.integer  "boek_type_id"
+    t.integer  "grootboekrekening_id"
+    t.integer  "overeenkomst_id"
+    t.integer  "product_id"
+    t.date     "datum"
+    t.string   "icoon"
+    t.string   "bij_af"
+    t.integer  "waarde"
+    t.integer  "p_inkoop"
+    t.integer  "hoeveelheid"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "boektypes", force: :cascade do |t|
+    t.string   "naam"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grootboekrekeningen", force: :cascade do |t|
+    t.string   "naam"
+    t.integer  "gbr_categorie_id"
+    t.string   "organisatie_id"
+    t.string   "icoon"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "grootboektypes", force: :cascade do |t|
+    t.string   "naam"
+    t.string   "icoon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,6 +63,13 @@ ActiveRecord::Schema.define(version: 20160418145507) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "voorkant_image"
+  end
+
+  create_table "producten", force: :cascade do |t|
+    t.string   "naam"
+    t.string   "icoon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rechtsvormen", force: :cascade do |t|

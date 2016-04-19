@@ -47,9 +47,10 @@
                             <!-- <div>Bakery shop</div> -->
                             <div>
                               <%= @organisatie_search.naam %>
+                              (<%= @organisatie_search.bedrijfstak.naam %>) 
                             </div>
                             <div class="icon icon-hamburger btn-container-movie button"></div>
-                            <div class="vennootschap"><%= @organisatie_search.rechtsvorm.naam %></div>
+                            <div class="vennootschap"><%= @organisatie_search.rechtsvorm.afkorting %></div>
                         </div>
                     </div>
                     <div class="start">

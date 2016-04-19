@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @grootboektype.naam %>
+</p>
+
+<p>
+  <strong>Icoon:</strong>
+  <%= @grootboektype.icoon %>
+</p>
+
+<%= link_to 'Edit', edit_grootboektype_path(@grootboektype) %> |
+<%= link_to 'Back', grootboektypes_path %>

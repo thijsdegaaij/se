@@ -1,0 +1,2 @@
+module BoektypesHelper
+end

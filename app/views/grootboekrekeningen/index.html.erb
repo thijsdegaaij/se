@@ -17,7 +17,7 @@
     <% @grootboekrekeningen.each do |grootboekrekening| %>
       <tr>
         <td><%= grootboekrekening.naam %></td>
-        <td><%= grootboekrekening.gbr_categorie_id %></td>
+        <td><%= grootboekrekening.grootboektype_id %></td>
         <td><%= grootboekrekening.organisatie_id %></td>
         <td><%= grootboekrekening.icoon %></td>
         <td><%= link_to 'Show', grootboekrekening %></td>

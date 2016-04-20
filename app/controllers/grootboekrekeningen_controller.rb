@@ -69,6 +69,6 @@ class GrootboekrekeningenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def grootboekrekening_params
-      params.require(:grootboekrekening).permit(:naam, :gbr_categorie_id, :organisatie_id, :icoon)
+      params.require(:grootboekrekening).permit(:naam, :grootboektype_id, :organisatie_id, :icoon)
     end
 end

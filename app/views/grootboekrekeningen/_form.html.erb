@@ -16,12 +16,12 @@
     <%= f.text_field :naam %>
   </div>
   <div class="field">
-    <%= f.label :gbr_categorie_id %><br>
-    <%= f.number_field :gbr_categorie_id %>
+    <p><%= f.label "Grootboekrekeningtype" %></p>
+    <p><%= f.select :grootboektype_id, Grootboektype.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
-    <%= f.label :organisatie_id %><br>
-    <%= f.text_field :organisatie_id %>
+    <p><%= f.label "Organisatie" %></p>
+    <p><%= f.select :organisatie_id, Organisatie.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
     <%= f.label :icoon %><br>

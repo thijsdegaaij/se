@@ -22,10 +22,10 @@
   <tbody>
     <% @boekingen.each do |boeking| %>
       <tr>
-        <td><%= boeking.boektype_id %></td>
-        <td><%= boeking.grootboekrekening_id %></td>
+        <td><%= boeking.boektype.naam %></td>
+        <td><%= boeking.grootboekrekening.naam %></td>
         <td><%= boeking.overeenkomst_id %></td>
-        <td><%= boeking.product_id %></td>
+        <td><%= boeking.product.naam %></td>
         <td><%= boeking.datum %></td>
         <td><%= boeking.icoon %></td>
         <td><%= boeking.bij_af %></td>

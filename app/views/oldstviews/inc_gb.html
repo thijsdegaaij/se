@@ -1,0 +1,80 @@
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $(document.body).on("click", "#btn-mensen", function() {
+        $(".button").removeClass("bold");
+        $("#btn-mensen").addClass("bold");
+        $(".container-markten").hide();
+        $(".container-mensen").show();
+      });
+    $(document.body).on("click", "#btn-markten", function() {
+        $(".button").removeClass("bold");
+        $("#btn-markten").addClass("bold");
+        $(".container-mensen").hide();
+        $(".container-markten").show();
+      });
+
+});
+
+//  Overlay
+    $("#btnOverlay_mensen").mouseenter(function(){
+        $("#overlay_mensen").css ({"display": "inline" });
+    });
+        $("#btnOverlay_mensen").mouseleave(function(){
+        $("#overlay_mensen").css ({"display": "none" });
+    });
+
+// Rode bolletjes
+    $("#piet").hover(function(){
+        $("#img_mens1a").css ({"top": "380px", "left": "100px", "visibility": "visible"});
+        $("#img_mens1b").css ({"top": "370px", "left": "500px", "visibility": "visible"});
+        $("#img_mens1c").css ({"top": "380px", "left": "950px", "visibility": "visible"});
+        $("#img_mens2a").css ({ "visibility": "hidden" });
+        $("#img_mens2b").css ({ "visibility": "hidden"});
+        $("#img_mens2c").css ({ "visibility": "hidden"});
+    });
+
+    $("#jantje").hover(function(){
+        $("#img_mens2a").css ({"top": "380px", "left": "30px", "visibility": "visible"});
+        $("#img_mens2b").css ({"top": "450px", "left": "500px", "visibility": "visible"});
+        $("#img_mens2c").css ({"top": "300px", "left": "1050px", "visibility": "visible"});
+        $("#img_mens1a").css ({ "visibility": "hidden" });
+        $("#img_mens1b").css ({ "visibility": "hidden"});
+        $("#img_mens1c").css ({ "visibility": "hidden"});
+    });
+
+
+</script>
+
+
+
+<div class="header">
+    <div class="title">
+      <div class="icon icon-informatie"> </div>
+      <div class="name">Grafieken en berekeningen</div>
+    </div>
+</div>
+
+
+<div class="topbuttons"> 
+	<div id="btn-mensen" class="button">MENSEN</div>
+	<div id="btn-markten" class="button bold">MARKTEN</div>
+	<div id="btn-x" class="button">X</div>
+</div>
+
+<div class="container-gb">
+
+	<div class="container-mensen displaynone">	
+		<img id="grafieken" src="../images/A2/grafieken.png" width="1191" height="360" alt="grafieken over mensen" style="display:block;"/> 
+	</div>
+
+	<div class="container-markten">
+		<img src="/images/E/SE_E_vraagaanbod.png">	
+	</div>
+	
+</div>
+
+
+
+
+

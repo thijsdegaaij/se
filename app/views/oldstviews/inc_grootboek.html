@@ -1,0 +1,648 @@
+<!-- JS -->
+
+
+
+<script type="text/javascript">
+  $(document).ready(function($) {
+    $('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('400');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('400');
+
+    });
+  });
+</script>
+
+<!-- CSS -->
+<style>
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}
+</style>
+
+
+
+<div class="header"> 
+  <div class="title">
+    <div class="icon icon-informatie"></div>
+    <div class="name">Accounting</div>
+  </div>
+</div>	
+
+<div class="body-accounting">
+
+<!-- 
+data-target="gb1_T;situations-nav-triangle_T;product-nav-expmenu_I;product-nav-triangle_I;begrip-nav-expmenu_I;begrip-nav-triangle_I;teacher-nav-expmenu_I;teacher-nav-triangle_I;people-nav-expmenu_I;people-nav-triangle_I;" -->
+
+
+
+	<div class="col-grootboek">
+		<div class="gbtitle">Grootboek</div>
+		<div class="grootboek">
+			<div class="title">Bakker 1</div> 
+
+		<div id="accordion">	
+			<div  class="group accordion-toggle ">
+				<div class="icon icon-geld"></div>
+				<div>Geld </div>
+				<div>29.000</div>
+				<div></div>
+			</div>
+			<div id="gb1" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-geld"></div>
+					<div>Kas</div>
+					<div>2.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-voorraadstand"></div>
+					<div>begin</div>
+					<div>beginstand</div>
+					<div>3.000</div>
+					<div></div>
+				</div>
+				<div class="rij  ">
+					<div class="iconwide icon-geldin"></div>
+					<div>bij</div>
+					<div>ontvangsten</div>
+					<div>25.000</div>
+					<div></div>
+				</div>
+				<div class="rij ">
+					<div class="iconwide icon-gelduit"></div>
+					<div>af</div>
+					<div>betalingen</div>
+					<div>-1.000</div>
+					<div></div>
+				</div>
+				<div class="rij ">
+					<div class="iconwide icon-gelduit"></div>
+					<div>af</div>
+					<div>stortingen aan bank</div>
+					<div>-25.000</div>
+					<div></div>
+				</div>
+				<div class="rij  ">
+					<div class="iconwide icon-voorraadstand"></div>
+					<div>eind</div>
+					<div>eindstand</div>
+					<div>2.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-rechtgeld"></div>
+					<div>Bank</div>
+					<div>27.000</div>
+					<div></div>
+				</div>
+				<div class="rij ">
+					<div class="iconwide icon-geldin"></div>
+					<div>bij</div>
+					<div>ontvangsten</div>
+					<div>190.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-gelduit"></div>
+					<div>af</div>
+					<div>betalingen</div>
+					<div>-160.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-geldin"></div>
+					<div>bij</div>
+					<div>stortingen van kas</div>
+					<div>25.000</div>
+					<div></div>
+				</div>
+			</div>
+
+			<div  class="group  accordion-toggle ">
+				<div class="icon icon-overeenkomst"></div>
+				<div>Crediteuren en debiteuren</div>
+				<div>-2.000</div>
+				<div></div>
+			</div>
+			<div  id="gb2" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-plichtgeld"></div>
+					<div>Crediteuren</div>
+					<div>-4.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-rechtgeld"></div>
+					<div>Debiteuren</div>
+					<div>2.000</div>
+					<div></div>
+				</div>
+			</div>
+
+			<div class="group  accordion-toggle">
+				<div class="icon icon-overeenkomst"></div>
+				<div>Financi&euml;le producten</div>
+				<div>-3.000</div>
+				<div></div>
+			</div>
+			<div id="gb3" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-rechtgeld"></div>
+					<div>Waardepapieren</div>
+					<div>20.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-plichtgeld"></div>
+					<div>Leningen</div>
+					<div>-21.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-plichdivente"></div>
+					<div class="negev">Rente leningen</div>
+					<div class="negev">-2.000</div>
+					<div></div>
+				</div>
+			</div>
+
+
+			<div  class="group   accordion-toggle">
+				<div class="icon icon-wetovereenkomst"></div>
+				<div>Belastingen</div>
+				<div>-30.000</div>
+				<div></div>
+			</div>
+			<div id="gb4" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-rechtoverheid"></div>
+					<div>BTW terug te vragen</div>
+					<div>6.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-plichtoverheid"></div>
+					<div>BTW te betalen</div>
+					<div>-24.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-plichtoverheid"></div>
+					<div class="negev">Vennootschapsbelasting</div>
+					<div class="negev">-12.000</div>
+					<div></div>
+				</div>
+			</div>
+
+
+			<div  class="group   accordion-toggle">
+				<div class="icon icon-rondje"></div>
+				<div>Vlottende activa / Producten</div>
+				<div>0</div>
+				<div></div>
+			</div>
+			<div id="gb5" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-rondje"></div>
+					<div>Verkocht product A </div>
+					<div>-200.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroommarktuit"></div>
+					<div>af</div>
+					<div>Geleverd </div>
+					<div>-200.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternin"></div>
+					<div>bij</div>
+					<div>Kostprijs </div>
+					<div>168.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-winst"></div>
+					<div>bij</div>
+					<div class="posev">Verkoopresultaat</div>
+					<div class="posev">32.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="icon icon-rondje"></div>
+					<div>In de winkel product A</div>
+					<div>0</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternuit"></div>
+					<div>af</div>
+					<div>Kostprijs product A</div>
+					<div>-168.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternin"></div>
+					<div>bij</div>
+					<div>Inkoopwaarde van de omzet</div>
+					<div>102.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternin"></div>
+					<div>bij</div>
+					<div>Overheadkosten</div>
+					<div>57.000</div>
+					<div></div>
+				</div>
+				<div class="header">
+					<div class="iconwide icon-rondje"></div>
+					<div>Voorraad product A</div>
+					<div>3.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternuit"></div>
+					<div>af</div>
+					<div>Inkoopwaarde van de omzet</div>
+					<div>-102.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroommarktin"></div>
+					<div>bij</div>
+					<div>Inkoop</div>
+					<div>102.000</div>
+					<div></div>
+				</div>
+			</div>
+
+
+			<div  class="group   accordion-toggle">
+				<div class="icon icon-vierkant"></div>
+				<div>Vaste activa</div>
+				<div>25.000</div>
+				<div></div>
+			</div>
+			<div id="gb6" class="accordion-content">
+				<div class="header">
+					<div class="icon icon-vierkant"></div>
+					<div>Winkelinrichting</div>
+					<div>25.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroommarktin"></div>
+					<div>bij</div>
+					<div>inkoop</div>
+					<div>20.000</div>
+					<div></div>
+				</div>
+				<div class="rij">
+					<div class="iconwide icon-stroominternuit"></div>
+					<div>af</div>
+					<div>afschrijving overheadkosten </div>
+					<div>-9.000</div>
+					<div></div>
+				</div></div>
+
+
+
+				<div  class="group  accordion-toggle">
+					<div  class="icon icon-pijlhoofdintern"></div>
+					<div>Functionele kosten</div>
+					<div>0</div>
+					<div></div>
+				</div>
+				<div id="gb7" class="accordion-content">
+					<div class="header">
+						<div  class="icon icon-pijlhoofdintern"></div>
+						<div>Inkoopkosten</div>
+						<div>0</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-stroominternuit"></div>
+						<div>af</div>
+						<div>inkoopkosten</div>
+						<div>-22.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-arbeidinternin"></div>
+						<div>bij</div>
+						<div>arbeid</div>
+						<div>20.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-stroominternin"></div>
+						<div>bij</div>
+						<div>kontoorkosten </div>
+						<div>2.000</div>
+						<div></div>
+					</div>
+					<div class="header">
+						<div class="icon icon-pijlhoofdintern"></div>
+						<div>Overheadkosten</div>
+						<div>0</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-stroominternuit"></div>
+						<div>af</div>
+						<div>overheadkosten</div>
+						<div>-110.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-arbeidinternin"></div>
+						<div>bij</div>
+						<div>arbeid</div>
+						<div>70.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-dienstinternin"></div>
+						<div>bij</div>
+						<div>huur winkel </div>
+						<div>9.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-stroominternin"></div>
+						<div>bij</div>
+						<div>kantoorkosten</div>
+						<div>7.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-dienstinternin"></div>
+						<div>bij</div>
+						<div>reclame </div>
+						<div>10.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-stroominternin"></div>
+						<div>bij</div>
+						<div>energie </div>
+						<div>5.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide icon-dienstinternin"></div>
+						<div>bij</div>
+						<div>afschrijving winkelinrichting </div>
+						<div>9.000</div>
+						<div></div>
+					</div>
+				</div>
+
+
+
+
+				<div  class="group accordion-toggle">
+					<div class="icon icon-pijlhoofdmarkt"></div>
+					<div>Kosten</div>
+					<div>0</div>
+					<div></div>
+				</div>
+				<div id="gb8" class="accordion-content">
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>bij</div>
+						<div>Arbeid</div>
+						<div>90.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Arbeid inkoopkosten</div>
+						<div>-20.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Arbeid overheadkosten</div>
+						<div>-70.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>bij</div>
+						<div>Huur winkel</div>
+						<div>12.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Huur winkel overheadkosten</div>
+						<div>-12.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Kantoorkosten</div>
+						<div>9.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>bij</div>
+						<div>Kantoorkosten inkoopkosten</div>
+						<div>-2.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Kantoorkosten overheadkosten</div>
+						<div>-7.000</div>
+						<div></div>
+					</div>
+					<div class="rij ">
+						<div class="iconwide"></div>
+						<div>bij</div>
+						<div>Reclame</div>
+						<div>10.000</div>
+						<div></div>
+					</div>
+					<div class="rij ">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Reclame overheadkosten</div>
+						<div>-10.000</div>
+						<div></div>
+					</div>
+					<div class="rij ">
+						<div class="iconwide"></div>
+						<div>bij</div>
+						<div>Energie</div>
+						<div>5.000</div>
+						<div></div>
+					</div>
+					<div class="rij">
+						<div class="iconwide"></div>
+						<div>af</div>
+						<div>Energie overheadkosten</div>
+						<div>-5.000</div>
+						<div></div>
+					</div>
+				</div>
+		</div>
+
+
+
+				<div class="break">
+					<div></div>
+					<div></div>
+					<div>+</div>
+					<div></div>
+				</div>
+
+
+
+				<div  class="header  actionAI" data-target="gb9_T;">
+					<div class="icon icon-ev"></div>
+					<div>EIGEN VERMOGEN</div>
+					<div>19.000</div>
+					<div></div>
+				</div>
+				<div  id="gb9" class="inactive display-ai">
+					<div >
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>start</div>
+							<div>Beginstand</div>
+							<div>11.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>bij</div>
+							<div class="posev">Verkoopresultaat</div>
+							<div class="posev">32.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>af</div>
+							<div class="negev">Te betalen rente</div>
+							<div class="negev">-2.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>toename</div>
+							<div class="winstev">Winst voor belasting</div>
+							<div class="winstev">30.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>af</div>
+							<div class="negev">Vennootschapsbelasting</div>
+							<div class="negev">-12.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>toename</div>
+							<div class="winstev">Winst na belasting</div>
+							<div class="winstev">18.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>af</div>
+							<div class="negev">Aan eigenaren</div>
+							<div class="negev">-10.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>toename</div>
+							<div class="winstev">Toename EV</div>
+							<div class="winstev">8.000</div>
+							<div></div>
+						</div>
+						<div class="rij">
+							<div class="iconwide"></div>
+							<div>eind</div>
+							<div class="">Eindstand</div>
+							<div class="">19.000</div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+
+		<div class="afsluiter group expand"></div>
+	</div>		
+
+
+	<div class="col-journaals">
+		<!-- Togle-knop -->
+		<div class="gbtitle displayAction" id="toggleovr" name="subject" type="submit" value="jkljlj">Administratieve gegevens</div>
+		<!-- Overeenkomst -->
+		<div id="ovr" >
+			<div class="head">
+				<div class="text">Overeenkomst</div>
+			</div>
+			<div class="body">
+				<div class="inline" >
+					<div class="text" >Product</div>
+					<input class="form"  type="text" name="koper" value="Product A" >
+					<div class="text">Klant</div>
+					<input class="form" type="text" name="koper" value="Bakker 1" >
+					<div  class="text">Leverancier</div>
+					<input  class="form" type="text" name="koper" value="Leverancier A" >
+				</div>
+				<div class="inline">
+					<div  class="text" >Prijs</div>
+					<input class="form"  type="text" name="koper" value="1,02" >
+					<div  class="text">Te betalen</div>
+					<input  class="form"  type="text" name="koper" value="1020" >
+					<div class="text">Te leveren</div>
+					<input  class="form" type="text" name="koper" value="1.000" >
+				</div>
+				<div class="inline">
+					<div class="text" >Datum</div>
+					<input class="form" type="text" name="datum" value="02-jan-2015" >
+					<div class="text" >Valuta </div>
+					<input  class="form" type="text" name="™€" value="">
+					<div class="text" >Eenheid</div>
+					<input  class="form"type="text" name="stuk" value="stuk" >
+				</div>
+			</div>
+			<div class="scrollyvoorwaarden">
+				<div>VOORWAARDEN</div>
+				<div>Leveren binnen vier werkdagen</div>
+				<div>Betalen binnen drie weken</div>
+				<div>BTW: 21%</div>
+				<div>Totaal te betalen: 1234.41 euro</div>
+				<div>Bevestigd: &#10004;</div>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- body-accounting -->
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <!-- basic includes -->
+  {{>modules}}
+  {{>basicJquery}}
+
+  <!-- special includes -->
+
+  <!-- page js -->
+  <script src='js/proto.js'></script>
+
+
+</head>
+<body>
+
+  {{>navbar}}
+
+  <div class="lessonassignmentspace"></div>
+
+  <div class="contain assigncc  "> 
+  {{>assignments}}
+  </div>
+
+  <div class="contain lesson ">
+  {{>lessons}}
+  </div>
+
+  <div class="simulation">
+
+    <div class="simrow orgdivision">      
+      {{>orgdivision}}     <!-- Nederland -->
+    </div>
+
+    <div class="simrow geldkringloop displaynone">      
+      {{>geldkringloop}}     <!-- Nederland -->
+    </div>
+
+    <div class="simrow mensen displaynone  "> 
+      {{>people}} 
+    </div>
+
+    <div class="simrow simrow-organisations displaynone">
+      {{>org}} <!-- organisations -->
+    </div>
+
+
+    <div class="simrow accountingintern displaynone">
+      {{>accintern}}      
+    </div>
+    
+    <div class="simrow accountingextern displaynone">
+      {{>accextern}}            
+    </div>
+
+
+    <div class="simrow situations displaynone "> 
+      {{>sit}} 
+    </div>
+
+    <div class="simrow markets displaynone ">
+      {{>markets}} 
+    </div>
+
+    <div class="simrowspace">
+      <div></div>
+      <div></div>
+    </div> 
+
+  <!--{{>}}conceptModal moet erin anders doet scrollbalk het niet  -->
+
+ 
+  </div>
+     
+  
+
+
+</body>
+</html>

@@ -7,12 +7,17 @@
 
 <p>
   <strong>Bedrijfstak:</strong>
-  <%= @organisatie.bedrijfstak_id %>
+  <%= @organisatie.bedrijfstak.naam %>
 </p>
 
 <p>
   <strong>Rechtsvorm:</strong>
-  <%= @organisatie.rechtsvorm_id %>
+  <%= @organisatie.rechtsvorm.naam %>
+</p>
+
+<p>
+  <strong>Organisatie gevelplaatje:</strong>
+  <%= image_tag @organisatie.voorkant_image_url(:thumb).to_s %>
 </p>
 
 <%= link_to 'Edit', edit_organisatie_path(@organisatie) %> |

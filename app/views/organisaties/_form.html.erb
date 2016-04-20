@@ -16,15 +16,16 @@
     <%= f.text_field :naam %>
   </div>
   <div class="field">
-    <p><%= f.label "Rechtsvorm?" %></p>
+    <p><%= f.label "Rechtsvorm" %></p>
     <p><%= f.select :rechtsvorm_id, Rechtsvorm.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
-    <p><%= f.label "Bedrijfstak?" %></p>
+    <p><%= f.label "Bedrijfstak" %></p>
     <p><%= f.select :bedrijfstak_id, Bedrijfstak.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
-    <%= f.file_field :voorkant_image %>
+    <p><%= f.label "Organisatie Gevelplaatje" %> <%= f.file_field :voorkant_image %></p>
+    
     <%= image_tag f.object.voorkant_image_url(:thumb).to_s %>
   </div>
   

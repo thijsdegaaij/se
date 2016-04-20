@@ -1,0 +1,724 @@
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+    // Sectoren
+    $(document).ready(function() {
+        $(".container-sectorenuitgebreid .gezinnen, .container-sectorenuitgebreid .vennootschappen, .container-sectorenuitgebreid .fiin, .container-sectorenuitgebreid .overheid").show(); //onzichtbaar zetten van uitgebreid
+        $(".notmoney").hide();
+
+    });
+
+    // weer zichtbaar maken van uitgebreid
+    $(document.body).on("click", ".scthuishouden", function() {
+        $(".sectoruitgebreid").hide();
+        $(".sectoruitgebreid.gezinnen").show();
+    });
+
+    $(document.body).on("click", ".sctnv", function() {
+        $(".sectoruitgebreid").hide();
+        $(".sectoruitgebreid.vennootschappen").show();
+    });
+
+    $(document.body).on("click", ".sctfinancieel", function() {
+        $(".sectoruitgebreid").hide();
+        $(".sectoruitgebreid.fiin").show();
+    });
+
+    $(document.body).on("click", ".sctoverheid", function() {
+        $(".sectoruitgebreid").hide();
+        $(".sectoruitgebreid.overheid").show();
+    });
+
+
+    // Geldkringloop
+    $(document.body).on("click", ".btn-geldkringloop", function() {
+        $(".sectoruitgebreid").toggle();
+        $(".notmoney").hide();
+    });
+    $(document.body).on("click", ".btn-notmoney", function() {
+        $(".btn-notmoney").toggleClass("bold");
+        $(".notmoney").toggle();
+    });
+
+
+});
+</script>
+<div class="flex-rowstart">
+    <div class="navtwee ">
+        <div class="iconwide icon-organisatie-mv displaynone"></div>
+        <div class="navheader btn-geldkringloop button">Geldkringloop</div>
+        <div class="navbtn bold">Monetaire sfeer</div>
+        <div class="navbtn btn-notmoney button">Re&euml;le sfeer</div>
+    </div>
+    <div class="flex-columncenter">      
+        <div class="container-sectorenuitgebreid">
+            <div class="sectoruitgebreid gezinnen">
+                <div class="titel-sector">Gezinnen</div>
+                <div class="onderdeel geldc">
+                    <div>
+                    <div class="midden">
+                        <div class="mleft">
+                            <div class="icon icon-geld"></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                        <div class="mright">
+                            <div class="icon "></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="left">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">C, I, B, S-premie</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                    <div class="right">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">Y-arbeid, Y-kapitaal, S-uitkering</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                </div>
+                <div class="notmoney">
+                    <div class="onderdeel arbeid">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-mens"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-mens"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-arbeidintern"></div>
+                            <div class="naam">Tijd van gezinsleden</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-arbeidmarkt"></div>
+                            <div class="naam">Arbeid voor andere organisaties (Y-arbeid)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel vlottendeconsumentengoederen">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-consumptiegoed"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-consumptiegoed dashed"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-stroommarkt"></div>
+                            <div class="naam">Consumptiegoederen (C)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-dienstintern"></div>
+                            <div class="naam">Zelf gemaakt voor consumptie</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel belasting">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-dienstextern"></div>
+                            <div class="naam">Overheidsdiensten</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg"></div>
+                            <div class="naam">Plicht betalen belasting (B)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel socialeuitkering">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Recht op sociale uitkering (S-uitkering)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg"></div>
+                            <div class="naam">Plicht betalen sociale uitkeringspremie (S-premie)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel kapitaal">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtgeld"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-rechtgeld "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Waardestijging waardepapieren</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg "></div>
+                            <div class="naam">Waardedaling waardepapieren</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel kapitaalrente">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtgeld"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Rente en dividend (Y-kapitaal)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sectoruitgebreid vennootschappen">
+                <div class="titel-sector">Vennootschappen</div>
+                <div class="onderdeel geldc">
+                    <div class="midden">
+                        <div class="mleft">
+                            <div class="icon icon-geld"></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                        <div class="mright">
+                            <div class="icon "></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">Y-arbeid, Y-kapitaal, I, B</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                    <div class="right">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">C, I</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                </div>
+                <div class="notmoney">
+                    <div class="onderdeel arbeid">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon  icon-mens"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-arbeidmarkt"></div>
+                            <div class="naam">Arbeid (Y-arbeid)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel vlottendeconsumentengoederen">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-consumptiegoed"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon"></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-stroommarkt"></div>
+                            <div class="naam">Producten voor consumenten en overheid (C, O)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel investeringen">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-voorraad"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-stroommarkt"></div>
+                            <div class="naam">Investeringen in voorraden (I)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel belasting">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-dienstextern"></div>
+                            <div class="naam">Overheidsdiensten</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg"></div>
+                            <div class="naam">Plicht betalen belasting (B)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel lening">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtgeld "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg "></div>
+                            <div class="naam">Lenen van banken (I)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel lening">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtgeld "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg "></div>
+                            <div class="naam">Verkopen van aandelen (S)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel kapitaalrente">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtgeld"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg"></div>
+                            <div class="naam">Plicht betalen dividend aandeelhouders (Y-kapitaal)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sectoruitgebreid fiin">
+                <div class="titel-sector">Financi&euml;le instellingen</div>
+                <div class="onderdeel geldc">
+                    <div class="midden">
+                        <div class="mleft">
+                            <div class="icon icon-geld"></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                        <div class="mright">
+                            <div class="icon "></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">I, (O-B)</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                    <div class="right">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">S</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                </div>
+                <div class="notmoney">
+                    <div class="onderdeel arbeid">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon  icon-mens"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-arbeidmarkt"></div>
+                            <div class="naam">Arbeid (Y-arbeid)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel lening">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtgeld"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtgeld "></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Geld uitlenen aan overheid en bedrijven (I, O)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg "></div>
+                            <div class="naam">Geld inlenen van consumenten (spaarrekening consumenten) (S)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel aandelen">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtgeld"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Aandelen kopen (I)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon  "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sectoruitgebreid overheidc">
+                <div class="titel-sector">Overheid</div>
+                <div class="onderdeel geldc">
+                    <div class="midden">
+                        <div class="mleft">
+                            <div class="icon icon-geld"></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                        <div class="mright">
+                            <div class="icon "></div>
+                            <div class="beschrijving1"></div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">O, S-uitkering</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                    <div class="right">
+                        <div class="icon icon-geldpijl"></div>
+                        <div class="naam">B, S-premie</div>
+                        <div class="waarde"></div>
+                        <div class="sect"></div>
+                        <div class="bdt"></div>
+                        <div class="beschrijving2"></div>
+                    </div>
+                </div>
+                <div class="notmoney">
+                    <div class="onderdeel arbeid">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon  icon-mens"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-arbeidmarkt"></div>
+                            <div class="naam">Arbeid (Y-arbeid)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon "></div>
+                            <div class="naam"></div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel belasting">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-vierkant"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Recht op innen belasting (B)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-dienstextern"></div>
+                            <div class="naam">Overheidsdiensten</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                    <div class="onderdeel socialeuitkering">
+                        <div class="midden">
+                            <div class="mleft">
+                                <div class="icon icon-rechtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                            <div class="mright">
+                                <div class="icon icon-plichtoverheid"></div>
+                                <div class="beschrijving1"></div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="icon icon-pos"></div>
+                            <div class="naam">Recht op sociale uitkeringspremie (S-premie)</div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon icon-neg"></div>
+                            <div class="naam">Plicht betalen sociale uitkering (S-uitkering) </div>
+                            <div class="waarde"></div>
+                            <div class="sect"></div>
+                            <div class="bdt"></div>
+                            <div class="beschrijving2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>  
+</div>

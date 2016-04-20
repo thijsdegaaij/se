@@ -1,0 +1,88 @@
+<script type="text/javascript">
+
+$(document).ready(function() { 
+    // navbar actions  
+
+
+
+// Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
+
+    $(".btn-nederlandview").addClass("bold");
+    $(document.body).on("click", ".btn-nederlandview", function() {
+        $(".btn-nederlandview").toggleClass("bold");
+        $(".simrow.orgdivision").toggle();
+    });
+    $(document.body).on("click", ".btn-organisatieview", function() {
+        $(".btn-organisatieview").toggleClass("bold");
+        $(".simrow.simrow-organisations").toggle();
+    });
+    $(document.body).on("click", ".btn-marktview", function() {
+        $(".btn-marktview").toggleClass("bold");
+        $(".simrow.markets").toggle();
+    });
+    $(document.body).on("click", ".btn-mensview", function() {
+        $(".btn-mensview").toggleClass("bold");
+        $(".simrow.mensen").toggle();
+    });
+
+
+});
+
+</script>
+
+<div class="navb"> 
+<div class="borderbottomsimulatie"></div>
+  <!-- LOGO -->
+    <div class="logo-se">
+      <img src="/images/logos/logo-se.png" alt="SuperEconomics">
+    </div>
+
+
+  <!-- simrows aanklikken; jquery bij orgdivsion.html!! -->
+    <div class="navheaders">
+      <div class="navbtn btn-nederlandview button">Land</div>
+      <div class="navbtn btn-mensview button">Mensen</div>
+      <div class="navbtn btn-organisatieview button">Organisaties</div>
+      <div class="navbtn btn-marktview button">Markten</div>           
+    </div>
+
+
+    <div class="menus">
+
+  <!-- Zoek -->
+      <div class="concept">
+        <div >
+          <input id="typeahead searchField" type="text" class="form-control typeahead" placeholder="Zoek begrippenuitleg"/>
+        </div>
+        <div id="concept-nav-expmenu" class="expmenu inactive display-ai">
+        </div>
+        <div id="concept-nav-triangle" class="triangle inactive display-ai"> 
+        </div> 
+      </div>
+    </div>
+
+  <!-- SPACE -->
+      <div class="space "></div>
+
+  <!-- Peter -->
+  <div class="rightside flex-row">
+      <div id="btn-teacher" class=" teacher button flex-row"> 
+        <div class="plaatjenaam">
+          <div class="plaatje"><img class="img-learner" src="/images/people/pasfoto/jongen.jpeg"></div>
+          <div class="navtext">Peter</div> 
+          <div class="icon icon-dropdown" ></div>
+        </div>
+        <div id="teacher-nav-expmenu" class="expmenu displaynone">{{>teacher}}</div>
+        <div id="teacher-nav-triangle" class="triangle displaynone"> </div> 
+      </div>
+
+
+  <!-- level -->
+      <div class="level flex-row">
+        <div class="navtext">Level: 1,04 / 27</div>
+        <div class="navtext">Beheersing: 8,3</div>
+        <div class="navtext">3 havo</div>
+      </div>
+  </div>
+</div>
+

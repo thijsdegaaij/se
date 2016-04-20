@@ -1,0 +1,194 @@
+<script>
+$(document).ready(function() {
+
+  $('.opdrachtinhoud').hide();
+  $('#welkom1').show();
+  $('.opdrachtonderdelen').change(function () {
+    $('.opdrachtinhoud').hide();
+    $('#'+$(this).val()).show();
+  });
+
+
+
+
+    $('.assignments .les1 .lesinhoud').hide();
+    $('.assignments .les1 .welkom').show();
+    $('.assignments .les1 .lesonderdelen').change(function() {
+        $('.assignments .les1 .lesinhoud').hide();
+        $('.assignments .les1 .' + $(this).val()).show();
+    });
+
+    $('.assignments .les2 .lesinhoud').hide();
+    $('.assignments .les2 .welkom').show();
+    $('.assignments .les2 .lesonderdelen').change(function() {
+        $('.assignments .les2 .lesinhoud').hide();
+        $('.assignments .les2 .' + $(this).val()).show();
+    });
+
+
+    $(document.body).on("click", ".assignments .icon-hamburger", function() {
+        $(".assignments .lessons-display").toggle();
+    });
+
+    $(document.body).on("click", ".assignments .btn-les1", function() {
+        $(".assignments .lessons-display").slideUp();
+        $(".assignments .les2").hide();
+        $(".assignments .les1").show();
+	});
+
+    
+    $(document.body).on("click", ".assignments .btn-les2", function() {
+        $(".assignments .lessons-display").slideUp();
+        $(".assignments .les1").hide();
+        $(".assignments .les2").show();
+    });
+
+});
+</script>
+
+
+<div class="assignments">
+	<div class="start button">
+		<div>Kies een opdracht</div>
+		 <div class="icon icon-hamburger button"></div>
+	</div>
+	<div class="lijn"></div>
+
+    <!-- leskiezer display -->
+    <div class="lessons-display displaynone">
+        <div class="header-navdisplay">
+            <div class="header">Onderwerpen</div>
+            <div class="icon icon-delete"></div>
+        </div>
+
+        <div class="body">
+            <div id="le-supereconomics" class="active">
+                <div class="btn-les1 dark-hover button">Introductie</div>
+                <div class="module">Algemene economie</div>
+                <ul>
+                    <li class="btn-les2 dark-hover button">H1. Mensen, nut en behoeften</li>
+                    <li class="">H2. Organisaties en hun producten</li>
+                    <li class="">H3. Markten en samenwerken</li>
+                    <li class="">H4. Financi&euml;le producten</li>
+                    <li class="">H5. Overheid</li>
+                    <li class="">H6. Risico's</li>
+                    <li class="">H7. Welvaart en groei</li>
+                    <li class="">H8. Conjunctuur</li>
+                </ul>
+                <div class="module">Bedrijfseconomie</div>
+                <ul>
+                    <li class="">H1. Productie</li>
+                    <li class="">H2. Marketing</li>
+                    <li class="">H3. Financiering</li>
+                    <li class="">H4. Organisatie</li>
+                    <li class="">H5. Accounting</li>
+                    <li class="">H6. Logistiek</li>
+                </ul>
+                <div class="module">Vaardigheden</div>
+                <ol>
+                    <li class="">Houd een spreekbeurt</li>
+                    <li class="">Help een organisatie bij jou in de buurt</li>
+                    <li class=""></li>
+                    <li class=""></li>
+                    <li class=""></li>
+                    <li class=""></li>
+                </ol>
+                <div class="module">Examenvragen</div>
+                <ol>
+                    <li class="">2015 1e tijdvak</li>
+                    <li class="">2015 2e tijdvak</li>
+                    <li class="">2014 1e tijdvak</li>
+                    <li class="btn-les2  dark-hover button">2014 2e tijdvak</li>
+                    <li class="">2013 1e tijdvak</li>
+                    <li class="">2013 2e tijdvak</li>
+                    <li class="">2012 1e tijdvak</li>
+                    <li class="">2012 2e tijdvak</li>
+                    <li class="">2011 1e tijdvak</li>
+                    <li class="">2011 2e tijdvak</li>
+                    <li class="">2010 1e tijdvak</li>
+                    <li class="">2010 2e tijdvak</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+<!-- leskiezer button -->
+
+
+	<div class="lesheader">
+		<div class="lesonderdeel">
+			<div class="lestitel">Eindexamen 2014 2e tijdvak</div>
+			<div class="styled-select">
+				<select class="opdrachtonderdelen">
+				  <option value="welkom1">Opgave 1</option>
+				  <option value="situaties1">Opgave 2</option>
+				  <option value="mensen1">Opgave 3</option>
+				  <option value="producten1">Opgave 4</option>>
+				  <option value="begrippen1">Opgave 5</option>
+				  <option value="mijnresultaten1">Opgave 6</option>
+				</select>
+			</div>
+		</div>
+		<div class="icon icon-hamburger actionAI" data-target="lessons-display_T"></div>
+	</div>
+
+
+
+<!-- les 1 -->
+	<div class="opdrachtcontainer">
+		<div class="body">
+				<!-- 
+				<div class="groepje">
+					<div class="icon icon-sliderarrow actionAI omgedraaid"></div>
+					<div class="icon icon-sliderarrow actionAI"></div>
+				</div> -->
+			
+
+			<div id="welkom1" class="opdrachtinhoud">
+				<div class="kopjetitel">Opgave 1</div>
+				<div class="starter">In deze opgave blijven de belastingen buiten beschouwing.</div>
+				<div class="kopje"></div>
+				<p>PaperTrail bv is een groothandel in papier. Het bedrijf koopt papier in Zweden in en verkoopt dit papier in Nederland. Met haar afnemers heeft PaperTrail langdurige contracten afgesloten over de levering van A4- printerpapier. In deze contracten zijn de hoeveelheid en prijs vastgelegd. <br><br>
+1. (2pt) Verklaar dat PaperTrail het in het magazijn aanwezige papier als gevolg van de contracten niet tot de economische voorraad rekent. </p>
+<p>Het A4-printerpapier wordt verhandeld per pallet. De voorraad- administratie gebeurt volgens het lifo-systeem. Over de maand maart 2015 is het volgende bekend:	
+</p>
+<img src="images/examens/2014-1/lifo.png"><br><br>
+<p>Voor de inkoop van het papier in maart is van een Zweedse transporteur een rekening ontvangen van 24.625 SKR (Zweedse kroon). De transportkosten zijn de enige inkoopkosten. De wisselkoers in maart 2015 is SKR 100 = € 12. De inkoopkosten worden in één keer ten laste van de omzet gebracht in de maand van inkoop.</p>
+<p>2. (3pt) Bereken het resultaat in euro’s als gevolg van de verkopen van printerpapier in maart 2015.</p>
+<p>3. (2pt) Verklaar dat door de inkoopkosten in &eacute;&eacute;n keer ten laste van de omzet te brengen, het resultaat over maart 2015 vertekend is.</p>
+</div>
+
+
+				
+
+			<div id="situaties1" class="opdrachtinhoud">
+				Het icoon voor situaties is <div class="icon icon-situatie"> </div> dat je vind in de bovenste balk. <br><br>
+				Je kunt meerdere situaties bestuderen. We beginnen eenvoudig met 1n persoon op een onbewoond eiland. 
+			</div>
+			<div id="mensen1" class="opdrachtinhoud">
+				De economie is een menswetenschap: de mens staat centraal. Het bestudeert hoe mensen hun behoeften bevredigen met de schaarse middelen die er zijn. Anders gezegd hoe mensen hun geluk optimaliseren met de producten in de wereld. <br><br>
+				Het icoon voor een mens is <div class="icon icon-mens"> </div> dat je vind in de bovenste balk. <span class="button actionAI" 
+      data-target="people-nav-expmenu_T;people-nav-triangle_T;product-nav-expmenu_I;product-nav-triangle_I;begrip-nav-expmenu_I;begrip-nav-triangle_I;situations-nav-expmenu_I;situations-nav-triangle_I;">Hier </span>dus. <br><br>
+				<p>Uit onze wereld hebben wij een selectie van mensen gemaakt die je kunt gebruiken. </p>
+			</div>
+			<div id="producten1" class="opdrachtinhoud">
+				Mensen hebben vele producten ter beschiking. De zon van de natuur, een schoen van Nike en olie van Shell. <br><br> 			
+				Het icoon voor een willekeurig product is <div class="icon icon-product"> </div> en vind je in de bovenste balk. <br><br>
+				<p>Hier staat een selectie van producten die in Nederland beschikbaar zijn.  </p>
+				<p>Productie is het beinvloeden van (de fysieke toestand van) dingen (producten) om (daarmee voor de mens) de gewenste eigenschappen te verkrijgen. Het begrip productiviteit is afgeleid van dit begrip productie.</p>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+

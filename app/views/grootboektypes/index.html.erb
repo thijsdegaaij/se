@@ -15,7 +15,7 @@
     <% @grootboektypes.each do |grootboektype| %>
       <tr>
         <td><%= grootboektype.naam %></td>
-        <td><%= grootboektype.icoon %></td>
+        <td><%= image_tag grootboektype.icoon_url(:thumb).to_s %></td>
         <td><%= link_to 'Show', grootboektype %></td>
         <td><%= link_to 'Edit', edit_grootboektype_path(grootboektype) %></td>
         <td><%= link_to 'Destroy', grootboektype, method: :delete, data: { confirm: 'Are you sure?' } %></td>

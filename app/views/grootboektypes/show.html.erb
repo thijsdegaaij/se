@@ -7,7 +7,7 @@
 
 <p>
   <strong>Icoon:</strong>
-  <%= @grootboektype.icoon %>
+    <%= image_tag @grootboektype.icoon_url(:thumb).to_s %>
 </p>
 
 <%= link_to 'Edit', edit_grootboektype_path(@grootboektype) %> |

@@ -16,8 +16,9 @@
     <% @organisaties.each do |organisatie| %>
       <tr>
         <td><%= organisatie.naam %></td>
-        <td><%= organisatie.bedrijfstak_id %></td>
-        <td><%= organisatie.rechtsvorm_id %></td>
+        <td><%= organisatie.bedrijfstak.naam %></td>
+        <td><%= organisatie.rechtsvorm.naam %></td>
+        <td><%= image_tag organisatie.voorkant_image_url(:thumb).to_s %><td>
         <td><%= link_to 'Show', organisatie %></td>
         <td><%= link_to 'Edit', edit_organisatie_path(organisatie) %></td>
         <td><%= link_to 'Destroy', organisatie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

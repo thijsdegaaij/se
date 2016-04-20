@@ -16,8 +16,8 @@
     <%= f.text_field :naam %>
   </div>
   <div class="field">
-    <%= f.label :icoon %><br>
-    <%= f.text_field :icoon %>
+    <p><%= f.label "Symbool" %> <%= f.file_field :icoon %></p>
+    <%= image_tag f.object.icoon_url(:thumb).to_s %>
   </div>
   <div class="actions">
     <%= f.submit %>

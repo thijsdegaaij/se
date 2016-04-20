@@ -1,0 +1,56 @@
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+  $(document.body).on("click", ".btn-kleinview", function() {
+        $(".one-situation").hide();
+        $(".navbtn").removeClass("bold");
+        $(".btn-kleinview").addClass("bold");
+        $(".kleinview").toggle();
+    });
+
+    $(document.body).on("click", ".btn-mens", function() {
+        $(".one-situation").hide();
+        $(".navbtn").removeClass("bold");
+        $(".btn-mens").addClass("bold");
+        $(".mensviewx").toggle();
+    });
+
+    $(document.body).on("click", ".btn-grootview", function() {
+        $(".one-situation").hide();
+        $(".navbtn").removeClass("bold");
+        $(".btn-grootview").addClass("bold");
+        $(".grootview").toggle();
+    });
+
+
+
+}); 
+</script>
+
+<div class="flex-rowstart">
+  <div class="navtwee ">
+    <div class="icon icon-informatie displaynone"></div>
+    <div class="navheader">Situaties</div>
+    <div class="navbtn btn-kleinview button bold">Middel-doel organisaties</div>
+    <div class="navbtn btn-mens button ">Middel-doel persoonlijk</div>
+    <div class="navbtn btn-grootview button">Middel-doel (groot)</div>
+  </div>
+
+  <div class="flex-columncenter">
+    <div class="situationcontainer">
+      <div class="one-situation kleinview">
+        <img  src="/images/situaties/situatie_bk-klein.png">
+      </div>
+      <div class="one-situation mensviewx displaynone">
+        <img  src="/images/situaties/situatie_bk-mens.png">
+      </div>
+      <div class="one-situation grootview displaynone">
+        <img  src="/images/situaties/situatie_bk-groot.png">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

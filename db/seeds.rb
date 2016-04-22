@@ -16,6 +16,7 @@ Rechtsvorm.create(naam: 'Vereniging met volledige rechtsbafkortingevoegdheid', a
 Rechtsvorm.create(naam: 'Vereniging met beperkte rechtsbevoegdheid', afkorting: 'VMBRB')
 Rechtsvorm.create(naam: 'Coöperatie/Onderlinge waarborgmaatschappij', afkorting: 'COWM')
 Rechtsvorm.create(naam: 'Stichting', afkorting: 'ST')
+Rechtsvorm.create(naam: 'Huishouden', afkorting: 'GZN')
 
 Bedrijfstak.create(naam: 'Landbouw, bosbouw en visserij')
 Bedrijfstak.create(naam: 'Delfstoffenwinning')
@@ -30,9 +31,9 @@ Bedrijfstak.create(naam: 'Zorg en overige dienstverlening')
 
 
 Grootboektype.create(naam: 'Vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Grootboektype.create(naam: 'Vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Grootboektype.create(naam: 'Kosten')
-Grootboektype.create(naam: 'Personeel')
+Grootboektype.create(naam: 'Vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_vierkant.png"))
+Grootboektype.create(naam: 'Kosten', icoon: File.open(Rails.root + "app/assets/images/icon_pijlhoofdmarkt.png"))
+Grootboektype.create(naam: 'Personeel', icoon: File.open(Rails.root + "app/assets/images/icon_mens.png"))
 Grootboektype.create(naam: 'Te koop')
 Grootboektype.create(naam: 'Know-how')
 Grootboektype.create(naam: 'Reclame')
@@ -59,10 +60,25 @@ Product.create(naam: 'Oven', icoon: File.open(Rails.root + "app/assets/images/ov
 Organisatie.create(naam: 'Bakker Bart', bedrijfstak_id: 1, rechtsvorm_id: 1, voorkant_image: File.open(Rails.root + "app/assets/images/bakkerbuitenkant.jpeg"))
 Organisatie.create(naam: 'MediaMarkt', bedrijfstak_id: 2, rechtsvorm_id: 2, voorkant_image: File.open(Rails.root + "app/assets/images/mediamarkt.jpg"))
 Organisatie.create(naam: 'Shell', bedrijfstak_id: 3, rechtsvorm_id: 3, voorkant_image: File.open(Rails.root + "app/assets/images/shell.jpg"))
+Organisatie.create(naam: 'Maxima', bedrijfstak_id: 4, rechtsvorm_id: 11, voorkant_image: File.open(Rails.root + "app/assets/images/figuren_maxima.png"))
 
-Grootboekrekening.create(naam: 'Voorraad goederen', grootboektype_id: 1, organisatie_id: 1)
-Grootboekrekening.create(naam: 'Crediteuren (1600)', grootboektype_id: 2, organisatie_id: 1)
-Grootboekrekening.create(naam: 'Te ontvangen btw (1801)', grootboektype_id: 7, organisatie_id: 1)
+Grootboekrekening.create(naam: 'VL Zout', grootboektype_id: 1, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/zout.png"))
+Grootboekrekening.create(naam: 'VL Brood', grootboektype_id: 1, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
+Grootboekrekening.create(naam: 'VA Oven', grootboektype_id: 2, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/oven.png"))
+Grootboekrekening.create(naam: 'VA Broodkast', grootboektype_id: 2, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/broodkast.png"))
+Grootboekrekening.create(naam: 'KOSTEN Electriciteit', grootboektype_id: 3, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/elektriciteit.jpg"))
+Grootboekrekening.create(naam: 'Kosten Broodzak', grootboektype_id: 3, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/broodzakje.jpg"))
+Grootboekrekening.create(naam: 'PERSONEEL', grootboektype_id: 4, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/figuren_bakkergroen.png"))
+
+Grootboekrekening.create(naam: 'NDC Brood)', grootboektype_id: 11, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
+Grootboekrekening.create(naam: 'NDC Jam', grootboektype_id: 11, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/jam.png"))
+Grootboekrekening.create(naam: 'DC Fiets', grootboektype_id: 12, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/fiets.png"))
+Grootboekrekening.create(naam: 'DC Bed', grootboektype_id: 12, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/bed.png"))
+
+Grootboekrekening.create(naam: 'KOSTEN Huis', grootboektype_id: 3, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/huis.png"))
+Grootboekrekening.create(naam: 'KOSTEN Electriciteit', grootboektype_id: 3, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/elektriciteit.jpg"))
+Grootboekrekening.create(naam: 'PERSONEEL', grootboektype_id: 4, organisatie_id: 4, icoon: File.open(Rails.root + "app/assets/images/figuren_bakkergroen.png"))
+
 
 Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, boektype_id: 1, grootboekrekening_id: 1) 
 Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, boektype_id: 1, grootboekrekening_id: 1)

@@ -164,14 +164,25 @@
                                     </div>
                                 </div>
                                 <div class=" itemheader">
-                                    <div class="icon icon-rondje"></div>
-                                    <div>Vlottende activa</div>
+                                    <% if @organisatie_search.rechtsvorm.id != 11 %>
+                                      <div class="icon icon-rondje"></div>
+                                      <div>Vlottende activa</div>
+                                    <% else %>
+                                      <div class="icon icon-rondje"></div>
+                                      <div>Niet-duurzame consumptiegoederen</div>
+                                    <% end %>
                                     <div class="waardeinvestering waardeniet">Investering: &euro; 0</div>
                                 </div>
                                 <div class="itembody-display">
                                     <div class="itembody">
-                                      <% @gbr_va.each do |grootboek| %>
-                                        <%= image_tag grootboek.icoon_url.to_s %>
+                                      <% if @organisatie_search.rechtsvorm.id != 11 %>
+                                        <% @gbr_vla.each do |grootboek| %>
+                                          <%= image_tag grootboek.icoon_url.to_s %>
+                                        <% end %>
+                                      <% else %>
+                                         <% @gbr_ndc.each do |grootboek| %>
+                                           <%= image_tag grootboek.icoon_url.to_s %>
+                                         <% end %>
                                       <% end %>
                                     </div>
                                 </div>
@@ -187,12 +198,26 @@
                                     </div>
                                 </div>
                                 <div class="itemheader">
+                                  <% if @organisatie_search.rechtsvorm.id != 11 %>
                                     <div class="icon icon-vierkant"></div>
                                     <div>Vaste activa</div>
+                                  <% else %>
+                                    <div class="icon icon-vierkant"></div>
+                                    <div>Duurzame consumptiegoederen</div>
+                                  <% end %>                           
                                     <div class="waardeinvestering waardeniet">Investering: &euro; 8.000</div>
                                 </div>
                                 <div class="itembody-display">
                                     <div class="itembody">
+                                      <% if @organisatie_search.rechtsvorm.id != 11 %>
+                                        <% @gbr_va.each do |grootboek| %>
+                                          <%= image_tag grootboek.icoon_url.to_s %>
+                                        <% end %>
+                                      <% else %>
+                                        <% @gbr_dc.each do |grootboek| %>
+                                          <%= image_tag grootboek.icoon_url.to_s %>
+                                        <% end %>
+                                      <% end %>
                                         <!-- <img class="artwork" src="/images/products/bakker/gg-oven.png">
                                         <img class="artwork" src="/images/products/bakker/gg-broodkast.png"> -->
                                     </div>
@@ -215,6 +240,9 @@
                                 </div>
                                 <div class="itembody-display">
                                     <div class="itembody">
+                                      <% @gbr_kn.each do |grootboek| %>
+                                        <%= image_tag grootboek.icoon_url.to_s %>
+                                      <% end %>
                                         <!-- <img class="artwork" src="/images/products/bakker/d-elektriciteit.jpg">
                                         <img class="artwork" src="/images/products/bakker/g-broodzakje.jpg"> -->
                                     </div>
@@ -236,6 +264,9 @@
                                 </div>
                                 <div class="itembody-display">
                                     <div class="itembody">
+                                      <% @gbr_pr.each do |grootboek| %>
+                                        <%= image_tag grootboek.icoon_url.to_s %>
+                                      <% end %>
                                         <!-- <img class="artwork" src="/images/people/figuren/figuren_bakkergroen.png"> -->
                                     </div>
                                 </div>

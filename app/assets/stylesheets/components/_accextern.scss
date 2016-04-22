@@ -1,0 +1,139 @@
+.accounting-extern {  
+  position: relative;
+  z-index: 1;
+  width: 1193px;
+  margin-bottom:4px;
+  .btn-row {
+  	position: absolute;
+  	top: 8px;
+  	left: 664px;
+  	.btn-scontro, .btn-staffel {
+		text-transform: uppercase;
+		color: $text-color-grey;
+		font-size: 12px;
+  	}
+  }
+  .row-balansrr {
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .container-scontro {
+    padding: 12px 24px 12px 24px;
+    margin: 0px 8px 0px 8px;
+    border: 1px solid $border-color-base; 
+    width: 560px;
+    background-color: white;
+  }
+
+  //ook voor winst-en verliesrekening
+
+	.titel {
+	  display: flex;
+	  flex-direction:column;
+	  align-items: center;
+	  padding: 8px 8px 8px 8px;
+	  font-size: 16px;
+	  font-weight: bold;
+	  border-bottom: 3px solid $border-color-base;
+		  .tijd {
+		  justify-content: center;
+		  font-size: 14px;
+		  font-weight: normal;
+		  margin-top: 2px;
+		  }
+		  .linksrechts {
+		  display: flex;
+		  flex-direction:row;
+		  justify-content: space-between;
+		  width: 460px;
+		  font-size: 14px;
+		  //font-weight: normal;
+		  }
+	  }
+  .debetcredit {
+    .debet {
+      padding: 8px 8px 8px 8px ;
+      border-right: 1px solid $border-color-base;
+    }
+    .credit {
+      padding: 8px 8px 8px 16px;
+      //color: beige;
+    }
+    .regel .naam {
+      width: 150px;
+    }
+    .regel .bedrag {
+      width:70px;
+      align-items: flex-end;
+    }
+    .regel.vrij {
+      flex: 1 0 5px;
+    }
+    .regel.eind  {
+      padding-top: 5px;
+      border-top: 1px solid $border-color-base; 
+      >.bedrag {
+          text-decoration: underline;
+      }
+    }
+  }
+  
+ .color-balans {
+    background-color: $bg-balans;
+ }
+  
+  .container-staffel {
+      position: absolute;
+      top: 280px;
+      left: 650px;
+      draggable: true;
+    background-color: white;
+    padding: 12px 24px 12px 24px;
+    margin:  0px 8px 0px 8px;
+    border: 1px solid $border-color-base;
+    width: 560px;    
+    box-shadow: 0px 0px 36px 0px rgba(1,0,0,0.27);
+    cursor: pointer;
+
+    .regel {
+      padding: 0px 0px 0px 8px ;    
+    }
+     .naam {
+      width: 290px;
+    }
+    .hoofd {
+      font-weight: bold;
+    }
+    .bovenruimte {
+      margin-top: 8px;
+    }
+    .bedrag1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width:80px;
+      align-items: flex-end;
+    }
+    .bedrag2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width:85px;
+      margin: 0px 2px 0px 12px;
+      align-items: flex-end;
+    }
+    .eind {
+      padding-top: 5px;
+      border-top: 1px solid $border-color-base; 
+      font-weight: bold;  
+    }
+    .streep { 
+      border-bottom: 1px solid $border-color-base;     
+    }
+    .underlined {
+        text-decoration: underline;
+    }
+  }
+}
+

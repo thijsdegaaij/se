@@ -1,0 +1,180 @@
+.body-accounting {
+	display: -webkit-flex;
+	flex-direction: row;
+    -webkit-justify-content: flex-start;
+	-webkit-align-items: flex-start;
+    border: $green;    
+}
+
+.col-grootboek {
+	display: -webkit-flex;
+	flex-direction: column;
+    -webkit-justify-content: flex-start;
+    margin-left: 24px;
+}
+
+.col-journaals {
+	display: -webkit-flex;
+	flex-direction: column;
+    -webkit-justify-content: flex-start;
+    margin-left: 48px;
+}
+
+
+// GROOTBOEK
+.gbtitle {
+	font-weight: bold;
+	font-size: 18px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	color: blue;               
+}     
+
+
+.grootboek {
+	//border: 1px solid $border-color-base; 
+	//width:560px;
+	//padding: 12px;
+
+	.title {
+		font-size: 16px; 
+		padding: 8px;
+		color: black;
+	}
+
+	.icon {
+		transform: scale(0.8, 0.8);
+	}
+	.iconwide {
+		transform: scale(0.8, 0.8);
+	}
+
+	.group {
+		display: -webkit-flex;
+		flex-direction: row;
+    	-webkit-align-items: center;
+		height: 36px;
+		margin: 0px 0px 0px 0px;
+		padding: 3px 0px 3px 0px;
+		//font-size: 14px;
+		//color: $text-color-base;
+		//background-color: $background-color-2;
+		//letter-spacing: 1px;
+		text-transform: uppercase;
+		border-top: 1px solid $border-color-base;
+		cursor: pointer;
+		div:nth-child(1) 			{flex: 0 0 55px; margin-left: 5px;  }
+		div:nth-child(2) 			{flex: 1;}
+		div:nth-child(3) 			{flex: 0 0 80px; text-align: right; }
+		div:nth-child(3)::before 	{content: '\20AC  '}
+		div:nth-child(4) 			{flex: 0 0 20px;}
+
+	}
+
+	.accordion-content {
+		:last-child {
+      	margin-bottom: 16px;
+      }
+	}
+	.header {
+		margin: 8px 0px 0px 0px;
+		width: 500px;
+		display: -webkit-flex;
+		div:nth-child(1) 			{flex: 0 0 55px; margin-left: 5px;}
+		div:nth-child(2) 			{flex: 1; }
+		div:nth-child(3) 			{flex: 0 0 80px; text-align: right;}
+		div:nth-child(3)::before 	{content: '\20AC  ';}
+		div:nth-child(4) 			{flex: 0 0 20px;}
+
+	}
+
+	.rij {
+		margin: -3px 0px -3px 0px;
+		width: 400px;
+		display: -webkit-flex;
+		div:nth-child(1) 			{flex: 0 0 66px; margin-left: -5px;  }
+		div:nth-child(2) 			{flex: 0 0 70px;}
+		div:nth-child(3) 			{flex: 1;}
+		div:nth-child(4) 			{flex: 0 0 80px; text-align: right;}
+		div:nth-child(4)::before 	{content: '\20AC  ';}
+		div:nth-child(5) 			{flex: 0 0 0px;}
+	}
+
+	.break {
+		width: 500px;
+		display: -webkit-flex;
+		:nth-child(1) 				{flex: 0 0 60px;}
+		:nth-child(2) 				{flex: 1; border-bottom: 3px solid $border-color-base;}
+		:nth-child(3) 				{flex: 0 0 20px; position: relative; top: 15px; left: 5px; font-size: 22px; color: #999;}
+
+		> div {
+			margin-top: -14px; margin-bottom: 8px;
+		}
+	} 
+ 
+
+	.posev 				{background-color: $green-light; }
+	.negev 				{background-color: $red-light; }
+	.winstev			{background-color: $gray-light;  text-decoration: underline;}
+
+
+	
+}
+/* laatste afstand om scrollen te vergemakkelijken */
+	.afsluiter 	{height: 300px;}
+
+
+// JOURNAALS
+
+	#toggleovr {
+		width: 270px; 
+		text-align: left;}
+
+	#ovr {
+		width: 270px; 
+		border: 1px solid #000;  
+		border-radius: 6px;
+	    display: block;
+	   
+	    .head 	{
+	        background-color: #555; 
+	        border-top-left-radius: 6px; 
+	        border-top-right-radius: 6px; 
+
+	        .text    {
+	            color: #fff; 
+	            text-align: center; 
+	            padding: 8px; 
+	            font-size: 14px; }
+	    }
+
+	    .body {font-size: 14px;}
+
+	    .inline {
+	        display: inline-block;
+	        margin: 8px;
+	        position: relative;
+	        top: -6px;
+	    }
+
+	    .form {
+	        width: 70px;
+	        color: $blue;}
+
+	    .text {font-size: 13px; color: #555; padding-top: 6px;} 
+
+	    .scrollyvoorwaarden {
+	        height: 150px;
+	        overflow: auto;
+	        white-space: nowrap;
+	        padding-left: 8px; 
+	        padding-bottom: 4px;
+	        font-size: 13px;
+	    }
+	}  
+
+
+
+	
+	
+

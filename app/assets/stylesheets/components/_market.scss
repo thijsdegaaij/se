@@ -1,0 +1,184 @@
+.left_arrow {  
+height:50px;  
+width:150px;  
+position:relative;  
+}  
+.left_arrow .arrow {  
+border:25px solid #FF0;  
+border-right:25px solid #C0c;  
+width:0;  
+height:0;  
+overflow:hidden;  
+margin-left:-25px;  
+}  
+.left_arrow .body {  
+margin:-35px 0 0 25px;  
+top:15px; left:25px;  
+height:20px;  
+background:#C00;  
+color:white;  
+text-align:center;  
+}  
+
+
+
+
+.container-markt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+
+  .laag {
+    display: flex;
+    flex-direction: row;
+    width: 940px;
+  background-color: white;
+  padding: 2px 24px 0px 24px;
+  }
+  .eerste {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 8px;
+  }
+  .tweede, .derde, .vierde {
+    justify-content: space-between;
+    > div {      
+    position: relative;
+    }
+  }
+
+  .tweede {
+    //font-weight: bold;
+    padding-bottom: 12px;
+  }
+  .vierde .logo {
+    font-size: 24px;
+    padding: 50px 12px;
+    font-weight: bold;
+  }
+
+
+}
+
+
+.market{
+    position: relative;
+    margin: auto;
+    width: 240px;
+    .body {
+    }
+ 
+
+  > * {
+    border-style: solid;
+    border-width: 1px 1px 0px 1px; 
+    border-color: $border-color-base;
+    padding: 6px;
+  }
+
+  :last-child {
+    border-bottom-width: 1px;
+  }
+
+  .header {
+    text-weight: bold;
+    text-align: center;
+    background-color: $background-color-2;
+  }
+}
+.ruilding {
+  font-style: italic;
+}
+.geldbijconsumenten {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  transform: scale(2,2);
+}
+.geldverkoper, .geldkoper {
+  position: absolute;
+  top: 74px;
+}
+.gelduitverkoper, .geldinverkoper,
+.gelduitkoper, .nutkoper {
+  position: absolute;
+  top: 74px;
+}
+
+.inputverkoper, .outputverkoper, 
+.inputkoper, .outputkoper {
+  position: absolute;
+  top: 104px;
+}
+.gelduitverkoper, .gelduitkoper,
+.inputkoper, .inputverkoper {
+  left: -24px;
+}
+.geldinverkoper, .nutkoper,
+.outputkoper, .outputverkoper {
+  left: 240px;
+}
+.marktnut {
+  position: absolute;
+  top: -55px;
+  left: 210px;  
+  transform: scale(0.2,0.2);  
+}
+.marktmaxima {
+  position: absolute;
+  top: 40px;
+  left: 290px;  
+  transform: scale(0.9,0.9);  
+}
+.grafiekenmarkt {
+    border-style: dashed;
+    border-width: 1px 0px 0px 0px; 
+    border-color: $border-color-base;
+    margin-top: 24px;
+    //transform: scale(0.94,0.94);
+    .titel {
+      padding: 8px;
+    }
+}
+.berekeningenmarkt {
+    border-style: dashed;
+    border-width: 1px 0px 0px 0px; 
+    border-color: $border-color-base;
+    margin-top: 24px;
+    //transform: scale(0.94,0.94);
+    .titel {
+      padding: 8px;
+    }  
+}
+
+.cont-overeenkomst {
+  border: 1px solid $border-color-base;
+  width: 280px;
+  height: 170px;
+  justify-content: space-between;
+  border-radius: 12px;
+  margin-top: 10px;
+  .titel {
+    border-bottom: 1px solid $border-color-base;
+    height: 24px;
+    width: 100%;
+    padding-top: 3px;
+    text-transform: uppercase;
+  }
+  .eerstelaag, .tweedelaag, .derdelaag {
+    justify-content: flex-start;
+    width: 250px;
+    .one {
+      flex: 0 1 80px;
+      margin-left: 10px;
+    }
+    .two {
+      flex: 0 1 160px;
+    }
+    .three {
+      flex: 0 1 80px;
+    }
+  }
+}

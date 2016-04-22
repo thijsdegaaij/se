@@ -1,0 +1,128 @@
+
+// C2: sectoren uitgebreid
+
+.container-sectorenuitgebreid {
+      padding: 24px 0px 4px 0px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      //background-color: yellow;
+      width: 1093px;
+
+  .titel-sector {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 30px;
+        color: white;
+        font-size: 16px;
+        padding: 8px;
+        border-width: 0px 0px 1px 0px; 
+        //width: 202px;
+      }
+  .sectoruitgebreid {
+    margin: 12px 0px 12px 0px;
+    //background-color: purple;
+  }
+  .onderdeel {
+        position: relative;
+
+    .midden {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center; 
+        position: relative;
+        border-style: solid;
+        border-width: 0px 1px 1px 1px;
+        border-color: $border-color-base;
+        //width: 200px;
+        height: 32px;
+        padding: 2px;
+
+      .mleft {
+        padding-left: 16px; 
+        width: 150px;
+        .icon {
+        }
+        .beschrijving {
+        }
+      }
+      .mright {
+        .icon {
+        }
+        .beschrijving {
+        }
+       }
+    }
+
+    .left {
+      position: absolute;
+      top: 0px;
+      left: -340px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      .icon {
+        width: 50px;
+      }
+      .naam {
+        width: 290px;
+      }
+      .waarde {
+      }
+      .sect {      
+      }
+      .bdt {
+      }
+      .beschrijving2 {      
+      }
+    }
+
+    .right {
+      position: absolute;
+      top: 0px;
+      left: 210px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .icon {
+        width: 50px;
+      }
+      .naam {
+        width: 4000px;
+      }
+      .waarde {
+      }
+      .sect {      
+      }
+      .bdt {
+      }
+      .beschrijving2 {      
+      }
+    }
+  }
+}
+.onderdeel.geldc .naam, .onderdeel.geldc .naam {   
+    color: blue;
+  }
+ 
+.gezinnen .titel-sector {
+      background-color: $huishouden;
+      color: white;
+      }
+       
+.vennootschappen .titel-sector {
+      background-color: $nv;
+      color: white;
+      }      
+.fiin .titel-sector {
+      background-color: $financieel;
+      color: white;
+      }    
+.overheidc .titel-sector {
+      background-color: $overheid;
+      color: white;
+      }

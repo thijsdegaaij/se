@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1787.9px" height="1321.4px" viewBox="0 0 1787.9 1321.4" style="enable-background:new 0 0 1787.9 1321.4;"
+	 xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#DADADA;stroke:#CDCCCC;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#010202;stroke-miterlimit:10;}
+	.st2{fill:#808081;}
+	.st3{fill:#FFFFFF;stroke:#010202;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#CDCCCC;stroke-miterlimit:10;}
+	.st5{font-family:'MyriadPro-Regular';}
+	.st6{fill:none;stroke:#010202;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:#E6E6E6;stroke:#CDCCCC;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#010202;stroke-width:2;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#010202;stroke-miterlimit:10;}
+	.st10{display:none;fill:none;}
+	.st11{fill:#F2F2F2;stroke:#CDCCCC;stroke-miterlimit:10;}
+	.st12{fill:#676767;}
+	.st13{fill:#010202;}
+	.st14{font-size:14;}
+	.st15{fill:#FFFFFF;stroke:#010202;stroke-width:2;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#010202;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st17{fill:#FFFFFF;stroke:#010202;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+]]>
+</style>
+<symbol  id="New_Symbol_15" viewBox="-11 -9 22 18">
+	<g id="New_Symbol_5_2_">
+		<g id="plicht-2d_1_">
+			<path id="XMLID_903_" class="st3" d="M-10,8l20,0c0,0-2.5-2.4-2.5-8c0-5.6,2.5-8,2.5-8h-20L-10,8z"/>
+		</g>
+	</g>
+	<g id="XMLID_819_">
+		<text id="XMLID_901_" transform="matrix(1.1773 0 0 -1 -5.2803 -5.437)" class="st5 st14">€</text>
+		<g id="XMLID_870_">
+		</g>
+	</g>
+</symbol>
+<symbol  id="New_Symbol_20" viewBox="-11 -9 22 18">
+	<path id="XMLID_1632_" class="st15" d="M8-8H-8c-1.1,0-2,0.9-2,2V6c0,1.1,0.9,2,2,2H8c1.1,0,2-0.9,2-2V-6C10-7.1,9.1-8,8-8z"/>
+	
+		<use xlink:href="#overheid"  width="4" height="11" id="XMLID_900_" x="-2" y="-5.5" transform="matrix(1 0 0 1 -5.2407 -0.4292)" style="overflow:visible;"/>
+	
+		<use xlink:href="#overheid"  width="4" height="11" id="XMLID_899_" x="-2" y="-5.5" transform="matrix(1 0 0 1 5.7593 -0.4292)" style="overflow:visible;"/>
+	<path id="XMLID_898_" class="st15" d="M-0.8-8h-0.3C-1.1-8,2-4.4,2,0c0,4.4-3.1,8-3.1,8h0.3"/>
+</symbol>
+<symbol  id="New_Symbol_23" viewBox="-10 -10 20 20">
+	<g id="XMLID_1624_">
+		<path id="XMLID_1633_" class="st15" d="M7-9H-7c-1.1,0-2,0.9-2,2V7c0,1.1,0.9,2,2,2H7c1.1,0,2-0.9,2-2V-7C9-8.1,8.1-9,7-9z"/>
+		<g id="XMLID_1623_">
+			<text id="XMLID_1640_" transform="matrix(1.1773 0 0 -1 -5.0615 -4.396)" class="st5 st14">€</text>
+			<g id="XMLID_1639_">
+			</g>
+		</g>
+	</g>
+</symbol>
+<symbol  id="New_Symbol_68" viewBox="-11.6 -8.6 23.2 17.2">
+	<g id="recht-2d_6_">
+		<path id="XMLID_210_" class="st15" d="M-10.6,8.4v-16H2.7h5.4c0,0,2.5,2,2.5,7.6c0,5.7-2.5,7.6-2.5,7.6H2.7h-14.1"/>
+	</g>
+	<text id="XMLID_205_" transform="matrix(1 0 0 -1 -2.5605 -4.7441)" class="st5 st14">!</text>
+</symbol>
+<symbol  id="New_Symbol_69" viewBox="-11 -9 22 18">
+	<g id="plicht-2d_6_">
+		<path id="XMLID_216_" class="st3" d="M-10,8l20,0c0,0-2.5-2.4-2.5-8c0-5.6,2.5-8,2.5-8h-20L-10,8z"/>
+	</g>
+	<text id="XMLID_214_" transform="matrix(1 0 0 -1 -2.543 -4.875)" class="st5 st14">!</text>
+</symbol>
+<symbol  id="overheid" viewBox="-2 -5.5 4 11">
+	<path id="XMLID_810_" class="st13" d="M1.5,4c0-0.8-0.7-1.5-1.5-1.5S-1.5,3.2-1.5,4S-0.8,5.5,0,5.5S1.5,4.8,1.5,4z"/>
+	<path id="XMLID_379_" class="st13" d="M1.5,0c0-0.8-0.7-1.5-1.5-1.5S-1.5-0.8-1.5,0S-0.8,1.5,0,1.5S1.5,0.8,1.5,0z"/>
+	<path id="XMLID_336_" class="st13" d="M1.5-4c0-0.8-0.7-1.5-1.5-1.5S-1.5-4.8-1.5-4S-0.8-2.5,0-2.5S1.5-3.2,1.5-4z"/>
+	<polygon id="XMLID_814_" class="st10" points="-2,5 2,5 2,-5 -2,-5 	"/>
+</symbol>
+<rect id="XMLID_303_" x="80.8" y="576.4" class="st11" width="1249.5" height="186.3"/>
+<image style="overflow:visible;" width="558" height="640" id="XMLID_2432_" xlink:href="../../../../../../Downloads/apple-439397_640.png"  transform="matrix(3.289100e-02 0 0 3.289100e-02 924.4883 277.0815)">
+</image>
+<image style="overflow:visible;" width="558" height="640" id="XMLID_2726_" xlink:href="../../../../../../Downloads/apple-439397_640.png"  transform="matrix(3.289100e-02 0 0 3.289100e-02 138.4805 645.0815)">
+</image>
+<text id="XMLID_1317_" transform="matrix(1 0 0 1 108.835 99.6196)" class="st12 st5 st14">NATUUR</text>
+<text id="XMLID_4323_" transform="matrix(1 0 0 1 1042.335 99.8872)" class="st2 st5 st14">G. Groothandel</text>
+<text id="XMLID_4322_" transform="matrix(1 0 0 1 474.8604 453.6187)" class="st2 st5 st14">I. Horeca</text>
+<text id="XMLID_4320_" transform="matrix(1 0 0 1 898.335 99.8872)" class="st2 st5 st14">F. Bouwnijverheid</text>
+<text id="XMLID_4319_" transform="matrix(1 0 0 1 243.9365 453.6187)" class="st2 st5 st14">H. Vervoer en opslag</text>
+<text id="XMLID_4317_" transform="matrix(1 0 0 1 394.335 99.8872)" class="st2 st5 st14">B. Delfstoffen</text>
+<text id="XMLID_4315_" transform="matrix(1 0 0 1 250.335 99.8872)"><tspan x="0" y="0" class="st2 st5 st14">A. Landbouw,</tspan><tspan x="0" y="16.8" class="st2 st5 st14">natuur en visserij</tspan></text>
+<text id="XMLID_97_" transform="matrix(1 0 0 1 34.335 65.8872)" class="st2 st5 st14">Producten: 150px x 90px  breed x 7 = 1050</text>
+<text id="XMLID_4313_" transform="matrix(1 0 0 1 538.335 99.8872)" class="st2 st5 st14">C. Industrie</text>
+<text id="XMLID_4312_" transform="matrix(1 0 0 1 682.335 99.8872)"><tspan x="0" y="0" class="st2 st5 st14">D.E. Water en afvalwater </tspan><tspan x="0" y="16.8" class="st2 st5 st14">elektriciteit en gas</tspan></text>
+<text id="XMLID_4308_" transform="matrix(1 0 0 1 103.752 453.6187)" class="st12 st5 st14">G. Detailhandel</text>
+<text id="XMLID_4307_" transform="matrix(1 0 0 1 103.502 453.6187)" class="st12 st5 st14">G. Detailhandel</text>
+<g id="XMLID_4256_">
+	<line id="XMLID_4278_" class="st8" x1="522.3" y1="519.9" x2="522.3" y2="533.9"/>
+	<line id="XMLID_4277_" class="st8" x1="519.3" y1="529.9" x2="519.3" y2="536.9"/>
+	<line id="XMLID_4276_" class="st8" x1="514.3" y1="526.9" x2="514.3" y2="534.9"/>
+	<line id="XMLID_4275_" class="st8" x1="517.3" y1="518.9" x2="517.3" y2="530.9"/>
+	<line id="XMLID_4274_" class="st8" x1="520.3" y1="532.9" x2="520.3" y2="542.9"/>
+	<line id="XMLID_4273_" class="st8" x1="513.3" y1="539.9" x2="513.3" y2="548.9"/>
+	<line id="XMLID_4272_" class="st8" x1="501.3" y1="534.9" x2="501.3" y2="543.9"/>
+	<line id="XMLID_4271_" class="st8" x1="508.3" y1="528.9" x2="508.3" y2="538.9"/>
+	<polygon id="XMLID_4270_" class="st15" points="520.6,529.6 515.5,527.5 518.5,524.5 523.6,526.5 	"/>
+	<polygon id="XMLID_4269_" class="st15" points="514.2,540.3 502,535.4 510.4,528 521.6,532.9 	"/>
+	<line id="XMLID_4268_" class="st8" x1="489.3" y1="514.9" x2="489.3" y2="547.9"/>
+	<path id="XMLID_4267_" class="st8" d="M518.9,511.4c0,0-4-2.8-9.8-5.6c-5.8-2.8-13.8-0.3-18.2,1.9"/>
+	<path id="XMLID_4266_" class="st8" d="M471.3,509.2c0,0,3.8-4.1,7.9-4.6c4.1-0.5,3.6,0.2,11.7,3.2"/>
+	<path id="XMLID_4265_" class="st8" d="M491,507.8c-6.9,0.9-9.9,3.4-11.7,4.7c-1.8,1.3-2.8,3.3-3.6,4.8"/>
+	<path id="XMLID_4264_" class="st8" d="M490.5,507.6c2.6,2,6.8,3.9,9.1,7.2"/>
+	<path id="XMLID_4263_" class="st8" d="M518.3,511.6c-6.6-1-13.2,1.2-19.5,3.4c-2.8-0.6-5.7-0.8-8.5-0.9c-1.5,0-3,0-4.4,0.4
+		c-1.4,0.4-2.8,1.3-3.5,2.5c-1.5-1.6-4.6-1.7-6.2-0.4c0.8-2.8-1-5.8-3.2-7.7c-0.3-0.3-1.5-0.2-1.8-0.5"/>
+	<path id="XMLID_4262_" class="st8" d="M504.2,504.4c-3.5-0.4-7-0.8-10.4-0.4c-0.5,0.1-1,0.1-1.4,0.1c-0.5,0-1.1-0.1-1.6-0.2
+		c-3.1-0.4-6.3-0.3-9.3,0.3"/>
+	<path id="XMLID_4261_" class="st8" d="M490.5,507.6c1-3,1.4-3.5,1.4-3.5"/>
+	<path id="XMLID_4260_" class="st8" d="M511.2,532.4c0-0.3-0.3-0.4-0.6-0.4c-0.7,0-1.5,0-2.2,0.1c-0.4,0-0.8,0.1-1.1,0.4
+		c-0.3,0.3-0.4,0.8-0.1,1c0.1,0.1,0.4,0.2,0.6,0.2c0.9,0.1,1.7,0,2.6-0.2c0.4-0.1,0.7-0.2,0.7-0.6c0.1,0,0.1,0,0.2,0
+		c0.3,1,0,2.5,0,3.6"/>
+	<path id="XMLID_4259_" class="st8" d="M511.3,536.3c0.2,0.1,0,0.4-0.2,0.6c-1.1,0.6-2.6,0.5-3.5-0.4c0-0.1-0.1-0.1-0.1-0.2
+		c0.2-0.7,0.1-2.5-0.2-3.1"/>
+	<path id="XMLID_4258_" class="st8" d="M509.3,533.5c0.1-0.7,0.6-1.2,0.9-1.7c0.6-0.8,1-0.7,1.4-1.6"/>
+	<path id="XMLID_4257_" class="st8" d="M523.6,520.7c-1.8-0.9-3.7-1.6-5.6-2"/>
+</g>
+<g id="XMLID_4234_">
+	<g id="XMLID_4241_">
+		<rect id="XMLID_4254_" x="915.7" y="171.1" class="st17" width="25.5" height="17.9"/>
+		<rect id="XMLID_2_" x="919.3" y="178.8" class="st15" width="7.6" height="5.7"/>
+		<line id="XMLID_4253_" class="st16" x1="941.3" y1="171.1" x2="928.5" y2="161.3"/>
+		<line id="XMLID_4252_" class="st6" x1="928.5" y1="161.3" x2="915.7" y2="171.1"/>
+		<line id="XMLID_4251_" class="st8" x1="935.3" y1="188.9" x2="935.3" y2="179.9"/>
+		<line id="XMLID_4250_" class="st8" x1="936.3" y1="181.9" x2="930.3" y2="181.9"/>
+		<line id="XMLID_4249_" class="st8" x1="930.3" y1="181.9" x2="930.3" y2="188.9"/>
+		<line id="XMLID_4244_" class="st8" x1="935.3" y1="160.9" x2="935.3" y2="166.9"/>
+		<line id="XMLID_4242_" class="st8" x1="933.3" y1="160.9" x2="933.3" y2="165.9"/>
+	</g>
+	<line id="XMLID_4240_" class="st8" x1="965.5" y1="140.9" x2="965.8" y2="188.9"/>
+	<line id="XMLID_4239_" class="st8" x1="965.5" y1="140.9" x2="974.8" y2="188.9"/>
+	<line id="XMLID_4238_" class="st8" x1="965.5" y1="140.9" x2="956.2" y2="188.9"/>
+	<line id="XMLID_4237_" class="st8" x1="965.3" y1="141.9" x2="917.3" y2="141.9"/>
+	<line id="XMLID_4236_" class="st8" x1="966.1" y1="150.7" x2="919.4" y2="141.8"/>
+	<line id="XMLID_4235_" class="st8" x1="917.3" y1="140.9" x2="917.3" y2="157.9"/>
+</g>
+<g id="XMLID_4223_">
+	<line id="XMLID_4233_" class="st8" x1="411.3" y1="166.9" x2="446.3" y2="166.9"/>
+	<line id="XMLID_4232_" class="st8" x1="446.4" y1="166.9" x2="430.4" y2="188"/>
+	<line id="XMLID_4231_" class="st8" x1="430.4" y1="188" x2="438.4" y2="158.1"/>
+	<line id="XMLID_4230_" class="st8" x1="436.3" y1="158.9" x2="418.3" y2="158.9"/>
+	<line id="XMLID_4229_" class="st8" x1="420.1" y1="158.2" x2="430.4" y2="188"/>
+	<line id="XMLID_4228_" class="st8" x1="430.4" y1="188" x2="412.2" y2="166.9"/>
+	<line id="XMLID_4227_" class="st8" x1="412.2" y1="166.9" x2="420.1" y2="158.2"/>
+	<line id="XMLID_4226_" class="st8" x1="423.1" y1="166.9" x2="429.3" y2="158.1"/>
+	<line id="XMLID_4225_" class="st8" x1="429.3" y1="158.1" x2="436" y2="166.9"/>
+	<line id="XMLID_4224_" class="st8" x1="438.4" y1="158.1" x2="446.4" y2="166.9"/>
+</g>
+<g id="XMLID_4201_">
+	<rect id="XMLID_4222_" x="1050.6" y="166.4" class="st15" width="61.5" height="16.1"/>
+	<line id="XMLID_4221_" class="st8" x1="1108.3" y1="182.9" x2="1108.3" y2="170.9"/>
+	<line id="XMLID_4220_" class="st8" x1="1108.3" y1="171.9" x2="1099.3" y2="171.9"/>
+	<line id="XMLID_4219_" class="st8" x1="1099.3" y1="171.9" x2="1099.3" y2="182.9"/>
+	<line id="XMLID_4218_" class="st8" x1="1095.3" y1="182.9" x2="1095.3" y2="170.9"/>
+	<line id="XMLID_4217_" class="st8" x1="1095.3" y1="171.9" x2="1087.3" y2="171.9"/>
+	<line id="XMLID_4216_" class="st8" x1="1087.3" y1="171.9" x2="1087.3" y2="182.9"/>
+	<line id="XMLID_4215_" class="st8" x1="1083.3" y1="182.9" x2="1083.3" y2="170.9"/>
+	<line id="XMLID_4214_" class="st8" x1="1084.3" y1="171.9" x2="1075.3" y2="171.9"/>
+	<line id="XMLID_4213_" class="st8" x1="1075.3" y1="171.9" x2="1075.3" y2="182.9"/>
+	<line id="XMLID_4212_" class="st8" x1="1072.3" y1="182.9" x2="1072.3" y2="170.9"/>
+	<line id="XMLID_4211_" class="st8" x1="1072.3" y1="171.9" x2="1064.3" y2="171.9"/>
+	<line id="XMLID_4210_" class="st8" x1="1064.3" y1="171.9" x2="1064.3" y2="182.9"/>
+	<line id="XMLID_4209_" class="st8" x1="1061.3" y1="182.9" x2="1061.3" y2="170.9"/>
+	<line id="XMLID_4208_" class="st8" x1="1062.3" y1="171.9" x2="1053.3" y2="171.9"/>
+	<line id="XMLID_4207_" class="st8" x1="1053.3" y1="171.9" x2="1053.3" y2="182.9"/>
+	<line id="XMLID_4206_" class="st8" x1="1112" y1="166.4" x2="1107.2" y2="153"/>
+	<line id="XMLID_4205_" class="st8" x1="1050.7" y1="166.4" x2="1048" y2="153"/>
+	<line id="XMLID_4204_" class="st8" x1="1050.7" y1="182.8" x2="1048.2" y2="169.4"/>
+	<line id="XMLID_4203_" class="st8" x1="1047.3" y1="152.9" x2="1047.3" y2="168.9"/>
+	<line id="XMLID_4202_" class="st8" x1="1047.3" y1="153.9" x2="1106.3" y2="153.9"/>
+</g>
+<g id="XMLID_4189_">
+	<rect id="XMLID_4200_" x="113.4" y="528.5" class="st15" width="64.3" height="18.9"/>
+	<line id="XMLID_4199_" class="st8" x1="147.3" y1="547.9" x2="147.3" y2="537.9"/>
+	<line id="XMLID_4198_" class="st8" x1="148.3" y1="538.9" x2="142.3" y2="538.9"/>
+	<line id="XMLID_4197_" class="st8" x1="141.3" y1="538.9" x2="141.3" y2="547.9"/>
+	<rect id="XMLID_4196_" x="119.4" y="536.2" class="st8" width="18.3" height="8.2"/>
+	<rect id="XMLID_4195_" x="154.7" y="536.2" class="st8" width="18.3" height="8.2"/>
+	<line id="XMLID_4194_" class="st8" x1="177.4" y1="528.1" x2="173" y2="515.9"/>
+	<line id="XMLID_4193_" class="st8" x1="113.4" y1="528.5" x2="111.3" y2="515.9"/>
+	<line id="XMLID_4192_" class="st8" x1="111.5" y1="516.3" x2="111.5" y2="530.7"/>
+	<line id="XMLID_4191_" class="st8" x1="111.4" y1="516.3" x2="172.9" y2="516.3"/>
+	<line id="XMLID_4190_" class="st8" x1="113.3" y1="547.1" x2="111.5" y2="530.7"/>
+</g>
+<image style="overflow:visible;" width="102" height="102" id="XMLID_4127_" xlink:href="../../../../../../Downloads/images.jpeg"  transform="matrix(0.4134 0 0 0.4134 253.3369 152.8892)">
+</image>
+<image style="overflow:visible;" width="256" height="256" id="XMLID_4124_" xlink:href="../../../../../../Downloads/58217.png"  transform="matrix(0.1523 0 0 0.1523 302.248 152.9209)">
+</image>
+<image style="overflow:visible;" width="512" height="512" id="XMLID_4121_" xlink:href="../../../../../../Downloads/factory-512.png"  transform="matrix(9.110100e-02 0 0 9.110100e-02 542.3345 145.2432)">
+</image>
+<image style="overflow:visible;" width="256" height="256" id="XMLID_42_" xlink:href="../../../../../../Downloads/airplane_takeoff_256.png"  transform="matrix(0.1667 0 0 0.1667 300.3032 512.5542)">
+</image>
+<image style="overflow:visible;" width="256" height="256" id="XMLID_41_" xlink:href="../../../../../../Downloads/truck_256.png"  transform="matrix(0.1276 0 0 0.1276 253.3032 513.8872)">
+</image>
+<path id="XMLID_4109_" class="st1" d="M1379.9,170.5l-0.6,4.7l-130.5-0.7c-0.7,0.1-1.4-1.5-1.2-2.4c0.3-1.9,1.6-2.2,2-2.2
+	L1379.9,170.5z"/>
+<image style="overflow:visible;" width="667" height="393" id="XMLID_4097_" xlink:href="../../../../../../Downloads/BicycleTransparent.gif"  transform="matrix(0.1041 0 0 0.1041 873.4292 210.9009)">
+</image>
+<g id="XMLID_4093_">
+	
+		<image style="overflow:visible;" width="91" height="111" id="XMLID_36_" xlink:href="5066FC81D820087A.png"  transform="matrix(0.48 0 0 0.48 946.2964 209.2656)">
+	</image>
+</g>
+<g id="XMLID_4089_">
+	
+		<image style="overflow:visible;" width="96" height="45" id="XMLID_35_" xlink:href="9EE27EC43CA137AD.png"  transform="matrix(-0.5052 0.1824 -0.1824 -0.5052 1006.438 290.9634)">
+	</image>
+</g>
+<g id="XMLID_4087_">
+	
+		<image style="overflow:visible;" width="48" height="110" id="XMLID_33_" xlink:href="9EE27EC43CA137A3.png"  transform="matrix(0.6048 0 0 0.6048 881.626 261.7534)">
+	</image>
+</g>
+<image style="overflow:visible;" width="219" height="230" id="XMLID_31_" xlink:href="../../C/huishoudens/spullenHuis/jam.png"  transform="matrix(0.3043 0 0 0.3043 896.7622 314.4824)">
+</image>
+<image style="overflow:visible;" width="667" height="393" id="XMLID_4082_" xlink:href="../../../../../../Downloads/BicycleTransparent.gif"  transform="matrix(0.1041 0 0 0.1041 87.4219 578.9009)">
+</image>
+<g id="XMLID_4080_">
+	
+		<image style="overflow:visible;" width="91" height="111" id="XMLID_28_" xlink:href="9EE27EC43CA137A5.png"  transform="matrix(0.48 0 0 0.48 160.2896 577.2661)">
+	</image>
+</g>
+<g id="XMLID_4078_">
+	
+		<image style="overflow:visible;" width="96" height="45" id="XMLID_27_" xlink:href="9EE27EC43CA137BC.png"  transform="matrix(-0.5052 0.1824 -0.1824 -0.5052 220.4307 658.9634)">
+	</image>
+</g>
+<g id="XMLID_4076_">
+	
+		<image style="overflow:visible;" width="48" height="110" id="XMLID_26_" xlink:href="9EE27EC43CA137BD.png"  transform="matrix(0.6048 0 0 0.6048 95.6191 629.7534)">
+	</image>
+</g>
+<image style="overflow:visible;" width="219" height="230" id="XMLID_25_" xlink:href="../../C/huishoudens/spullenHuis/jam.png"  transform="matrix(0.3043 0 0 0.3043 110.7549 682.4819)">
+</image>
+<image style="overflow:visible;" width="229" height="220" id="XMLID_4055_" xlink:href="../../C/vennootschappen/spullen van de bakker/computer.jpg"  transform="matrix(0.2789 0 0 0.2789 458.6899 287.6797)">
+</image>
+<image style="overflow:visible;" width="84" height="74" id="XMLID_4052_" xlink:href="../../C/vennootschappen/spullen van de bakker/pm_meel.png"  transform="matrix(0.6385 0 0 0.6385 499.0605 342.0962)">
+</image>
+<image style="overflow:visible;" width="105" height="138" id="XMLID_4047_" xlink:href="../../C/vennootschappen/spullen van de bakker/pm_mixer.png"  transform="matrix(0.4638 0 0 0.4638 502.2725 219.6089)">
+</image>
+<image style="overflow:visible;" width="93" height="188" id="XMLID_4044_" xlink:href="../../C/vennootschappen/spullen van de bakker/pm_oven.png"  transform="matrix(0.421 0 0 0.421 462.0459 213.7769)">
+</image>
+<image style="overflow:visible;" width="70" height="105" id="XMLID_4034_" xlink:href="../../C/vennootschappen/spullen van de bakker/stroom.png"  transform="matrix(0.6397 0 0 0.6397 613.4888 215.3359)">
+</image>
+<image style="overflow:visible;" width="60" height="93" id="XMLID_4031_" xlink:href="../../C/vennootschappen/spullen van de bakker/waterdruppel.png"  transform="matrix(0.4685 0 0 0.4685 625.4551 285.2158)">
+</image>
+<image style="overflow:visible;" width="60" height="85" id="XMLID_4028_" xlink:href="../../C/vennootschappen/spullen van de bakker/zout.png"  transform="matrix(0.6487 0 0 0.6487 403.6455 208.3374)">
+</image>
+<line id="XMLID_2401_" class="st4" x1="474.8" y1="575.9" x2="474.8" y2="762.9"/>
+<line id="XMLID_2388_" class="st4" x1="383.8" y1="575.9" x2="383.8" y2="762.9"/>
+<line id="XMLID_2387_" class="st4" x1="222.8" y1="575.9" x2="222.8" y2="762.9"/>
+<rect id="XMLID_254_" x="59.8" y="985.4" class="st11" width="1249.5" height="186.3"/>
+<text id="XMLID_252_" transform="matrix(1 0 0 1 831.0674 825.6187)"><tspan x="0" y="0" class="st12 st5 st14">S. Overige </tspan><tspan x="0" y="16.8" class="st12 st5 st14">dienstverlening</tspan></text>
+<text id="XMLID_251_" transform="matrix(1 0 0 1 1053.335 837.6187)" class="st12 st5 st14">T. Huishouding</text>
+<text id="XMLID_250_" transform="matrix(1 0 0 1 600.0674 837.6196)" class="st12 st5 st14">R. Cultuur, sport en recreatie</text>
+<text id="XMLID_249_" transform="matrix(1 0 0 1 252.3994 837.6196)" class="st2 st5 st14">P. Onderwijs</text>
+<text id="XMLID_245_" transform="matrix(1 0 0 1 110.2139 837.6177)" class="st2 st5 st14">O. Overheid</text>
+<text id="XMLID_244_" transform="matrix(1 0 0 1 395.5801 837.6187)" class="st2 st5 st14">Q. Zorg</text>
+<g id="XMLID_240_">
+	<rect id="XMLID_243_" x="831.1" y="883.8" class="st15" width="84.5" height="26.7"/>
+	<line id="XMLID_242_" class="st8" x1="873.3" y1="875.7" x2="915.5" y2="883.8"/>
+	<line id="XMLID_241_" class="st8" x1="873.3" y1="875.7" x2="831.1" y2="883.8"/>
+</g>
+<g id="XMLID_226_">
+	<rect id="XMLID_239_" x="1046.9" y="880.8" class="st15" width="43.2" height="30.2"/>
+	<line id="XMLID_238_" class="st8" x1="1090.1" y1="880.8" x2="1068.5" y2="864.2"/>
+	<line id="XMLID_237_" class="st8" x1="1068.5" y1="864.2" x2="1046.9" y2="880.8"/>
+	<line id="XMLID_236_" class="st8" x1="1082.3" y1="910.9" x2="1082.3" y2="895.9"/>
+	<line id="XMLID_235_" class="st8" x1="1082.3" y1="896.9" x2="1073.3" y2="896.9"/>
+	<line id="XMLID_234_" class="st8" x1="1073.3" y1="896.9" x2="1073.3" y2="910.9"/>
+	<line id="XMLID_233_" class="st8" x1="1068.3" y1="894.9" x2="1068.3" y2="907.9"/>
+	<line id="XMLID_232_" class="st8" x1="1068.3" y1="907.9" x2="1053.3" y2="907.9"/>
+	<line id="XMLID_231_" class="st8" x1="1053.3" y1="907.9" x2="1053.3" y2="894.9"/>
+	<line id="XMLID_230_" class="st8" x1="1054.3" y1="895.9" x2="1069.3" y2="895.9"/>
+	<line id="XMLID_229_" class="st8" x1="1082.3" y1="864.9" x2="1082.3" y2="875.9"/>
+	<line id="XMLID_228_" class="st8" x1="1082.3" y1="865.9" x2="1077.3" y2="865.9"/>
+	<line id="XMLID_227_" class="st8" x1="1077.3" y1="865.9" x2="1077.3" y2="871.9"/>
+</g>
+<g id="XMLID_168_">
+	<rect id="XMLID_211_" x="254.5" y="877.5" class="st1" width="76.3" height="33.4"/>
+	<line id="XMLID_209_" class="st9" x1="329.3" y1="889.4" x2="253.3" y2="889.4"/>
+	<line id="XMLID_208_" class="st9" x1="329.3" y1="900.4" x2="253.3" y2="900.4"/>
+	<rect id="XMLID_207_" x="258.8" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_206_" x="266.7" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_203_" x="274.5" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_202_" x="282.4" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_201_" x="290.3" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_200_" x="298.1" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_199_" x="306" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_198_" x="313.9" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_197_" x="321.7" y="881.6" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_196_" x="321.7" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_195_" x="313.9" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_194_" x="306" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_193_" x="298.1" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_192_" x="290.3" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_191_" x="282.4" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_189_" x="274.5" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_188_" x="266.7" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_187_" x="258.8" y="892.4" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_186_" x="258.8" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_185_" x="266.7" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_182_" x="274.5" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_181_" x="282.4" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_180_" x="290.3" y="903.1" class="st9" width="5.5" height="7.9"/>
+	<rect id="XMLID_179_" x="298.1" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_177_" x="306" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_176_" x="313.9" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<rect id="XMLID_175_" x="321.7" y="903.1" class="st9" width="5.5" height="5.5"/>
+	<line id="XMLID_174_" class="st9" x1="330.8" y1="877.5" x2="333" y2="869.5"/>
+	<line id="XMLID_172_" class="st9" x1="330.8" y1="910.4" x2="333" y2="902.4"/>
+	<line id="XMLID_171_" class="st9" x1="331.8" y1="901.9" x2="331.8" y2="869.9"/>
+	<line id="XMLID_170_" class="st9" x1="332.3" y1="869.4" x2="257.3" y2="869.4"/>
+	<line id="XMLID_169_" class="st9" x1="254.5" y1="877.5" x2="257.9" y2="869.5"/>
+</g>
+<g id="XMLID_156_">
+	<polygon id="XMLID_167_" class="st15" points="181.4,910.2 157.4,910.2 157.4,852.2 181.4,877.5 	"/>
+	<line id="XMLID_166_" class="st8" x1="157.3" y1="868.9" x2="172.3" y2="868.9"/>
+	<line id="XMLID_165_" class="st8" x1="157.3" y1="863.9" x2="167.3" y2="863.9"/>
+	<line id="XMLID_164_" class="st8" x1="157.3" y1="873.9" x2="176.3" y2="873.9"/>
+	<line id="XMLID_163_" class="st8" x1="156.3" y1="877.9" x2="180.3" y2="877.9"/>
+	<line id="XMLID_162_" class="st8" x1="180.3" y1="881.9" x2="157.3" y2="881.9"/>
+	<line id="XMLID_161_" class="st8" x1="180.3" y1="886.9" x2="157.3" y2="886.9"/>
+	<line id="XMLID_160_" class="st8" x1="180.3" y1="891.9" x2="157.3" y2="891.9"/>
+	<line id="XMLID_159_" class="st8" x1="180.3" y1="895.9" x2="157.3" y2="895.9"/>
+	<line id="XMLID_158_" class="st8" x1="180.3" y1="900.9" x2="157.3" y2="900.9"/>
+	<line id="XMLID_157_" class="st8" x1="180.3" y1="905.9" x2="157.3" y2="905.9"/>
+</g>
+<g id="XMLID_147_">
+	<path id="XMLID_153_" class="st15" d="M153.8,883.7c-2-4.7-8.9-13.6-20.3-13.6c-13,0-22.6,4.1-25.7,13.6"/>
+	<rect id="XMLID_152_" x="144.9" y="883.7" class="st15" width="8.8" height="17"/>
+	<rect id="XMLID_151_" x="107.7" y="883.7" class="st15" width="8.8" height="17"/>
+	<path id="XMLID_150_" class="st15" d="M144.9,883.7c-0.7-2.4-4.5-7.6-12.2-7.6c-7.9,0-15.1,4.1-16.2,7.6"/>
+	<path id="XMLID_149_" class="st15" d="M144.9,884.1c-0.7-2.4-4.5-7.6-12.2-7.6c-7.9,0-15.1,4.1-16.2,7.6"/>
+	<path id="XMLID_148_" class="st15" d="M144.9,900.8c-0.7-2.4-4.5-7.6-12.2-7.6c-7.9,0-15.1,4.1-16.2,7.6"/>
+</g>
+<image style="overflow:visible;" width="64" height="64" id="XMLID_146_" xlink:href="../../../../../../Downloads/4022_langdurige_zorg.png"  transform="matrix(0.9262 0 0 0.9262 395.5801 852.2104)">
+</image>
+<image style="overflow:visible;" width="160" height="44" id="XMLID_144_" xlink:href="../../../../../../Downloads/recreatie.jpeg"  transform="matrix(0.8906 0 0 0.8906 539.835 871.3999)">
+</image>
+<image style="overflow:visible;" width="500" height="500" id="XMLID_132_" xlink:href="../../A3/goederen/publiek_goed/wat-is-dijk.jpg"  transform="matrix(0.1396 0 0 0.1396 103.6733 987.6772)">
+</image>
+<image style="overflow:visible;" width="214" height="282" id="XMLID_125_" xlink:href="../../A3/goederen/publiek_goed/Zonnebloemen.jpg"  transform="matrix(0.3443 0 0 0.3443 370.6631 985.6255)">
+</image>
+<image style="overflow:visible;" width="450" height="360" id="XMLID_118_" xlink:href="../../C/overheid/spullenOverheid/wetboek.jpg"  transform="matrix(0.1768 0 0 0.1768 94.9351 1102.1567)">
+</image>
+<line id="XMLID_106_" class="st4" x1="686.8" y1="984.9" x2="686.8" y2="1171.9"/>
+<line id="XMLID_105_" class="st4" x1="562.8" y1="984.9" x2="562.8" y2="1171.9"/>
+<line id="XMLID_103_" class="st4" x1="368.8" y1="984.9" x2="368.8" y2="1171.9"/>
+<line id="XMLID_102_" class="st4" x1="292.8" y1="984.9" x2="292.8" y2="1171.9"/>
+<line id="XMLID_101_" class="st4" x1="185.8" y1="984.9" x2="185.8" y2="1171.9"/>
+<line id="XMLID_100_" class="st4" x1="627.8" y1="984.9" x2="627.8" y2="1171.9"/>
+<image style="overflow:visible;" width="800" height="800" id="XMLID_87_" xlink:href="../../../../../../Downloads/road.png"  transform="matrix(7.651896e-02 5.722198e-02 -5.722198e-02 7.651896e-02 130.8486 1001.854)">
+</image>
+<use xlink:href="#New_Symbol_20"  width="22" height="18" id="XMLID_80_" x="-11" y="-9" transform="matrix(1 0 0 -1 134.9116 1085.6538)" style="overflow:visible;"/>
+<text id="XMLID_301_" transform="matrix(1 0 0 1 831.0674 453.6187)"><tspan x="0" y="0" class="st2 st5 st14">K. Financiële </tspan><tspan x="0" y="16.8" class="st2 st5 st14">instellingen</tspan></text>
+<text id="XMLID_299_" transform="matrix(1 0 0 1 1123.335 453.6187)"><tspan x="0" y="0" class="st2 st5 st14">M.N. Zakelijke </tspan><tspan x="0" y="16.8" class="st2 st5 st14">dienstverlening</tspan></text>
+<g id="XMLID_289_">
+	<rect id="XMLID_298_" x="613.5" y="508.9" class="st15" width="67.2" height="33.6"/>
+	<rect id="XMLID_297_" x="615.7" y="511.8" class="st15" width="62.3" height="29.2"/>
+	<line id="XMLID_296_" class="st8" x1="648.3" y1="542.9" x2="648.3" y2="546.9"/>
+	<line id="XMLID_295_" class="st8" x1="644.3" y1="542.9" x2="644.3" y2="546.9"/>
+	<line id="XMLID_294_" class="st8" x1="645.3" y1="547.9" x2="636.3" y2="547.9"/>
+	<line id="XMLID_293_" class="st8" x1="636.3" y1="547.9" x2="636.3" y2="548.9"/>
+	<line id="XMLID_292_" class="st8" x1="636.3" y1="549.9" x2="655.3" y2="549.9"/>
+	<line id="XMLID_291_" class="st8" x1="654.3" y1="549.9" x2="654.3" y2="547.9"/>
+	<line id="XMLID_290_" class="st8" x1="655.3" y1="547.9" x2="648.3" y2="547.9"/>
+</g>
+<text id="XMLID_288_" transform="matrix(1 0 0 1 606.8057 453.6187)"><tspan x="0" y="0" class="st12 st5 st14">J. Informatie en </tspan><tspan x="0" y="16.8" class="st12 st5 st14">informatica</tspan></text>
+<g id="F2mVE4.tif_2_">
+	
+		<image style="overflow:visible;" width="256" height="160" id="Layer_0_1_" xlink:href="9EE27EC43CA137ED.png"  transform="matrix(0.2733 0 0 0.2648 826.1201 508.1763)">
+	</image>
+</g>
+<image style="overflow:visible;" width="256" height="256" id="XMLID_287_" xlink:href="../../../../../../Downloads/prof.png"  transform="matrix(0.2395 0 0 0.2395 1110.0327 495.9312)">
+</image>
+<image style="overflow:visible;" width="104" height="108" id="XMLID_286_" xlink:href="../../../../../../Downloads/download.jpeg"  transform="matrix(0.7168 0 0 0.5972 970.1206 485.4204)">
+</image>
+<image style="overflow:visible;" width="225" height="225" id="XMLID_285_" xlink:href="../../C/huishoudens/spullenHuis/huis.png"  transform="matrix(0.2512 0 0 0.2512 832.8335 582.6929)">
+</image>
+<image style="overflow:visible;" width="140" height="82" id="XMLID_280_" xlink:href="../../C/vennootschappen/spullen van de bakker/reclame.png"  transform="matrix(0.5488 0 0 0.5488 946.6333 583.5142)">
+</image>
+<line id="XMLID_276_" class="st4" x1="930.8" y1="575.9" x2="930.8" y2="762.9"/>
+<line id="XMLID_275_" class="st4" x1="794.8" y1="575.9" x2="794.8" y2="762.9"/>
+<line id="XMLID_274_" class="st4" x1="667.8" y1="575.9" x2="667.8" y2="762.9"/>
+<use xlink:href="#New_Symbol_23"  width="20" height="20" id="XMLID_273_" x="-10" y="-10" transform="matrix(1 0 0 -1 690.9316 594.1587)" style="overflow:visible;"/>
+<use xlink:href="#New_Symbol_69"  width="22" height="18" id="XMLID_272_" x="-11" y="-9" transform="matrix(1 0 0 -1 689.4312 631.6567)" style="overflow:visible;"/>
+<use xlink:href="#New_Symbol_68"  width="23.2" height="17.2" id="XMLID_271_" x="-11.6" y="-8.6" transform="matrix(1 0 0 -1 720.9292 630.1567)" style="overflow:visible;"/>
+<use xlink:href="#New_Symbol_15"  width="22" height="18" id="XMLID_270_" x="-11" y="-9" transform="matrix(1 0 0 -1 691.835 674.8862)" style="overflow:visible;"/>
+<rect id="XMLID_29_" x="173.3" y="201.2" class="st7" width="180" height="94.7"/>
+<text id="XMLID_98_" transform="matrix(1 0 0 1 191.335 217.6191)" class="st2 st5 st14">appels van boer jansen</text>
+<image style="overflow:visible;" width="82" height="69" id="XMLID_638_" xlink:href="../../../../../../Downloads/82px-sun-clip-art-23274.png"  transform="matrix(0.7663 0 0 0.7663 101.4561 215.9731)">
+</image>
+<image style="overflow:visible;" width="558" height="640" id="XMLID_1482_" xlink:href="../../../../../../Downloads/apple-439397_640.png"  transform="matrix(8.243200e-02 0 0 8.243200e-02 235.3398 234.1333)">
+</image>
+<rect id="XMLID_266_" x="172.9" y="296.3" class="st0" width="180.5" height="93.1"/>
+<image style="overflow:visible;" width="961" height="520" id="XMLID_2346_" xlink:href="../../../../../../Downloads/home_tree.png"  transform="matrix(0.1107 0 0 0.1107 211.1831 328.2778)">
+</image>
+<text id="XMLID_107_" transform="matrix(1 0 0 1 191.335 315.6191)" class="st2 st5 st14">appels van boer jansen</text>
+<text id="XMLID_300_" transform="matrix(1 0 0 1 952.3389 453.6187)" class="st2 st5 st14">L. Onroerend goed</text>
+<g id="XMLID_56_">
+	<circle id="XMLID_55_" class="st15" cx="729.3" cy="177.6" r="14.1"/>
+	<path id="XMLID_57_" class="st8" d="M720,188.1l-26.8-24.2c-3.7-3.1-2.4-8.5-0.5-10.7c2.1-2.4,6.7-4.6,11.8-2.3l31.2,14.2"/>
+</g>
+</svg>

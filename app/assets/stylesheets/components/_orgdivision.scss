@@ -1,0 +1,628 @@
+.cont-nl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    //width: 1193px;
+    margin-bottom: 12px;
+   
+}
+
+// input output pijlen
+
+.mensen.bgoutput, .natuur.bgoutput {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 94px;
+}
+.mensen.bginput {
+    position: absolute;
+    top: 118px;;
+    transform: rotate(180deg);
+}
+.mensen.bginput.in {
+    position: absolute;
+    top: 94px;
+    left: 55px;
+    transform: rotate(0deg);
+}
+.natuur.bginput{
+    position: absolute;
+    top: 118px;
+    transform: rotate(180deg);
+}
+.natuur.bginput.in {
+    position: absolute;
+    top: 94px;
+    left: 55px;
+    transform: rotate(0deg);
+}
+.organisaties.bgoutput {
+    position: absolute;
+    transform: rotate(180deg);
+    top: -26px;
+}
+.organisaties.bgoutput.uitlinks {
+    position: absolute;
+    transform: rotate(0deg);
+    top: 118px;
+    left: 55px
+}
+.organisaties.bgoutput.uitrechts {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 47px;
+    left: 1100px
+}
+.lijn-eigendom {
+    position: absolute;
+    border-left: 6px dotted $border-color-base;
+    top: 94px;
+    left: 200px;
+    //width: 200px;
+    height: 48px;
+    z-index: 5;
+    padding-top: 13px;
+    padding-left: 8px;
+}
+
+.organisaties.bgoutput.uitrechts {
+    position: absolute;
+    transform: rotate(0deg);
+    top: 118px;
+    left: 55px
+}
+
+.cont-natuurmens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //width: 1193px;
+
+   
+    .natuurleft,
+    .mensleft {
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: $border-color-base;
+        //padding-bottom: 4px;
+        position: relative;
+        margin-bottom: 24px;
+
+        > div:nth-child(1) {    //titel
+            border-width: 0px 0px 1px 0px;
+            border-style: solid;
+            border-color: $border-color-base;
+            background-color: $background-color-2;
+            padding: 8px 0px 0px 4px;
+            height: 36px;
+            div {
+                margin-right: 12px;
+            }
+                }
+        > div:nth-child(2) {
+            //background-color: red;
+            //max-height:277px;
+            //overflow-y: hidden;
+        }
+    }
+    .imgnatuur {
+        //transform: scale(0.8, 0.8);
+    }
+    .line {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        //flex-wrap: wrap;
+        .person {
+            img {
+                max-height: 56px;
+                padding: 2px 18px 2px 18px;
+                border-radius: 50%;
+            }
+        }
+          .person:hover, .natuurleft div:hover {
+            background-color: $background-color-2;
+          }
+          .foto-ik {
+              padding: 0px 0px 0px 4px;
+              transform: scale(.8,.8);
+          }
+    }
+}
+
+.mens-natuur-organisaties {
+    width: 1100px;
+}
+
+// ORGANISATIES TOTAAL
+.cont-organisaties-totaal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid $border-color-base;
+    margin-top: 24px;
+}
+.titel-eigendommen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 0px 0px 8px;
+    height: 36px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: $border-color-base;
+    background-color: $background-color-2;
+    div {
+        margin-right: 12px;
+    }
+}
+
+// BEDRIJFSTAKKEN EN SECTOREN
+.cont-organisaties-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+//  BEDRIJFSTAKKEN
+.cont-bdt {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 810px;
+    }
+.image-bedrijfstakken {
+    //width:820px;
+}
+
+.container-nederland {
+    position: relative;
+}
+
+.titel-nederland {
+    margin: 8px 0px 0px 8px;
+    font-size: 14px;
+}
+
+.image-bedrijfstakken {
+    padding-bottom: 4px;
+}
+
+.kopjebedrijfstakken {
+    position: absolute;
+    top: 32px;
+    left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    .icon {
+        margin-top: 4px;
+    }
+}
+
+// database
+.container-bdt-database {
+    position: absolute;
+    left: -745px;
+    background-color: white;
+    width: 570px;
+    height: 560px;
+    border: 1px solid $border-color-base;
+}
+
+.titel-bedrijfstakken {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0px 0px 22px;
+}
+
+.orgdivision-container {
+    // database losse namen
+    position: absolute;
+    top: 36px;
+    left: 12px;
+    padding: 10px;
+    border-right: 1px solid violet;
+    z-index: 999;
+    background-color: green;
+}
+
+.bdtnamen > div {
+    width: 227px;
+    height: 24px;
+    //overflow: hidden;
+    //text-overflow: clip;
+    //color: $text-color-dark;
+    cursor: pointer;
+    background-color: yellow;
+    border: 4px solid purple;
+}
+
+//.bdtnamen > div:hover {
+   // color: $blue;
+//}
+
+// SBI Standaard bedrijven index
+.orgdivision_group-container {
+    // database detailuitleg
+    position: absolute;
+    //border-right: 1px solid $border-color-base;
+    //background-color: $background-color-2;
+    top: 36px;
+    left: 200px;
+    width: 308px;
+    max-height: 520px;
+    overflow: scroll;
+    text-overflow: clip;
+    z-index: 99;
+    .group1,
+    .group2,
+    .group3,
+    .groupA {
+        display: flex;
+        flex-direction: row;
+        padding: 4px 4px 4px 12px;
+    }
+    .groupA {
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid $border-color-base;
+        color: $text-color-dark;
+        //background-color: $background-color-1;
+    }
+    .group1 {
+        color: $text-color-dark;
+        //background-color: $background-color-2;
+    }
+    .group2 {
+        //display: none;
+        color: $text-color-base;
+    }
+    .group3 {
+        //display: none;
+        font-size: 12px;
+        color: $text-color-dark;
+    }
+    .code {
+        flex: 0 0 30px;
+    }
+    .group2 > .code {
+        font-size: 12px;
+        padding-top: 1px;
+    }
+    .group3 > .code {
+        //visibility: hidden;
+    }
+    .title {
+        flex: 0 0 260px;
+    }
+}
+
+.bdt-a {
+    padding: 24px;
+}
+
+.bdt-img {
+    display: none;
+    > img {
+        position: absolute;
+        z-index: -2;
+    }
+}
+
+//B1: producten rechtsboven
+.cont-bedrijfstakproducten {
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: $border-color-base;
+}
+
+.part {
+    width: 270px;
+    position: relative;
+    .branche {
+        position: relative;
+        background-color: $background-color-2; // white;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: $border-color-base;
+        .text {
+            color: black; // $text-color-dark;
+            padding: 8px 0px 8px 8px;
+        }
+        .artwork {
+            display: none;
+            padding: 4px 0px 8px 0px;
+            }
+            img {
+                max-height: 40px;
+                max-width: 160px;
+            }
+      }
+
+.products {
+    background-color: white;
+    height: 490px;
+    overflow-y: auto;
+
+    .oneproduct {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: $border-color-base;
+
+        .text {
+            color: $text-color-dark; // $blue;
+            text-align: center;
+            padding: 12px 0px 8px 8px;
+            width: 100%;
+            //font-size: 14px;
+            div:nth-child(1) {
+                font-weight: bold;
+            }
+        }
+        .artwork {
+            padding: 0px 2px 8px 2px;
+          
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }   
+        .artwork.maxima {
+         background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
+         background-size: 250px 130px;
+        background-repeat: no-repeat;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }   
+        .artwork.peter {
+         background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
+         background-size: 250px 130px;
+        background-repeat: no-repeat;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }    
+        .artwork.bakker {
+         background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
+         background-size: cover;
+         flex-direction: row;
+            display: flex;
+         justify-content: center;
+        background-repeat: no-repeat;
+            width: 100%;
+            }     
+              
+       .artwork.small  img {
+                max-width: 70px;
+                max-height: 100%;
+         }
+    }
+    :last-child.oneproduct {
+        //border-width: 0px 0px 0px 0px;        
+    }
+}
+    .oneproduct .text:hover {
+        background-color: $background-color-2;
+        cursor: pointer;
+    }
+}
+
+// C1: sectoren
+.cont-sct {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 810px;
+    //height: 560px;
+    //width: 850px;
+    .sct-nederland {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .rij {
+        display: -webkit-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        width: 700px;
+    }
+    .sector,
+    .sector > .title,
+    .sector > .row {
+        border-style: solid;
+        border-color: $border-color-base;
+    }
+    .sector {
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        -webkit-align-items: center;
+        height: 200px;
+        margin: 12px 24px 12px 24px;
+        border-width: 1px 1px 1px 1px;
+        > div {
+            width: 220px;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 30px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px;
+            border-width: 0px 0px 1px 0px;
+        }
+        .row {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: auto;
+            background-color: white;
+            padding-left: 8px;
+            border-width: 0px 0px 1px 0px;
+            cursor: pointer;
+        }
+        .row:hover {
+            background-color: $background-color-2;
+            //color: $text-color-base;
+        }
+        .row:last-of-type {
+            border-width: 0px 0px 0px 0px;
+        }
+        .huishouden {
+            background-color: $huishouden;
+        }
+        .nv {
+            background-color: $nv;
+        }
+        .overheid-d {
+            background-color: $overheid;
+        }
+        .financieel {
+            background-color: $financieel;
+        }
+    }
+}
+
+// map producten 
+
+.maparbeid {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 238px;
+    left: 296px;
+    background-color: yellow;
+    z-index: 5;
+    //opacity: 0.8;
+    padding: 4px 6px 4px 8px;
+}
+.mapvrijetijd {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 468px;
+    left: 45px;
+    background-color: yellow;
+    z-index: 5;
+    //opacity: 0.8;
+    padding: 4px 6px 4px 8px;
+}
+.mapeigendom {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 448px;
+    left: 152px;
+    width: 105px;
+    height: 65px;
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px;
+    border-color: $red;
+    z-index: 5;
+    //opacity: 1;
+    >div {
+        background-color: white;
+        margin-left: 8px;
+
+    }
+    img {   
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        transform: scale(0.4, 0.4);
+    }
+}
+// Rij met producten
+
+
+.container-producten {
+    position:relative;
+    display: flex;
+    flex-direction: column;  
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: $border-color-base; 
+    width: 1100px; 
+    position: relative;  
+    .titel {
+            border-width: 0px 1px 1px 1px;
+            border-style: solid;
+            border-color: $border-color-base;
+            background-color: $background-color-2;
+            padding: 8px 0px 0px 8px;
+            height: 36px;
+    }
+}
+.productenrij {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    //width: 1193px; 
+    .productitem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 auto;
+        .tekst {
+            padding: 8px 0px 8px 0px; 
+            }
+        .image {
+            margin: 0px 0px 8px 0px!important; 
+            }
+        .border {
+            padding-top: 4px;
+            width: 100%;
+            border-bottom: 1px solid $border-color-base;
+            }
+        .pijlen {
+            display: flex;
+            flex-direction: row;
+            margin-top: -8px;
+        }
+        .specifiek1 {
+            font-style: italic;
+            padding: 8px 0px 0px 0px; 
+        }
+        .pijl { //output
+            transform: rotate(90deg);
+            margin-top: 6px;
+            background-color: $bgoutput;
+        }
+    }
+    .borderleft, .borderright {
+            border-left: 1px solid $border-color-base; 
+            height: 72px;       
+    } 
+    .productitem:hover {
+        background-color: $background-color-2;        
+    }   
+}
+
+.scheidslijn {
+    width: 1350px;
+     border-style: dashed;
+     border-width: 3px 0px 0px 0px;
+     border-color: $background-color-1;
+     margin: 24px 0px 24px 0px;
+
+}

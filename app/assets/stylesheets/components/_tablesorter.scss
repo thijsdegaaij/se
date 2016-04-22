@@ -1,0 +1,12 @@
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(/libs/jquery_tablesorter/themes/blue/asc.gif);
+    background-repeat: no-repeat;
+    background-position: right center; 
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(/libs/jquery_tablesorter/themes/blue/desc.gif);
+    background-repeat: no-repeat;
+    background-position: right center; 
+}

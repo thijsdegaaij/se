@@ -1,0 +1,122 @@
+.title-navdisplay {
+	font-size: 22px;
+	color: $text-color-base;
+    //letter-spacing: 1px;
+    padding: 2px 2px 24px 0px; 
+    border-bottom: solid 1px $border-color-light;
+    background-color: #fff;
+}
+.productbranche {
+	position: relative;
+	padding: 12px;
+    //background-color: white;
+	.line {
+		position: relative;
+		display: -webkit-flex;
+    	flex-direction: row;
+	    justify-content: flex-start;
+	    height: 369px;
+	}
+	.part {
+		display: -webkit-flex;
+    	flex-direction: column;
+	    flex: 0 0 120px;
+		position: relative;
+		//height: 450px;
+		border-style: solid;
+		border-width: 1px 0px 1px 1px;
+		border-color: $border-color-base;
+	}
+		.part:last-of-type{
+		border-width: 1px 1px 1px 1px;
+		}
+	.branche {
+		position: relative;
+		display: -webkit-flex;
+    	flex-direction: column;
+	    justify-content: space-between;
+	    align-items: center;
+
+		height: 110px;
+		background-color: $background-color-1; // white;
+		border-style: solid;
+		border-width: 0px 0px 1px 0px;
+		border-color:  $border-color-base;
+		.text {
+			text-align: center;
+			color: black; // $text-color-dark;
+			padding: 14px 4px 8px 4px;
+			//font-weight: bold;
+		}
+		.artwork  {
+			padding: 4px 0px 18px 0px;
+
+			img {
+			max-height: 40px;
+			max-width: 120px;
+			}
+		}
+	}
+	.products {
+		display: -webkit-flex;
+    	flex-direction: column;
+    	background-color: white;
+
+		//height: 266px;
+		overflow: auto;
+		//position: relative;
+	}
+	.oneproduct {
+		display: -webkit-flex;
+    	flex-direction: column;
+	    align-items: center;
+
+		min-height: 130px;
+		position: relative;
+		border-style: solid;
+		border-width: 0px 0px 1px 0px;
+		border-color: $border-color-base;
+
+		.text {	
+			color: $text-color-base;// $blue;
+			text-align: center;
+			padding: 12px 0px 0px 4px;
+			font-size: 10px;
+		}
+		.orgtext {	
+			color: $blue;
+			text-align: center;
+		}
+		.artwork  {
+			position: absolute;
+			height: 50px;
+			padding: 0px 2px 0px 2px;
+    		clip:rect(0px,150px,70px,0px);
+
+			img {
+			max-width: 150px;
+			max-height: 110px;
+			opacity: 0.4;
+			}
+
+		}
+	}
+	.oneproduct:hover {
+
+		.text {
+			color: $blue;
+		}
+		img {
+				opacity: 1;
+				position: absolute;
+				//clip:rect(0px,240px,170px,0px);
+				//max-width: 540px;
+				//max-height: 570px;
+			}
+	}
+	
+		
+
+
+}
+

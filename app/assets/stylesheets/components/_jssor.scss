@@ -1,0 +1,46 @@
+.jssora21l {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(/images/icons/icon_sliderarrow.svg) center center no-repeat;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.jssora21r {
+  display: block;
+  position: absolute;
+  /* size of arrow element */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(/images/icons/icon_sliderarrow.svg) center center no-repeat;
+}
+.jssora21l:hover {  }
+.jssora21r:hover { }
+.jssora21l.jssora21ldn { }
+.jssora21r.jssora21rdn {  }
+
+.jssorb02 {
+  position: absolute;
+}
+.jssorb02 div, .jssorb02 div:hover, .jssorb02 .av {
+  position: absolute;
+  /* size of bullet elment */
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  line-height: 21px;
+  color: white;
+  font-size: 12px;
+  background: url(/libs/jssor_slider/img/b02.png) no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+}
+.jssorb02 div { background-position: -5px -5px; }
+.jssorb02 div:hover, .jssorb02 .av:hover { background-position: -35px -5px; }
+.jssorb02 .av { background-position: -65px -5px; }
+.jssorb02 .dn, .jssorb02 .dn:hover { background-position: -95px -5px; }

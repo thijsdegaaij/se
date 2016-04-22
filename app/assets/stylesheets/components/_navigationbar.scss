@@ -1,0 +1,234 @@
+.borderbottomsimulatie {
+  position: absolute;
+  top: 70px;
+  left: 570px;
+  width: 1330px;
+  border-bottom: 1px solid $border-color-base;
+  z-index: 9;
+}
+
+.navb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed; 
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  background-color: $background-color-1;
+  height: 70px;
+  width: 1900px;
+  //border-bottom: 1px solid $border-color-base;
+
+  .logo-se {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 7px;
+    margin-left: 24px;
+    margin-right: 24px;
+    img {
+      height: 40px;
+    }
+  }
+
+
+// Lessen en Opdrachen 
+  .nav-lessenopdrachten {
+    position: absolute;
+    top: 23px;
+    left: 400px;
+    //width: 570px;
+    //height: 30px;
+    //background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .plaatjenaam { 
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+     > div {
+      padding: 0px 7px 0px 7px;
+    } 
+  }
+
+
+  .navheaders {
+    display: flex;
+    flex-direction: row;
+    margin-left: 217px;
+    margin-top: 5px;
+    div {
+      padding-right: 18px;
+      padding-left: 18px;
+      border-right: 1px solid $border-color-base;
+      color: $kop2;
+      font-size: 16px;
+    }
+  }
+
+  .menus{
+    width: 650px;
+    margin-left: 28px;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-justify-content: space-around; 
+  }
+
+
+/* space */
+  .space {
+    width: 120px;
+  }
+
+/* user */
+  .img-learner {
+    margin-top: 0px;
+    margin-left: 0px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+
+    .plaatjenaam { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 12px;
+     > div {
+      padding: 0px 7px 0px 7px;
+    } 
+  }
+/* level */
+  .level{
+    width: 400px;
+  }
+  .navtext {
+    text-align: center;
+    color: $text-color-base;
+  }
+  .navtext:hover {
+    color: $text-color-dark;
+  }
+
+  .expmenu{
+    position: fixed;
+    z-index: 5;
+    top: 60px;
+    left: $left;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    border: 1px solid $border-color-base;
+    border-color:rgba(0,0,0,.2);
+    background-color: #fff;
+  }
+  #teacher-nav-expmenu{
+   width: 1350px;
+  }
+  #situations-nav-expmenu{
+   width: 1000px;
+   height: 800px;
+   overflow: scroll;
+  }
+  #people-nav-expmenu{
+   width: 1000px;
+  }
+  #product-nav-expmenu{
+   width: 1330px;
+   left: 570px;
+   z-index: 7;
+  }
+  .triangle{
+    position: absolute;
+    z-index: 8;
+    top: 52px;
+    margin-left: 35px;
+    height: 16px; 
+    width: 16px;
+    border-width: 1px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;  
+    border-color: #fff;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border-color:rgba(0,0,0,.2);
+  }
+}
+      /* Triangle verschijnt linksonder van knop 
+      .button > .triangle#teacher-nav-expmenu     {right: 950px;}
+      .button > .triangle#situations-nav-expmenu  {right: 650px;}
+      .button > .triangle#people-nav-expmenu      {right: 520px;}
+      .button > .triangle#product-nav-expmenu     {right: 250px;}
+*/
+
+  .displaynone {
+    display: none;
+  }
+
+  #conceptbrowser{
+   width: 700px;
+   padding: 48px 48px 48px 48px;
+
+   .header {
+    font-size: 18px;
+    color: $red !important;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+   }
+   .definition {
+    color: $text-color-base;
+   }
+   .seealso {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 24px 0px 12px 0px;
+   }
+  }
+
+
+  .title-navdisplay {
+    font-size: 20px;
+    color: $text-color-base;
+    //letter-spacing: 1px;
+    padding: 24px 48px 24px 48px; 
+    border-bottom: solid 1px $border-color-light;
+    background-color: #fff;
+  }
+  .delete-navdisplay {
+    margin: 24px;
+  }
+
+
+
+//Situation overview
+.sito {
+    display: -webkit-flex;
+    flex-direction: column;
+
+  
+  .line {
+    display: -webkit-flex;
+    flex-direction: row;
+    color: $text-color-base;
+    padding: 12px 48px 12px 48px; 
+    border-bottom: solid 1px $border-color-light;
+  }
+  .leftside {
+    width: 200px;
+
+  }
+  .rightside {
+    img {
+      max-width: 700px;
+      }
+  }
+}
+
+
+// bedrijfstakken
+
+
+

@@ -8,13 +8,14 @@ class OrganisatiesController < ApplicationController
   end
 
   def h_organisatie
-    @organisatie_search = Organisatie.find(1)
-
+    
     if (params[:organisatie] != nil and params[:organisatie][:id] != "")
       @organisatie_search = Organisatie.find(params[:organisatie][:id])
+      @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
     end
+    
   end
-
+  
   # GET /organisaties/1
   # GET /organisaties/1.json
   def show

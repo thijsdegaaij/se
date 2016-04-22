@@ -19,7 +19,7 @@
         <td><%= grootboekrekening.naam %></td>
         <td><%= grootboekrekening.grootboektype.naam %></td>
         <td><%= grootboekrekening.organisatie.naam %></td>
-        <td><%= grootboekrekening.icoon %></td>
+        <td><%= image_tag grootboekrekening.icoon_url(:thumb).to_s %></td>
         <td><%= link_to 'Show', grootboekrekening %></td>
         <td><%= link_to 'Edit', edit_grootboekrekening_path(grootboekrekening) %></td>
         <td><%= link_to 'Destroy', grootboekrekening, method: :delete, data: { confirm: 'Are you sure?' } %></td>

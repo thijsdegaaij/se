@@ -1,0 +1,92 @@
+$white		: 	#FFF;
+
+$ggblue 		:hsl(217, 89%, 61%);
+$ggred 			:hsl(5, 81%, 56%);
+$ggorange 		:hsl(45, 97%, 50%);
+$gggreen		:hsl(136, 53%, 43%);
+
+$ggblue-l :		#D9E7FD;
+$ggred-l:		#FBD9D7;
+$ggorange-l:	#FEE8CD;
+$gggreen-l:		#D6EEDD;
+
+$gray1:			#F4F3F3;
+$gray2:			#E8E7E7;
+$gray3:			#CCCCCC;
+$gray4:			#B3B3B3;
+$gray5:			#9A9A9A;
+$gray6:			#808080;
+$gray7:			#666666;
+$gray8:			#4D4D4D;
+$gray9:			#343434;
+$gray10:		#1A1A1A;
+
+
+$kop1:			hsl(217, 65%, 55%);
+$kop2:			hsl(217, 45%, 45%);
+
+
+$beige:			hsl(42, 23%, 91%);
+$beigedark:	    hsl(42, 23%, 45%);
+$x: hsl(42, 31%, 56%);
+
+/* Functional colors */
+$output				: hsl(329, 85%, 70%);
+$input				: hsl(28, 15%, 47%);
+$bgoutput			: hsl(329, 85%, 90%);
+$bginput			: hsl(28, 15%, 85%);
+
+$blue				:	$ggblue;
+$red				:	$ggred;
+$orange				:	$ggorange;
+$green				:	$gggreen;
+
+$color-1			:	$ggblue;
+$color-2			:	$gggreen;
+
+$mens1				:	hsl(16, 56%, 95%);
+$mens2				: 	hsl(15, 64%, 88%);
+$mens3				:	hsl(15, 69%, 80%);
+
+$ervaringsproduct1	: hsl(312, 56%, 95%);
+
+
+$blue-light			:hsl(217, 100%, 99%);
+$red-light			:hsl(0, 56%, 95%);
+$orange-light		:hsl(45, 97%, 95%);
+$green-light		:hsl(136, 53%, 95%);
+
+$bg-balans			: hsl(61, 100%, 89%);
+$bg-rr				: hsl(61, 100%, 95%);
+
+
+$gray-light			: 	$gray1;
+
+$huishouden			:	$red;
+$nv					: 	$orange;
+$overheid			: 	$green;
+$financieel			: 	$blue;
+
+$tekst-verleden		: 	hsl(45, 23%,45%); 
+$bg-verleden		:	hsl(45, 23%,97%);
+
+$verleden			:	hsl(85, 23%, 96%);
+$toekomst			:	#FFFFCC;
+$background-color-1	:	$beige;
+$background-color-2	:	$gray1;
+$background-color-dark	:	$gray5;
+
+$border-color-light	:	$gray2;
+$border-color-base	:	$gray3;
+$border-color-dark	:	$gray4;
+$border-color-try	:	$white;
+
+$text-color-light	:	$gray1;
+$text-color-grey	:	$gray5;
+$text-color-base	:	$gray6;
+$text-color-dark	:	$gray8;
+
+$colorhover			:	$gray1;
+
+$leftq				: 570;
+$left				: 570px;

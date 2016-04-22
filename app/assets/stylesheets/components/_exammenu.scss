@@ -1,0 +1,79 @@
+
+.examen_menu {
+position: absolute;
+/*visibility: hidden;*/
+top: 62px;
+left: 109px;
+}
+.vakje {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eeeeee;
+    background: #fff;
+    height: 72px;
+    width: 170px;
+}
+.jaar {
+  position: relative;
+  font-size: 24px;
+  top: 18px;
+  left: 24px;
+}
+.tijdvak1 {
+  position: relative;
+  font-size: 14px;
+  top: -24px;
+  left: 94px;
+}
+.tijdvak2 {
+  position: relative;
+  font-size: 14px;
+  top: -12px;
+  left: 94px;
+}
+.examenMenu_titel {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.examen_gekozen {
+  border-color: #aaa;
+  width: 280px;
+  height: 500px;
+  color: #000;
+  background-color: #eee;
+  padding: 24px;
+}
+.examenMenu_gekozenJaar{
+  font-size: 24px;
+  display: inline;
+  position: relative;
+  top: 17px;
+  padding-right: 27px;
+}
+.examenMenu_gekozenTijdsvak {
+  font-size: 14px;
+  display: inline;
+  position: relative;
+  top: 15px;
+}
+.examenMenu_opgaveBlok {
+  position: relative;
+  top: 24px;
+}
+.examenMenu_opgave {
+  padding-top: 24px;
+}
+
+#examenMenu_btnMenu {
+  display: inline;
+  position: absolute;
+  top: 26px;
+  left: 246px;
+}
+#examenMenu_btnHamburger {
+  display: inline;
+  position: absolute;
+  top: 33px;
+  left: 223px;
+}

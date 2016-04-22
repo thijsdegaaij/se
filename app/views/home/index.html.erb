@@ -1,3 +1,55 @@
-<h1>SuperEconomics</h1>
 
-<%= render template: "organisaties/h_organisatie" %>
+<script src='js/proto.js'></script>
+
+<%= render template: "oldstviews/inc_navbar" %>
+
+<div class="lessonassignmentspace"></div>
+
+<div class="contain assigncc  "> 
+  <%= render template: "oldstviews/inc_assignments.html" %>
+</div>
+
+<div class="contain lesson ">
+  <%= render template: "oldstviews/inc_lessons.html" %>
+</div>
+
+<div class="simulation">
+  <div class="simrow orgdivision">
+    <%= render template: "oldstviews/inc_orgdivision.html" %>
+  </div>
+
+  <div class="simrow geldkringloop displaynone">
+    <%= render template: "oldstviews/inc_geldkringloop.html" %>
+  </div>
+
+  <div class="simrow mensen displaynone  ">
+    <%= render template: "oldstviews/inc_people.html" %>
+  </div>
+
+  
+  <div class="simrow simrow-organisations displaynone">
+    <%= render template: "organisaties/h_organisatie.html" %>
+  </div>
+
+  <div class="simrow accountingintern displaynone">
+    <%= render template: "oldstviews/inc_accintern.html" %>
+  </div>
+
+  <div class="simrow accountingextern displaynone">
+    <%= render template: "oldstviews/inc_accextern.html" %>
+  </div>
+
+  <div class="simrow situations displaynone ">
+    <%= render template: "oldstviews/inc_sit.html" %>
+  </div>
+
+  <div class="simrow markets displaynone ">
+    <%= render template: "oldstviews/inc_markets.html" %>
+  </div>
+
+  <div class="simrowspace">
+    <div></div>
+    <div></div>
+  </div>
+
+</div>

@@ -1,0 +1,680 @@
+.accounting-all {  
+  align-items: center;
+	position: relative;
+	width: 1300px;
+	margin-top: 24px;
+}
+.btns-intern { 
+    position: absolute;
+    top: 4px;
+    left: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+		text-transform: uppercase;
+		color: $text-color-grey;
+		font-size: 14px;
+}
+.accounting-all, .accounting-extern, 
+.debet, .credit, .regel .bedrag {
+  display: flex;
+  flex-direction: column;
+}
+.row-balansrr, .debetcredit, .regel, 
+.btns-accounting, 
+.titel, .container-rr .titel{
+  display: flex;
+  flex-direction: row;
+  //justify-content: center;  
+}
+
+
+
+//  INTERN
+
+.accounting-intern {
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+  //align-items: center;
+  z-index: 2;
+  padding: 24px 24px 24px 24px;
+	border: 1px solid $border-color-base;
+	//background-color: white; // $background-color-2;
+}
+.grootboeken {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gb-all { //grootboek start
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    //border: 1px solid $border-color-base;
+    width: 1100px; 
+    padding: 12px;
+   margin-bottom:4px;
+    //margin-left: 120px;
+
+    .titelgrootboek {
+      position: absolute;
+      top: 32px;
+      font-weight: bold;
+      margin-left: 60px;
+      font-size: 16px;
+    }
+
+  .gb1 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $border-color-base;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    .titel {
+    	justify-content: center;
+    	font-size: 16px;
+    	font-weight: bold;
+    	//margin-top: 12px;
+    }
+  } 
+
+  .boven {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    //width: 900px;
+    background-color: white;    
+   .hori {
+      display: flex;
+      flex-direction: row;
+      >div {
+      //padding: 3px 5px 2px 2px;
+      .gbr1 {margin-left: 280px;}
+      }
+   }
+  .hori-a {width: 50px;}
+  .hori-c {width: 50px;}
+  .hori-b {width: 783px;
+      //border-style: solid;
+      //border-width: 1px 1px 0px 1px; 
+      //border-color: $border-color-base;
+  }  
+ }
+
+  .geenonderlijn {
+    border-width: 0px 1px 0px 0px !important; 
+  }
+  .geenonderlijnwellinks {
+    border-width: 0px 0px 0px 1px !important;
+  }
+  .welonderlijn {
+    border-width: 0px 1px 1px 1px !important; 
+  }  
+  .boven-orgtitel :nth-child(2) {
+      background-color: $background-color-1;
+      margin-top: 10px;
+      }
+
+  .hor.boven-fin :nth-child(2) {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px; 
+    border-color: $border-color-base;    	
+  }
+
+
+  .onder {
+  	margin-top: 24px;
+    width: 780px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    background-color: white;
+    
+  }
+  .input {
+     display: flex;
+     flex-direction: column;     
+  }
+} //einde gbr-all 
+
+
+
+// GROOTBOEKREKENING
+
+.gbr1 { //gbr binnen gb
+  display: flex;
+  flex-direction: column;
+  .hor {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 20px;
+  :nth-child(1) {flex: 0 0 50px;}
+  :nth-child(2) {flex: 0 0 85px; padding: 1px 0px 0px 0px; }
+  :nth-child(3) {flex: 0 0 130px; padding: 1px 8px 0px 2px;}        
+  :nth-child(4) {flex: 0 0 50px;}       
+  :nth-child(5) {flex: 0 0 150px; font-style: italic; align-self: center;}
+  }
+  .hor.k1 :nth-child(2), 
+  .hor.k1 :nth-child(3) {
+  	//border-top: 1px solid $border-color-base;
+  }
+  
+    .k1{
+      font-weight: bold;  
+    border-width: 1px 1px 1px 1px !important; 
+    }
+    .k2 {
+      //font-weight: bold;
+      height: 24px;
+    }
+    .norm {
+    :nth-child(2) {padding-left: 8px}
+    :nth-child(3) {text-align: right;}
+    :nth-child(3)::before {content: '€ ';}
+    } 
+   .hor :nth-child(2) {
+      border-style: solid;
+      border-width: 0px 0px 1px 1px; 
+      border-color: $border-color-base;
+    }
+   .hor :nth-child(3) {
+      border-style: solid;
+      border-width: 0px 1px 1px 0px; 
+      border-color: $border-color-base;
+    }
+   .hor.k1 :nth-child(2) {background-color: $background-color-1;}
+   .hor.k1 :nth-child(3) {background-color: $background-color-1;}
+   .hor.k2 :nth-child(2) {background-color: $background-color-2;}
+   .hor.k2 :nth-child(3) {background-color: $background-color-2; padding-top: 2px;}
+}  //einde gbr
+
+
+.evkleur :nth-child(2) { background-color: $bg-balans;}
+.evkleur :nth-child(3 ) { background-color: $bg-balans;}
+//.stroomkleur :nth-child(2) {font-style: italic;}  // background-color: $bg-rr;}
+//.stroomkleur :nth-child(3 ) {font-style: italic;}  // background-color: $bg-rr;}
+
+.hor .naamlinks {
+  position: absolute;
+  left:  -160px;
+  //color: black;
+  //font-weight: normal;
+  text-align: right !important;
+  width: 150px;
+  
+}
+.hor .naamrechts {
+  //color: black;
+  //font-weight: normal;
+} 
+
+
+
+.accent {
+  text-decoration: underline;
+}
+
+
+//  INBOEKEN
+
+.inboeken-all {  
+  position: absolute;
+  top: 38px; 
+  left: 124px;
+  display: flex;
+  flex-direction: column;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: $border-color-base;
+  width: 1300px;
+  height: 730px;
+  background-color: $blue-light;
+  z-index: 7;   
+   //padding: 24px;     
+  //height: 600px;
+  .kopje {
+     position: relative;
+	 padding-left: 24px; 
+		padding-top: 24px;   
+		font-size: 14px;
+		//font-weight: bold;
+		text-transform: uppercase;
+		color: $text-color-grey;
+  }
+}
+
+.journaals {
+  position: absolute;
+   padding: 24px;
+   top: 0px; 
+  left: -690px; 
+   display: flex;
+   flex-direction: column;
+   width: 563px;
+   height:730px;
+   background-color: $blue-light;
+   box-shadow: 0px 0px 36px 0px rgba(1,0,0,0.27);
+   border: 1px solid $border-color-base;  
+   padding-top: 175px;
+   
+   .header {
+      position: relative;
+
+      text-transform: uppercase;
+      color: $text-color-grey;
+      position: absolute;
+      top: 24px;
+      }
+   .klap img {
+     color: red;
+     //background-color: yellow;
+     //background-image: url("/images/orgbakker/klappers.png")!important;
+      position: absolute;
+       padding: 24px; 
+       top: -10px;
+      left: 120px;
+      width: 300px;
+      z-index: 0;
+      //height: 160px;
+      }
+  .btns {     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;   
+    margin-top: 36px;
+    border-bottom: 1px solid $border-color-base;
+    z-index: 1;
+      >div {
+       color: $text-color-base;
+        margin-top: 8px;
+        padding: 3px 5px 0px 0px;
+        //text-transform: uppercase;
+      }
+    }
+   .journaal {
+       .kies {
+         margin: 24px 0px 12px 0px;
+         font-weight: bold;
+       }
+   }
+}  
+
+.inboekingsmogelijkheden {/* 
+	  display: flex;
+	  flex-direction: column; */
+	  //justify-content: flex-start;
+	  padding: 24px;
+	  position: relative;
+	.inboek {
+		margin-top: 8px;
+	}
+	.header {
+		font-size: 14px;
+		font-weight: bold;
+		padding-left: 36px;
+		margin: 24px 0px -20px 0px;
+		position: relative;
+		+ .icon {
+		  position: relative;
+		  top: -2px;
+		  left: 0px;
+		  margin-left: 4px;
+		}
+	}
+   .gbr-row-header {
+       background-color: $background-color-2;
+       //font-weight: bold;
+       border-bottom: 2px solid $border-color-base;
+       
+       .dd::before {content: 'Datum';}
+       .gbr-ovr::before {content: 'Overeenkomst';}
+       .beschrijving::before {content: 'Product';}
+       .icoon::before {content: 'Icoon';}
+       .sign::before {content: 'Bij/Af';}
+       .gbr-w::before {content: 'Waarde';}
+       .gbr-p::before {content: 'P-ink';}
+       .gbr-h::before {content: 'H';}
+       .gbr-orgnaam::before {content: 'Organisatie';}
+       .gbr-n::before {content: 'Grootboekrekening';}
+       .ks::before {content: 'Beschrijving 1';}
+       .kf::before {content: 'Beschrijving 2';}
+    }
+   .gbr-row-voorraad {
+       padding-left: 8px;
+       display: flex;
+       flex-direction: row; 
+       width: 1150px;
+       > div {       
+       padding-top: 2px;
+       }
+       .dd          {flex: 0 0 50px;}
+       .gbr-ovr     {flex: 0 0 100px;}
+       .beschrijving{flex: 0 0 80px;}
+       .icoon       {flex: 0 0 55px;}
+       .sign        {flex: 0 0 35px; text-align: center;} //text-align: left; doet het niet}
+       .gbr-w       {flex: 0 0 70px; text-align: right; padding-right: 12px;}
+       .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 12px;}
+       .gbr-h       {flex: 0 0 60px; text-align: left; padding-right: 12px;}
+       .gbr-n       {flex: 0 0 200px; text-align: left; padding-right: 12px;}
+       .ks          {flex: 0 0 200px;}
+       .kf          {flex: 0 0 150px;}
+   }
+   .eurox .gbr-w::before {content: '€ ';}
+   .eurox .gbr-p::before {content: '€ ';}
+   //.eurox {color: $blue;}
+
+   .gbr-row-rechtplicht {
+       padding-left: 8px;
+       display: flex;
+       flex-direction: row; 
+       width: 1150px;
+       > div {       
+       padding-top: 2px;
+       }
+       .dd          {flex: 0 0 50px;}
+       .gbr-ovr     {flex: 0 0 100px;}
+       .beschrijving{flex: 0 0 80px;}
+       .icoon       {flex: 0 0 55px;}
+       .sign        {flex: 0 0 35px; text-align: center;} //text-align: left; doet het niet}
+       .gbr-w       {flex: 0 0 70px; text-align: right; padding-right: 12px;}
+       .gbr-orgnaam {flex: 0 0 120px;}
+       .gbr-n       {flex: 0 0 200px; text-align: left; padding-right: 12px; }
+       .ks          {flex: 0 0 200px;}
+       .kf          {flex: 0 0 200px;}
+
+
+   }
+}
+
+.overeenkomst {  
+     .inkoop-ovr {
+        background-color: white;   
+		width: 380px; 
+		border: 1px solid $border-color-base;  
+		border-radius: 6px;	
+	    .head 	{
+	        background-color: $background-color-1; 
+	        border-top-left-radius: 6px; 
+	        border-top-right-radius: 6px; 
+            border-style: solid;
+            border-width: 0px 0px 1px 0px; 
+            border-color: $border-color-base;
+	        .text    {
+	            color: $text-color-base; 
+	            text-align: center; 
+	            padding: 8px;}
+	    }
+	    .body {
+	      display: flex;
+	      flex-direction: column;
+	    }
+	    .inline {
+	        display: flex;
+	        flex-direction: row;
+	        margin: 2px 0px 2px 12px;
+	        position: relative;
+	        //top: -6px;	 	        
+            //:nth-child(1) {flex: 0 0 160px; }
+            //:nth-child(2) {flex: 0 0 101px; }
+            //:nth-child(3) {flex: 0 0 260px; } 
+	    }
+	    .blok {
+	        display: flex;
+	        flex-direction: column; 
+	        width: 120px;
+	        height: 50px;       
+            :nth-child(1) {width: 100px;}
+            :nth-child(2) {width: 100px;}
+            //:nth-child(3) {width: 120px;} 
+	      }
+	    .form {
+	        width: 70px;
+	        color: $blue;  
+	     }
+	    .text {
+	      font-size: 13px; 
+	      color: $text-color-base; 
+	      padding-top: 6px;
+	      } 
+	    .scrollyvoorwaarden {
+	        height: 90px;
+	        overflow: auto;
+	        white-space: nowrap;
+	        margin: 14px 0px 4px 12px;
+	        font-size: 12px;
+	        color: $text-color-base;
+	    }
+     }
+	}  
+   
+  
+
+  // KOSTPRIJSBEREKENING
+
+.kprijscontainer {
+  position: absolute;
+  top: -300px;
+  left: -100px;
+  background-color: white;
+  z-index: 1;
+  width: 1100px;
+  padding: 126px 78px 78px 178px;
+  border: 1px solid $border-color-base;      
+  box-shadow: 0px 0px 200px 0px rgba(1,1,1,0.7); 
+}
+.kostenrubriceren {}
+.kprijsb { //kostprijsberekening
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 650px;
+    div {
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    //margin: 10px 10px 10px 10px;
+    }
+    .titelhoofd {
+      position: absolute;
+      top: 24px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 32px;
+      font-size: 14px;
+    }
+    .titel {
+      position: absolute;
+      top: 72px;
+      font-weight: bold;
+      margin-left: 32px;
+      font-size: 16px;
+      
+    }
+  .col {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    //width: 200px;       
+  }
+  .titelinput {
+  	padding-top: 8px;
+  	color: red;
+  }
+
+  .k-iwo, .k-ink, .k-vrk, .k-alg, .vvp,  { //enkele kostensoorten
+    display: flex;
+    flex-direction: column; 
+    //align-items: center;
+    width:200px; 
+  }
+  .vvp, .k-kp, .winstm, .pverkoop {
+  	width: 120px;
+  }
+  .k-bdv { //enkele kostensoorten
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    //width:180px; 
+  }
+  .col .text,  {
+  	//font-weight: bold;
+  	font-style: italic;
+  	//background-color: $background-color-2;
+  }
+   .verhoogd {
+    margin: 0px 0px 0px 8px;  
+    padding: 4px 5px 4px 5px;      
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    color: $text-color-grey;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .k-vrk, .k-alg, .k-bdv {
+    //margin: 0px 4px 0px 4px !important;
+  }
+  .k-bdv, .k-ovh {
+    padding-top: 4px !important;
+    //padding-left: 2px !important;
+  }
+  .k-iwo, .k-ink, .k-vrk, .k-alg, .k-bdv, 
+  .k-ovh, .vvpbuiten, .k-kpbuiten, .winstm, .pverkoop, {//alle
+    margin: 10px 24px 10px 24px;
+  }
+  .k-kpbuiten, .vvpbuiten {
+  	padding: 8px;
+  }
+  .k-iwo, .k-ink, .k-vrk, .k-alg, .vvp, 
+  .k-kp, .pverkoop, .winstm {
+       :nth-child(1) {padding: 3px 0px 0px 4px;}
+       :nth-child(2) {padding: 3px 0px 0px 4px;}
+       :nth-child(3) {padding: 3px 0px 0px 4px;}
+  }
+  .k-iwo, .k-ink {
+  border: 2px solid $orange;
+  }
+  .vvp {
+  	border: 2px solid $blue;
+  }
+  .vvpbuiten, {
+  	border: 3px solid $orange;
+  }
+  .k-ovh, .k-bdv {
+  	border: 2px dashed $border-color-base;
+  }
+  .k-vrk, .k-alg, {
+  	border: 2px solid $blue;
+  }
+  .k-kpbuiten {
+  	border:3px solid $blue;
+  }
+
+  .k-kp {
+  	border: 2px solid $green;
+  }
+  .winstm {
+  	border: 2px solid $green;
+  }
+  .pverkoop, {
+  	border: 3px solid $green;
+  	padding: 0px;
+  }  
+} //einde kostprijsberekening
+
+
+
+
+
+
+//  VERGROOT
+
+.gbr-vergroot { //start van big 1 grootboekrekening
+       position: absolute !important;
+       top: 60px;
+       left: 175px;
+       background-color: white; 
+       padding: 24px;
+       border: 1px solid $border-color-base;        
+       box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);       
+       width: 1100px;
+       z-index: 3;
+   .titel {
+      display: flex;
+      flex-direction: row;
+      font-size: 16px;
+      font-weight: bold;
+      :nth-child(1) {flex: 0 0 40px; margin-top: 4px; margin-left: 8px}
+      :nth-child(2) {flex: 0 0 150px; margin-top: 6px;}
+      :nth-child(3) {flex: 0 0 260px; margin-top: 8px; font-size: 14px; font-weight: normal;}
+      :nth-child(4) {flex: 0 0 30px; margin-top: 3px;  margin-left: auto; }
+   }
+     .header {
+       font-weight: bold;
+       margin-top: 24px;
+     }
+     
+   .info {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     margin-bottom: 12px;
+     >.rij {
+     display: flex;
+     flex-direction: row;
+    :nth-child(1) {flex: 0 0 240px;}
+    :nth-child(2) {flex: 0 0 30px;}
+    :nth-child(3) {flex: 0 0 300px;}
+      }      
+   }
+   .info2 >.rij {
+     display: flex;
+     flex-direction: row;
+    :nth-child(1) {flex: 0 0 240px;}
+    :nth-child(2) {flex: 0 0 400px;}
+      }    
+
+   .gbr-row { //in gb
+       padding-left: 8px;
+       display: flex;
+       flex-direction: row; 
+       > div {       
+       padding-top: 4px;
+       }
+       .dd          {flex: 0 0 60px;}
+       .gbr-ovr     {flex: 0 0 100px;}
+       .beschrijving{flex: 0 0 150px;}
+       .icoon       {flex: 0 0 70px;}
+       .sign        {flex: 0 0 40px; text-align: center;} 
+       .gbr-w       {flex: 0 0 70px; text-align: right;}
+       .gbr-h       {flex: 0 0 60px; text-align: right;}
+       .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 12px;}
+       .ks          {flex: 0 0 200px;}
+       .kf          {flex: 0 0 200px;}
+   }
+   .gbr-rows-scroll .gbr-w::before {content: '€ ';}
+   .gbr-rows-scroll .gbr-p::before {content: '€ ';}
+
+   .gbr-row-header {font-weight: bold; 
+   height: 30px; 
+   padding-top: 3px;
+   border-bottom: 2px solid $border-color-base;}
+   .gbr-rows {
+    height: 360px;
+    }
+   .gbr-rows-scroll {
+     height: 284px;
+     overflow-y: scroll;
+   }
+ } //einde van big 1 grootboekrekening
+
+
+  

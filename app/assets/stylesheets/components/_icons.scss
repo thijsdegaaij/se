@@ -1,0 +1,171 @@
+.icon{
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+  //display: inline-block; 
+  width: 24px;
+  height: 24px;
+}
+.iconwide{
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+  display: inline-block; 
+  width: 48px;
+  height: 24px;
+}
+.iconlg{
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center center; 
+ width: 96px;
+ height: 48px;
+}
+
+.icon-people{
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center center; 
+ width: 48px;
+ height: 72px;
+}
+
+.icon-arbeidintern       {background-image: url('/images/icons/icon_arbeidintern.png'); }
+.icon-arbeidinternin     {background-image: url('/images/icons/icon_arbeidinternin.png'); }
+.icon-arbeidinternuit    {background-image: url('/images/icons/icon_arbeidinternuit.png'); }
+.icon-arbeidmarkt        {background-image: url('/images/icons/icon_arbeidmarkt.png'); }
+.icon-arbeidmarktin      {background-image: url('/images/icons/icon_arbeidmarktin.png'); }
+.icon-arbeidmarktuit     {background-image: url('/images/icons/icon_arbeidmarktuit.png'); }
+.icon-arbeidextern       {background-image: url('/images/icons/icon_arbeidextern.png'); }
+.icon-arbeidexternin     {background-image: url('/images/icons/icon_arbeidexternin.png'); }
+.icon-arbeidexternuit    {background-image: url('/images/icons/icon_arbeidexternuit.png'); }
+
+.icon-dienstextern       {background-image: url('/images/icons/icon_dienstextern.png'); }
+.icon-dienstexternin     {background-image: url('/images/icons/icon_dienstexternin.png'); }
+.icon-dienstexternuit    {background-image: url('/images/icons/icon_dienstexternuit.png'); }
+.icon-dienstintern       {background-image: url('/images/icons/icon_dienstintern.png'); }
+.icon-dienstinternin     {background-image: url('/images/icons/icon_dienstinternin.png'); }
+.icon-dienstinternuit    {background-image: url('/images/icons/icon_dienstinternuit.png'); }
+.icon-dienstmarkt        {background-image: url('/images/icons/icon_dienstmarkt.png'); }
+.icon-dienstmarktin      {background-image: url('/images/icons/icon_dienstmarktin.png'); }
+.icon-dienstmarktuit     {background-image: url('/images/icons/icon_dienstmarktuit.png'); }
+
+.icon-stroomextern       {background-image: url('/images/icons/icon_stroomextern.png'); }
+.icon-stroomexternin     {background-image: url('/images/icons/icon_stroomexternin.png'); }
+.icon-stroomexternuit    {background-image: url('/images/icons/icon_stroomexternuit.png'); }
+.icon-stroomintern       {background-image: url('/images/icons/icon_stroomintern.png'); }
+.icon-stroominternin     {background-image: url('/images/icons/icon_stroominternin.png'); }
+.icon-stroominternuit    {background-image: url('/images/icons/icon_stroominternuit.png'); }
+.icon-stroommarkt        {background-image: url('/images/icons/icon_stroommarkt.png'); }
+.icon-stroommarktin      {background-image: url('/images/icons/icon_stroommarktin.png'); }
+.icon-stroommarktuit     {background-image: url('/images/icons/icon_stroommarktuit.png'); }
+
+.icon-pijlhoofdintern    {background-image: url('/images/icons/icon_pijlhoofdintern.png'); }
+.icon-pijlhoofdmarkt     {background-image: url('/images/icons/icon_pijlhoofdmarkt.png'); }
+
+.icon-geld               {background-image: url('/images/icons/icon_geld.png'); }
+.icon-geldin             {background-image: url('/images/icons/icon_geld_in.png'); }
+.icon-gelduit            {background-image: url('/images/icons/icon_geld_uit.png'); }
+.icon-geldpijl            {background-image: url('/images/icons/icon_geldpijl.png'); }
+
+.icon-voorraadstand      {background-image: url('/images/icons/icon_voorraadstand.png'); }
+
+.icon-ervaring           {background-image: url('/images/icons/icon_ervaring.png'); }
+.icon-ev                 {background-image: url('/images/icons/icon_EV.png'); }
+.icon-gedachten          {background-image: url('/images/icons/icon_gedachten.png'); }
+.icon-gevoelens          {background-image: url('/images/icons/icon_gevoelens.png'); }
+.icon-informatie         {background-image: url('/images/icons/icon_informatie.png'); }
+.icon-kosten             {background-image: url('/images/icons/icon_kosten.png'); }
+.icon-lijf               {background-image: url('/images/icons/icon_lijf.png'); }
+.icon-mens               {background-image: url('/images/icons/icon_mens.png'); }
+.icon-mens-mv            {background-image: url('/images/icons/icon_mens_mv.png'); }
+.icon-natuur             {background-image: url('/images/icons/icon_natuur.png'); }
+.icon-organisatie        {background-image: url('/images/icons/icon_organisatie.png'); }
+.icon-organisatie-mv     {background-image: url('/images/icons/icon_organisatie-mv.png'); }
+.icon-pijl               {background-image: url('/images/icons/icon_pijl.png'); }
+.icon-pijlnaarboven      {background-image: url('/images/icons/icon_pijlnaarboven.png'); }
+
+.icon-plicht             {background-image: url('/images/icons/icon_plicht.png'); }
+.icon-productie          {background-image: url('/images/icons/icon_productie.png'); }
+.icon-techniek           {background-image: url('/images/icons/icon_recept_T.png'); }
+.icon-recept             {background-image: url('/images/icons/icon_recept.png'); }
+.icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); }
+.icon-rechtgeld          {background-image: url('/images/icons/icon_recht_geld.png'); }
+.icon-rechtrente         {background-image: url('/images/icons/icon_recht_rente.png'); }
+.icon-plichtrente        {background-image: url('/images/icons/icon_plicht_rente.png'); }
+.icon-rechtgoed          {background-image: url('/images/icons/icon_recht_goed.png'); }
+.icon-plichtgoed          {background-image: url('/images/icons/icon_plicht_goed.png'); }
+.icon-rechtoverheid      {background-image: url('/images/icons/icon_recht_overheid.png'); }
+.icon-plichtoverheid     {background-image: url('/images/icons/icon_plicht_overheid.png'); }
+.icon-rechtverzekering   {background-image: url('/images/icons/icon_recht_verzekering.png'); }
+.icon-relatief           {background-image: url('/images/icons/icon_relatief.png'); }
+.icon-situatie           {background-image: url('/images/icons/icon_situatie.png'); }
+.icon-sliderarrow        {background-image: url('/images/icons/icon_sliderarrow.png'); }
+.icon-vierkant           {background-image: url('/images/icons/icon_vierkant.png'); }
+.icon-voorraad           {background-image: url('/images/icons/icon_voorraad.png'); }
+.icon-wetbeschrijving    {background-image: url('/images/icons/icon_wet_beschrijving.png'); }
+.icon-winst              {background-image: url('/images/icons/icon_winst.png'); }
+.icon-winstpos           {background-image: url('/images/icons/icon_winstpos.png'); }
+
+
+.icon-rondje             {background-image: url('/images/icons/icon_rondje.png'); }
+.icon-rondjevoorraad     {background-image: url('/images/icons/icon_rondjevoorraad.png'); }
+.icon-vierkantvoorraad   {background-image: url('/images/icons/icon_vierkantvoorraad.png'); }
+.icon-vierkant           {background-image: url('/images/icons/icon_vierkant.png'); }
+.icon-voorraad           {background-image: url('/images/icons/icon_voorraad.png'); }
+.icon-consumptiegoed     {background-image: url('/images/icons/icon_consumptiegoed.png'); }
+
+
+.icon-goedrechtpos       {background-image: url('/images/icons/icon_goedrechtpos.png'); }
+.icon-goedplichtpos      {background-image: url('/images/icons/icon_goedplichtpos.png'); }
+.icon-belastingrechtpos  {background-image: url('/images/icons/icon_belastingrechtpos.png'); }
+.icon-belastingplichtpos {background-image: url('/images/icons/icon_belastingplichtpos.png'); }
+.icon-geldrechtpos       {background-image: url('/images/icons/icon_geldrechtpos.png'); }
+.icon-geldplichtpos      {background-image: url('/images/icons/icon_geldplichtpos.png'); }
+
+.icon-goedrechtneg       {background-image: url('/images/icons/icon_goedrechtneg.png'); }
+.icon-goedplichtneg      {background-image: url('/images/icons/icon_goedplichtneg.png'); }
+.icon-belastingrechtneg  {background-image: url('/images/icons/icon_belastingrechtneg.png'); }
+.icon-belastingplichtneg {background-image: url('/images/icons/icon_belastingplichtneg.png'); }
+.icon-geldrechtneg       {background-image: url('/images/icons/icon_geldrechtneg.png'); }
+.icon-geldplichtneg      {background-image: url('/images/icons/icon_geldplichtneg.png'); }
+
+
+.icon-neg      {background-image: url('/images/icons/icon_neg.png'); }
+.icon-pos      {background-image: url('/images/icons/icon_pos.png'); }
+
+
+.icon-delete             {background-image: url('/images/icons/icon_kruisje.png'); }
+.icon-hamburger          {background-image: url('/images/icons/icon_hamburger.png'); }
+.icon-situatie           {background-image: url('/images/icons/icon_situation.png'); }
+.icon-dropdown           {background-image: url('/images/icons/icon_arrow-dropdown.png'); }
+
+
+.icon-maxima             {background-image: url('/images/people/figuren/figuren_maxima.png'); }
+.icon-peter              {background-image: url('/images/people/figuren/figuren_peter.png'); }
+.icon-bakkermuts         {background-image: url('/images/people/figuren/figuren_bakkermuts.png'); }
+.icon-bakkergroen        {background-image: url('/images/people/figuren/figuren_bakkergroen.png'); }
+.icon-bakkerpaars        {background-image: url('/images/people/figuren/figuren_bakkerpaars.png'); }
+.icon-kindje             {background-image: url('/images/people/figuren/figuren_kindje.png'); }
+
+
+.icon-product             {background-image: url('/images/icons/icon_product.png'); }
+.icon-nut                 {background-image: url('/images/icons/icon_nut.png'); }
+
+.icon-receptT             {background-image: url('/images/icons/icon_recept_T.png'); }
+.icon-recept              {background-image: url('/images/icons/icon_recept.png'); }
+.icon-reclame             {background-image: url('/images/icons/icon_reclame.png'); }
+
+
+.icon-natuur              {background-image: url('/images/icons/icon_vierkant_N.png'); }
+.icon-collectiefgoed      {background-image: url('/images/icons/icon_vierkant_C.png'); }
+.icon-consumentenproduct  {background-image: url('/images/icons/icon_consumentenproduct.png'); }
+.icon-wet                 {background-image: url('/images/icons/icon_wet_overeenkomst.png'); }
+.icon-overeenkomst        {background-image: url('/images/icons/icon_overeenkomst.png'); }
+
+
+
+
+
+
+

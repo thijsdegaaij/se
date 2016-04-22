@@ -5,8 +5,9 @@ jQuery(document).ready(function() {
     $('.orgx .welkom').show();
     $('.orgx .orgonderdelen').change(function() {
       // AN
-        
-      $('#search_submit').submit();
+      // $("form")[0].submit();
+      // $('#search_submit').submit();
+      $("#search_submit").click();
       // END AN
         
         // $('.orgscontainer .orgshow').hide();
@@ -152,8 +153,6 @@ jQuery(document).ready(function() {
     });
 
 
-
-
     /* Deze zijn volgens Thijs oud
 
     $(document.body).on("click", ".btn-accounting-extern", function() {
@@ -169,8 +168,5 @@ jQuery(document).ready(function() {
         $(".btn-accounting-intern").addClass("bold");
     });
 */
-
-
-
 
 }); // document ready

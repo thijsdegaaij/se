@@ -1,0 +1,102 @@
+
+html{
+  min-height: 100%;
+
+}
+
+html body{
+  margin-top: 50px;
+  color: $text-color-dark;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.428571429;
+}
+div {  
+   box-sizing: border-box;
+}
+
+hr {
+   margin-top: 10px !important;
+   display: block;
+   position: relative;
+   padding: 0;
+   margin: 8px auto;
+   height: 0;
+   width: 100%;
+   max-height: 0;
+   font-size: 1px;
+   line-height: 0;
+   clear: both;
+   border: none;
+   border-top: 1px solid #aaaaaa;
+   border-bottom: 1px solid #ffffff;
+}
+
+a {
+  cursor: pointer;
+}
+
+  .flex-row {
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-justify-content: space-around; 
+    -webkit-align-items: center;
+  }
+
+  .left {
+    -webkit-justify-content: flex-start; 
+  }
+
+  .flex-col {
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-justify-content: space-around; 
+    -webkit-align-items: center;
+  }
+.flex-col-left {
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+  }
+  .flexheader {
+    display: -webkit-flex;
+    flex-direction: row;
+  }
+
+  .flexitemcenter {
+    flex: 1 1 auto;
+  }
+
+
+  .displaynone, 
+  .waardeniet, {
+    display: none;
+  }
+
+  .button {
+    cursor: pointer;
+  }
+  .button:hover {
+    box-shadow: 0px 0px 4px 0px rgba(1,0,0,0.47);
+    transition: box-shadow ease-in-out 0.15s; 
+  }
+  .euro {
+    :before {content: '€ ';}
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  .scthuishouden {
+    background-color: $huishouden;
+  }
+  .sctnv {
+    background-color: $nv;
+  }
+  .sctoverheid {
+    background-color: $overheid;
+  }
+  .sctfinancieel {
+    background-color: $financieel;
+  }
+

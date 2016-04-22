@@ -1,0 +1,47 @@
+.situationcontainer {
+    display: -webkit-flex;
+    flex-direction: column;
+    align-content: center;
+
+ .bedrijfskolom {
+   //transform: scale(0.9,0.9);
+   width: 1180px;
+ }
+
+.part {
+  display: none;
+  width: 1180px;
+  //height: 500px;
+  //background-color: red;
+}
+
+.sitorg{
+  //position: relative;
+  //margin: auto;
+  //max-width: 240px;
+  //height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .sit_boomgaard  {
+    background-image:  url('../images/situaties/situatie_boomgaardGray.png'); 
+  }
+
+  #sit_boomgaard:hover{
+    background-image:  url('/images/situaties/situatie_boomgaard.png'); 
+  }
+
+  #sit_landwinkel{
+    background-image: url('/images/situaties/situatie_landwinkel.png'); 
+  }
+
+  #sit_huishoudenmaxima{
+    background-image: url('/images/situaties/situatie_huishoudenmaxima.png');
+  }
+
+  #sit_maxima{
+    background-image: url('/images/situaties/situatie_maxima.png');
+  }
+}
+}

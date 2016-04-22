@@ -1,0 +1,30 @@
+//Type Ahead (zoekfunctie) genereert de html 
+
+.tt-menu {
+  width: 422px;
+  margin: 12px 0;
+  // important is unfortunally neccesary because of typeahead style on html element method
+  top: 50px !important; 
+  right: -50px !important;
+  left: auto !important; 
+  z-index: 6 !important;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.tt-suggestion {
+  padding: 1px 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}

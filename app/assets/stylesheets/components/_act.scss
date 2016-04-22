@@ -1,0 +1,53 @@
+.act{
+  position: absolute;
+  left: 264px;
+  top: 0px;
+  width: 200px;
+  height: 128px;
+  overflow: scroll;
+  //border-style: solid;
+  //border-width: 1px 1px 0px 1px; 
+  //border-color: $red;
+
+  > .header{
+    position: relative;
+   // left: 36px;
+    border: 1px 1px 0px 1px solid  $red;
+    padding: 2px;
+  }
+
+   > .body{
+  // border:  1px solid $green; 
+  }
+
+   > .body > .line{
+  //  border-bottom: 1px solid $blue;
+  }
+
+   > .body .line:last-child{
+    border-style: none;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+  }
+
+   .line > * {
+    padding: 2px;
+  }
+
+   .line > .button{
+    float: left;
+    margin-right: 8px
+  }
+
+   .line > .name{
+   // width: 120px;
+  }
+
+   .line > .sign{
+    float: right;
+  }
+
+}

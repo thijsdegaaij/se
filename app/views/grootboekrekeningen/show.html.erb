@@ -17,7 +17,7 @@
 
 <p>
   <strong>Icoon:</strong>
-  <%= @grootboekrekening.icoon %>
+  <%= image_tag @grootboekrekening.icoon_url(:thumb).to_s %>
 </p>
 
 <%= link_to 'Edit', edit_grootboekrekening_path(@grootboekrekening) %> |

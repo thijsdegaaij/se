@@ -1,0 +1,26 @@
+Uize.module({name:'Zazzle.PageUtils',required:['Uize.Node','Uize.Cookie','Uize.Data','Uize.Node.Event'],builder:function(){'use strict';var b_$=function(){},b__=true,b_a=false,b_b=null,b_c=Uize,b_d=b_c.Node,
+b_e=b_d.Event,b_f=b_c.copyInto,b_g=b_c.Cookie.getCookie;b_$.useMediaBrowser=function(b_h,b_i,b_j,b_k){var b_l=b_i.component&&b_i.component.length?b_i.component:[],b_m=b_c.Data.filter(b_i,['sources','selectedSource','imageType','tf','uploadVideo','directoryName'].concat(b_l)),
+b_n=b_i.controlName||'Zazzle.Dialog.MediaBrowser2';b_h.useDialog({component:{name:b_n,params:b_m},widgetProperties:b_c.copyInto({name:'mediaBrowserDialog'},b_i,{okText:b_b}),submitHandler:b_j,dismissHandler:b_k
+});};b_$.useMediaGallery=function(b_h,b_i){b_i.widgetProperties=b_i.widgetProperties||{};b_i.widgetProperties.name=b_i.widgetProperties.name||'mediaGalleryDialog';b_h.useDialog({component:{name:b_h.get('env').isMobile
+?'Zazzle.MediaGallery.Mobile':'Zazzle.Widgets.Dialog.DesktopMediaGallery',params:b_i.componentParams||{}},widgetProperties:b_i.widgetProperties});};b_$.displayLoadingOverlay=function(b_h,b_o,b_p){b_p=b_p||{};
+var b_q=b_p.parent||b_h,b_r=b_p.node||(b_q&&b_q.getNode()),b_s=(b_$.b_s=(b_$.b_s||{})),b_t=b_s[b_r],b_u;if(b_o!=b_a&&b_t===b_u){b_s[b_r]=b__;b_h.useDialog({component:{name:'Zazzle.LoadingOverlay',rootNode:b_r,
+params:b_f({},b_p.cancelText?{cancelText:b_p.cancelText}:b_b)},widgetProperties:{name:'loadingOverlay',loadingMessage:b_p.message!=b_b?b_p.message:b_u,parent:b_q,loaderSize:b_p.loaderSize!=b_b?b_p.loaderSize:'Normal',
+mooringNode:b_q!=b_h?b_r:b_u},cancelHandler:b_p.cancelHandler,widgetEventHandlers:{'Before Show':function(b_v){var b_t=b_v.source;if(b_s[b_r]!==b_a)b_s[b_r]=b_t;else{b_t.set({shown:b_a});delete b_s[b_r];
+}}}});}else if(b_o==b_a&&b_t!=b_u){if(b_c.isInstance(b_t)){b_t.set({shown:b_a});delete b_s[b_r];}else b_s[b_r]=b_a;}};b_$.displayFleetingToast=function(b_h,b_p){b_p=b_p||{};var b_q=b_p.parent||b_h,b_r=b_p.node||(b_q&&b_q.getNode()),
+b_w='fleetingGlobalToast',b_x=b_q.children[b_w],b_u,b_y=function(){b_h.callInherited('loadHtmlIntoNode')({node:b_r,injectMode:'inner bottom',alwaysReplace:b_a},{cp:'Zazzle.Fleeting.Toast',idPrefix:b_h.childId(b_w)
+},{cache:'memory',callback:function(){b_x=b_q.children[b_w];b_x&&b_x.set({parent:b_q,text:b_p.message!=b_b?b_p.message:b_u,clickToDismiss:b_p.clickToDismiss!=b_b?b_p.clickToDismiss:b_a,lifeSpan:b_p.lifeSpan!=b_b?b_p.lifeSpan:5000,
+shown:b__});}});},b_z=function(){b_x.set({text:b_p.message!=b_b?b_p.message:b_u,clickToDismiss:b_p.clickToDismiss!=b_b?b_p.clickToDismiss:b_a,lifeSpan:b_p.lifeSpan!=b_b?b_p.lifeSpan:5000,shown:b__});
+};b_x===b_u?b_y():b_z();};b_$.getCookie=function(b_h,b_A,b_B){b_h.ajax({service:'cookie/get',name:b_A},{cache:'never',callback:function(b_C){b_C.success&&b_B&&b_B(b_C.data);}});};b_$.openIframeDialog=function(b_h,b_p){
+if(location.protocol=="https:"){if(b_p&&b_p.widgetProperties&&b_p.widgetProperties.url)b_p.widgetProperties.url=b_p.widgetProperties.url.replace("http://","https://");}b_h.useDialog({component:{name:'Zazzle.Dialog',
+params:b_f({isIframe:b__,includeButtons:b_a,allowIframeScroll:b_p.allowIframeScroll},b_p.componentParams)},widgetProperties:b_f({name:'iframeDialog',okEnabledOnShow:b__,mode:'new'},b_p.widgetProperties
+),submitHandler:b_p.submitHandler});};b_$.setCookie=function(b_h,b_A,b_D,b_E,b_F,b_B){b_h.ajax({service:'cookie/set',name:b_A,value:b_D,path:b_E,expires:b_F? +b_F:null},{cache:'never',callback:function(){b_B&&b_B()}
+});};b_$.wireContextMenu=function(b_h,b_G,b_H,b_B){var b_I=b_c.isFunction(b_H),b_J=function(b_v){var b_K=b_I?b_H(b_v):b_H,b_L=b_v.touches&&b_v.touches.length?b_v.touches[0]:b_v;b_h.useDialog({component:{name:'Zazzle.ContextMenu'},
+widgetProperties:b_f({name:'contextMenu',autoPosition:b_a},b_K),submitHandler:function(b_M){b_B&&b_B(b_M)},widgetEventHandlers:{'Before Show':function(b_N){b_N.source.setNodeStyle(b_d.getEventAbsPos(b_N));
+}}});};b_d.wire(b_G,'contextmenu',function(b_v){b_e.abort(b_v);b_J(b_v);});b_c.require('Uize.Node.VirtualEvent',function(b_O){b_O.makeRemainInStateEventMaker('longTouch',500,'touchstart',['touchend','touchcancel']
+)().wire(b_G,b_J);});};b_$.wireNodeForDataTransfer=function(b_h,b_P,b_Q,b_R,b_B){b_P.wireNode(b_Q,{dragover:function(b_v){b_e.abort(b_v);},drop:function(b_v){b_e.abort(b_v);if(FormData){var b_S=b_v.dataTransfer,
+b_T=b_S.files,b_U=b_T?b_T.length:0,b_V= -1,b_W,b_X=new FormData,b_i=[],b_Y=b_S.getData('Text'),b_Z=function(){b_c.isFunction(b_B)&&b_B(b_i);};b_Y&&b_i.push({type:'text',title:b_Y});for(;++b_V<b_U;){b_W=b_T[b_V];
+if(b_W.type.match('image.*')){b_X.append('image',b_W);}}if(b_U){b_X.append('action','upload');b_X.append('type','service');b_X.append('cg',0);b_X.append('sessionqs',0);b_X.append('zs',b_g('zs'));b_X.append('zm',b_g('zm'));
+b_X.append('us',b_g('us'));b_X.append('dnd',b__);b_P.getInherited('commObject').request({returnType:'json',url:b_R||b_P.getInherited('urls').upload,requestMethod:'POST',data:b_X,cache:'never',contentType:'multipart/form-data',
+callback:function(b_0){var b_1=b_0?b_0.children:b_b,b_2=b_c.isArray(b_1)?b_1.length:0,b_V= -1,b_3,b_4;for(;++b_V<b_2;){b_4=b_1[b_V];b_3=b_c.Data.findRecords(b_4.children,{name:'title'});b_i.push({type:'image',
+id:b_4.attributes.id,title:(b_3&&b_3[0]&&b_3[0].value)||''});}b_Z();}});}else b_Z();}}});};return b_$;}});
+

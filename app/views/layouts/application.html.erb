@@ -5,10 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Toegevoegd voor oud te laten werken -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <!-- basic includes -->
+  <%= render template: "oldstviews/includes/basicJquery.html" %>
+  <%= render template: "oldstviews/includes/modules.html" %>
+  
 </head>
 <body>
 
-<%= link_to 'Applicatie', root_path %>
+<%= link_to 'Applicatie', root_path, method: :get %>
 <%= link_to 'organisaties', organisaties_path %>
 <%= link_to 'grootboekrekeningen', grootboekrekeningen_path %> 
 <%= link_to 'boekingen', boekingen_path %>
@@ -17,10 +24,8 @@
 <%= link_to 'bedrijfstakken', bedrijfstakken_path %>
 <%= link_to 'grootboektypes', grootboektypes_path %>
 <%= link_to 'boektypes', boektypes_path %>
-
   
 <%= yield %>
-
 
 
 <%= debug(params) if Rails.env.development? %>

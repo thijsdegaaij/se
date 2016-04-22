@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419151132) do
+ActiveRecord::Schema.define(version: 20160422085903) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160419151132) do
   create_table "boekingen", force: :cascade do |t|
     t.integer  "boektype_id"
     t.integer  "grootboekrekening_id"
-    t.integer  "overeenkomst_id"
+    t.integer  "journaal_id"
     t.integer  "product_id"
     t.date     "datum"
     t.string   "icoon"

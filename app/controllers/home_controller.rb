@@ -23,7 +23,7 @@ class HomeController < ApplicationController
   
     # Boekingen
     @bkg_ink_search = @jnl_ink_search.boekingen
-    
+    @bkg_verk_search = @jnl_verk_search.boekingen
   end
   
   def cms

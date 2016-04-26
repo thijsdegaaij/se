@@ -1,39 +1,78 @@
-<div class="inboekingsmogelijkheden inkoop">
-    <div class="inboek">
-        <table>
-          <thead>
-            <tr>
-              <th>Datum</th>
-              <th>Journaal</th>
-              <th>Product</th>
-              <th>Icoon</th>
-              <th>Bij af</th>
-              <th>Waarde</th>
-              <th>P inkoop</th>
-              <th>Hoeveelheid</th>
-              <th>Grootboekrekening</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @bkg_ink_search.each do |boeking| %>
-              <tr>
-                <td><%= boeking.journaal.boeknummer %></td>
-                <td><%= boeking.product.naam %></td>
-                <td><%= boeking.datum %></td>
-                <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
-                <td><%= boeking.bij_af %></td>
-                <td><%= boeking.waarde %></td>
-                <td><%= boeking.p_inkoop %></td>
-                <td><%= boeking.hoeveelheid %></td>
-                <td><%= boeking.grootboekrekening.naam %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+<div class="inboek">
+    <table>
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Journaal</th>
+          <th>Product</th>
+          <th>Icoon</th>
+          <th>Bij af</th>
+          <th>Waarde</th>
+          <th>P inkoop</th>
+          <th>Hoeveelheid</th>
+          <th>Grootboekrekening</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bkg_ink_search.each do |boeking| %>
+          <tr>
+            <td><%= boeking.journaal.boeknummer %></td>
+            <td><%= boeking.product.naam %></td>
+            <td><%= boeking.datum %></td>
+            <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
+            <td><%= boeking.bij_af %></td>
+            <td><%= boeking.waarde %></td>
+            <td><%= boeking.p_inkoop %></td>
+            <td><%= boeking.hoeveelheid %></td>
+            <td><%= boeking.grootboekrekening.naam %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+<div class="inboek">
+    <div class="header">Crediteuren</div>
+    <div class="icon icon-plichtgeld"></div>
+    <div class="gbr-row-rechtplicht gbr-row-header ">
+        <div class="dd"></div>
+        <div class="gbr-ovr"></div>
+        <div class="beschrijving"></div>
+        <div class="icoon"></div>
+        <div class="sign"></div>
+        <div class="gbr-w"></div>
+        <div class="gbr-orgnaam"></div>
+        <div class="gbr-n"></div>
+        <div class="ks"></div>
+        <div class="kf"> </div>
     </div>
+    <div class="gbr-row-rechtplicht eurox">
+        <div class="dd">1 feb</div>
+        <div class="gbr-ovr">ink-1101</div>
+        <div class="beschrijving">brood</div>
+        <div class="icoon icon icon-neg"></div>
+        <div class="sign">-</div>
+        <div class="gbr-w">318</div>
+        <div class="gbr-orgnaam">Leverancier A</div>
+        <div class="gbr-n">Crediteuren (1600)</div>
+        <div class="ks styled-select">
+            <select class="">
+                <option value="welkom">geldstromen sectoren</option>
+                <option value="situaties">import (M)</option>
+                <option value="situaties">export (X)</option>
+                <option value="situaties">inkomen (Y)</option>
+                <option value="mensen">besparingen (S)</option>
+                <option value="producten">investeringen (I)</option>
+                <option value="producten" selected>geld binnen sector</option>
+            </select>
+        </div>
+        <div class="kf styled-select">
+        </div>
+    </div>
+</div>
+<div>
     <div class="inboek">
-        <div class="header">Crediteuren</div>
-        <div class="icon icon-plichtgeld"></div>
+        <div class="header">Terug te ontvangen BTW</div>
+        <div class="icon icon-rechtoverheid"></div>
         <div class="gbr-row-rechtplicht gbr-row-header ">
             <div class="dd"></div>
             <div class="gbr-ovr"></div>
@@ -50,54 +89,13 @@
             <div class="dd">1 feb</div>
             <div class="gbr-ovr">ink-1101</div>
             <div class="beschrijving">brood</div>
-            <div class="icoon icon icon-neg"></div>
-            <div class="sign">-</div>
-            <div class="gbr-w">318</div>
-            <div class="gbr-orgnaam">Leverancier A</div>
-            <div class="gbr-n">Crediteuren (1600)</div>
-            <div class="ks styled-select">
-                <select class="">
-                    <option value="welkom">geldstromen sectoren</option>
-                    <option value="situaties">import (M)</option>
-                    <option value="situaties">export (X)</option>
-                    <option value="situaties">inkomen (Y)</option>
-                    <option value="mensen">besparingen (S)</option>
-                    <option value="producten">investeringen (I)</option>
-                    <option value="producten" selected>geld binnen sector</option>
-                </select>
-            </div>
-            <div class="kf styled-select">
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="inboek">
-            <div class="header">Terug te ontvangen BTW</div>
-            <div class="icon icon-rechtoverheid"></div>
-            <div class="gbr-row-rechtplicht gbr-row-header ">
-                <div class="dd"></div>
-                <div class="gbr-ovr"></div>
-                <div class="beschrijving"></div>
-                <div class="icoon"></div>
-                <div class="sign"></div>
-                <div class="gbr-w"></div>
-                <div class="gbr-orgnaam"></div>
-                <div class="gbr-n"></div>
-                <div class="ks"></div>
-                <div class="kf"> </div>
-            </div>
-            <div class="gbr-row-rechtplicht eurox">
-                <div class="dd">1 feb</div>
-                <div class="gbr-ovr">ink-1101</div>
-                <div class="beschrijving">brood</div>
-                <div class="icoon icon icon-pos"></div>
-                <div class="sign">+</div>
-                <div class="gbr-w">18</div>
-                <div class="gbr-orgnaam">Belastingdienst</div>
-                <div class="gbr-n">Te ontvangen btw (1801)</div>
-                <div class="ks styled-select"></div>
-                <div class="kf styled-select"></div>
-            </div>
+            <div class="icoon icon icon-pos"></div>
+            <div class="sign">+</div>
+            <div class="gbr-w">18</div>
+            <div class="gbr-orgnaam">Belastingdienst</div>
+            <div class="gbr-n">Te ontvangen btw (1801)</div>
+            <div class="ks styled-select"></div>
+            <div class="kf styled-select"></div>
         </div>
     </div>
 </div>

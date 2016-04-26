@@ -26,7 +26,8 @@ class JournaalsController < ApplicationController
     else
       @jnl_verk_search = Journaal.where("journaaltype_id = ?", 2).first
     end
-    
+    # Verkoop boekingen
+    @bkg_verk_search = @jnl_verk_search.boekingen
     
     
   end

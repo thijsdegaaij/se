@@ -1,0 +1,1 @@
+json.extract! @journaal, :id, :journaal_type_id, :boeknummer, :datum, :leverancier, :klant, :hoeveelheid, :eenheid, :productnaam, :stukprijs, :betalingswijze, :valuta, :btw_percentage, :bedrag_ex_btw, :bedrag_inc_btw, :created_at, :updated_at

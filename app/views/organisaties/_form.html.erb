@@ -25,7 +25,6 @@
   </div>
   <div class="field">
     <p><%= f.label "Organisatie Gevelplaatje" %> <%= f.file_field :voorkant_image %></p>
-    
     <%= image_tag f.object.voorkant_image_url(:thumb).to_s %>
   </div>
   

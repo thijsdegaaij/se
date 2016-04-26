@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @journaaltype.naam %>
+</p>
+
+<p>
+  <strong>Icoon:</strong>
+    <%= image_tag @journaaltype.icoon_url(:thumb).to_s %>
+</p>
+
+<%= link_to 'Edit', edit_journaaltype_path(@journaaltype) %> |
+<%= link_to 'Back', journaaltypes_path %>

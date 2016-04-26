@@ -14,7 +14,11 @@ class HomeController < ApplicationController
     @gbr_dc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 12)
     @gbr_vg = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 14)
     @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15)
-    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)   
+    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
+    
+    @jnl_ink_search = Journaal.where("journaaltype_id = ?", 1).first
+    @jnl_verk_search = Journaal.where("journaaltype_id = ?", 2).first
+    
   end
   
 end

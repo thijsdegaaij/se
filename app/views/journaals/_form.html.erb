@@ -1,0 +1,73 @@
+<%= form_for(@journaal) do |f| %>
+  <% if @journaal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journaal.errors.count, "error") %> prohibited this journaal from being saved:</h2>
+
+      <ul>
+      <% @journaal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :journaaltype_id %><br>
+    <%= f.number_field :journaaltype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :boeknummer %><br>
+    <%= f.text_field :boeknummer %>
+  </div>
+  <div class="field">
+    <%= f.label :datum %><br>
+    <%= f.date_select :datum %>
+  </div>
+  <div class="field">
+    <%= f.label :leverancier %><br>
+    <%= f.text_field :leverancier %>
+  </div>
+  <div class="field">
+    <%= f.label :klant %><br>
+    <%= f.text_field :klant %>
+  </div>
+  <div class="field">
+    <%= f.label :hoeveelheid %><br>
+    <%= f.number_field :hoeveelheid %>
+  </div>
+  <div class="field">
+    <%= f.label :eenheid %><br>
+    <%= f.text_field :eenheid %>
+  </div>
+  <div class="field">
+    <%= f.label :productnaam %><br>
+    <%= f.text_field :productnaam %>
+  </div>
+  <div class="field">
+    <%= f.label :stukprijs %><br>
+    <%= f.text_field :stukprijs %>
+  </div>
+  <div class="field">
+    <%= f.label :betalingswijze %><br>
+    <%= f.text_field :betalingswijze %>
+  </div>
+  <div class="field">
+    <%= f.label :valuta %><br>
+    <%= f.text_field :valuta %>
+  </div>
+  <div class="field">
+    <%= f.label :btw_percentage %><br>
+    <%= f.number_field :btw_percentage %>
+  </div>
+  <div class="field">
+    <%= f.label :bedrag_ex_btw %><br>
+    <%= f.text_field :bedrag_ex_btw %>
+  </div>
+  <div class="field">
+    <%= f.label :bedrag_inc_btw %><br>
+    <%= f.text_field :bedrag_inc_btw %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

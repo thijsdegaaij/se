@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Journaal type:</strong>
+  <%= @journaal.journaaltype_id %>
+</p>
+
+<p>
+  <strong>Boeknummer:</strong>
+  <%= @journaal.boeknummer %>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @journaal.datum %>
+</p>
+
+<p>
+  <strong>Leverancier:</strong>
+  <%= @journaal.leverancier %>
+</p>
+
+<p>
+  <strong>Klant:</strong>
+  <%= @journaal.klant %>
+</p>
+
+<p>
+  <strong>Hoeveelheid:</strong>
+  <%= @journaal.hoeveelheid %>
+</p>
+
+<p>
+  <strong>Eenheid:</strong>
+  <%= @journaal.eenheid %>
+</p>
+
+<p>
+  <strong>Productnaam:</strong>
+  <%= @journaal.productnaam %>
+</p>
+
+<p>
+  <strong>Stukprijs:</strong>
+  <%= @journaal.stukprijs %>
+</p>
+
+<p>
+  <strong>Betalingswijze:</strong>
+  <%= @journaal.betalingswijze %>
+</p>
+
+<p>
+  <strong>Valuta:</strong>
+  <%= @journaal.valuta %>
+</p>
+
+<p>
+  <strong>Btw percentage:</strong>
+  <%= @journaal.btw_percentage %>
+</p>
+
+<p>
+  <strong>Bedrag ex btw:</strong>
+  <%= @journaal.bedrag_ex_btw %>
+</p>
+
+<p>
+  <strong>Bedrag inc btw:</strong>
+  <%= @journaal.bedrag_inc_btw %>
+</p>
+
+<%= link_to 'Edit', edit_journaal_path(@journaal) %> |
+<%= link_to 'Back', journaals_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Journaaltypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Icoon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journaaltypes.each do |journaaltype| %>
+      <tr>
+        <td><%= journaaltype.naam %></td>
+        <td><%= image_tag journaaltype.icoon_url(:thumb).to_s %></td>
+        <td><%= link_to 'Show', journaaltype %></td>
+        <td><%= link_to 'Edit', edit_journaaltype_path(journaaltype) %></td>
+        <td><%= link_to 'Destroy', journaaltype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Journaaltype', new_journaaltype_path %>

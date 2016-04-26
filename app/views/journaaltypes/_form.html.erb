@@ -1,0 +1,25 @@
+<%= form_for(@journaaltype) do |f| %>
+  <% if @journaaltype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journaaltype.errors.count, "error") %> prohibited this journaaltype from being saved:</h2>
+
+      <ul>
+      <% @journaaltype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <p><%= f.label "Icoon" %> <%= f.file_field :voorkant_image %></p>
+    <%= image_tag f.object.icoon_url(:thumb).to_s %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422085903) do
+ActiveRecord::Schema.define(version: 20160425112019) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
@@ -50,6 +50,32 @@ ActiveRecord::Schema.define(version: 20160422085903) do
   end
 
   create_table "grootboektypes", force: :cascade do |t|
+    t.string   "naam"
+    t.string   "icoon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "journaals", force: :cascade do |t|
+    t.integer  "journaaltype_id"
+    t.string   "boeknummer"
+    t.date     "datum"
+    t.string   "leverancier"
+    t.string   "klant"
+    t.integer  "hoeveelheid"
+    t.string   "eenheid"
+    t.string   "productnaam"
+    t.decimal  "stukprijs"
+    t.string   "betalingswijze"
+    t.string   "valuta"
+    t.integer  "btw_percentage"
+    t.decimal  "bedrag_ex_btw"
+    t.decimal  "bedrag_inc_btw"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "journaaltypes", force: :cascade do |t|
     t.string   "naam"
     t.string   "icoon"
     t.datetime "created_at", null: false

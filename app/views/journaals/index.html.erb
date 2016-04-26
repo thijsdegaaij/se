@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Journaals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Journaal type</th>
+      <th>Boeknummer</th>
+      <th>Datum</th>
+      <th>Leverancier</th>
+      <th>Klant</th>
+      <th>Hoeveelheid</th>
+      <th>Eenheid</th>
+      <th>Productnaam</th>
+      <th>Stukprijs</th>
+      <th>Betalingswijze</th>
+      <th>Valuta</th>
+      <th>Btw percentage</th>
+      <th>Bedrag ex btw</th>
+      <th>Bedrag inc btw</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journaals.each do |journaal| %>
+      <tr>
+        <td><%= journaal.journaaltype_id %></td>
+        <td><%= journaal.boeknummer %></td>
+        <td><%= journaal.datum %></td>
+        <td><%= journaal.leverancier %></td>
+        <td><%= journaal.klant %></td>
+        <td><%= journaal.hoeveelheid %></td>
+        <td><%= journaal.eenheid %></td>
+        <td><%= journaal.productnaam %></td>
+        <td><%= journaal.stukprijs %></td>
+        <td><%= journaal.betalingswijze %></td>
+        <td><%= journaal.valuta %></td>
+        <td><%= journaal.btw_percentage %></td>
+        <td><%= journaal.bedrag_ex_btw %></td>
+        <td><%= journaal.bedrag_inc_btw %></td>
+        <td><%= link_to 'Show', journaal %></td>
+        <td><%= link_to 'Edit', edit_journaal_path(journaal) %></td>
+        <td><%= link_to 'Destroy', journaal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Journaal', new_journaal_path %>

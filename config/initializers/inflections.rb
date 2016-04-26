@@ -20,6 +20,10 @@ ActiveSupport::Inflector.inflections do |inflect|
 end
 
 ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'journaal', 'journaals'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'bedrijfstak', 'bedrijfstakken'
 end
 

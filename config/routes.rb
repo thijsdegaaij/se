@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   root "home#index"
+
+  resources :journaaltypes
+  
+  get 'journaals/h_journaal'
+  resources :journaals
   
   resources :grootboektypes
   resources :boektypes
@@ -11,8 +16,8 @@ Rails.application.routes.draw do
   resources :bedrijfstakken
   
   get 'organisaties/h_organisatie'
-
   resources :organisaties
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.

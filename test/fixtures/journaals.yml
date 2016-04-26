@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journaal_type_id: 1
+  boeknummer: MyString
+  datum: 2016-04-25
+  leverancier: MyString
+  klant: MyString
+  hoeveelheid: 1
+  eenheid: MyString
+  productnaam: MyString
+  stukprijs: 9.99
+  betalingswijze: MyString
+  valuta: MyString
+  btw_percentage: 1
+  bedrag_ex_btw: 9.99
+  bedrag_inc_btw: 9.99
+
+two:
+  journaal_type_id: 1
+  boeknummer: MyString
+  datum: 2016-04-25
+  leverancier: MyString
+  klant: MyString
+  hoeveelheid: 1
+  eenheid: MyString
+  productnaam: MyString
+  stukprijs: 9.99
+  betalingswijze: MyString
+  valuta: MyString
+  btw_percentage: 1
+  bedrag_ex_btw: 9.99
+  bedrag_inc_btw: 9.99

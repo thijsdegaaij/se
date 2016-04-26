@@ -16,7 +16,7 @@
     <%= f.text_field :naam %>
   </div>
   <div class="field">
-    <p><%= f.label "Grootboekrekeningtype" %></p>
+    <p><%= f.label "Grootboektype" %></p>
     <p><%= f.select :grootboektype_id, Grootboektype.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">

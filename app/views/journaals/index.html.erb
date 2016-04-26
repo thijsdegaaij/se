@@ -26,7 +26,7 @@
   <tbody>
     <% @journaals.each do |journaal| %>
       <tr>
-        <td><%= journaal.journaaltype_id %></td>
+        <td><%= journaal.journaaltype.naam %></td>
         <td><%= journaal.boeknummer %></td>
         <td><%= journaal.datum %></td>
         <td><%= journaal.leverancier %></td>

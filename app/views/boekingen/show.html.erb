@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Boek type:</strong>
-  <%= @boeking.boektype_id %>
-</p>
-
-<p>
   <strong>Grootboekrekening:</strong>
-  <%= @boeking.grootboekrekening_id %>
+  <%= @boeking.grootboekrekening.naam %>
 </p>
 
 <p>
-  <strong>Overeenkomst:</strong>
+  <strong>Journaal:</strong>
   <%= @boeking.journaal.boeknummer %>
 </p>
 
 <p>
   <strong>Product:</strong>
   <%= @boeking.product.naam %>
+  <%= image_tag @boeking.product.icoon_url(:thumb).to_s %>
 </p>
 
 <p>

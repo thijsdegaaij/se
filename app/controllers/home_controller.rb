@@ -16,9 +16,17 @@ class HomeController < ApplicationController
     @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15)
     @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
     
+    # Inkoopboek
     @jnl_ink_search = Journaal.where("journaaltype_id = ?", 1).first
+    # Verkoopboek
     @jnl_verk_search = Journaal.where("journaaltype_id = ?", 2).first
+  
+    # Boekingen
+    @bkg_ink_search = @jnl_ink_search.boekingen
     
+  end
+  
+  def cms
   end
   
 end

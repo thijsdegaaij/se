@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :journaals
   
   resources :grootboektypes
-  resources :boektypes
   resources :producten
   resources :grootboekrekeningen
   resources :boekingen

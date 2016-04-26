@@ -12,12 +12,12 @@
 
 <p>
   <strong>Overeenkomst:</strong>
-  <%= @boeking.overeenkomst_id %>
+  <%= @boeking.journaal.boeknummer %>
 </p>
 
 <p>
   <strong>Product:</strong>
-  <%= @boeking.product_id %>
+  <%= @boeking.product.naam %>
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <strong>Icoon:</strong>
-  <%= @boeking.icoon %>
+  <%= image_tag @boeking.icoon_url(:thumb).to_s %>
 </p>
 
 <p>

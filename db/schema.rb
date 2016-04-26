@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425112019) do
+ActiveRecord::Schema.define(version: 20160426101705) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20160425112019) do
   end
 
   create_table "boekingen", force: :cascade do |t|
-    t.integer  "boektype_id"
     t.integer  "grootboekrekening_id"
     t.integer  "journaal_id"
     t.integer  "product_id"
@@ -32,12 +31,6 @@ ActiveRecord::Schema.define(version: 20160425112019) do
     t.integer  "hoeveelheid"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
-  end
-
-  create_table "boektypes", force: :cascade do |t|
-    t.string   "naam"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "grootboekrekeningen", force: :cascade do |t|

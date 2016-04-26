@@ -20,8 +20,8 @@
     <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div> 
   <div class="field">
-    <%= f.label :overeenkomst_id %><br>
-    <%= f.number_field :overeenkomst_id %>
+    <p><%= f.label "Journaal" %></p>
+    <p><%= f.select :journaal_id, Journaal.all.collect{|t| [t.boeknummer, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
     <p><%= f.label "Product" %></p>
@@ -32,8 +32,8 @@
     <%= f.date_select :datum %>
   </div>
   <div class="field">
-    <%= f.label :icoon %><br>
-    <%= f.text_field :icoon %>
+    <p><%= f.label "Icoon" %> <%= f.file_field :icoon %></p>
+    <%= image_tag f.object.icoon_url(:thumb).to_s %>
   </div>
   <div class="field">
     <%= f.label :bij_af %><br>

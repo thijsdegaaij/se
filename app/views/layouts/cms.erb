@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CMS Supereconomics</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<style>
+html body{
+  margin-top: initial;
+   }
+.sidebar-one {
+   background-color: #e3e3e3 important!;
+   width: 200px !important;
+   position: absolute !important;
+   left: 0 !important;
+   height: 100% !important;
+   overflow: auto !important;
+   }
+.main-content {
+   overflow: auto !important;
+   position: absolute !important;
+   left: 200px !important; 
+   right: 10px !important;
+   height: 100% !important;
+   overflow: auto !important;
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+   }
+</style>
+
+</head>
+<body>
+  <h1>SuperEconomics Content Management</h1>
+  <div class="sidebar-one">
+    <h3>Applicatie</h3>
+    <%= link_to 'Applicatie', root_path, method: :get %>
+
+
+    <h3>Gebruikers tabellen</h3>
+    <%= link_to 'Organisaties', organisaties_path %><br>
+    <%= link_to 'Grootboekrekeningen', grootboekrekeningen_path %><br>
+    <%= link_to 'Producten', producten_path %><br>
+    <%= link_to 'Journaals', journaals_path %><br>
+    <%= link_to 'Boekingen', boekingen_path %><br>
+
+  
+    <h3>Referentie tabellen</h3>
+    <%= link_to 'Rechtsvormen', rechtsvormen_path %><br>
+    <%= link_to 'Bedrijfstakken', bedrijfstakken_path %><br>
+    <%= link_to 'Grootboektypes', grootboektypes_path %><br>
+    <%= link_to 'Journaaltypes', journaaltypes_path %><br>
+    <br>
+  </div>
+  
+  <div class="main-content">
+    <%= yield %>
+  </div>
+
+</body>
+</html>

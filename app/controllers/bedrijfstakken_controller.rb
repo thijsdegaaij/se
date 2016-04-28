@@ -1,6 +1,8 @@
 class BedrijfstakkenController < ApplicationController
   before_action :set_bedrijfstak, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+
   # GET /bedrijfstakken
   # GET /bedrijfstakken.json
   def index

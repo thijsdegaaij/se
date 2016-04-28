@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :journaaltype_id %><br>
-    <%= f.number_field :journaaltype_id %>
+    <p><%= f.label "Organisatie" %></p>
+    <p><%= f.select :organisatie_id, Organisatie.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label "Journaaltype" %></p>
+    <p><%= f.select :journaaltype_id, Journaaltype.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
     <%= f.label :boeknummer %><br>

@@ -1,12 +1,12 @@
-<%= form_tag organisaties_h_organisatie_path, id: "test", multipart: true, :method => 'get', remote: true do %>
+<%= form_tag organisaties_h_organisatie_path, id: "organisatie", multipart: true, :method => 'get', remote: true do %>
 <div class="flex-rowstart orgx">
     <div class="navtwee ">
         <div class="icon icon-organisatie displaynone"></div>
         <div class="navheader">Organisaties</div>
       
-            <div class="orgonderdelen">
-                <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
-            </div>
+          <div class="orgonderdelen">
+              <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
+          </div>
 
         <div class="navbtn btn-marktview button">Markt</div>
         <div class="navbtn btn-intverslagview button">Interne verslaglegging</div>

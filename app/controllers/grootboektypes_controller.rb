@@ -1,6 +1,8 @@
 class GrootboektypesController < ApplicationController
   before_action :set_grootboektype, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+
   # GET /grootboektypes
   # GET /grootboektypes.json
   def index

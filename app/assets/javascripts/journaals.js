@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
     
     // AN: Kies een journaal
     $('#jnl_ink').change(function() {
-       $("#search_journaal_submit").click();
+       $("#search_jnlink_submit").click();
     });
     $('#jnl_verk').change(function() {
        $("#search_jnlverk_submit").click();

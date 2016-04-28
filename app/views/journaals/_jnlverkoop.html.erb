@@ -1,17 +1,17 @@
 <div class="journaal verkoop displaynone ">
-<%= form_tag journaals_h_journaal_path, id: "search_journaal", multipart: true, :method => 'get', remote: true do %>
+  <%= form_tag journaals_h_journaal_path, id: "search_journaal", multipart: true, :method => 'get', remote: true do %>
 
-    <%= submit_tag "Zet Journaal", class: "btn btn-primary", id: "search_jnlverk_submit", style: "display: none;" %>
+      <%= submit_tag "Zet Journaal", class: "btn btn-primary", id: "search_jnlverk_submit", style: "display: none;" %>
     
-    <!-- inkoopboek -->
-    <div id="jnl_verk">
-      Kies Verkoopovereenkomst:
-      <%= collection_select(:jnlverk, :id, Journaal.where("journaaltype_id = ?", 2), :id, :boeknummer, {:include_hidden => false}) %>
-    </div>
-    
-    <div id="search_jnlverkoop_results">
       <!-- inkoopboek -->
-    <%= render 'journaals/jnlverkres' %>
-    </div>
-<% end %>
+      <div id="jnl_verk">
+        Kies Verkoopovereenkomst:
+        <%= collection_select(:jnlverk, :id, Journaal.where("journaaltype_id = ?", 2), :id, :boeknummer, {:include_hidden => false}) %>
+      </div>
+    
+      <div id="search_jnlverkoop_results">
+        <!-- inkoopboek -->
+      <%= render 'journaals/jnlverkres' %>
+      </div>
+  <% end %>
 </div>

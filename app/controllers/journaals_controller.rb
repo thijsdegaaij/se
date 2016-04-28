@@ -1,6 +1,8 @@
 class JournaalsController < ApplicationController
   before_action :set_journaal, only: [:show, :edit, :update, :destroy]
 
+  layout "cms", except: :h_journaal
+
   # GET /journaals
   # GET /journaals.json
   def index
@@ -9,26 +11,34 @@ class JournaalsController < ApplicationController
   
   def h_journaal
 
-    logger.info("Start h_journaal")
+    logger.info("START H_JOURNAAL")
+    @org = Organisatie.find(session[:org_id])
     
     # Inkoopboek
     if (params[:jnlink] != nil and params[:jnlink][:id] != "")
-      @jnl_ink_search = Journaal.find(params[:jnlink][:id])
+      if @org.journaals.first
+        @jnl_ink_search = @org.journaals.find(params[:jnlink][:id])
+      end
     else
-      @jnl_ink_search = Journaal.where("journaaltype_id = ?", 1).first
+      @jnl_ink_search = @org.journaals.where("journaaltype_id = ?", 1).first
     end
     # Inkoop boekingen
-    @bkg_ink_search = @jnl_ink_search.boekingen
+    if @jnl_ink_search
+      @bkg_ink_search = @jnl_ink_search.boekingen
+    end
     
     # Verkoopboek
     if (params[:jnlverk] != nil and params[:jnlverk][:id] != "")
-      @jnl_verk_search = Journaal.find(params[:jnlverk][:id])
+      if @org.journaals.first
+        @jnl_verk_search = @org.journaals.find(params[:jnlverk][:id])
+      end
     else
-      @jnl_verk_search = Journaal.where("journaaltype_id = ?", 2).first
+      @jnl_verk_search = @org.journaals.where("journaaltype_id = ?", 2).first
     end
     # Verkoop boekingen
-    @bkg_verk_search = @jnl_verk_search.boekingen
-    
+    if @jnl_verk_search
+      @bkg_verk_search = @jnl_verk_search.boekingen
+    end
     
   end
 
@@ -94,6 +104,6 @@ class JournaalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journaal_params
-      params.require(:journaal).permit(:journaal_type_id, :boeknummer, :datum, :leverancier, :klant, :hoeveelheid, :eenheid, :productnaam, :stukprijs, :betalingswijze, :valuta, :btw_percentage, :bedrag_ex_btw, :bedrag_inc_btw)
+      params.require(:journaal).permit(:organisatie_id, :journaaltype_id, :boeknummer, :datum, :leverancier, :klant, :hoeveelheid, :eenheid, :productnaam, :stukprijs, :betalingswijze, :valuta, :btw_percentage, :bedrag_ex_btw, :bedrag_inc_btw)
     end
 end

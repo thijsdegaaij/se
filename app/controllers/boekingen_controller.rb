@@ -1,6 +1,8 @@
 class BoekingenController < ApplicationController
   before_action :set_boeking, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+
   # GET /boekingen
   # GET /boekingen.json
   def index

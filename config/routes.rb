@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root "home#index"
   
-  get '/cms'=> 'home#cms'
+  get '/cms'=> 'cms#index'
 
   resources :journaaltypes
   

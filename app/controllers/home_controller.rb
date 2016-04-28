@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   
   def index
     @organisatie_search = Organisatie.find(1)
+    session[:org_id] = @organisatie_search.id
+
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
     @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2)
     @gbr_kn = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 3)
@@ -17,13 +19,18 @@ class HomeController < ApplicationController
     @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
     
     # Inkoopboek
-    @jnl_ink_search = Journaal.where("journaaltype_id = ?", 1).first
+    @jnl_ink_search = @organisatie_search.journaals.where("journaaltype_id = ?", 1).first
     # Verkoopboek
-    @jnl_verk_search = Journaal.where("journaaltype_id = ?", 2).first
+    @jnl_verk_search = @organisatie_search.journaals.where("journaaltype_id = ?", 2).first
   
     # Boekingen
-    @bkg_ink_search = @jnl_ink_search.boekingen
-    @bkg_verk_search = @jnl_verk_search.boekingen
+    if @jnl_ink_search
+      @bkg_ink_search = @jnl_ink_search.boekingen
+    end
+    if @jnl_verk_search
+      @bkg_verk_search = @jnl_verk_search.boekingen
+    end
+    
   end
   
   def cms

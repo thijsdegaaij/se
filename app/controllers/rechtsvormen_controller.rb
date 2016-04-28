@@ -1,6 +1,8 @@
 class RechtsvormenController < ApplicationController
   before_action :set_rechtsvorm, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+  
   # GET /rechtsvormen
   # GET /rechtsvormen.json
   def index

@@ -7,8 +7,12 @@ jQuery(document).ready(function() {
       // AN
       // $("form")[0].submit();
       // $('#search_submit').submit();
-      $("#search_submit").click();
-      // END AN
+
+     $("#search_submit").click();
+     // Hoeft niet apart voor #search_jnlverk_submit die gaat vanzelf mee
+     setTimeout(function() { $("#search_jnlink_submit").click(); }, 1000);
+
+     // END AN
         
         // $('.orgscontainer .orgshow').hide();
  //        $('.orgscontainer #' + $(this).val()).show();

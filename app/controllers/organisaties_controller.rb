@@ -1,6 +1,8 @@
 class OrganisatiesController < ApplicationController
   before_action :set_organisatie, only: [:show, :edit, :update, :destroy]
 
+  layout "cms", except: :h_organisatie
+
   # GET /organisaties
   # GET /organisaties.json
   def index
@@ -14,6 +16,8 @@ class OrganisatiesController < ApplicationController
     else
       @organisatie_search = Organisatie.find(1)  
     end
+    
+    session[:org_id] = @organisatie_search.id
     
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
     @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2)

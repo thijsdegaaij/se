@@ -1,6 +1,8 @@
 class ProductenController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+  
   # GET /producten
   # GET /producten.json
   def index

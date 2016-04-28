@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Journaal type:</strong>
-  <%= @journaal.journaaltype_id %>
+  <strong>Organisatie:</strong>
+  <%= @journaal.organisatie.naam %>
+</p>
+
+<p>
+  <strong>Journaaltype:</strong>
+  <%= @journaal.journaaltype.naam %>
 </p>
 
 <p>

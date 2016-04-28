@@ -1,6 +1,8 @@
 class JournaaltypesController < ApplicationController
   before_action :set_journaaltype, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+  
   # GET /journaaltypes
   # GET /journaaltypes.json
   def index

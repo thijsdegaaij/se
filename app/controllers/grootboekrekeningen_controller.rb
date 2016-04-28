@@ -1,6 +1,8 @@
 class GrootboekrekeningenController < ApplicationController
   before_action :set_grootboekrekening, only: [:show, :edit, :update, :destroy]
 
+  layout "cms"
+
   # GET /grootboekrekeningen
   # GET /grootboekrekeningen.json
   def index

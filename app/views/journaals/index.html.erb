@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Organisatie</th>
       <th>Journaal type</th>
       <th>Boeknummer</th>
       <th>Datum</th>
@@ -26,6 +27,7 @@
   <tbody>
     <% @journaals.each do |journaal| %>
       <tr>
+        <td><%= journaal.organisatie.naam %></td>
         <td><%= journaal.journaaltype.naam %></td>
         <td><%= journaal.boeknummer %></td>
         <td><%= journaal.datum %></td>

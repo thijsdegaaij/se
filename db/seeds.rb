@@ -36,11 +36,11 @@ Journaaltype.create(naam: 'Kasboek', icoon: File.open(Rails.root + "app/assets/i
 Journaaltype.create(naam: 'Bankboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 Journaaltype.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0027", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00)
-Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0028", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12)
+Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0027", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0028", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12, voorwaarden: "inknr-0028\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0001", datum: Date.new(2016,2,1), klant: "Diverse kopers", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00)
-Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0002", datum: Date.new(2016,2,2), klant: "Klant B", hoeveelheid: 10, eenheid: "pot", productnaam: "Jam", betalingswijze: "Bank", stukprijs: 5.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 50, bedrag_inc_btw: 53.00)
+Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0001", datum: Date.new(2016,2,1), klant: "Diverse kopers", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "Vernr-0001\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0002", datum: Date.new(2016,2,2), klant: "Klant B", hoeveelheid: 10, eenheid: "pot", productnaam: "Jam", betalingswijze: "Bank", stukprijs: 5.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 50, bedrag_inc_btw: 53.00, voorwaarden: "Vernr-0002\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 
 
 Grootboektype.create(naam: 'Vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
@@ -59,13 +59,6 @@ Grootboektype.create(naam: 'Duurzame consumptiegoederen')
 Grootboektype.create(naam: 'Voor gezinsleden')
 Grootboektype.create(naam: 'Kennis over huishouden, eten koken, vakantie vieren, vrienden maken, etc.')
 Grootboektype.create(naam: 'Arbeid bij bakker')
-
-# Wordt journaaltype
-# Boektype.create(naam: 'Inkoopboek')
-# Boektype.create(naam: 'Verkoopboek')
-# Boektype.create(naam: 'Kasboek')
-# Boektype.create(naam: 'Bankboek')
-# Boektype.create(naam: 'Leveringen')
 
 Product.create(naam: 'Brood', icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Product.create(naam: 'Oven', icoon: File.open(Rails.root + "app/assets/images/oven.png"))
@@ -101,9 +94,9 @@ Grootboekrekening.create(naam: 'PERSONEEL', grootboektype_id: 4, organisatie_id:
 Grootboekrekening.create(naam: 'TE KOOP', grootboektype_id: 5, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Grootboekrekening.create(naam: 'TE KOOP', grootboektype_id: 5, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/bol.png"))
 
-Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 1) 
-Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 1)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 2) 
-Boeking.create(datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 2) 
+Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11, icoon: File.open(Rails.root + "app/assets/images/icon_stroommarktin.png"))
+Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13, icoon: File.open(Rails.root + "app/assets/images/icon_stroomintern.png"))
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12, icoon: File.open(Rails.root + "app/assets/images/icon_stroominternin.png"))
+Boeking.create(datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13, icoon: File.open(Rails.root + "app/assets/images/icon_stroommarktuit.png")) 
 
 

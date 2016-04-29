@@ -42,6 +42,7 @@
         <td><%= journaal.btw_percentage %></td>
         <td><%= journaal.bedrag_ex_btw %></td>
         <td><%= journaal.bedrag_inc_btw %></td>
+        <td><pre><%= journaal.voorwaarden %></pre></td>
         <td><%= link_to 'Show', journaal %></td>
         <td><%= link_to 'Edit', edit_journaal_path(journaal) %></td>
         <td><%= link_to 'Destroy', journaal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

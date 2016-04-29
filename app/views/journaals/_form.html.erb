@@ -71,6 +71,10 @@
     <%= f.label :bedrag_inc_btw %><br>
     <%= f.text_field :bedrag_inc_btw %>
   </div>
+  <div class="field">
+    <p><%= f.label "Voorwaarden" %></p>
+    <p><%= f.text_area :voorwaarden, class: "form-control", size: "40x5", :placeholder => 'Voer hier de overige voorwaarden van de overeenkomst in' %></p>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

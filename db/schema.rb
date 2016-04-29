@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428095657) do
+ActiveRecord::Schema.define(version: 20160429070404) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20160428095657) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "organisatie_id"
+    t.text     "voorwaarden"
   end
 
   create_table "journaaltypes", force: :cascade do |t|

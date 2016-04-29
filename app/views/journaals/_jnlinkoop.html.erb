@@ -7,7 +7,6 @@
     <div id="jnl_ink">
       Kies Inkoopovereenkomst:
       <%= collection_select(:jnlink, :id, Journaal.where("journaaltype_id = ?", 1), :id, :boeknummer, {:include_hidden => false}) %>
-  
     </div>
 
     <div id="search_jnlinkoop_results">

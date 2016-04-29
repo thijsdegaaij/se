@@ -75,5 +75,10 @@
   <%= @journaal.bedrag_inc_btw %>
 </p>
 
+<p>
+  <strong>Voorwaarden:</strong>
+  <pre><%= @journaal.voorwaarden %></pre>
+</p>
+
 <%= link_to 'Edit', edit_journaal_path(@journaal) %> |
 <%= link_to 'Back', journaals_path %>

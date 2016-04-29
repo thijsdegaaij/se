@@ -104,6 +104,6 @@ class JournaalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journaal_params
-      params.require(:journaal).permit(:organisatie_id, :journaaltype_id, :boeknummer, :datum, :leverancier, :klant, :hoeveelheid, :eenheid, :productnaam, :stukprijs, :betalingswijze, :valuta, :btw_percentage, :bedrag_ex_btw, :bedrag_inc_btw)
+      params.require(:journaal).permit(:organisatie_id, :journaaltype_id, :boeknummer, :datum, :leverancier, :klant, :hoeveelheid, :eenheid, :productnaam, :stukprijs, :betalingswijze, :valuta, :btw_percentage, :bedrag_ex_btw, :bedrag_inc_btw, :voorwaarden)
     end
 end

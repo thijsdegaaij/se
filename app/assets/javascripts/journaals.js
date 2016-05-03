@@ -38,6 +38,13 @@ jQuery(document).ready(function() {
     $('#jnl_verk').change(function() {
        $("#search_jnlverk_submit").click();
     });
+    $('#jnl_bank').change(function() {
+       $("#search_jnlbank_submit").click();
+    });
+    $('#jnl_lev').change(function() {
+       $("#search_jnllev_submit").click();
+    });
+    // AN: end
     
     $(document.body).on("click", ".btn-inboeken.inkoop", function() {
         $(".btn-inboeken").removeClass("bold");

@@ -40,6 +40,32 @@ class JournaalsController < ApplicationController
       @bkg_verk_search = @jnl_verk_search.boekingen
     end
     
+    # Bankboek
+    if (params[:jnlbank] != nil and params[:jnlbank][:id] != "")
+      if @org.journaals.first
+        @jnl_bank_search = @org.journaals.find(params[:jnlbank][:id])
+      end
+    else
+      @jnl_bank_search = @org.journaals.where("journaaltype_id = ?", 3).first
+    end
+    # # Bank boekingen
+ #    if @jnl_verk_search
+ #      @bkg_verk_search = @jnl_verk_search.boekingen
+ #    end
+ 
+   # Leveringen
+   if (params[:jnllev] != nil and params[:jnllev][:id] != "")
+     if @org.journaals.first
+       @jnl_lev_search = @org.journaals.find(params[:jnllev][:id])
+     end
+   else
+     @jnl_lev_search = @org.journaals.where("journaaltype_id = ?", 4).first
+   end
+   # # Bank boekingen
+#    if @jnl_verk_search
+#      @bkg_verk_search = @jnl_verk_search.boekingen
+#    end
+    
   end
 
   # GET /journaals/1

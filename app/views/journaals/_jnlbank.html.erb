@@ -1,0 +1,17 @@
+<div class="journaal bank displaynone ">
+  <%= form_tag journaals_h_journaal_path, id: "search_journaal", multipart: true, :method => 'get', remote: true do %>
+
+      <%= submit_tag "Zet Journaal", class: "btn btn-primary", id: "search_jnlbank_submit", style: "display: none;" %>
+    
+      <!-- bankboek -->
+      <div id="jnl_bank">
+        Kies Afschrift:
+        <%= collection_select(:jnlbank, :id, Journaal.where("journaaltype_id = ?", 3), :id, :boeknummer, {:include_hidden => false}) %>
+      </div>
+    
+      <div id="search_jnlbank_results">
+        <!-- bankboek -->
+      <%= render 'journaals/jnlbankres' %>
+      </div>
+  <% end %>
+</div>

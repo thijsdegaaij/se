@@ -22,6 +22,10 @@ class HomeController < ApplicationController
     @jnl_ink_search = @organisatie_search.journaals.where("journaaltype_id = ?", 1).first
     # Verkoopboek
     @jnl_verk_search = @organisatie_search.journaals.where("journaaltype_id = ?", 2).first
+    # Bankboek
+    @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first
+    # Leveringen
+    @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first
   
     # Boekingen
     if @jnl_ink_search

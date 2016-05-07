@@ -1,0 +1,17 @@
+<div class="journaal leveringen displaynone ">
+  <%= form_tag journaals_h_journaal_path, id: "search_journaal", multipart: true, :method => 'get', remote: true do %>
+
+      <%= submit_tag "Zet Journaal", class: "btn btn-primary", id: "search_jnllev_submit", style: "display: none;" %>
+    
+      <!-- verkoopboek -->
+      <div id="jnl_lev">
+        Kies Leveringsbon:
+        <%= collection_select(:jnllev, :id, Journaal.where("journaaltype_id = ?", 4), :id, :boeknummer, {:include_hidden => false}) %>
+      </div>
+    
+      <div id="search_jnllevering_results">
+        <!-- leveringen -->
+      <%= render 'journaals/jnllevres' %>
+      </div>
+  <% end %>
+</div>

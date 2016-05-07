@@ -448,7 +448,6 @@
                     <div class="btns">
                         <div class="btn-inboeken inkoop button bold">inkoopboek</div>
                         <div class="btn-inboeken verkoop button">verkoopboek</div>
-                        <div class="btn-inboeken kas button">kasboek</div>
                         <div class="btn-inboeken bank button">bankboek</div>
                         <div class="btn-inboeken leveringen button">leveringen</div>
                     </div>
@@ -457,6 +456,12 @@
                   
                     <!-- verkoopboek -->
                     <%= render 'journaals/jnlverkoop' %>
+                    
+                    <!-- bankboek -->
+                    <%= render 'journaals/jnlbank' %>
+                    
+                    <!-- leveringen -->
+                    <%= render 'journaals/jnllevering' %>
                
             </div>
                 <div class="kopje">Inboeken</div>

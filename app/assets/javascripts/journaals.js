@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
 
+//KLEINDE WIJZIGING VAN THIJS 9MEI
 
     // inboeken
     /* Wat is dit?

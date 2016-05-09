@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   resources :grootboektypes
   resources :producten
   resources :grootboekrekeningen
+  
   resources :boekingen
+  match 'boekingen/create_bkn' => 'boekingen#create_bkn', :via => :post
+  match 'boekingen/destroy_bkn/:id' => 'boekingen#destroy_bkn', :via => :delete, :as => :boekingen_destroy_bkn
+  
   resources :rechtsvormen
   resources :bedrijfstakken
   

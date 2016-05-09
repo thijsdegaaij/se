@@ -22,10 +22,13 @@ class JournaalsController < ApplicationController
     else
       @jnl_ink_search = @org.journaals.where("journaaltype_id = ?", 1).first
     end
+    
     # Inkoop boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
     end
+    session[:jnl_ink_id] = @jnl_ink_search.id
+    
     
     # Verkoopboek
     if (params[:jnlverk] != nil and params[:jnlverk][:id] != "")

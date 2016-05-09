@@ -30,6 +30,7 @@ class HomeController < ApplicationController
     # Boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
+      session[:jnl_ink_id] = @jnl_ink_search.id
     end
     if @jnl_verk_search
       @bkg_verk_search = @jnl_verk_search.boekingen

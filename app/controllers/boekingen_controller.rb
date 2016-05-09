@@ -1,7 +1,7 @@
 class BoekingenController < ApplicationController
-  before_action :set_boeking, only: [:show, :edit, :update, :destroy]
+  before_action :set_boeking, only: [:show, :edit, :update, :destroy, :destroy_bkn]
 
-  layout "cms"
+  layout "cms", except: [:create_bkn, :destroy_bkn]
 
   # GET /boekingen
   # GET /boekingen.json
@@ -21,6 +21,17 @@ class BoekingenController < ApplicationController
 
   # GET /boekingen/1/edit
   def edit
+  end
+
+  def create_bkn
+    logger.debug("Session Variable value: #{session[:jnl_id]} for variable: jnl_id at controller: Boekingen, action: Create_bkn ")
+    @boeking = Boeking.new(boeking_params)
+    respond_to do |format|
+      if @boeking.save
+        @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+        format.js {}
+      end
+    end
   end
 
   # POST /boekingen
@@ -50,6 +61,15 @@ class BoekingenController < ApplicationController
         format.html { render :edit }
         format.json { render json: @boeking.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy_bkn
+    logger.debug("Session Variable value: #{session[:jnl_id]} for variable: jnl_id at controller: Boekingen, action: Destroy_bkn ")
+    @boeking.destroy
+    @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+    respond_to do |format|
+      format.js {}
     end
   end
 

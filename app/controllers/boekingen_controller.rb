@@ -24,12 +24,14 @@ class BoekingenController < ApplicationController
   end
 
   def create_bkn
-    logger.debug("Session Variable value: #{session[:jnl_id]} for variable: jnl_id at controller: Boekingen, action: Create_bkn ")
-    @boeking = Boeking.new(boeking_params)
-    respond_to do |format|
-      if @boeking.save
-        @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
-        format.js {}
+    logger.debug("Session Variable value: #{session[:jnl_ink_id]} for variable: jnl_ink_id at controller: Boekingen, action: Create_bkn ")
+    unless session[:jnl_ink_id] == nil
+      @boeking = Boeking.new(boeking_params)
+      respond_to do |format|
+        if @boeking.save
+          @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+          format.js {}
+        end
       end
     end
   end
@@ -65,7 +67,7 @@ class BoekingenController < ApplicationController
   end
 
   def destroy_bkn
-    logger.debug("Session Variable value: #{session[:jnl_id]} for variable: jnl_id at controller: Boekingen, action: Destroy_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_ink_id]} for variable: jnl_ink_id at controller: Boekingen, action: Destroy_bkn ")
     @boeking.destroy
     @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
     respond_to do |format|

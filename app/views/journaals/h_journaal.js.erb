@@ -1,3 +1,18 @@
+// AN: Kies een journaal (dubbel ook in journaal.js)
+$('#jnl_ink').change(function() {
+   $("#search_jnlink_submit").click();
+});
+$('#jnl_verk').change(function() {
+   $("#search_jnlverk_submit").click();
+});
+$('#jnl_bank').change(function() {
+   $("#search_jnlbank_submit").click();
+});
+$('#jnl_lev').change(function() {
+   $("#search_jnllev_submit").click();
+});
+// AN: end
+
 $("#search_jnlinkoop_results").html("<%= escape_javascript(render 'jnlinkres') %>");
 $("#search_bkninkoop_results").html("<%= escape_javascript(render 'inboek_ink') %>");
 
@@ -7,4 +22,6 @@ $("#search_bknverkoop_results").html("<%= escape_javascript(render 'inboek_verk'
 $("#search_jnlbank_results").html("<%= escape_javascript(render 'jnlbankres') %>");
 
 $("#search_jnllevering_results").html("<%= escape_javascript(render 'jnllevres') %>");
+
+
 

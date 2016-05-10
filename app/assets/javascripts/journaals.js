@@ -1,5 +1,4 @@
-jQuery(document).ready(function() {
-
+var ready = function() {
 
     // inboeken
     /* Wat is dit?
@@ -98,4 +97,7 @@ jQuery(document).ready(function() {
     });
 
 
-}); // document ready
+}; // document ready
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

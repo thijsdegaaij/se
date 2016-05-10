@@ -13,21 +13,25 @@ class JournaalsController < ApplicationController
 
     logger.info("START H_JOURNAAL")
     @org = Organisatie.find(session[:org_id])
-    
+    session[:jnl_ink_id] = nil    
     # Inkoopboek
     if (params[:jnlink] != nil and params[:jnlink][:id] != "")
       if @org.journaals.first
         @jnl_ink_search = @org.journaals.find(params[:jnlink][:id])
+        session[:jnl_ink_id] = @jnl_ink_search.id
       end
     else
       @jnl_ink_search = @org.journaals.where("journaaltype_id = ?", 1).first
+      if @jnl_ink_search
+        session[:jnl_ink_id] = @jnl_ink_search.id
+      end
     end
     
     # Inkoop boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
     end
-    session[:jnl_ink_id] = @jnl_ink_search.id
+    
     
     
     # Verkoopboek

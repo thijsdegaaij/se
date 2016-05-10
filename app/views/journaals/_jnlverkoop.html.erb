@@ -6,7 +6,7 @@
       <!-- verkoopboek -->
       <div id="jnl_verk">
         Kies Verkoopovereenkomst:
-        <%= collection_select(:jnlverk, :id, Journaal.where("journaaltype_id = ?", 2), :id, :boeknummer, {:include_hidden => false}) %>
+        <%= collection_select(:jnlverk, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 2, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
       </div>
     
       <div id="search_jnlverkoop_results">

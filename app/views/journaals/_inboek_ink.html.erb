@@ -11,31 +11,27 @@
     <p><%= f.select :product_id, Product.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
-    <%= f.label :datum %><br>
-    <%= f.date_select :datum %>
+    <p><%= f.label :datum %></p>
+    <p><%= f.date_select :datum %></p>
   </div>
   <div class="field">
-    <p><%= f.label "Icoon" %> <%= f.file_field :icoon %></p>
-    <%= image_tag f.object.icoon_url(:thumb).to_s %>
+    <p><%= f.label :bij_af %></p>
+    <p><%= f.text_field :bij_af %></p>
   </div>
   <div class="field">
-    <%= f.label :bij_af %><br>
-    <%= f.text_field :bij_af %>
+    <p><%= f.label :waarde %></p>
+    <p><%= f.number_field :waarde %></p>
   </div>
   <div class="field">
-    <%= f.label :waarde %><br>
-    <%= f.number_field :waarde %>
+    <p><%= f.label :p_inkoop %></p>
+    <p><%= f.number_field :p_inkoop %></p>
   </div>
   <div class="field">
-    <%= f.label :p_inkoop %><br>
-    <%= f.number_field :p_inkoop %>
-  </div>
-  <div class="field">
-    <%= f.label :hoeveelheid %><br>
-    <%= f.number_field :hoeveelheid %>
+    <p><%= f.label :hoeveelheid %></p>
+    <p><%= f.number_field :hoeveelheid %></p>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <p><%= f.submit class: "btn btn-primary btn-xs" %></p>
   </div>
   
 <% end %>
@@ -62,7 +58,7 @@
       <tbody>
         <% @bkg_ink_search.each do |boeking| %>
           <tr>
-            <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete, data: { confirm: 'Zeker weten?' } %></td>
+            <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete %></td>
             <td><%= boeking.grootboekrekening.naam %></td>
             <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
             <td><%= boeking.journaal.boeknummer %></td>

@@ -6,7 +6,7 @@
       <!-- bankboek -->
       <div id="jnl_bank">
         Kies Afschrift:
-        <%= collection_select(:jnlbank, :id, Journaal.where("journaaltype_id = ?", 3), :id, :boeknummer, {:include_hidden => false}) %>
+        <%= collection_select(:jnlbank, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 3, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
       </div>
     
       <div id="search_jnlbank_results">

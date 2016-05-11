@@ -30,14 +30,44 @@ class HomeController < ApplicationController
     # Boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
+      if @bkg_ink_search.count == 0
+        @bkg_ink_search = nil
+      end
       session[:jnl_ink_id] = @jnl_ink_search.id
     else
       session[:jnl_ink_id] = nil
     end
+    
     if @jnl_verk_search
       @bkg_verk_search = @jnl_verk_search.boekingen
+      if @bkg_verk_search.count == 0
+        @bkg_verk_search = nil
+      end
+      session[:jnl_verk_id] = @jnl_verk_search.id
+    else
+      session[:jnl_verk_id] = nil
     end
     
+    if @jnl_bank_search
+      @bkg_bank_search = @jnl_bank_search.boekingen
+      if @bkg_bank_search.count == 0
+        @bkg_bank_search = nil
+      end
+      session[:jnl_bank_id] = @jnl_bank_search.id
+    else
+      session[:jnl_bank_id] = nil
+    end
+    
+    if @jnl_lev_search
+      @bkg_lev_search = @jnl_lev_search.boekingen
+      if @bkg_lev_search.count == 0
+        @bkg_lev_search = nil
+      end
+      session[:jnl_lev_id] = @jnl_lev_search.id
+    else
+      session[:jnl_lev_id] = nil
+    end
+
   end
   
   def cms

@@ -464,6 +464,21 @@
                     <%= render 'journaals/jnllevering' %>
                
             </div>
+<script>
+  // AN: Kies een journaal
+  $('#jnl_ink').change(function() {
+     $("#search_jnlink_submit").click();
+  });
+  $('#jnl_verk').change(function() {
+     $("#search_jnlverk_submit").click();
+  });
+  $('#jnl_bank').change(function() {
+     $("#search_jnlbank_submit").click();
+  });
+  $('#jnl_lev').change(function() {
+     $("#search_jnllev_submit").click();
+  });
+</script>
                 <div class="kopje">Inboeken</div>
                 <div class="boekin inkoop">
                     <!-- <div class="inboekingsmogelijkheden inkoop">
@@ -575,6 +590,16 @@
                     <div class="inboekingsmogelijkheden verkoop displaynone">
                         <div id="search_bknverkoop_results">
                           <%= render 'journaals/inboek_verk' %>
+                        </div>
+                    </div>
+                    <div class="inboekingsmogelijkheden bank displaynone">
+                        <div id="search_bknbank_results">
+                          <%= render 'journaals/inboek_bank' %>
+                        </div>
+                    </div>
+                    <div class="inboekingsmogelijkheden leveringen displaynone">
+                        <div id="search_bknlev_results">
+                          <%= render 'journaals/inboek_lev' %>
                         </div>
                     </div>
                 </div>

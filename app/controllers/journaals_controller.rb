@@ -11,9 +11,12 @@ class JournaalsController < ApplicationController
   
   def h_journaal
 
-    logger.info("START H_JOURNAAL")
     @org = Organisatie.find(session[:org_id])
-    session[:jnl_ink_id] = nil    
+    session[:jnl_ink_id] = nil
+    session[:jnl_verk_id] = nil
+    session[:jnl_bank_id] = nil
+    session[:jnl_lev_id] = nil
+        
     # Inkoopboek
     if (params[:jnlink] != nil and params[:jnlink][:id] != "")
       if @org.journaals.first
@@ -26,53 +29,74 @@ class JournaalsController < ApplicationController
         session[:jnl_ink_id] = @jnl_ink_search.id
       end
     end
-    
     # Inkoop boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
+      if @bkg_ink_search.count == 0
+        @bkg_ink_search = nil
+      end
     end
-    
-    
     
     # Verkoopboek
     if (params[:jnlverk] != nil and params[:jnlverk][:id] != "")
       if @org.journaals.first
         @jnl_verk_search = @org.journaals.find(params[:jnlverk][:id])
+        session[:jnl_verk_id] = @jnl_verk_search.id
       end
     else
       @jnl_verk_search = @org.journaals.where("journaaltype_id = ?", 2).first
+      if @jnl_verk_search
+        session[:jnl_verk_id] = @jnl_verk_search.id
+      end
     end
     # Verkoop boekingen
     if @jnl_verk_search
       @bkg_verk_search = @jnl_verk_search.boekingen
+      if @bkg_verk_search.count == 0
+        @bkg_verk_search = nil
+      end
     end
     
     # Bankboek
     if (params[:jnlbank] != nil and params[:jnlbank][:id] != "")
       if @org.journaals.first
         @jnl_bank_search = @org.journaals.find(params[:jnlbank][:id])
+        session[:jnl_bank_id] = @jnl_bank_search.id
       end
     else
       @jnl_bank_search = @org.journaals.where("journaaltype_id = ?", 3).first
+      if @jnl_bank_search
+        session[:jnl_bank_id] = @jnl_bank_search.id
+      end
     end
-    # # Bank boekingen
- #    if @jnl_verk_search
- #      @bkg_verk_search = @jnl_verk_search.boekingen
- #    end
+    # Bank boekingen
+    if @jnl_bank_search
+      @bkg_bank_search = @jnl_bank_search.boekingen
+      if @bkg_bank_search.count == 0
+        @bkg_bank_search = nil
+      end
+    end
  
    # Leveringen
    if (params[:jnllev] != nil and params[:jnllev][:id] != "")
      if @org.journaals.first
        @jnl_lev_search = @org.journaals.find(params[:jnllev][:id])
+       session[:jnl_lev_id] = @jnl_lev_search.id
      end
    else
      @jnl_lev_search = @org.journaals.where("journaaltype_id = ?", 4).first
+     if @jnl_lev_search
+       session[:jnl_lev_id] = @jnl_lev_search.id
+     end
    end
-   # # Bank boekingen
-#    if @jnl_verk_search
-#      @bkg_verk_search = @jnl_verk_search.boekingen
-#    end
-    
+   # Levering boekingen
+   if @jnl_lev_search
+     @bkg_lev_search = @jnl_lev_search.boekingen
+     if @bkg_lev_search.count == 0
+       @bkg_lev_search = nil
+     end
+   end
+
   end
 
   # GET /journaals/1

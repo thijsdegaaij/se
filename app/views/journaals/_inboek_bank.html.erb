@@ -1,6 +1,6 @@
 <%= form_for Boeking.new, :remote => true, :url => {:controller => 'boekingen', :action => "create_bkn" } do |f| %>
 
-  <%= f.number_field :journaal_id, value: session[:jnl_verk_id], style: "display: none;" %>
+  <%= f.number_field :journaal_id, value: session[:jnl_bank_id], style: "display: none;" %>
   
   <div class="field">
     <p><%= f.label "Grootboekrekening" %></p>
@@ -36,7 +36,7 @@
   
 <% end %>
 
-<% if @bkg_verk_search %>
+<% if @bkg_bank_search %>
 <div class="inboek">
     <table border="1">
       <thead>
@@ -55,7 +55,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @bkg_verk_search.each do |boeking| %>
+        <% @bkg_bank_search.each do |boeking| %>
           <tr>
             <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete %></td>
             <td><%= boeking.grootboekrekening.naam %></td>

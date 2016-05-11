@@ -26,25 +26,6 @@ var ready = function() {
         $(".kosten-input").toggleClass('accent');
     });
 
-
-
-    // buttons van de journaals
-    
-    // AN: Kies een journaal
-    $('#jnl_ink').change(function() {
-       $("#search_jnlink_submit").click();
-    });
-    $('#jnl_verk').change(function() {
-       $("#search_jnlverk_submit").click();
-    });
-    $('#jnl_bank').change(function() {
-       $("#search_jnlbank_submit").click();
-    });
-    $('#jnl_lev').change(function() {
-       $("#search_jnllev_submit").click();
-    });
-    // AN: end
-    
     $(document.body).on("click", ".btn-inboeken.inkoop", function() {
         $(".btn-inboeken").removeClass("bold");
         $(".btn-inboeken.inkoop").addClass("bold");
@@ -67,6 +48,7 @@ var ready = function() {
         $(".journaal").addClass("displaynone");
         $(".journaal.bank").removeClass("displaynone");
         $(".inboekingsmogelijkheden").addClass("displaynone");
+        $(".inboekingsmogelijkheden.bank").removeClass("displaynone");
     });
     $(document.body).on("click", ".btn-inboeken.kas", function() {
         $(".btn-inboeken").removeClass("bold");
@@ -81,6 +63,7 @@ var ready = function() {
         $(".journaal").addClass("displaynone");
         $(".journaal.leveringen").removeClass("displaynone");
         $(".inboekingsmogelijkheden").addClass("displaynone");
+        $(".inboekingsmogelijkheden.leveringen").removeClass("displaynone");
     });
 
     // gbr-vergroot ()

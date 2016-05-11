@@ -25,11 +25,25 @@ class BoekingenController < ApplicationController
 
   def create_bkn
     logger.debug("Session Variable value: #{session[:jnl_ink_id]} for variable: jnl_ink_id at controller: Boekingen, action: Create_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_verk_id]} for variable: jnl_verk_id at controller: Boekingen, action: create_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_bank_id]} for variable: jnl_bank_id at controller: Boekingen, action: create_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_lev_id]} for variable: jnl_lev_id at controller: Boekingen, action: create_bkn ")
     unless session[:jnl_ink_id] == nil
+      @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+    end
+    unless session[:jnl_verk_id] == nil
+      @bkg_verk_search = Journaal.find(session[:jnl_verk_id]).boekingen
+    end
+    unless session[:jnl_bank_id] == nil
+      @bkg_bank_search = Journaal.find(session[:jnl_bank_id]).boekingen
+    end
+    unless session[:jnl_lev_id] == nil
+      @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
+    end
+    if (params[:boeking][:journaal_id] != nil and params[:boeking][:journaal_id] != "")
       @boeking = Boeking.new(boeking_params)
       respond_to do |format|
         if @boeking.save
-          @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
           format.js {}
         end
       end
@@ -68,8 +82,26 @@ class BoekingenController < ApplicationController
 
   def destroy_bkn
     logger.debug("Session Variable value: #{session[:jnl_ink_id]} for variable: jnl_ink_id at controller: Boekingen, action: Destroy_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_verk_id]} for variable: jnl_verk_id at controller: Boekingen, action: Destroy_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_bank_id]} for variable: jnl_bank_id at controller: Boekingen, action: Destroy_bkn ")
+    logger.debug("Session Variable value: #{session[:jnl_lev_id]} for variable: jnl_lev_id at controller: Boekingen, action: Destroy_bkn ")
     @boeking.destroy
     @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+    if @bkg_ink_search.count == 0
+      @bkg_ink_search = nil
+    end
+    @bkg_verk_search = Journaal.find(session[:jnl_verk_id]).boekingen
+    if @bkg_verk_search.count == 0
+      @bkg_verk_search = nil
+    end
+    @bkg_bank_search = Journaal.find(session[:jnl_bank_id]).boekingen
+    if @bkg_bank_search.count == 0
+      @bkg_bank_search = nil
+    end
+    @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
+    if @bkg_lev_search.count == 0
+      @bkg_lev_search = nil
+    end
     respond_to do |format|
       format.js {}
     end

@@ -75,7 +75,7 @@ class HomeController < ApplicationController
     }
     # Input grootboek
     @gb_input = []
-    Grootboektype.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
+    Grootboektype.where("categorie = ?", "I").each { |t|
       @gb_input.push(calc(@organisatie_search, t.id))
     }
     # Output grootboek

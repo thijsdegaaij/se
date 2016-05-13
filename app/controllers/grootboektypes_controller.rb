@@ -71,6 +71,6 @@ class GrootboektypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def grootboektype_params
-      params.require(:grootboektype).permit(:naam, :icoon)
+      params.require(:grootboektype).permit(:naam, :icoon, :categorie)
     end
 end

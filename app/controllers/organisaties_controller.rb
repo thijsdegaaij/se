@@ -33,6 +33,27 @@ class OrganisatiesController < ApplicationController
     @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15)
     @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
     
+    # Diverse grootboek
+    @gb_div = []
+    Grootboektype.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
+      @gb_div.push(calc(@organisatie_search, t.id))
+    }
+    # Input grootboek
+    @gb_input = []
+    Grootboektype.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
+      @gb_input.push(calc(@organisatie_search, t.id))
+    }
+    # Output grootboek
+    @gb_output = []
+    Grootboektype.where("categorie = ?", "O").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
+      @gb_output.push(calc(@organisatie_search, t.id))
+    }
+    # Eigen vermogen grootboek
+    @gb_ev = []
+    Grootboektype.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
+      @gb_ev.push(calc(@organisatie_search, t.id))
+    }
+    
   end
   
   # GET /organisaties/1
@@ -99,4 +120,25 @@ class OrganisatiesController < ApplicationController
     def organisatie_params
       params.require(:organisatie).permit(:naam, :bedrijfstak_id, :rechtsvorm_id, :voorkant_image)
     end
+    
+    def calc(org, gb_type)
+      min = 0
+      plus = 0
+      totaal = 0
+      naam = ""
+      gbr_type = org.grootboekrekeningen.where("grootboektype_id = ?", "#{gb_type}").joins(:grootboektype)
+      gbr_type.each { |gt|
+        gt.boekingen.each { |boeking|
+            if boeking.bij_af == '-'
+              min = min + boeking.waarde
+            else
+              plus = plus + boeking.waarde
+            end
+        }
+        totaal = plus - min
+      }
+      naam = Grootboektype.find(gb_type).naam
+      return naam, plus, min, totaal 
+    end
+    
 end

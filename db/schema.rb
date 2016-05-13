@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160429070404) do
+ActiveRecord::Schema.define(version: 20160513081531) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160429070404) do
     t.string   "icoon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "categorie"
   end
 
   create_table "journaals", force: :cascade do |t|

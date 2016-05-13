@@ -97,6 +97,7 @@ class JournaalsController < ApplicationController
      end
    end
 
+   
   end
 
   # GET /journaals/1

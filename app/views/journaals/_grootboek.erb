@@ -1,0 +1,35 @@
+<div class="grootboek-rails">
+  <h1>Grootboek</h1>
+  
+  <h2>Diversen</h2>
+  <% @gb_div.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  
+  <h2>Input</h2>
+  <% @gb_input.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  
+   
+  <h2>Output</h2>
+  <% @gb_output.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  
+  <h2>Eigen vermogen</h2>
+  <% @gb_ev.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+        
+</div>
+
+

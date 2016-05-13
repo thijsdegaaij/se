@@ -1,3 +1,19 @@
+<script>
+  // AN: Kies een journaal
+  $('#jnl_ink').change(function() {
+     $("#search_jnlink_submit").click();
+  });
+  $('#jnl_verk').change(function() {
+     $("#search_jnlverk_submit").click();
+  });
+  $('#jnl_bank').change(function() {
+     $("#search_jnlbank_submit").click();
+  });
+  $('#jnl_lev').change(function() {
+     $("#search_jnllev_submit").click();
+  });
+</script>
+  
 <div class="flex-rowstart">
     <div class="navtwee ">
         <div class="icon icon-informatie displaynone"></div>
@@ -6,439 +22,9 @@
         <div class="navbtn btnkostprijs button">Interne berekeningen</div>
     </div>
     <div class="flex-columncenter">
-        <div class="grootboeken">
-            <div class="gb-all">
-                <!-- <div class="titelgrootboek">Grootboek</div> -->
-                <div class="gb1">
-                    <div class="titel">Grootboek</div>
-                    <div class="boven">
-                        <div class="hori boven-orgtitel">
-                            <div class="hori-a"></div>
-                            <div class="hori-b"></div>
-                            <div class="hori-c"></div>
-                        </div>
-                        <div class="hori boven-geld">
-                            <div class="hori-a "></div>
-                            <div class="hori-b welonderlijn">
-                                <div class="gbr1 output">
-                                    <div class="hor k1 titelinput">
-                                        <div></div>
-                                        <div></div>
-                                        <div>Diversen</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor k2  verkopen ">
-                                        <div class=""></div>
-                                        <div>
-                                            <div class="icon icon-rondje"></div>
-                                        </div>
-                                        <div class="button">Bank</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm evkleur">
-                                        <div class="">&nbsp; </div>
-                                        <div>=</div>
-                                        <div>60.500</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm stroomkleur">
-                                        <div class="icon icon-gelduit"></div>
-                                        <div>-</div>
-                                        <div>181.500</div>
-                                        <div>&nbsp;</div>
-                                        <div class="naamlinks">betalingen</div>
-                                    </div>
-                                    <div class="hor norm  stroomkleur">
-                                        <div class="">&nbsp;</div>
-                                        <div class="geenonderlijnwellinks">+</div>
-                                        <div class="geenonderlijn ">242.000</div>
-                                        <div class="icon icon-geldin"></div>
-                                        <div class="naamrechts">inkomsten</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hori-c "></div>
-                        </div>
-                        <div class="hori boven-geld ">
-                            <div class="hori-a "></div>
-                            <div class="hori-b welonderlijn">
-                                <div class="gbr1 output gbrboven">
-                                    <div class="hor k2  verkopen ">
-                                        <div class=""></div>
-                                        <div>
-                                            <div class="icon icon-plichtoverheid"></div>
-                                        </div>
-                                        <div class="button">Te betalen btw</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm evkleur">
-                                        <div class="">&nbsp; </div>
-                                        <div>=</div>
-                                        <div>- 10.500</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm stroomkleur">
-                                        <div class="icon icon-neg"></div>
-                                        <div>-</div>
-                                        <div>42.000</div>
-                                        <div>&nbsp;</div>
-                                        <div class="naamlinks">btw verkopen</div>
-                                    </div>
-                                    <div class="hor norm  stroomkleur">
-                                        <div class="">&nbsp;</div>
-                                        <div class="">+</div>
-                                        <div class=" ">31.500 </div>
-                                        <div class="icon icon-pos"></div>
-                                        <div class="naamrechts">btw inkopen</div>
-                                    </div>
-                                    <div class="hor norm  stroomkleur">
-                                        <div class="">&nbsp;</div>
-                                        <div class="geenonderlijnwellinks">+</div>
-                                        <div class="geenonderlijn ">0 </div>
-                                        <div class="icon icon-pos"></div>
-                                        <div class="naamrechts">btw-verplichting betaald</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hori-c "></div>
-                        </div>
-                        <div class="hori boven-geld ">
-                            <div class="hori-a "></div>
-                            <div class="hori-b welonderlijn">
-                                <div class="gbr1 output gbrboven">
-                                    <div class="hor k2  verkopen ">
-                                        <div class=""></div>
-                                        <div>
-                                            <div class="icon icon-plichtgeld evkleur"></div>
-                                        </div>
-                                        <div class="button">Lening (5% rente)</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm evkleur">
-                                        <div class="">&nbsp; </div>
-                                        <div>=</div>
-                                        <div>- 20.000</div>
-                                        <div></div>
-                                    </div>
-                                    <div class="hor norm stroomkleur">
-                                        <div class="icon icon-neg"></div>
-                                        <div>-</div>
-                                        <div>1.000</div>
-                                        <div>&nbsp;</div>
-                                        <div class="naamlinks kosten-input">Rente</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hori-c "></div>
-                        </div>
-                        <!--            
-                                        <div class="hori boven-fin">                           
-                                            <div class="hori-a"></div>
-                                            <div class="hori-b">Financi&euml;le producten</div>
-                                            <div class="hori-c"></div>                                 
-                                        </div>    -->
-                    </div>
-                    <div class="onder">
-                        <!-- space between -->
-                        <div class="input">
-                            <div class="gbr1">
-                                <!-- column -->
-                                <div class="hor k1 titelinput">
-                                    <div></div>
-                                    <div></div>
-                                    <div>Input</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor k2 voorraad">
-                                    <div class=""></div>
-                                    <div>
-                                        <div class="icon icon-rondje"></div>
-                                    </div>
-                                    <div class="button">Vlottende activa</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm evkleur">
-                                    <div class="">&nbsp; </div>
-                                    <div>=</div>
-                                    <div>0</div>
-                                    <div>&nbsp; </div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroommarktin"></div>
-                                    <div>+</div>
-                                    <div>100.000</div>
-                                    <div>&nbsp;</div>
-                                    <div class="naamlinks">inkopen</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="">&nbsp;</div>
-                                    <div>-</div>
-                                    <div>100.000</div>
-                                    <div class="icon icon-stroominternuit"></div>
-                                    <div class="naamrechts kosten-input">Inkoopwaarde vd omzet</div>
-                                </div>
-                            </div>
-                            <div class="gbr1">
-                                <div class="hor k2  vasteactiva">
-                                    <div></div>
-                                    <div>
-                                        <div class="icon icon-vierkant"></div>
-                                    </div>
-                                    <div class="">Vaste activa</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm evkleur">
-                                    <div></div>
-                                    <div>=</div>
-                                    <div>8.000</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroommarktin"></div>
-                                    <div>+</div>
-                                    <div>10.000</div>
-                                    <div>&nbsp;</div>
-                                    <div class="naamlinks">inkopen</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="">&nbsp;</div>
-                                    <div>-</div>
-                                    <div>2.000</div>
-                                    <div class="icon icon-stroominternuit"></div>
-                                    <div class="naamrechts kosten-input">Algemene kosten</div>
-                                </div>
-                            </div>
-                            <div class="gbr1">
-                                <div class="hor k2 ">
-                                    <div></div>
-                                    <div>
-                                        <div class="icon icon-pijlhoofdmarkt"></div>
-                                    </div>
-                                    <div>Kosten</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroommarktin">&nbsp; </div>
-                                    <div>+</div>
-                                    <div>40.000</div>
-                                    <div></div>
-                                    <div class="naamlinks">inkopen</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div>&nbsp;</div>
-                                    <div>-</div>
-                                    <div>8.000</div>
-                                    <div class="icon icon-stroominternuit"></div>
-                                    <div class="naamrechts kosten-input">Inkoopkosten</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div>&nbsp;</div>
-                                    <div>-</div>
-                                    <div>12.000</div>
-                                    <div class="icon icon-stroominternuit"></div>
-                                    <div class="naamrechts kosten-input">Verkoopkosten</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div>&nbsp;</div>
-                                    <div>-</div>
-                                    <div>20.000</div>
-                                    <div class="icon icon-stroominternuit"></div>
-                                    <div class="naamrechts kosten-input">Algemene kosten</div>
-                                </div>
-                            </div>
-                            <div class="gbr1">
-                                <div class="hor k2  personeel">
-                                    <div></div>
-                                    <div>
-                                        <div class="icon icon-mens"></div>
-                                    </div>
-                                    <div>Personeel</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroommarktin">&nbsp;</div>
-                                    <div>+</div>
-                                    <div>0</div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="output">
-                            <div class="gbr1">
-                                <div class="hor k1 titelinput">
-                                    <div></div>
-                                    <div></div>
-                                    <div>Output</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor k2  verkopen ">
-                                    <div class=""></div>
-                                    <div>
-                                        <div class="icon icon-rondje"></div>
-                                    </div>
-                                    <div class="button">Verkocht brood</div>
-                                    <div></div>
-                                </div>
-                                <div class="hor norm evkleur">
-                                    <div class="">&nbsp; </div>
-                                    <div>=</div>
-                                    <div>0</div>
-                                    <div>&nbsp; </div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroominternin"></div>
-                                    <div>+</div>
-                                    <div>100.000</div>
-                                    <div>&nbsp;</div>
-                                    <div class="naamlinks kosten-output button">Inkoopwaarde vd omzet</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-stroominternin"></div>
-                                    <div>+</div>
-                                    <div>50.000</div>
-                                    <div>&nbsp;</div>
-                                    <div class="naamlinks kosten-output button">Bedrijfskosten</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="icon icon-winstpos winstweergave"></div>
-                                    <div>+</div>
-                                    <div>50.000</div>
-                                    <div>&nbsp;</div>
-                                    <div class="naamlinks">Bruto winst</div>
-                                </div>
-                                <div class="hor norm stroomkleur">
-                                    <div class="">&nbsp;</div>
-                                    <div>-</div>
-                                    <div>200.000</div>
-                                    <div class="icon icon-stroommarktuit"></div>
-                                    <div class="naamrechts">Omzet</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- interne berekeningen -->
-                        <div class="kprijscontainer displaynone">
-                            <div class="kprijsb ">
-                                <div class="titelhoofd">Interne berekeningen</div>
-                                <div class="titel">Vaste verrekenprijs, kostprijs en verkoopprijs</div>
-                                <div class="col col1">
-                                    <div class="k-iwo omtrek">
-                                        <div class="text">Inkoopwaarde van de omzet</div>
-                                        <div class=" ">&euro; 100.000 (totaal)</div>
-                                        <div class=" ">&euro; 1,00 (per stuk)</div>
-                                    </div>
-                                    <div class="k-bdv"><span class="verhoogd">Kosten voor bedrijfsvoering</span>
-                                        <div class="k-ink">
-                                            <div class="text">Inkoopkosten</div>
-                                            <div class=" ">&euro; 10.000 (totaal)</div>
-                                            <div class=" ">&euro; 0,10 (per stuk)</div>
-                                        </div>
-                                        <div class="k-ovh"><span class="verhoogd">Overheadkosten</span>
-                                            <div class="k-vrk">
-                                                <div class="text">Verkoopkosten</div>
-                                                <div class=" ">&euro; 10.000 (totaal)</div>
-                                                <div class=" ">&euro; 0,10 (per stuk)</div>
-                                            </div>
-                                            <div class="k-alg">
-                                                <div class="text">Algemene kosten</div>
-                                                <div class=" ">&euro; 52.000 (totaal)</div>
-                                                <div class=" ">&euro; 0,52 (per stuk)</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col2">
-                                    <div class="vvpbuiten">
-                                        <div class="vvp">
-                                            <div class="text">Vaste verrekenprijs (vvp)</div>
-                                            <div></div>
-                                            <div class=" ">&euro; 1,10</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col3">
-                                    <div class="k-kpbuiten">
-                                        <div class="k-kp">
-                                            <div class="text">Kostprijs</div>
-                                            <div></div>
-                                            <div class=" ">&euro; 1,72</div>
-                                        </div>
-                                    </div>
-                                    <div class="winstm">
-                                        <div class="text">Winstmarge</div>
-                                        <div></div>
-                                        <div class=" ">&euro; 0,28</div>
-                                    </div>
-                                </div>
-                                <div class="col col4">
-                                    <div class="pverkoop">
-                                        <div class="text">Verkoopprijs</div>
-                                        <div></div>
-                                        <div class=" ">&euro; 2,00</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lijn"></div>
-                <div class="hori boven-geld">
-                    <div class="hori-a "></div>
-                    <div class="hori-b welonderlijn">
-                        <div class="gbr1 output">
-                            <div class="hor k1 titelinput">
-                                <div></div>
-                                <div></div>
-                                <div>Eigen Vermogen</div>
-                                <div></div>
-                            </div>
-                            <div class="hor k2  verkopen ">
-                                <div class=""></div>
-                                <div>
-                                    <div class="icon icon-ev"></div>
-                                </div>
-                                <div class="button">Eigen vermogen</div>
-                                <div></div>
-                            </div>
-                            <div class="hor norm evkleur">
-                                <div class="">&nbsp; </div>
-                                <div>= 31 dec '20</div>
-                                <div>48.500</div>
-                                <div></div>
-                            </div>
-                            <div class="hor norm stroomkleur">
-                                <div class="icon icon-pos"></div>
-                                <div>+</div>
-                                <div>100.000</div>
-                                <div>&nbsp;</div>
-                                <div class="naamlinks">Bruto winst</div>
-                            </div>
-                            <div class="hor norm stroomkleur">
-                                <div class="icon icon-neg"></div>
-                                <div>+</div>
-                                <div>50.000</div>
-                                <div>&nbsp;</div>
-                                <div class="naamlinks">Bedrijfskosten</div>
-                            </div>
-                            <div class="hor norm stroomkleur">
-                                <div class="icon icon-neg"></div>
-                                <div>-</div>
-                                <div>1.000</div>
-                                <div>&nbsp;</div>
-                                <div class="naamlinks">Lening</div>
-                            </div>
-                            <div class="hor norm  stroomkleur">
-                                <div class="">&nbsp;</div>
-                                <div class="geenonderlijnwellinks">= 01 jan '20</div>
-                                <div class="geenonderlijn ">- 500</div>
-                                <div class=""></div>
-                                <div class="naamrechts"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+          <div class"search_gb_results">
+            <%= render 'journaals/grootboek' %>
+          </div>
         <div class="containerinboeken displaynone">
             <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
             <div class="inboeken-all">
@@ -464,21 +50,7 @@
                     <%= render 'journaals/jnllevering' %>
                
             </div>
-<script>
-  // AN: Kies een journaal
-  $('#jnl_ink').change(function() {
-     $("#search_jnlink_submit").click();
-  });
-  $('#jnl_verk').change(function() {
-     $("#search_jnlverk_submit").click();
-  });
-  $('#jnl_bank').change(function() {
-     $("#search_jnlbank_submit").click();
-  });
-  $('#jnl_lev').change(function() {
-     $("#search_jnllev_submit").click();
-  });
-</script>
+
                 <div class="kopje">Inboeken</div>
                 <div class="boekin inkoop">
                     <!-- <div class="inboekingsmogelijkheden inkoop">
@@ -606,7 +178,7 @@
             </div>
         </div>
         <!-- gb -->
-        <div class="gbr-vergroot voorraad displaynone">
+        <!-- <div class="gbr-vergroot voorraad displaynone">
             <div class="titel button">
                 <div class="icon icon-rondje"></div>
                 <div>Voorraad</div>
@@ -856,9 +428,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- gbr-vergroot -->
-        <div class="gbr-vergroot verkopen displaynone">
+        <!-- <div class="gbr-vergroot verkopen displaynone">
             <div class="titel button">
                 <div class="icon icon-rondje"></div>
                 <div>Vooorraad winkel</div>
@@ -1034,8 +606,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-<!-- gbr-vergroot -->
+        </div> -->
+        <!-- gbr-vergroot -->
     </div>
 </div>
 

@@ -21,6 +21,20 @@ var ready = function() {
         $(".btnkostprijs").addClass("bold");  */
     });
 
+    // AN: Kies een journaal
+    $('#jnl_ink').change(function() {
+       $("#search_jnlink_submit").click();
+    });
+    $('#jnl_verk').change(function() {
+       $("#search_jnlverk_submit").click();
+    });
+    $('#jnl_bank').change(function() {
+       $("#search_jnlbank_submit").click();
+    });
+    $('#jnl_lev').change(function() {
+       $("#search_jnllev_submit").click();
+    });
+
     //button kosten in grootboek
     $(document.body).on("click", ".kosten-output", function() {
         $(".kosten-input").toggleClass('accent');

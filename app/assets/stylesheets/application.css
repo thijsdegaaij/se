@@ -1489,8 +1489,6 @@ a1a2 > .a2 .kolom,
   align-items: center; }
   .start .rij .kolom {
     width: 300px; }
-  .start .rij .boekhoudboeken {
-    height: 100px; }
 
 .org-all {
   align-items: center; }
@@ -4554,4 +4552,4 @@ hr {
 .bginput {
   background-color: #ded8d3 !important; }
 
-/*# sourceMappingURL=applicationx.css.map */
+/*# sourceMappingURL=application.css.map */

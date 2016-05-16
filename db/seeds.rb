@@ -99,9 +99,22 @@ Grootboekrekening.create(naam: 'PERSONEEL', grootboektype_id: 4, organisatie_id:
 Grootboekrekening.create(naam: 'TE KOOP Brood', grootboektype_id: 5, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Grootboekrekening.create(naam: 'TE KOOP Bol', grootboektype_id: 5, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/bol.png"))
 
-Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11, icoon: File.open(Rails.root + "app/assets/images/icon_stroommarktin.png"))
-Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13, icoon: File.open(Rails.root + "app/assets/images/icon_stroomintern.png"))
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12, icoon: File.open(Rails.root + "app/assets/images/icon_stroominternin.png"))
-Boeking.create(datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13, icoon: File.open(Rails.root + "app/assets/images/icon_stroommarktuit.png")) 
+Grootboekrekening.create(naam: 'GELD Bank', grootboektype_id: 9, organisatie_id: 2)
+Grootboekrekening.create(naam: 'BELASTINGEN BTW Verkopen', grootboektype_id: 10, organisatie_id: 2)
+Grootboekrekening.create(naam: 'BELASTINGEN BTW Inkopen', grootboektype_id: 10, organisatie_id: 2)
+Grootboekrekening.create(naam: 'FINANCIELE PRODUCTEN Lening', grootboektype_id: 11, organisatie_id: 2)
+
+
+Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11)
+Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13)
+# Interne boekingen
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 181500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 21)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 22)
+Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 23)
+  
 
 

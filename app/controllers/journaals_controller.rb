@@ -96,7 +96,13 @@ class JournaalsController < ApplicationController
        @bkg_lev_search = nil
      end
    end
-
+   
+   # Intern
+   if @org.boekingen.where("boekingtype = ?","I").count == 0
+     @bkg_intern_search = nil
+   else
+     @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+   end
    
   end
 

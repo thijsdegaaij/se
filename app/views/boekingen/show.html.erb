@@ -1,14 +1,32 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Boekingtype:</strong>
+  <%= @boeking.boekingtype %>
+</p>
+
+<p>
+  <strong>Organisatie:</strong>
+  <%= @boeking.organisatie.naam %>
+</p>
+
 <p>
   <strong>Grootboekrekening:</strong>
   <%= @boeking.grootboekrekening.naam %>
 </p>
 
-<p>
-  <strong>Journaal:</strong>
-  <%= @boeking.journaal.boeknummer %>
-</p>
+<% if @boeking.journaal %>
+  <p>
+    <strong>Journaal:</strong>
+    <%= @boeking.journaal.boeknummer %></td>
+  </p>
+<% else %>
+  <p>
+   <strong>Interne boeking</strong>
+  </p>
+<% end %>
+
 
 <p>
   <strong>Product:</strong>

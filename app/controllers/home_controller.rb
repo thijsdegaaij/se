@@ -26,7 +26,7 @@ class HomeController < ApplicationController
     @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first
     # Leveringen
     @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first
-  
+      
     # Boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
@@ -66,6 +66,12 @@ class HomeController < ApplicationController
       session[:jnl_lev_id] = @jnl_lev_search.id
     else
       session[:jnl_lev_id] = nil
+    end
+
+    if @organisatie_search.boekingen.where("boekingtype = ?","I").count == 0
+      @bkg_intern_search = nil
+    else
+      @bkg_intern_search = @organisatie_search.boekingen.where("boekingtype = ?","I")
     end
 
     # Grootboek  

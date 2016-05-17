@@ -35,6 +35,7 @@ Journaaltype.create(naam: 'Verkoopboek', icoon: File.open(Rails.root + "app/asse
 Journaaltype.create(naam: 'Bankboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 Journaaltype.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 
+
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0002", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12, voorwaarden: "inknr-0028\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 
@@ -47,12 +48,11 @@ Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-00
 Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0001", datum: Date.new(2016,2,1), klant: "Koper A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "Levering-0001\nBehorende bij Vernr-0001")
 Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", hoeveelheid: 10, eenheid: "kilo", productnaam: "Meel", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "levering-0002\nBehorende bij inknr-0001")
 
-
 Grootboektype.create(naam: 'Vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"), categorie: 'I')
 Grootboektype.create(naam: 'Vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_vierkant.png"), categorie: 'I')
 Grootboektype.create(naam: 'Kosten', icoon: File.open(Rails.root + "app/assets/images/icon_pijlhoofdmarkt.png"), categorie: 'I')
 Grootboektype.create(naam: 'Personeel', icoon: File.open(Rails.root + "app/assets/images/icon_mens.png"), categorie: 'I')
-Grootboektype.create(naam: 'Te koop', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"), categorie: 'O')
+Grootboektype.create(naam: 'Verkopen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"), categorie: 'O')
 Grootboektype.create(naam: 'Know-how', categorie: 'O')
 Grootboektype.create(naam: 'Reclame', categorie: 'O')
 Grootboektype.create(naam: 'Rechten en Plichten', categorie: 'D')
@@ -105,16 +105,21 @@ Grootboekrekening.create(naam: 'BELASTINGEN BTW Inkopen', grootboektype_id: 10, 
 Grootboekrekening.create(naam: 'FINANCIELE PRODUCTEN Lening', grootboektype_id: 11, organisatie_id: 2)
 
 
-Boeking.create(datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11)
-Boeking.create(datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13)
+Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11)
+Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13)
+Boeking.create( boekingtype: "J",organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12)
+Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13)
+
+Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 5, grootboekrekening_id: 13)
+
+Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 7, grootboekrekening_id: 13)
+
 # Interne boekingen
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 181500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 21)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 22)
-Boeking.create(datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 23)
+Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 181500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
+Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 20)
+Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 21)
+Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 22)
+Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 23)
   
 
 

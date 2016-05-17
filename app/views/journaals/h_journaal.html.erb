@@ -36,6 +36,7 @@
                         <div class="btn-inboeken verkoop button">verkoopboek</div>
                         <div class="btn-inboeken bank button">bankboek</div>
                         <div class="btn-inboeken leveringen button">leveringen</div>
+                        <div class="btn-inboeken intern button">Interne Boekingen</div>
                     </div>
                     <!-- inkoopboek -->
                     <%= render 'journaals/jnlinkoop' %>
@@ -48,6 +49,9 @@
                     
                     <!-- leveringen -->
                     <%= render 'journaals/jnllevering' %>
+                    
+                    <!-- Interne boekingen -->
+                    <%= render 'journaals/jnlintern' %>
                
             </div>
 
@@ -173,6 +177,75 @@
                         <div id="search_bknlev_results">
                           <%= render 'journaals/inboek_lev' %>
                         </div>
+                    </div>
+                    <div class="inboekingsmogelijkheden intern displaynone">
+                        <div id="search_bknintern_results">
+                          <%= render 'journaals/inboek_intern' %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- interne berekeningen -->
+        <div class="kprijscontainer displaynone">
+            <div class="kprijsb ">
+                <div class="titelhoofd">Interne berekeningen</div>
+                <div class="titel">Vaste verrekenprijs, kostprijs en verkoopprijs</div>
+                <div class="col col1">
+                    <div class="k-iwo omtrek">
+                        <div class="text">Inkoopwaarde van de omzet</div>
+                        <div class=" ">&euro; 100.000 (totaal)</div>
+                        <div class=" ">&euro; 1,00 (per stuk)</div>
+                    </div>
+                    <div class="k-bdv"><span class="verhoogd">Kosten voor bedrijfsvoering</span>
+                        <div class="k-ink">
+                            <div class="text">Inkoopkosten</div>
+                            <div class=" ">&euro; 10.000 (totaal)</div>
+                            <div class=" ">&euro; 0,10 (per stuk)</div>
+                        </div>
+                        <div class="k-ovh"><span class="verhoogd">Overheadkosten</span>
+                            <div class="k-vrk">
+                                <div class="text">Verkoopkosten</div>
+                                <div class=" ">&euro; 10.000 (totaal)</div>
+                                <div class=" ">&euro; 0,10 (per stuk)</div>
+                            </div>
+                            <div class="k-alg">
+                                <div class="text">Algemene kosten</div>
+                                <div class=" ">&euro; 52.000 (totaal)</div>
+                                <div class=" ">&euro; 0,52 (per stuk)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col2">
+                    <div class="vvpbuiten">
+                        <div class="vvp">
+                            <div class="text">Vaste verrekenprijs (vvp)</div>
+                            <div></div>
+                            <div class=" ">&euro; 1,10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <div class="k-kpbuiten">
+                        <div class="k-kp">
+                            <div class="text">Kostprijs</div>
+                            <div></div>
+                            <div class=" ">&euro; 1,72</div>
+                        </div>
+                    </div>
+                    <div class="winstm">
+                        <div class="text">Winstmarge</div>
+                        <div></div>
+                        <div class=" ">&euro; 0,28</div>
+                    </div>
+                </div>
+                <div class="col col4">
+                    <div class="pverkoop">
+                        <div class="text">Verkoopprijs</div>
+                        <div></div>
+                        <div class=" ">&euro; 2,00</div>
                     </div>
                 </div>
             </div>
@@ -608,6 +681,7 @@
             </div>
         </div> -->
         <!-- gbr-vergroot -->
+        
     </div>
 </div>
 

@@ -1,0 +1,209 @@
+<%= form_for Boeking.new, :remote => true, :url => {:controller => 'boekingen', :action => "create_bkn" } do |f| %>
+
+   <%= f.text_field :boekingtype, value: "I", style: "display: none;" %>
+
+  <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: none;" %>
+
+  <%= f.number_field :journaal_id, value: 0, style: "display: none;" %>
+  
+  <div class="field">
+    <p><%= f.label "Grootboekrekening" %></p>
+    <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label "Product" %></p>
+    <p><%= f.select :product_id, Product.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label :datum %></p>
+    <p><%= f.date_select :datum %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label :bij_af %></p>
+    <p><%= f.text_field :bij_af %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label :waarde %></p>
+    <p><%= f.number_field :waarde %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label :p_inkoop %></p>
+    <p><%= f.number_field :p_inkoop %></p>
+  </div>
+  <div class="field">
+    <p><%= f.label :hoeveelheid %></p>
+    <p><%= f.number_field :hoeveelheid %></p>
+  </div>
+  <div class="actions">
+    <p><%= f.submit class: "btn btn-primary btn-xs" %></p>
+  </div>
+  
+<% end %>
+
+<% if @bkg_intern_search %>
+<div class="inboek">
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="1"></th>
+          <th>Grootboekrekening</th>
+          <th>Grootboekrekeningtype</th>
+          <th>Product</th>
+          <th>Datum</th>
+          <th>Icoon</th>
+          <th>Bij af</th>
+          <th>Waarde</th>
+          <th>P inkoop</th>
+          <th>Hoeveelheid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bkg_intern_search.each do |boeking| %>
+          <tr>
+            <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete %></td>
+            <td><%= boeking.grootboekrekening.naam %></td>
+            <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
+            <td><%= boeking.product.naam %></td>
+            <td><%= boeking.datum %></td>
+            <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
+            <td><%= boeking.bij_af %></td>
+            <td><%= boeking.waarde %></td>
+            <td><%= boeking.p_inkoop %></td>
+            <td><%= boeking.hoeveelheid %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+<!-- <div class="inboek">
+    <div class="header">Voorraad inkopen</div>
+    <div class="icon icon-rondje"></div>
+    <div class="gbr-row-voorraad gbr-row-header ">
+        <div class="dd"></div>
+        <div class="gbr-ovr"></div>
+        <div class="beschrijving"></div>
+        <div class="icoon"></div>
+        <div class="sign"></div>
+        <div class="gbr-w"></div>
+        <div class="gbr-p"></div>
+        <div class="gbr-h"></div>
+        <div class="gbr-n"></div>
+        <div class="ks"> </div>
+        <div class="kf"> </div>
+    </div>
+    <div class="gbr-row-voorraad eurox">
+        <div class="dd">1 feb</div>
+        <div class="gbr-ovr">ink-1101</div>
+        <div class="beschrijving">brood</div>
+        <div class="icoon icon icon-stroominternuit"></div>
+        <div class="sign">-</div>
+        <div class="gbr-w">300</div>
+        <div class="gbr-p">1,00</div>
+        <div class="gbr-h">300</div>
+        <div class="gbr-n">Voorraad goederen (3000) </div>
+        <div class="ks styled-select">
+            <select class="">
+                <option value="welkom">kostensoorten</option>
+                <option value="situaties" selected>1. grondstoffen</option>
+                <option value="situaties">2. arbeid</option>
+                <option value="mensen">3. afschrijving op vaste activa</option>
+                <option value="producten">4. gebruik van grond</option>>
+                <option value="begrippen">5. diensten van derden</option>
+                <option value="mijnresultaten">6. belastingen die de kostprijs verhogen</option>
+            </select>
+        </div>
+        <div class="kf styled-select">
+            <select class="">
+                <option value="welkom">functionele kosten</option>
+                <option value="situaties" selected>inkoopwaarde van de omzet</option>
+                <option value="situaties">1. kosten inkoop</option>
+                <option value="situaties">2. kosten productie</option>
+                <option value="mensen">3. kosten verkoop</option>
+                <option value="producten">4. kosten algemeen</option>>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="inboek">
+    <div class="header">Kas</div>
+    <div class="icon icon-geld"></div>
+    <div class="gbr-row-rechtplicht gbr-row-header ">
+        <div class="dd"></div>
+        <div class="gbr-ovr"></div>
+        <div class="beschrijving"></div>
+        <div class="icoon"></div>
+        <div class="sign"></div>
+        <div class="gbr-w"></div>
+        <div class="gbr-orgnaam"></div>
+        <div class="gbr-n"></div>
+        <div class="ks"> </div>
+        <div class="kf"> </div>
+    </div>
+    <div class="gbr-row-rechtplicht eurox">
+        <div class="dd">1 feb</div>
+        <div class="gbr-ovr">ink-1101</div>
+        <div class="beschrijving">brood</div>
+        <div class="icoon icon icon-geldin"></div>
+        <div class="sign">+</div>
+        <div class="gbr-w">636</div>
+        <div class="gbr-orgnaam">Diverse klanten</div>
+        <div class="gbr-n">Kas (1000)</div>
+        <div class="ks styled-select">
+            <select class="">
+                <option value="welkom">geldstromen sectoren</option>
+                <option value="situaties">import (M)</option>
+                <option value="situaties">export (X)</option>
+                <option value="situaties">inkomen (Y)</option>
+                <option value="mensen">besparingen (S)</option>
+                <option value="producten">investeringen (I)</option>
+                <option value="producten" selected>consumptie (C)</option>
+                <option value="producten">geld binnen sector</option>
+            </select>
+        </div>
+        <div class="kf styled-select">
+            <select class="">
+                <option value="welkom">geldstromen sectoren</option>
+                <option value="situaties">import (M)</option>
+                <option value="situaties">export (X)</option>
+                <option value="situaties">inkomen (Y)</option>
+                <option value="mensen">besparingen (S)</option>
+                <option value="producten">investeringen (I)</option>
+                <option value="producten" selected>belastingen (B)</option>
+                <option value="producten">overheidsuitgaven (O)</option>
+                <option value="producten">geld binnen sector</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="inboek">
+        <div class="header">Te betalen BTW</div>
+        <div class="icon icon-plichtoverheid"></div>
+        <div class="gbr-row-rechtplicht gbr-row-header ">
+            <div class="dd"></div>
+            <div class="gbr-ovr"></div>
+            <div class="beschrijving"></div>
+            <div class="icoon"></div>
+            <div class="sign"></div>
+            <div class="gbr-w"></div>
+            <div class="gbr-orgnaam"></div>
+            <div class="gbr-n"></div>
+            <div class="ks"> </div>
+            <div class="kf"> </div>
+        </div>
+        <div class="gbr-row-rechtplicht eurox">
+            <div class="dd">1 feb</div>
+            <div class="gbr-ovr">ink-1101</div>
+            <div class="beschrijving">brood</div>
+            <div class="icoon icon icon-neg"></div>
+            <div class="sign">-</div>
+            <div class="gbr-w">36</div>
+            <div class="gbr-orgnaam">Belastingdienst</div>
+            <div class="gbr-n">Te belaten btw (1800)</div>
+            <div class="ks styled-select"></div>
+            <div class="kf styled-select">
+            </div>
+        </div>
+    </div>
+</div> -->
+<% end %>

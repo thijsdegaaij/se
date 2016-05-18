@@ -9,7 +9,7 @@ var ready = function() {
       // $('#search_submit').submit();
 
      $("#search_submit").click();
-     // Hoeft niet apart voor #search_jnlverk_submit die gaat vanzelf mee
+     // Hoeft niet apart voor #search_jnlverk_submit,etc  die gaat vanzelf mee via h_journaal
      setTimeout(function() { $("#search_jnlink_submit").click(); }, 1000);
 
      // END AN

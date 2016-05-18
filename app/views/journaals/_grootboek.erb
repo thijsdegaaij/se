@@ -5,46 +5,57 @@
   <p>Geld: Boekingen op basis van het Bankboek</p>
   <p>Belastingen: Bijvoorbeeld boekingen m.b.t. BTW Inkopen en BTW Verkopen</p>
   <p>Financiele producten: Bijvoorbeeld boekingen m.b.t. Te betalen Rente op een lening</p>
+  <b>
   <% @gb_div.each do |gb_type| %>
     <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
     <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
     <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
   <% end %>
+  </b>
   
   <h2>Input</h2>
   <p>Vlottende activa: Boekingen op basis van het Inkoopboek</p>
   <p>Vaste activa: Boekingen op basis van het Inkoopboek</p>
   <p>Kosten: Boekingen op basis van het Inkoopboek</p>
   <p>Personeel: Boekingen op basis van het Inkoopboek</p>     
+  <b>
   <% @gb_input.each do |gb_type| %>
     <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
     <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
     <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
   <% end %>
+  </b>
   
    
   <h2>Output</h2>
-  <p>Verkopen: Boekingen op basis van het Verkoopboek
+  <p>Verkopen (omzet): Boekingen op basis van het Verkoopboek
   <p>Inkoopwaarde vd omzet: Boekingen op basis van Interne boekingen
   <p>Bedrijfskosten: Boekingen op basis van Interne boekingen
-  <p>Bruto winst: Berekent (Brutowinst = Omzet - Inkoopwaarde van de omzet - Bedrijfskosten)
+  <p>Bruto winst: Berekent (Brutowinst = Verkopen (Omzet) + Inkoopwaarde van de omzet + Bedrijfskosten)
+  <b>
   <% @gb_output.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+    <p><%= gb_type[0] %> (omzet) = &euro; <%= gb_type[3] %></p>
   <% end %>
+  <% @gb_inkoopwaarde.each do |gb_type| %>
+    <p>Inkoopwaarde van de omzet = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  <% @gb_bedrijfskosten.each do |gb_type| %>
+    <p>Bedrijfskosten = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  <p>Brutowinst = &euro; <%= @brutowinst.abs %></p>
+  </b>
   
   <h2>Eigen vermogen</h2>
   <p>Start jaar Eigen vermogen (EV): Waarde EV van eind vorig jaar, in dit geval 0
   <p>Einde jaar Eigen vermogen: Berekent (Start EV - Financiele producten - Bedrijfskosten + Bruto winst)
   <p>Bruto winst: Overgenomen van Output
   <p>Financiele producten: Overgenomen van Diversen
-  <% @gb_ev.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
-  <% end %>
-        
+  <b>
+  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
+  <p>Brutowinst = &euro; <%= @brutowinst.abs %></p> 
+  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
+  </b>    
+
 </div>
 
 

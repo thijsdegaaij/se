@@ -79,7 +79,7 @@ Organisatie.create(naam: 'Shell', bedrijfstak_id: 3, rechtsvorm_id: 4, voorkant_
 
 
 
-#Example Huishouden
+#Example Huishoudens
 Grootboekrekening.create(naam: 'NDC Brood', grootboektype_id: 12, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Grootboekrekening.create(naam: 'NDC Jam', grootboektype_id: 12, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/jam.png"))
 Grootboekrekening.create(naam: 'DC Fiets', grootboektype_id: 13, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/fiets.png"))

@@ -3035,15 +3035,6 @@ hr {
   padding: 24px 24px 24px 24px;
   border: 1px solid #CCCCCC; }
 
-.grootboek-rails { /*AN: Nieuw in Rails app*/
-    display: block;
-    flex-direction: row;
-    background-color: white;
-    width: 1100px;
-    padding: 12px;
-    margin-bottom: 4px; }
-  }
-
 .grootboeken {
   display: flex;
   flex-direction: column;
@@ -3863,6 +3854,8 @@ hr {
         width: 50px;
         margin-left: -8px;
         background-color: white; }
+      .leftmiddleright .middle .mleft .plumbob {
+        width: 25px; }
     .leftmiddleright .middle .mright {
       width: 40px; }
       .leftmiddleright .middle .mright .beschrijving {

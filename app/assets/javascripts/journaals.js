@@ -79,6 +79,14 @@ var ready = function() {
         $(".inboekingsmogelijkheden").addClass("displaynone");
         $(".inboekingsmogelijkheden.leveringen").removeClass("displaynone");
     });
+    $(document.body).on("click", ".btn-inboeken.intern", function() {
+        $(".btn-inboeken").removeClass("bold");
+        $(".btn-inboeken.intern").addClass("bold");
+        $(".journaal").addClass("displaynone");
+        $(".journaal.intern").removeClass("displaynone");
+        $(".inboekingsmogelijkheden").addClass("displaynone");
+        $(".inboekingsmogelijkheden.intern").removeClass("displaynone");
+    });
 
     // gbr-vergroot ()
     $(".gbr-row:even").css("background-color", "#f3f4f4");

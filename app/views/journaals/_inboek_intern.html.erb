@@ -1,10 +1,10 @@
 <%= form_for Boeking.new, :remote => true, :url => {:controller => 'boekingen', :action => "create_bkn" } do |f| %>
 
-  <%= f.text_field :boekingtype, value: "J", style: "display: none;" %>
+   <%= f.text_field :boekingtype, value: "I", style: "display: none;" %>
 
   <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: none;" %>
 
-  <%= f.number_field :journaal_id, value: session[:jnl_verk_id], style: "display: none;" %>
+  <%= f.number_field :journaal_id, value: 0, style: "display: none;" %>
   
   <div class="field">
     <p><%= f.label "Grootboekrekening" %></p>
@@ -40,7 +40,7 @@
   
 <% end %>
 
-<% if @bkg_verk_search %>
+<% if @bkg_intern_search %>
 <div class="inboek">
     <table border="1">
       <thead>
@@ -48,7 +48,6 @@
           <th colspan="1"></th>
           <th>Grootboekrekening</th>
           <th>Grootboekrekeningtype</th>
-          <th>Boeknummer</th>
           <th>Product</th>
           <th>Datum</th>
           <th>Icoon</th>
@@ -59,12 +58,11 @@
         </tr>
       </thead>
       <tbody>
-        <% @bkg_verk_search.each do |boeking| %>
+        <% @bkg_intern_search.each do |boeking| %>
           <tr>
             <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete %></td>
             <td><%= boeking.grootboekrekening.naam %></td>
             <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
-            <td><%= boeking.journaal.boeknummer %></td>
             <td><%= boeking.product.naam %></td>
             <td><%= boeking.datum %></td>
             <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>

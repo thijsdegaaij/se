@@ -40,6 +40,14 @@ class BoekingenController < ApplicationController
     unless session[:jnl_lev_id] == nil
       @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
     end
+
+    @org = Organisatie.find(session[:org_id])
+    if @org.boekingen.where("boekingtype = ?","I").count == 0
+      @bkg_intern_search = nil
+    else
+      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+    end
+
     if (params[:boeking][:journaal_id] != nil and params[:boeking][:journaal_id] != "")
       @boeking = Boeking.new(boeking_params)
       respond_to do |format|
@@ -86,22 +94,38 @@ class BoekingenController < ApplicationController
     logger.debug("Session Variable value: #{session[:jnl_bank_id]} for variable: jnl_bank_id at controller: Boekingen, action: Destroy_bkn ")
     logger.debug("Session Variable value: #{session[:jnl_lev_id]} for variable: jnl_lev_id at controller: Boekingen, action: Destroy_bkn ")
     @boeking.destroy
-    @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
-    if @bkg_ink_search.count == 0
-      @bkg_ink_search = nil
+    unless session[:jnl_ink_id] == nil
+      @bkg_ink_search = Journaal.find(session[:jnl_ink_id]).boekingen
+      if @bkg_ink_search.count == 0
+        @bkg_ink_search = nil
+      end
     end
-    @bkg_verk_search = Journaal.find(session[:jnl_verk_id]).boekingen
-    if @bkg_verk_search.count == 0
-      @bkg_verk_search = nil
+    unless session[:jnl_verk_id] == nil
+      @bkg_verk_search = Journaal.find(session[:jnl_verk_id]).boekingen
+      if @bkg_verk_search.count == 0
+        @bkg_verk_search = nil
+      end
     end
-    @bkg_bank_search = Journaal.find(session[:jnl_bank_id]).boekingen
-    if @bkg_bank_search.count == 0
-      @bkg_bank_search = nil
+    unless session[:jnl_bank_id] == nil
+      @bkg_bank_search = Journaal.find(session[:jnl_bank_id]).boekingen
+      if @bkg_bank_search.count == 0
+        @bkg_bank_search = nil
+      end
     end
-    @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
-    if @bkg_lev_search.count == 0
-      @bkg_lev_search = nil
+    unless session[:jnl_lev_id] == nil
+      @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
+      if @bkg_lev_search.count == 0
+        @bkg_lev_search = nil
+      end
     end
+    
+    @org = Organisatie.find(session[:org_id])
+    if @org.boekingen.where("boekingtype = ?","I").count == 0
+      @bkg_intern_search = nil
+    else
+      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+    end
+  
     respond_to do |format|
       format.js {}
     end
@@ -125,6 +149,6 @@ class BoekingenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boeking_params
-      params.require(:boeking).permit(:grootboekrekening_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
+      params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
     end
 end

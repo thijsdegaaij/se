@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Boekingtype</th>
+      <th>Organisatie</th>
       <th>Grootboekrekening</th>
       <th>Journaal</th>
       <th>Product</th>
@@ -21,8 +23,14 @@
   <tbody>
     <% @boekingen.each do |boeking| %>
       <tr>
+        <td><%= boeking.boekingtype %></td>
+        <td><%= boeking.organisatie.naam %></td>
         <td><%= boeking.grootboekrekening.naam %></td>
-        <td><%= boeking.journaal.boeknummer %></td>
+        <% if boeking.journaal %>
+          <td><%= boeking.journaal.boeknummer %></td>
+        <% else %>
+          <td>Intern</td>
+        <% end %>
         <td><%= boeking.product.naam %></td>
         <td><%= boeking.datum %></td>
         <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>

@@ -10,6 +10,16 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= f.label :boekingtype %><br>
+    <%= f.text_field :boekingtype %>
+  </div>
+  
+  <div class="field">
+    <p><%= f.label "Organisatie" %></p>
+    <p><%= f.select :organisatie_id, Organisatie.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
 
   <div class="field">
     <p><%= f.label "Grootboekrekening" %></p>

@@ -26,7 +26,7 @@ class HomeController < ApplicationController
     @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first
     # Leveringen
     @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first
-  
+      
     # Boekingen
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
@@ -68,26 +68,64 @@ class HomeController < ApplicationController
       session[:jnl_lev_id] = nil
     end
 
-    # Diverse grootboek
+    if @organisatie_search.boekingen.where("boekingtype = ?","I").count == 0
+      @bkg_intern_search = nil
+    else
+      @bkg_intern_search = @organisatie_search.boekingen.where("boekingtype = ?","I")
+    end
+
+    # Grootboek  
     @gb_div = []
-    Grootboektype.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
-      @gb_div.push(calc(@organisatie_search, t.id))
-    }
-    # Input grootboek
     @gb_input = []
-    Grootboektype.where("categorie = ?", "I").each { |t|
-      @gb_input.push(calc(@organisatie_search, t.id))
-    }
-    # Output grootboek
     @gb_output = []
-    Grootboektype.where("categorie = ?", "O").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
-      @gb_output.push(calc(@organisatie_search, t.id))
-    }
-    # Eigen vermogen grootboek
     @gb_ev = []
-    Grootboektype.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ? and organisaties.rechtsvorm_id <> ?", @organisatie_search, 1).references(:organisatie).each { |t|
-      @gb_ev.push(calc(@organisatie_search, t.id))
-    }
+    @gb_inkoopwaarde = []
+    @gb_bedrijfskosten = []
+    if @organisatie_search.rechtsvorm_id != 1
+      # Diverse grootboek
+      Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_div.push(calc(@organisatie_search, t.id))
+      }
+      # Input grootboek
+      Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_input.push(calc(@organisatie_search, t.id))
+      }
+      # Output grootboek
+      Grootboektype.distinct.where("categorie = ?", "O").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_output.push(calc(@organisatie_search, t.id))
+      }
+      Grootboektype.distinct.where("categorie = ?", "II").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_inkoopwaarde.push(calc(@organisatie_search, t.id))
+      }
+      Grootboektype.distinct.where("categorie = ?", "IB").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_bedrijfskosten.push(calc(@organisatie_search, t.id))
+      }
+      
+      @brutowinst = 0
+      @gb_output.each { |gb_type|
+        @verkopen = gb_type[3]
+      }
+      @gb_inkoopwaarde.each { |gb_type|
+        @inkoopewaarde = gb_type[3]
+      }
+      @gb_bedrijfskosten.each { |gb_type|
+        @bedrijfskosten = gb_type[3]
+      }
+      @brutowinst = @verkopen + @inkoopewaarde + @bedrijfskosten
+      
+      
+      @ev_start = 0
+      @ev_eind = @ev_start + @brutowinst.abs - @bedrijfskosten
+      # brutowinst_ev = omzet - inkoopwaarde van de omzet
+      # bedrijfskosten is -
+      # rente is -
+      # EV = vorige_ev + brutowinst_ev - bedrijfskosten - rente
+ 
+      # Eigen vermogen grootboek
+      Grootboektype.distinct.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
+        @gb_ev.push(calc(@organisatie_search, t.id))
+      }
+    end
    
   end
   

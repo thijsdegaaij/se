@@ -6,7 +6,7 @@ class BoekingenController < ApplicationController
   # GET /boekingen
   # GET /boekingen.json
   def index
-    @boekingen = Boeking.all
+    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam")
   end
 
   # GET /boekingen/1
@@ -40,12 +40,8 @@ class BoekingenController < ApplicationController
     unless session[:jnl_lev_id] == nil
       @bkg_lev_search = Journaal.find(session[:jnl_lev_id]).boekingen
     end
-
-    @org = Organisatie.find(session[:org_id])
-    if @org.boekingen.where("boekingtype = ?","I").count == 0
-      @bkg_intern_search = nil
-    else
-      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+    unless session[:jnl_intern_id] == nil
+      @bkg_intern_search = Journaal.find(session[:jnl_intern_id]).boekingen
     end
 
     if (params[:boeking][:journaal_id] != nil and params[:boeking][:journaal_id] != "")
@@ -119,11 +115,11 @@ class BoekingenController < ApplicationController
       end
     end
     
-    @org = Organisatie.find(session[:org_id])
-    if @org.boekingen.where("boekingtype = ?","I").count == 0
-      @bkg_intern_search = nil
-    else
-      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+    unless session[:jnl_intern_id] == nil
+      @bkg_intern_search = Journaal.find(session[:jnl_intern_id]).boekingen
+      if @bkg_intern_search.count == 0
+        @bkg_intern_search = nil
+      end
     end
   
     respond_to do |format|

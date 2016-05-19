@@ -6,7 +6,7 @@ class JournaalsController < ApplicationController
   # GET /journaals
   # GET /journaals.json
   def index
-    @journaals = Journaal.all
+    @journaals = Journaal.all.order(:journaaltype_id).includes(:organisatie).order("organisaties.naam")
   end
   
   def h_journaal
@@ -16,6 +16,7 @@ class JournaalsController < ApplicationController
     session[:jnl_verk_id] = nil
     session[:jnl_bank_id] = nil
     session[:jnl_lev_id] = nil
+    session[:jnl_intern_id] = nil
         
     # Inkoopboek
     if (params[:jnlink] != nil and params[:jnlink][:id] != "")
@@ -98,14 +99,35 @@ class JournaalsController < ApplicationController
    end
    
    # Intern
-   logger.debug("Voor Intern vanuit H_journaal")
-   if @org.boekingen.where("boekingtype = ?","I").count == 0
-     logger.debug("Interne boekingen is 0 vanuit H_journaal")
-     @bkg_intern_search = nil
+   if (params[:jnlintern] != nil and params[:jnlintern][:id] != "")
+     if @org.journaals.first
+       @jnl_intern_search = @org.journaals.find(params[:jnlintern][:id])
+       session[:jnl_intern_id] = @jnl_intern_search.id
+       logger.debug("IS GEZET")
+     end
    else
-     logger.debug("Interne boekingen zijn aanwezig vanuit H_journaal")
-     @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+     @jnl_intern_search = @org.journaals.where("journaaltype_id = ?", 5).first
+     if @jnl_intern_search
+       session[:jnl_intern_id] = @jnl_intern_search.id
+     end
    end
+   # Intern boekingen
+   if @jnl_intern_search
+     @bkg_intern_search = @jnl_intern_search.boekingen
+     if @bkg_intern_search.count == 0
+       @bkg_intern_search = nil
+     end
+   end
+   
+   # # Intern
+#    logger.debug("Voor Intern vanuit H_journaal")
+#    if @org.boekingen.where("boekingtype = ?","I").count == 0
+#      logger.debug("Interne boekingen is 0 vanuit H_journaal")
+#      @bkg_intern_search = nil
+#    else
+#      logger.debug("Interne boekingen zijn aanwezig vanuit H_journaal")
+#      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
+#    end
    
   end
 

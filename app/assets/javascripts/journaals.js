@@ -34,6 +34,9 @@ var ready = function() {
     $('#jnl_lev').change(function() {
        $("#search_jnllev_submit").click();
     });
+    $('#jnl_intern').change(function() {
+       $("#search_jnlintern_submit").click();
+    });
 
     //button kosten in grootboek
     $(document.body).on("click", ".kosten-output", function() {

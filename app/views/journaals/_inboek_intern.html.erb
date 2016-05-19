@@ -4,7 +4,7 @@
 
   <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: none;" %>
 
-  <%= f.number_field :journaal_id, value: 0, style: "display: none;" %>
+  <%= f.number_field :journaal_id, value: session[:jnl_intern_id], style: "display: none;" %>
   
   <div class="field">
     <p><%= f.label "Grootboekrekening" %></p>

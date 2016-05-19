@@ -34,6 +34,7 @@ Journaaltype.create(naam: 'Inkoopboek', icoon: File.open(Rails.root + "app/asset
 Journaaltype.create(naam: 'Verkoopboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 Journaaltype.create(naam: 'Bankboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 Journaaltype.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Journaaltype.create(naam: 'Intern', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 
 
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
@@ -47,6 +48,9 @@ Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-00
 
 Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0001", datum: Date.new(2016,2,1), klant: "Koper A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "Levering-0001\nBehorende bij Vernr-0001")
 Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", hoeveelheid: 10, eenheid: "kilo", productnaam: "Meel", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "levering-0002\nBehorende bij inknr-0001")
+
+Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-0001", voorwaarden: "We schrijven de oven in 5 jaar af")
+Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-0002", voorwaarden: "De rente op onze lening van 20000 euro is 5 procent per jaar")
 
 Grootboektype.create(naam: 'Vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"), categorie: 'I')
 Grootboektype.create(naam: 'Vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_vierkant.png"), categorie: 'I')
@@ -125,9 +129,8 @@ Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), pr
 Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 5, grootboekrekening_id: 20)
 Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 3, grootboekrekening_id: 21)
 Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 1, grootboekrekening_id: 22)
-Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 23)
-Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 24)
-Boeking.create(boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 50000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 25)
+
+
   
 
 

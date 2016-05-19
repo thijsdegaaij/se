@@ -6,7 +6,7 @@ class GrootboektypesController < ApplicationController
   # GET /grootboektypes
   # GET /grootboektypes.json
   def index
-    @grootboektypes = Grootboektype.all
+    @grootboektypes = Grootboektype.all.order(:naam)
   end
 
   # GET /grootboektypes/1

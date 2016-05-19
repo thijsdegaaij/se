@@ -26,6 +26,8 @@ class HomeController < ApplicationController
     @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first
     # Leveringen
     @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first
+    # Intern
+    @jnl_intern_search = @organisatie_search.journaals.where("journaaltype_id = ?", 5).first
       
     # Boekingen
     if @jnl_ink_search
@@ -68,11 +70,22 @@ class HomeController < ApplicationController
       session[:jnl_lev_id] = nil
     end
 
-    if @organisatie_search.boekingen.where("boekingtype = ?","I").count == 0
-      @bkg_intern_search = nil
+    if @jnl_intern_search
+      @bkg_intern_search = @jnl_intern_search.boekingen
+      if @bkg_intern_search.count == 0
+        @bkg_intern_search = nil
+      end
+      session[:jnl_intern_id] = @jnl_intern_search.id
     else
-      @bkg_intern_search = @organisatie_search.boekingen.where("boekingtype = ?","I")
+      session[:jnl_intern_id] = nil
     end
+
+
+    # if @organisatie_search.boekingen.where("boekingtype = ?","I").count == 0
+#       @bkg_intern_search = nil
+#     else
+#       @bkg_intern_search = @organisatie_search.boekingen.where("boekingtype = ?","I")
+#     end
 
     # Grootboek  
     @gb_div = []

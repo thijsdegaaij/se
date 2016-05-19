@@ -11,6 +11,10 @@
     <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
+    <p><%= f.label "Boekproces" %></p>
+    <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
     <p><%= f.label "Product" %></p>
     <p><%= f.select :product_id, Product.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
@@ -56,6 +60,8 @@
           <th>Waarde</th>
           <th>P inkoop</th>
           <th>Hoeveelheid</th>
+          <th>Boekproces</th>
+          <th>Icoon</th>
         </tr>
       </thead>
       <tbody>
@@ -72,6 +78,8 @@
             <td><%= boeking.waarde %></td>
             <td><%= boeking.p_inkoop %></td>
             <td><%= boeking.hoeveelheid %></td>
+            <td><%= boeking.boekproces.naam %></td>
+            <td><%= image_tag boeking.boekproces.icoon_url(:thumb).to_s %></td>
           </tr>
         <% end %>
       </tbody>

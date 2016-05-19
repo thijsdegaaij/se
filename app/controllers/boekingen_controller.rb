@@ -145,6 +145,6 @@ class BoekingenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boeking_params
-      params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
+      params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :boekproces_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
     end
 end

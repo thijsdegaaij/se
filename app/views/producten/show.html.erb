@@ -7,7 +7,7 @@
 
 <p>
   <strong>Icoon:</strong>
-  <%= @product.icoon %>
+  <%= image_tag @product.icoon_url(:thumb).to_s %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

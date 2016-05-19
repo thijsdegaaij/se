@@ -36,6 +36,30 @@ Journaaltype.create(naam: 'Bankboek', icoon: File.open(Rails.root + "app/assets/
 Journaaltype.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 Journaaltype.create(naam: 'Intern', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 
+Boekproces.create(naam: 'Inkomsten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Betalingen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Ontvangsten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Uitgaven', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Verkopen (omzet)', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Inkoopwaarde', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Inkoopkosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Verkoopkosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Algemene kosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Inkoopwaarde van de omzet', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Lonen en salarissen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Sociale lasten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Afschrijvingen vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Overige waardeveranderingen vast activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Bijzondere waardevermindering vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Overige, kantoorkosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Rentelasten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Rentebaten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Opbrengst effecten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Waardeverandering effecten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Vennootschapbelasting', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+
+
 
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0002", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12, voorwaarden: "inknr-0028\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
@@ -114,21 +138,21 @@ Grootboekrekening.create(naam: 'INKOOPWAARDE Inkoopwaarde vd omzet', grootboekty
 Grootboekrekening.create(naam: 'BEDRIJFSKOSTEN Bedrijfskosten', grootboektype_id: 13, organisatie_id: 2)
 
 
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13)
-Boeking.create( boekingtype: "J",organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100, p_inkoop: 50, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 11)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,2), product_id: 2, bij_af: '-', waarde: 200, p_inkoop: 10, hoeveelheid: 20, journaal_id: 1, grootboekrekening_id: 13)
+Boeking.create(boekproces_id: 1, boekingtype: "J",organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 150, p_inkoop: 1, hoeveelheid: 1, journaal_id: 3, grootboekrekening_id: 12)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 3, grootboekrekening_id: 13)
 
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 5, grootboekrekening_id: 13)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 5, grootboekrekening_id: 13)
 
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 7, grootboekrekening_id: 13)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 2, bij_af: '-', waarde: 300, p_inkoop: 2, hoeveelheid: 2, journaal_id: 7, grootboekrekening_id: 13)
 
 # Interne boekingen
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 200000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 18)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 181500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 5, grootboekrekening_id: 20)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 5, grootboekrekening_id: 20)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 3, grootboekrekening_id: 21)
-Boeking.create(boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 1, grootboekrekening_id: 22)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 200000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 0, grootboekrekening_id: 18)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 181500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 5, grootboekrekening_id: 20)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 242000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 5, grootboekrekening_id: 20)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '-', waarde: 42000, p_inkoop: nil, hoeveelheid: nil, journaal_id: 3, grootboekrekening_id: 21)
+Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,3), product_id: 1, bij_af: '+', waarde: 31500, p_inkoop: nil, hoeveelheid: nil, journaal_id: 1, grootboekrekening_id: 22)
 
 
   

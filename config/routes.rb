@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :boekprocessen
+  resources :boekproces
   root "home#index"
   
   get '/cms'=> 'cms#index'

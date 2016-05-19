@@ -51,3 +51,7 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'product', 'producten'
 end
 
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'boekproces', 'boekprocessen'
+end
+

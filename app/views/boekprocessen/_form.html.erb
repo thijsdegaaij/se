@@ -1,0 +1,25 @@
+<%= form_for(@boekproces) do |f| %>
+  <% if @boekproces.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boekproces.errors.count, "error") %> prohibited this boekproces from being saved:</h2>
+
+      <ul>
+      <% @boekproces.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naam %><br>
+    <%= f.text_field :naam %>
+  </div>
+  <div class="field">
+    <p><%= f.label "Symbool" %> <%= f.file_field :icoon %></p>
+    <%= image_tag f.object.icoon_url(:thumb).to_s %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

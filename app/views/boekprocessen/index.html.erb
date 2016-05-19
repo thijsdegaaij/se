@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Boekprocessen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Icoon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boekprocessen.each do |boekproces| %>
+      <tr>
+        <td><%= boekproces.naam %></td>
+        <td><%= image_tag boekproces.icoon_url(:thumb).to_s %></td>
+        <td><%= link_to 'Show', boekproces %></td>
+        <td><%= link_to 'Edit', edit_boekproces_path(boekproces) %></td>
+        <td><%= link_to 'Destroy', boekproces, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boekproces', new_boekproces_path %>

@@ -11,7 +11,7 @@
     <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
-    <p><%= f.label "Boekproces" %></p>
+    <p><%= f.label "Procesnaam" %></p>
     <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div>
   <div class="field">
@@ -59,7 +59,7 @@
           <th>Waarde</th>
           <th>P inkoop</th>
           <th>Hoeveelheid</th>
-          <th>Boekproces</th>
+          <th>Procesnaam</th>
           <th>Icoon</th>
         </tr>
       </thead>

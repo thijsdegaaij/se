@@ -42,7 +42,7 @@
   <% @gb_bedrijfskosten.each do |gb_type| %>
     <p>Bedrijfskosten = &euro; <%= gb_type[3] %></p>
   <% end %>
-  <p>Brutowinst = &euro; <%= @brutowinst.abs %></p>
+  
   </b>
   
   <h2>Eigen vermogen</h2>
@@ -52,7 +52,6 @@
   <p>Financiele producten: Overgenomen van Diversen
   <b>
   <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
-  <p>Brutowinst = &euro; <%= @brutowinst.abs %></p> 
   <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
   </b>    
 

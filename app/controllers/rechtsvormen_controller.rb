@@ -6,7 +6,7 @@ class RechtsvormenController < ApplicationController
   # GET /rechtsvormen
   # GET /rechtsvormen.json
   def index
-    @rechtsvormen = Rechtsvorm.all
+    @rechtsvormen = Rechtsvorm.all.order(:naam)
   end
 
   # GET /rechtsvormen/1

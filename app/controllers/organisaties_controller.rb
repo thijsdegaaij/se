@@ -6,7 +6,7 @@ class OrganisatiesController < ApplicationController
   # GET /organisaties
   # GET /organisaties.json
   def index
-    @organisaties = Organisatie.all
+    @organisaties = Organisatie.all.order(:naam)
   end
 
   def h_organisatie
@@ -60,20 +60,23 @@ class OrganisatiesController < ApplicationController
         @gb_bedrijfskosten.push(calc(@organisatie_search, t.id))
       }
       
-      @brutowinst = 0
+      @brutowinst = 1
       @verkopen = 0
-      @inkoopewaarde = 0
+      @inkoopwaarde = 0
       @bedrijfskosten = 0
+      @ev_eind = 0
+      @ev_start = 0
+      
       @gb_output.each { |gb_type|
         @verkopen = gb_type[3]
       }
       @gb_inkoopwaarde.each { |gb_type|
-        @inkoopewaarde = gb_type[3]
+        @inkoopwaarde = gb_type[3]
       }
       @gb_bedrijfskosten.each { |gb_type|
         @bedrijfskosten = gb_type[3]
       }
-      @brutowinst = @verkopen + @inkoopewaarde + @bedrijfskosten
+      @brutowinst = @verkopen + @inkoopwaarde + @bedrijfskosten
       
       # Eigen vermogen grootboek
       Grootboektype.distinct.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|

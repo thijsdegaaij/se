@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @boekproces.naam %>
+</p>
+
+<p>
+  <strong>Icoon:</strong>
+  <%= image_tag @boekproces.icoon_url(:thumb).to_s %>
+</p>
+
+<%= link_to 'Edit', edit_boekproces_path(@boekproces) %> |
+<%= link_to 'Back', boekprocessen_path %>

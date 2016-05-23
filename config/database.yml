@@ -17,18 +17,11 @@ development:
   encoding: utf8
   database: supereconomics
   username: root
-<<<<<<< HEAD
-  password: thijs
-  host: localhost
-  port: 3306
-  pool: 10
-=======
   password: root
   host: localhost
   port: 3306
   pool: 10
 
->>>>>>> 7f2f16cedbbb7fc6c7830b727e1e60d540e3c357
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.

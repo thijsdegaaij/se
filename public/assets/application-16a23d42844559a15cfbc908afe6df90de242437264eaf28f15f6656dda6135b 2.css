@@ -1,0 +1,1384 @@
+@charset "UTF-8";
+/* Functional colors */
+/* line 98, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+html {
+  min-height: 100%;
+}
+
+/* line 103, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+html body {
+  margin-top: 50px;
+  color: #4D4D4D;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.428571429;
+}
+
+/* line 110, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+div {
+  box-sizing: border-box;
+}
+
+/* line 114, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+hr {
+  margin-top: 10px !important;
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 100%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* line 131, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+a {
+  cursor: pointer;
+}
+
+/* line 135, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.flex-row {
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: center;
+}
+
+/* line 142, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.left {
+  -webkit-justify-content: flex-start;
+}
+
+/* line 146, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.flex-col {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: center;
+}
+
+/* line 152, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.flex-col-left {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: center;
+}
+
+/* line 158, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.flexheader {
+  display: -webkit-flex;
+  flex-direction: row;
+}
+
+/* line 163, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.flexitemcenter {
+  flex: 1 1 auto;
+}
+
+/* line 168, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.displaynone,
+.waardeniet {
+  display: none;
+}
+
+/* line 173, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.button {
+  cursor: pointer;
+}
+
+/* line 176, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.button:hover {
+  box-shadow: 0px 0px 4px 0px rgba(1, 0, 0, 0.47);
+  transition: box-shadow ease-in-out 0.15s;
+}
+
+/* line 181, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.euro :before {
+  content: '€ ';
+}
+
+/* line 183, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.hidden {
+  visibility: hidden;
+}
+
+/* line 186, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.scthuishouden {
+  background-color: #ea4334;
+}
+
+/* line 189, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.sctnv {
+  background-color: #fbbd04;
+}
+
+/* line 192, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.sctoverheid {
+  background-color: #34a853;
+}
+
+/* line 195, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.sctfinancieel {
+  background-color: #4387f4;
+}
+
+/* line 206, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.artwork-klappers {
+  position: absolute;
+  left: 300px;
+  top: 3px;
+  width: 115px;
+}
+
+/* line 213, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgx .styled-select select {
+  max-width: 100px !important;
+}
+
+/* line 217, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgscontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 225, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.org {
+  position: relative;
+  top: 24px;
+  padding-bottom: 24px;
+}
+
+/* line 231, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-movie,
+.header-org,
+.movie-org {
+  z-index: 1;
+}
+
+/* line 237, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-movie {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 76px;
+  width: 600px;
+  height: 623px;
+  background-color: white;
+  display: none;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: #CCCCCC;
+}
+
+/* line 253, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.movieheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 0px 4px 24px;
+  align-items: center;
+  height: 42px;
+  background-color: #F4F3F3;
+}
+
+/* line 265, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgbuttons {
+  position: absolute;
+  top: -45px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #9A9A9A;
+}
+
+/* line 280, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.timeshow,
+.groupshow {
+  position: absolute;
+  left: 10px;
+  z-index: -10;
+  width: 1330px;
+  height: 660px;
+  padding: 8px;
+}
+
+/* line 290, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.timeshowheader {
+  position: absolute;
+  left: 135px;
+  top: 10px;
+  justify-content: flex-start;
+  width: 1230px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 302, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.geld,
+.overheid,
+.finprod {
+  height: 32px;
+}
+
+/* line 308, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.itemheaderovereenkomst:nth-child(1),
+.itemheadergeld:nth-child(1),
+.itemheaderoverheid:nth-child(1),
+.itemheaderfinprod:nth-child(1) {
+  flex: 0 1 33px;
+}
+
+/* line 315, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.itemheaderovereenkomst:nth-child(2),
+.itemheadergeld:nth-child(2),
+.itemheaderoverheid:nth-child(2),
+.itemheaderfinprod:nth-child(2) {
+  flex: 0 1 300px;
+}
+
+/* line 322, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.itemheaderovereenkomst:nth-child(3),
+.itemheadergeld:nth-child(3),
+.itemheaderoverheid:nth-child(3),
+.itemheaderfinprod:nth-child(3) {
+  flex: 1 1 auto;
+}
+
+/* line 329, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.bedrijfsprocessen,
+.bedrijfsprocessen-a {
+  background-color: #F4F3F3;
+  padding-top: 6px;
+  font-weight: bold;
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 342, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.bedrijfsprocessen {
+  flex: 0 0 33px;
+}
+
+/* line 346, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader,
+.overeenkomsten,
+.geld,
+.overheid,
+.finprod,
+.orgbuttons {
+  width: 600px;
+}
+
+/* line 356, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.overeenkomsten .rijtje .klein {
+  width: 100px;
+}
+
+/* line 360, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a,
+.b,
+.c {
+  height: 400px;
+}
+
+/* line 366, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a1,
+.a2 {
+  flex-grow: 1;
+}
+
+/* line 371, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a,
+.c {
+  width: 200px;
+}
+
+/* line 377, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b {
+  width: 200px;
+}
+/* line 379, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .kostprijsberekening {
+  background-color: white;
+  flex: auto;
+}
+/* line 382, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .kostprijsberekening div {
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  margin: 10px 10px 10px 10px;
+}
+/* line 388, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-iwo,
+.b .k-bdv,
+.b .k-ink,
+.b .k-ovh {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC;
+}
+/* line 396, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-vrk {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #CCCCCC;
+}
+/* line 401, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .verhoogd {
+  margin: 0px 0px 0px 8px;
+  padding: 4px 5px 4px 5px;
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  color: #9A9A9A;
+  font-size: 12px;
+}
+/* line 410, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-vrk,
+.b .k-alg {
+  margin: 0px 4px 0px 4px !important;
+}
+/* line 414, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-iwo {
+  height: 90px;
+}
+/* line 417, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-ink,
+.b .k-vrk,
+.b .k-alg {
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 422, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-ink .pijlwaarde,
+.b .k-vrk .pijlwaarde,
+.b .k-alg .pijlwaarde {
+  margin-top: -5px;
+  margin-bottom: 2px;
+}
+/* line 427, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-bdv,
+.b .k-ovh {
+  padding-top: 4px !important;
+}
+/* line 432, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.b .k-ovh {
+  font-weight: normal;
+}
+
+/* line 438, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.org-all,
+.start,
+.a,
+.b,
+.c,
+.toewijzing,
+.a1,
+.a2,
+a1a2 > .a1,
+a1a2 > .a2 .kolom,
+.pijllinks,
+.pijlrechts,
+.pijlwaarde {
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+/* line 455, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.abc,
+.itemheader,
+.orgheader,
+.itembody,
+.a1a2,
+.orgbuttons,
+.pijluitleg,
+.rij {
+  display: -webkit-flex;
+  flex-direction: row;
+}
+
+/* line 468, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.rijtje div {
+  display: inline;
+  padding: 0px 0px 0px 8px;
+}
+
+/* line 474, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a1a2 > .a1,
+.a1a2 > .a2 {
+  align-items: center;
+}
+
+/* line 479, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.itemheader,
+.itembodygeld {
+  justify-content: flex-start;
+}
+
+/* line 485, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.start .rij {
+  align-items: center;
+}
+/* line 488, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.start .rij .kolom {
+  width: 300px;
+}
+
+/* line 493, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.org-all {
+  align-items: center;
+}
+
+/* line 497, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijluitleg {
+  font-size: 12px;
+}
+
+/* line 501, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijllinks {
+  margin-left: 90px;
+}
+
+/* line 505, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijllinks .pijlwaarde {
+  align-items: flex-start;
+}
+
+/* line 509, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijlrechts .pijlwaarde {
+  align-items: flex-start;
+}
+
+/* line 513, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijlrechts .iconwide:not(.icon-geldpijl) {
+  background-color: #fbd0e6 !important;
+}
+
+/* line 517, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijlwaarde div,
+.pijlwaarde,
+.waardeinvestering {
+  padding: 2px;
+  font-size: 12px;
+}
+
+/* line 525, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijluitlegwoord {
+  padding: 2px 8px 0px 8px;
+}
+
+/* line 533, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijluitleg > .iconwide,
+.pijluitleg > .iconwide,
+.ev-pijllinks > .iconwide,
+.ev-pijlrechts > .iconwide {
+  width: 34px;
+  height: 35px;
+  margin: -7px 0px -8px 0px;
+}
+
+/* line 540, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ev-pijllinks,
+.ev-pijlrechts {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 17px;
+}
+
+/* line 549, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ev-pijllinks {
+  left: -276px;
+}
+
+/* line 553, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ev-pijlrechts {
+  left: 625px;
+  width: 280px;
+}
+
+/* line 558, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.geld .pijlrechts,
+.orgnaampijlrechts,
+.geld .pijllinks {
+  margin-top: -10px;
+  width: 350px;
+  position: absolute;
+  left: 622px;
+}
+
+/* line 568, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.waardeinvestering {
+  background-color: #f9f8f6;
+  position: absolute;
+  top: 21px;
+  left: -0px;
+}
+
+/* line 575, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgbuttons {
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 584, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .itembody {
+  padding: 0px 0px 0px 0px;
+}
+/* line 587, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .itembody > img {
+  max-width: 140px;
+  max-height: 50px;
+}
+
+/* line 595, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .itembody {
+  padding: 0px 0px 0px 0px;
+}
+/* line 598, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .itembody > img {
+  max-width: 140px;
+  max-height: 65px;
+}
+
+/* line 605, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.geld img {
+  max-width: 50px;
+}
+
+/* line 609, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.interieur {
+  width: 130px !important;
+  max-height: 70px !important;
+}
+
+/* line 614, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.org .icon {
+  padding: 0px 24px 4px 0px;
+  margin-top: -3px;
+}
+
+/* line 619, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader {
+  background-color: #edeae3;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 623, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader :nth-child(2) {
+  flex: 12 1 auto;
+  font-size: 18px;
+  text-align: center;
+}
+/* line 628, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader :nth-child(3) {
+  flex: 0 1 34px;
+}
+/* line 631, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader :nth-child(4) {
+  flex: 0 1 65px;
+  background-color: #ea4334;
+  padding: 4px 0px 2px 6px;
+  color: white;
+  height: 41px;
+}
+
+/* line 641, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgscontainer .overeenkomsten,
+.orgscontainer .geld,
+.orgscontainer .overheid,
+.orgscontainer .finprod,
+.orgscontainer .actvlot,
+.orgscontainer .actvast,
+.orgscontainer .tekoop,
+.orgscontainer .knowhow,
+.orgscontainer .kosten,
+.orgscontainer .pers,
+.orgscontainer .toewijzing,
+.orgscontainer .reclame,
+.orgscontainer .service,
+.orgscontainer .admin {
+  background-color: white;
+}
+/* line 657, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgscontainer .overeenkomsten,
+.orgscontainer .geld,
+.orgscontainer .overheid,
+.orgscontainer .finprod,
+.orgscontainer .actvlot,
+.orgscontainer .actvast,
+.orgscontainer .kosten,
+.orgscontainer .kostprijs,
+.orgscontainer .verkoopprijs,
+.orgscontainer .producten,
+.orgscontainer .service,
+.orgscontainer .reclame,
+.orgscontainer .knowhow,
+.orgscontainer .toewijzing,
+.orgscontainer .listnaam,
+.orgscontainer .listitems,
+.orgscontainer .pers,
+.orgscontainer .admin,
+.orgscontainer .orgheader {
+  padding: 8px 4px 4px 8px;
+  flex-grow: 1;
+}
+/* line 679, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgscontainer .tekoop {
+  padding: 8px 4px 4px 8px;
+  flex: 2 0 100px;
+}
+/* line 684, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgscontainer .orgheader,
+.orgscontainer .itemheader,
+.orgscontainer .orgnaam,
+.orgscontainer .overeenkomsten,
+.orgscontainer .geld,
+.orgscontainer .overheid,
+.orgscontainer .finprod,
+.orgscontainer .actvlot,
+.orgscontainer .actvast,
+.orgscontainer .kosten,
+.orgscontainer .kostprijs,
+.orgscontainer .verkoopprijs,
+.orgscontainer .producten,
+.orgscontainer .tekoop,
+.orgscontainer .service,
+.orgscontainer .reclame,
+.orgscontainer .knowhow,
+.orgscontainer .toewijzing,
+.orgscontainer .listnaam,
+.orgscontainer .listitems,
+.orgscontainer .pers,
+.orgscontainer .admin {
+  position: relative;
+}
+
+/* line 729, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.tw {
+  background-color: #fbbd04;
+  box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
+  color: white;
+  padding: 4px 3px 2px 3px;
+  margin-top: 8px;
+}
+
+/* line 738, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.tw-waarde {
+  padding-left: 32px;
+  font-size: 12px;
+}
+
+/* line 743, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.listhoofd {
+  padding: 4px 0px 8px 8px;
+}
+
+/* line 747, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.listnaam {
+  padding: 4px 0px 0px 8px;
+}
+
+/* line 752, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.listitems {
+  padding: 0px 0px 0px 20px;
+  font-size: 12px;
+}
+
+/* line 757, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.vergroting .header {
+  font-weight: bold;
+  text-align: center;
+  height: 36px;
+  padding-top: 8px;
+}
+
+/* line 765, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.proef {
+  display: none;
+  background-color: red;
+  width: 600px;
+  height: 480px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.47);
+}
+
+/* line 776, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.overzichtsfoto-div {
+  position: absolute;
+  top: 102px;
+  z-index: 1;
+  width: 600px;
+  height: 628px;
+  background-color: white;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: #CCCCCC;
+}
+
+/* line 788, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.overzichtsfoto-img {
+  width: 598px;
+  height: 600px;
+}
+
+/* line 796, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .overzichtsfoto-img {
+  padding-left: 110px;
+}
+
+/* line 801, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.vergroting {
+  display: -webkit-flex;
+  flex-direction: column;
+  display: none;
+  background-color: #F4F3F3;
+  width: 370px;
+  height: 400px;
+  border: 1px solid #CCCCCC;
+  z-index: 1;
+  box-shadow: 0px 0px 8px 0px rgba(1, 0, 0, 0.47);
+}
+
+/* line 815, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .vergroting-tekoop {
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 205px;
+  height: 450px;
+}
+/* line 821, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .vergroting-tekoop > :nth-child(2),
+#maxima .vergroting-tekoop > :nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 2px;
+}
+/* line 829, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .vergroting-tekoop .artworkbrood {
+  width: 150px;
+  max-height: 130px;
+}
+/* line 833, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#maxima .vergroting-tekoop .artworkbolletje {
+  width: 290px;
+  height: 180px;
+}
+
+/* line 841, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .vergroting-tekoop {
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 205px;
+  height: 250px;
+}
+/* line 847, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .vergroting-tekoop > :nth-child(2),
+#bakker .vergroting-tekoop > :nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 2px;
+}
+/* line 855, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .vergroting-tekoop .artworkbrood {
+  width: 150px;
+  max-height: 130px;
+}
+/* line 859, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+#bakker .vergroting-tekoop .artworkbolletje {
+  width: 90px;
+  height: 80px;
+}
+
+/* line 871, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.reclame .vergroting {
+  position: absolute;
+  top: -100px;
+  left: 205px;
+  height: 230px;
+}
+/* line 876, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.reclame .vergroting > :nth-child(2) {
+  width: 360px;
+}
+
+/* line 881, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.volledigegrootte {
+  max-width: 550px;
+  max-height: 400px;
+}
+
+/* line 893, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-ev > .pijlrechts,
+.tekoop > .pijlrechts,
+.reclame > .pijlrechts,
+.service > .pijlrechts,
+.knowhow > .pijlrechts,
+.admin > .pijlrechts,
+.total-right > .pijlrechts {
+  margin-top: -2px;
+  width: 350px;
+  position: absolute;
+  left: 220px;
+}
+
+/* line 911, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.geld > .pijllinks,
+.overheid > .pijllinks,
+.finprod > .pijllinks,
+.actvlot > .pijllinks,
+.actvast > .pijllinks,
+.kosten > .pijllinks,
+.pers > .pijllinks,
+.container-ev > .pijllinks,
+.orgnaam > .pijllinks {
+  width: 350px;
+  position: absolute;
+  left: -370px;
+}
+
+/* line 918, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-ev {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 10px;
+  font-size: 12px;
+}
+/* line 925, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-ev .bar-ev {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+  background-color: white;
+}
+/* line 931, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-ev .bar-ev :nth-child(1),
+.container-ev .bar-ev :nth-child(2),
+.container-ev .bar-ev :nth-child(3) {
+  width: 200px;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  padding: 4px 0px 4px 8px;
+}
+/* line 941, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-ev .bar-ev :nth-child(3) {
+  border: 1px solid #CCCCCC !important;
+}
+
+/* line 947, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pijllinks,
+.pijlrechts {
+  display: none;
+}
+
+/* line 953, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.orgheader,
+.overeenkomsten,
+.geld,
+.overheid,
+.finprod,
+.bedrijfsprocessen-a,
+.actvlot,
+.actvast,
+.kosten,
+.tekoop,
+.service,
+.reclame,
+.knowhow {
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  border-color: #CCCCCC;
+}
+
+/* line 972, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.pers,
+.admin {
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC;
+}
+
+/* line 980, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a1 {
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  border-color: #CCCCCC;
+}
+
+/* line 986, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.a2,
+.header-org,
+.kostprijsberekening {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #CCCCCC;
+}
+
+/* line 994, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.toewijzing,
+.bedrijfsprocessen {
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-color: #CCCCCC;
+}
+
+/* line 1001, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrcontainer,
+.ovr {
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 1008, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrcontainer {
+  margin-top: 50px;
+}
+
+/* line 1012, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrcontainer {
+  position: absolute;
+  left: 100px;
+}
+
+/* line 1017, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovr {
+  -webkit-justify-content: center;
+  border: 1px solid #CCCCCC;
+  padding: 8px 0px 8px 0px;
+}
+
+/* line 1023, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrheader {
+  font-size: 14px;
+  border: solid;
+  border-color: #CCCCCC;
+  background-color: #edeae3;
+  border-width: 1px 1px 0px 1px;
+}
+
+/* line 1031, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrprijs {
+  font-size: 14px;
+  border: solid;
+  border-color: #CCCCCC;
+  background-color: #F4F3F3;
+  border-width: 0px 1px 1px 1px;
+}
+
+/* line 1039, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrheader,
+.ovrprijs {
+  text-align: center;
+}
+
+/* line 1044, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovrartwork {
+  max-width: 50px;
+  max-height: 40px;
+}
+
+/* line 1049, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.ovr,
+.ovrheader,
+.ovrprijs {
+  width: 150px;
+}
+
+/* line 1056, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 1060, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.groen,
+.winstweergave {
+  color: #fbbd04 !important;
+  font-weight: bold;
+}
+
+/* line 1066, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.titelverslaglegging {
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  font-size: 14px;
+  color: black;
+}
+
+/* line 1076, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 1080, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.groen,
+.winstweergave {
+  color: #fbbd04 !important;
+  font-weight: bold;
+}
+
+/* line 1086, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.titelverslaglegging {
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  font-size: 14px;
+  color: black;
+}
+
+/* line 1097, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q {
+  margin-top: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1205px;
+}
+/* line 1106, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .titel-sector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  border-width: 0px 0px 1px 0px;
+}
+/* line 1117, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .sectoruitgebreid {
+  margin: 0px 0px 12px 0px;
+}
+/* line 1120, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel {
+  position: relative;
+}
+/* line 1122, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .midden {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: #CCCCCC;
+  width: 200px;
+  height: 32px;
+  padding: 2px;
+}
+/* line 1134, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .midden .mleft {
+  padding-left: 16px;
+  width: 150px;
+}
+/* line 1138, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .midden .mleft .beschrijving1 {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+}
+/* line 1149, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left {
+  position: absolute;
+  top: 0px;
+  left: -490px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+/* line 1156, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .icon {
+  width: 50px;
+}
+/* line 1159, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .naam {
+  width: 200px;
+}
+/* line 1162, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .waarde {
+  width: 90px;
+  text-align: right;
+  padding-right: 24px;
+}
+/* line 1170, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .sect {
+  width: 20px;
+}
+/* line 1173, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .bdt {
+  width: 50px;
+}
+/* line 1176, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .left .beschrijving2 {
+  width: 70px;
+}
+/* line 1180, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right {
+  position: absolute;
+  top: 0px;
+  left: 210px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* line 1187, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .icon {
+  width: 50px;
+}
+/* line 1190, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .naam {
+  width: 150px;
+}
+/* line 1193, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .waarde {
+  width: 100px;
+  text-align: right;
+  padding-right: 24px;
+}
+/* line 1198, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .sect {
+  width: 20px;
+}
+/* line 1201, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .bdt {
+  width: 60px;
+}
+/* line 1204, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .right .beschrijving2 {
+  width: 90px;
+}
+/* line 1208, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .onderdeel .ev {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px !important;
+  border-color: #CCCCCC;
+}
+/* line 1214, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-bdtuitgebreid.bakker2q .beschrijving2 {
+  visibility: hidden;
+}
+
+/* line 1220, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa {
+  width: 1205px;
+  margin-top: 12px;
+}
+/* line 1224, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .container-bdtuitgebreid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 1230, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .titel-sector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC;
+  width: 200px;
+}
+/* line 1243, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .sectoruitgebreid {
+  margin: 12px 0px 12px 0px;
+}
+/* line 1246, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel {
+  position: relative;
+}
+/* line 1248, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .midden {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: #CCCCCC;
+  width: 200px;
+  height: 32px;
+  padding: 2px;
+}
+/* line 1260, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .midden .mleft {
+  padding-left: 16px;
+  width: 150px;
+}
+/* line 1264, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .midden .mleft .beschrijving1 {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+}
+/* line 1275, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left {
+  position: absolute;
+  top: 0px;
+  left: -490px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+/* line 1282, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .icon {
+  width: 50px;
+}
+/* line 1285, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .naam {
+  width: 200px;
+}
+/* line 1288, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .waarde {
+  width: 90px;
+  text-align: right;
+  padding-right: 24px;
+}
+/* line 1296, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .sect {
+  width: 20px;
+}
+/* line 1299, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .bdt {
+  width: 50px;
+}
+/* line 1302, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .left .beschrijving2 {
+  width: 70px;
+}
+/* line 1306, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right {
+  position: absolute;
+  top: 0px;
+  left: 210px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* line 1313, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .icon {
+  width: 50px;
+}
+/* line 1316, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .naam {
+  width: 250px;
+}
+/* line 1319, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .waarde {
+  width: 140px;
+  text-align: right;
+  padding-right: 24px;
+}
+/* line 1324, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .sect {
+  width: 20px;
+}
+/* line 1327, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .bdt {
+  width: 60px;
+}
+/* line 1330, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .right .beschrijving2 {
+  width: 90px;
+}
+/* line 1334, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .onderdeel .ev {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px !important;
+  border-color: #CCCCCC;
+}
+/* line 1340, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.container-fifa .beschrijving2 {
+  visibility: hidden;
+}
+
+/* line 1345, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.dashed {
+  border-style: dashed;
+  border-width: 1px 1px 1px 1px;
+  border-color: #B3B3B3;
+}
+
+/* line 1351, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.gezamenlijkproduct {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 1356, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.gezamenlijkproduct .container-bdtuitgebreid {
+  border-style: dashed;
+  border-width: 1px 1px 1px 1px !important;
+  border-color: #B3B3B3;
+  padding: 10px;
+}
+/* line 1362, /Users/Alexander/ruby_projects/supereconomics/app/assets/stylesheets/organisation.scss */
+.gezamenlijkproduct .titel-sector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 90px;
+  font-size: 16px;
+  padding: 8px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC;
+  color: black;
+  background-color: #F4F3F3;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

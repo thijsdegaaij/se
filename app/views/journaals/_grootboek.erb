@@ -2,9 +2,9 @@
   <h1>Grootboek</h1>
   
   <h2>Diversen</h2>
-  <p>Geld: Boekingen op basis van het Bankboek</p>
-  <p>Belastingen: Bijvoorbeeld boekingen m.b.t. BTW Inkopen en BTW Verkopen</p>
-  <p>Financiele producten: Bijvoorbeeld boekingen m.b.t. Te betalen Rente op een lening</p>
+  <p>Geld: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Geld"</p>
+  <p>Belastingen: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Belastingen"  </p>
+  <p>Financiele producten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Financiele producten" </p>
   <b>
   <% @gb_div.each do |gb_type| %>
     <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
@@ -14,10 +14,10 @@
   </b>
   
   <h2>Input</h2>
-  <p>Vlottende activa: Boekingen op basis van het Inkoopboek</p>
-  <p>Vaste activa: Boekingen op basis van het Inkoopboek</p>
-  <p>Kosten: Boekingen op basis van het Inkoopboek</p>
-  <p>Personeel: Boekingen op basis van het Inkoopboek</p>     
+  <p>Vlottende activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vlottende activa"</p>
+  <p>Vaste activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vast Activa"</p>
+  <p>Kosten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Kosten"</p>
+  <p>Personeel: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Personeel"</p>     
   <b>
   <% @gb_input.each do |gb_type| %>
     <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
@@ -28,28 +28,21 @@
   
    
   <h2>Output</h2>
-  <p>Verkopen (omzet): Boekingen op basis van het Verkoopboek
-  <p>Inkoopwaarde vd omzet: Boekingen op basis van Interne boekingen
-  <p>Bedrijfskosten: Boekingen op basis van Interne boekingen
-  <p>Bruto winst: Berekent (Brutowinst = Verkopen (Omzet) + Inkoopwaarde van de omzet + Bedrijfskosten)
+  <p>Inkoopwaarde van de omzet: Gebaseerd alle (min en plus) boekingen met Proces "Inkoopwaarde van de omzet"</p>
+  <p>Bedrijfskosten: Gebaseerd alle (min en plus) boekingen met Proces "Inkoopkosten, verkoopkosten en Algemene kosten"</p>
+  <p>Omzet: Gebaseerd alle (min en plus) boekingen met Proces "Levering uit (verkopen, omzet)" </p>
+  <p>Basiswinst: Gebaseerd op bovenstaande berekende waardes (= Omzet - Inkoopwaarde van de omzet - bedrijfskosten)</p>
   <b>
-  <% @gb_output.each do |gb_type| %>
-    <p><%= gb_type[0] %> (omzet) = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  <% @gb_inkoopwaarde.each do |gb_type| %>
-    <p>Inkoopwaarde van de omzet = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  <% @gb_bedrijfskosten.each do |gb_type| %>
-    <p>Bedrijfskosten = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  
+  <p><b>Verkopen</p>
+  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
+  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
+  <p>Omzet: - &euro;<%= @omzet %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
   </b>
   
+  
+  
   <h2>Eigen vermogen</h2>
-  <p>Start jaar Eigen vermogen (EV): Waarde EV van eind vorig jaar, in dit geval 0
-  <p>Einde jaar Eigen vermogen: Berekent (Start EV - Financiele producten - Bedrijfskosten + Bruto winst)
-  <p>Bruto winst: Overgenomen van Output
-  <p>Financiele producten: Overgenomen van Diversen
   <b>
   <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
   <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>

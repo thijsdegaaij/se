@@ -126,12 +126,26 @@ Grootboekrekening.create(naam: 'Huishouden ARBEID BIJ BAKKER Maxima', grootboekt
 Grootboekrekening.create(naam: 'Inkoop brood', grootboektype_id: 1, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'Geld', grootboektype_id: 9, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'BTW Inkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
+Grootboekrekening.create(naam: 'Telefoon Kosten', grootboektype_id: 3, organisatie_id: 2, icoon: nil)
+Grootboekrekening.create(naam: 'Verkoop brood', grootboektype_id: 5, organisatie_id: 2, icoon: nil)
+
 
 #Inkoop brood
 Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1000, hoeveelheid: 100, journaal_id: 1, grootboekrekening_id: 11)
 Boeking.create(boekproces_id: 2, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 106000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 12)
 Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
 
+# Boeking voor inkoopwaarde van de omzet
+Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 9, grootboekrekening_id: 11)
+Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 50000, journaal_id: 9, grootboekrekening_id: 11)
+
+# Boekingen voor bedrijfskosten
+Boeking.create(boekproces_id: 24, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 25, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 2000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 2000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+
+# Boekingen voor Omzet
+Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 500000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
 
 
 

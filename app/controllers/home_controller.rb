@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @organisatie_search = Organisatie.find(1)
+    @organisatie_search = Organisatie.find(2)
     session[:org_id] = @organisatie_search.id
 
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
@@ -90,10 +90,6 @@ class HomeController < ApplicationController
     # Grootboek  
     @gb_div = []
     @gb_input = []
-    @gb_output = []
-    @gb_ev = []
-    @gb_inkoopwaarde = []
-    @gb_bedrijfskosten = []
     if @organisatie_search.rechtsvorm_id != 1
       # Diverse grootboek
       Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
@@ -103,47 +99,39 @@ class HomeController < ApplicationController
       Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
         @gb_input.push(calc(@organisatie_search, t.id))
       }
+            
       # Output grootboek
-      Grootboektype.distinct.where("categorie = ?", "O").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_output.push(calc(@organisatie_search, t.id))
+      # Inkoopwaarde van de omzet
+      @inkw_vd_omzet = 0
+      @organisatie_search.boekingen.where("boekproces_id = ?", 23).each { |boeking|
+        @inkw_vd_omzet = @inkw_vd_omzet + boeking.waarde
       }
-      Grootboektype.distinct.where("categorie = ?", "II").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_inkoopwaarde.push(calc(@organisatie_search, t.id))
-      }
-      Grootboektype.distinct.where("categorie = ?", "IB").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_bedrijfskosten.push(calc(@organisatie_search, t.id))
-      }
-      
-      @brutowinst = 0
-      @verkopen = 0
-      @inkoopwaarde = 0
+      @inkw_vd_omzet = @inkw_vd_omzet
+      # Bedrijfskosten
       @bedrijfskosten = 0
-      @ev_eind = 0
+      @organisatie_search.boekingen.where("boekproces_id in (?)", [24,25,26]).each { |boeking|
+        @bedrijfskosten = @bedrijfskosten + boeking.waarde
+      }
+      @bedrijfskosten = @bedrijfskosten
+      # Omzet
+      @omzet = 0
+      @organisatie_search.boekingen.where("boekproces_id = ?", 28).each { |boeking|
+        @omzet =  @omzet + boeking.waarde
+      }      
+      # Basis winst
+      @basiswinst = 0
+      @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten 
+      
+      
+      #Eigen vermogen grootboek
+      # Start EV
       @ev_start = 0
+      # Bruto Winst
       
-      @gb_output.each { |gb_type|
-        @verkopen = gb_type[3]
-      }
-      @gb_inkoopwaarde.each { |gb_type|
-        @inkoopwaarde = gb_type[3]
-      }
-      @gb_bedrijfskosten.each { |gb_type|
-        @bedrijfskosten = gb_type[3]
-      }
-      @brutowinst = @verkopen + @inkoopwaarde + @bedrijfskosten
+      # Eind EV
+      @ev_eind = 0
       
-      
-      
-      @ev_eind = @ev_start + @brutowinst.abs - @bedrijfskosten
-      # brutowinst_ev = omzet - inkoopwaarde van de omzet
-      # bedrijfskosten is -
-      # rente is -
-      # EV = vorige_ev + brutowinst_ev - bedrijfskosten - rente
- 
-      # Eigen vermogen grootboek
-      Grootboektype.distinct.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_ev.push(calc(@organisatie_search, t.id))
-      }
+     
     end
    
   end

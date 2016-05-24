@@ -67,20 +67,20 @@ Boekproces.create(naam: 'Levering uit (verkopen, omzet)', icoon: File.open(Rails
 Boekproces.create(naam: 'Basis winst', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
 
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
-Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "inknr-0002", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12, voorwaarden: "inknr-0028\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "ink-001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "ink-002", datum: Date.new(2016,1,2), leverancier: "Leverancier B", hoeveelheid: 1, eenheid: "kilo", productnaam: "Zout", betalingswijze: "Bank", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 2, bedrag_inc_btw: 2.12, voorwaarden: "inknr-0028\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0001", datum: Date.new(2016,2,1), klant: "Diverse kopers", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "Vernr-0001\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
-Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Vernr-0002", datum: Date.new(2016,2,2), klant: "Klant B", hoeveelheid: 10, eenheid: "pot", productnaam: "Jam", betalingswijze: "Bank", stukprijs: 5.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 50, bedrag_inc_btw: 53.00, voorwaarden: "Vernr-0002\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Verk-001", datum: Date.new(2016,2,1), klant: "Diverse kopers", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 2.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "Vernr-0001\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
+Journaal.create(organisatie_id: 2, journaaltype_id: 2, boeknummer: "Verk-002", datum: Date.new(2016,2,2), klant: "Klant B", hoeveelheid: 10, eenheid: "pot", productnaam: "Jam", betalingswijze: "Bank", stukprijs: 5.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 50, bedrag_inc_btw: 53.00, voorwaarden: "Vernr-0002\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-0001", datum: Date.new(2016,2,1), klant: "Koper A", valuta: "euro", bedrag_inc_btw: 318.00, voorwaarden: "Afschrift-0001\nBehorende bij Vernr-0001")
-Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-0002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", valuta: "euro", bedrag_inc_btw: -318.00, voorwaarden: "Afschrift-0001\nBehorende bij inknr-0001")
+Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-001", datum: Date.new(2016,2,1), klant: "Koper A", valuta: "euro", bedrag_inc_btw: 318.00, voorwaarden: "Afschrift-0001\nBehorende bij Vernr-0001")
+Journaal.create(organisatie_id: 2, journaaltype_id: 3, boeknummer: "Afschrift-002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", valuta: "euro", bedrag_inc_btw: -318.00, voorwaarden: "Afschrift-0001\nBehorende bij inknr-0001")
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0001", datum: Date.new(2016,2,1), klant: "Koper A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "Levering-0001\nBehorende bij Vernr-0001")
-Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-0002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", hoeveelheid: 10, eenheid: "kilo", productnaam: "Meel", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "levering-0002\nBehorende bij inknr-0001")
+Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-001", datum: Date.new(2016,2,1), klant: "Koper A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "Levering-0001\nBehorende bij Vernr-0001")
+Journaal.create(organisatie_id: 2, journaaltype_id: 4, boeknummer: "Levering-002", datum: Date.new(2016,2,1), leverancier: "Leverancier A", hoeveelheid: 10, eenheid: "kilo", productnaam: "Meel", valuta: "euro", bedrag_ex_btw: 2.00, voorwaarden: "levering-0002\nBehorende bij inknr-0001")
 
-Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-0001", voorwaarden: "We schrijven de oven in 5 jaar af")
-Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-0002", voorwaarden: "De rente op onze lening van 20000 euro is 5 procent per jaar")
+Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-001", voorwaarden: "We schrijven de oven in 5 jaar af")
+Journaal.create(organisatie_id: 2, journaaltype_id: 5, boeknummer: "Feit-002", voorwaarden: "De rente op onze lening van 20000 euro is 5 procent per jaar")
 
 Grootboektype.create(naam: 'Vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"), categorie: 'I')
 Grootboektype.create(naam: 'Vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_vierkant.png"), categorie: 'I')

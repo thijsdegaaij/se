@@ -28,12 +28,12 @@
   
    
   <h2>Output</h2>
-  <p>Inkoopwaarde van de omzet: Gebaseerd alle (min en plus) boekingen met Proces "Inkoopwaarde van de omzet"</p>
-  <p>Bedrijfskosten: Gebaseerd alle (min en plus) boekingen met Proces "Inkoopkosten, verkoopkosten en Algemene kosten"</p>
-  <p>Omzet: Gebaseerd alle (min en plus) boekingen met Proces "Levering uit (verkopen, omzet)" </p>
-  <p>Basiswinst: Gebaseerd op bovenstaande berekende waardes (= Omzet - Inkoopwaarde van de omzet - bedrijfskosten)</p>
+  <p>Inkoopwaarde van de omzet: Gebaseerd op alle Min boekingen met Proces "Inkoopwaarde van de omzet"</p>
+  <p>Bedrijfskosten: Gebaseerd op alle Min boekingen met Proces "Inkoopkosten, verkoopkosten en Algemene kosten"</p>
+  <p>Omzet: Gebaseerd op alle Min boekingen met Proces "Levering uit (verkopen, omzet)" </p>
+  <p>Basiswinst: Gebaseerd op bovenstaande waardes (= Omzet - Inkoopwaarde van de omzet - bedrijfskosten)</p>
   <b>
-  <p><b>Verkopen</p>
+  <p>Verkopen</p>
   <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
   <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
   <p>Omzet: - &euro;<%= @omzet %></p>
@@ -41,10 +41,22 @@
   </b>
   
   
-  
   <h2>Eigen vermogen</h2>
+  <p>Eigenvermogen begin van het jaar: Is altijd 0</p>
+  <p>Basiswinst: Zoals hierboven al een keer berekent</p>
+  <p>Overige kosten: Gebaseerd op alle Min boekingen met Proces "Rentelasten"</p>
+  <p>Nettowinst voor belasting: Basiswinst - Overige kosten</p>
+  <p>Belastingen: Gebaseerd o alle (min en plus) boekingen met Proces "Toename plicht vennootschapsbelasting, Afname plicht vennootschapsbelasting, Toename plicht nog te betalen btw en Afname plicht nog te betalen btw"</p>
+  <p>Nettowinst na belasting: Nettowinst voor belasting - Belastingen</p>
+  <p>Eigenvermogen eind van het jaar: Eigenvermogen begin van het jaar - Bedrijfskosten - Overige kosten + Basiswinst</p>
   <b>
   <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  <p>Overige kosten - &euro; <%= @overigekosten %></p>
+  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
+  <p>Belastingen = &euro; <%= @belastingen %></p>
+  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
+  <br>
   <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
   </b>    
 

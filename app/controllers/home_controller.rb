@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @organisatie_search = Organisatie.find(2)
+    @organisatie_search = Organisatie.find(1)
     session[:org_id] = @organisatie_search.id
 
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
@@ -90,59 +90,68 @@ class HomeController < ApplicationController
     # Grootboek  
     @gb_div = []
     @gb_input = []
+    
     if @organisatie_search.rechtsvorm_id != 1
       # Diverse grootboek
       Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_div.push(calc(@organisatie_search, t.id))
+        @gb_div.push(calc_gbtype(@organisatie_search, t.id))
       }
       # Input grootboek
       Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_input.push(calc(@organisatie_search, t.id))
+        @gb_input.push(calc_gbtype(@organisatie_search, t.id))
       }
             
       # Output grootboek
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
-      @organisatie_search.boekingen.where("boekproces_id = ?", 23).each { |boeking|
-        @inkw_vd_omzet = @inkw_vd_omzet + boeking.waarde
-      }
-      @inkw_vd_omzet = @inkw_vd_omzet
+      @inkw_vd_omzet= calc_boekproces(@organisatie_search, 23)[1]
+      logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
+      
       # Bedrijfskosten
       @bedrijfskosten = 0
-      @organisatie_search.boekingen.where("boekproces_id in (?)", [24,25,26]).each { |boeking|
-        @bedrijfskosten = @bedrijfskosten + boeking.waarde
-      }
-      @bedrijfskosten = @bedrijfskosten
+      @bedrijfskosten= calc_boekproces(@organisatie_search, [24,25,26])[1]
+      logger.debug("BEDRIJFSKOSTEN: #{@bedrijfskosten}")
+              
       # Omzet
       @omzet = 0
-      @organisatie_search.boekingen.where("boekproces_id = ?", 28).each { |boeking|
-        @omzet =  @omzet + boeking.waarde
-      }      
+      @omzet= calc_boekproces(@organisatie_search, 28)[1]
+      logger.debug("OMZET: #{@omzet}")
+      
       # Basis winst
       @basiswinst = 0
-      @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten 
+      @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten
+      logger.debug("BASISWINST: #{@basiswinst}")
       
+      # Overige kosten 
+      @overigekosten = 0
+      @overigekosten= calc_boekproces(@organisatie_search, 10)[1]
+      logger.debug("OVERIGE KOSTEN: #{@overigekosten}")
+      
+      # Belastingen
+      @belastingen = 0
+      @belastingen= calc_boekproces(@organisatie_search, [6,7,8,9] )[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
       
       #Eigen vermogen grootboek
       # Start EV
       @ev_start = 0
-      # Bruto Winst
-      
+      # Netto winst voor belasting
+      @nettowinstvb = @basiswinst - @overigekosten
+      # Netto winst na belasting
+      @nettowinstnb = @nettowinstvb - @belastingen.abs
       # Eind EV
       @ev_eind = 0
-      
-     
+      @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
     end
    
   end
-  
-  
+
   def cms
   end
   
   private
-  
-    def calc(org, gb_type)
+    
+    def calc_gbtype(org, gb_type)
       min = 0
       plus = 0
       totaal = 0
@@ -162,4 +171,19 @@ class HomeController < ApplicationController
       return naam, plus, min, totaal
     end
   
+    def calc_boekproces(org, boekproces)
+      min = 0
+      plus = 0
+      totaal = 0
+      org.boekingen.where("boekproces_id in (?)", boekproces).each { |boeking|
+        if boeking.bij_af == '-'
+          min = min + boeking.waarde
+        else
+          plus = plus + boeking.waarde
+        end
+      }
+      totaal = plus - min
+      return plus, min, totaal
+    end
+      
 end

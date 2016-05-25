@@ -36,52 +36,57 @@ class OrganisatiesController < ApplicationController
     # Grootboek  
     @gb_div = []
     @gb_input = []
-    @gb_output = []
-    @gb_ev = []
-    @gb_inkoopwaarde = []
-    @gb_bedrijfskosten = []
+
     if @organisatie_search.rechtsvorm_id != 1
       # Diverse grootboek
       Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_div.push(calc(@organisatie_search, t.id))
+        @gb_div.push(calc_gbtype(@organisatie_search, t.id))
       }
       # Input grootboek
       Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_input.push(calc(@organisatie_search, t.id))
+        @gb_input.push(calc_gbtype(@organisatie_search, t.id))
       }
       # Output grootboek
-      Grootboektype.distinct.where("categorie = ?", "O").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_output.push(calc(@organisatie_search, t.id))
-      }
-      Grootboektype.distinct.where("categorie = ?", "II").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_inkoopwaarde.push(calc(@organisatie_search, t.id))
-      }
-      Grootboektype.distinct.where("categorie = ?", "IB").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_bedrijfskosten.push(calc(@organisatie_search, t.id))
-      }
+      # Inkoopwaarde van de omzet
+      @inkw_vd_omzet = 0
+      @inkw_vd_omzet= calc_boekproces(@organisatie_search, 23)[1]
+      logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
       
-      @brutowinst = 1
-      @verkopen = 0
-      @inkoopwaarde = 0
+      # Bedrijfskosten
       @bedrijfskosten = 0
-      @ev_eind = 0
+      @bedrijfskosten= calc_boekproces(@organisatie_search, [24,25,26])[1]
+      logger.debug("BEDRIJFSKOSTEN: #{@bedrijfskosten}")
+              
+      # Omzet
+      @omzet = 0
+      @omzet= calc_boekproces(@organisatie_search, 28)[1]
+      logger.debug("OMZET: #{@omzet}")
+      
+      # Basis winst
+      @basiswinst = 0
+      @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten
+      logger.debug("BASISWINST: #{@basiswinst}")
+      
+      # Overige kosten 
+      @overigekosten = 0
+      @overigekosten= calc_boekproces(@organisatie_search, 10)[1]
+      logger.debug("OVERIGE KOSTEN: #{@overigekosten}")
+      
+      # Belastingen
+      @belastingen = 0
+      @belastingen= calc_boekproces(@organisatie_search, [6,7,8,9] )[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
+      
+      #Eigen vermogen grootboek
+      # Start EV
       @ev_start = 0
-      
-      @gb_output.each { |gb_type|
-        @verkopen = gb_type[3]
-      }
-      @gb_inkoopwaarde.each { |gb_type|
-        @inkoopwaarde = gb_type[3]
-      }
-      @gb_bedrijfskosten.each { |gb_type|
-        @bedrijfskosten = gb_type[3]
-      }
-      @brutowinst = @verkopen + @inkoopwaarde + @bedrijfskosten
-      
-      # Eigen vermogen grootboek
-      Grootboektype.distinct.where("categorie = ?", "E").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_ev.push(calc(@organisatie_search, t.id))
-      }
+      # Netto winst voor belasting
+      @nettowinstvb = @basiswinst - @overigekosten
+      # Netto winst na belasting
+      @nettowinstnb = @nettowinstvb - @belastingen.abs
+      # Eind EV
+      @ev_eind = 0
+      @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
     end
     
   end
@@ -151,7 +156,7 @@ class OrganisatiesController < ApplicationController
       params.require(:organisatie).permit(:naam, :bedrijfstak_id, :rechtsvorm_id, :voorkant_image)
     end
     
-    def calc(org, gb_type)
+    def calc_gbtype(org, gb_type)
       min = 0
       plus = 0
       totaal = 0
@@ -169,6 +174,21 @@ class OrganisatiesController < ApplicationController
       }
       naam = Grootboektype.find(gb_type).naam
       return naam, plus, min, totaal 
+    end
+    
+    def calc_boekproces(org, boekproces)
+      min = 0
+      plus = 0
+      totaal = 0
+      org.boekingen.where("boekproces_id in (?)", boekproces).each { |boeking|
+        if boeking.bij_af == '-'
+          min = min + boeking.waarde
+        else
+          plus = plus + boeking.waarde
+        end
+      }
+      totaal = plus - min
+      return plus, min, totaal
     end
     
 end

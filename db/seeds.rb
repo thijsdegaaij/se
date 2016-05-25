@@ -30,41 +30,41 @@ Bedrijfstak.create(naam: 'Financiële en zakelijke dienstverlening')
 Bedrijfstak.create(naam: 'Overheid')
 Bedrijfstak.create(naam: 'Zorg en overige dienstverlening')
 
-Journaaltype.create(naam: 'Inkoopboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Journaaltype.create(naam: 'Verkoopboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Journaaltype.create(naam: 'Bankboek', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Journaaltype.create(naam: 'Leveringen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Journaaltype.create(naam: 'Intern', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Journaaltype.create(naam: 'Inkoopboek')
+Journaaltype.create(naam: 'Verkoopboek')
+Journaaltype.create(naam: 'Bankboek')
+Journaaltype.create(naam: 'Leveringen')
+Journaaltype.create(naam: 'Intern')
 
-Boekproces.create(naam: 'Inkomsten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Betalingen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Toename plicht (waardedaling)', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afname plicht', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Toename recht (waardestijging)', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afname recht	', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Toename plicht vennootschapsbelasting', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afname plicht vernnootschapsbelasting', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afname plicht nog te betalen btw', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Rentelasten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Rentebaten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Opbrengst effecten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Waardeverandering effecten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'levering in (inkopen)', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afschrijving vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Waardeverandering anders', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Lonen en salarissen', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Sociale lasten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Afschrijvingen vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Overige waardeveranderingen vaste activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Bijzondere waardevermindering vlottende activa', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Overige bedrijfskosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Inkoopwaarde van de omzet', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Inkoopkosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Verkoopkosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Algemene kosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Bedrijfskosten', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Levering uit (verkopen, omzet)', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
-Boekproces.create(naam: 'Basis winst', icoon: File.open(Rails.root + "app/assets/images/icon_rondje.png"))
+Boekproces.create(naam: 'Inkomsten')
+Boekproces.create(naam: 'Betalingen')
+Boekproces.create(naam: 'Afname plicht')
+Boekproces.create(naam: 'Toename recht (waardestijging)')
+Boekproces.create(naam: 'Afname recht	')
+Boekproces.create(naam: 'Toename plicht vennootschapsbelasting')
+Boekproces.create(naam: 'Afname plicht vernnootschapsbelasting')
+Boekproces.create(naam: 'Afname plicht nog te betalen btw')
+Boekproces.create(naam: 'Toename plicht nog te betalen btw')
+Boekproces.create(naam: 'Rentelasten')
+Boekproces.create(naam: 'Rentebaten')
+Boekproces.create(naam: 'Opbrengst effecten')
+Boekproces.create(naam: 'Waardeverandering effecten')
+Boekproces.create(naam: 'levering in (inkopen)')
+Boekproces.create(naam: 'Afschrijving vaste activa')
+Boekproces.create(naam: 'Waardeverandering anders')
+Boekproces.create(naam: 'Lonen en salarissen')
+Boekproces.create(naam: 'Sociale lasten')
+Boekproces.create(naam: 'Afschrijvingen vaste activa')
+Boekproces.create(naam: 'Overige waardeveranderingen vaste activa')
+Boekproces.create(naam: 'Bijzondere waardevermindering vlottende activa')
+Boekproces.create(naam: 'Overige bedrijfskosten')
+Boekproces.create(naam: 'Inkoopwaarde van de omzet')
+Boekproces.create(naam: 'Inkoopkosten')
+Boekproces.create(naam: 'Verkoopkosten')
+Boekproces.create(naam: 'Algemene kosten')
+Boekproces.create(naam: 'Bedrijfskosten')
+Boekproces.create(naam: 'Levering uit (verkopen, omzet)')
+Boekproces.create(naam: 'Basis winst')
 
 
 Journaal.create(organisatie_id: 2, journaaltype_id: 1, boeknummer: "ink-001", datum: Date.new(2016,1,1), leverancier: "Leverancier A", hoeveelheid: 300, eenheid: "stuk", productnaam: "Brood", betalingswijze: "Contant", stukprijs: 1.00, valuta: "euro", btw_percentage: 6, bedrag_ex_btw: 300, bedrag_inc_btw: 318.00, voorwaarden: "inknr-0027\nVoorwaarde 1\nVoorwaarde 2\nVoorwaarde 3")
@@ -93,8 +93,6 @@ Grootboektype.create(naam: 'Rechten en Plichten', categorie: 'D')
 Grootboektype.create(naam: 'Geld', categorie: 'D')
 Grootboektype.create(naam: 'Belastingen', categorie: 'D')
 Grootboektype.create(naam: 'Financial producten', categorie: 'D')
-Grootboektype.create(naam: 'Intern inkoopwaarde', categorie: 'II')
-Grootboektype.create(naam: 'Intern bedrijfskosten', categorie: 'IB')
 Grootboektype.create(naam: 'Niet-duurzame consumptiegoederen', categorie: 'N')
 Grootboektype.create(naam: 'Duurzame consumptiegoederen', categorie: 'N')
 Grootboektype.create(naam: 'Voor gezinsleden', categorie: 'N')
@@ -123,17 +121,18 @@ Grootboekrekening.create(naam: 'Huishouden VOOR GEZINSLEDEN interieur', grootboe
 Grootboekrekening.create(naam: 'Huishouden ARBEID BIJ BAKKER Maxima', grootboektype_id: 16, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/figuren_maxima.png"))
 
 #Example Anders dan huishouden
-Grootboekrekening.create(naam: 'Inkoop brood', grootboektype_id: 1, organisatie_id: 2, icoon: nil)
+Grootboekrekening.create(naam: 'Inkoop brood', grootboektype_id: 1, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Grootboekrekening.create(naam: 'Geld', grootboektype_id: 9, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'BTW Inkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'Telefoon Kosten', grootboektype_id: 3, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'Verkoop brood', grootboektype_id: 5, organisatie_id: 2, icoon: nil)
-
+Grootboekrekening.create(naam: 'Lening', grootboektype_id: 11, organisatie_id: 2, icoon: nil)
+Grootboekrekening.create(naam: 'BTW Verkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
 
 #Inkoop brood
 Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1000, hoeveelheid: 100, journaal_id: 1, grootboekrekening_id: 11)
 Boeking.create(boekproces_id: 2, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 106000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 12)
-Boeking.create(boekproces_id: 1, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
+Boeking.create(boekproces_id: 8, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
 
 # Boeking voor inkoopwaarde van de omzet
 Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 9, grootboekrekening_id: 11)
@@ -146,6 +145,14 @@ Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Dat
 
 # Boekingen voor Omzet
 Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 500000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
+
+#Boekingen voor Overige bedrijfskosten
+Boeking.create(boekproces_id: 10, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 16)
+
+#Boekingen Belastingen
+Boeking.create(boekproces_id: 9, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 9000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 17)
+
+
 
 
 

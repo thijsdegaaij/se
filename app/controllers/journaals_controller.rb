@@ -118,17 +118,7 @@ class JournaalsController < ApplicationController
        @bkg_intern_search = nil
      end
    end
-   
-   # # Intern
-#    logger.debug("Voor Intern vanuit H_journaal")
-#    if @org.boekingen.where("boekingtype = ?","I").count == 0
-#      logger.debug("Interne boekingen is 0 vanuit H_journaal")
-#      @bkg_intern_search = nil
-#    else
-#      logger.debug("Interne boekingen zijn aanwezig vanuit H_journaal")
-#      @bkg_intern_search = @org.boekingen.where("boekingtype = ?","I")
-#    end
-   
+    
   end
 
   # GET /journaals/1

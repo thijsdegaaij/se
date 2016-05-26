@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @organisatie_search = Organisatie.find(1)
+    @organisatie_search = Organisatie.find(2)
     session[:org_id] = @organisatie_search.id
 
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)

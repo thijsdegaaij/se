@@ -104,7 +104,7 @@ class HomeController < ApplicationController
       # Output grootboek
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
-      @inkw_vd_omzet= calc_boekproces(@organisatie_search, 23)[1]
+      @inkw_vd_omzet = calc_boekproces(@organisatie_search, 23)[1]
       logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
       
       # Bedrijfskosten

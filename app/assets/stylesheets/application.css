@@ -1146,7 +1146,7 @@ a {
       padding-left: 18px;
       border-right: 1px solid #CCCCCC;
       color: #3f67a6;
-      font-size: 26px; }
+      font-size: 22px; }
   .navb .menus {
     width: 650px;
     margin-left: 28px;
@@ -4340,8 +4340,41 @@ hr {
   background-color: #34a853;
   color: white; }
 
-.container.underfixednav {
-  padding-top: 20px; }
+.cms .titelopmaak {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 24px; }
+.cms .sidebar-one {
+  position: absolute;
+  left: 24px;
+  width: 250px;
+  height: 600px;
+  padding: 24px 48px;
+  background-color: #e3e3e3; }
+.cms .main-content {
+  position: absolute;
+  left: 340px;
+  right: 10px;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: auto; }
+.cms .h1 {
+  font-size: 28px;
+  font-weight: bold; }
+.cms .h2 {
+  font-size: 18px;
+  font-weight: bold; }
+.cms .h3 {
+  font-size: 14px;
+  font-weight: bold; }
+
+.cmsTabel th {
+  text-align: left;
+  font-size: 16px;
+  padding-right: 24px; }
+.cmsTabel td {
+  padding-right: 24px; }
 
 @font-face {
   font-family: 'Roboto';

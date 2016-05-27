@@ -18,7 +18,6 @@ Rechtsvorm.create(naam: 'Vereniging met beperkte rechtsbevoegdheid', afkorting: 
 Rechtsvorm.create(naam: 'Coöperatie/Onderlinge waarborgmaatschappij', afkorting: 'COWM')
 Rechtsvorm.create(naam: 'Stichting', afkorting: 'ST')
 
-
 Bedrijfstak.create(naam: 'Landbouw, bosbouw en visserij')
 Bedrijfstak.create(naam: 'Delfstoffenwinning')
 Bedrijfstak.create(naam: 'Industrie')
@@ -29,6 +28,8 @@ Bedrijfstak.create(naam: 'Vervoer, opslag en communicatie')
 Bedrijfstak.create(naam: 'Financiële en zakelijke dienstverlening')
 Bedrijfstak.create(naam: 'Overheid')
 Bedrijfstak.create(naam: 'Zorg en overige dienstverlening')
+Bedrijfstak.create(naam: 'yyyyyyyyyyyyy')
+Bedrijfstak.create(naam: 'xxxxxxxxxxxx')
 
 Journaaltype.create(naam: 'Inkoopboek')
 Journaaltype.create(naam: 'Verkoopboek')

@@ -1,3 +1,51 @@
-.container.underfixednav{
-	padding-top: 20px
+.cms {
+	.titelopmaak {
+	  //position: relative;
+	  font-size: 36px;
+	  font-weight: bold;
+	  margin: 24px;
+	}
+	.sidebar-one {
+	   position: absolute;
+	   left: 24px ;
+	   width: 250px;
+	   height: 600px;
+	   
+	   padding: 24px 48px; 
+	   background-color: #e3e3e3;
+	   }
+	.main-content {
+	   position: absolute ;
+	   left: 340px ; 
+	   right: 10px;
+	   height: 100% ;
+	   padding-left: 5px ;
+	   padding-right: 5px ;
+	   overflow: auto ;
+	   }
+	.h1 {
+	  font-size: 28px;
+	  font-weight: bold;
+	}
+	.h2 {
+	  font-size: 18px;
+	  font-weight: bold;
+	}
+	.h3 {
+	  font-size: 14px;
+	  font-weight: bold;
+	}
 }
+
+.cmsTabel {
+
+th {
+	text-align: left;
+	font-size: 16px;
+	padding-right: 24px;
+}
+td {
+	padding-right: 24px;
+}
+
+} 

@@ -1,21 +1,29 @@
 .cms {
+	.logo-se {
+		position: absolute;
+		top: 24px;
+		left: 32px;
+		width: 300px;
+	}
 	.titelopmaak {
-	  //position: relative;
+	  position: relative;
+	  top: 30px;
 	  font-size: 36px;
 	  font-weight: bold;
 	  margin: 24px;
 	}
 	.sidebar-one {
 	   position: absolute;
+	   top: 150px;
 	   left: 24px ;
-	   width: 250px;
-	   height: 600px;
-	   
+	   width: 287px;
+	   height: 600px;	   
 	   padding: 24px 48px; 
-	   background-color: #e3e3e3;
+	   background-color: $background-color-1;
 	   }
 	.main-content {
 	   position: absolute ;
+	   top: 156px;
 	   left: 340px ; 
 	   right: 10px;
 	   height: 100% ;

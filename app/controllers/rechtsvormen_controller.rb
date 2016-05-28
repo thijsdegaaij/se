@@ -6,7 +6,7 @@ class RechtsvormenController < ApplicationController
   # GET /rechtsvormen
   # GET /rechtsvormen.json
   def index
-    @rechtsvormen = Rechtsvorm.all.order(:naam)
+    @rechtsvormen = Rechtsvorm.all.order(:sector)
   end
 
   # GET /rechtsvormen/1
@@ -71,6 +71,6 @@ class RechtsvormenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rechtsvorm_params
-      params.require(:rechtsvorm).permit(:naam, :afkorting)
+      params.require(:rechtsvorm).permit(:naam, :afkorting, :sector)
     end
 end

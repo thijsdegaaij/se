@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519151531) do
+ActiveRecord::Schema.define(version: 20160528160541) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "naam",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "letter"
   end
 
   create_table "boekingen", force: :cascade do |t|
@@ -37,10 +38,11 @@ ActiveRecord::Schema.define(version: 20160519151531) do
   end
 
   create_table "boekprocessen", force: :cascade do |t|
-    t.string   "naam",       limit: 255
-    t.string   "icoon",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "naam",               limit: 255
+    t.string   "icoon",              limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "kostenspecificatie"
   end
 
   create_table "grootboekrekeningen", force: :cascade do |t|
@@ -109,6 +111,7 @@ ActiveRecord::Schema.define(version: 20160519151531) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "afkorting",  limit: 255
+    t.string   "sector"
   end
 
 end

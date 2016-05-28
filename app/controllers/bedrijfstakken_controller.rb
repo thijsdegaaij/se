@@ -71,6 +71,6 @@ class BedrijfstakkenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bedrijfstak_params
-      params.require(:bedrijfstak).permit(:naam)
+      params.require(:bedrijfstak).permit(:letter, :naam)
     end
 end

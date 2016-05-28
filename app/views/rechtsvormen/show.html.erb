@@ -1,8 +1,13 @@
+<h1>Show Rechtsvorm</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Sector:</strong>
+  <%= @rechtsvorm.sector %><br>
   <strong>Naam:</strong>
-  <%= @rechtsvorm.naam %>
+  <%= @rechtsvorm.naam %><br>
+  <strong>Afkorting:</strong>
+  <%= @rechtsvorm.afkorting %>
 </p>
 
 <%= link_to 'Edit', edit_rechtsvorm_path(@rechtsvorm) %> |

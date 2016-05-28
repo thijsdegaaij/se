@@ -6,7 +6,7 @@ class BoekprocessenController < ApplicationController
   # GET /boekprocessen
   # GET /boekprocessen.json
   def index
-    @boekprocessen = Boekproces.all.order(:naam)
+    @boekprocessen = Boekproces.all.order(:kostenspecificatie)
   end
 
   # GET /boekprocessen/1

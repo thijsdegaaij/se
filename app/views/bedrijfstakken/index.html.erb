@@ -2,17 +2,20 @@
 
 <h1>Bedrijfstakken</h1>
 
+
 <table class="cmsTabel">
   <thead>
     <tr>
+      <th>Letter</th>
       <th>Naam</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @bedrijfstakken.each do |bedrijfstak| %>
       <tr>
+        <td><%= bedrijfstak.letter %></td>
         <td><%= bedrijfstak.naam %></td>
         <td><%= link_to 'Show', bedrijfstak %></td>
         <td><%= link_to 'Edit', edit_bedrijfstak_path(bedrijfstak) %></td>

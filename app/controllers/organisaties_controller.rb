@@ -155,7 +155,9 @@ class OrganisatiesController < ApplicationController
     def organisatie_params
       params.require(:organisatie).permit(:naam, :bedrijfstak_id, :rechtsvorm_id, :voorkant_image)
     end
-    
+
+    # Blok hieronder heb ik als comment uitgeschakeld. In home_controller staat de public functie.
+   
     def calc_gbtype(org, gb_type)
       min = 0
       plus = 0
@@ -190,5 +192,6 @@ class OrganisatiesController < ApplicationController
       totaal = plus - min
       return plus, min, totaal
     end
+    
     
 end

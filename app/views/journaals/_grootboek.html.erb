@@ -2,6 +2,47 @@
   <h1>Grootboek</h1>
   
   <h2>Diversen</h2>
+  <% @gb_div.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+  
+  <h2>Input</h2>
+  <% @gb_input.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+  
+   
+  <h2>Output</h2>
+  <p>Verkopen</p>
+  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
+  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
+  <p>Omzet: - &euro;<%= @omzet %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  </b>
+  
+  
+  <h2>Eigen vermogen</h2>
+  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  <p>Overige kosten - &euro; <%= @overigekosten %></p>
+  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
+  <p>Belastingen = &euro; <%= @belastingen %></p>
+  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
+  <br>
+  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
+  </b>    
+
+
+
+  
+  <h2>HERHALING</h2>
+  <h2>Diversen</h2>
   <p>Geld: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Geld"</p>
   <p>Belastingen: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Belastingen"  </p>
   <p>Financiele producten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Financiele producten" </p>
@@ -59,6 +100,12 @@
   <br>
   <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
   </b>    
+
+
+
+
+
+
 
 </div>
 

@@ -12,6 +12,10 @@ $(document).ready(function() {
         $(".btn-nederlandview").toggleClass("bold");
         $(".simrow.orgdivision").toggle();
     });
+    $(document.body).on("click", ".btn-mensview", function() {
+        $(".btn-mensview").toggleClass("bold");
+        $(".simrow.mensen").toggle();
+    });
     $(document.body).on("click", ".btn-organisatieview", function() {
         $(".btn-organisatieview").toggleClass("bold");
         $(".simrow.simrow-organisations").toggle();
@@ -19,10 +23,6 @@ $(document).ready(function() {
     $(document.body).on("click", ".btn-marktview", function() {
         $(".btn-marktview").toggleClass("bold");
         $(".simrow.markets").toggle();
-    });
-    $(document.body).on("click", ".btn-mensview", function() {
-        $(".btn-mensview").toggleClass("bold");
-        $(".simrow.mensen").toggle();
     });
 
 

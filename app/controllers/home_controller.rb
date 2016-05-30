@@ -149,7 +149,7 @@ class HomeController < ApplicationController
   def cms
   end
   
-  private
+  public
     
     def calc_gbtype(org, gb_type)
       min = 0

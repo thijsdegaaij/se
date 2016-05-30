@@ -17,7 +17,8 @@ Rechtsvorm.create(naam: 'Vereniging met volledige rechtsbevoegdheid', afkorting:
 Rechtsvorm.create(naam: 'Vereniging met beperkte rechtsbevoegdheid', afkorting: 'VMBRB', sector: 'Huishoudens')
 Rechtsvorm.create(naam: 'Coöperatie/Onderlinge waarborgmaatschappij', afkorting: 'COWM', sector: 'Huishoudens')
 Rechtsvorm.create(naam: 'Stichting', afkorting: 'ST', sector: 'Huishoudens')
-Rechtsvorm.create(naam: 'B.V. of N.V. met bankvergunning', afkorting: 'ST', sector: 'Financiële instelling')
+Rechtsvorm.create(naam: 'B.V. of N.V. met bankvergunning', afkorting: 'FI', sector: 'Financiële_instelling')
+Rechtsvorm.create(naam: 'Overheid', afkorting: 'Ov', sector: 'Overheid')
 
 Bedrijfstak.create(naam: 'Landbouw, bosbouw en visserij', letter: 'A')
 Bedrijfstak.create(naam: 'Delfstoffenwinning', letter: 'B')
@@ -110,6 +111,8 @@ Organisatie.create(naam: 'Maxima', bedrijfstak_id: 4, rechtsvorm_id: 1, voorkant
 Organisatie.create(naam: 'Bakker Bart', bedrijfstak_id: 1, rechtsvorm_id: 2, voorkant_image: File.open(Rails.root + "app/assets/images/bakkerbuitenkant.jpeg"))
 Organisatie.create(naam: 'MediaMarkt', bedrijfstak_id: 2, rechtsvorm_id: 3, voorkant_image: File.open(Rails.root + "app/assets/images/mediamarkt.jpg"))
 Organisatie.create(naam: 'Shell', bedrijfstak_id: 3, rechtsvorm_id: 4, voorkant_image: File.open(Rails.root + "app/assets/images/shell.jpg"))
+Organisatie.create(naam: 'Bank XYZ', bedrijfstak_id: 8, rechtsvorm_id: 12, voorkant_image: File.open(Rails.root + "app/assets/images/shell.jpg"))
+Organisatie.create(naam: 'Parlement', bedrijfstak_id: 9, rechtsvorm_id: 13, voorkant_image: File.open(Rails.root + "app/assets/images/shell.jpg"))
 
 #Example Huishoudens
 Grootboekrekening.create(naam: 'Huishouden Brood', grootboektype_id: 14, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
@@ -133,27 +136,53 @@ Grootboekrekening.create(naam: 'Lening', grootboektype_id: 11, organisatie_id: 2
 Grootboekrekening.create(naam: 'BTW Verkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
 
 #Inkoop brood
-Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1000, hoeveelheid: 100, journaal_id: 1, grootboekrekening_id: 11)
+Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 1, grootboekrekening_id: 11)
 Boeking.create(boekproces_id: 2, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 106000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 12)
 Boeking.create(boekproces_id: 8, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
 
 # Boeking voor inkoopwaarde van de omzet
 Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 9, grootboekrekening_id: 11)
-Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 50000, journaal_id: 9, grootboekrekening_id: 11)
 
 # Boekingen voor bedrijfskosten
-Boeking.create(boekproces_id: 24, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
-Boeking.create(boekproces_id: 25, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 2000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
-Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 2000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 24, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 8000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 25, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 20000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
 
 # Boekingen voor Omzet
-Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 500000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
+Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 200000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
 
 #Boekingen voor Overige bedrijfskosten
 Boeking.create(boekproces_id: 10, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 16)
 
 #Boekingen Belastingen
-Boeking.create(boekproces_id: 9, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 9000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 17)
+Boeking.create(boekproces_id: 9, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 17)
+
+
+
+
+#ALLE BOEKINGEN TWEEDE KEER !!!!!!
+
+#Inkoop brood
+Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 1, grootboekrekening_id: 11)
+Boeking.create(boekproces_id: 2, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 106000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 12)
+Boeking.create(boekproces_id: 8, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
+
+# Boeking voor inkoopwaarde van de omzet
+Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 9, grootboekrekening_id: 11)
+
+# Boekingen voor bedrijfskosten
+Boeking.create(boekproces_id: 24, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 8000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 25, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 20000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
+
+# Boekingen voor Omzet
+Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 200000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
+
+#Boekingen voor Overige bedrijfskosten
+Boeking.create(boekproces_id: 10, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 16)
+
+#Boekingen Belastingen
+Boeking.create(boekproces_id: 9, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 17)
 
 
 

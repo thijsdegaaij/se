@@ -8,7 +8,7 @@
                     <div class=" ">Tijd: afgelopen 12 maanden</div>
                     <div class="icon icon-dropdown"></div>
                 </div>
-                <div class="overzichtsfoto-div ">
+                <div class="overzichtsfoto-div displaynone">
                   <%= image_tag @organisatie_search.voorkant_image_url.to_s, class:"overzichtsfoto-img button" %>
                 </div>
                 <div class="org">
@@ -44,13 +44,10 @@
                         </div>
                         <div class="orgheader">
                             <div class="icon icon-organisatie btn-overzichtsfoto button"></div>
-                            <!-- <div>Bakery shop</div> -->
-                            <div>
-                              <%= @organisatie_search.naam %>
-                              (<%= @organisatie_search.bedrijfstak.naam %>) 
-                            </div>
                             <div class="icon icon-hamburger btn-container-movie button"></div>
-                            <div class="vennootschap"><%= @organisatie_search.rechtsvorm.afkorting %></div>
+                            <div><%= @organisatie_search.naam %></div>
+                            <div class=""><%= @organisatie_search.bedrijfstak.naam %></div>
+                            <div class="<%= @organisatie_search.rechtsvorm.sector %>"><%= @organisatie_search.rechtsvorm.afkorting %></div>
                         </div>
                     </div>
                     <div class="start">
@@ -63,7 +60,7 @@
                                     </div>
                                     <div class="rijtje groot">
                                         <div class="icon icon-recept"></div>
-                                        <div>info over betalingen en leveringen</div>
+                                        <div>info over betalingen en leveringen<%= @ev_eind %></div>
                                     </div>
                                     <div class="groot">&nbsp;</div>
                                     <div class="groot">&nbsp;</div>

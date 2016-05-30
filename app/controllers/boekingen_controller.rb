@@ -207,6 +207,9 @@ class BoekingenController < ApplicationController
     def boeking_params
       params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :boekproces_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
     end
+
+
+    # Blok hieronder heb ik als comment uitgeschakeld. In home_controller staat de public functie.
     
     def calc_gbtype(org, gb_type)
       min = 0

@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20160528160541) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
+    t.string   "letter"
     t.string   "naam",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "letter"
   end
 
   create_table "boekingen", force: :cascade do |t|

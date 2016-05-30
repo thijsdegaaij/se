@@ -6,7 +6,7 @@ class BedrijfstakkenController < ApplicationController
   # GET /bedrijfstakken
   # GET /bedrijfstakken.json
   def index
-    @bedrijfstakken = Bedrijfstak.all.order(:naam)
+    @bedrijfstakken = Bedrijfstak.all.order(:id)
   end
 
   # GET /bedrijfstakken/1

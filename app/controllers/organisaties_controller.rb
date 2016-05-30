@@ -6,7 +6,7 @@ class OrganisatiesController < ApplicationController
   # GET /organisaties
   # GET /organisaties.json
   def index
-    @organisaties = Organisatie.all.order(:naam)
+    @organisaties = Organisatie.all.order(:id)
   end
 
   def h_organisatie

@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Journaals</h1>
+<h1>Journaals (boekingstukken)</h1>
 
-<table class="cmsTabel">
+<table class="cmsTabel boekingen">
   <thead>
     <tr>
       <th>Organisatie</th>
-      <th>Journaal type</th>
-      <th>Boeknummer</th>
+      <th>Journaaltype</th>
+      <th>Nummer</th>
       <th>Datum</th>
       <th>Leverancier</th>
       <th>Klant</th>
-      <th>Hoeveelheid</th>
+      <th>H</th>
       <th>Eenheid</th>
       <th>Productnaam</th>
-      <th>Stukprijs</th>
-      <th>Betalingswijze</th>
+      <th>Prijs</th>
+      <th>Betalings-wijze</th>
       <th>Valuta</th>
-      <th>Btw percentage</th>
-      <th>Bedrag ex btw</th>
-      <th>Bedrag inc btw</th>
+      <th>Btw-percentage</th>
+      <th>Bedrag ex. btw</th>
+      <th>Bedrag inc. btw</th>
+      <th>Voorwaarden</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -33,16 +34,16 @@
         <td><%= journaal.datum %></td>
         <td><%= journaal.leverancier %></td>
         <td><%= journaal.klant %></td>
-        <td><%= journaal.hoeveelheid %></td>
-        <td><%= journaal.eenheid %></td>
+        <td class="getal"><%= journaal.hoeveelheid %></td>
+        <td class="getal"><%= journaal.eenheid %></td>
         <td><%= journaal.productnaam %></td>
-        <td><%= journaal.stukprijs %></td>
+        <td class="bedrag"><%= journaal.stukprijs %></td>
         <td><%= journaal.betalingswijze %></td>
         <td><%= journaal.valuta %></td>
-        <td><%= journaal.btw_percentage %></td>
-        <td><%= journaal.bedrag_ex_btw %></td>
-        <td><%= journaal.bedrag_inc_btw %></td>
-        <td><pre><%= journaal.voorwaarden %></pre></td>
+        <td class="percentage"><%= journaal.btw_percentage %></td>
+        <td class="bedrag"><%= journaal.bedrag_ex_btw  %></td>
+        <td class="bedrag"><%= journaal.bedrag_inc_btw %></td>
+        <td><pre class="voorwaarden" title="<%= journaal.voorwaarden %>"> <%= journaal.voorwaarden %></pre></td>
         <td><%= link_to 'Show', journaal %></td>
         <td><%= link_to 'Edit', edit_journaal_path(journaal) %></td>
         <td><%= link_to 'Destroy', journaal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

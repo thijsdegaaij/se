@@ -306,6 +306,14 @@
        }
    }
 }  
+.inboekveld {
+	background-color: yellowgreen;
+}
+.new_boeking {
+
+
+
+}
 
 .inboekingsmogelijkheden {/* 
 	  display: flex;
@@ -314,7 +322,13 @@
 	  padding: 24px;
 	  position: relative;
 	.inboek {
-		margin-top: 8px;
+		position: relative;
+		border: 25px solid white;
+		left: -25px;
+		background-color: white;
+		th, td {
+			padding: 8px 4px;
+		}
 	}
 	.header {
 		font-size: 14px;

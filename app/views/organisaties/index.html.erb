@@ -8,6 +8,7 @@
       <th>Naam</th>
       <th>Bedrijfstak</th>
       <th>Rechtsvorm</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,7 +19,7 @@
         <td><%= organisatie.naam %></td>
         <td><%= organisatie.bedrijfstak.naam %></td>
         <td><%= organisatie.rechtsvorm.naam %></td>
-        <td><%= image_tag organisatie.voorkant_image_url(:thumb).to_s %><td>
+        <td class="plaatje3"><%= image_tag organisatie.voorkant_image_url(:thumb).to_s %><td>
         <td><%= link_to 'Show', organisatie %></td>
         <td><%= link_to 'Edit', edit_organisatie_path(organisatie) %></td>
         <td><%= link_to 'Destroy', organisatie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :mensen
   resources :boekprocessen
   resources :boekproces
   root "home#index"

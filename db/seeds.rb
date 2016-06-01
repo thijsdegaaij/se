@@ -25,7 +25,7 @@ Bedrijfstak.create(naam: 'Industrie', letter: 'C')
 Bedrijfstak.create(naam: 'Energie- en waterleidingbedrijven', letter: 'D')
 Bedrijfstak.create(naam: 'Water en afvalwater', letter: 'E')
 Bedrijfstak.create(naam: 'Bouwnijverheid', letter: 'A')
-Bedrijfstak.create(naam: 'Handel, horeca en reparatie', letter: 'G')
+Bedrijfstak.create(naam: 'Groot- en detailhandel', letter: 'G')
 Bedrijfstak.create(naam: 'Vervoer, opslag en communicatie', letter: 'H')
 Bedrijfstak.create(naam: 'Horeca', letter: 'I')
 Bedrijfstak.create(naam: 'Informatie en communicatie', letter: 'J')
@@ -111,6 +111,11 @@ Grootboektype.create(naam: 'Kennis (over huishouden, koken, sociale vaardigheden
 Grootboektype.create(naam: 'Arbeid bij bakker', categorie: 'N')
 
 
+Mens.create("naam"=>"Thijs", "leeftijd"=>49, "geslacht"=>"man", "kennisniveau"=>"4", "gezondheidsniveau"=>"4", "geluksniveau"=>"4")
+Mens.create("naam"=>"Maxima", "leeftijd"=>24, "geslacht"=>"vrouw", "kennisniveau"=>"3", "gezondheidsniveau"=>"5", "geluksniveau"=>"4")
+Mens.create("naam"=>"Bert de Bakker", "leeftijd"=>34, "geslacht"=>"man", "kennisniveau"=>"4", "gezondheidsniveau"=>"4", "geluksniveau"=>"4")
+
+
 Product.create(naam: 'Brood', icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Product.create(naam: 'Oven', icoon: File.open(Rails.root + "app/assets/images/oven.png"))
 
@@ -119,8 +124,8 @@ Organisatie.create(naam: 'Bakker Bart', bedrijfstak_id: 7, rechtsvorm_id: 2, voo
 
 Organisatie.create(naam: 'MediaMarkt', bedrijfstak_id: 7, rechtsvorm_id: 10, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/mediamarkt.jpg"))
 Organisatie.create(naam: 'Shell', bedrijfstak_id: 3, rechtsvorm_id: 10, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/shell.jpg"))
-Organisatie.create(naam: 'Bank ING', bedrijfstak_id: 8, rechtsvorm_id: 11, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/inglogo.png"))
-Organisatie.create(naam: 'Parlement', bedrijfstak_id: 9, rechtsvorm_id: 12, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/parlement.jpeg"))
+Organisatie.create(naam: 'Bank ING', bedrijfstak_id: 11, rechtsvorm_id: 11, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/inglogo.png"))
+Organisatie.create(naam: 'Parlement', bedrijfstak_id: 15, rechtsvorm_id: 12, voorkant_image: File.open(Rails.root + "app/assets/images/orgfoto/parlement.jpeg"))
 
 #Example Huishoudens
 Grootboekrekening.create(naam: 'Huishouden Brood', grootboektype_id: 14, organisatie_id: 1, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
@@ -139,36 +144,9 @@ Grootboekrekening.create(naam: 'Inkoop brood', grootboektype_id: 1, organisatie_
 Grootboekrekening.create(naam: 'Geld', grootboektype_id: 9, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'BTW Inkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'Telefoon Kosten', grootboektype_id: 3, organisatie_id: 2, icoon: nil)
-Grootboekrekening.create(naam: 'Verkoop brood', grootboektype_id: 5, organisatie_id: 2, icoon: nil)
+Grootboekrekening.create(naam: 'Verkoop brood', grootboektype_id: 5, organisatie_id: 2, icoon: File.open(Rails.root + "app/assets/images/brood.png"))
 Grootboekrekening.create(naam: 'Lening', grootboektype_id: 11, organisatie_id: 2, icoon: nil)
 Grootboekrekening.create(naam: 'BTW Verkopen', grootboektype_id: 10, organisatie_id: 2, icoon: nil)
-
-#Inkoop brood
-Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 1, grootboekrekening_id: 11)
-Boeking.create(boekproces_id: 2, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 106000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 12)
-Boeking.create(boekproces_id: 8, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 6000, p_inkoop: 0, hoeveelheid: 0, journaal_id: 1, grootboekrekening_id: 13)
-
-# Boeking voor inkoopwaarde van de omzet
-Boeking.create(boekproces_id: 23, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 9, grootboekrekening_id: 11)
-
-# Boekingen voor bedrijfskosten
-Boeking.create(boekproces_id: 24, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 8000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
-Boeking.create(boekproces_id: 25, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
-Boeking.create(boekproces_id: 26, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 20000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 14)
-
-# Boekingen voor Omzet
-Boeking.create(boekproces_id: 28, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 200000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 15)
-
-#Boekingen voor Overige bedrijfskosten
-Boeking.create(boekproces_id: 10, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 1000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 16)
-
-#Boekingen Belastingen
-Boeking.create(boekproces_id: 9, boekingtype: "I", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '-', waarde: 12000, p_inkoop: 1, hoeveelheid: 1, journaal_id: 9, grootboekrekening_id: 17)
-
-
-
-
-#ALLE BOEKINGEN TWEEDE KEER !!!!!!
 
 #Inkoop brood
 Boeking.create(boekproces_id: 14, boekingtype: "J", organisatie_id: 2,datum: Date.new(2016,1,1), product_id: 1, bij_af: '+', waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, journaal_id: 1, grootboekrekening_id: 11)

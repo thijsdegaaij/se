@@ -12,10 +12,11 @@
       <th>Product</th>
       <th>Datum</th>
       <th>Icoon</th>
-      <th>Bij af</th>
+      <th>Bij/af</th>
+      <th>Boekproces</th>
       <th>Waarde</th>
-      <th>P inkoop</th>
-      <th>Hoeveelheid</th>
+      <th>Prijs</th>
+      <th>H</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,9 +36,10 @@
         <td><%= boeking.datum %></td>
         <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
         <td><%= boeking.bij_af %></td>
-        <td><%= boeking.waarde %></td>
+        <td><%= boeking.boekproces.naam %></td>
+        <td class="bedrag"><%= boeking.waarde %></td>
         <td><%= boeking.p_inkoop %></td>
-        <td><%= boeking.hoeveelheid %></td>
+        <td class="getal"><%= boeking.hoeveelheid %></td>
         <td><%= link_to 'Show', boeking %></td>
         <td><%= link_to 'Edit', edit_boeking_path(boeking) %></td>
         <td><%= link_to 'Destroy', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></td>

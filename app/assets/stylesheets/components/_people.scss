@@ -38,7 +38,7 @@
             border-width: 0px 0px 1px 0px;
             border-style: dashed;
             border-color: $border-color-base;
-            background-color: $background-color-2;
+            background-color: white; // $background-color-2;
             height: 36px;
             > div {
               margin: 0px 24px 0px 8px;
@@ -105,10 +105,10 @@
 
 
     .titelnl {
-            border-width: 1px 1px 0px 1px;
+            border-width: 3px 0px 0px 0px;
             border-style: solid;
-            border-color: $border-color-base;
-            background-color: $background-color-2;
+            border-color: $background-color-2;
+            background-color: white; // $background-color-2;
             padding: 8px 0px 0px 8px;
             height: 36px;
         width: 550px;
@@ -128,7 +128,7 @@
         position: relative;
         border-style: solid;
         border-width: 1px 1px 1px 1px;
-        border-color: rebeccapurple; //$border-color-base;
+        border-color: white; //$border-color-base;
         width: 550px;
         padding: 12px;
     }

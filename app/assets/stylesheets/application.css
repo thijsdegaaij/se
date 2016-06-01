@@ -1563,17 +1563,11 @@ a1a2 > .a2 .kolom,
   top: 0px;
   left: 0px; }
 
-#maxima .itembody {
+.itembody {
   padding: 0px 0px 0px 0px; }
-  #maxima .itembody > img {
+  .itembody > img {
     max-width: 140px;
     max-height: 50px; }
-
-#bakker .itembody {
-  padding: 0px 0px 0px 0px; }
-  #bakker .itembody > img {
-    max-width: 140px;
-    max-height: 65px; }
 
 .geld img {
   max-width: 50px; }
@@ -1729,9 +1723,6 @@ a1a2 > .a2 .kolom,
   width: 598px;
   height: 600px; }
 
-#maxima .overzichtsfoto-img {
-  padding-left: 110px; }
-
 .vergroting {
   display: -webkit-flex;
   flex-direction: column;
@@ -1743,43 +1734,23 @@ a1a2 > .a2 .kolom,
   z-index: 1;
   box-shadow: 0px 0px 8px 0px rgba(1, 0, 0, 0.47); }
 
-#maxima .vergroting-tekoop {
-  justify-content: flex-start;
-  position: absolute;
-  top: 0px;
-  left: 205px;
-  height: 450px; }
-  #maxima .vergroting-tekoop > :nth-child(2),
-  #maxima .vergroting-tekoop > :nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-bottom: 1px solid #CCCCCC;
-    padding: 2px; }
-  #maxima .vergroting-tekoop .artworkbrood {
-    width: 150px;
-    max-height: 130px; }
-  #maxima .vergroting-tekoop .artworkbolletje {
-    width: 290px;
-    height: 180px; }
-
-#bakker .vergroting-tekoop {
+.vergroting-tekoop {
   justify-content: flex-start;
   position: absolute;
   top: 0px;
   left: 205px;
   height: 250px; }
-  #bakker .vergroting-tekoop > :nth-child(2),
-  #bakker .vergroting-tekoop > :nth-child(3) {
+  .vergroting-tekoop > :nth-child(2),
+  .vergroting-tekoop > :nth-child(3) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #CCCCCC;
     padding: 2px; }
-  #bakker .vergroting-tekoop .artworkbrood {
+  .vergroting-tekoop .artworkbrood {
     width: 150px;
     max-height: 130px; }
-  #bakker .vergroting-tekoop .artworkbolletje {
+  .vergroting-tekoop .artworkbolletje {
     width: 90px;
     height: 80px; }
 
@@ -3247,6 +3218,9 @@ hr {
     margin: 24px 0px 12px 0px;
     font-weight: bold; }
 
+.inboekveld {
+  background-color: yellowgreen; }
+
 .inboekingsmogelijkheden {
                           /* 
 	  display: flex;
@@ -3254,7 +3228,12 @@ hr {
   padding: 24px;
   position: relative; }
   .inboekingsmogelijkheden .inboek {
-    margin-top: 8px; }
+    position: relative;
+    border: 25px solid white;
+    left: -25px;
+    background-color: white; }
+    .inboekingsmogelijkheden .inboek th, .inboekingsmogelijkheden .inboek td {
+      padding: 8px 4px; }
   .inboekingsmogelijkheden .header {
     font-size: 14px;
     font-weight: bold;
@@ -3757,7 +3736,7 @@ hr {
     border-width: 0px 0px 1px 0px;
     border-style: dashed;
     border-color: #CCCCCC;
-    background-color: #F4F3F3;
+    background-color: white;
     height: 36px; }
     .cont-mens .titelz > div {
       margin: 0px 24px 0px 8px; }
@@ -3799,10 +3778,10 @@ hr {
           padding: 0px 0px 0px 4px; }
 
 .titelnl {
-  border-width: 1px 1px 0px 1px;
+  border-width: 3px 0px 0px 0px;
   border-style: solid;
-  border-color: #CCCCCC;
-  background-color: #F4F3F3;
+  border-color: #F4F3F3;
+  background-color: white;
   padding: 8px 0px 0px 8px;
   height: 36px;
   width: 550px; }
@@ -3820,7 +3799,7 @@ hr {
     position: relative;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
-    border-color: rebeccapurple;
+    border-color: white;
     width: 550px;
     padding: 12px; }
   .orgindeling-perspectief .titelperspectief {
@@ -4393,7 +4372,33 @@ hr {
   font-size: 16px;
   padding-right: 24px; }
 .cmsTabel td {
-  padding-right: 24px; }
+  padding-right: 24px;
+  padding-bottom: 12px; }
+.cmsTabel .plaatje3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 12px; }
+.cmsTabel .plaatje3 img {
+  max-height: 30px;
+  margin-left: auto;
+  margin-right: auto; }
+.cmsTabel .voorwaarden {
+  width: 80px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: wait; }
+.cmsTabel .bedrag {
+  text-align: right; }
+.cmsTabel .bedrag::before {
+  content: '€ '; }
+.cmsTabel .percentage {
+  text-align: right; }
+.cmsTabel .percentage::after {
+  content: '%'; }
+.cmsTabel .getal {
+  text-align: right; }
 
 @font-face {
   font-family: 'Roboto';

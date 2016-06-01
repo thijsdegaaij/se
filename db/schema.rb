@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528160541) do
+ActiveRecord::Schema.define(version: 20160531154338) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
     t.string   "letter"
@@ -88,6 +88,17 @@ ActiveRecord::Schema.define(version: 20160528160541) do
     t.string   "icoon",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "mensen", force: :cascade do |t|
+    t.string   "naam"
+    t.integer  "leeftijd"
+    t.string   "geslacht"
+    t.string   "kennisniveau"
+    t.string   "gezondheidsniveau"
+    t.string   "geluksniveau"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "organisaties", force: :cascade do |t|

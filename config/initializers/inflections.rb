@@ -55,3 +55,7 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'boekproces', 'boekprocessen'
 end
 
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'mens', 'mensen'
+end
+

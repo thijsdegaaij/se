@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naam:</strong>
+  <%= @mens.naam %>
+</p>
+
+<p>
+  <strong>Leeftijd:</strong>
+  <%= @mens.leeftijd %>
+</p>
+
+<p>
+  <strong>Geslacht:</strong>
+  <%= @mens.geslacht %>
+</p>
+
+<p>
+  <strong>Kennisniveau:</strong>
+  <%= @mens.kennisniveau %>
+</p>
+
+<p>
+  <strong>Gezondheidsniveau:</strong>
+  <%= @mens.gezondheidsniveau %>
+</p>
+
+<p>
+  <strong>Geluksniveau:</strong>
+  <%= @mens.geluksniveau %>
+</p>
+
+<%= link_to 'Edit', edit_mens_path(@mens) %> |
+<%= link_to 'Back', mensen_path %>

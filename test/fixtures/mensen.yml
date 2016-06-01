@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  naam: MyString
+  leeftijd: 1
+  geslacht: MyString
+  kennisniveau: MyString
+  gezondheidsniveau: MyString
+  geluksniveau: MyString
+
+two:
+  naam: MyString
+  leeftijd: 1
+  geslacht: MyString
+  kennisniveau: MyString
+  gezondheidsniveau: MyString
+  geluksniveau: MyString

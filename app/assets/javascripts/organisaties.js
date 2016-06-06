@@ -73,7 +73,8 @@ var ready = function() {
     $(".btnorg3").click(function() { // processen
         $(".pijllinks").toggle();
         $(".pijlrechts").toggle();
-        $(".timeshow, .timeshowheader, .waardeinvestering, .container-ev-display, .tw-waarde").addClass("displaynone");
+        $(".middenlinks, .middenrechtscontainer").toggle();
+        $(".timeshow, .timeshowheader, .waardeinvestering, .tw-waarde").addClass("displaynone");
         $(".vergroting").hide();
     });
     $(".btnorg4").click(function() { // waarde
@@ -111,6 +112,11 @@ var ready = function() {
         $(".vergroting").hide();
         $(".reclame .vergroting").toggle();
     });
+    $(".admin").click(function() {
+        $(".vergroting").hide();
+        $(".admin .vergroting").toggle();
+    });
+    
     //  accounting  accountingintern is in proto.html
     $('.chk-intern').change(function() {
         if ($(this).prop("checked")) {

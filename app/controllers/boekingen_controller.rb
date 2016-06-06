@@ -54,7 +54,7 @@ class BoekingenController < ApplicationController
     end
     # Begin Grootboek
     Boeking.connection.clear_query_cache
-    @org = Organisatie.find(session[:org_id])  
+      @org = Organisatie.find(session[:org_id])  
       @gb_div = []
       @gb_input = []
 
@@ -72,17 +72,17 @@ class BoekingenController < ApplicationController
         # Output grootboek
         # Inkoopwaarde van de omzet
         @inkw_vd_omzet = 0
-        @inkw_vd_omzet= calc_boekproces(@org, 23)[1]
+        @inkw_vd_omzet= calc_boekproces(@org, 24)[1]
         logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
 
         # Bedrijfskosten
         @bedrijfskosten = 0
-        @bedrijfskosten= calc_boekproces(@org, [24,25,26])[1]
+        @bedrijfskosten= calc_boekproces(@org, [25,26,27])[1]
         logger.debug("BEDRIJFSKOSTEN: #{@bedrijfskosten}")
         
         # Omzet
         @omzet = 0
-        @omzet= calc_boekproces(@org, 28)[1]
+        @omzet= calc_boekproces(@org, 29)[1]
         logger.debug("OMZET: #{@omzet}")
 
         # Basis winst
@@ -92,12 +92,12 @@ class BoekingenController < ApplicationController
 
         # Overige kosten 
         @overigekosten = 0
-        @overigekosten= calc_boekproces(@org, 10)[1]
+        @overigekosten= calc_boekproces(@org, 11)[1]
         logger.debug("OVERIGE KOSTEN: #{@overigekosten}")
 
         # Belastingen
         @belastingen = 0
-        @belastingen= calc_boekproces(@org, [6,7,8,9] )[2]
+        @belastingen= calc_boekproces(@org, [9,10] )[2]
         logger.debug("BELASTINGEN: #{@belastingen}")
 
         #Eigen vermogen grootboek
@@ -205,11 +205,13 @@ class BoekingenController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boeking_params
-      params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :boekproces_id, :journaal_id, :product_id, :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
+      params.require(:boeking).permit(:boekingtype, :organisatie_id, :grootboekrekening_id, :boekproces_id, :journaal_id, :product_id, 
+        :datum, :icoon, :bij_af, :waarde, :p_inkoop, :hoeveelheid)
     end
 
 
-    # Blok hieronder heb ik als comment uitgeschakeld. In home_controller staat de public functie.
+
+    # Blok hieronder heb ik als comment uitgeschakeld. In home_controller staat de public functie. /Thijs
     
     def calc_gbtype(org, gb_type)
       min = 0

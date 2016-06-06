@@ -5,14 +5,17 @@
   //display: inline-block; 
   width: 24px;
   height: 24px;
+  //border-radius: 10px;
 }
 .iconwide{
   background-size: contain;
   background-repeat: no-repeat;
   /*background-position: center center;*/
   display: inline-block; 
-  width: 48px;
-  height: 24px;
+  width: 48px !important;
+  height: 32px;
+  //border-radius: 18px;
+  //flex: 1 1 48px;
 }
 .iconlg{
  background-size: contain;
@@ -104,7 +107,8 @@
 .icon-vierkant           {background-image: url('/images/icons/icon_vierkant.png'); }
 .icon-voorraad           {background-image: url('/images/icons/icon_voorraad.png'); }
 .icon-wetbeschrijving    {background-image: url('/images/icons/icon_wet_beschrijving.png'); }
-.icon-winst              {background-image: url('/images/icons/icon_winst.png'); }
+.icon-winst              {background-image: url('/images/icons/icon_winst.png'); 
+                          margin-top: 7px; margin-left: -12px;}
 .icon-winstpos           {background-image: url('/images/icons/icon_winstpos.png'); }
 
 

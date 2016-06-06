@@ -4,20 +4,25 @@ class HomeController < ApplicationController
     @organisatie_search = Organisatie.find(2)
     session[:org_id] = @organisatie_search.id
 
-    @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
-    @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2)
-    @gbr_kn = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 3)
-    @gbr_pr = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 4)
-    @gbr_tk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 5)
-    @gbr_kh = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 6)
-    @gbr_rc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 7)
+    # NB staat ook in organisaties_controller
+    #Bakker Bart   
+    @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1) #vlottende activa
+    @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2) #vasteactiva
+    @gbr_kn = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 3) #kosten
+    @gbr_pr = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 4) #personeel
+    @gbr_tk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 5) #verkopen
+    @gbr_kh = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 6) #knowhow
+    @gbr_rc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 7) #reclame
       
-    @gbr_ndc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 14)
-    @gbr_dc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15)
-    @gbr_vg = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
-    @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 17)
-    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 18)
-    
+    #Maxima
+    @gbr_ndc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 12) #niet duurzame consumptiegoederen
+    @gbr_dc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 13) #duurzame consumptiegoederen
+    @gbr_vg = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 14) #voor gezinsleden (consument als producent)
+    @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15) #huishouden kennis
+    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16) #arbeid uit
+    @gbr_adm = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 17) #administratie    
+
+    # Journaals
     # Inkoopboek
     @jnl_ink_search = @organisatie_search.journaals.where("journaaltype_id = ?", 1).first
     # Verkoopboek
@@ -102,19 +107,24 @@ class HomeController < ApplicationController
       }
             
       # Output grootboek
+
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
-      @inkw_vd_omzet = calc_boekproces(@organisatie_search, 23)[1]
+      @inkw_vd_omzet = calc_boekproces(@organisatie_search, 24)[1]
       logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
       
       # Bedrijfskosten
+      @inkoopkosten= calc_boekproces(@organisatie_search, [25])[1]
+      @verkoopkosten= calc_boekproces(@organisatie_search, [26])[1]
+      @algemenekosten= calc_boekproces(@organisatie_search, [27])[1]
+
       @bedrijfskosten = 0
-      @bedrijfskosten= calc_boekproces(@organisatie_search, [24,25,26])[1]
+      @bedrijfskosten= calc_boekproces(@organisatie_search, [25,26,27])[1]
       logger.debug("BEDRIJFSKOSTEN: #{@bedrijfskosten}")
               
       # Omzet
       @omzet = 0
-      @omzet= calc_boekproces(@organisatie_search, 28)[1]
+      @omzet= calc_boekproces(@organisatie_search, 29)[1]
       logger.debug("OMZET: #{@omzet}")
       
       # Basis winst
@@ -124,12 +134,12 @@ class HomeController < ApplicationController
       
       # Overige kosten 
       @overigekosten = 0
-      @overigekosten= calc_boekproces(@organisatie_search, 10)[1]
+      @overigekosten= calc_boekproces(@organisatie_search, 11)[1]
       logger.debug("OVERIGE KOSTEN: #{@overigekosten}")
       
       # Belastingen
       @belastingen = 0
-      @belastingen= calc_boekproces(@organisatie_search, [6,7,8,9] )[2]
+      @belastingen= calc_boekproces(@organisatie_search, [9,10] )[2]
       logger.debug("BELASTINGEN: #{@belastingen}")
       
       #Eigen vermogen grootboek
@@ -149,6 +159,7 @@ class HomeController < ApplicationController
   def cms
   end
   
+  # Public gemaakt, van private /Thijs
   public
     
     def calc_gbtype(org, gb_type)

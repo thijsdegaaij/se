@@ -5,6 +5,7 @@
 <table class="cmsTabel">
   <thead>
     <tr>
+      <th>id</th>
       <th>Naam</th>
       <th>Categorie</th>
       <th>Icoon</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @grootboektypes.each do |grootboektype| %>
       <tr>
+        <td><%= grootboektype.id %></td>
         <td><%= grootboektype.naam %></td>
         <td><%= grootboektype.categorie %></td>
         <td><%= image_tag grootboektype.icoon_url(:thumb).to_s %></td>

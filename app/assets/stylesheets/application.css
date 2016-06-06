@@ -551,8 +551,8 @@ a {
   background-repeat: no-repeat;
   /*background-position: center center;*/
   display: inline-block;
-  width: 48px;
-  height: 24px; }
+  width: 48px !important;
+  height: 32px; }
 
 .iconlg {
   background-size: contain;
@@ -770,7 +770,9 @@ a {
   background-image: url("/images/icons/icon_wet_beschrijving.png"); }
 
 .icon-winst {
-  background-image: url("/images/icons/icon_winst.png"); }
+  background-image: url("/images/icons/icon_winst.png");
+  margin-top: 7px;
+  margin-left: -12px; }
 
 .icon-winstpos {
   background-image: url("/images/icons/icon_winstpos.png"); }
@@ -1291,8 +1293,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  top: 76px;
-  width: 600px;
+  top: 67px;
+  width: 749px;
   height: 623px;
   background-color: white;
   display: none;
@@ -1308,6 +1310,10 @@ a {
   align-items: center;
   height: 42px;
   background-color: #F4F3F3; }
+
+.movie-org iframe {
+  width: 747px;
+  height: 433.52601px; }
 
 .orgbuttons {
   position: absolute;
@@ -1335,33 +1341,9 @@ a {
   font-size: 16px;
   font-weight: bold; }
 
-.geld,
-.overheid,
-.finprod {
-  height: 32px; }
-
-.itemheaderovereenkomst:nth-child(1),
-.itemheadergeld:nth-child(1),
-.itemheaderoverheid:nth-child(1),
-.itemheaderfinprod:nth-child(1) {
-  flex: 0 1 33px; }
-
-.itemheaderovereenkomst:nth-child(2),
-.itemheadergeld:nth-child(2),
-.itemheaderoverheid:nth-child(2),
-.itemheaderfinprod:nth-child(2) {
-  flex: 0 1 300px; }
-
-.itemheaderovereenkomst:nth-child(3),
-.itemheadergeld:nth-child(3),
-.itemheaderoverheid:nth-child(3),
-.itemheaderfinprod:nth-child(3) {
-  flex: 1 1 auto; }
-
-.bedrijfsprocessen,
-.bedrijfsprocessen-a {
+.bedrijfsprocessen-b,
+.bedrijfsprocessen-ac {
   background-color: #F4F3F3;
-  padding-top: 6px;
   font-weight: bold;
   flex: 0 0 32px;
   display: flex;
@@ -1370,7 +1352,7 @@ a {
   align-items: center;
   text-align: center; }
 
-.bedrijfsprocessen {
+.bedrijfsprocessen-b {
   flex: 0 0 33px; }
 
 .orgheader,
@@ -1379,7 +1361,7 @@ a {
 .overheid,
 .finprod,
 .orgbuttons {
-  width: 600px; }
+  width: 750px; }
 
 .overeenkomsten .rijtje .klein {
   width: 100px; }
@@ -1387,7 +1369,7 @@ a {
 .a,
 .b,
 .c {
-  height: 400px; }
+  height: 450px; }
 
 .a1,
 .a2 {
@@ -1395,10 +1377,10 @@ a {
 
 .a,
 .c {
-  width: 200px; }
+  width: 180px; }
 
 .b {
-  width: 200px; }
+  width: 390px; }
   .b .kostprijsberekening {
     background-color: white;
     flex: auto; }
@@ -1456,8 +1438,6 @@ a {
 .a2,
 a1a2 > .a1,
 a1a2 > .a2 .kolom,
-.pijllinks,
-.pijlrechts,
 .pijlwaarde {
   display: -webkit-flex;
   flex-direction: column; }
@@ -1471,7 +1451,8 @@ a1a2 > .a2 .kolom,
 .pijluitleg,
 .rij {
   display: -webkit-flex;
-  flex-direction: row; }
+  flex-direction: row;
+  align-items: center; }
 
 .rijtje div {
   display: inline;
@@ -1485,6 +1466,21 @@ a1a2 > .a2 .kolom,
 .itembodygeld {
   justify-content: flex-start; }
 
+.itemheader {
+  background-color: #F4F3F3; }
+
+.itemheader > div {
+  margin: 1px 4px; }
+
+.itemheader > div:not(.icon) {
+  margin-top: 3px !important; }
+
+.itemheader + div {
+  padding-left: 8px; }
+
+.itemheader + div + div {
+  padding-left: 8px; }
+
 .start .rij {
   align-items: center; }
   .start .rij .kolom {
@@ -1495,37 +1491,23 @@ a1a2 > .a2 .kolom,
 .org-all {
   align-items: center; }
 
-.pijluitleg {
-  font-size: 12px; }
-
-.pijllinks {
-  margin-left: 90px; }
-
 .pijllinks .pijlwaarde {
-  align-items: flex-start; }
+  align-items: flex-start;
+  max-width: 285px; }
 
 .pijlrechts .pijlwaarde {
-  align-items: flex-start; }
-
-.pijlrechts .iconwide:not(.icon-geldpijl) {
-  background-color: #fbd0e6 !important; }
+  align-items: flex-start;
+  max-width: 285px; }
 
 .pijlwaarde div,
-.pijlwaarde,
 .waardeinvestering {
-  padding: 2px;
-  font-size: 12px; }
+  padding: 2px; }
 
 .pijluitlegwoord {
-  padding: 2px 8px 0px 8px; }
-
-.pijluitleg > .iconwide,
-.pijluitleg > .iconwide,
-.ev-pijllinks > .iconwide,
-.ev-pijlrechts > .iconwide {
-  width: 34px;
-  height: 35px;
-  margin: -7px 0px -8px 0px; }
+  padding: 4px 0px 0px 0px;
+  font-style: italic;
+  cursor: pointer;
+  margin-top: -12px; }
 
 .ev-pijllinks,
 .ev-pijlrechts {
@@ -1548,7 +1530,7 @@ a1a2 > .a2 .kolom,
   margin-top: -10px;
   width: 350px;
   position: absolute;
-  left: 622px; }
+  left: 770px; }
 
 .waardeinvestering {
   background-color: #f9f8f6;
@@ -1575,10 +1557,6 @@ a1a2 > .a2 .kolom,
 .interieur {
   width: 130px !important;
   max-height: 70px !important; }
-
-.org .icon {
-  padding: 0px 24px 4px 0px;
-  margin-top: -3px; }
 
 .orgheader {
   background-color: #edeae3;
@@ -1642,10 +1620,8 @@ a1a2 > .a2 .kolom,
 .orgscontainer .pers,
 .orgscontainer .admin,
 .orgscontainer .orgheader {
-  padding: 8px 4px 4px 8px;
   flex-grow: 1; }
 .orgscontainer .tekoop {
-  padding: 8px 4px 4px 8px;
   flex: 2 0 100px; }
 .orgscontainer .orgheader,
 .orgscontainer .itemheader,
@@ -1710,9 +1686,9 @@ a1a2 > .a2 .kolom,
 
 .overzichtsfoto-div {
   position: absolute;
-  top: 102px;
+  top: 90px;
   z-index: 1;
-  width: 600px;
+  width: 748px;
   height: 628px;
   background-color: white;
   border-style: solid;
@@ -1720,7 +1696,7 @@ a1a2 > .a2 .kolom,
   border-color: #CCCCCC; }
 
 .overzichtsfoto-img {
-  width: 598px;
+  width: 748px;
   height: 600px; }
 
 .vergroting {
@@ -1732,21 +1708,21 @@ a1a2 > .a2 .kolom,
   height: 400px;
   border: 1px solid #CCCCCC;
   z-index: 1;
-  box-shadow: 0px 0px 8px 0px rgba(1, 0, 0, 0.47); }
+  box-shadow: 0px 0px 38px 0px rgba(1, 0, 0, 0.47); }
 
 .vergroting-tekoop {
   justify-content: flex-start;
   position: absolute;
   top: 0px;
-  left: 205px;
-  height: 250px; }
+  left: 0px;
+  height: 100%; }
   .vergroting-tekoop > :nth-child(2),
   .vergroting-tekoop > :nth-child(3) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #CCCCCC;
-    padding: 2px; }
+    padding: 8px; }
   .vergroting-tekoop .artworkbrood {
     width: 150px;
     max-height: 130px; }
@@ -1756,15 +1732,24 @@ a1a2 > .a2 .kolom,
 
 .reclame .vergroting {
   position: absolute;
-  top: -100px;
-  left: 205px;
+  top: 0px;
+  left: 0px;
   height: 230px; }
   .reclame .vergroting > :nth-child(2) {
     width: 360px; }
 
+.admin .vergroting {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 290px;
+  height: 270px; }
+  .admin .vergroting > :nth-child(2) {
+    width: 97%; }
+
 .volledigegrootte {
-  max-width: 550px;
-  max-height: 400px; }
+  max-width: 500px;
+  max-height: 450px; }
 
 .container-ev > .pijlrechts,
 .tekoop > .pijlrechts,
@@ -1776,7 +1761,7 @@ a1a2 > .a2 .kolom,
   margin-top: -2px;
   width: 350px;
   position: absolute;
-  left: 220px; }
+  left: 200px; }
 
 .geld > .pijllinks,
 .overheid > .pijllinks,
@@ -1789,7 +1774,37 @@ a1a2 > .a2 .kolom,
 .orgnaam > .pijllinks {
   width: 350px;
   position: absolute;
-  left: -370px; }
+  left: -210px; }
+
+.middenlinks {
+  position: absolute;
+  left: 200px;
+  width: 102px;
+  display: none; }
+
+.middenrechtscontainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -135px;
+  width: 102px;
+  display: none; }
+
+.uitlegproces {
+  font-style: italic; }
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column; }
+
+.uitlegproces {
+  margin-top: -6px;
+  line-height: 1.1; }
 
 .container-ev {
   display: flex;
@@ -1803,7 +1818,9 @@ a1a2 > .a2 .kolom,
     flex-direction: row;
     justify-content: space-between;
     width: 600px;
-    background-color: white; }
+    background-color: white;
+    padding-bottom: 24px;
+    padding-top: 12px; }
     .container-ev .bar-ev :nth-child(1),
     .container-ev .bar-ev :nth-child(2),
     .container-ev .bar-ev :nth-child(3) {
@@ -1819,12 +1836,17 @@ a1a2 > .a2 .kolom,
 .pijlrechts {
   display: none; }
 
+.abc {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #CCCCCC; }
+
 .orgheader,
 .overeenkomsten,
 .geld,
 .overheid,
 .finprod,
-.bedrijfsprocessen-a,
+.bedrijfsprocessen-ac,
 .actvlot,
 .actvast,
 .kosten,
@@ -1839,7 +1861,7 @@ a1a2 > .a2 .kolom,
 .pers,
 .admin {
   border-style: solid;
-  border-width: 1px 1px 1px 1px;
+  border-width: 1px 1px 0px 1px;
   border-color: #CCCCCC; }
 
 .a1 {
@@ -1855,7 +1877,7 @@ a1a2 > .a2 .kolom,
   border-color: #CCCCCC; }
 
 .toewijzing,
-.bedrijfsprocessen {
+.bedrijfsprocessen-b {
   border-style: solid;
   border-width: 1px 0px 1px 0px;
   border-color: #CCCCCC; }
@@ -2860,7 +2882,7 @@ hr {
     .productenrij .productitem .pijl {
       transform: rotate(90deg);
       margin-top: 6px;
-      background-color: #fbd0e6; }
+      background-color: #fef1f8; }
   .productenrij .borderleft, .productenrij .borderright {
     border-left: 1px solid #CCCCCC;
     height: 72px; }
@@ -3719,7 +3741,7 @@ hr {
 .ervaringmenspijl {
   transform: rotate(180deg);
   margin-left: 540px;
-  background-color: #ded8d3; }
+  background-color: #eeeae8; }
 
 .cont-mens {
   display: flex;
@@ -4373,7 +4395,7 @@ hr {
   padding-right: 24px; }
 .cmsTabel td {
   padding-right: 24px;
-  padding-bottom: 12px; }
+  padding-top: 12px; }
 .cmsTabel .plaatje3 {
   display: flex;
   flex-direction: row;
@@ -4609,9 +4631,9 @@ hr {
   color: #8a7766; }
 
 .bgoutput {
-  background-color: #fbd0e6 !important; }
+  background-color: #fef1f8 !important; }
 
 .bginput {
-  background-color: #ded8d3 !important; }
+  background-color: #eeeae8 !important; }
 
 /*# sourceMappingURL=application.css.map */

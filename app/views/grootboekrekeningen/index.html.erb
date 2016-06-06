@@ -5,6 +5,7 @@
 <table class="cmsTabel">
   <thead>
     <tr>
+      <th>id</th>
       <th>Naam</th>
       <th>Grootboektype</th>
       <th>Organisatie</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @grootboekrekeningen.each do |grootboekrekening| %>
       <tr>
+        <td><%= grootboekrekening.id %></td>
         <td><%= grootboekrekening.naam %></td>
         <td><%= grootboekrekening.grootboektype.naam %></td>
         <td><%= grootboekrekening.organisatie.naam %></td>

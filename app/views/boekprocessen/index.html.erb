@@ -5,6 +5,7 @@
 <table class="cmsTabel">
   <thead>
     <tr>
+      <th>id</th>
       <th>Naam</th>
       <th>Kostenspecificatie</th>
       <th>Icoon</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @boekprocessen.each do |boekproces| %>
       <tr>
+        <td><%= boekproces.id %></td>
         <td><%= boekproces.naam %></td>
         <td><%= boekproces.kostenspecificatie %></td>
         <td><%= image_tag boekproces.icoon_url(:thumb).to_s %></td>

@@ -21,6 +21,9 @@
       position: relative;
       top: 24px;
       padding-bottom: 24px;
+      //padding-right: 300px;
+      //padding-left: 200px;
+      //background-color: yellow;
   }
   
   .container-movie,
@@ -34,9 +37,9 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      top: 76px;
+      top: 67px;
       //left: 2px;
-      width: 600px;
+      width: $breedte_organisatie - 1px;
       height: 623px;
       background-color: white;
       display: none;
@@ -55,7 +58,10 @@
       background-color: $background-color-2;
   }
   
-  .movie-org {}
+  .movie-org iframe {
+      width: $breedte_organisatie - 3px;    
+      height: $breedte_organisatie/1.73;
+  }
   
   .orgbuttons {
       position: absolute;
@@ -97,34 +103,13 @@
   .geld,
   .overheid,
   .finprod {
-      height: 32px;
+      //  height: 32px;
   }
+ 
   
-  .itemheaderovereenkomst:nth-child(1),
-  .itemheadergeld:nth-child(1),
-  .itemheaderoverheid:nth-child(1),
-  .itemheaderfinprod:nth-child(1) {
-      flex: 0 1 33px;
-  }
-  
-  .itemheaderovereenkomst:nth-child(2),
-  .itemheadergeld:nth-child(2),
-  .itemheaderoverheid:nth-child(2),
-  .itemheaderfinprod:nth-child(2) {
-      flex: 0 1 300px;
-  }
-  
-  .itemheaderovereenkomst:nth-child(3),
-  .itemheadergeld:nth-child(3),
-  .itemheaderoverheid:nth-child(3),
-  .itemheaderfinprod:nth-child(3) {
-      flex: 1 1 auto;
-  }
-  
-  .bedrijfsprocessen,
-  .bedrijfsprocessen-a {
-      background-color: $background-color-2;
-      padding-top: 6px;
+  .bedrijfsprocessen-b,
+  .bedrijfsprocessen-ac {
+      background-color: $background-color-2;      
       font-weight: bold;
       flex: 0 0 32px;
       display: flex;
@@ -134,7 +119,7 @@
       text-align: center;
   }
   
-  .bedrijfsprocessen {
+  .bedrijfsprocessen-b { //is nodig voor hoogte
       flex: 0 0 33px;
   }
   
@@ -145,7 +130,7 @@
   .finprod,
   .orgbuttons,
   {
-      width: 600px;
+      width: $breedte_organisatie;
   }
   
   .overeenkomsten .rijtje .klein {
@@ -155,7 +140,7 @@
   .a,
   .b,
   .c {
-      height: 400px;
+      height: 450px;
   }
   
   .a1,
@@ -166,11 +151,11 @@
   .a,
   .c,
   {
-      width: 200px;
+      width: 180px;
   }
   
   .b {
-      width: 200px;
+      width: $breedte_b;
       .kostprijsberekening {
           background-color: white;
           flex: auto;
@@ -240,8 +225,8 @@
   .a2,
   a1a2>.a1,
   a1a2>.a2 .kolom,
-  .pijllinks,
-  .pijlrechts,
+  //.pijllinks,
+  //.pijlrechts,
   .pijlwaarde {
       display: -webkit-flex;
       flex-direction: column;
@@ -257,6 +242,7 @@
   .rij {
       display: -webkit-flex;
       flex-direction: row;
+      align-items: center;
   }
   
   .rijtje {
@@ -276,7 +262,22 @@
   {
       justify-content: flex-start;
   }
-  
+  .itemheader {
+    background-color: $background-color-2;    
+  }
+  .itemheader > div {
+    margin: 1px 4px;
+  }
+  .itemheader > div:not(.icon) {
+    margin-top: 3px !important;
+  }
+  .itemheader + div { //inspringen van eerste gbr
+   padding-left: 8px;
+  } 
+  .itemheader + div + div { //inspringen van tweede gbr
+   padding-left: 8px;
+  }
+
   .start .rij {
       //justify-content: space-between;
       align-items: center;
@@ -293,47 +294,45 @@
   }
   
   .pijluitleg {
-      font-size: 12px;
+      //font-size: 14px;
+      //color: darkblue;
+      //font-style: italic;
   }
   
-  .pijllinks {
-      margin-left: 90px;
-  }
   
+  .pijllinks .iconwide:not(.icon-geldpijl) {
+      //background-color: $bginput!important;
+  }
   .pijllinks .pijlwaarde {
       align-items: flex-start;
+      max-width: 285px;
   }
   
   .pijlrechts .pijlwaarde {
       align-items: flex-start;
+      max-width: 285px;
   }
   
   .pijlrechts .iconwide:not(.icon-geldpijl) {
-      background-color: $bgoutput!important;
+      //background-color: $bgoutput!important;
   }
   
   .pijlwaarde div,
-  .pijlwaarde,
+  //.pijlwaarde,
   .waardeinvestering {
       //color: $tekst-verleden; 
       padding: 2px;
-      font-size: 12px;
+      //font-size: 12px;
   }
   
   .pijluitlegwoord {
-      padding: 2px 8px 0px 8px;
+      padding: 4px 0px 0px 0px;
+      font-style: italic;
+      cursor: pointer;
+      margin-top: -12px;
   }
   
-  .pijluitleg,
-  .pijluitleg,
-  .ev-pijllinks,
-  .ev-pijlrechts {
-      > .iconwide {
-          width: 34px;
-          height: 35px;
-          margin: -7px 0px -8px 0px;
-      }
-  }
+
   
   .ev-pijllinks,
   .ev-pijlrechts {
@@ -360,7 +359,7 @@
       margin-top: -10px;
       width: 350px;
       position: absolute;
-      left: 622px;
+      left: 770px;
   }
   
   .waardeinvestering {
@@ -399,10 +398,7 @@
       max-height: 70px!important;
   }
   
-  .org .icon {
-      padding: 0px 24px 4px 0px;
-      margin-top: -3px;
-  }
+
   
   .orgheader {
       background-color: $background-color-1;
@@ -477,12 +473,12 @@
       .pers,
       .admin,
       .orgheader {
-          padding: 8px 4px 4px 8px;
+          //padding: 8px 4px 4px 8px;
           flex-grow: 1;
       }
       .tekoop,
       {
-          padding: 8px 4px 4px 8px;
+          //padding: 8px 4px 4px 8px;
           flex: 2 0 100px;
       }
       .orgheader,
@@ -579,9 +575,9 @@
   
   .overzichtsfoto-div {
       position: absolute;
-      top: 102px;
+      top: 90px;
       z-index: 1;
-      width: 600px;
+      width: $breedte_organisatie - 2px;
       height: 628px;
       background-color: white;
       border-style: solid;
@@ -590,7 +586,7 @@
   }
   
   .overzichtsfoto-img {
-      width: 598px;
+      width: $breedte_organisatie - 2px;
       height: 600px;
   }
   
@@ -607,8 +603,9 @@
       height: 400px;
       border: 1px solid $border-color-base;
       z-index: 1;
-      box-shadow: 0px 0px 8px 0px rgba(1, 0, 0, 0.47);
+      box-shadow: 0px 0px 38px 0px rgba(1, 0, 0, 0.47);
       //box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.2);
+      
   }
 
  
@@ -616,15 +613,15 @@
       justify-content: flex-start;
       position: absolute;
       top: 0px;
-      left: 205px;
-      height: 250px;
+      left: 0px;
+      height: 100%;
       >:nth-child(2),
       >:nth-child(3) {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           border-bottom: 1px solid $border-color-base;
-          padding: 2px;
+          padding: 8px;
       }
       .artworkbrood {
           width: 150px;
@@ -644,17 +641,27 @@
   
   .reclame .vergroting {
       position: absolute;
-      top: -100px;
-      left: 205px;
+      top: 0px;
+      left: 0px;
       height: 230px;
       >:nth-child(2) {
           width: 360px;
       }
   }
+  .admin .vergroting {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 290px;
+      height: 270px;
+      >:nth-child(2) {
+          width: 97%;
+      }
+  }
   
   .volledigegrootte {
-      max-width: 550px;
-      max-height: 400px;
+      max-width: 500px;
+      max-height: 450px;
   }
   
   .container-ev,
@@ -668,7 +675,7 @@
           margin-top: -2px;
           width: 350px;
           position: absolute;
-          left: 220px;
+          left: 200px;
       }
   }
   
@@ -685,9 +692,47 @@
       >.pijllinks {
           width: 350px;
           position: absolute;
-          left: -370px
+          left: -210px
       }
   }
+ .middenlinks {
+   position: absolute;
+   left: 200px;
+   width: 102px;
+   display: none;
+ } 
+ 
+ .middenrechtscontainer {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   left: -135px;
+   width: 102px;
+   display: none;
+ }
+ .middenrechts {
+ }
+
+  .uitlegproces {
+     //color: darkblue;
+     font-style: italic;
+     }   
+
+ .flexrow {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+ .flexcolumn {
+   display: flex;
+   flex-direction: column;
+
+ }
+
+   .uitlegproces{     
+     margin-top: -6px;
+     line-height: 1.1;
+   }
   
   .container-ev {
       display: flex;
@@ -702,6 +747,8 @@
           justify-content: space-between;
           width: 600px;
           background-color: white;
+          padding-bottom: 24px;
+          padding-top: 12px;
           :nth-child(1),
           :nth-child(2),
           :nth-child(3),
@@ -724,12 +771,21 @@
       display: none;
   }
   
+
+  .abc,
+  {
+      border-style: solid;
+      border-width: 0px 0px 1px 0px;
+      border-color: $border-color-base;
+  }
+
+
   .orgheader,
   .overeenkomsten,
   .geld,
   .overheid,
   .finprod,
-  .bedrijfsprocessen-a,
+  .bedrijfsprocessen-ac,
   .actvlot,
   .actvast,
   .kosten,
@@ -747,7 +803,7 @@
   .admin,
   {
       border-style: solid;
-      border-width: 1px 1px 1px 1px;
+      border-width: 1px 1px 0px 1px;
       border-color: $border-color-base;
   }
   
@@ -766,7 +822,7 @@
   }
   
   .toewijzing,
-  .bedrijfsprocessen {
+  .bedrijfsprocessen-b {
       border-style: solid;
       border-width: 1px 0px 1px 0px;
       border-color: $border-color-base;

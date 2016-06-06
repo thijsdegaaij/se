@@ -33,8 +33,8 @@ $x: hsl(42, 31%, 56%);
 /* Functional colors */
 $output				: hsl(329, 85%, 70%);
 $input				: hsl(28, 15%, 47%);
-$bgoutput			: hsl(329, 85%, 90%);
-$bginput			: hsl(28, 15%, 85%);
+$bgoutput			: hsl(329, 85%, 97%);
+$bginput			: hsl(28, 15%, 92%);
 
 $blue				:	$ggblue;
 $red				:	$ggred;
@@ -90,3 +90,6 @@ $colorhover			:	$gray1;
 
 $leftq				: 570;
 $left				: 570px;
+
+$breedte_organisatie: 750px;
+$breedte_b			: $breedte_organisatie - 360px;

@@ -19,19 +19,23 @@ class OrganisatiesController < ApplicationController
     
     session[:org_id] = @organisatie_search.id
     
-    @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1)
-    @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2)
-    @gbr_kn = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 3) 
-    @gbr_pr = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 4)
-    @gbr_tk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 5)
-    @gbr_kh = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 6)
-    @gbr_rc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 7)
-    
-    @gbr_ndc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 11)
-    @gbr_dc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 12)
-    @gbr_vg = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 14)
-    @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15)
-    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16)
+   # NB staat ook in home_controller
+    #Bakker Bart   
+    @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1) #vlottende activa
+    @gbr_va = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 2) #vasteactiva
+    @gbr_kn = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 3) #kosten
+    @gbr_pr = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 4) #personeel
+    @gbr_tk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 5) #verkopen
+    @gbr_kh = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 6) #knowhow
+    @gbr_rc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 7) #reclame
+      
+    #Maxima
+    @gbr_ndc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 12) #niet duurzame consumptiegoederen
+    @gbr_dc = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 13) #duurzame consumptiegoederen
+    @gbr_vg = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 14) #voor gezinsleden (consument als producent)
+    @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15) #huishouden kennis
+    @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16) #arbeid uit
+    @gbr_adm = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 17) #administratie   
   
     # Grootboek  
     @gb_div = []

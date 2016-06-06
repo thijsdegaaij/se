@@ -2,12 +2,29 @@
   <h1>Grootboek</h1>
   
   <h2>Diversen</h2>
+
+
+
+
+  <h3>oefening</h3>
+
+
+
+
+
+
+
+  <h3>einde oefening</h3>
+  <p></p>
+
   <% @gb_div.each do |gb_type| %>
     <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
     <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
     <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
   <% end %>
   </b>
+
+
   
   <h2>Input</h2>
   <% @gb_input.each do |gb_type| %>

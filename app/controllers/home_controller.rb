@@ -93,18 +93,33 @@ class HomeController < ApplicationController
 #     end
 
     # Grootboek  
+
+
+
+
+
+# Staat ook in organisatie_controller
     @gb_div = []
     @gb_input = []
+    @gbr = []
     
+
+
     if @organisatie_search.rechtsvorm_id != 1
       # Diverse grootboek
-      Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_div.push(calc_gbtype(@organisatie_search, t.id))
+      Grootboektype.distinct.where("categorie = ?", "D").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search)
+      .references(:organisatie).each { |t| @gb_div.push(calc_gbtype(@organisatie_search, t.id))
       }
       # Input grootboek
-      Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
-        @gb_input.push(calc_gbtype(@organisatie_search, t.id))
+      Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search)
+      .references(:organisatie).each { |t| @gb_input.push(calc_gbtype(@organisatie_search, t.id))
       }
+
+
+      # Thijs;  boekingen op grootboekrekening bank
+  #    Grootboekrekening.where("naam = ?", "Bank")
+  #    .references(:organisatie).each { |t| @gbr.push(calc_gbr(@organisatie_search, t.id))
+  #    }
             
       # Output grootboek
 
@@ -127,6 +142,46 @@ class HomeController < ApplicationController
       @omzet= calc_boekproces(@organisatie_search, 29)[1]
       logger.debug("OMZET: #{@omzet}")
       
+     
+     
+      # inkomsten / door thijs
+      @inkomsten = 0
+      @inkomsten= calc_boekproces(@organisatie_search, 1)[0]
+      logger.debug("OMZET: #{@omzet}")
+
+
+      # uitgaven / door thijs
+      @betalingen = 0
+      @betalingen= calc_boekproces(@organisatie_search, 2)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+
+      # levering vlottende activa / door thijs
+      @leveringen_vla = 0
+      @leveringen_vla= calc_gbtype(@organisatie_search, 1)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+      # levering vaste activa / door thijs
+      @leveringen_va = 0
+      @leveringen_va= calc_gbtype(@organisatie_search, 2)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+      # levering kosten / door thijs
+      @leveringen_kst = 0
+      @leveringen_kst = calc_gbtype(@organisatie_search, 3)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+      # kostensoort: afschrijvingen / door thijs
+      @afschrijving = 0
+      @afschrijving = calc_boekproces(@organisatie_search, 20)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+      # kostensoort: overige bedrijfskosten / door thijs
+      @ks_overige_bedrijfskosten = 0
+      @ks_overige_bedrijfskosten = calc_boekproces(@organisatie_search, 23)[1]
+      logger.debug("OMZET: #{@omzet}")
+
+
       # Basis winst
       @basiswinst = 0
       @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten
@@ -162,6 +217,29 @@ class HomeController < ApplicationController
   # Public gemaakt, van private /Thijs
   public
     
+#Thijs; boekingen van een specifieke grootboekrekening
+    def calc_gbr(org, gbr)
+      min = 0
+      plus = 0
+      totaal = 0
+      naam = ""
+      gbr = org.grootboekrekeningen.where("grootboekrekening_id = ?", "#{gbr}")
+      gbr.each { |gbr|
+        gbr.boekingen.each { |boeking|
+            if boeking.bij_af == '-'
+              min = min + boeking.waarde
+            else
+              plus = plus + boeking.waarde
+            end
+        }
+        totaal = plus - min
+      }
+      naam = Grootboekrekening.find(gbr).naam
+      return naam, plus, min, totaal
+    end
+
+#Thijs-einde
+
     def calc_gbtype(org, gb_type)
       min = 0
       plus = 0

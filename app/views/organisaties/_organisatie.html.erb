@@ -22,6 +22,7 @@
                         <div class="btnorg1 button">minder</div>
                         <div class="btnorg2 button displaynone">meer</div>
                         <div class="btnorg3 button">processen</div>
+                        <div class="btnorg5 button">EV</div>
                         <div class="btnorg4 button">waarde</div>
                     </div>
                     <div id="orgnaam" class="orgnaam">
@@ -71,9 +72,9 @@
                         <div id="geld" class="geld">
                             <div class=" pijllinks">
                                 <div class="pijluitleg">
-                                    <div class="iconwide icon-geldpijl"></div>
+                                    <div class="icon icon-geldpijl"></div>
                                      <div class="pijlwaarde waardeniet">
-                                    <div>&euro; 200.000</div>
+                                    <div>&euro; <%= @betalingen %></div>
                                     </div>
                                 </div>
                                 <div class="pijluitlegwoord" title="inkopen, belasting en winstuitkering ">betalingen</div>
@@ -81,9 +82,9 @@
                                
                             <div class="pijlrechts">
                                 <div class="pijluitleg">
-                                    <div class="iconwide icon-geldpijl"></div>
+                                    <div class="icon icon-geldpijl"></div>
                                     <div class="pijlwaarde waardeniet">
-                                        <div>Omzet (&euro; <%= @omzet %>)</div>
+                                        <div>&euro; <%= @inkomsten %></div>
                                     </div>
                                 </div>
                                 <div class="pijluitlegwoord">inkomsten</div>
@@ -103,7 +104,7 @@
                                 <div>Debiteuren en Crediteuren</div>
                             </div>
                             <div>debiteuren</div>
-                            <div>crediteuren</div>
+                            <div>crediteuren</div>                           
                         </div>
                         <div id="overheid" class="overheid">
                             <div class="itemheader itemheaderoverheid">
@@ -114,6 +115,11 @@
                             </div>
                             <div>te betalen/ontvangen btw</div>
                             <div>te betalen sociale verzekeringen</div>
+                            <div class="overzicht-rente">
+                                <div>te betalen belastingen</div>
+                                <div class="iconwide icon-belasting-neg proces displaynone"></div>
+                                <div class="proces displaynone">- &euro; <%= @belastingen %></div>    
+                            </div>
                         </div>
                         <div id="finprod" class="finprod">
                             <div class="itemheader itemheaderfinprod">
@@ -124,7 +130,11 @@
                             </div>
                             <div>
                                 <div>lening 5%</div>
-                                <div>te betalen rente</div>
+                                <div class="overzicht-rente">
+                                    <div>te betalen rente</div>
+                                    <div class="iconwide icon-rente-neg proces displaynone"></div>
+                                    <div class="proces displaynone">- &euro; 1000</div>    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,22 +149,31 @@
                             <div id="actvlot" class=" actvlot">
                                 <div class=" pijllinks">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-stroommarkt"></div>
+                                        <div class="icon icon-stroommarkt"></div>
                                         <div class="pijlwaarde waardeniet">
-                                            <div>100.000 &agrave; &euro; 1,00 </div>
+                                            <div>&euro; <%= @leveringen_vla %></div>
                                         </div>
                                     </div>
                                     <div class="pijluitlegwoord" title="inkoop brood &euro; 100.000 ">leveringen</div>
                                 </div>
                                 <div class="middenlinks">
                                     <div class="flexrow">
-                                        <div class="iconwide icon-stroomintern"></div>
+                                        <div class="icon icon-stroomintern"></div>
                                         <div class="pijlwaarde waardeniet">
-                                            <div>&euro;<%= @inkw_vd_omzet %></div>
+                                            <div>&euro; <%= @inkw_vd_omzet %></div>
                                         </div>  
                                     </div> 
                                     <div class="uitlegproces">inkoopwaarde van de omzet</div>
-                                </div>                             
+                                </div>  
+                                <div class="middenmidden">
+                                    <div class="flexrow">
+                                        <div class="icon icon-stroomintern"></div>
+                                        <div class="pijlwaarde waardeniet">
+                                            <div>&euro; <%= @inkw_vd_omzet %></div>
+                                        </div>  
+                                    </div> 
+                                    <div class="uitlegproces">inkoopwaarde van de omzet</div>
+                                </div>                              
                                 <div class=" itemheader">
                                     <% if @organisatie_search.rechtsvorm.id != 1 %>
                                       <div class="icon icon-rondje"></div>
@@ -180,7 +199,7 @@
                                         <% end %>  
                                       <% end %>
                                 </div>
-                                <div class="itembody-display">
+                                <div class="itembody-display ">
                                     <div class="itembody">
                                       <% if @organisatie_search.rechtsvorm.id != 1 %>
                                         <% if !@grb_vla.present? %>
@@ -202,18 +221,27 @@
                             <div id="actvast" class="  actvast">
                                 <div class=" pijllinks">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-stroommarkt"></div>
+                                        <div class="icon icon-stroommarkt"></div>
                                         <div class="pijlwaarde waardeniet ">
-                                            <div>&euro; 10.000</div>
+                                            <div>&euro; <%= @leveringen_va %></div>
                                         </div>
                                     </div>
                                     <div class="pijluitlegwoord" title="oven en winkelspullen">leveringen</div>
                                 </div>
                                 <div class="middenlinks">
                                     <div class="flexrow">
-                                        <div class="iconwide icon-dienstintern"></div>
+                                        <div class="icon icon-dienstintern"></div>
                                         <div class="pijlwaarde waardeniet">
-                                            <div>&euro;<%= @algemenekosten %></div>
+                                            <div>&euro; <%= @afschrijving %></div>
+                                        </div>
+                                    </div>
+                                        <div class="uitlegproces">afschrijvingen</div>
+                                </div>   
+                                <div class="middenmidden">
+                                    <div class="flexrow">
+                                        <div class="icon icon-dienstintern"></div>
+                                        <div class="pijlwaarde waardeniet">
+                                            <div>&euro; <%= @algemenekosten %></div>
                                         </div>
                                     </div>
                                         <div class="uitlegproces">algemene kosten</div>
@@ -267,34 +295,45 @@
                             <div id="kosten" class="kosten">
                                 <div class=" pijllinks">
                                     <div class="pijluitleg ">
-                                        <div class="iconwide icon-dienstmarkt"></div>
-                                        <div class="iconwide icon-stroommarkt"></div>
+                                        <div class="icon icon-dienstmarkt"></div>
+                                        <div class="icon icon-stroommarkt"></div>
                                         <div class="pijlwaarde waardeniet">
-                                            <div>&euro; 20.000</div>
+                                            <div>&euro; <%= @leveringen_kst %></div>
                                         </div>
                                     </div>
                                     <div class="pijluitlegwoord" title="Huur winkel, elektriciteit en diversen ">leveringen</div>
                                 </div>
                                 <div class="middenlinks">
                                     <div class="flexrow">
-                                        <div class="iconwide icon-dienstintern"></div>
+                                        <div class="icon icon-dienstintern"></div>
                                         <div class="pijlwaarde waardeniet flexrow">
-                                            <div>&euro;<%= @inkoopkosten %></div>
+                                            <div>&euro; <%= @ks_overige_bedrijfskosten %></div>
+                                        </div>
+                                    </div>
+                                    <div class="flexrow">
+                                        <div class="uitlegproces">overige bedrijfskosten</div>
+                                    </div>  
+                                </div>   
+                                <div class="middenmidden">
+                                    <div class="flexrow">
+                                        <div class="icon icon-dienstintern"></div>
+                                        <div class="pijlwaarde waardeniet flexrow">
+                                            <div>&euro; <%= @inkoopkosten %></div>
                                         </div>
                                     </div>
                                     <div class="flexrow">
                                         <div class="uitlegproces">inkoopkosten</div>
                                     </div>                                   
                                     <div class="flexrow">
-                                        <div class="iconwide icon-dienstintern"></div>
+                                        <div class="icon icon-dienstintern"></div>
                                         <div class="pijlwaarde waardeniet flexrow">
-                                            <div>&euro;<%= @verkoopkosten %></div>
+                                            <div>&euro; <%= @verkoopkosten %></div>
                                         </div>
                                     </div>
                                     <div class="flexrow">
                                         <div class="uitlegproces">verkoopkosten</div>
                                     </div>
-                                </div>    
+                                </div>  
                                 <div class="itemheader">
                                     <div class="icon icon-pijlhoofdmarkt"></div>
                                     <div>Kosten</div>
@@ -323,7 +362,7 @@
                             <div id="pers" class="pers">
                                 <div class=" pijllinks">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-arbeidmarkt"></div>
+                                        <div class="icon icon-arbeidmarkt"></div>
                                         <div class="pijlwaarde waardeniet">
                                             <div>&euro; 40.000</div>
                                         </div>
@@ -372,38 +411,34 @@
                             <div id="tekoop" class="tekoop  button">
                                 <div class=" pijlrechts">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-stroommarkt"></div>
-                                        <div class="pijlwaarde waardeniet">
-                                            <div>100.000 &agrave; &euro; 2,00 = &euro; <%= @omzet %> </div>
+                                        <div class="icon icon-stroommarkt"></div>
+                                        <div class="pijlwaarde waardeniet">&euro;<%= @omzet %>
                                         </div>
                                     </div>
-                                    <div class="pijluitlegwoord" title="omzet brood">leveringen</div>
+                                    <div class="pijluitlegwoord" title="omzet brood">omzet</div>
                                 </div>
                                 <div class="middenrechtscontainer">
                                     <div class="middenrechts">
                                         <div class="flexrow">
-                                            <div class="iconwide icon-stroomintern"></div>
-                                            <div class="pijlwaarde waardeniet">
-                                                <div class="">&euro;<%= @inkw_vd_omzet %></div>
-                                            </div>
+                                            <div class="icon icon-stroomintern"></div>
+                                            <div class="pijlwaarde waardeniet">&euro; <%= @inkw_vd_omzet %></div>
                                         </div>       
                                         <div class="uitlegproces">inkoopwaarde van de omzet</div>
                                     </div>
-
                                     <div class="middenrechts">
                                         <div class="flexrow">
-                                            <div class="iconwide icon-dienstintern"></div>
+                                            <div class="icon icon-dienstintern"></div>
                                             <div class="pijlwaarde waardeniet">
-                                                <div>&euro;<%= @bedrijfskosten %></div>
+                                                <div>&euro; <%= @bedrijfskosten %></div>
                                             </div>
                                         </div>
                                         <div class="uitlegproces">bedrijfskosten</div>
                                     </div>      
                                     <div class="middenrechts">
                                         <div class="flexrow">
-                                            <div class="iconwide icon-winst"></div>
+                                            <div class="iconwide icon-prod-pos"></div>
                                             <div class="pijlwaarde waardeniet">
-                                                <div>&euro;<%= @basiswinst %></div>
+                                                <div>&euro; <%= @basiswinst %></div>
                                             </div>
                                         </div>
                                         <div class="uitlegproces">basiswinst</div>
@@ -451,8 +486,8 @@
                                     </div>
                                 </div>
                                 <div class="tw displaynone">
-                                    <div class="itemheader">
-                                        <div class="icon icon-overeenkomst"></div>
+                                    <div class="itemheader tw">
+                                        <div class="iconwide icon-prod-pos"></div>
                                         <div>brutowinst</div>
                                     </div>
                                     <div class="tw-waarde displaynone">&euro; 19.000</div>
@@ -472,11 +507,12 @@
                                     </div> -->
                                 </div>
                             </div>
+
 <!-- knowhow -->
                             <div class="knowhow">
                                 <div class=" pijlrechts">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-dienstmarkt"></div>
+                                        <div class="icon icon-dienstmarkt"></div>
                                         <div class="pijlwaarde waardeniet">
                                             <div>Gratis</div>
                                         </div>
@@ -514,7 +550,7 @@
                             <div class="reclame button">
                                 <div class=" pijlrechts">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-dienstextern"></div>
+                                        <div class="icon icon-dienstextern"></div>
                                         <div class="pijlwaarde waardeniet">
                                             <div>Gratis</div>
                                         </div>
@@ -556,7 +592,7 @@
                             <div id="admin" class="admin button ">
                                 <div class="pijlrechts">
                                     <div class="pijluitleg">
-                                        <div class="iconwide icon-dienstextern"></div>
+                                        <div class="icon icon-dienstextern"></div>
                                         <div class="pijlwaarde waardeniet">
                                             <div>Gratis</div>
                                         </div>
@@ -601,26 +637,60 @@
                     <!-- abc -->
                 </div>
                 <!-- org -->
-                <!-- EV -->
-                <div class="container-ev-display ">
-                    <div class="container-ev ">
-                        <div class="ev-pijllinks">
-                            <div class="iconwide icon-arbeidmarkt"></div>
-                            <div class="pijluitlegwoord">totale waarde in: &euro; 180.000</div>
+<!-- EV -->
+                <div class="container-ev-display displaynone">
+                    <div class="container-ev-column">
+                        <div class="itemheader">
+                            <div class="icon icon-ev"></div>
+                            <div>Eigen Vermogen</div>
                         </div>
-                        <div class="ev-pijlrechts">
-                            <div class="iconwide icon-arbeidmarkt"></div>
-                            <div class="pijluitlegwoord ">totale waarde uit: &euro; 200.000</div>
-                        </div>
-                        <div class="bar-ev">
-                            <div class="wl">Waardeverandering: &euro; 8.000</div>
-                            <div class="wl"></div>
-                            <div class="wr">Waardeverandering: &euro; 0
-                                <br>
-                                <br>Brutowinst: &euro; 28.000</div>
+                        <div class="container-ev ">
+                            <div class="bar-ev">
+                                <div class="wl">
+                                    <div class="">
+                                        <div>Waardeverandering: </div>
+                                        <div class="flex-row left">                                            
+                                            <div class="iconwide icon-pos"></div>
+                                            <div>&euro; 8.000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wm">
+                                    <div class="">
+                                        <div>Winst </div>
+                                        <div class="winstonderdeel"> 
+                                            <div>Basiswinst</div>                                           
+                                            <div class="iconwide icon-prod-pos"></div>
+                                            <div>+ &euro; <%= @basiswinst %></div>
+                                        </div>
+                                        <div class="winstonderdeel"> 
+                                            <div>Rente</div>                                           
+                                            <div class="iconwide icon-rente-neg"></div>
+                                            <div>-  &euro; 1000</div>
+                                        </div>
+                                        <div class="winstonderdeel"> 
+                                            <div>Belastingen</div>                                           
+                                            <div class="iconwide icon-belasting-neg"></div>
+                                            <div>-  &euro; <%= @belastingen %></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wr">
+                                    <div class="">
+                                        <div>Waardeverandering: </div>
+                                        <div class="flex-row left">                                            
+                                            <div class="iconwide icon-pos"></div>
+                                            <div>&euro; 0</div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
                 <!-- a -->
                 <!-- Toewijzing -->
                 <div id="vergroting-toewijzing" class="vergroting">

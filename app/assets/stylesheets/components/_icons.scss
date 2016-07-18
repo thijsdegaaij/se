@@ -10,7 +10,7 @@
 .iconwide{
   background-size: contain;
   background-repeat: no-repeat;
-  /*background-position: center center;*/
+  background-position: center center;
   display: inline-block; 
   width: 48px !important;
   height: 32px;
@@ -74,7 +74,6 @@
 .icon-voorraadstand      {background-image: url('/images/icons/icon_voorraadstand.png'); }
 
 .icon-ervaring           {background-image: url('/images/icons/icon_ervaring.png'); }
-.icon-ev                 {background-image: url('/images/icons/icon_EV.png'); }
 .icon-gedachten          {background-image: url('/images/icons/icon_gedachten.png'); }
 .icon-gevoelens          {background-image: url('/images/icons/icon_gevoelens.png'); }
 .icon-informatie         {background-image: url('/images/icons/icon_informatie.png'); }
@@ -92,7 +91,8 @@
 .icon-productie          {background-image: url('/images/icons/icon_productie.png'); }
 .icon-techniek           {background-image: url('/images/icons/icon_recept_T.png'); }
 .icon-recept             {background-image: url('/images/icons/icon_recept.png'); }
-.icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); }
+.icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); 
+                          height: 22px;}
 .icon-rechtgeld          {background-image: url('/images/icons/icon_recht_geld.png'); }
 .icon-rechtrente         {background-image: url('/images/icons/icon_recht_rente.png'); }
 .icon-plichtrente        {background-image: url('/images/icons/icon_plicht_rente.png'); }
@@ -110,6 +110,12 @@
 .icon-winst              {background-image: url('/images/icons/icon_winst.png'); 
                           margin-top: 7px; margin-left: -12px;}
 .icon-winstpos           {background-image: url('/images/icons/icon_winstpos.png'); }
+.icon-ev                 {background-image: url('/images/icons/icon_EV.png'); }
+.icon-prod-pos           {background-image: url('/images/icons/icon_prod-pos.png'); }
+.icon-prod-neg           {background-image: url('/images/icons/icon_prod-neg.png'); }
+
+.icon-rente-neg           {background-image: url('/images/icons/icon_rente-neg.png'); }
+.icon-belasting-neg           {background-image: url('/images/icons/icon_belasting-neg.png'); }
 
 
 .icon-rondje             {background-image: url('/images/icons/icon_rondje.png'); }

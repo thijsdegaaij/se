@@ -49,8 +49,8 @@ a {
 .flex-row {
   display: -webkit-flex;
   flex-direction: row;
-  -webkit-justify-content: space-around;
-  -webkit-align-items: center; }
+  justify-content: space-around;
+  align-items: center; }
 
 .left {
   -webkit-justify-content: flex-start; }
@@ -549,7 +549,7 @@ a {
 .iconwide {
   background-size: contain;
   background-repeat: no-repeat;
-  /*background-position: center center;*/
+  background-position: center center;
   display: inline-block;
   width: 48px !important;
   height: 32px; }
@@ -673,9 +673,6 @@ a {
 .icon-ervaring {
   background-image: url("/images/icons/icon_ervaring.png"); }
 
-.icon-ev {
-  background-image: url("/images/icons/icon_EV.png"); }
-
 .icon-gedachten {
   background-image: url("/images/icons/icon_gedachten.png"); }
 
@@ -725,7 +722,8 @@ a {
   background-image: url("/images/icons/icon_recept.png"); }
 
 .icon-plichtgeld {
-  background-image: url("/images/icons/icon_plicht_geld.png"); }
+  background-image: url("/images/icons/icon_plicht_geld.png");
+  height: 22px; }
 
 .icon-rechtgeld {
   background-image: url("/images/icons/icon_recht_geld.png"); }
@@ -776,6 +774,21 @@ a {
 
 .icon-winstpos {
   background-image: url("/images/icons/icon_winstpos.png"); }
+
+.icon-ev {
+  background-image: url("/images/icons/icon_EV.png"); }
+
+.icon-prod-pos {
+  background-image: url("/images/icons/icon_prod-pos.png"); }
+
+.icon-prod-neg {
+  background-image: url("/images/icons/icon_prod-neg.png"); }
+
+.icon-rente-neg {
+  background-image: url("/images/icons/icon_rente-neg.png"); }
+
+.icon-belasting-neg {
+  background-image: url("/images/icons/icon_belasting-neg.png"); }
 
 .icon-rondje {
   background-image: url("/images/icons/icon_rondje.png"); }
@@ -1481,6 +1494,9 @@ a1a2 > .a2 .kolom,
 .itemheader + div + div {
   padding-left: 8px; }
 
+.itemheader + div + div + div {
+  padding-left: 8px; }
+
 .start .rij {
   align-items: center; }
   .start .rij .kolom {
@@ -1513,7 +1529,7 @@ a1a2 > .a2 .kolom,
 .ev-pijlrechts {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   margin-top: 17px; }
 
@@ -1521,7 +1537,7 @@ a1a2 > .a2 .kolom,
   left: -276px; }
 
 .ev-pijlrechts {
-  left: 625px;
+  left: 770px;
   width: 280px; }
 
 .geld .pijlrechts,
@@ -1530,7 +1546,7 @@ a1a2 > .a2 .kolom,
   margin-top: -10px;
   width: 350px;
   position: absolute;
-  left: 770px; }
+  left: 754px; }
 
 .waardeinvestering {
   background-color: #f9f8f6;
@@ -1585,6 +1601,19 @@ a1a2 > .a2 .kolom,
     background-color: #34a853; }
   .orgheader .Financiële_instelling {
     background-color: #4387f4; }
+
+.overzicht-rente {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 19px; }
+  .overzicht-rente :nth-child(1) {
+    flex: 0 0 177px; }
+  .overzicht-rente :nth-child(2) {
+    flex: 0 0 65px;
+    transform: scale(0.8, 0.8); }
+  .overzicht-rente :nth-child(3) {
+    flex: 0 0 80px; }
 
 .orgscontainer .overeenkomsten,
 .orgscontainer .geld,
@@ -1648,11 +1677,12 @@ a1a2 > .a2 .kolom,
   position: relative; }
 
 .tw {
-  background-color: #fbbd04;
-  box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
-  color: white;
-  padding: 4px 3px 2px 3px;
-  margin-top: 8px; }
+  color: green;
+  height: 38px;
+  margin: 3px 8px 8px 8px; }
+
+.opvallendeachtergrond {
+  background-color: lightyellow; }
 
 .tw-waarde {
   padding-left: 32px;
@@ -1759,9 +1789,12 @@ a1a2 > .a2 .kolom,
 .admin > .pijlrechts,
 .total-right > .pijlrechts {
   margin-top: -2px;
-  width: 350px;
+  width: 330px;
   position: absolute;
-  left: 200px; }
+  left: 184px; }
+
+.pijlrechts.extra {
+  left: 770px; }
 
 .geld > .pijllinks,
 .overheid > .pijllinks,
@@ -1772,22 +1805,29 @@ a1a2 > .a2 .kolom,
 .pers > .pijllinks,
 .container-ev > .pijllinks,
 .orgnaam > .pijllinks {
-  width: 350px;
+  width: 320px;
   position: absolute;
   left: -210px; }
 
 .middenlinks {
   position: absolute;
-  left: 200px;
+  left: 184px;
   width: 102px;
   display: none; }
+
+.middenmidden {
+  position: absolute;
+  left: 322px;
+  width: 102px;
+  display: none;
+  background-color: #F4F3F3; }
 
 .middenrechtscontainer {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: -135px;
-  width: 102px;
+  left: -115px;
+  width: 105px;
   display: none; }
 
 .uitlegproces {
@@ -1796,6 +1836,7 @@ a1a2 > .a2 .kolom,
 .flexrow {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center; }
 
 .flexcolumn {
@@ -1806,31 +1847,56 @@ a1a2 > .a2 .kolom,
   margin-top: -6px;
   line-height: 1.1; }
 
+.container-ev-column {
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  padding-bottom: 24px;
+  padding-top: 22px; }
+  .container-ev-column .itemheader {
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: #CCCCCC; }
+  .container-ev-column .itemheader + div {
+    padding-left: 0px !important; }
+
 .container-ev {
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
-  top: 10px;
   font-size: 12px; }
   .container-ev .bar-ev {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 600px;
-    background-color: white;
-    padding-bottom: 24px;
-    padding-top: 12px; }
-    .container-ev .bar-ev :nth-child(1),
-    .container-ev .bar-ev :nth-child(2),
-    .container-ev .bar-ev :nth-child(3) {
-      width: 200px;
+    background-color: white; }
+    .container-ev .bar-ev .wl,
+    .container-ev .bar-ev .wm,
+    .container-ev .bar-ev .wr {
+      width: 180px;
       border-width: 1px 0px 1px 1px;
       border-style: solid;
       border-color: #CCCCCC;
       padding: 4px 0px 4px 8px; }
-    .container-ev .bar-ev :nth-child(3) {
+    .container-ev .bar-ev .wr {
       border: 1px solid #CCCCCC !important; }
+    .container-ev .bar-ev .wm {
+      width: 390px;
+      align-items: center; }
+
+.winstonderdeel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+  .winstonderdeel :nth-child(1) {
+    flex: 0 0 100px; }
+  .winstonderdeel :nth-child(2) {
+    flex: 0 0 80px; }
+  .winstonderdeel :nth-child(3) {
+    flex: 0 0 80px;
+    text-align: right; }
 
 .pijllinks,
 .pijlrechts {
@@ -1881,6 +1947,9 @@ a1a2 > .a2 .kolom,
   border-style: solid;
   border-width: 1px 0px 1px 0px;
   border-color: #CCCCCC; }
+
+.bedrijfsprocessen-b {
+  font-style: italic; }
 
 .ovrcontainer,
 .ovr {

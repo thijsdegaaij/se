@@ -277,6 +277,9 @@
   .itemheader + div + div { //inspringen van tweede gbr
    padding-left: 8px;
   }
+  .itemheader + div + div + div { //inspringen van tweede gbr
+   padding-left: 8px;
+  }
 
   .start .rij {
       //justify-content: space-between;
@@ -338,7 +341,7 @@
   .ev-pijlrechts {
       position: absolute;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: flex-start;
       margin-top: 17px;
   }
@@ -348,7 +351,7 @@
   }
   
   .ev-pijlrechts {
-      left: 625px;
+      left: 770px;
       width: 280px;
   }
   
@@ -359,7 +362,7 @@
       margin-top: -10px;
       width: 350px;
       position: absolute;
-      left: 770px;
+      left: 754px;
   }
   
   .waardeinvestering {
@@ -436,6 +439,23 @@
           background-color: $financieel;        
       }
   }
+  .overzicht-rente {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 19px;
+    :nth-child(1) {
+      flex: 0 0 177px;
+    }
+    :nth-child(2) {
+      flex: 0 0 65px;
+      transform: scale(0.8, 0.8);
+    }
+    :nth-child(3) {
+      flex: 0 0 80px;
+    }
+  }
+  
   
   .orgscontainer {
       .overeenkomsten,
@@ -527,12 +547,19 @@
   }
   
   .tw {
-      background-color: $orange;
-      box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
-      color: white;
-      padding: 4px 3px 2px 3px;
-      margin-top: 8px;
+      //box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
+      color: green;
+      height: 38px;
+      margin: 3px 8px 8px 8px;
+      //margin-top: 8px;
       //align-items: center;
+     
+  } 
+  .tw.itemheader {
+      //background-color: $orange;        
+      }
+  .opvallendeachtergrond {
+    background-color: lightyellow;
   }
   
   .tw-waarde {
@@ -673,10 +700,13 @@
   .total-right {
       > .pijlrechts {
           margin-top: -2px;
-          width: 350px;
+          width: 330px;
           position: absolute;
-          left: 200px;
+          left: 184px;
       }
+  }
+  .pijlrechts.extra {
+    left: 770px;
   }
   
   .geld,
@@ -690,24 +720,31 @@
   .orgnaam,
   {
       >.pijllinks {
-          width: 350px;
+          width: 320px;
           position: absolute;
           left: -210px
       }
   }
  .middenlinks {
    position: absolute;
-   left: 200px;
+   left: 184px;
    width: 102px;
    display: none;
+ } 
+ .middenmidden {
+   position: absolute;
+   left: 322px;
+   width: 102px;
+   display: none;
+   background-color: $background-color-2;
  } 
  
  .middenrechtscontainer {
    display: flex;
    flex-direction: column;
    position: absolute;
-   left: -135px;
-   width: 102px;
+   left: -115px;
+   width: 105px;
    display: none;
  }
  .middenrechts {
@@ -721,6 +758,7 @@
  .flexrow {
      display: flex;
      flex-direction: row;
+     justify-content: space-between;
      align-items: center;
  }
  .flexcolumn {
@@ -733,36 +771,74 @@
      margin-top: -6px;
      line-height: 1.1;
    }
+
+
+  .container-ev-column {
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      top: 10px;
+          padding-bottom: 24px;
+          padding-top: 22px;
+              .itemheader {
+              border-width: 1px 1px 0px 1px;
+              border-style: solid;
+              border-color: $border-color-base;           
+              }
+              .itemheader + div {
+              padding-left: 0px !important;                     
+              }
+  }
   
   .container-ev {
       display: flex;
       flex-direction: row;
       align-items: center;
       position: relative;
-      top: 10px;
       font-size: 12px;
       .bar-ev {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          width: 600px;
+          //width: 600px;
           background-color: white;
-          padding-bottom: 24px;
-          padding-top: 12px;
-          :nth-child(1),
-          :nth-child(2),
-          :nth-child(3),
+          .wl,
+          .wm,
+          .wr
           {
-              width: 200px;
+              width: 180px;
               border-width: 1px 0px 1px 1px;
               border-style: solid;
               border-color: $border-color-base;
               padding: 4px 0px 4px 8px;
           }
-          :nth-child(3) {
+          .wr {
               border: 1px solid $border-color-base !important;
           }
+          .wm {
+            width: $breedte_b;
+            align-items: center;
+          }
       }
+  }
+
+  .winstonderdeel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    :nth-child(1) {
+      flex: 0 0 100px;
+    }
+    :nth-child(2) {
+      flex: 0 0 80px;
+    }
+    :nth-child(3) {
+      flex: 0 0 80px;
+      //justify-content: flex-end;
+      text-align: right;
+      //align-self: flex-end;
+    }
   }
   
   .pijllinks,
@@ -826,6 +902,9 @@
       border-style: solid;
       border-width: 1px 0px 1px 0px;
       border-color: $border-color-base;
+  }
+  .bedrijfsprocessen-b {
+    font-style: italic;
   }
   
   .ovrcontainer,

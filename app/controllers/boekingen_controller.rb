@@ -6,7 +6,7 @@ class BoekingenController < ApplicationController
   # GET /boekingen
   # GET /boekingen.json
   def index
-    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam")
+    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id   ")
   end
 
   # GET /boekingen/1
@@ -68,7 +68,7 @@ class BoekingenController < ApplicationController
         Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @org).references(:organisatie).each { |t|
           @gb_input.push(calc_gbtype(@org, t.id))
         }
-      
+=begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij organisaties_controller, lijkt geen effect te hebben. Alles staat op home_controller.  
         # Output grootboek
         # Inkoopwaarde van de omzet
         @inkw_vd_omzet = 0
@@ -84,6 +84,8 @@ class BoekingenController < ApplicationController
         @omzet = 0
         @omzet= calc_boekproces(@org, 29)[1]
         logger.debug("OMZET: #{@omzet}")
+
+
 
         # Basis winst
         @basiswinst = 0
@@ -110,8 +112,14 @@ class BoekingenController < ApplicationController
         # Eind EV
         @ev_eind = 0
         @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
+
+=end
+
+
       end
     # Eind grootboek
+
+
   end
 
   # POST /boekingen

@@ -6,7 +6,7 @@ class GrootboekrekeningenController < ApplicationController
   # GET /grootboekrekeningen
   # GET /grootboekrekeningen.json
   def index
-    @grootboekrekeningen = Grootboekrekening.all.includes(:organisatie).order("organisaties.naam")
+    @grootboekrekeningen = Grootboekrekening.all.includes(:organisatie).order("organisaties.naam, grootboekrekeningen.grootboektype_id")
   end
 
   # GET /grootboekrekeningen/1

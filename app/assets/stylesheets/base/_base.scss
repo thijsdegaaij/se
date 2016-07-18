@@ -39,8 +39,8 @@ a {
   .flex-row {
     display: -webkit-flex;
     flex-direction: row;
-    -webkit-justify-content: space-around; 
-    -webkit-align-items: center;
+    justify-content: space-around; 
+    align-items: center;
   }
 
   .left {

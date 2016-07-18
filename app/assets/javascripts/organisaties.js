@@ -73,7 +73,8 @@ var ready = function() {
     $(".btnorg3").click(function() { // processen
         $(".pijllinks").toggle();
         $(".pijlrechts").toggle();
-        $(".middenlinks, .middenrechtscontainer").toggle();
+        $(".proces").toggle();
+        $(".middenlinks, .middenmidden, .middenrechtscontainer").toggle();
         $(".timeshow, .timeshowheader, .waardeinvestering, .tw-waarde").addClass("displaynone");
         $(".vergroting").hide();
     });
@@ -81,6 +82,11 @@ var ready = function() {
         $(".pijlwaarde, .waardeinvestering, .timeshow, .timeshowheader, .tw-waarde, .container-ev-display").removeClass("displaynone");
         $(".pijlwaarde, .waardeinvestering").toggleClass("waardeniet");
     });
+    $(".btnorg5").click(function() { // waarde
+        $(".container-ev-display").toggle();
+    });
+    
+
 
     /*overzichtfoto*/
     //AN: Veranderd omdat .click niet werkt met AJAX 

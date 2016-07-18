@@ -8,6 +8,7 @@
       <th>Boekingtype</th>
       <th>Organisatie</th>
       <th>Grootboekrekening</th>
+      <th>Grootboektype</th>
       <th>Journaal</th>
       <th>Product</th>
       <th>Datum</th>
@@ -27,6 +28,10 @@
         <td><%= boeking.boekingtype %></td>
         <td><%= boeking.organisatie.naam %></td>
         <td><%= boeking.grootboekrekening.naam %></td>
+        <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
+
+      
+
         <% if boeking.journaal %>
           <td><%= boeking.journaal.boeknummer %></td>
         <% else %>

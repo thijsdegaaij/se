@@ -37,6 +37,8 @@ class OrganisatiesController < ApplicationController
     @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16) #arbeid uit
     @gbr_adm = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 17) #administratie   
   
+
+  
     # Grootboek  
     @gb_div = []
     @gb_input = []
@@ -50,6 +52,8 @@ class OrganisatiesController < ApplicationController
       Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @organisatie_search).references(:organisatie).each { |t|
         @gb_input.push(calc_gbtype(@organisatie_search, t.id))
       }
+
+=begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij boekingen_controller, lijkt geen effect te hebben. Alles staat op home_controller.  
       # Output grootboek
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
@@ -65,7 +69,9 @@ class OrganisatiesController < ApplicationController
       @omzet = 0
       @omzet= calc_boekproces(@organisatie_search, 28)[1]
       logger.debug("OMZET: #{@omzet}")
-      
+
+
+
       # Basis winst
       @basiswinst = 0
       @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten
@@ -91,6 +97,9 @@ class OrganisatiesController < ApplicationController
       # Eind EV
       @ev_eind = 0
       @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
+
+=end
+
     end
     
   end

@@ -69,7 +69,7 @@ class BoekingenController < ApplicationController
           @gb_input.push(calc_gbtype(@org, t.id))
         }
 =begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij organisaties_controller, lijkt geen effect te hebben. Alles staat op home_controller.  
-        # Output grootboek
+       # Output grootboek
         # Inkoopwaarde van de omzet
         @inkw_vd_omzet = 0
         @inkw_vd_omzet= calc_boekproces(@org, 24)[1]

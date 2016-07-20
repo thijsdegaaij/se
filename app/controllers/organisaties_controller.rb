@@ -54,6 +54,7 @@ class OrganisatiesController < ApplicationController
       }
 
 =begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij boekingen_controller, lijkt geen effect te hebben. Alles staat op home_controller.  
+     
       # Output grootboek
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
@@ -97,6 +98,7 @@ class OrganisatiesController < ApplicationController
       # Eind EV
       @ev_eind = 0
       @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
+
 
 =end
 

@@ -68,7 +68,8 @@ class BoekingenController < ApplicationController
         Grootboektype.distinct.where("categorie = ?", "I").joins(grootboekrekeningen: :organisatie).where("organisaties.id = ?", @org).references(:organisatie).each { |t|
           @gb_input.push(calc_gbtype(@org, t.id))
         }
-=begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij organisaties_controller, lijkt geen effect te hebben. Alles staat op home_controller.  
+
+=begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij organisaties_controller, lijkt geen effect te hebben. Alles staat op home_controller.  Voor boeking.create in seeds.rb ook geen effect
        # Output grootboek
         # Inkoopwaarde van de omzet
         @inkw_vd_omzet = 0

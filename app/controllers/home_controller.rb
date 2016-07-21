@@ -142,7 +142,7 @@ class HomeController < ApplicationController
       @omzet= calc_boekproces(@organisatie_search, 29)[1]
       logger.debug("OMZET: #{@omzet}")
       
-=begin     
+   
      
       # inkomsten / door thijs
       @inkomsten = 0
@@ -181,7 +181,7 @@ class HomeController < ApplicationController
       @ks_overige_bedrijfskosten = calc_boekproces(@organisatie_search, 23)[1]
       logger.debug("OMZET: #{@omzet}")
 
-=end
+
       # Basis winst
       @basiswinst = 0
       @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten

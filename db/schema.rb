@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20160531154338) do
 
   create_table "bedrijfstakken", force: :cascade do |t|
-    t.string   "letter"
+    t.string   "letter",     limit: 255
     t.string   "naam",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160531154338) do
     t.string   "icoon",              limit: 255
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.string   "kostenspecificatie"
+    t.string   "kostenspecificatie", limit: 255
   end
 
   create_table "grootboekrekeningen", force: :cascade do |t|
@@ -91,14 +91,14 @@ ActiveRecord::Schema.define(version: 20160531154338) do
   end
 
   create_table "mensen", force: :cascade do |t|
-    t.string   "naam"
-    t.integer  "leeftijd"
-    t.string   "geslacht"
-    t.string   "kennisniveau"
-    t.string   "gezondheidsniveau"
-    t.string   "geluksniveau"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.string   "naam",              limit: 255
+    t.integer  "leeftijd",          limit: 4
+    t.string   "geslacht",          limit: 255
+    t.string   "kennisniveau",      limit: 255
+    t.string   "gezondheidsniveau", limit: 255
+    t.string   "geluksniveau",      limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "organisaties", force: :cascade do |t|
@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 20160531154338) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "afkorting",  limit: 255
-    t.string   "sector"
+    t.string   "sector",     limit: 255
   end
 
 end

@@ -6,7 +6,7 @@ class BoekingenController < ApplicationController
   # GET /boekingen
   # GET /boekingen.json
   def index
-    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id   ")
+    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id")
   end
 
   # GET /boekingen/1
@@ -69,6 +69,11 @@ class BoekingenController < ApplicationController
           @gb_input.push(calc_gbtype(@org, t.id))
         }
 
+      end
+    # Eind grootboek
+
+
+  end
 =begin    Thijs: 18 juli 17: dit kan er volgens mij uit, net als bij organisaties_controller, lijkt geen effect te hebben. Alles staat op home_controller.  Voor boeking.create in seeds.rb ook geen effect
        # Output grootboek
         # Inkoopwaarde van de omzet
@@ -117,11 +122,6 @@ class BoekingenController < ApplicationController
 =end
 
 
-      end
-    # Eind grootboek
-
-
-  end
 
   # POST /boekingen
   # POST /boekingen.json

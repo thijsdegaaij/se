@@ -47,5 +47,6 @@ group :development, :test do
   gem 'rmagick'
   gem 'carrierwave'
   
+  gem 'seed_dump'
 end
 

@@ -20,16 +20,8 @@ Bedrijfstak.create!([
   {letter: "T", naam: "Huishoudens"},
   {letter: "U", naam: "Extraterritoriale organisaties"}
 ])
-=begin
-
-Boeking.create!([
-  {grootboekrekening_id: 17, journaal_id: 1, product_id: 1, datum: "2016-07-22", icoon: nil, bij_af: "+", waarde: 10006, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "j", boekproces_id: 15}
-])
-=end
-
-
 Boekproces.create!([
-  {naam: "Inkomsten 11", icoon: nil, kostenspecificatie: nil},
+  {naam: "Inkomsten 13", icoon: nil, kostenspecificatie: nil},
   {naam: "Betalingen", icoon: nil, kostenspecificatie: nil},
   {naam: "Toename recht (waardestijging)", icoon: nil, kostenspecificatie: nil},
   {naam: "Afname recht (waardedaling)", icoon: nil, kostenspecificatie: nil},
@@ -61,38 +53,38 @@ Boekproces.create!([
   {naam: "Basis winst", icoon: nil, kostenspecificatie: nil}
 ])
 Grootboekrekening.create!([
-  {naam: "Zelf gemaakt", grootboektype_id: 14, organisatie_id: "1", icoon: nil},
-  {naam: "Boodschappen houdbaar", grootboektype_id: 12, organisatie_id: "1", icoon: nil},
-  {naam: "Vervoersspullen", grootboektype_id: 13, organisatie_id: "1", icoon: nil},
-  {naam: "Interieurspullen", grootboektype_id: 13, organisatie_id: "1", icoon: nil},
-  {naam: "Kosten voor huis", grootboektype_id: 3, organisatie_id: "1", icoon: nil},
-  {naam: "Energiekosten", grootboektype_id: 3, organisatie_id: "1", icoon: nil},
-  {naam: "Schoonmakers", grootboektype_id: 4, organisatie_id: "1", icoon: nil},
-  {naam: "Mijn huis", grootboektype_id: 14, organisatie_id: "1", icoon: nil},
-  {naam: "Mijn werk", grootboektype_id: 16, organisatie_id: "1", icoon: nil},
-  {naam: "Inkoop brood", grootboektype_id: 1, organisatie_id: "2", icoon: nil},
+  {naam: "Zelf gemaakt", grootboektype_id: 14, organisatie_id: "1", icoon: "thumb_broodbereid.png"},
+  {naam: "Boodschappen houdbaar", grootboektype_id: 12, organisatie_id: "1", icoon: "jam.png"},
+  {naam: "Vervoersspullen", grootboektype_id: 13, organisatie_id: "1", icoon: "fiets.png"},
+  {naam: "Interieurspullen", grootboektype_id: 13, organisatie_id: "1", icoon: "bed.png"},
+  {naam: "Kosten voor huis", grootboektype_id: 3, organisatie_id: "1", icoon: "huis.png"},
+  {naam: "Energiekosten", grootboektype_id: 3, organisatie_id: "1", icoon: "elektriciteit.jpg"},
+  {naam: "Schoonmakers", grootboektype_id: 4, organisatie_id: "1", icoon: "figuren_peter.png"},
+  {naam: "Mijn huis", grootboektype_id: 14, organisatie_id: "1", icoon: "interieur1.jpeg"},
+  {naam: "Mijn werk", grootboektype_id: 16, organisatie_id: "1", icoon: "figuren_maxima.png"},
+  {naam: "Inkoop brood", grootboektype_id: 1, organisatie_id: "2", icoon: "brood.png"},
   {naam: "Bank", grootboektype_id: 9, organisatie_id: "2", icoon: nil},
   {naam: "BTW Inkopen", grootboektype_id: 10, organisatie_id: "2", icoon: nil},
-  {naam: "Telefoonkosten", grootboektype_id: 3, organisatie_id: "2", icoon: nil},
-  {naam: "Verkoop brood", grootboektype_id: 5, organisatie_id: "2", icoon: nil},
+  {naam: "Telefoonkosten", grootboektype_id: 3, organisatie_id: "2", icoon: "telefoonmobiel.jpeg"},
+  {naam: "Verkoop brood", grootboektype_id: 5, organisatie_id: "2", icoon: "brood.png"},
   {naam: "Lening 5%", grootboektype_id: 11, organisatie_id: "2", icoon: nil},
   {naam: "BTW Verkopen", grootboektype_id: 10, organisatie_id: "2", icoon: nil},
-  {naam: "Machines", grootboektype_id: 2, organisatie_id: "2", icoon: nil},
-  {naam: "Leveringskosten", grootboektype_id: 3, organisatie_id: "2", icoon: nil},
-  {naam: "Advertentie", grootboektype_id: 7, organisatie_id: "2", icoon: nil},
-  {naam: "Administratie", grootboektype_id: 17, organisatie_id: "2", icoon: nil},
-  {naam: "Boodschappen", grootboektype_id: 12, organisatie_id: "1", icoon: nil},
-  {naam: "Jan", grootboektype_id: 4, organisatie_id: "2", icoon: nil},
+  {naam: "Machines", grootboektype_id: 2, organisatie_id: "2", icoon: "oven.png"},
+  {naam: "Leveringskosten", grootboektype_id: 3, organisatie_id: "2", icoon: "bestelbus.jpeg"},
+  {naam: "Advertentie", grootboektype_id: 7, organisatie_id: "2", icoon: "reclameBroodBart.png"},
+  {naam: "Administratie", grootboektype_id: 17, organisatie_id: "2", icoon: "klappers.png"},
+  {naam: "Boodschappen", grootboektype_id: 12, organisatie_id: "1", icoon: "brood.png"},
+  {naam: "Jan", grootboektype_id: 4, organisatie_id: "2", icoon: "figuren_bakkerpaars.png"},
   {naam: "Debiteuren", grootboektype_id: 8, organisatie_id: "2", icoon: nil},
   {naam: "Crediteuren", grootboektype_id: 8, organisatie_id: "2", icoon: nil},
   {naam: "rente te betalen lening 5%", grootboektype_id: 11, organisatie_id: "2", icoon: nil}
 ])
 Grootboektype.create!([
-  {naam: "Vlottende activa", icoon: nil, categorie: "I"},
-  {naam: "Vaste activa", icoon: nil, categorie: "I"},
-  {naam: "Kosten", icoon: nil, categorie: "I"},
-  {naam: "Personeel", icoon: nil, categorie: "I"},
-  {naam: "Verkopen", icoon: nil, categorie: "O"},
+  {naam: "Vlottende activa", icoon: "icon_rondje.png", categorie: "I"},
+  {naam: "Vaste activa", icoon: "icon_vierkant.png", categorie: "I"},
+  {naam: "Kosten", icoon: "icon_pijlhoofdmarkt.png", categorie: "I"},
+  {naam: "Personeel", icoon: "icon_mens.png", categorie: "I"},
+  {naam: "Verkopen", icoon: "icon_rondje.png", categorie: "O"},
   {naam: "Know-how", icoon: nil, categorie: "O"},
   {naam: "Reclame", icoon: nil, categorie: "O"},
   {naam: "Debiteuren en Crediteuren", icoon: nil, categorie: "D"},
@@ -132,16 +124,16 @@ Mens.create!([
   {naam: "Bert de Bakker", leeftijd: 34, geslacht: "man", kennisniveau: "4", gezondheidsniveau: "4", geluksniveau: "4"}
 ])
 Organisatie.create!([
-  {naam: "Maxima", bedrijfstak_id: 19, rechtsvorm_id: 1, voorkant_image: nil},
-  {naam: "Bakker Bart", bedrijfstak_id: 7, rechtsvorm_id: 2, voorkant_image: nil},
-  {naam: "MediaMarkt", bedrijfstak_id: 7, rechtsvorm_id: 10, voorkant_image: nil},
-  {naam: "Shell", bedrijfstak_id: 3, rechtsvorm_id: 10, voorkant_image: nil},
-  {naam: "Bank ING", bedrijfstak_id: 11, rechtsvorm_id: 11, voorkant_image: nil},
-  {naam: "Parlement", bedrijfstak_id: 15, rechtsvorm_id: 12, voorkant_image: nil}
+  {naam: "Maxima", bedrijfstak_id: 19, rechtsvorm_id: 1, voorkant_image: "figuren_maxima.png"},
+  {naam: "Bakker Bart", bedrijfstak_id: 7, rechtsvorm_id: 2, voorkant_image: "bakkerbuitenkant.jpeg"},
+  {naam: "MediaMarkt", bedrijfstak_id: 7, rechtsvorm_id: 10, voorkant_image: "mediamarkt.jpg"},
+  {naam: "Shell", bedrijfstak_id: 3, rechtsvorm_id: 10, voorkant_image: "shell.jpg"},
+  {naam: "Bank ING", bedrijfstak_id: 11, rechtsvorm_id: 11, voorkant_image: "inglogo.png"},
+  {naam: "Parlement", bedrijfstak_id: 15, rechtsvorm_id: 12, voorkant_image: "parlement.jpeg"}
 ])
 Product.create!([
-  {naam: "Brood", icoon: nil},
-  {naam: "Oven", icoon: nil}
+  {naam: "Brood", icoon: "brood.png"},
+  {naam: "Oven", icoon: "oven.png"}
 ])
 Rechtsvorm.create!([
   {naam: "Gezin", afkorting: "gzn", sector: "Huishoudens"},
@@ -156,4 +148,25 @@ Rechtsvorm.create!([
   {naam: "N.V.", afkorting: "N.V.", sector: "Vennootschappen"},
   {naam: "Vennootschap met bankvergunning", afkorting: "FI", sector: "Financi\xC3\xABle_instelling"},
   {naam: "Overheid", afkorting: "Ov", sector: "Overheid"}
+])
+
+Boeking.create!([
+  {grootboekrekening_id: 12, journaal_id: 1, product_id: 1, datum: "2016-01-07", icoon: nil, bij_af: "-", waarde: 106000, p_inkoop: 0, hoeveelheid: 0, organisatie_id: 2, boekingtype: "J", boekproces_id: 2},
+  {grootboekrekening_id: 13, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 6000, p_inkoop: 0, hoeveelheid: 0, organisatie_id: 2, boekingtype: "J", boekproces_id: 10},
+  {grootboekrekening_id: 11, journaal_id: 9, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 100000, p_inkoop: 1, hoeveelheid: 100000, organisatie_id: 2, boekingtype: "I", boekproces_id: 24},
+  {grootboekrekening_id: 14, journaal_id: 9, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 8000, p_inkoop: 1, hoeveelheid: 1, organisatie_id: 2, boekingtype: "I", boekproces_id: 25},
+  {grootboekrekening_id: 14, journaal_id: 9, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 12000, p_inkoop: 1, hoeveelheid: 1, organisatie_id: 2, boekingtype: "I", boekproces_id: 26},
+  {grootboekrekening_id: 14, journaal_id: 9, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 20000, p_inkoop: 1, hoeveelheid: 1, organisatie_id: 2, boekingtype: "I", boekproces_id: 27},
+  {grootboekrekening_id: 15, journaal_id: 4, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 100000, p_inkoop: 1, hoeveelheid: 1, organisatie_id: 2, boekingtype: "I", boekproces_id: 29},
+  {grootboekrekening_id: 17, journaal_id: 9, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 12000, p_inkoop: 1, hoeveelheid: 1, organisatie_id: 2, boekingtype: "I", boekproces_id: 9},
+  {grootboekrekening_id: 12, journaal_id: 3, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 212000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 1},
+  {grootboekrekening_id: 12, journaal_id: 2, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 36300, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 2},
+  {grootboekrekening_id: 13, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 6300, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 10},
+  {grootboekrekening_id: 16, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 20000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 15},
+  {grootboekrekening_id: 15, journaal_id: 3, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 100000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "J", boekproces_id: 29},
+  {grootboekrekening_id: 1, journaal_id: 11, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 900, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 1, boekingtype: "J", boekproces_id: 1},
+  {grootboekrekening_id: 18, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 3000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 20},
+  {grootboekrekening_id: 18, journaal_id: 1, product_id: 2, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 10000, p_inkoop: 10000, hoeveelheid: 1, organisatie_id: 2, boekingtype: "", boekproces_id: 15},
+  {grootboekrekening_id: 14, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "+", waarde: 30000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 15},
+  {grootboekrekening_id: 14, journaal_id: 1, product_id: 1, datum: "2016-01-01", icoon: nil, bij_af: "-", waarde: 32000, p_inkoop: nil, hoeveelheid: nil, organisatie_id: 2, boekingtype: "", boekproces_id: 23}
 ])

@@ -5,20 +5,20 @@
 <table class="cmsTabel">
   <thead>
     <tr>
-      <th>Boekingtype</th>
-      <th>Organisatie</th>
-      <th>Grootboekrekening</th>
-      <th>Grootboektype</th>
-      <th>Journaal</th>
-      <th>Product</th>
-      <th>Datum</th>
-      <th>Icoon</th>
-      <th>Bij/af</th>
-      <th>Boekproces</th>
-      <th>Waarde</th>
-      <th>Prijs</th>
-      <th>H</th>
-      <th colspan="3"></th>
+      <td>Boekingtype</td>
+      <td>Organisatie</td>
+      <td>Grootboekrekening</td>
+      <td>Grootboektype</td>
+      <td>Journaal</td>
+      <td>Product</td>
+      <td>Datum</td>
+      <td>Icoon</td>
+      <td>Bij/af</td>
+      <td>Boekproces</td>
+      <td class="rechtsuitlijnen">Waarde</td>
+      <td class="rechtsuitlijnen">Prijs</td>
+      <td class="rechtsuitlijnen">H</td>
+      <td colspan="3">Acties</td>
     </tr>
   </thead>
 
@@ -29,9 +29,6 @@
         <td><%= boeking.organisatie.naam %></td>
         <td><%= boeking.grootboekrekening.naam %></td>
         <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
-
-      
-
         <% if boeking.journaal %>
           <td><%= boeking.journaal.boeknummer %></td>
         <% else %>
@@ -43,7 +40,7 @@
         <td><%= boeking.bij_af %></td>
         <td><%= boeking.boekproces.naam %></td>
         <td class="bedrag"><%= boeking.waarde %></td>
-        <td><%= boeking.p_inkoop %></td>
+        <td class="bedrag"><%= boeking.p_inkoop %></td>
         <td class="getal"><%= boeking.hoeveelheid %></td>
         <td><%= link_to 'Show', boeking %></td>
         <td><%= link_to 'Edit', edit_boeking_path(boeking) %></td>

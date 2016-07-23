@@ -4458,13 +4458,18 @@ hr {
   font-size: 14px;
   font-weight: bold; }
 
-.cmsTabel th {
+.cmsTabel .rechtsuitlijnen {
+  text-align: right;
+  padding-right: 4px; }
+.cmsTabel tr:nth-child(2n+2) {
+  background-color: #F4F3F3; }
+.cmsTabel thead td {
   text-align: left;
   font-size: 16px;
-  padding-right: 24px; }
+  padding: 6px 6px 6px 2px;
+  background-color: #edeae3; }
 .cmsTabel td {
-  padding-right: 24px;
-  padding-top: 12px; }
+  padding: 6px 12px 6px 0px; }
 .cmsTabel .plaatje3 {
   display: flex;
   flex-direction: row;
@@ -4481,7 +4486,8 @@ hr {
   text-overflow: ellipsis;
   cursor: wait; }
 .cmsTabel .bedrag {
-  text-align: right; }
+  text-align: right;
+  padding-right: 4px; }
 .cmsTabel .bedrag::before {
   content: '€ '; }
 .cmsTabel .percentage {

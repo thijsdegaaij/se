@@ -97,6 +97,7 @@
                                 <div>bank</div>
                             </div>
                         </div>
+  <!-- //debiteuren crediteuren -->                       
                         <div class="overeenkomsten nogte">                        
                             <div class="itemheader itemheadergeld">
                                 <div class="icon icon-plichtgeld"></div>
@@ -106,21 +107,43 @@
                             <div>debiteuren</div>
                             <div>crediteuren</div>                           
                         </div>
+
+  <!-- //overheid -->                       
                         <div id="overheid" class="overheid">
                             <div class="itemheader itemheaderoverheid">
                                 <div class="icon icon-plichtgeld"></div>
                                 <div class="icon icon-rechtgeld"></div>
-                                <div>Belastingen </div>
+                                <div>Overheid </div>
                                 <div></div>
                             </div>
-                            <div>te betalen/ontvangen btw</div>
-                            <div>te betalen sociale verzekeringen</div>
+
+   
                             <div class="overzicht-rente">
-                                <div>te betalen belastingen</div>
+                                <div class="item">nog te betalen btw</div>
+                                <div class="iconwide icon-neg proces displaynone"></div>
+                                <div class="proces displaynone">&euro; <%= @te_betalen_btw %></div>  
+                            </div>
+     
+                            <div class="overzicht-rente">
+                                <div class="item">nog te ontvangen btw</div>
+                                <div class="iconwide icon-pos proces displaynone"></div>
+                                <div class="proces displaynone">&euro; <%= @te_ontvangen_btw %></div>
+                            </div>  
+
+                            <div class="overzicht-rente">
+                                <div class="item">btw-resultaat</div>
+                                <div class="iconwide proces displaynone"></div>
+                                <div class="proces displaynone">= &euro; <%= @belastingen_btw %></div> 
+                            </div> 
+
+                            <div class="overzicht-rente">
+                                <div class="item">diverse heffingen</div>
                                 <div class="iconwide icon-belasting-neg proces displaynone"></div>
-                                <div class="proces displaynone">- &euro; <%= @belastingen %></div>    
+                                <div class="proces displaynone">&euro; <%= @belasting_org %></div>    
                             </div>
                         </div>
+
+  <!-- //financiele producten -->                        
                         <div id="finprod" class="finprod">
                             <div class="itemheader itemheaderfinprod">
                                 <div class="icon icon-plichtgeld"></div>
@@ -133,11 +156,13 @@
                                 <div class="overzicht-rente">
                                     <div>te betalen rente</div>
                                     <div class="iconwide icon-rente-neg proces displaynone"></div>
-                                    <div class="proces displaynone">- &euro; 1000</div>    
+                                    <div class="proces displaynone">- &euro; <%= @rente %></div>    
                                 </div>
                             </div>
                         </div>
                     </div>
+
+  <!-- input / output -->                    
                     <div class="abc">
                         <div class="a">
                             <div class="bedrijfsprocessen-ac">
@@ -360,7 +385,8 @@
                             </div>
 <!-- personeel -->
                             <div id="pers" class="pers">
-                                <div class=" pijllinks">
+                                <div class=" pijllinks ">
+<!-- 
                                     <div class="pijluitleg">
                                         <div class="icon icon-arbeidmarkt"></div>
                                         <div class="pijlwaarde waardeniet">
@@ -368,6 +394,8 @@
                                         </div>
                                     </div>
                                     <div class="pijluitlegwoord" title="personeel">arbeid</div>
+
+                                 --> 
                                 </div>
                                 <div class="itemheader">
                                     <div class="icon icon-mens"></div>
@@ -648,40 +676,46 @@
                             <div class="bar-ev">
                                 <div class="wl">
                                     <div class="">
+                                    <!-- 
                                         <div>Waardeverandering: </div>
                                         <div class="flex-row left">                                            
                                             <div class="iconwide icon-pos"></div>
                                             <div>&euro; 8.000</div>
                                         </div>
+                                         -->
                                     </div>
                                 </div>
                                 <div class="wm">
                                     <div class="">
-                                        <div>Winst </div>
+                                        <div class="winstonderdeel"> 
+                                            <div>Winst</div>                                           
+                                            <div class="iconwide icon-winst-pos"></div>
+                                            <div>= &euro; <%= @nettowinstnb %></div>
+                                        </div>
                                         <div class="winstonderdeel"> 
                                             <div>Basiswinst</div>                                           
                                             <div class="iconwide icon-prod-pos"></div>
-                                            <div>+ &euro; <%= @basiswinst %></div>
+                                            <div>  &euro; <%= @basiswinst %></div>
                                         </div>
                                         <div class="winstonderdeel"> 
                                             <div>Rente</div>                                           
                                             <div class="iconwide icon-rente-neg"></div>
-                                            <div>-  &euro; 1000</div>
+                                            <div>  &euro; <%= @rente %></div>
                                         </div>
                                         <div class="winstonderdeel"> 
                                             <div>Belastingen</div>                                           
                                             <div class="iconwide icon-belasting-neg"></div>
-                                            <div>-  &euro; <%= @belastingen %></div>
+                                            <div>  &euro; <%= @belasting_org %></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="wr">
-                                    <div class="">
+                                    <div class=""><!-- 
                                         <div>Waardeverandering: </div>
                                         <div class="flex-row left">                                            
                                             <div class="iconwide icon-pos"></div>
                                             <div>&euro; 0</div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div> 
                             </div>

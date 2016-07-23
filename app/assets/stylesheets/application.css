@@ -772,6 +772,9 @@ a {
   margin-top: 7px;
   margin-left: -12px; }
 
+.icon-winst-pos {
+  background-image: url("/images/icons/icon_winst_pos.png"); }
+
 .icon-winstpos {
   background-image: url("/images/icons/icon_winstpos.png"); }
 
@@ -1488,15 +1491,6 @@ a1a2 > .a2 .kolom,
 .itemheader > div:not(.icon) {
   margin-top: 3px !important; }
 
-.itemheader + div {
-  padding-left: 8px; }
-
-.itemheader + div + div {
-  padding-left: 8px; }
-
-.itemheader + div + div + div {
-  padding-left: 8px; }
-
 .start .rij {
   align-items: center; }
   .start .rij .kolom {
@@ -1506,53 +1500,6 @@ a1a2 > .a2 .kolom,
 
 .org-all {
   align-items: center; }
-
-.pijllinks .pijlwaarde {
-  align-items: flex-start;
-  max-width: 285px; }
-
-.pijlrechts .pijlwaarde {
-  align-items: flex-start;
-  max-width: 285px; }
-
-.pijlwaarde div,
-.waardeinvestering {
-  padding: 2px; }
-
-.pijluitlegwoord {
-  padding: 4px 0px 0px 0px;
-  font-style: italic;
-  cursor: pointer;
-  margin-top: -12px; }
-
-.ev-pijllinks,
-.ev-pijlrechts {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 17px; }
-
-.ev-pijllinks {
-  left: -276px; }
-
-.ev-pijlrechts {
-  left: 770px;
-  width: 280px; }
-
-.geld .pijlrechts,
-.orgnaampijlrechts,
-.geld .pijllinks {
-  margin-top: -10px;
-  width: 350px;
-  position: absolute;
-  left: 754px; }
-
-.waardeinvestering {
-  background-color: #f9f8f6;
-  position: absolute;
-  top: 21px;
-  left: -0px; }
 
 .orgbuttons {
   justify-content: space-around;
@@ -1605,15 +1552,18 @@ a1a2 > .a2 .kolom,
 .overzicht-rente {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  height: 19px; }
+  height: 19px;
+  width: 285px; }
   .overzicht-rente :nth-child(1) {
-    flex: 0 0 177px; }
+    flex: 0 1 177px; }
   .overzicht-rente :nth-child(2) {
-    flex: 0 0 65px;
+    flex: 0 1 auto;
     transform: scale(0.8, 0.8); }
   .overzicht-rente :nth-child(3) {
-    flex: 0 0 80px; }
+    flex: 3 1 auto;
+    text-align: right; }
 
 .orgscontainer .overeenkomsten,
 .orgscontainer .geld,
@@ -1805,9 +1755,35 @@ a1a2 > .a2 .kolom,
 .pers > .pijllinks,
 .container-ev > .pijllinks,
 .orgnaam > .pijllinks {
-  width: 320px;
+  width: 120px;
   position: absolute;
   left: -210px; }
+
+.overheid .item {
+  padding-left: 8px; }
+
+.pijluitleg {
+  justify-content: space-between;
+  width: 115px; }
+
+.pijlwaarde div {
+  justify-content: flex-end; }
+
+.pijlwaarde div,
+.waardeinvestering {
+  padding: 2px; }
+
+.pijluitlegwoord {
+  padding: 4px 0px 0px 0px;
+  font-style: italic;
+  cursor: pointer;
+  margin-top: -12px; }
+
+.waardeinvestering {
+  background-color: #f9f8f6;
+  position: absolute;
+  top: 21px;
+  left: -0px; }
 
 .middenlinks {
   position: absolute;
@@ -1893,9 +1869,9 @@ a1a2 > .a2 .kolom,
   .winstonderdeel :nth-child(1) {
     flex: 0 0 100px; }
   .winstonderdeel :nth-child(2) {
-    flex: 0 0 80px; }
+    flex: 0 0 auto; }
   .winstonderdeel :nth-child(3) {
-    flex: 0 0 80px;
+    flex: 0 0 60px;
     text-align: right; }
 
 .pijllinks,
@@ -4464,6 +4440,11 @@ hr {
 .cmsTabel tr:nth-child(2n+2) {
   background-color: #F4F3F3; }
 .cmsTabel thead td {
+  text-align: left;
+  font-size: 16px;
+  padding: 6px 6px 6px 2px;
+  background-color: #edeae3; }
+.cmsTabel th {
   text-align: left;
   font-size: 16px;
   padding: 6px 6px 6px 2px;

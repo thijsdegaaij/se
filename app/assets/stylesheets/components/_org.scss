@@ -271,15 +271,7 @@
   .itemheader > div:not(.icon) {
     margin-top: 3px !important;
   }
-  .itemheader + div { //inspringen van eerste gbr
-   padding-left: 8px;
-  } 
-  .itemheader + div + div { //inspringen van tweede gbr
-   padding-left: 8px;
-  }
-  .itemheader + div + div + div { //inspringen van tweede gbr
-   padding-left: 8px;
-  }
+
 
   .start .rij {
       //justify-content: space-between;
@@ -295,83 +287,7 @@
   .org-all {
       align-items: center;
   }
-  
-  .pijluitleg {
-      //font-size: 14px;
-      //color: darkblue;
-      //font-style: italic;
-  }
-  
-  
-  .pijllinks .iconwide:not(.icon-geldpijl) {
-      //background-color: $bginput!important;
-  }
-  .pijllinks .pijlwaarde {
-      align-items: flex-start;
-      max-width: 285px;
-  }
-  
-  .pijlrechts .pijlwaarde {
-      align-items: flex-start;
-      max-width: 285px;
-  }
-  
-  .pijlrechts .iconwide:not(.icon-geldpijl) {
-      //background-color: $bgoutput!important;
-  }
-  
-  .pijlwaarde div,
-  //.pijlwaarde,
-  .waardeinvestering {
-      //color: $tekst-verleden; 
-      padding: 2px;
-      //font-size: 12px;
-  }
-  
-  .pijluitlegwoord {
-      padding: 4px 0px 0px 0px;
-      font-style: italic;
-      cursor: pointer;
-      margin-top: -12px;
-  }
-  
 
-  
-  .ev-pijllinks,
-  .ev-pijlrechts {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-top: 17px;
-  }
-  
-  .ev-pijllinks {
-      left: -276px;
-  }
-  
-  .ev-pijlrechts {
-      left: 770px;
-      width: 280px;
-  }
-  
-  .geld .pijlrechts,
-  .orgnaampijlrechts,
-  .geld .pijllinks,
-  {
-      margin-top: -10px;
-      width: 350px;
-      position: absolute;
-      left: 754px;
-  }
-  
-  .waardeinvestering {
-      background-color: $bg-verleden;
-      position: absolute;
-      top: 21px;
-      left: -0px;
-  }
-  
   .orgbuttons {
       justify-content: space-around;
       align-items: center;
@@ -442,17 +358,20 @@
   .overzicht-rente {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     height: 19px;
+    width: 285px;
     :nth-child(1) {
-      flex: 0 0 177px;
+      flex: 0 1 177px;
     }
     :nth-child(2) {
-      flex: 0 0 65px;
+      flex: 0 1 auto;
       transform: scale(0.8, 0.8);
     }
     :nth-child(3) {
-      flex: 0 0 80px;
+      flex: 3 1 auto; 
+      text-align: right;
     }
   }
   
@@ -720,11 +639,45 @@
   .orgnaam,
   {
       >.pijllinks {
-          width: 320px;
+          width: 120px;
           position: absolute;
-          left: -210px
+          left: -210px;
       }
   }
+
+  
+  .overheid .item {
+    padding-left: 8px;
+  }
+  .pijluitleg {
+    justify-content: space-between;
+      width: 115px;
+  }  
+  .pijlwaarde div {
+    justify-content: flex-end;
+  }  
+  .pijlwaarde div,
+  .waardeinvestering {
+      padding: 2px;
+  }  
+  .pijluitlegwoord {
+      padding: 4px 0px 0px 0px;
+      font-style: italic;
+      cursor: pointer;
+      margin-top: -12px;
+  } 
+
+  
+
+  
+  .waardeinvestering {
+      background-color: $bg-verleden;
+      position: absolute;
+      top: 21px;
+      left: -0px;
+  }
+  
+  
  .middenlinks {
    position: absolute;
    left: 184px;
@@ -831,10 +784,10 @@
       flex: 0 0 100px;
     }
     :nth-child(2) {
-      flex: 0 0 80px;
+      flex: 0 0 auto;
     }
     :nth-child(3) {
-      flex: 0 0 80px;
+      flex: 0 0 60px;
       //justify-content: flex-end;
       text-align: right;
       //align-self: flex-end;

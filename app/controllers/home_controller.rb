@@ -188,25 +188,40 @@ class HomeController < ApplicationController
       logger.debug("BASISWINST: #{@basiswinst}")
       
       # Overige kosten 
-      @overigekosten = 0
-      @overigekosten= calc_boekproces(@organisatie_search, 11)[1]
+      @rente = 0
+      @rente= calc_boekproces(@organisatie_search, [11,12])[2]
       logger.debug("OVERIGE KOSTEN: #{@overigekosten}")
       
       # Belastingen
-      @belastingen = 0
-      @belastingen= calc_boekproces(@organisatie_search, [9,10] )[2]
+      @belastingen_btw = 0
+      @belastingen_btw= calc_boekproces(@organisatie_search, [9,10] )[2]
       logger.debug("BELASTINGEN: #{@belastingen}")
+      
+      # Belastingen Thijs
+      @te_betalen_btw = 0
+      @te_betalen_btw = calc_boekproces(@organisatie_search, 9)[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
+      
+      # Belastingen
+      @te_ontvangen_btw = 0
+      @te_ontvangen_btw = calc_boekproces(@organisatie_search, 10)[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
+      
       
       #Eigen vermogen grootboek
       # Start EV
       @ev_start = 0
       # Netto winst voor belasting
-      @nettowinstvb = @basiswinst - @overigekosten
+      @nettowinstvb = @basiswinst + @rente
+
+      #  belasting
+      @belasting_org = - @nettowinstvb/4
       # Netto winst na belasting
-      @nettowinstnb = @nettowinstvb - @belastingen.abs
+      @nettowinstnb = @nettowinstvb + @belasting_org
       # Eind EV
+
       @ev_eind = 0
-      @ev_eind = @ev_start - @bedrijfskosten - @overigekosten + @basiswinst
+      @ev_eind = @ev_start - @bedrijfskosten + @rente + @basiswinst
     end
    
   end

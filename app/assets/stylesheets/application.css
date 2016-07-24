@@ -778,6 +778,9 @@ a {
 .icon-winstpos {
   background-image: url("/images/icons/icon_winstpos.png"); }
 
+.icon-dividend {
+  background-image: url("/images/icons/icon_dividend.png"); }
+
 .icon-ev {
   background-image: url("/images/icons/icon_EV.png"); }
 
@@ -1491,6 +1494,10 @@ a1a2 > .a2 .kolom,
 .itemheader > div:not(.icon) {
   margin-top: 3px !important; }
 
+.itembody > div {
+  padding: 1px 0px 0px 4px;
+  color: red; }
+
 .start .rij {
   align-items: center; }
   .start .rij .kolom {
@@ -1731,21 +1738,6 @@ a1a2 > .a2 .kolom,
   max-width: 500px;
   max-height: 450px; }
 
-.container-ev > .pijlrechts,
-.tekoop > .pijlrechts,
-.reclame > .pijlrechts,
-.service > .pijlrechts,
-.knowhow > .pijlrechts,
-.admin > .pijlrechts,
-.total-right > .pijlrechts {
-  margin-top: -2px;
-  width: 330px;
-  position: absolute;
-  left: 184px; }
-
-.pijlrechts.extra {
-  left: 770px; }
-
 .geld > .pijllinks,
 .overheid > .pijllinks,
 .finprod > .pijllinks,
@@ -1759,8 +1751,24 @@ a1a2 > .a2 .kolom,
   position: absolute;
   left: -210px; }
 
-.overheid .item {
-  padding-left: 8px; }
+.geld .pijlrechts {
+  position: absolute;
+  left: 755px; }
+
+.container-ev > .pijlrechts,
+.tekoop > .pijlrechts,
+.reclame > .pijlrechts,
+.service > .pijlrechts,
+.knowhow > .pijlrechts,
+.admin > .pijlrechts,
+.total-right > .pijlrechts {
+  margin-top: -2px;
+  width: 330px;
+  position: absolute;
+  left: 184px; }
+
+.org .item {
+  padding-left: 4px; }
 
 .pijluitleg {
   justify-content: space-between;

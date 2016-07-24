@@ -225,8 +225,6 @@
   .a2,
   a1a2>.a1,
   a1a2>.a2 .kolom,
-  //.pijllinks,
-  //.pijlrechts,
   .pijlwaarde {
       display: -webkit-flex;
       flex-direction: column;
@@ -271,7 +269,10 @@
   .itemheader > div:not(.icon) {
     margin-top: 3px !important;
   }
-
+ .itembody > div {
+    padding: 1px 0px 0px 4px;
+    color: red;
+  }
 
   .start .rij {
       //justify-content: space-between;
@@ -610,24 +611,7 @@
       max-height: 450px;
   }
   
-  .container-ev,
-  .tekoop,
-  .reclame,
-  .service,
-  .knowhow,
-  .admin,
-  .total-right {
-      > .pijlrechts {
-          margin-top: -2px;
-          width: 330px;
-          position: absolute;
-          left: 184px;
-      }
-  }
-  .pijlrechts.extra {
-    left: 770px;
-  }
-  
+   
   .geld,
   .overheid,
   .finprod,
@@ -645,9 +629,29 @@
       }
   }
 
+ .geld .pijlrechts {
+   position: absolute;
+    left: 755px;
+  }
+
+  .container-ev,
+  .tekoop,
+  .reclame,
+  .service,
+  .knowhow,
+  .admin,
+  .total-right {
+      > .pijlrechts {
+          margin-top: -2px;
+          width: 330px;
+          position: absolute;
+          left: 184px;
+      }
+  }
+
   
-  .overheid .item {
-    padding-left: 8px;
+  .org .item {
+    padding-left: 4px;
   }
   .pijluitleg {
     justify-content: space-between;

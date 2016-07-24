@@ -208,6 +208,11 @@ class HomeController < ApplicationController
       logger.debug("BELASTINGEN: #{@belastingen}")
       
       
+      # Dividend
+      @dividend = 0
+      @dividend = calc_boekproces(@organisatie_search, 31)[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
+      
       #Eigen vermogen grootboek
       # Start EV
       @ev_start = 0
@@ -221,7 +226,7 @@ class HomeController < ApplicationController
       # Eind EV
 
       @ev_eind = 0
-      @ev_eind = @ev_start - @bedrijfskosten + @rente + @basiswinst
+      @ev_eind = @ev_start - @bedrijfskosten + @rente + @basiswinst + @dividend
     end
    
   end

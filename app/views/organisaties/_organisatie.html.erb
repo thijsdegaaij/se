@@ -91,10 +91,10 @@
                             </div>
                             <div class="itemheader itemheadergeld">
                                 <div class="icon icon-geld"></div>
-                                <div>Geld</div>
+                                <div class="item">Geld</div>
                             </div>
                             <div>
-                                <div>bank</div>
+                                <div class="item">bank</div>
                             </div>
                         </div>
   <!-- //debiteuren crediteuren -->                       
@@ -104,8 +104,8 @@
                                 <div class="icon icon-rechtgeld"></div>
                                 <div>Debiteuren en Crediteuren</div>
                             </div>
-                            <div>debiteuren</div>
-                            <div>crediteuren</div>                           
+                            <div class="item">debiteuren</div>
+                            <div class="item">crediteuren</div>                           
                         </div>
 
   <!-- //overheid -->                       
@@ -142,6 +142,21 @@
                                 <div class="proces displaynone">&euro; <%= @belasting_org %></div>    
                             </div>
                         </div>
+  <!-- //eigenaren -->                       
+                        <div id="eigenaren" class="overheid">
+                            <div class="itemheader itemheaderoverheid">
+                                <div class="icon icon-plichtgeld"></div>
+                                <div class="icon icon-rechtgeld"></div>
+                                <div>Eigenaar </div>
+                                <div></div>
+                            </div>   
+                            <div class="overzicht-rente">
+                                <div class="item">dividend gereserveerd</div>
+                                <div class="iconwide icon-dividend proces displaynone"></div>
+                                <div class="proces displaynone">&euro; <%= @dividend %></div>  
+                            </div>     
+                        </div>
+
 
   <!-- //financiele producten -->                        
                         <div id="finprod" class="finprod">
@@ -152,11 +167,11 @@
                                 <div></div>
                             </div>
                             <div>
-                                <div>lening 5%</div>
+                                <div class="item">lening 5%</div>
                                 <div class="overzicht-rente">
-                                    <div>te betalen rente</div>
+                                    <div class="item">te betalen rente</div>
                                     <div class="iconwide icon-rente-neg proces displaynone"></div>
-                                    <div class="proces displaynone">- &euro; <%= @rente %></div>    
+                                    <div class="proces displaynone">&euro; <%= @rente %></div>    
                                 </div>
                             </div>
                         </div>
@@ -209,7 +224,7 @@
                                     <% end %>
                                     <div class="waardeinvestering waardeniet">Investering: &euro; 0</div>
                                 </div>
-                                <div>
+                                <div class="item">
                                       <% if @organisatie_search.rechtsvorm.id != 1 %>
                                         <% if !@grb_vla.present? %>
                                           <% @gbr_vla.each do |grootboek| %>
@@ -281,7 +296,7 @@
                                   <% end %>                           
                                     <div class="waardeinvestering waardeniet">Investering: &euro; 8.000</div>
                                 </div>
-                                <div>
+                                <div class="item">
                                       <% if @organisatie_search.rechtsvorm.id != 1 %>
                                         <% if !@grb_va.present? %>
                                           <% @gbr_va.each do |grootboek| %>
@@ -364,7 +379,7 @@
                                     <div>Kosten</div>
                                 </div>
 
-                                <div>
+                                <div class="item">
                                     <% if !@grb_kn.present? %>
                                         <% @gbr_kn.each do |grootboek| %>
                                           <%= grootboek.naam %><br>
@@ -401,7 +416,7 @@
                                     <div class="icon icon-mens"></div>
                                     <div>Personeel</div>
                                 </div>
-                                <div>
+                                <div class="item">
                                     <% if !@grb_pr.present? %>
                                         <% @gbr_pr.each do |grootboek| %>
                                           <%= grootboek.naam %><br>
@@ -481,7 +496,7 @@
                                     <div>Voor gezinsleden</div>
                                   <% end %>
                                 </div>
-                                 <div>
+                                 <div class="item">
                                       <% if @organisatie_search.rechtsvorm.id != 1 %>
                                         <% if !@grb_tk.present? %>
                                           <% @gbr_tk.each do |grootboek| %>
@@ -536,44 +551,6 @@
                                 </div>
                             </div>
 
-<!-- knowhow -->
-                            <div class="knowhow">
-                                <div class=" pijlrechts">
-                                    <div class="pijluitleg">
-                                        <div class="icon icon-dienstmarkt"></div>
-                                        <div class="pijlwaarde waardeniet">
-                                            <div>Gratis</div>
-                                        </div>
-                                    </div>
-                                    <div class="pijluitlegwoord" title="Overdragen kennis en bedrijfscultuur">kennis voor personeel</div>
-                                </div>
-                                <div class="itemheader">
-                                  <% if @organisatie_search.rechtsvorm.id != 1 %>
-                                    <div class="icon icon-receptT"></div>
-                                    <div title="kennis (over huishouden, eten koken, sociale vaardigheden, etc.">Know-how</div>
-                                  <% else %>
-                                    <div class="icon icon-receptT"></div>
-                                    <div>Kennis, gezinscultuur</div>
-                                  <% end %>
-                                </div>
-                                <div class="itembody-display">
-                                    <div class="itembody">
-                                      <% if @organisatie_search.rechtsvorm.id != 1 %>
-                                        <% if !@grb_kh.present? %>
-                                          <% @gbr_kh.each do |grootboek| %>
-                                            <%= image_tag grootboek.icoon_url.to_s %>
-                                          <% end %>
-                                        <% end %>
-                                      <% else %>
-                                        <% if !@grb_hk.present? %>
-                                          <% @gbr_hk.each do |grootboek| %>
-                                            <%= image_tag grootboek.icoon_url.to_s %>
-                                          <% end %>
-                                        <% end %>
-                                      <% end %>
-                                    </div>
-                                </div>
-                            </div>
 <!-- reclame -->
                             <div class="reclame button">
                                 <div class=" pijlrechts">
@@ -616,6 +593,45 @@
                                     <img class="volledigegrootte" src="/images/products/bakker/reclameBroodBart.png">
                                 </div>
                             </div> 
+
+<!-- knowhow -->
+                            <div class="knowhow">
+                                <div class=" pijlrechts">
+                                    <div class="pijluitleg">
+                                        <div class="icon icon-dienstmarkt"></div>
+                                        <div class="pijlwaarde waardeniet">
+                                            <div>Gratis</div>
+                                        </div>
+                                    </div>
+                                    <div class="pijluitlegwoord" title="Overdragen kennis en bedrijfscultuur">kennis voor personeel</div>
+                                </div>
+                                <div class="itemheader">
+                                  <% if @organisatie_search.rechtsvorm.id != 1 %>
+                                    <div class="icon icon-receptT"></div>
+                                    <div title="kennis (over huishouden, eten koken, sociale vaardigheden, etc.">Know-how</div>
+                                  <% else %>
+                                    <div class="icon icon-receptT"></div>
+                                    <div>Kennis, gezinscultuur</div>
+                                  <% end %>
+                                </div>
+                                <div class="itembody-display">
+                                    <div class="itembody">
+                                      <% if @organisatie_search.rechtsvorm.id != 1 %>
+                                        <% if !@grb_kh.present? %>
+                                          <% @gbr_kh.each do |grootboek| %>
+                                            <%= image_tag grootboek.icoon_url.to_s %>
+                                          <% end %>
+                                        <% end %>
+                                      <% else %>
+                                        <% if !@grb_hk.present? %>
+                                          <% @gbr_hk.each do |grootboek| %>
+                                            <%= image_tag grootboek.icoon_url.to_s %>
+                                          <% end %>
+                                        <% end %>
+                                      <% end %>
+                                    </div>
+                                </div>
+                            </div>
 <!-- administratie -->                                             
                             <div id="admin" class="admin button ">
                                 <div class="pijlrechts">
@@ -631,9 +647,9 @@
                                     <div class="icon icon-recept"></div>
                                     <div>Administratie</div>
                                 </div>
-                                <input class="chk-intern" type="checkbox" name="" value="intern"> Interne verslaglegging
+                                <input class="chk-intern" type="checkbox" name="" value="intern"> interne verslaglegging
                                 <br>
-                                <input class="chk-extern" type="checkbox" name="vehicle" value="extern">Externe verslaglegging
+                                <input class="chk-extern" type="checkbox" name="vehicle" value="extern">externe verslaglegging
                                 <br> 
                                 <div class="itembody-display">
                                     <div class="itembody">
@@ -703,7 +719,7 @@
                                             <div>  &euro; <%= @rente %></div>
                                         </div>
                                         <div class="winstonderdeel"> 
-                                            <div>Belastingen</div>                                           
+                                            <div>Diverse heffingen</div>                                           
                                             <div class="iconwide icon-belasting-neg"></div>
                                             <div>  &euro; <%= @belasting_org %></div>
                                         </div>

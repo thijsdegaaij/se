@@ -84,6 +84,9 @@ a {
   .euro {
     :before {content: '€ ';}
   }
+  .underline {
+    text-decoration: underline; 
+  }
   .hidden {
     visibility: hidden;
   }
@@ -99,4 +102,5 @@ a {
   .sctfinancieel {
     background-color: $financieel;
   }
+
 

@@ -88,6 +88,9 @@ a {
 .euro :before {
   content: '€ '; }
 
+.underline {
+  text-decoration: underline; }
+
 .hidden {
   visibility: hidden; }
 
@@ -1738,6 +1741,10 @@ a1a2 > .a2 .kolom,
   max-width: 500px;
   max-height: 450px; }
 
+.pijllinks,
+.pijlrechts {
+  display: none; }
+
 .geld > .pijllinks,
 .overheid > .pijllinks,
 .finprod > .pijllinks,
@@ -1747,13 +1754,12 @@ a1a2 > .a2 .kolom,
 .pers > .pijllinks,
 .container-ev > .pijllinks,
 .orgnaam > .pijllinks {
-  width: 120px;
   position: absolute;
-  left: -210px; }
+  left: -160px; }
 
 .geld .pijlrechts {
   position: absolute;
-  left: 755px; }
+  left: 775px; }
 
 .container-ev > .pijlrechts,
 .tekoop > .pijlrechts,
@@ -1763,16 +1769,18 @@ a1a2 > .a2 .kolom,
 .admin > .pijlrechts,
 .total-right > .pijlrechts {
   margin-top: -2px;
-  width: 330px;
   position: absolute;
-  left: 184px; }
+  left: 214px; }
 
 .org .item {
   padding-left: 4px; }
 
 .pijluitleg {
   justify-content: space-between;
-  width: 115px; }
+  width: 110px; }
+
+.overheid .pijluitleg {
+  margin-top: -6px; }
 
 .pijlwaarde div {
   justify-content: flex-end; }
@@ -1875,16 +1883,16 @@ a1a2 > .a2 .kolom,
   justify-content: flex-start;
   align-items: center; }
   .winstonderdeel :nth-child(1) {
-    flex: 0 0 100px; }
+    flex: 0 0 150px; }
   .winstonderdeel :nth-child(2) {
     flex: 0 0 auto; }
   .winstonderdeel :nth-child(3) {
     flex: 0 0 60px;
     text-align: right; }
 
-.pijllinks,
-.pijlrechts {
-  display: none; }
+.winstonderdeel.toename-ev {
+  font-weight: bold;
+  text-decoration: underline; }
 
 .abc {
   border-style: solid;
@@ -3165,12 +3173,14 @@ hr {
 
 .gbr1 {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  left: 60px; }
   .gbr1 .hor {
     display: flex;
     flex-direction: row;
     position: relative;
-    height: 20px; }
+    height: 24x; }
     .gbr1 .hor :nth-child(1) {
       flex: 0 0 50px; }
     .gbr1 .hor :nth-child(2) {
@@ -3182,14 +3192,17 @@ hr {
     .gbr1 .hor :nth-child(4) {
       flex: 0 0 50px; }
     .gbr1 .hor :nth-child(5) {
-      flex: 0 0 150px;
+      flex: 0 0 190px;
       font-style: italic;
       align-self: center; }
+  .gbr1 .hor.k2 :nth-child(2),
+  .gbr1 .hor.k2 :nth-child(3) {
+    border-top: 1px solid #CCCCCC; }
   .gbr1 .k1 {
     font-weight: bold;
     border-width: 1px 1px 1px 1px !important; }
-  .gbr1 .k2 {
-    height: 24px; }
+  .gbr1 .hor .k2 {
+    height: 34px; }
   .gbr1 .norm :nth-child(2) {
     padding-left: 8px; }
   .gbr1 .norm :nth-child(3) {
@@ -3507,9 +3520,6 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; }
-  .kprijsb .titelinput {
-    padding-top: 8px;
-    color: red; }
   .kprijsb .k-iwo, .kprijsb .k-ink, .kprijsb .k-vrk, .kprijsb .k-alg, .kprijsb .vvp {
     display: flex;
     flex-direction: column;
@@ -3569,14 +3579,21 @@ hr {
 
 .gbr-vergroot {
   position: absolute !important;
-  top: 60px;
-  left: 175px;
+  top: 870px;
+  left: 180px;
   background-color: white;
   padding: 24px;
   border: 1px solid #CCCCCC;
   box-shadow: 0px 0px 100px 0px rgba(1, 1, 2, 0.5);
-  width: 1100px;
+  width: 1050px;
   z-index: 3; }
+  .gbr-vergroot .titelgbr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 24px; }
   .gbr-vergroot .titel {
     display: flex;
     flex-direction: row;
@@ -3633,7 +3650,7 @@ hr {
     .gbr-vergroot .gbr-row .gbr-ovr {
       flex: 0 0 100px; }
     .gbr-vergroot .gbr-row .beschrijving {
-      flex: 0 0 150px; }
+      flex: 0 0 110px; }
     .gbr-vergroot .gbr-row .icoon {
       flex: 0 0 70px; }
     .gbr-vergroot .gbr-row .sign {
@@ -3662,8 +3679,6 @@ hr {
     height: 30px;
     padding-top: 3px;
     border-bottom: 2px solid #CCCCCC; }
-  .gbr-vergroot .gbr-rows {
-    height: 360px; }
   .gbr-vergroot .gbr-rows-scroll {
     height: 284px;
     overflow-y: scroll; }
@@ -4451,14 +4466,57 @@ hr {
   text-align: left;
   font-size: 16px;
   padding: 6px 6px 6px 2px;
-  background-color: #edeae3; }
+  background-color: #F4F3F3;
+  font-weight: bold;
+  font-size: 13px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #B3B3B3; }
 .cmsTabel th {
   text-align: left;
   font-size: 16px;
   padding: 6px 6px 6px 2px;
-  background-color: #edeae3; }
+  background-color: #F4F3F3; }
 .cmsTabel td {
-  padding: 6px 12px 6px 0px; }
+  padding: 6px 24px 6px 0px; }
+.cmsTabel .gbr-row {
+  display: flex;
+  flex-direction: row; }
+  .cmsTabel .gbr-row .dd {
+    flex: 0 0 90px; }
+  .cmsTabel .gbr-row .gbr-ovr {
+    flex: 0 0 120px; }
+  .cmsTabel .gbr-row .beschrijving {
+    flex: 0 0 90px; }
+  .cmsTabel .gbr-row .icoon {
+    flex: 0 0 30px; }
+  .cmsTabel .gbr-row .sign {
+    flex: 0 0 80px;
+    text-align: center; }
+  .cmsTabel .gbr-row .gbr-w {
+    flex: 0 0 80px;
+    text-align: right; }
+  .cmsTabel .gbr-row .gbr-h {
+    flex: 0 0 90px;
+    text-align: right;
+    padding-right: 12px; }
+  .cmsTabel .gbr-row .gbr-p {
+    flex: 0 0 60px;
+    text-align: right;
+    padding-right: 24px; }
+  .cmsTabel .gbr-row .show {
+    flex: 0 0 40px; }
+  .cmsTabel .gbr-row .edit {
+    flex: 0 0 30px; }
+  .cmsTabel .gbr-row .destroy {
+    flex: 0 0 40px; }
+.cmsTabel .gbr-row-header {
+  font-weight: bold;
+  height: 30px;
+  padding-top: 3px;
+  border-bottom: 2px solid #CCCCCC; }
+.cmsTabel .gbr-rows .newboeking {
+  padding-top: 24px; }
 .cmsTabel .plaatje3 {
   display: flex;
   flex-direction: row;

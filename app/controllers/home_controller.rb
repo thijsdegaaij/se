@@ -35,6 +35,10 @@ class HomeController < ApplicationController
     @jnl_intern_search = @organisatie_search.journaals.where("journaaltype_id = ?", 5).first
       
     # Boekingen
+    # ONDERSTAANDE REGEL STAAT OOK IN BOEKINGEN CONTROLLER!! Thijs
+    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id")
+    @boekingen_vla = @boekingen.where("grootboekrekening_id = ?", 10)
+
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
       if @bkg_ink_search.count == 0
@@ -161,6 +165,12 @@ class HomeController < ApplicationController
       @leveringen_vla= calc_gbtype(@organisatie_search, 1)[1]
       logger.debug("OMZET: #{@omzet}")
 
+      # saldo gb 'inkoop brood' / door thijs
+      @saldo_inkoopbrood = 0
+      @saldo_inkoopbrood= @leveringen_vla - @inkw_vd_omzet
+      logger.debug("OMZET: #{@omzet}")
+
+
       # levering vaste activa / door thijs
       @leveringen_va = 0
       @leveringen_va= calc_gbtype(@organisatie_search, 2)[1]
@@ -215,7 +225,7 @@ class HomeController < ApplicationController
       
       #Eigen vermogen grootboek
       # Start EV
-      @ev_start = 0
+      @ev_start = 4000
       # Netto winst voor belasting
       @nettowinstvb = @basiswinst + @rente
 
@@ -226,7 +236,9 @@ class HomeController < ApplicationController
       # Eind EV
 
       @ev_eind = 0
-      @ev_eind = @ev_start - @bedrijfskosten + @rente + @basiswinst + @dividend
+      @ev_eind = @ev_start + @nettowinstnb + @dividend
+
+      @ev_toename = @ev_eind - @ev_start
     end
    
   end

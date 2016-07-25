@@ -611,6 +611,11 @@
       max-height: 450px;
   }
   
+  .pijllinks,
+  .pijlrechts,
+  {
+      display: none;
+  }
    
   .geld,
   .overheid,
@@ -623,15 +628,15 @@
   .orgnaam,
   {
       >.pijllinks {
-          width: 120px;
+          //width: 120px;
           position: absolute;
-          left: -210px;
+          left: -160px;
       }
   }
 
  .geld .pijlrechts {
    position: absolute;
-    left: 755px;
+    left: 775px;
   }
 
   .container-ev,
@@ -643,9 +648,9 @@
   .total-right {
       > .pijlrechts {
           margin-top: -2px;
-          width: 330px;
+          //width: 330px;
           position: absolute;
-          left: 184px;
+          left: 214px;
       }
   }
 
@@ -655,8 +660,20 @@
   }
   .pijluitleg {
     justify-content: space-between;
-      width: 115px;
+    width: 110px; 
   }  
+
+.pijllinks, .pijlrechts, .middenlinks,
+.middenmidden, .middenrechts, .winstonderdeel {
+    //color: $kop2;
+}
+
+
+
+  .overheid .pijluitleg {
+    margin-top: -6px;  
+  }  
+
   .pijlwaarde div {
     justify-content: flex-end;
   }  
@@ -785,7 +802,7 @@
     justify-content: flex-start;
     align-items: center;
     :nth-child(1) {
-      flex: 0 0 100px;
+      flex: 0 0 150px;
     }
     :nth-child(2) {
       flex: 0 0 auto;
@@ -796,13 +813,12 @@
       text-align: right;
       //align-self: flex-end;
     }
+
   }
-  
-  .pijllinks,
-  .pijlrechts,
-  {
-      display: none;
-  }
+    .winstonderdeel.toename-ev{
+      font-weight: bold;
+      text-decoration: underline;
+    }
   
 
   .abc,

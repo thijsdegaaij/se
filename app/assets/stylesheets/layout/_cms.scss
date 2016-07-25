@@ -58,19 +58,57 @@
 		text-align: left;
 		font-size: 16px;
 		padding: 6px 6px 6px 2px;
-		background-color: $background-color-1;
+		background-color: $background-color-2;
+		font-weight: bold;
+		font-size: 13px;
+	    border-style: solid;
+	    border-width: 0px 0px 1px 0px;
+	    border-color: $border-color-dark;
 		
 	}
 	th {
 		text-align: left;
 		font-size: 16px;
 		padding: 6px 6px 6px 2px;
-		background-color: $background-color-1;
+		background-color: $background-color-2;
 		
 	}
 	td {
-		padding: 6px 12px 6px 0px;
+		padding: 6px 24px 6px 0px;
 	}
+
+   .gbr-row {
+       display: flex;
+       flex-direction: row;       
+       .dd          {flex: 0 0 90px;}
+       .gbr-ovr     {flex: 0 0 120px;}
+       .beschrijving{flex: 0 0 90px;}
+       .icoon       {flex: 0 0 30px;}
+       .sign        {flex: 0 0 80px; text-align: center;} 
+       .gbr-w       {flex: 0 0 80px; text-align: right;}
+       .gbr-h       {flex: 0 0 90px; text-align: right; padding-right: 12px;}
+       .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 24px;}
+       .show        {flex: 0 0 40px;}
+       .edit        {flex: 0 0 30px;}
+       .destroy     {flex: 0 0 40px;}
+   }
+
+   .gbr-row-header {
+		font-weight: bold; 
+	    height: 30px; 
+	    padding-top: 3px;
+	    border-bottom: 2px solid $border-color-base;}
+   .gbr-rows {
+   	.newboeking {
+   		padding-top: 24px;
+   	}
+    //height: 360px;
+    }
+   .gbr-rows-scroll {
+     //height: 124px;
+     //overflow-y: scroll;
+   }
+
 
 	.plaatje3 {  
 		display: flex;

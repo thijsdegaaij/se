@@ -150,29 +150,32 @@
 .gbr1 { //gbr binnen gb
   display: flex;
   flex-direction: column;
+  position: relative;
+  left: 60px;
+
   .hor {
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 20px;
+  height: 24x;
   :nth-child(1) {flex: 0 0 50px;}
   :nth-child(2) {flex: 0 0 85px; padding: 1px 0px 0px 0px; }
   :nth-child(3) {flex: 0 0 130px; padding: 1px 8px 0px 2px;}        
   :nth-child(4) {flex: 0 0 50px;}       
-  :nth-child(5) {flex: 0 0 150px; font-style: italic; align-self: center;}
+  :nth-child(5) {flex: 0 0 190px; font-style: italic; align-self: center;}
   }
-  .hor.k1 :nth-child(2), 
-  .hor.k1 :nth-child(3) {
-  	//border-top: 1px solid $border-color-base;
+  .hor.k2 :nth-child(2), 
+  .hor.k2 :nth-child(3) {
+  	border-top: 1px solid $border-color-base;
   }
   
     .k1{
       font-weight: bold;  
     border-width: 1px 1px 1px 1px !important; 
     }
-    .k2 {
+    .hor .k2 {
       //font-weight: bold;
-      height: 24px;
+      height: 34px;
     }
     .norm {
     :nth-child(2) {padding-left: 8px}
@@ -518,10 +521,6 @@
     justify-content: flex-start;
     //width: 200px;       
   }
-  .titelinput {
-  	padding-top: 8px;
-  	color: red;
-  }
 
   .k-iwo, .k-ink, .k-vrk, .k-alg, .vvp,  { //enkele kostensoorten
     display: flex;
@@ -613,14 +612,24 @@
 
 .gbr-vergroot { //start van big 1 grootboekrekening
        position: absolute !important;
-       top: 60px;
-       left: 175px;
+       top: 870px;
+       left: 180px;
        background-color: white; 
        padding: 24px;
        border: 1px solid $border-color-base;        
        box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);       
-       width: 1100px;
+       width: 1050px;
        z-index: 3;
+    
+   .titelgbr {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size:18px;
+      font-weight: bold;
+      //width: 1000px;
+      padding-bottom: 24px; }
+
    .titel {
       display: flex;
       flex-direction: row;
@@ -654,9 +663,13 @@
      flex-direction: row;
     :nth-child(1) {flex: 0 0 240px;}
     :nth-child(2) {flex: 0 0 400px;}
-      }    
+      }  
 
-   .gbr-row { //in gb
+        
+	.gbr-rows {
+		//height: 360px;
+		}
+    .gbr-row { //in gb
        padding-left: 8px;
        display: flex;
        flex-direction: row; 
@@ -665,7 +678,7 @@
        }
        .dd          {flex: 0 0 60px;}
        .gbr-ovr     {flex: 0 0 100px;}
-       .beschrijving{flex: 0 0 150px;}
+       .beschrijving{flex: 0 0 110px;}
        .icoon       {flex: 0 0 70px;}
        .sign        {flex: 0 0 40px; text-align: center;} 
        .gbr-w       {flex: 0 0 70px; text-align: right;}
@@ -681,9 +694,7 @@
    height: 30px; 
    padding-top: 3px;
    border-bottom: 2px solid $border-color-base;}
-   .gbr-rows {
-    height: 360px;
-    }
+   
    .gbr-rows-scroll {
      height: 284px;
      overflow-y: scroll;

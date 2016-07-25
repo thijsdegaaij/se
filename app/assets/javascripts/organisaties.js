@@ -32,8 +32,8 @@ var ready = function() {
     //knoppen boven bakker
 
     $(".btnorg1").click(function() { // klein
-        $(".itembody-display, .b, .pijlwaarde, .groot, .btnorg1 ").addClass("displaynone");
-        $(".pijlwaarde").addClass("displaynone");
+        $(".itembody-display, .item, .gbrrekeningen, .btnorg1 ").addClass("displaynone");
+/*
         $(".timeshow").animate({
             height: '400px'
         }, 150);
@@ -46,11 +46,13 @@ var ready = function() {
         $(".a, .c ").animate({
             height: "280px"
         }, 150);
-        $(".btnorg2, .klein ").removeClass("displaynone");
+        */
+        $(".btnorg2 ").removeClass("displaynone");
         $(".vergroting").hide();
     });
 
     $(".btnorg2").click(function() { // groot
+/*
         $(".orgheader, .overeenkomsten, .geld,.overheid, .finprod,  .orgbuttons ").animate({
             width: "600px"
         }, 150);
@@ -63,11 +65,12 @@ var ready = function() {
         $(".a, .c ").animate({
             height: "400px"
         }, 150);
-        $(".itembody, .b, .groot, .klein, .btnorg2 ").addClass("displaynone");
         setTimeout(function() {
             $(".itembody-display, .b, .groot, .btnorg1 ").removeClass("displaynone");
         }, 120);
-        $(".org-all").toggleClass("displaynone");
+        */
+        $(".btnorg2 ").addClass("displaynone");
+        $(".itembody-display, .item, .gbrrekeningen,  .btnorg1 ").removeClass("displaynone");
 
     });
     $(".btnorg3").click(function() { // processen
@@ -138,6 +141,21 @@ var ready = function() {
             $('.accountingextern').hide();
         }
     });
+
+
+// GBR vergroting
+
+    $(document.body).on("click", ".toon_gbr_inkoopbrood", function() {
+        $(".gbr-vergroot.inkoopbrood").toggleClass("displaynone");
+    });
+    $(document.body).on("click", ".toon_gbr_verkoopbrood", function() {
+        $(".gbr-vergroot.verkoopbrood").toggleClass("displaynone");
+    });
+    // delete button
+    $(document.body).on("click", ".icon-delete ", function() {
+        $(".gbr-vergroot").addClass("displaynone");
+    });
+
 
 
     // PIJLEN

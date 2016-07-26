@@ -1,112 +1,245 @@
-<div class="grootboek-rails">
-  <h1>Grootboek</h1>
-  
-  <h2>Diversen</h2>
+<div class="grootboek-rails">  
+  <div class="grootboekrekeningen_titel displaynone">Grootboekrekeningen</div>
+
+  <div class="grootboekrekening_all">
+    <div class="grootboekrekening_one">
+  <!-- GBR INKOPEN -->
+               
+
+              <div class="gbr_dyn inkoopbrood">
+                <div class="titel">
+                    <div class="icon icon-rondje"></div>
+                    <div>Inkoop brood</div>
+                    <!-- <div>Periode: 1 jan tot heden</div> -->
+                </div> 
+
+                <div class="header">Alle boekingen</div>
+
+                <div class="cmsTabel gbr_inkoop_brood">
+                    <div class="gbr-rows">
+                        <div class="gbr-row gbr-row-header "> 
+                            <div class="dd">datum</div>
+                            <div class="gbr-ovr">overeenkomst</div>
+                            <div class="beschrijving">product</div>
+                            <div class="icoon">icoon</div>
+                            <div class="sign">bij/af</div>
+                            <div class="ks styled-select">boekproces</div>
+                            <div class="gbr-w">waarde</div>
+                            <div class="gbr-h">h</div>
+                            <div class="gbr-p">prijs</div>
+                            <div colspan="3">acties</div>
+                        </div> 
+                        <% @boekingen_vla.each do |boeking| %>
+                          <div class="gbr-row">
+                            <div class="dd"><%= boeking.datum %></div>
+                            <% if boeking.journaal %>
+                              <div class="gbr-ovr"><%= boeking.journaal.boeknummer %></div>
+                            <% else %>
+                              <div>Intern</div>
+                            <% end %>
+                            <div class="beschrijving"><%= boeking.product.naam %></div>
+                            <div class="icoon"><%= image_tag boeking.icoon_url(:thumb).to_s %></div>
+                            <div class="sign"><%= boeking.bij_af %></div>
+                            <div class="ks styled-select"><%= boeking.boekproces.naam %></div>
+                            <div class="gbr-w"><%= boeking.waarde %></div>
+                            <div class="gbr-h"><%= boeking.hoeveelheid %></div>
+                            <div class="gbr-p"><%= boeking.p_inkoop %></div>
+                            <div class="show"><%= link_to 'toon', boeking %></div>
+                            <div class="edit"><%= link_to 'edit', edit_boeking_path(boeking) %></div>
+                            <div class="destroy"><%= link_to 'verwijder', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                          </div>
+                        <% end %> 
+                        <div class="newboeking"><%= link_to 'nieuwe boeking', new_boeking_path %></div>
+                    </div>
+                </div>
+
+                <div class="header">Samenvatting</div>
+                <div class="input">
+                    <div class="gbr1">
+                        <!-- column -->
+                       <!--  <div class="hor k1 titelinput ">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div> -->
+                        <div class="hor k2 titelinput ">
+                            <div class=""></div>
+                            <div>
+                                <div class="icon icon-rondje"></div>
+                            </div>
+                            <div class="">inkoop brood</div>
+                            <div></div>
+                        </div>
+                        <div class="hor norm evkleur">
+                            <div class="">&nbsp; </div>
+                            <div>start </div>
+                            <div class="underline">0</div>
+                            <div>&nbsp; </div>
+                        </div>
+                        <div class="hor norm stroomkleur">
+                            <div class="icon icon-stroommarkt"></div>
+                            <div>bij</div>
+                            <div><%= @leveringen_vla %></div>
+                            <div class="naamlinks">inkopen</div>
+                        </div>
+                        <div class="hor norm stroomkleur">
+                            <div class="">&nbsp;</div>
+                            <div>af</div>
+                            <div><%= @inkw_vd_omzet %></div>
+                            <div class="icon icon-stroomintern"></div>
+                            <div class="naamrechts kosten-input">inkoopwaarde van de omzet</div>
+                        </div>
+                        <div class="hor norm evkleur">
+                            <div class="">&nbsp; </div>
+                            <div>eind</div>
+                            <div class="underline"><%= @saldo_inkoopbrood %></div>
+                            <div>&nbsp; </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info2">
+                    <div class="header">
+                        <div>Overig</div>
+                    </div>
+                    <div class="rij">
+                        <div>Wanneer bestellen?</div>
+                        <div>Voor 15:00 uur; dag van te voren</div>
+                    </div>
+                    <div class="rij">
+                        <div>Levertijd</div>
+                        <div>Volgende morgen om 07:00 uur</div>
+                    </div>
+                    <div class="rij">
+                        <div>Besteleendheid</div>
+                        <div>Stuk</div>
+                    </div>
+                </div>
+
+              </div>
+    </div>
 
 
-  <p></p>
+  <div class="grootboekrekening_one">
+<!-- GBR INKOPEN -->
+             
 
-  <% @gb_div.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  </b>
+            <div class="gbr_dyn inkoopbrood">
+              <div class="titel">
+                  <div class="icon icon-rondje"></div>
+                  <div>Inkoop brood</div>
+                  <!-- <div>Periode: 1 jan tot heden</div> -->
+              </div> 
 
+              <div class="header">Alle boekingen</div>
 
-  
-  <h2>Input</h2>
-  <% @gb_input.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  </b>
-  
-   
-  <h2>Output</h2>
-  <p>Verkopen</p>
-  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
-  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
-  <p>Omzet: - &euro;<%= @omzet %></p>
-  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
-  </b>
-  
-  
-  <h2>Eigen vermogen</h2>
-  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
-  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
-  <p>Rente - &euro; <%= @rente %></p>
-  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
-  <p>Belastingen = &euro; <%= @belasting_org %></p>
-  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
-  <p>Dividend voor eigenaar = &euro; <%= @dividend %></p>
-  <p>Toename van het eigen vermogen = &euro; <%= @ev_toename %></p>
-  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
-  </b>    
+              <div class="cmsTabel gbr_inkoop_brood">
+                  <div class="gbr-rows">
+                      <div class="gbr-row gbr-row-header "> 
+                          <div class="dd">datum</div>
+                          <div class="gbr-ovr">overeenkomst</div>
+                          <div class="beschrijving">product</div>
+                          <div class="icoon">icoon</div>
+                          <div class="sign">bij/af</div>
+                          <div class="ks styled-select">boekproces</div>
+                          <div class="gbr-w">waarde</div>
+                          <div class="gbr-h">h</div>
+                          <div class="gbr-p">prijs</div>
+                          <div colspan="3">acties</div>
+                      </div> 
+                      <% @boekingen_vla.each do |boeking| %>
+                        <div class="gbr-row">
+                          <div class="dd"><%= boeking.datum %></div>
+                          <% if boeking.journaal %>
+                            <div class="gbr-ovr"><%= boeking.journaal.boeknummer %></div>
+                          <% else %>
+                            <div>Intern</div>
+                          <% end %>
+                          <div class="beschrijving"><%= boeking.product.naam %></div>
+                          <div class="icoon"><%= image_tag boeking.icoon_url(:thumb).to_s %></div>
+                          <div class="sign"><%= boeking.bij_af %></div>
+                          <div class="ks styled-select"><%= boeking.boekproces.naam %></div>
+                          <div class="gbr-w"><%= boeking.waarde %></div>
+                          <div class="gbr-h"><%= boeking.hoeveelheid %></div>
+                          <div class="gbr-p"><%= boeking.p_inkoop %></div>
+                          <div class="show"><%= link_to 'toon', boeking %></div>
+                          <div class="edit"><%= link_to 'edit', edit_boeking_path(boeking) %></div>
+                          <div class="destroy"><%= link_to 'verwijder', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                        </div>
+                      <% end %> 
+                      <div class="newboeking"><%= link_to 'nieuwe boeking', new_boeking_path %></div>
+                  </div>
+              </div>
 
+              <div class="header">Samenvatting</div>
+              <div class="input">
+                  <div class="gbr1">
+                      <!-- column -->
+                     <!--  <div class="hor k1 titelinput ">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                      </div> -->
+                      <div class="hor k2 titelinput ">
+                          <div class=""></div>
+                          <div>
+                              <div class="icon icon-rondje"></div>
+                          </div>
+                          <div class="">inkoop brood</div>
+                          <div></div>
+                      </div>
+                      <div class="hor norm evkleur">
+                          <div class="">&nbsp; </div>
+                          <div>start </div>
+                          <div class="underline">0</div>
+                          <div>&nbsp; </div>
+                      </div>
+                      <div class="hor norm stroomkleur">
+                          <div class="icon icon-stroommarkt"></div>
+                          <div>bij</div>
+                          <div><%= @leveringen_vla %></div>
+                          <div class="naamlinks">inkopen</div>
+                      </div>
+                      <div class="hor norm stroomkleur">
+                          <div class="">&nbsp;</div>
+                          <div>af</div>
+                          <div><%= @inkw_vd_omzet %></div>
+                          <div class="icon icon-stroomintern"></div>
+                          <div class="naamrechts kosten-input">inkoopwaarde van de omzet</div>
+                      </div>
+                      <div class="hor norm evkleur">
+                          <div class="">&nbsp; </div>
+                          <div>eind</div>
+                          <div class="underline"><%= @saldo_inkoopbrood %></div>
+                          <div>&nbsp; </div>
+                      </div>
+                  </div>
+              </div>
 
+              <div class="info2">
+                  <div class="header">
+                      <div>Overig</div>
+                  </div>
+                  <div class="rij">
+                      <div>Wanneer bestellen?</div>
+                      <div>Voor 15:00 uur; dag van te voren</div>
+                  </div>
+                  <div class="rij">
+                      <div>Levertijd</div>
+                      <div>Volgende morgen om 07:00 uur</div>
+                  </div>
+                  <div class="rij">
+                      <div>Besteleendheid</div>
+                      <div>Stuk</div>
+                  </div>
+              </div>
 
-  
-  <h2>HERHALING</h2>
-  <h2>Diversen</h2>
-  <p>Geld: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Geld"</p>
-  <p>Belastingen: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Belastingen"  </p>
-  <p>Financiele producten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Financiele producten" </p>
-  <b>
-  <% @gb_div.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  </b>
-  
-  <h2>Input</h2>
-  <p>Vlottende activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vlottende activa"</p>
-  <p>Vaste activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vast Activa"</p>
-  <p>Kosten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Kosten"</p>
-  <p>Personeel: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Personeel"</p>     
-  <b>
-  <% @gb_input.each do |gb_type| %>
-    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
-    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
-    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
-  <% end %>
-  </b>
-  
-   
-  <h2>Output</h2>
-  <p>Inkoopwaarde van de omzet: Gebaseerd op alle Min boekingen met Proces "Inkoopwaarde van de omzet"</p>
-  <p>Bedrijfskosten: Gebaseerd op alle Min boekingen met Proces "Inkoopkosten, verkoopkosten en Algemene kosten"</p>
-  <p>Omzet: Gebaseerd op alle Min boekingen met Proces "Levering uit (verkopen, omzet)" </p>
-  <p>Basiswinst: Gebaseerd op bovenstaande waardes (= Omzet - Inkoopwaarde van de omzet - bedrijfskosten)</p>
-  <b>
-  <p>Verkopen</p>
-  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
-  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
-  <p>Omzet: - &euro;<%= @omzet %></p>
-  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
-  </b>
-  
-  
-  <h2>Eigen vermogen</h2>
-  <p>Eigenvermogen begin van het jaar: Is altijd 0</p>
-  <p>Basiswinst: Zoals hierboven al een keer berekent</p>
-  <p>Overige kosten: Gebaseerd op alle Min boekingen met Proces "Rentelasten"</p>
-  <p>Nettowinst voor belasting: Basiswinst - Overige kosten</p>
-  <p>Belastingen: Gebaseerd o alle (min en plus) boekingen met Proces "Toename plicht vennootschapsbelasting, Afname plicht vennootschapsbelasting, Toename plicht nog te betalen btw en Afname plicht nog te betalen btw"</p>
-  <p>Nettowinst na belasting: Nettowinst voor belasting - Belastingen</p>
-  <p>Eigenvermogen eind van het jaar: Eigenvermogen begin van het jaar - Bedrijfskosten - Overige kosten + Basiswinst</p>
-  <b>
-  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
-  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
-  <p>Overige kosten - &euro; <%= @overigekosten %></p>
-  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
-  <p>Belastingen = &euro; <%= @belastingen %></p>
-  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
-  <br>
-  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
-  </b>    
+            </div>
+  </div>
+
+  </div>
 
 
 

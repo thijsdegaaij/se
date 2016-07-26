@@ -21,13 +21,22 @@
     <div class="navtwee ">
         <div class="icon icon-informatie displaynone"></div>
         <div class="navheader">Interne verslaggeving</div>
+        <div class="navbtn btngrootboek button bold">Grootboek</div>
         <div class="navbtn btninboeken button">Inboeken</div>
-        <div class="navbtn btnkostprijs button">Interne berekeningen</div>
+        <div class="navbtn btnkostprijs button">Berekeningen</div>
     </div>
+
+
+
     <div class="flex-columncenter">
+
+
+<!-- grootboek  -->  
           <div id="search_gb_results">
             <%= render 'journaals/grootboek' %>
           </div>
+
+<!-- inboeken  -->
         <div class="containerinboeken displaynone">
             <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
             <div class="inboeken-all">
@@ -56,9 +65,10 @@
                     <!-- Interne boekingen -->
                     <%= render 'journaals/jnlintern' %>
                
+                </div>
             </div>
 
-                <div class="kopje">Inboeken</div>
+                <div class="kopje displaynone">Inboeken</div>
                 <div class="boekin inkoop">
                     <!-- <div class="inboekingsmogelijkheden inkoop">
                         <div class="inboek">
@@ -188,13 +198,13 @@
                     </div>
                 </div>
             </div>
-        </div>
         
-        <!-- interne berekeningen -->
+<!-- interne berekeningen -->
         <div class="kprijscontainer displaynone">
+                <div class="titelhoofd displaynone">Interne berekeningen</div>
+                <div class="titel">prijzen </div>
+                <div class="ondertitel">Vaste verrekenprijs, kostprijs en verkoopprijs</div>
             <div class="kprijsb ">
-                <div class="titelhoofd">Interne berekeningen</div>
-                <div class="titel">Vaste verrekenprijs, kostprijs en verkoopprijs</div>
                 <div class="col col1">
                     <div class="k-iwo omtrek">
                         <div class="text">Inkoopwaarde van de omzet</div>

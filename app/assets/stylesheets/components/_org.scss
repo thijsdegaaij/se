@@ -389,6 +389,7 @@
       .kosten,
       .pers,
       .toewijzing,
+      .winkel
       .reclame,
       .service,
       .admin {
@@ -405,6 +406,7 @@
       .verkoopprijs,
       .producten,
       .service,
+      .winkel,
       .reclame,
       .knowhow,
       .toewijzing,
@@ -436,6 +438,7 @@
       .producten,
       .tekoop,
       .service,
+      .winkel,
       .reclame,
       .knowhow,
       .toewijzing,
@@ -457,6 +460,7 @@
       #b1,
       #b2,
       #tekoop,
+      .winkel,
       .reclame,
       .service,
       .knowhow,
@@ -644,11 +648,12 @@
   .reclame,
   .service,
   .knowhow,
+  .winkel,
   .admin,
   .total-right {
       > .pijlrechts {
           margin-top: -2px;
-          //width: 330px;
+          width: 230px;
           position: absolute;
           left: 214px;
       }
@@ -665,7 +670,7 @@
 
 .pijllinks, .pijlrechts, .middenlinks,
 .middenmidden, .middenrechts, .winstonderdeel {
-    //color: $kop2;
+    color: $procescolor;
 }
 
 
@@ -683,7 +688,7 @@
   }  
   .pijluitlegwoord {
       padding: 4px 0px 0px 0px;
-      font-style: italic;
+      //font-style: italic;
       cursor: pointer;
       margin-top: -12px;
   } 
@@ -708,9 +713,9 @@
  .middenmidden {
    position: absolute;
    left: 322px;
-   width: 102px;
+   width: 109px;
    display: none;
-   background-color: $background-color-2;
+   //background-color: $background-color-2;
  } 
  
  .middenrechtscontainer {
@@ -726,7 +731,7 @@
 
   .uitlegproces {
      //color: darkblue;
-     font-style: italic;
+     //font-style: italic;
      }   
 
  .flexrow {
@@ -840,6 +845,7 @@
   .kosten,
   .tekoop,
   .service,
+  .winkel,
   .reclame,
   .knowhow,
   {
@@ -877,7 +883,7 @@
       border-color: $border-color-base;
   }
   .bedrijfsprocessen-b {
-    font-style: italic;
+    //font-style: italic;
   }
   
   .ovrcontainer,
@@ -933,26 +939,7 @@
   .ovrprijs {
       width: 150px;
   }
-  
-  // DRY 
-  .bold {
-      font-weight: bold;
-  }
-  
-  .groen,
-  .winstweergave {
-      color: $orange !important;
-      font-weight: bold;
-  }
-  
-  .titelverslaglegging {
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      font-size: 14px;
-      color: black;
-      ;
-  }
+ 
   
   // DRY 
   .bold {

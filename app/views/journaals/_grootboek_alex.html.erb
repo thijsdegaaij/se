@@ -1,0 +1,125 @@
+<div class="grootboek-rails">
+  <h1>Grootboek</h1>
+  
+  <h2>Diversen</h2>
+
+
+
+
+
+
+
+
+  <p></p>
+
+  <% @gb_div.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+
+
+  
+  <h2>Input</h2>
+  <% @gb_input.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+  
+   
+  <h2>Output</h2>
+  <p>Verkopen</p>
+  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
+  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
+  <p>Omzet: - &euro;<%= @omzet %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  </b>
+  
+  
+  <h2>Eigen vermogen</h2>
+  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  <p>Rente - &euro; <%= @rente %></p>
+  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
+  <p>Belastingen = &euro; <%= @belasting_org %></p>
+  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
+  <p>Dividend voor eigenaar = &euro; <%= @dividend %></p>
+  <p>Toename van het eigen vermogen = &euro; <%= @ev_toename %></p>
+  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
+  </b>    
+
+
+
+  
+  <h2>HERHALING</h2>
+  <h2>Diversen</h2>
+  <p>Geld: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Geld"</p>
+  <p>Belastingen: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Belastingen"  </p>
+  <p>Financiele producten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Financiele producten" </p>
+  <b>
+  <% @gb_div.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+  
+  <h2>Input</h2>
+  <p>Vlottende activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vlottende activa"</p>
+  <p>Vaste activa: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Vast Activa"</p>
+  <p>Kosten: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Kosten"</p>
+  <p>Personeel: Gebaseerd op alle (min en plus) boekingen op grootboeken van het type "Personeel"</p>     
+  <b>
+  <% @gb_input.each do |gb_type| %>
+    <p><%= gb_type[0] %> + &euro; <%= gb_type[1] %></p>
+    <p><%= gb_type[0] %> - &euro; <%= gb_type[2] %></p>
+    <p><%= gb_type[0] %> = &euro; <%= gb_type[3] %></p>
+  <% end %>
+  </b>
+  
+   
+  <h2>Output</h2>
+  <p>Inkoopwaarde van de omzet: Gebaseerd op alle Min boekingen met Proces "Inkoopwaarde van de omzet"</p>
+  <p>Bedrijfskosten: Gebaseerd op alle Min boekingen met Proces "Inkoopkosten, verkoopkosten en Algemene kosten"</p>
+  <p>Omzet: Gebaseerd op alle Min boekingen met Proces "Levering uit (verkopen, omzet)" </p>
+  <p>Basiswinst: Gebaseerd op bovenstaande waardes (= Omzet - Inkoopwaarde van de omzet - bedrijfskosten)</p>
+  <b>
+  <p>Verkopen</p>
+  <p>Inkoopwaarde vd omzet + &euro; <%= @inkw_vd_omzet %></p>
+  <p>Bedrijfskosten: + &euro; <%= @bedrijfskosten %></p>
+  <p>Omzet: - &euro;<%= @omzet %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  </b>
+  
+  
+  <h2>Eigen vermogen</h2>
+  <p>Eigenvermogen begin van het jaar: Is altijd 0</p>
+  <p>Basiswinst: Zoals hierboven al een keer berekent</p>
+  <p>Overige kosten: Gebaseerd op alle Min boekingen met Proces "Rentelasten"</p>
+  <p>Nettowinst voor belasting: Basiswinst - Overige kosten</p>
+  <p>Belastingen: Gebaseerd o alle (min en plus) boekingen met Proces "Toename plicht vennootschapsbelasting, Afname plicht vennootschapsbelasting, Toename plicht nog te betalen btw en Afname plicht nog te betalen btw"</p>
+  <p>Nettowinst na belasting: Nettowinst voor belasting - Belastingen</p>
+  <p>Eigenvermogen eind van het jaar: Eigenvermogen begin van het jaar - Bedrijfskosten - Overige kosten + Basiswinst</p>
+  <b>
+  <p>Eigenvermogen begin van het jaar = &euro; <%= @ev_start %></p>
+  <p>Basiswinst: + &euro; <%= @basiswinst %></p>
+  <p>Overige kosten - &euro; <%= @overigekosten %></p>
+  <p>Nettowinst voor belasting = &euro; <%= @nettowinstvb %></p>
+  <p>Belastingen = &euro; <%= @belastingen %></p>
+  <p>Nettowinst na belasting = &euro; <%= @nettowinstnb %></p>
+  <br>
+  <p>Eigenvermogen eind van het jaar = &euro; <%= @ev_eind %></p>
+  </b>    
+
+
+
+
+
+
+
+</div>
+
+

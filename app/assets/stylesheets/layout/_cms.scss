@@ -101,8 +101,10 @@
    .gbr-rows {
    	.newboeking {
    		padding-top: 24px;
-   	}
-    //height: 360px;
+   		display: flex;
+   		justify-content: flex-end;
+   		padding-right: 24px;
+   		}
     }
    .gbr-rows-scroll {
      //height: 124px;

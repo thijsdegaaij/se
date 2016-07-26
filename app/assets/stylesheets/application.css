@@ -1586,7 +1586,8 @@ a1a2 > .a2 .kolom,
 .orgscontainer .kosten,
 .orgscontainer .pers,
 .orgscontainer .toewijzing,
-.orgscontainer .reclame,
+.orgscontainer .winkel
+.reclame,
 .orgscontainer .service,
 .orgscontainer .admin {
   background-color: white; }
@@ -1601,6 +1602,7 @@ a1a2 > .a2 .kolom,
 .orgscontainer .verkoopprijs,
 .orgscontainer .producten,
 .orgscontainer .service,
+.orgscontainer .winkel,
 .orgscontainer .reclame,
 .orgscontainer .knowhow,
 .orgscontainer .toewijzing,
@@ -1627,6 +1629,7 @@ a1a2 > .a2 .kolom,
 .orgscontainer .producten,
 .orgscontainer .tekoop,
 .orgscontainer .service,
+.orgscontainer .winkel,
 .orgscontainer .reclame,
 .orgscontainer .knowhow,
 .orgscontainer .toewijzing,
@@ -1766,9 +1769,11 @@ a1a2 > .a2 .kolom,
 .reclame > .pijlrechts,
 .service > .pijlrechts,
 .knowhow > .pijlrechts,
+.winkel > .pijlrechts,
 .admin > .pijlrechts,
 .total-right > .pijlrechts {
   margin-top: -2px;
+  width: 230px;
   position: absolute;
   left: 214px; }
 
@@ -1778,6 +1783,10 @@ a1a2 > .a2 .kolom,
 .pijluitleg {
   justify-content: space-between;
   width: 110px; }
+
+.pijllinks, .pijlrechts, .middenlinks,
+.middenmidden, .middenrechts, .winstonderdeel {
+  color: #9A9A9A; }
 
 .overheid .pijluitleg {
   margin-top: -6px; }
@@ -1791,7 +1800,6 @@ a1a2 > .a2 .kolom,
 
 .pijluitlegwoord {
   padding: 4px 0px 0px 0px;
-  font-style: italic;
   cursor: pointer;
   margin-top: -12px; }
 
@@ -1810,9 +1818,8 @@ a1a2 > .a2 .kolom,
 .middenmidden {
   position: absolute;
   left: 322px;
-  width: 102px;
-  display: none;
-  background-color: #F4F3F3; }
+  width: 109px;
+  display: none; }
 
 .middenrechtscontainer {
   display: flex;
@@ -1821,9 +1828,6 @@ a1a2 > .a2 .kolom,
   left: -115px;
   width: 105px;
   display: none; }
-
-.uitlegproces {
-  font-style: italic; }
 
 .flexrow {
   display: flex;
@@ -1910,6 +1914,7 @@ a1a2 > .a2 .kolom,
 .kosten,
 .tekoop,
 .service,
+.winkel,
 .reclame,
 .knowhow {
   border-style: solid;
@@ -1939,9 +1944,6 @@ a1a2 > .a2 .kolom,
   border-style: solid;
   border-width: 1px 0px 1px 0px;
   border-color: #CCCCCC; }
-
-.bedrijfsprocessen-b {
-  font-style: italic; }
 
 .ovrcontainer,
 .ovr {
@@ -1987,21 +1989,6 @@ a1a2 > .a2 .kolom,
 .ovrheader,
 .ovrprijs {
   width: 150px; }
-
-.bold {
-  font-weight: bold; }
-
-.groen,
-.winstweergave {
-  color: #fbbd04 !important;
-  font-weight: bold; }
-
-.titelverslaglegging {
-  position: absolute;
-  top: 2px;
-  left: 8px;
-  font-size: 14px;
-  color: black; }
 
 .bold {
   font-weight: bold; }
@@ -3193,7 +3180,6 @@ hr {
       flex: 0 0 50px; }
     .gbr1 .hor :nth-child(5) {
       flex: 0 0 190px;
-      font-style: italic;
       align-self: center; }
   .gbr1 .hor.k2 :nth-child(2),
   .gbr1 .hor.k2 :nth-child(3) {
@@ -3242,37 +3228,41 @@ hr {
 .accent {
   text-decoration: underline; }
 
-.inboeken-all {
-  position: absolute;
-  top: 38px;
-  left: 124px;
+.inboeken-all .kopje {
+  position: relative;
+  padding-left: 24px;
+  padding-top: 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9A9A9A; }
+
+.boeking_titel {
+  padding: 0px 0px 24px 0px;
+  font-size: 18px;
+  color: #9A9A9A; }
+
+.boeking_columns {
   display: flex;
   flex-direction: column;
-  border-width: 1px 1px 1px 1px;
-  border-style: solid;
-  border-color: #CCCCCC;
-  width: 1300px;
-  height: 730px;
-  background-color: #fafcff;
-  z-index: 7; }
-  .inboeken-all .kopje {
-    position: relative;
-    padding-left: 24px;
-    padding-top: 24px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #9A9A9A; }
+  align-items: flex-start; }
+
+.boeking_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .boeking_row .field {
+    width: 136px; }
 
 .journaals {
   position: absolute;
   padding: 24px;
   top: 0px;
-  left: -690px;
+  left: -565px;
   display: flex;
   flex-direction: column;
   width: 563px;
   height: 730px;
-  background-color: #fafcff;
+  background-color: white;
   box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
   border: 1px solid #CCCCCC;
   padding-top: 175px; }
@@ -3280,6 +3270,7 @@ hr {
     position: relative;
     text-transform: uppercase;
     color: #9A9A9A;
+    font-weight: bold;
     position: absolute;
     top: 24px; }
   .journaals .klap img {
@@ -3294,9 +3285,10 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 450px;
+    width: 505px;
     margin-top: 36px;
     border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 12px;
     z-index: 1; }
     .journaals .btns > div {
       color: #808080;
@@ -3439,7 +3431,8 @@ hr {
   background-color: white;
   width: 380px;
   border: 1px solid #CCCCCC;
-  border-radius: 6px; }
+  border-radius: 6px;
+  margin-top: 12px; }
   .overeenkomst .inkoop-ovr .head {
     background-color: #edeae3;
     border-top-left-radius: 6px;
@@ -3484,37 +3477,24 @@ hr {
     color: #808080; }
 
 .kprijscontainer {
-  position: absolute;
-  top: 0px;
-  left: 180px;
-  background-color: white;
-  z-index: 95;
-  width: 1100px;
-  padding: 126px 78px 78px 178px;
-  border: 1px solid #CCCCCC;
-  box-shadow: 0px 0px 200px 0px rgba(1, 1, 1, 0.7); }
+  width: 1100px; }
+  .kprijscontainer .titelhoofd {
+    top: 24px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .kprijscontainer .titel {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #9A9A9A;
+    padding: 12px 0px; }
 
 .kprijsb {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 650px; }
+  justify-content: center; }
   .kprijsb div {
     position: relative;
     padding: 0px 0px 0px 0px; }
-  .kprijsb .titelhoofd {
-    position: absolute;
-    top: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 32px;
-    font-size: 14px; }
-  .kprijsb .titel {
-    position: absolute;
-    top: 72px;
-    font-weight: bold;
-    margin-left: 32px;
-    font-size: 16px; }
   .kprijsb .col {
     display: flex;
     flex-direction: column;
@@ -3577,109 +3557,133 @@ hr {
     border: 3px solid #34a853;
     padding: 0px; }
 
-.gbr-vergroot {
+.gbr_vergroot {
   position: absolute !important;
   top: 870px;
   left: 180px;
   background-color: white;
-  padding: 24px;
+  padding: 24px 48px;
   border: 1px solid #CCCCCC;
   box-shadow: 0px 0px 100px 0px rgba(1, 1, 2, 0.5);
-  width: 1050px;
+  width: 1098px;
   z-index: 3; }
-  .gbr-vergroot .titelgbr {
+  .gbr_vergroot .titelgbr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    color: #9A9A9A; }
+
+.grootboekrekeningen_titel {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9A9A9A;
+  padding: 12px 0px; }
+
+.grootboekrekening_all {
+  height: 500px;
+  overflow-y: scroll;
+  width: 1100px; }
+
+.grootboekrekening_one {
+  border-style: dashed;
+  border-width: 1px 0px 1px 0px;
+  border-color: #B3B3B3;
+  padding: 12px 0px 12px 0px; }
+
+.gbr_dyn {
+  width: 1005px; }
+  .gbr_dyn .titel {
+    display: flex;
+    flex-direction: row;
     font-size: 18px;
     font-weight: bold;
     padding-bottom: 24px; }
-  .gbr-vergroot .titel {
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    font-weight: bold; }
-    .gbr-vergroot .titel :nth-child(1) {
+    .gbr_dyn .titel :nth-child(1) {
       flex: 0 0 40px;
       margin-top: 4px;
       margin-left: 8px; }
-    .gbr-vergroot .titel :nth-child(2) {
+    .gbr_dyn .titel :nth-child(2) {
       flex: 0 0 150px;
       margin-top: 6px; }
-    .gbr-vergroot .titel :nth-child(3) {
+    .gbr_dyn .titel :nth-child(3) {
       flex: 0 0 260px;
       margin-top: 8px;
       font-size: 14px;
       font-weight: normal; }
-    .gbr-vergroot .titel :nth-child(4) {
+    .gbr_dyn .titel :nth-child(4) {
       flex: 0 0 30px;
       margin-top: 3px;
       margin-left: auto; }
-  .gbr-vergroot .header {
+  .gbr_dyn .header {
     font-weight: bold;
-    margin-top: 24px; }
-  .gbr-vergroot .info {
+    margin: 0px 0px 8px 0px; }
+  .gbr_dyn .info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 12px; }
-    .gbr-vergroot .info > .rij {
+    .gbr_dyn .info > .rij {
       display: flex;
       flex-direction: row; }
-      .gbr-vergroot .info > .rij :nth-child(1) {
+      .gbr_dyn .info > .rij :nth-child(1) {
         flex: 0 0 240px; }
-      .gbr-vergroot .info > .rij :nth-child(2) {
+      .gbr_dyn .info > .rij :nth-child(2) {
         flex: 0 0 30px; }
-      .gbr-vergroot .info > .rij :nth-child(3) {
+      .gbr_dyn .info > .rij :nth-child(3) {
         flex: 0 0 300px; }
-  .gbr-vergroot .info2 > .rij {
+  .gbr_dyn .info2 > .rij {
     display: flex;
     flex-direction: row; }
-    .gbr-vergroot .info2 > .rij :nth-child(1) {
+    .gbr_dyn .info2 > .rij :nth-child(1) {
       flex: 0 0 240px; }
-    .gbr-vergroot .info2 > .rij :nth-child(2) {
+    .gbr_dyn .info2 > .rij :nth-child(2) {
       flex: 0 0 400px; }
-  .gbr-vergroot .gbr-row {
+  .gbr_dyn .gbr-row {
     padding-left: 8px;
     display: flex;
     flex-direction: row; }
-    .gbr-vergroot .gbr-row > div {
+    .gbr_dyn .gbr-row > div {
       padding-top: 4px; }
-    .gbr-vergroot .gbr-row .dd {
+    .gbr_dyn .gbr-row .dd {
       flex: 0 0 60px; }
-    .gbr-vergroot .gbr-row .gbr-ovr {
+    .gbr_dyn .gbr-row .gbr-ovr {
       flex: 0 0 100px; }
-    .gbr-vergroot .gbr-row .beschrijving {
+    .gbr_dyn .gbr-row .beschrijving {
       flex: 0 0 110px; }
-    .gbr-vergroot .gbr-row .icoon {
+    .gbr_dyn .gbr-row .icoon {
       flex: 0 0 70px; }
-    .gbr-vergroot .gbr-row .sign {
+    .gbr_dyn .gbr-row .sign {
       flex: 0 0 40px;
       text-align: center; }
-    .gbr-vergroot .gbr-row .gbr-w {
+    .gbr_dyn .gbr-row .gbr-w {
       flex: 0 0 70px;
       text-align: right; }
-    .gbr-vergroot .gbr-row .gbr-h {
+    .gbr_dyn .gbr-row .gbr-h {
       flex: 0 0 60px;
       text-align: right; }
-    .gbr-vergroot .gbr-row .gbr-p {
+    .gbr_dyn .gbr-row .gbr-p {
       flex: 0 0 60px;
       text-align: right;
       padding-right: 12px; }
-    .gbr-vergroot .gbr-row .ks {
+    .gbr_dyn .gbr-row .ks {
       flex: 0 0 200px; }
-    .gbr-vergroot .gbr-row .kf {
+    .gbr_dyn .gbr-row .kf {
       flex: 0 0 200px; }
-  .gbr-vergroot .gbr-rows-scroll .gbr-w::before {
+  .gbr_dyn .gbr-rows-scroll .gbr-w::before {
     content: '€ '; }
-  .gbr-vergroot .gbr-rows-scroll .gbr-p::before {
+  .gbr_dyn .gbr-rows-scroll .gbr-p::before {
     content: '€ '; }
-  .gbr-vergroot .gbr-row-header {
+  .gbr_dyn .gbr-row-header {
     font-weight: bold;
     height: 30px;
     padding-top: 3px;
     border-bottom: 2px solid #CCCCCC; }
-  .gbr-vergroot .gbr-rows-scroll {
+  .gbr_dyn .gbr-rows-scroll {
     height: 284px;
     overflow-y: scroll; }
 
@@ -4516,7 +4520,10 @@ hr {
   padding-top: 3px;
   border-bottom: 2px solid #CCCCCC; }
 .cmsTabel .gbr-rows .newboeking {
-  padding-top: 24px; }
+  padding-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px; }
 .cmsTabel .plaatje3 {
   display: flex;
   flex-direction: row;

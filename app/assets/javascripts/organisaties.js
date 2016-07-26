@@ -146,14 +146,14 @@ var ready = function() {
 // GBR vergroting
 
     $(document.body).on("click", ".toon_gbr_inkoopbrood", function() {
-        $(".gbr-vergroot.inkoopbrood").toggleClass("displaynone");
+        $(".gbr_vergroot.inkoopbrood").toggleClass("displaynone");
     });
     $(document.body).on("click", ".toon_gbr_verkoopbrood", function() {
-        $(".gbr-vergroot.verkoopbrood").toggleClass("displaynone");
+        $(".gbr_vergroot.verkoopbrood").toggleClass("displaynone");
     });
     // delete button
     $(document.body).on("click", ".icon-delete ", function() {
-        $(".gbr-vergroot").addClass("displaynone");
+        $(".gbr_vergroot").addClass("displaynone");
     });
 
 

@@ -5,7 +5,7 @@
     
       <!-- Interne Boekingen -->
       <div id="jnl_intern">
-        Kies Inkoopovereenkomst:
+        Kies interne boeking:
         <%= collection_select(:jnlintern, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 5, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
       </div>    
               

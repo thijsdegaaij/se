@@ -1,45 +1,52 @@
+<div class="boeking_titel">Boek de interne boeking</div>
+
+
 <%= form_for Boeking.new, :remote => true, :url => {:class => 'inboekveld', :controller => 'boekingen', :action => "create_bkn" } do |f| %>
 
-   <%= f.text_field :boekingtype, value: "I", style: "display: none;" %>
+  <%= f.text_field :boekingtype, value: "I", style: "display: none;" %>
 
   <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: none;" %>
 
   <%= f.number_field :journaal_id, value: session[:jnl_intern_id], style: "display: none;" %>
-  
-  <div class="field">
-    <p><%= f.label "Grootboekrekening" %></p>
-    <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label "Procesnaam" %></p>
-    <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label "Product" %></p>
-    <p><%= f.select :product_id, Product.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label :datum %></p>
-    <p><%= f.date_select :datum %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label :bij_af %></p>
-    <p><%= f.text_field :bij_af %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label :waarde %></p>
-    <p><%= f.number_field :waarde %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label :p_inkoop %></p>
-    <p><%= f.number_field :p_inkoop %></p>
-  </div>
-  <div class="field">
-    <p><%= f.label :hoeveelheid %></p>
-    <p><%= f.number_field :hoeveelheid %></p>
-  </div>
-  <div class="actions">
-    <p><%= f.submit class: "btn btn-primary btn-xs" %></p>
+ 
+  <div class="boeking_column">
+      <div class="boeking_row">   
+         <div class="field">
+           <p><%= f.label "Grootboekrekening" %></p>
+           <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label "Procesnaam" %></p>
+           <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label "Product" %></p>
+           <p><%= f.select :product_id, Product.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label :datum %></p>
+           <p><%= f.date_select :datum %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label :bij_af %></p>
+           <p><%= f.text_field :bij_af %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label :waarde %></p>
+           <p><%= f.number_field :waarde %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label :p_inkoop %></p>
+           <p><%= f.number_field :p_inkoop %></p>
+         </div>
+         <div class="field">
+           <p><%= f.label :hoeveelheid %></p>
+           <p><%= f.number_field :hoeveelheid %></p>
+         </div>
+    </div>
+    <div class="actions">
+      <p><%= f.submit class: "btn btn-primary btn-xs" %></p>
+    </div>
   </div>
   
 <% end %>
@@ -49,16 +56,16 @@
     <table border="1">
       <thead>
         <tr>
+          <th>Boeknummer</th>
           <th>Grootboekrekening</th>
-          <th>Grootboekrekeningtype</th>
+          <th>Procesnaam</th>
           <th>Product</th>
           <th>Datum</th>
           <th>Icoon</th>
           <th>Bij af</th>
           <th>Waarde</th>
-          <th>P-inkoop</th>
+          <th>P inkoop</th>
           <th>Hoeveelheid</th>
-          <th>Procesnaam</th>
           <th>Icoon</th>
           <th colspan="1"></th>
         </tr>
@@ -66,8 +73,9 @@
       <tbody>
         <% @bkg_intern_search.each do |boeking| %>
           <tr>
+            <td><%= boeking.journaal.boeknummer %></td>
             <td><%= boeking.grootboekrekening.naam %></td>
-            <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
+            <td><%= boeking.boekproces.naam %></td>
             <td><%= boeking.product.naam %></td>
             <td><%= boeking.datum %></td>
             <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
@@ -75,7 +83,6 @@
             <td><%= boeking.waarde %></td>
             <td><%= boeking.p_inkoop %></td>
             <td><%= boeking.hoeveelheid %></td>
-            <td><%= boeking.boekproces.naam %></td>
             <td><%= image_tag boeking.boekproces.icoon_url(:thumb).to_s %></td>
             <td><%= link_to 'Verwijderen', boekingen_destroy_bkn_path(boeking), :remote => true,  method: :delete %></td>
           </tr>

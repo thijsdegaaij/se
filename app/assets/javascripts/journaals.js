@@ -8,14 +8,25 @@ var ready = function() {
     });
 */
 
+    $(document.body).on("click", ".btngrootboek, .artwork-klappers", function() {
+        $("#search_gb_results").removeClass('displaynone');
+        $(".containerinboeken, .kprijscontainer").addClass('displaynone');
+        $(".btngrootboek").addClass('bold');
+        $(".btninboeken, .btnkostprijs").removeClass('bold');
+    });
+
     $(document.body).on("click", ".btninboeken, .artwork-klappers", function() {
-        $(".containerinboeken").toggle();
-        $(".btninboeken").toggleClass('bold');
+        $(".containerinboeken").removeClass('displaynone');
+        $("#search_gb_results, .kprijscontainer").addClass('displaynone');
+        $(".btninboeken ").addClass('bold');
+        $(".btngrootboek, .btnkostprijs").removeClass('bold');
     });
 
     $(document.body).on("click", ".btnkostprijs", function() {
-        $(".kprijscontainer").toggle();
-        $(".btnkostprijs").toggleClass('bold');
+        $(".kprijscontainer").removeClass('displaynone');
+        $(".containerinboeken, #search_gb_results").addClass('displaynone');
+        $(".btnkostprijs").addClass('bold');
+        $(".btninboeken, .btngrootboek").removeClass('bold');
         /*
         $(".btns-intern button").removeClass("bold");   
         $(".btnkostprijs").addClass("bold");  */

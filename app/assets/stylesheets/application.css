@@ -3486,7 +3486,10 @@ hr {
     text-transform: uppercase;
     font-weight: bold;
     color: #9A9A9A;
-    padding: 12px 0px; }
+    padding: 12px 0px 0px 0px; }
+  .kprijscontainer .ondertitel {
+    color: #9A9A9A;
+    padding-bottom: 24px; }
 
 .kprijsb {
   display: flex;
@@ -3505,7 +3508,7 @@ hr {
     flex-direction: column;
     width: 200px; }
   .kprijsb .vvp, .kprijsb .k-kp, .kprijsb .winstm, .kprijsb .pverkoop {
-    width: 120px; }
+    width: 140px; }
   .kprijsb .k-bdv {
     display: flex;
     flex-direction: column;
@@ -3540,21 +3543,22 @@ hr {
   .kprijsb .k-iwo, .kprijsb .k-ink {
     border: 2px solid #fbbd04; }
   .kprijsb .vvp {
-    border: 2px solid #4387f4; }
+    border: 4px solid #fbbd04; }
   .kprijsb .vvpbuiten {
-    border: 3px solid #fbbd04; }
+    border: 2px solid #4387f4; }
   .kprijsb .k-ovh, .kprijsb .k-bdv {
     border: 2px dashed #CCCCCC; }
   .kprijsb .k-vrk, .kprijsb .k-alg {
     border: 2px solid #4387f4; }
   .kprijsb .k-kpbuiten {
-    border: 3px solid #4387f4; }
-  .kprijsb .k-kp {
     border: 2px solid #34a853; }
+  .kprijsb .k-kp {
+    border: 4px solid #4387f4; }
   .kprijsb .winstm {
     border: 2px solid #34a853; }
   .kprijsb .pverkoop {
-    border: 3px solid #34a853;
+    margin-top: 19px;
+    border: 4px solid #34a853;
     padding: 0px; }
 
 .gbr_vergroot {

@@ -29,6 +29,7 @@
                             <div class="gbr-p">prijs</div>
                             <div colspan="3">acties</div>
                         </div> 
+                    <% if @boekingen_vla.present? %>
                         <% @boekingen_vla.each do |boeking| %>
                           <div class="gbr-row">
                             <div class="dd"><%= boeking.datum %></div>
@@ -49,6 +50,7 @@
                             <div class="destroy"><%= link_to 'verwijder', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                           </div>
                         <% end %> 
+                      <% end %>
                         <div class="newboeking"><%= link_to 'nieuwe boeking', new_boeking_path %></div>
                     </div>
                 </div>
@@ -148,6 +150,7 @@
                           <div class="gbr-p">prijs</div>
                           <div colspan="3">acties</div>
                       </div> 
+                    <% if @boekingen_vla.present? %>
                       <% @boekingen_vla.each do |boeking| %>
                         <div class="gbr-row">
                           <div class="dd"><%= boeking.datum %></div>
@@ -168,6 +171,7 @@
                           <div class="destroy"><%= link_to 'verwijder', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                         </div>
                       <% end %> 
+                    <% end %>
                       <div class="newboeking"><%= link_to 'nieuwe boeking', new_boeking_path %></div>
                   </div>
               </div>

@@ -889,7 +889,8 @@
                           <div class="gbr-p">prijs</div>
                           <div colspan="3">acties</div>
                       </div> 
-                      <% @boekingen_vla.each do |boeking| %>
+                    <% if @boekingen_vla.present? %>
+                            <% @boekingen_vla.each do |boeking| %>
                         <div class="gbr-row">
                           <div class="dd"><%= boeking.datum %></div>
                           <% if boeking.journaal %>
@@ -908,10 +909,12 @@
                           <div class="edit"><%= link_to 'edit', edit_boeking_path(boeking) %></div>
                           <div class="destroy"><%= link_to 'verwijder', boeking, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                         </div>
-                      <% end %> 
+                      <% end %>                     
+                    <% end %>
                       <div class="newboeking"><%= link_to 'Nieuwe boeking', new_boeking_path %></div>
                   </div>
               </div>
+
 
               <div class="header">Samenvatting</div>
               <div class="input">

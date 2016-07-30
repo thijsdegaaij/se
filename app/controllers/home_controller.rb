@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @organisatie_search = Organisatie.find(2)
     session[:org_id] = @organisatie_search.id
 
+    # PER GROOTBOEKTYPE EN ORGANISATIE VERSCHILLENDE GROOTBOEKREKENINGEN TOEVOEGEN
     # NB staat ook in organisaties_controller
     #Bakker Bart   
     @gbr_vla = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 1) #vlottende activa
@@ -21,24 +22,14 @@ class HomeController < ApplicationController
     @gbr_hk = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 15) #huishouden kennis
     @gbr_ab = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 16) #arbeid uit
     @gbr_adm = @organisatie_search.grootboekrekeningen.where("grootboektype_id = ?", 17) #administratie    
-
-    # Journaals
-    # Inkoopboek
-    @jnl_ink_search = @organisatie_search.journaals.where("journaaltype_id = ?", 1).first
-    # Verkoopboek
-    @jnl_verk_search = @organisatie_search.journaals.where("journaaltype_id = ?", 2).first
-    # Bankboek
-    @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first
-    # Leveringen
-    @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first
-    # Intern
-    @jnl_intern_search = @organisatie_search.journaals.where("journaaltype_id = ?", 5).first
-      
-    # Boekingen
-    # ONDERSTAANDE REGEL STAAT OOK IN BOEKINGEN CONTROLLER!! Thijs
-    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id")
-    @boekingen_vla = @boekingen.where("grootboekrekening_id = ?", 10)
-
+    
+    # JOURNAALS
+    @jnl_ink_search = @organisatie_search.journaals.where("journaaltype_id = ?", 1).first    # Inkoopboek
+    @jnl_verk_search = @organisatie_search.journaals.where("journaaltype_id = ?", 2).first # Verkoopboek
+    @jnl_bank_search = @organisatie_search.journaals.where("journaaltype_id = ?", 3).first  # Bankboek   
+    @jnl_lev_search = @organisatie_search.journaals.where("journaaltype_id = ?", 4).first  # Leveringen
+    @jnl_intern_search = @organisatie_search.journaals.where("journaaltype_id = ?", 5).first    # Intern
+  
     if @jnl_ink_search
       @bkg_ink_search = @jnl_ink_search.boekingen
       if @bkg_ink_search.count == 0
@@ -124,9 +115,17 @@ class HomeController < ApplicationController
   #    Grootboekrekening.where("naam = ?", "Bank")
   #    .references(:organisatie).each { |t| @gbr.push(calc_gbr(@organisatie_search, t.id))
   #    }
-            
-      # Output grootboek
 
+
+
+    # Boekingen
+    # ONDERSTAANDE REGEL STAAT OOK IN BOEKINGEN CONTROLLER!! Thijs
+    @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id")
+    @boekingen_vla = @organisatie_search.boekingen.where("grootboekrekening_id = ?", 10)
+
+
+            
+      # OUTPUT GROOTBOEK
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
       @inkw_vd_omzet = calc_boekproces(@organisatie_search, 24)[1]

@@ -163,7 +163,7 @@
 // BEDRIJFSTAKKEN EN SECTOREN
 .cont-organisaties-all {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -174,7 +174,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 810px;
+    width: 1098px;
+    border-bottom: 1px solid $border-color-base;
     }
 .image-bedrijfstakken {
     //width:820px;
@@ -320,19 +321,17 @@
 //B1: producten rechtsboven
 .cont-bedrijfstakproducten {
     border-style: solid;
-    border-width: 0px 0px 0px 1px;
+    border-width: 0px 0px 1px 0px;
     border-color: $border-color-base;
 }
 
 .part {
-    width: 270px;
+    width: 1098px;
     position: relative;
     .branche {
         position: relative;
         background-color: $background-color-2; // white;
-        border-style: solid;
-        border-width: 0px 0px 1px 0px;
-        border-color: $border-color-base;
+        
         .text {
             color: black; // $text-color-dark;
             padding: 8px 0px 8px 8px;
@@ -348,34 +347,43 @@
       }
 
 .products {
+    display: flex;
+    flex-direction: row;
     background-color: white;
-    height: 490px;
-    overflow-y: auto;
+    height: 150px;
+    width: 1097px;
+    overflow-x: auto;
+    //border: 1px solid $border-color-base;
 
     .oneproduct {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-style: solid;
-        border-width: 0px 0px 1px 0px;
-        border-color: $border-color-base;
+        margin-right: 48px;
 
         .text {
             color: $text-color-dark; // $blue;
             text-align: center;
             padding: 12px 0px 8px 8px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
             //font-size: 14px;
-            div:nth-child(1) {
+            :nth-child(1) {
+                order: 2;
+            }
+            :nth-child(2) {
+                order: 1;
                 font-weight: bold;
             }
+
         }
         .artwork {
             padding: 0px 2px 8px 2px;
           
             img {
-                max-width: 100%;
-                max-height: 100%;
+                max-width: 160px;
+                max-height: 99px;
             }
         }   
         .artwork.maxima {
@@ -427,7 +435,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 810px;
+
+    //width: 810px;
     //height: 560px;
     //width: 850px;
     .sct-nederland {
@@ -438,9 +447,9 @@
     .rij {
         display: -webkit-flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         -webkit-justify-content: space-between;
-        width: 700px;
+        width: 1100px;
     }
     .sector,
     .sector > .title,
@@ -466,8 +475,8 @@
             text-align: center;
             height: 30px;
             color: white;
-            font-size: 14px;
-            font-weight: bold;
+            font-size: 15px;
+           // font-weight: bold;
             padding: 8px;
             border-width: 0px 0px 1px 0px;
         }
@@ -566,10 +575,10 @@
     width: 1100px; 
     position: relative;  
     .titel {
-            border-width: 0px 1px 1px 1px;
+            border-width: 0px 1px 0px 1px;
             border-style: solid;
             border-color: $border-color-base;
-            background-color: $background-color-2;
+            //background-color: $background-color-2;
             padding: 8px 0px 0px 8px;
             height: 36px;
     }

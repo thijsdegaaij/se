@@ -9,752 +9,163 @@
 
 
 
-// MENS
-.simrow.mensen {
-        border-top: 0px solid red;  
-}
-.mensenxx .flex-columncenter {
-  padding-top: 12px;
-  border-top: 0px solid $gray1;  
-}
-.ervaringmenspijl {
-    transform: rotate(180deg);
-    margin-left: 540px;
-    background-color: $bginput;
-}
-.cont-mens {
-    display: flex;
-    flex-direction: column;  
-     border-style: dashed;
-     border-width: 1px 1px 1px 1px;
-     border-color: $border-color-base;
-     width: 1100px;
-     position: relative;
-     //margin-top: 12px;
-    .titelz {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-width: 0px 0px 1px 0px;
-            border-style: dashed;
-            border-color: $border-color-base;
-            background-color: white; // $background-color-2;
-            height: 36px;
-            > div {
-              margin: 0px 24px 0px 8px;
-            }
-    }
-}
+ .container_ervaring-display {
+  .container_ervaring {
+      position:relative;
+      display: flex;
+      flex-direction: row; 
+      align-items: stretch; 
+      border-style: solid;
+      border-width: 0px 0px 0px 0px;
+      border-color: $border-color-base; 
+      position: relative;  
+      margin: 24px;
+      .titel {
+              border-width: 0px 1px 1px 1px;
+              border-style: solid;
+              border-color: $border-color-base;
+              background-color: $background-color-2;
+              padding: 8px 0px 0px 8px;
+              height: 36px;
+      }
+  }
+  .ervaring_indeling {
+              border-width: 1px 1px 0px 1px;
+              border-style: solid;
+              border-color: $border-color-base;
+    
+  }
 
-// Beleving 
 
-.productenervaring {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     position: relative;
-   
-    .ervaringsbeschrijving-display {
-        //padding-top: 8px;        
-    }
-    .ervaringsbes { //buttons
+
+  .productenkolom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      .productitem {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          border-style: solid;
+          border-width: 1px 1px 0px 1px;
+          border-color: $border-color-base; 
+          .image {
+              margin: 0px 0px 0px 12px!important; 
+              width: 50px;
+              order: 3;
+              }         
+          .tekst {
+              //padding: 8px 0px 8px 0px; 
+              width: 160px;
+              order: 2;
+              margin-left: 8px;
+              }
+          .specifiek1 {
+              order: 2;
+              font-style: italic;
+              width: 180px;
+          }
+          .pijlen {
+              order: 4;
+              display: flex;
+              flex-direction: column;
+              width: 50px;
+              .pijl { 
+                  margin: 0px 0px 0px 0px;
+                  border-left: 1px solid $border-color-base;                  
+                  transform: rotate(0deg);
+                  //background-color: $bginput;
+              }
+          }
+             
+          .border {
+              display: none;
+              //padding-top: 4px;
+              //width: 100%;
+              border-bottom: 1px solid $border-color-base;
+              }
+      }
+      .productitem:hover {
+          background-color: $background-color-2;        
+      } 
+      .productitem:last-child {
+          border-style: solid;
+          border-width: 1px 1px 1px 1px;
+          border-color: $border-color-base; 
+          }
+ }
+  .gedrag .pijlen {
+                transform: rotate(180deg);
+                //background-color: red;
+              }
+      .menskolom {
         display: flex;
-        flex-direction: row;
-        //justify-content: center;
-        .brdr {
-                border-style: solid;
-                border-width: 0px 1px 0px 0px;
-                border-color: $border-color-base;            
-        }  
-        .soorten {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 274px;
-            .titel {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 10px 0px 0px 0px;
-                .icon{
-                    margin-right: 8px;
-                }
-                .icon-reclame {
-                  //padding-top: 9px!important;
-                }
-                .tekst {
-                    color: $text-color-base;
-                }              
-            }
-            .beschrijving {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            margin-top: 12px; 
-            padding: 2px 8px 2px 0px;
-                img {
-                     max-height: 245px; 
-                    padding: 0px 0px 0px 4px;               
-                }
-            }
-        }
-    } 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+         height: initial;  
+          border-style: solid;
+          border-width: 1px 1px 1px 0px;
+          border-color: $border-color-base; 
+        } 
+
+
+
+
  }
 
-// Perspectief van mens of organisatie
+  .nutsberekening {
+      //position: absolute;
+      //left: 524px;
+      display: flex;
+      flex-direction: row;
+        margin-top: 60px;
+      margin-left: 24px; 
+      height: 250px;
+          .colom3,{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border-style: solid;
+              border-width: 1px 1px 1px 1px;
+              border-color: $border-color-base;
+              width: 170px;
+              padding: 12px;
 
-
-    .titelnl {
-            border-width: 3px 0px 0px 0px;
-            border-style: solid;
-            border-color: $background-color-2;
-            background-color: white; // $background-color-2;
-            padding: 8px 0px 0px 8px;
-            height: 36px;
-        width: 550px;
-    }
-
-
-.orgindeling-perspectief {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: 24px;
-    .kleur {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        border-style: solid;
-        border-width: 1px 1px 1px 1px;
-        border-color: white; //$border-color-base;
-        width: 550px;
-        padding: 12px;
-    }
-    .titelperspectief {
-        display: none;
-        position: absolute;
-        top: -24px;
-    }
-}
-.leftmiddleright {
-    //padding: 24px 0px 4px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 80px;
-    .titel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        height: 30px;
-        font-size: 16px;
-        padding: 8px;
-        border-width: 0px 0px 1px 0px;
-        width: 150px;
-    }
-    .deel1 {
-        //margin: 12px 0px 12px 0px;
-        position: relative;
-    }
-    .deel1 > .middle {
-        border-width: 1px 1px 1px 1px!important;
-    }
-    .middle {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        border-style: solid;
-        border-width: 0px 1px 1px 1px;
-        border-color: $border-color-base;        
-        //height: 32px;
-        padding: 2px;
-        .mleft {
-            padding-left: 8px;
-            width: 40px;
-            .icon {}
-            .beschrijving {}
-            .two {
-                .twoa {}
-                .twob {}
-            }
-            .mens img {
-                width: 50px;
-                margin-left: -8px;
-                background-color: white;
-            }
-            .plumbob {
-              width: 25px;
-            }
-        }
-        .mright {
-            width: 40px;
-            .icon {}
+              .mleft {
+                  display: flex;
+                  flex-direction: row;
+                      :nth-child(1) {
+                        width: 50px;
+                      }
+              }
+          }
+          .colom4 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border-style: solid;
+              border-width: 1px 1px 1px 0px;
+              border-color: $border-color-base;
+              padding: 12px;
+              width: 150px;
             .beschrijving {
-                padding-left: 14px;
+
             }
-            .beschrijving.nut {
-                text-decoration: underline;
-                font-weight: bold;
+            .plaatje_getal {
+              display: flex;
+              flex-direction: row;
+              :nth-child(1) {
+                //width: 48px;
+              }
+              img {
+                width: 24px;
+              }
+
             }
-            .two {
-                .twoa {}
-                .twob {}
-            }
-        }
-    }
-    .left {
-        position: absolute;
-        top: 4px;
-        left: -218px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        .icon {
-            width: 40px;
-        }
-        .two {
-            width: 176px;
-        }
-        .three {}
-        .four {}
-        .five {}
-        .six {}
-    }
-
-    .right {
-        position: absolute;
-        top: 4px;
-        left: 100px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        .icon {
-            width: 40px;
-        }
-        .two {
-            width: 290px;
-            padding-left: 8px;
-        }
-        .three {}
-        .four {}
-        .five {}
-        .six {}
-    }    
-}
-
-.maxima {
-    position: relative;
-}
-.maxima .vrijetijd {
-        width: 120px!important;
-        }
-.maxima .arbeid {
-        width: 60px!important;
-        }
-.maxima .lijst-vrijetijd {
-    position: absolute;
-    top: -90px;
-    left: 840px;
-}       
-.maxima .lijst-arbeid {
-    position: absolute;
-    top: -90px;
-    left: 840px;
-}   
-
-.orgindeling-eigendommen {
-    position: relative;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-style: dashed;
-    border-width: 1px 1px 1px 1px;
-    border-color: $red;
-    padding: 4px;
-    margin-top: 4px;    
-    }
-
-
-
-
-
-
-
-// Mensenvoorbeelden
-
-
-.container-people {
-  display: -webkit-flex;
-  flex-direction: column;
-  align-items: center;     
-  margin: 0px;
-  background-color: white;
-  padding: 12px 0px 24px 0px;
-
-  .ik-anderen {
-    position: relative;
-    left: -365px;
-  background-color: white;
-    
-    > :nth-child(1) {
-      width: 129px;
-      text-align: center;   
-      border-style: solid;    
-      border-width: 1px 1px 0px 1px;
-      border-color: $border-color-base;
-    }    
-    > :nth-child(2) {
-      width: 771px;
-      text-align: center;   
-      border-style: solid;    
-      border-width: 1px 1px 0px 0px;
-      border-color: $border-color-base;
-    }  
+          }
   }
 
-  .foto-ik {
-    max-width: 80px;
-    max-height: 80px;
-    //background-color: $background-color-1;
-  }
-
-  .line {
-      display: -webkit-flex;
-      flex-direction: row;      
-      justify-content: flex-start;
-      width: 900px;
-      background-color: white;
-      color: $text-color-base;    
-      border-style: solid;    
-      border-width: 1px 1px 1px 1px;
-      border-color: $border-color-base;
-    }
-  .person {
-      display: -webkit-flex;
-      flex-direction: column;
-      align-items: center;
-      width: 150px;
-      padding: 12px;      
-  }
-  .person:hover {
-    background-color: $background-color-2;
-    cursor: pointer;
-  }
-  .name {}
-  .artwork {
-    max-width: 70px;
-    max-height: 200px;
-      display: -webkit-flex;
-      flex-direction: column;
-      align-items: center;
-      :nth-child(1) {
-        margin: 7px;        
-        transform:scale(0.7,0.7);
-      }
-  }
-}
-
-// ik / Maxima Mulder 
-.container-mensen {  
-        padding-left: 200px;
-        margin-top: 50px;
-        position:relative;
-        min-height: 330px;
-}
-.container-menskort {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        margin-top: 24px;
-  .titel {
-        position: absolute;
-        top: -12px;
-        left: 20px;
-        text-align: center;
-        height: 30px;
-        width: 120px;
-        //color: white;
-        //font-size: 16px;
-      }
-  .sectoruitgebreid {
-    margin: 12px 0px 12px 0px;
-  }
-
-  .nut {
-  }
-  .mens {
-    margin-top: 12px;
-    border-style: double;
-    border-width: 1px 1px 0px 1px; 
-    border-color: $border-color-base;
-  }
-  .mens1 {
-    border-style: double;
-    border-width: 0px 1px 0px 1px; 
-    border-color: $border-color-base;
-  }
-  .foto-ik {
-    max-width: 60px;
-    max-height: 100px;
-    margin-left: -18px;
-  }
-  .mens2 {
-    border-style: double;
-    border-width: 0px 1px 1px 1px; 
-    border-color: $border-color-base;
-  }
-
-  
-  .onderdeel {
-        position: relative;
-    .midden {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; 
-        align-items: center; 
-        position: relative;
-        width: 60px;
-        height: 32px;
-        padding: 2px;
-      .mleft {
-        padding-left: 16px; 
-        width: 150px;
-        .icon {
-        }
-        .beschrijving1 {
-          position: absolute;
-          top: 8px;
-          left: 0px;
-        }
-      }
-      .mright {
-        .icon {
-        }
-        .beschrijving1{
-        }
-       }
-       .mleftnut { //nutplaatje groen
-         position:absolute;
-         z-index: 2;       
-         transform:scale(0.7,0.7);
-       }
-    }
-    .left {
-      position: absolute;
-      top: 5px;
-      left: -418px;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      .icon {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-      }
-      .naam {
-        width: 160px;
-      }
-      .waarde {
-        width: 50px;
-        text-align: right;
-        padding-right: 24px;
-      }
-      //.waarde::before {content: '\20AC  '  }
-      .sect { 
-        width: 48px;     
-      }
-      .bdt {
-        width: 50px;
-      }
-      .beschrijving2 { 
-        width: 70px;     
-      }
-    }
-    .right {
-      position: absolute;
-      top: 5px;
-      left: 74px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      .icon {
-        width: 50px;
-
-      }
-      .naam {
-        width: 250px;
-      }
-      .waarde {
-        width: 140px;
-        text-align: right;
-        padding-right: 24px;
-      }
-      .sect {
-        width: 20px;      
-      }
-      .bdt {
-        width: 60px;
-      }
-      .beschrijving2 {  
-      width: 90px    
-      }
-    }
-  }
-}
-
-.container-mens {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;  
-}
 
 
-
-// verwacht nut
-
-.container-menslang {
-        position: relative;
-        margin-top: 24px;
-  .titel {
-        position: absolute;
-        top: -24px;
-        left: -12px;
-        text-align: center;
-        height: 30px;
-        width: 240px;
-        //color: white;
-        font-size: 14px;
-      }
-  .sectoruitgebreid {
-    margin: 62px 0px 12px 0px;
-    box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-    //background-color: $mens2;
-  }
-
-  .nut {
-  }
-  .titel-nut {
-    position: absolute;
-    z-index:3;
-    top: -24px;
-    left: -220px;
-    width: 390px;
-  }
-  .gevoelens, .gedachten, .lijf, .geldk {    
-    border-style: solid;
-    border-width: 1px 1px 0px 1px; 
-    border-color: $border-color-base;
-  }
- .nut.laatste {    
-    border-style: solid;
-    border-width: 0px 1px 1px 1px; 
-    border-color: $border-color-base;
-  }
-  .nut {
-    border-style: solid;
-    border-width: 0px 1px 0px 1px; 
-    border-color: $border-color-base;
-    text-align: center;
-  }
-  .nut.totaal div {
-    text-decoration: underline;
-  }
-  .totaal {
-    background-color: lightgreen;
-  }
-  .onderdeel {
-        position: relative;
-    .midden {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        position: relative;
-        width: 60px;
-        height: 32px;
-        padding: 2px;
-      .mleft {
-        padding-left: 16px; 
-        width: 150px; 
-
-        :nth-child(1) { 
-        margin-top: 6px;
-        }    
-        :nth-child(2) { 
-        padding-left: 6px;
-        margin-top: -4px;
-        }        
-        .icon {
-        }
-        .beschrijving1 {
-          position: absolute;
-          top: 8px;
-          left: 0px;
-        }
-      }
-      .mright {
-        .icon {
-        }
-        .beschrijving1{
-        }
-       }
-    }
-    .left {
-      position: absolute;
-      top: 5px;
-      left: -390px;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      .icon {
-        width: 50px;
-      }
-      .naam {
-        width: 160px;
-      }
-      .waarde {
-        width: 50px;
-        text-align: right;
-        padding-right: 24px;
-      }
-      .waarde::before {
-        //content: '\20AC  '
-        }
-      .sect { 
-        width: 20px;     
-      }
-      .bdt {
-        width: 50px;
-      }
-      .beschrijving2 { 
-        width: 70px;     
-      }
-    }
-    .right {
-      position: absolute;
-      top: 5px;
-      left: 74px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      .icon {
-        width: 50px;
-      }
-      .naam {
-        width: 250px;
-      }
-      .waarde {
-        width: 140px;
-        text-align: right;
-        padding-right: 24px;
-      }
-      .sect {
-        width: 20px;      
-      }
-      .bdt {
-        width: 60px;
-      }
-      .beschrijving2 {  
-      width: 90px    
-      }
-    }
-  }
-}
-.vlak-persbele {
-  position: absolute;
-  top: -23px;
-  left: -340px;
-  z-index:0;
-  background-color: $mens1;
-  width: 570px;
-  height: 300px;
-}
-.vlak-nut {
-  position: absolute;
-  top: -30px;
-  left: -240px;
-  z-index:0;
-  background-color: $mens1;
-  width: 370px;
-  height: 380px;  
-  box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-  border-radius: 12px;
-}
-
-.pct-maxima {
-  position: absolute;
-  top: 125px;
-  left: 195px;   
-}
-  .container-mens .arbeid, .container-mens .vrijetijd,
-  .uppercase, .woord-experience {  
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 12px; 
-  }
-.beschrijving-persbele { //belevenissen
-  position: absolute;
-  top: -18px;
-  left: -135px; 
-  }
-.beschrijving-fotobele { //belevenissen
-  position: relative;
-  left: 30px; 
-  }
-.ervaringenslider {
-  z-index: 3;
-  position: absolute;
-  top: 20px;
-  left: -475px;
-   box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-   background-color: $ervaringsproduct1;
-   padding: 24px;
-  .titel {
-    position: relative;
-    left: 30px;
-  }
-}
-
-
-.lijst-arbeid, .lijst-vrijetijd {
-  position: absolute;
-  top: -60px;
-  left: 450px;
-   box-shadow: 0px 0px 56px 0px rgba(1, 0, 0, 0.7);
-}
-
-.lijst-gevoelens {
-  //position: relative;
-  //top: 24px;
-  //left: 0px;
-   box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-}
-
-.menskleur {
-  background-color: $mens1!important;
-}
-.mens, .mens1, .mens2 {
-  background-color: $mens2;
-}
-
-.onderdeel .left .sect {
-  cursor: pointer;
-}
-
-.absoluut {
-}
-
-.woord-experience {
-  position: absolute;
-  top: 20px;
-}

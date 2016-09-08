@@ -26,73 +26,10 @@ $(document).ready(function() {
         $(".mensgrafiek").toggle();
       });
 
-
-// Input knoppen
-    $(document.body).on("click", ".orgindeling-perspectief-maxima .input", function() { /* INPUT */
-        $(".cont-mens-display").slideToggle();
-        $(".ervaringmenspijl").toggle();
-    });
-    $(document).ready(function() {
-            $(".container-producten .specifiek1, .container-producten .pijlen").hide();
-        });
-    $(document.body).on("click", ".titelz .titel", function() { 
-            $(".container-producten .specifiek1, .container-producten .pijlen").slideToggle();
-    });
-
-// Ervaringsknoppen
-    $(document.body).on("click", ".soorten.eigenwaarneming .titel", function() {
-        $(".soorten.eigenwaarneming .bes").toggle();
-    });
-    $(document.body).on("click", ".soorten.beslissingen .titel", function() {
-        $(".soorten.beslissingen .bes").toggle();
-    });
-    $(document.body).on("click", ".soorten.eigenideaal .titel", function() {
-        $(".soorten.eigenideaal .bes").toggle();
-    });
-    $(document.body).on("click", ".soorten.reclame .titel", function() {
-        $(".soorten.reclame .bes").toggle();
-    });
-
-// Maxima output (vrijetijd en arbeid), en eigendom
-    $(document.body).on("click", ".maxima .vrijetijd", function() {
-        $(".maxima .lijst-vrijetijd").toggle();
-        $(".mapvrijetijd").toggleClass("hidden");
-    });
-    $(document.body).on("click", ".maxima .arbeid", function() {
-        $(".maxima .lijst-arbeid").toggle();
-        $(".maparbeid").toggleClass("hidden");
-    });
-    $(document.body).on("click", ".maxima .orgindeling-eigendommen", function() {
-        $(".mapeigendom").toggleClass("hidden");
-    });
-
-
-    $(document.body).on("click", ".btn-gevoelens", function() {
-        $(".lijst-gevoelens").toggle();
-    });
-
-    $(document.body).on("click", ".orgindeling-perspectief .deel1 .middle", function() { // Nut
-        $(".orgindeling-perspectief .deel2").slideToggle();
-    });
-
-// OUD
-    $(document.body).on("click", ".btn-maxima", function() {
-        $(".container-people .btn-maxima").toggleClass("menskleur");    	
-        $(".container-people .container-mensen").toggle();
-    });
-    $(document.body).on("click", ".container-people .onderdeel .left .sect", function() {
-        $(".container-people .ervaringenslider").toggle();
-    });
-
-    $(document.body).on("click", ".container-people .btn-nut", function() {
-        $(".container-people .icon-nut").toggleClass("bold");
-        $(".container-people .container-menslang").slideToggle();
-    });
-
-
 });
-
 </script>
+
+
 
 <div class="flex-rowstart mensenxx">
     <div class="navtwee ">
@@ -109,878 +46,182 @@ $(document).ready(function() {
 		<div class="navbtn btn-mensgrafiek button">Grafieken</div>
     </div>
 
-	<div class="flex-columncenter"> <!-- mens met ervaring en input/output/nut -->
-		
-		<div id="mensmaxima" class="orgshow">
-	<!-- beleving -->
-			<div class="cont-mens-display displaynone">
-			    <div class="cont-mens"> 
-			        <div class="titelz button">
-			        	<div class="titel">Input (behoeften)</div><!-- 
-				        <div class=" styled-select">
-				            <select class="orgonderdelen">
-				                <option value="mensmaxima">Mountainbiken</option>
-				                <option value="mensalgemeen">brood eten</option>
-				                <option value="niemand">?</option>
-				            </select>    
-				        </div> -->
-				    </div>
-			        <div class="productenervaring-display">
-			            <div class="productenervaring">                         
-			                    <div class="ervaringsbeschrijving-display   ">
-			                    <div class="ervaringsbes">
-			                        <div class="soorten brdr eigenwaarneming">
-			                            <div class="titel button">
-			                                <div class="icon icon-ervaring"></div>
-			                                <div class="tekst">Beleving/werkelijkheid</div>
-			                            </div>
-			                            <div class="bes ">
-			                                <div class="beschrijving ">
-			                                    <div>'Mountainbiken door het bos'<br> zaterdag tussen 14 en 16 uur</div>
-			                                     <div id="slider1_container" style="position: relative; width: 260px; height: 205px;  overflow: hidden;">
-			                                        <div u="slides" style="cursor: move; position: absolute; left: 27px; top: 0px; width: 204px; height: 205px; 
-			                                                      overflow: hidden;">
-			                                            <div><img u="image" src="../images/B/1-marktvormen/B2-experienceFiets.png" /></div>
-			                                            <div><img u="image" src="../images/B/1-marktvormen/B2-experienceKoken.png" /></div>
-			                                            <div><img u="image" src="../images/B/1-marktvormen/B2-experienceBoom.png" /></div>
-			                                            <div><img u="image" src="../images/B/1-marktvormen/B2-experienceGroteBoom.png" /></div>
-			                                            <div><img u="image" src="../images/B/1-marktvormen/B2-experienceVoetballen.png" /></div>
-			                                        </div>
-			                                        <span u="arrowleft" class="jssora21l" style="top: 75px; left: 0px;">
-			                                                  </span>
-			                                        <span u="arrowright" class="jssora21r" style="top: 75px; right: 0px;">
-			                                                  </span>
-			                                        <div u="navigator" class="jssorb02" style="top: 125px; right: 6px;">
-			                                            <div u="prototype">
-			                                                <div u="numbertemplate"></div>
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <div class="soorten brdr beslissingen">
-			                            <div class="titel button ">
-			                                <div class="iconwide icon-winst"></div>
-			                                <div class="tekst">Behoeften (vraag)</div>
-			                            </div>
-			                            <div class="beschrijving">
-			                                <div class="bes displaynone">
-			                                    <ul>
-			                                        <li>Snel vertrekken bij mooi weer</li>
-			                                        <li>Vriendin meenemen</li>
-			                                        <li>Harde bolletjes voor &euro; 0,70 kopen </li>
-			                                        <li>Bolletjes thuis smeren </li>
-			                                    </ul> 
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <div class="soorten brdr eigenideaal">
-			                            <div class="titel button ">
-			                                <div class="icon icon-gedachten"></div>
-			                                <div class="icon icon-recept"></div>
-			                                <div class="tekst">Ideaal (doel)</div>
-			                            </div>
-			                            <div class="beschrijving">
-			                                <div class="bes displaynone">
-			                                    <ul>
-			                                        <li>Zonneschijn</li>
-			                                        <li>Lol maken</li>
-			                                        <li>Topconditie </li>
-			                                        <li>Lekker eten tussendoor</li>
-			                                    </ul> 
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <div class="soorten reclame">
-			                            <div class="titel button">
-			                                 <div class="icon icon-reclame"></div>
-			                                <div class="tekst">Reclame</div>
-			                            </div>hkfghfhjk
-			                            <div class="beschrijving">
-			                                <div class="bes displaynone">
-			                                    <img src="../images/ervaringen/mountainbikereclame.png">
-			                                </div>
-			                            </div>
-			                        </div>
-			                    </div>
-			                    </div>
-			            </div>
-			        </div>
-			    </div>
-			</div>	
-			<div class="icon icon-pijlnaarboven ervaringmenspijl displaynone "></div>
-	<!-- Maxima persoon -->
-			<div  class=" orgindeling-perspectief-maxima">
-			    <div class="orgindeling-perspectief maxima">
-			        <div class="titelnl">Mens</div>
-			        <div class="kleur">
-			            <div class="titelperspectief">Perspectief van:</div>
-			           <div class="leftmiddleright">
-			            <div class="titel">Maxima Mulder</div>
-			            <div class="deel1">
-			                <div class="middle button">
-			                    <div class="mleft">
-			                        <div class="mens"><img src="/images/people/figuren/figuren_maxima.png"></div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class="iconwide icon-pos"></div>
-			                        <div class="beschrijving"></div>
-			                    </div>
-			                </div>
-			                <div class="left input">
-			                    <div class="icon icon-dienstintern bginput"></div>
-			                    <div class="two button">input (behoeften)</div>
-			                    <div class="three"></div>
-			                    <div class="four"></div>
-			                    <div class="five"></div>
-			                    <div class="six"></div>
-			                </div>
-			                <div class="right">
-			                    <div class="icon icon-arbeidintern bgoutput"></div>
-			                    <div class="two vrijetijd button ">output (vrije-tijd, </div>
-			                    <div class="three arbeid button "> arbeid)</div>
-			                    <div class="four"></div>
-			                    <div class="five"></div>
-			                    <div class="six"></div>
-			                </div>
-			            </div>
-			            <div class="deel2 displaynone">
-			                <div class="middle">
-			                    <div class="mleft">
-			                        <div class="icon icon-pijlnaarboven bginput"></div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class="icon icon-pijlnaarboven omgedraaid bgoutput"></div>
-			                        <div class="beschrijving "></div>
-			                    </div>
-			                    <div class="left">
-			                        <div class="icon "></div>
-			                        <div class="two">input van nut</div>
-			                        <div class="three"></div>
-			                        <div class="four"></div>
-			                        <div class="five"></div>
-			                        <div class="six"></div>
-			                    </div>
-				                <div class="right">
-				                    <div class="icon "></div>
-				                    <div class="two ">output van nut</div>
-				                    <div class="three"></div>
-				                    <div class="four"></div>
-				                    <div class="five"></div>
-				                    <div class="six"></div>
-			                	</div>
-			                </div>
-			                <div class="middle">
-			                    <div class="mleft">
-			                        <div>
-			                        	<img class="plumbob" src="/images/mind/plumbob.jpeg">
-			                        </div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class=""></div>
-			                        <div class="beschrijving nut">+9</div>
-			                    </div>
-			                    <div class="left">
-			                        <div class="icon"></div>
-			                        <div class="two"></div>
-			                        <div class="three"></div>
-			                        <div class="four"></div>
-			                        <div class="five"></div>
-			                        <div class="six"></div>
-			                    </div>
-				                <div class="right">
-				                    <div class="icon "></div>
-				                    <div class="two"></div>
-				                    <div class="three"></div>
-				                    <div class="four"></div>
-				                    <div class="five"></div>
-				                    <div class="six"></div>
-			                	</div>
-			                </div>
-			                <div class="middle btn-gevoelens button">
-			                    <div class="mleft">
-			                        <div class="icon icon-gevoelens"></div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class=""></div>
-			                        <div class="beschrijving">+2</div>
-			                    </div>
-			                    <div class="left">
-			                        <div class="icon "></div>
-			                        <div class="two">nut door gevoelens</div>
-			                        <div class="three"></div>
-			                        <div class="four"></div>
-			                        <div class="five"></div>
-			                        <div class="six"></div>
-			                    </div>
-			                </div>
-			                <div class="middle">
-			                    <div class="mleft">
-			                        <div class="icon icon-gedachten"></div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class=""></div>
-			                        <div class="beschrijving">+4</div>
-			                    </div>
-			                    <div class="left">
-			                        <div class="icon "></div>
-			                        <div class="two">nut door kennis</div>
-			                        <div class="three"></div>
-			                        <div class="four"></div>
-			                        <div class="five"></div>
-			                        <div class="six"></div>
-			                    </div>
-			                </div>
-			                <div class="middle">
-			                    <div class="mleft">
-			                        <div class="icon icon-lijf"></div>
-			                        <div class="one"></div>
-			                    </div>
-			                    <div class="mright">
-			                        <div class=""></div>
-			                        <div class="beschrijving">+3</div>
-			                    </div>
-			                    <div class="left">
-			                        <div class="icon "></div>
-			                        <div class="two">nut door gezondheid</div>
-			                        <div class="three"></div>
-			                        <div class="four"></div>
-			                        <div class="five"></div>
-			                        <div class="six"></div>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="orgindeling-eigendommen button">
-			                <div>Eigendommen</div>
-			            </div>
-			            </div>
-			        </div> 
-			        <div class="lijst-arbeid vb displaynone">
-			            <img src="../images/tekeningen/lijst-arbeid.png" alt="markt"  />        
-			        </div>
-			        <div class="lijst-vrijetijd vb displaynone">
-			            <img src="../images/tekeningen/lijst-vrijetijd.png" alt="markt"  />     
-			        </div>
-			    </div>
-			</div>
+	<div class="flex-columncenter">		
 
-			<div class="lijst-gevoelens displaynone">
-				<div class="cont-flex-columncenter">
-					<div>Voorbeelden van gevoelens</div>
-					<img src="../images/icons/gevoelens-01.png"/>
-				</div>		
-			</div>
-		</div>
-
-
-		<div id="mensalgemeen" class="orgshow">
-			<div>Hallo algemeen</div>			   
-		</div>
-		<div id="niemand" class="orgshow">
-			<div></div>			   
-		</div>
-
-		
-
-		<!--  Meermensen, misschien nog leuk omdat nut-icoon boven hoofden zweeft -->
-		<div class="meermensen container-people-display displaynone ">
-			<div class="container-people ">
-				<div class="ik-anderen">Voorbeelden van mensen</div>
-				<div class="line">
-					<div class="person ik  displayAction btn-maxima">
-						<div class="name">ik</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img class="foto-ik" src="/images/people/pasfoto/jongen.jpeg">
-							<!-- <img src="/images/people/figuren/figuren_bakkergroen.png"> -->
-						</div>
+	    <div class="container_ervaring-display">
+	        <div class="container_ervaring">
+	        		<div class="ervaring_indeling">
+	        			ERVARING
+	        		</div>
+		            <div class="productenkolom">
+		                <div class="productitem">
+		                    <div class="tekst">natuur</div>
+		                    <div class="image icon icon-natuur"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">weer, dieren en planten</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">mensen</div>
+		                    <div class="image icon icon-mens"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-arbeidextern"></div>
+		                    </div>
+		                    <div class="specifiek1">vriendschap, onbekenden</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">dienst</div>
+		                    <div class="image icon icon-mens-org"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl markt icon icon-arbeidintern"></div>
+		                        <div class="pijl markt icon icon-arbeidmarkt"></div>
+		                        <div class="pijl markt icon icon-arbeidextern"></div>
+		                    </div>
+		                    <div class="specifiek1">papa</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">wet</div>
+		                    <div class="image icon icon-wet"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">veiligheid</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">collectiefgoed</div>
+		                    <div class="image icon icon-collectiefgoed"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">bos</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">openbare kennis</div>
+		                    <div class="image icon icon-receptT"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">van natuur</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">reclame</div>
+		                    <div class="image icon icon-reclame"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">?</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">overeenkomst</div>
+		                    <div class="image icon icon-overeenkomst"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1"></div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">geld</div>
+		                    <div class="image icon icon-geld"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl markt icon icon-stroommarkt"></div>
+		                    </div>
+		                    <div class="specifiek1"></div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">gebruiksgoed</div>
+		                    <div class="image icon icon-vierkant"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl markt icon icon-stroommarkt"></div>
+		                    </div>
+		                    <div class="specifiek1">fiets</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">verbruiksgoed</div>
+		                    <div class="image icon icon-rondje"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl markt icon icon-stroommarkt"></div>
+		                    </div>
+		                    <div class="specifiek1">brood</div>
+		                </div>
+		                <div class="productitem">
+		                    <div class="tekst">consumentenproduct</div>
+		                    <div class="image icon icon-consumentenproduct"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl intern icon icon-dienstintern"></div>
+		                        <div class="pijl intern icon icon-stroomintern"></div>
+		                        <div class="pijl extern icon icon-dienstextern"></div>
+		                    </div>
+		                    <div class="specifiek1">lunch</div>
+		                </div>
+		                <div class="productitem gedrag">
+		                    <div class="tekst">gedrag Piet</div>
+		                    <div class="image icon icon-arbeid"></div>
+		                    <div class="border"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-arbeidintern"></div>
+		                    </div>
+		                    <div class="specifiek1">?</div>
+		                </div>
+		            </div>
+		            <div class="menskolom">Piet
+								<div class="icon icon-mens"></div>
+		            </div>
+				<div class="nutsberekening"> 
+		            <div class="colom3">
+		                <div class="btn-gevoelens button">
+		                    <div class="left">
+		                        <div class="icon "></div>
+		                        <div class="two">nut door gevoelens</div>
+		                    </div>
+		                    <div class="mleft">
+		                        <div class="icon icon-gevoelens"></div>
+		                        <div class="beschrijving">+2</div>
+		                    </div>
+		                </div>
+		                <div class="btn-gedachten">
+		                    <div class="left">
+		                        <div class="icon "></div>
+		                        <div class="two">nut door kennis</div>
+		                    </div>
+		                    <div class="mleft">
+		                        <div class="icon icon-gedachten"></div>
+		                        <div class="beschrijving">+4</div>
+		                    </div>
+		                </div>
+		                <div class="btn-lijf">
+		                    <div class="left">
+		                        <div class="icon "></div>
+		                        <div class="two">nut door gezondheid</div>
+		                    </div>
+		                    <div class="mleft">
+		                        <div class="icon icon-lijf"></div>
+		                        <div class="beschrijving">+3</div>
+		                	</div>
+		                </div>
 					</div>
-					<div class="person  displayAction">
-						<div class="name">Bert Bakker</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_bakkergroen.png">
-						</div>
+					<div class="colom4">					
+	                    <div class="beschrijving">
+	                        <div class="">totaal nutsbeleving</div>
+	                    </div>
+	                    <div class="plaatje_getal">
+	                        <div>
+	                        	<img class="plumbob" src="/images/mind/plumbob.jpeg">
+	                        </div>
+	                        <div class="beschrijving nut">+9</div>
+	                    </div>
 					</div>
-					<div class="person displayAction">
-						<div class="name">Bas Brood</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_bakkerpaars.png">
-						</div>
-					</div>
-					<div class="person displayAction">
-						<div class="name">Jantje Brood</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_kindje.png">
-						</div>
-					</div>
-					<div class="person displayAction">
-						<div class="name">Klaas Kok</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_bakkermuts.png">
-						</div>
-					</div>
-					<div class="person displayAction">
-						<div class="name">Maxima Mulder</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_maxima.png">
-						</div>
-					</div>
-					<div class="person displayAction">
-						<div class="name">Peter Stud</div>
-						<div class="artwork">
-							<img src="/images/C/huishoudens/spullenHuis/nut.png">
-							<img src="/images/people/figuren/figuren_peter.png">
-						</div>
-					</div>
-				</div>
-
-
-				<div class="container-mensen displaynone">
-			<!--  MENS INPUT EN OUTPUT -->
-					<div class="beschrijving-persbele">Mens</div>
-					<div class="container-menskort">
-				    	<div class="sectoruitgebreid ">
-							<div class="vlak-persbele"></div>
-					        <div class="titel btn-nut uppercase">Nut</div>
-					        <div class="onderdeel nut ">
-					            <div class="midden">
-					                <div class="mleft">
-										<img class="mleftnut btn-nut button " src="/images/C/huishoudens/spullenHuis/nut.png">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-"></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon icon-"></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-"></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde "></div>
-					                <div class="sect woord-experience absoluut">Behoeften</div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel mens ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-arbeidextern"></div>
-					                <div class="naam">input van jezelf</div>
-					                <div class="waarde icon icon-mens"></div>
-					                <div class="sect icon icon-arbeidextern"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam vrijetijd"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel mens1">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="">
-					                    	<img class="foto-ik" src="/images/people/pasfoto/jongen.jpeg">
-					                    </div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-stroomintern"></div>
-					                <div class="naam">producten</div>
-					                <div class="waarde icon icon-consumptiegoed"></div>
-					                <div class="sect icon icon-stroomintern"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon icon-arbeidmarkt"></div>
-					                <div class="naam arbeid">Arbeid</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel mens1 ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-arbeidextern"></div>
-					                <div class="naam">input van anderen</div>
-					                <div class="waarde icon icon-mens-mv"></div>
-					                <div class="sect icon icon-arbeidextern"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon icon-arbeidintern"></div>
-					                <div class="naam vrijetijd">Vrijetijd</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel mens1">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-dienstextern"></div>
-					                <div class="naam">natuur, externe effecten</div>
-					                <div class="waarde icon icon-natuur"></div>
-					                <div class="sect icon  icon-dienstextern"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon icon-"></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel mens2">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon icon-dienstextern"></div>
-					                <div class="naam">kennis, reclame</div>
-					                <div class="waarde icon icon-reclame"></div>
-					                <div class="sect icon  icon-dienstextern"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon icon-"></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					    </div>
-					</div>
-
-					<div class="body ervaringenslider displaynone"> <!-- ervaringen slider -->
-						<div class="beschrijving-fotobele">Experiences (totaal eindproduct)</div>
-
-						<div id="slider1_container" style="position: relative; width: 260px; height: 205px;  overflow: hidden;">
-							<div u="slides" style="cursor: move; position: absolute; left: 27px; top: 0px; width: 204px; height: 205px; 
-							  overflow: hidden;">
-							<div><img u="image" src="../images/B/1-marktvormen/B2-experienceBoom.png" /></div>
-							<div><img u="image" src="../images/B/1-marktvormen/B2-experienceFiets.png" /></div>
-							<div><img u="image" src="../images/B/1-marktvormen/B2-experienceGroteBoom.png"/></div>
-							<div><img u="image" src="../images/B/1-marktvormen/B2-experienceKoken.png" /></div>
-							<div><img u="image" src="../images/B/1-marktvormen/B2-experienceVoetballen.png" /></div>
-							</div>
-			              <span u="arrowleft" class="jssora21l" style="top: 75px; left: 0px;">
-			              </span>
-			              <span u="arrowright" class="jssora21r" style="top: 75px; right: 0px;">
-			              </span>
-			              <div u="navigator" class="jssorb02" style="top: 125px; right: 6px;">
-			                  <div u="prototype"><div u="numbertemplate"></div></div>
-			            </div>
-						 </div>
-					</div>
-
-			<!--   NUT -->
-					<div class="container-menslang displaynone">
-						<div class="titel-nut">Verwacht nut van een aankoop</div>
-				    	<div class="sectoruitgebreid ">
-				    		<div class="vlak-nut"></div>
-					        <div class="titel"></div>
-					        <div class="onderdeel geldk totaal">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-nut"></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut  totaal">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1">= 10 nut</div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel gevoelens ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-gevoelens btn-gevoelens button "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam">verwachte gevoelens</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon"></div>
-					                    <div class="beschrijving1">+ 3 nut</div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel gedachten ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-gedachten"></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam">verwachte know-how</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon"></div>
-					                    <div class="beschrijving1">+ 2 nut</div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel lijf ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-lijf"></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam">verwachte gezondheid</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon"></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1">+ 4 nut</div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel geldk ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon icon-geld"></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam">verwacht inkomen</div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					        <div class="onderdeel nut  laatste ">
-					            <div class="midden">
-					                <div class="mleft">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1">+ 1 nut</div>
-					                </div>
-					                <div class="mright">
-					                    <div class="icon "></div>
-					                    <div class="beschrijving1"></div>
-					                </div>
-					            </div>
-					            <div class="left">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					            <div class="right">
-					                <div class="icon "></div>
-					                <div class="naam"></div>
-					                <div class="waarde"></div>
-					                <div class="sect"></div>
-					                <div class="bdt"></div>
-					                <div class="beschrijving2"></div>
-					            </div>
-					        </div>
-					    </div>
-					</div>
-
-
-				</div>
-
-			</div>
-		</div>
-
-
-		<div class="mensgrafiek displaynone">
-			<div class="cont-flex-columncenter">
-				<div class="titel">Alle inwoners van Nederland</div>
-				<img src="../images/A2/grafieken.png"/> 
-			</div>		
-		</div>
-
+				</div>  
+	        </div>
+	    </div> 
 	</div>
-
-</div>
-
+</div> 

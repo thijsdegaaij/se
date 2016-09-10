@@ -125,31 +125,6 @@
     //z-index: 900;
 }
 
-.flex-rowstart {
-    display: flex;
-    flex-direction: row;
-}
-
-.navtwee {
-    background-color: $background-color-1;
-    width: 124px;
-    //margin-right: 0px; 
-    padding: 0px 0px 0px 12px;
-    border-width: 1px 0px 0px 1px;
-    border-style: solid;
-    border-color: $border-color-base!important;
-    //margin-top: -0px;
-    .navheader {
-        color: $kop2;
-        font-size: 16px;
-        padding-top: 16px;
-    }
-    .navbtn {
-        padding-top: 16px;
-        color: $text-color-base;
-    }
-}
-
 
 //.orgdivision.simrow {
 //  border-top: 1px solid $border-color-base;
@@ -163,8 +138,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1205px;
-    border-top: 1px solid $border-color-base;
 }
 
 .flex-cc {
@@ -189,73 +162,47 @@
     flex-direction: row;
 }
 
-.contain.lesson {
-    height: 1400px;
-    width: $left;
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    background-color: $background-color-1;
-    overflow: visible;
-}
-
-.contain.assigncc {
-    height: 1220px;
-    width: $left;
-    top: 100px;
-    left: 0px;
-    position: fixed;
-    background-color: $background-color-1;
-}
 
 .simulation {
-    position: relative;
-    width: 1330px;
-    top: 20px;
-    left: 570px;
+    position: absolute;
+    top: 70px;
+    left: $left;
+    width: 1250px;
     display: flex;
     flex-direction: column;
     z-index: 3;
+    y-overflow: scroll;
+    background-color: white;
     .simrow {
-        position: relative;
-        //border-top: 1px solid $gray1;
-        border-right: 1px solid $gray1;
-        background-color: white;
     }
 }
 
-.simrowspace {
-    position: absolute;
+.flex-rowstart {
+    display: flex;
+    flex-direction: column;
+}
+
+.navtwee {
     display: flex;
     flex-direction: row;
-    :nth-child(1) {
-        left: 0px;
-        width: 123px;
-        height: 700px;
-        z-index: 4;
-        background-color: $background-color-1;
-        border-left: 1px solid $border-color-base;
+    background-color: $background-color-1;
+    height: 50px;
+    padding: 0px 0px 0px 24px;
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: $border-color-base!important;
+    .navheader {
+        display: none;
+        color: $kop2;
+        font-size: 16px;
+        padding: 16px 48px 16px 0px;
     }
-    :nth-child(2) {
-        position: absolute;
-        left: 0px;
-        width: 1000px;
-        height: 700px;
-        z-index: 0;
-        background-color: white;
+    .navbtn {
+        padding: 16px 48px 16px 0px;
+        color: $text-color-base;
     }
-    
 }
 
-.lessonassignmentspace {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 570px;
-    height: 200px;
-    z-index: 0;
-    background-color: $background-color-1; 
-}
 
 .header > .title > div:nth-child(1),
 .header > .title > div:nth-child(2) {

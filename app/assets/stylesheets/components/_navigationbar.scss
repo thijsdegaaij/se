@@ -1,12 +1,3 @@
-.borderbottomsimulatie {
-  position: absolute;
-  top: 70px;
-  left: 570px;
-  width: 1330px;
-  border-bottom: 1px solid $border-color-base;
-  z-index: 9;
-}
-
 .navb {
   display: flex;
   flex-direction: row;
@@ -20,67 +11,52 @@
   width: 1900px;
   //border-bottom: 1px solid $border-color-base;
 
+  .lijn_navb {
+    position: fixed;
+    top: 71px;
+    left: $left;
+    height: 1px;
+    width: 1250px;
+    background-color: $border-color-base;
+  }
   .logo-se {
     width: 300px;
     height: 40px;
-    margin-bottom: 7px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin: 2px 0px 0px 48px;
     img {
       height: 40px;
     }
   }
 
-
-// Lessen en Opdrachen 
-  .nav-lessenopdrachten {
+  .navheading {
     position: absolute;
-    top: 23px;
-    left: 400px;
-    //width: 570px;
-    //height: 30px;
-    //background-color: aliceblue;
+    left: $left;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    -webkit-align-items: center;
   }
-  .plaatjenaam { 
-    display: flex;
-    flex-direction: row;
-    margin-left: 12px;
-     > div {
-      padding: 0px 7px 0px 7px;
-    } 
-  }
-
-
   .navheaders {
     display: flex;
     flex-direction: row;
-    margin-left: 217px;
     margin-top: 5px;
     div {
       padding-right: 18px;
       padding-left: 18px;
       border-right: 1px solid $border-color-base;
       color: $kop2;
-      font-size: 22px;
+      font-size: 20px;
     }
   }
-
-  .menus{
-    width: 650px;
-    margin-left: 28px;
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-justify-content: space-around; 
+  .concept {
+    margin: 0px 48px 0px 48px;
   }
+
+  
 
 
 /* space */
   .space {
-    width: 120px;
+    //width: 120px;
   }
 
 /* user */
@@ -96,7 +72,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 12px;
      > div {
       padding: 0px 7px 0px 7px;
     } 

@@ -1,39 +1,56 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-
-    // subnavigatie-knoppen
-    $(document.body).on("click", ".btn-bedrijfstakken", function() {
-        $(".button").removeClass("bold");
-        $(".btn-bedrijfstakken").addClass("bold");
-        $(".cont-sct-display").hide();
-        $(".cont-bdt-display").show();
-    });
-    $(document.body).on("click", ".btn-sectoren", function() {
-        $(".button").removeClass("bold");
-        $(".btn-sectoren").addClass("bold");
-        $(".cont-bdt-display").hide();
-        $(".cont-sct-display").show();
-    });
+    // input / output
     $(document).ready(function() {
         $(".orgdivision .bginput, .orgdivision .bgoutput").hide();
-        });
+        })
+
+
+    // knoppen in submenu
+    $(document.body).on("click", ".btn-land_overzicht", function() {
+        $(".simrow.geldkringloop_q, .simrow.situations").addClass("displaynone");
+        $(".cont_nl").removeClass("displaynone");
+        $(".navbtn").removeClass("bold");
+        $(".btn-land_overzicht").addClass("bold");
+    });    
+    $(document.body).on("click", ".btn-geldkringloop_view", function() {
+        $(".cont_nl, .simrow.situations").addClass("displaynone");
+        $(".simrow.geldkringloop_q").removeClass("displaynone");
+        $(".navbtn").removeClass("bold");
+        $(".btn-geldkringloop_view").addClass("bold");
+    });
+    $(document.body).on("click", ".btn-situationsview", function() {
+        $(".cont_nl, .simrow.geldkringloop_q").addClass("displaynone");
+        $(".simrow.situations").removeClass("displaynone");
+        $(".navbtn").removeClass("bold");
+        $(".btn-situationsview").addClass("bold");
+    });
+
+
     $(document.body).on("click", ".btn-inputoutput", function() {
         $(".btn-inputoutput").toggleClass("bold");
-        $(".orgdivision .bginput, .orgdivision .bgoutput").toggle();
+        $(".orgdivision .bginput, .orgdivision .bgoutput").show();
     });    
+
+
+
+    // knoppen in organisatie 
+    $(document.body).on("click", ".btn-bedrijfstakken", function() {
+        $(".btn-bedrijfstakken").toggleClass("bold");
+        $(".cont-bdt-display").toggle();
+    });
+    $(document.body).on("click", ".btn-sectoren", function() {
+        $(".btn-sectoren").toggleClass("bold");
+        $(".cont-sct-display").toggle();
+    });
     $(document.body).on("click", ".btn-productenc", function() {
         $(".btn-productenc").toggleClass("bold");
         $(".container-productenrij-display ").toggle();
     });
-    $(document.body).on("click", ".btn-geldkringloopx", function() {
-        $(".btn-geldkringloopx").toggleClass("bold");
-        $(".simrow.geldkringloop").toggle();
-    });
-    $(document.body).on("click", ".btn-situationsview", function() {
-        $(".btn-situationsview").toggleClass("bold");
-        $(".simrow.situations").toggle();
-    });
+
+;
+
 
     // knoppen in plaatje van mensenplaatje en organisatietekst
     $(document.body).on("click", ".mensleft .person.maxima", function() {
@@ -150,17 +167,15 @@ $(document).ready(function() {
                     <option value="niemand">Belgie</option>
                 </select>    
             </div>
-            <div class="navbtn btn-bedrijfstakken button bold">Bedrijfstakken</div>
-            <div class="navbtn btn-sectoren button">Sectoren</div>
-            <div class="navbtn btn-inputoutput button">Input - output</div>
-            <div class="navbtn btn-productenc button">Producten</div>
-            <div class="navbtn btn-geldkringloopx button">Geldkringloop</div>
+            <div class="navbtn btn-land_overzicht button bold">Overzicht</div>
+            <div class="navbtn btn-geldkringloop_view button">Geldkringloop</div>
             <div class="navbtn btn-situationsview button">Situaties</div>        
     </div>
     <div class="flex-columncenter">
-        <div class="cont-nl">
-            <div class="mens-natuur-organisaties">
+        <div class="cont_nl ">
+            <div class="mens-natuur-organisaties ">
                 <div class="cont-natuurmens">
+                    <div class="navbtn btn-inputoutput button">Input - output</div>
                     <div class="natuurleft">
                         <div class="titel">
                             <div class="icon icon-natuur"></div>
@@ -244,628 +259,18 @@ $(document).ready(function() {
                 </div>
                 <div class="cont-organisaties-totaal">
                         <div class="titel-eigendommen">
-                            <div class="icon icon-organisatie"></div>
-                            <div>Producten per organisatie</div>
+                            <div class="titel_icoon">
+                                <div class="icon icon-organisatie"></div>
+                                <div>Organisaties</div>
+                            </div>
+                            <div class="buttons">
+                                <div class="navbtn btn-bedrijfstakken button bold">Bedrijfstakken</div>
+                                <div class="navbtn btn-sectoren button ">Sectoren</div>
+                                <div class="navbtn btn-productenc button ">Producten</div>
+                            </div>
                         </div>
                     <div class="cont-organisaties-all">
-                        <div class="cont-bedrijfstakproducten"> 
-                            <div class="part-display landbouw  ">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">A. Landbouw, bosbouw en visserij</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_a-agrarisch.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">
-                                                <div>Appels</div>
-                                                <div>boomgaard Jansen</div>
-                                            </div>
-                                            <div class="artwork small">
-                                                <img src="../images/products/a-apple.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">
-                                                <div>Bomen</div>
-                                                <div>kwekerij Piet</div>
-                                            </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/a-tree.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">
-                                                <div>Koe</div>
-                                                <div>boer Frans</div>
-                                            </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/a-koe.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  delfstoffen displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">B. Delfstoffen</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_b-grondstof.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">
-                                                <div>Zout</div>
-                                                <div>Bolivia</div>
-                                            </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/b-zoutmijnBolivia.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Olie
-                                                <br>Shell</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/b-olieshell.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">IJzer
-                                                <br>Tata</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/b-steelTata.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  industrie  displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">C. Industrie</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_c-industrie.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct bakkerbroodjes">
-                                            <div class="text">Brood</div>
-                                            <div class="orgtext">Bakker 'Broodjes" B.V.</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/c-brood.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Fiets
-                                                <br>Hummer</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/c-fiets-hummer.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Verf
-                                                <br>DSM</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/c-verfDSM.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  water displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">D.E. Water, afvalwater, gas en elektriciteit</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_de-waterleidingelek.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Elektriciteit
-                                                <br>Eneco</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/d-elektriciteit.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Water
-                                                <br>PWN</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/d-waterleiding.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display bouwnijverheid displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">F. Bouwnijverheid</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_f-bouwnijverheid.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">hijstechniek
-                                                <br>Elcee </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/f-hijstechniek.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Bouw
-                                                <br>BAM </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/f-bouwBam.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  handel displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">G. Handel</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_g-detailhandel.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct backery button">
-                                            <div class="text">Brood
-                                                <br>Backery shop</div>
-                                            <div class="artwork">
-                                                <img src="/images/products/bakker/bakkerbuitenkant.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Etenswaren
-                                                <br>Albert Heyn</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/g-ah.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Spullen
-                                                <br>Bol </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/g-bol.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  vervoer displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">H. Vervoer en opslag</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_h-vervoer.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Wegtransport
-                                                <br>G. Snel</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/h-gsnel.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Luchttransport
-                                                <br>KLM </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/h-klm.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Zeetransport
-                                                <br>Samskip</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/h-samskip.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  horeca displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">I. Horeca</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_i-horeca.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Logies
-                                                <br>Van der Valk</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/i-vdvalk.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Darnkverstrkking
-                                                <br>Starbucks</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/i-starbucks.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  informatie displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">J. Informatie en communicatie</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_j-informatie.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Nieuws
-                                                <br>Nu.nl</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/j-nu.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Radio en tv
-                                                <br>RTL</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/j-rtl.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  fi displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">K. Financi&euml;le instellingen</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_k-financieel.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Toezicht
-                                                <br>De Nederlandsche Bank</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/k-dnb.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Geld en leningen
-                                                <br>ABN-AMRO</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/k-abn.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Verzekeringen
-                                                <br>Aegon</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/k-aegon.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  onroerendgoed displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">L. Onroerend goed</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_l-onroerend.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Onroerend goed
-                                                <br>Bladt </div>
-                                            <div class="artwork">
-                                                <img src="../images/products/l-bladt.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  zakelijke displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">M.N. Zakelijk</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_mn-zakelijk.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Notariaat
-                                                <br>notaris.nl</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/m-notaris.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Advocatuur
-                                                <br>Nauta Duthil</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/m-nauta.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Accountancy
-                                                <br>Deloitte</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/m-deloitte.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  overheid displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">O. Overheid</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_o-overheid.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Opbenbaar bestuur
-                                                <br>Staten Generaal</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/o-sg.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Rechtspraak
-                                                <br>Gerechtshof</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/o-justitie.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Sociale Verzekering
-                                                <br>AOW</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/o-aow.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display onderwijs displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">P. Onderwijs</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_p-onderwijs.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Openbaar onderwijs
-                                                <br>jouw school</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/p-lokaal.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Prive onderwijs
-                                                <br>LOI</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/p-loi.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Autorijles
-                                                <br>Bram</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/p-auto.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  zorg displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">Q. Gezondheidszorg en Welzijnszorg</div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_q-zorg.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Gezondheidszorg
-                                                <br>Ziekenhuis</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/q-ziekenhuis.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Welzijnszorg
-                                                <br>Jeugdzorg</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/q-jeugdzorg.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Gezondheidszorg
-                                                <br>Verpleeghuis</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/q-verpleeghuis.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  csr displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">R. Cultuur, sport en recreatie </div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_r-recreatie.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Cultuur
-                                                <br>Rijksmuseum</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/r-rijks.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct wk">
-                                            <div class="text">Sport
-                                                <br>WK organisatiecomit&eacute;</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/r-wk.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Sport
-                                                <br>voetbalclub</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/r-voetbal.jpg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Recreatie
-                                                <br>Duinrell</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/r-duinrell.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  dienstverleningoverig displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">S. Overige dienstverlening </div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_s-overig.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Politieke partijen</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/s-politiek.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Reparatie</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/s-reparatie.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Wellness</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/s-wellness.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  huishouding displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">T. Huishouding </div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_t-huishouden.png">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Maxima</div>
-                                            <div class="artwork small maxima">
-                                                <img src="/images/people/figuren/figuren_maxima.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Peter</div>
-                                            <div class="artwork small peter">
-                                                <img src="/images/people/figuren/figuren_peter.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Bakker 1</div>
-                                            <div class="artwork small bakker">
-                                                <img src="/images/people/figuren/figuren_bakkergroen.png">
-                                                <img src="/images/people/figuren/figuren_kindje.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Bakker 2</div>
-                                            <div class="artwork small">
-                                                <img src="/images/people/figuren/figuren_bakkerpaars.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Huishouden</div>
-                                            <div class="artwork small">
-                                                <img src="../images/products/t-huishouden.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Tuinman</div>
-                                            <div class="artwork small">
-                                                <img src="../images/products/t-tuinman.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="part-display  eo displaynone">
-                                <div class="part">
-                                    <div class="branche">
-                                        <div class="text">U. Extraterritoriale organisaties </div>
-                                        <div class="artwork">
-                                            <img src="../images/products/branches/branche_p-onderwijs.svg">
-                                        </div>
-                                    </div>
-                                    <div class="products">
-                                        <div class="oneproduct">
-                                            <div class="text">Europese Unie</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/u-eu.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Verenigde Naties</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/u-un.jpeg">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Internationaal Monetair Fonds</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/u-imf.png">
-                                            </div>
-                                        </div>
-                                        <div class="oneproduct">
-                                            <div class="text">Organisatie voor Economische Samenwerking en Ontwikkeling</div>
-                                            <div class="artwork">
-                                                <img src="../images/products/u-oecd.jpeg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="cont-bdt-display">                
                             <div class="cont-bdt">
                                 <div class="container-bdt-database displaynone">
@@ -925,7 +330,7 @@ $(document).ready(function() {
                             </div>
                         </div> 
 
-                        <div class="cont-sct-display">
+                        <div class="cont-sct-display displaynone">
                             <div class="cont-sct">
                                 <div class="sct-nederland">
                                     <div class="titel-nederland">Sectoren</div>
@@ -960,114 +365,735 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
+                <div class="producten_container">
+                    <div class="titel_producten">Producten</div>
+                    <div class="cont-bedrijfstakproducten"> 
+                        <div class="part-display landbouw  ">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">A. Landbouw, bosbouw en visserij</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_a-agrarisch.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">
+                                            <div>Appels</div>
+                                            <div>boomgaard Jansen</div>
+                                        </div>
+                                        <div class="artwork small">
+                                            <img src="../images/products/a-apple.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">
+                                            <div>Bomen</div>
+                                            <div>kwekerij Piet</div>
+                                        </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/a-tree.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">
+                                            <div>Koe</div>
+                                            <div>boer Frans</div>
+                                        </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/a-koe.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  delfstoffen displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">B. Delfstoffen</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_b-grondstof.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">
+                                            <div>Zout</div>
+                                            <div>Bolivia</div>
+                                        </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/b-zoutmijnBolivia.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Olie
+                                            <br>Shell</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/b-olieshell.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">IJzer
+                                            <br>Tata</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/b-steelTata.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  industrie  displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">C. Industrie</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_c-industrie.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct bakkerbroodjes">
+                                        <div class="text">Brood</div>
+                                        <div class="orgtext">Bakker 'Broodjes" B.V.</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/c-brood.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Fiets
+                                            <br>Hummer</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/c-fiets-hummer.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Verf
+                                            <br>DSM</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/c-verfDSM.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  water displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">D.E. Water, afvalwater, gas en elektriciteit</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_de-waterleidingelek.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Elektriciteit
+                                            <br>Eneco</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/d-elektriciteit.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Water
+                                            <br>PWN</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/d-waterleiding.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display bouwnijverheid displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">F. Bouwnijverheid</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_f-bouwnijverheid.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">hijstechniek
+                                            <br>Elcee </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/f-hijstechniek.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Bouw
+                                            <br>BAM </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/f-bouwBam.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  handel displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">G. Handel</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_g-detailhandel.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct backery button">
+                                        <div class="text">Brood
+                                            <br>Backery shop</div>
+                                        <div class="artwork">
+                                            <img src="/images/products/bakker/bakkerbuitenkant.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Etenswaren
+                                            <br>Albert Heyn</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/g-ah.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Spullen
+                                            <br>Bol </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/g-bol.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  vervoer displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">H. Vervoer en opslag</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_h-vervoer.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Wegtransport
+                                            <br>G. Snel</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/h-gsnel.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Luchttransport
+                                            <br>KLM </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/h-klm.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Zeetransport
+                                            <br>Samskip</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/h-samskip.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  horeca displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">I. Horeca</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_i-horeca.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Logies
+                                            <br>Van der Valk</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/i-vdvalk.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Darnkverstrkking
+                                            <br>Starbucks</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/i-starbucks.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  informatie displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">J. Informatie en communicatie</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_j-informatie.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Nieuws
+                                            <br>Nu.nl</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/j-nu.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Radio en tv
+                                            <br>RTL</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/j-rtl.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  fi displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">K. Financi&euml;le instellingen</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_k-financieel.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Toezicht
+                                            <br>De Nederlandsche Bank</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/k-dnb.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Geld en leningen
+                                            <br>ABN-AMRO</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/k-abn.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Verzekeringen
+                                            <br>Aegon</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/k-aegon.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  onroerendgoed displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">L. Onroerend goed</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_l-onroerend.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Onroerend goed
+                                            <br>Bladt </div>
+                                        <div class="artwork">
+                                            <img src="../images/products/l-bladt.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  zakelijke displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">M.N. Zakelijk</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_mn-zakelijk.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Notariaat
+                                            <br>notaris.nl</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/m-notaris.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Advocatuur
+                                            <br>Nauta Duthil</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/m-nauta.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Accountancy
+                                            <br>Deloitte</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/m-deloitte.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  overheid displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">O. Overheid</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_o-overheid.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Opbenbaar bestuur
+                                            <br>Staten Generaal</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/o-sg.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Rechtspraak
+                                            <br>Gerechtshof</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/o-justitie.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Sociale Verzekering
+                                            <br>AOW</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/o-aow.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display onderwijs displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">P. Onderwijs</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_p-onderwijs.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Openbaar onderwijs
+                                            <br>jouw school</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/p-lokaal.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Prive onderwijs
+                                            <br>LOI</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/p-loi.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Autorijles
+                                            <br>Bram</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/p-auto.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  zorg displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">Q. Gezondheidszorg en Welzijnszorg</div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_q-zorg.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Gezondheidszorg
+                                            <br>Ziekenhuis</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/q-ziekenhuis.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Welzijnszorg
+                                            <br>Jeugdzorg</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/q-jeugdzorg.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Gezondheidszorg
+                                            <br>Verpleeghuis</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/q-verpleeghuis.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  csr displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">R. Cultuur, sport en recreatie </div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_r-recreatie.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Cultuur
+                                            <br>Rijksmuseum</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/r-rijks.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct wk">
+                                        <div class="text">Sport
+                                            <br>WK organisatiecomit&eacute;</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/r-wk.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Sport
+                                            <br>voetbalclub</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/r-voetbal.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Recreatie
+                                            <br>Duinrell</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/r-duinrell.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  dienstverleningoverig displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">S. Overige dienstverlening </div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_s-overig.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Politieke partijen</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/s-politiek.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Reparatie</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/s-reparatie.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Wellness</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/s-wellness.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  huishouding displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">T. Huishouding </div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_t-huishouden.png">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Maxima</div>
+                                        <div class="artwork small maxima">
+                                            <img src="/images/people/figuren/figuren_maxima.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Peter</div>
+                                        <div class="artwork small peter">
+                                            <img src="/images/people/figuren/figuren_peter.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Bakker 1</div>
+                                        <div class="artwork small bakker">
+                                            <img src="/images/people/figuren/figuren_bakkergroen.png">
+                                            <img src="/images/people/figuren/figuren_kindje.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Bakker 2</div>
+                                        <div class="artwork small">
+                                            <img src="/images/people/figuren/figuren_bakkerpaars.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Huishouden</div>
+                                        <div class="artwork small">
+                                            <img src="../images/products/t-huishouden.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Tuinman</div>
+                                        <div class="artwork small">
+                                            <img src="../images/products/t-tuinman.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part-display  eo displaynone">
+                            <div class="part">
+                                <div class="branche">
+                                    <div class="text">U. Extraterritoriale organisaties </div>
+                                    <div class="artwork">
+                                        <img src="../images/products/branches/branche_p-onderwijs.svg">
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="oneproduct">
+                                        <div class="text">Europese Unie</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/u-eu.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Verenigde Naties</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/u-un.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Internationaal Monetair Fonds</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/u-imf.png">
+                                        </div>
+                                    </div>
+                                    <div class="oneproduct">
+                                        <div class="text">Organisatie voor Economische Samenwerking en Ontwikkeling</div>
+                                        <div class="artwork">
+                                            <img src="../images/products/u-oecd.jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-productenrij-display displaynone ">
+                        <div class="container-producten">
+                        <!-- <div class="icon icon-pijlnaarboven organisaties bgoutput  "></div> -->
+                            <div class="titel">Productsoorten</div>
+                            <div class="productenrij">
+                                <div class="borderleft"></div>
+                                <div class="productitem">
+                                    <div class="tekst">wet</div>
+                                    <div class="image icon icon-wet"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1">veiligheid</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">collectiefgoed</div>
+                                    <div class="image icon icon-collectiefgoed"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1">bos</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">kennis</div>
+                                    <div class="image icon icon-receptT"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1">van natuur</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">reclame</div>
+                                    <div class="image icon icon-reclame"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1">?</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">overeenkomst</div>
+                                    <div class="image icon icon-overeenkomst"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1"></div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">geld</div>
+                                    <div class="image icon icon-geld"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl markt icon icon-stroommarkt"></div>
+                                    </div>
+                                    <div class="specifiek1"></div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">dienst</div>
+                                    <div class="image icon icon-mens-org"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl markt icon icon-arbeidintern"></div>
+                                        <div class="pijl markt icon icon-arbeidmarkt"></div>
+                                        <div class="pijl markt icon icon-arbeidextern"></div>
+                                    </div>
+                                    <div class="specifiek1">papa</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">gebruiksgoed</div>
+                                    <div class="image icon icon-vierkant"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl markt icon icon-stroommarkt"></div>
+                                    </div>
+                                    <div class="specifiek1">fiets</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">verbruiksgoed</div>
+                                    <div class="image icon icon-rondje"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl markt icon icon-stroommarkt"></div>
+                                    </div>
+                                    <div class="specifiek1">brood</div>
+                                </div>
+                                <div class="productitem">
+                                    <div class="tekst">consumentenproduct</div>
+                                    <div class="image icon icon-consumentenproduct"></div>
+                                    <div class="border"></div>
+                                    <div class="pijlen">
+                                        <div class="pijl intern icon icon-dienstintern"></div>
+                                        <div class="pijl intern icon icon-stroomintern"></div>
+                                        <div class="pijl extern icon icon-dienstextern"></div>
+                                    </div>
+                                    <div class="specifiek1">lunch</div>
+                                </div>
+                                <div class="borderright"></div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
 
-            <div class="container-productenrij-display  ">
-                <div class="container-producten">
-                <!-- <div class="icon icon-pijlnaarboven organisaties bgoutput  "></div> -->
-                    <div class="titel">Productsoorten</div>
-                    <div class="productenrij">
-                        <div class="borderleft"></div>
-                        <div class="productitem">
-                            <div class="tekst">wet</div>
-                            <div class="image icon icon-wet"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1">veiligheid</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">collectiefgoed</div>
-                            <div class="image icon icon-collectiefgoed"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1">bos</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">kennis</div>
-                            <div class="image icon icon-receptT"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1">van natuur</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">reclame</div>
-                            <div class="image icon icon-reclame"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1">?</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">overeenkomst</div>
-                            <div class="image icon icon-overeenkomst"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1"></div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">geld</div>
-                            <div class="image icon icon-geld"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl markt icon icon-stroommarkt"></div>
-                            </div>
-                            <div class="specifiek1"></div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">dienst</div>
-                            <div class="image icon icon-mens-org"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl markt icon icon-arbeidintern"></div>
-                                <div class="pijl markt icon icon-arbeidmarkt"></div>
-                                <div class="pijl markt icon icon-arbeidextern"></div>
-                            </div>
-                            <div class="specifiek1">papa</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">gebruiksgoed</div>
-                            <div class="image icon icon-vierkant"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl markt icon icon-stroommarkt"></div>
-                            </div>
-                            <div class="specifiek1">fiets</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">verbruiksgoed</div>
-                            <div class="image icon icon-rondje"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl markt icon icon-stroommarkt"></div>
-                            </div>
-                            <div class="specifiek1">brood</div>
-                        </div>
-                        <div class="productitem">
-                            <div class="tekst">consumentenproduct</div>
-                            <div class="image icon icon-consumentenproduct"></div>
-                            <div class="border"></div>
-                            <div class="pijlen">
-                                <div class="pijl intern icon icon-dienstintern"></div>
-                                <div class="pijl intern icon icon-stroomintern"></div>
-                                <div class="pijl extern icon icon-dienstextern"></div>
-                            </div>
-                            <div class="specifiek1">lunch</div>
-                        </div>
-                        <div class="borderright"></div>
-                    </div>
                 </div>
-            </div>  
             </div>  
 
         </div>

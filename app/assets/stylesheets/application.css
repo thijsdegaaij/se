@@ -1120,14 +1120,6 @@ a {
     .cont-overeenkomst .eerstelaag .three, .cont-overeenkomst .tweedelaag .three, .cont-overeenkomst .derdelaag .three {
       flex: 0 1 80px; }
 
-.borderbottomsimulatie {
-  position: absolute;
-  top: 70px;
-  left: 570px;
-  width: 1330px;
-  border-bottom: 1px solid #CCCCCC;
-  z-index: 9; }
-
 .navb {
   display: flex;
   flex-direction: row;
@@ -1142,47 +1134,37 @@ a {
   /* space */
   /* user */
   /* level */ }
+  .navb .lijn_navb {
+    position: fixed;
+    top: 71px;
+    left: 650px;
+    height: 1px;
+    width: 1250px;
+    background-color: #CCCCCC; }
   .navb .logo-se {
     width: 300px;
     height: 40px;
-    margin-bottom: 7px;
-    margin-left: 24px;
-    margin-right: 24px; }
+    margin: 2px 0px 0px 48px; }
     .navb .logo-se img {
       height: 40px; }
-  .navb .nav-lessenopdrachten {
+  .navb .navheading {
     position: absolute;
-    top: 23px;
-    left: 400px;
+    left: 650px;
     display: flex;
     flex-direction: row;
-    align-items: center; }
-  .navb .plaatjenaam {
-    display: flex;
-    flex-direction: row;
-    margin-left: 12px; }
-    .navb .plaatjenaam > div {
-      padding: 0px 7px 0px 7px; }
+    -webkit-align-items: center; }
   .navb .navheaders {
     display: flex;
     flex-direction: row;
-    margin-left: 217px;
     margin-top: 5px; }
     .navb .navheaders div {
       padding-right: 18px;
       padding-left: 18px;
       border-right: 1px solid #CCCCCC;
       color: #3f67a6;
-      font-size: 22px; }
-  .navb .menus {
-    width: 650px;
-    margin-left: 28px;
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-justify-content: space-around; }
-  .navb .space {
-    width: 120px; }
+      font-size: 20px; }
+  .navb .concept {
+    margin: 0px 48px 0px 48px; }
   .navb .img-learner {
     margin-top: 0px;
     margin-left: 0px;
@@ -1192,8 +1174,7 @@ a {
   .navb .plaatjenaam {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-left: 12px; }
+    align-items: center; }
     .navb .plaatjenaam > div {
       padding: 0px 7px 0px 7px; }
   .navb .level {
@@ -1207,7 +1188,7 @@ a {
     position: fixed;
     z-index: 5;
     top: 60px;
-    left: 570px;
+    left: 650px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border: 1px solid #CCCCCC;
     border-color: rgba(0, 0, 0, 0.2);
@@ -2316,10 +2297,18 @@ table.tablesorter thead tr .headerSortDown {
   color: #fff;
   background-color: #0097cf; }
 
+.lessonassignmentspace {
+  position: fixed;
+  width: 650px;
+  height: 100px;
+  background-color: #edeae3; }
+
 .lessons .start, .assignments .start {
   position: absolute;
-  top: -30px;
   display: flex;
+  top: -52px;
+  width: 160px;
+  height: 48px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center; }
@@ -2327,26 +2316,29 @@ table.tablesorter thead tr .headerSortDown {
     margin-right: 24px; }
 
 .assignments .start {
-  left: 250px; }
+  left: 250px;
+  z-index: 100; }
+
+.contain.lesson, .contain.assigncc {
+  height: 100%;
+  width: 650px;
+  position: fixed;
+  top: 121px;
+  background-color: #edeae3;
+  overflow: visible; }
 
 .lessons, .assignments {
   position: relative;
-  top: 0px;
-  padding: 0px 30px 48px 24px;
+  padding: 0px 60px 0px 48px;
   font-size: 14px; }
   .lessons img, .assignments img {
     max-width: 510px; }
   .lessons .lijn, .assignments .lijn {
-    width: 516px;
-    margin-top: 0px;
-    padding-top: 6px;
-    margin-bottom: 12px;
+    width: 100%;
     border-bottom: 1px solid #CCCCCC; }
-  .lessons .overflow, .assignments .overflow {
-    overflow: hidden; }
   .lessons .lesheader, .assignments .lesheader {
     height: 44px;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0px 12px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2355,8 +2347,9 @@ table.tablesorter thead tr .headerSortDown {
     width: 550px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center; }
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 0px 0px; }
     .lessons .lesonderdeel .groepje, .assignments .lesonderdeel .groepje {
       width: 90px;
       display: -webkit-flex;
@@ -2367,11 +2360,9 @@ table.tablesorter thead tr .headerSortDown {
       transform: rotate(180deg);
       transform: scale(50%); }
   .lessons .lestitel, .assignments .lestitel {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 18px;
     padding: 2px 0px 8px 0px;
-    text-transform: uppercase;
-    color: #427bd7; }
+    color: #3f67a6; }
   .lessons .lesonderdelen, .assignments .lesonderdelen {
     height: 24px;
     width: 200px; }
@@ -2455,27 +2446,19 @@ table.tablesorter thead tr .headerSortDown {
     border-top: 1px solid #CCCCCC;
     padding: 10px 0px 10px 0px;
     margin-bottom: 12px; }
-  .body .kopje {
-    font-size: 12px;
-    font-weight: bold; }
   .body .kopjetitel {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 18px;
     letter-spacing: 0px;
+    color: #3f67a6;
+    padding: 12px 0px 4px 0px; }
+  .body .kopje {
+    font-size: 16px;
     color: #3f67a6; }
-
-hr {
-  height: 40;
-  border: 40;
-  border-top: 1px solid #ccc;
-  margin: 00px 0px 10px 0px; }
 
 .cont-nl {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 24px;
-  margin-bottom: 12px; }
+  align-items: center; }
 
 .mensen.bgoutput, .natuur.bgoutput {
   position: absolute;
@@ -2537,10 +2520,16 @@ hr {
   top: 118px;
   left: 55px; }
 
+.btn-inputoutput {
+  position: absolute;
+  left: 500px;
+  top: 60px; }
+
 .cont-natuurmens {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: 24px; }
   .cont-natuurmens .natuurleft,
   .cont-natuurmens .mensleft {
     border-width: 1px 1px 1px 1px;
@@ -2574,12 +2563,11 @@ hr {
       transform: scale(0.8, 0.8); }
 
 .mens-natuur-organisaties {
-  width: 1100px; }
+  width: 1150px; }
 
 .cont-organisaties-totaal {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   position: relative;
   border: 1px solid #CCCCCC;
   margin-top: 24px; }
@@ -2588,7 +2576,8 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 8px 0px 0px 8px;
+  justify-content: space-between;
+  padding: 4px 0px 0px 8px;
   height: 36px;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
@@ -2596,6 +2585,14 @@ hr {
   background-color: #F4F3F3; }
   .titel-eigendommen div {
     margin-right: 12px; }
+  .titel-eigendommen .titel_icoon {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .titel-eigendommen .buttons {
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row; }
 
 .cont-organisaties-all {
   display: flex;
@@ -2608,7 +2605,6 @@ hr {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 1098px;
   border-bottom: 1px solid #CCCCCC; }
 
 .container-nederland {
@@ -2619,7 +2615,8 @@ hr {
   font-size: 14px; }
 
 .image-bedrijfstakken {
-  padding-bottom: 4px; }
+  padding-bottom: 4px;
+  margin-left: 150px; }
 
 .kopjebedrijfstakken {
   position: absolute;
@@ -2662,42 +2659,6 @@ hr {
   background-color: yellow;
   border: 4px solid purple; }
 
-.orgdivision_group-container {
-  position: absolute;
-  top: 36px;
-  left: 200px;
-  width: 308px;
-  max-height: 520px;
-  overflow: scroll;
-  text-overflow: clip;
-  z-index: 99; }
-  .orgdivision_group-container .group1,
-  .orgdivision_group-container .group2,
-  .orgdivision_group-container .group3,
-  .orgdivision_group-container .groupA {
-    display: flex;
-    flex-direction: row;
-    padding: 4px 4px 4px 12px; }
-  .orgdivision_group-container .groupA {
-    font-size: 14px;
-    font-weight: bold;
-    border-bottom: 1px solid #CCCCCC;
-    color: #4D4D4D; }
-  .orgdivision_group-container .group1 {
-    color: #4D4D4D; }
-  .orgdivision_group-container .group2 {
-    color: #808080; }
-  .orgdivision_group-container .group3 {
-    font-size: 12px;
-    color: #4D4D4D; }
-  .orgdivision_group-container .code {
-    flex: 0 0 30px; }
-  .orgdivision_group-container .group2 > .code {
-    font-size: 12px;
-    padding-top: 1px; }
-  .orgdivision_group-container .title {
-    flex: 0 0 260px; }
-
 .bdt-a {
   padding: 24px; }
 
@@ -2707,91 +2668,12 @@ hr {
     position: absolute;
     z-index: -2; }
 
-.cont-bedrijfstakproducten {
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: #CCCCCC; }
-
-.part {
-  width: 1098px;
-  position: relative; }
-  .part .branche {
-    position: relative;
-    background-color: #F4F3F3; }
-    .part .branche .text {
-      color: black;
-      padding: 8px 0px 8px 8px; }
-    .part .branche .artwork {
-      display: none;
-      padding: 4px 0px 8px 0px; }
-    .part .branche img {
-      max-height: 40px;
-      max-width: 160px; }
-  .part .products {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    height: 150px;
-    width: 1097px;
-    overflow-x: auto; }
-    .part .products .oneproduct {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 48px; }
-      .part .products .oneproduct .text {
-        color: #4D4D4D;
-        text-align: center;
-        padding: 12px 0px 8px 8px;
-        width: 100%;
-        display: flex;
-        flex-direction: column; }
-        .part .products .oneproduct .text :nth-child(1) {
-          order: 2; }
-        .part .products .oneproduct .text :nth-child(2) {
-          order: 1;
-          font-weight: bold; }
-      .part .products .oneproduct .artwork {
-        padding: 0px 2px 8px 2px; }
-        .part .products .oneproduct .artwork img {
-          max-width: 160px;
-          max-height: 99px; }
-      .part .products .oneproduct .artwork.maxima {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
-        background-size: 250px 130px;
-        background-repeat: no-repeat;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-      .part .products .oneproduct .artwork.peter {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
-        background-size: 250px 130px;
-        background-repeat: no-repeat;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-      .part .products .oneproduct .artwork.bakker {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
-        background-size: cover;
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        background-repeat: no-repeat;
-        width: 100%; }
-      .part .products .oneproduct .artwork.small img {
-        max-width: 70px;
-        max-height: 100%; }
-  .part .oneproduct .text:hover {
-    background-color: #F4F3F3;
-    cursor: pointer; }
-
 .cont-sct {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  border-bottom: 1px solid #CCCCCC; }
   .cont-sct .sct-nederland {
     position: relative;
     display: flex;
@@ -2799,8 +2681,7 @@ hr {
   .cont-sct .rij {
     display: -webkit-flex;
     flex-direction: row;
-    -webkit-justify-content: space-between;
-    width: 1100px; }
+    -webkit-justify-content: space-around; }
   .cont-sct .sector,
   .cont-sct .sector > .title,
   .cont-sct .sector > .row {
@@ -2815,7 +2696,7 @@ hr {
     margin: 12px 24px 12px 24px;
     border-width: 1px 1px 1px 1px; }
     .cont-sct .sector > div {
-      width: 220px; }
+      width: 235px; }
     .cont-sct .sector .title {
       display: flex;
       flex-direction: column;
@@ -2848,6 +2729,153 @@ hr {
       background-color: #34a853; }
     .cont-sct .sector .financieel {
       background-color: #4387f4; }
+
+.producten_container {
+  border: 1px solid #CCCCCC;
+  margin: 24px; }
+  .producten_container .titel_producten {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 0px 0px 8px;
+    height: 36px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #CCCCCC;
+    background-color: #F4F3F3; }
+    .producten_container .titel_producten div {
+      margin-right: 12px; }
+
+.cont-bedrijfstakproducten {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #CCCCCC; }
+
+.part {
+  position: relative; }
+  .part .branche {
+    position: relative; }
+    .part .branche .text {
+      color: black;
+      padding: 8px 0px 0px 8px; }
+    .part .branche .artwork {
+      display: none;
+      padding: 4px 0px 8px 0px; }
+    .part .branche img {
+      max-height: 40px;
+      max-width: 260px; }
+  .part .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    height: 150px;
+    overflow-x: auto; }
+    .part .products .oneproduct {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 48px; }
+      .part .products .oneproduct .text {
+        color: #4D4D4D;
+        text-align: center;
+        padding: 12px 0px 8px 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+        .part .products .oneproduct .text :nth-child(1) {
+          order: 2; }
+        .part .products .oneproduct .text :nth-child(2) {
+          order: 1;
+          font-weight: bold; }
+      .part .products .oneproduct .artwork {
+        padding: 0px 2px 8px 2px; }
+        .part .products .oneproduct .artwork img {
+          max-width: 160px;
+          max-height: 90px; }
+      .part .products .oneproduct .artwork.maxima {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
+        background-size: 250px 130px;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .part .products .oneproduct .artwork.peter {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
+        background-size: 250px 130px;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .part .products .oneproduct .artwork.bakker {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
+        background-size: cover;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+        width: 100%; }
+      .part .products .oneproduct .artwork.small img {
+        max-width: 70px;
+        max-height: 100%; }
+  .part .oneproduct .text:hover {
+    background-color: #F4F3F3;
+    cursor: pointer; }
+
+.container-producten {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #CCCCCC;
+  position: relative; }
+  .container-producten .titel {
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 8px 0px 0px 8px;
+    height: 36px; }
+
+.productenrij {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .productenrij .productitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto; }
+    .productenrij .productitem .tekst {
+      padding: 8px 0px 8px 0px; }
+    .productenrij .productitem .image {
+      margin: 0px 0px 8px 0px !important; }
+    .productenrij .productitem .border {
+      padding-top: 4px;
+      width: 100%; }
+    .productenrij .productitem .pijlen {
+      display: flex;
+      flex-direction: row;
+      margin-top: -8px; }
+    .productenrij .productitem .specifiek1 {
+      font-style: italic;
+      padding: 8px 0px 0px 0px; }
+    .productenrij .productitem .pijl {
+      transform: rotate(90deg);
+      margin-top: 6px;
+      background-color: #fef1f8; }
+  .productenrij .productitem:hover {
+    background-color: #F4F3F3; }
+
+.scheidslijn {
+  width: 1350px;
+  border-style: dashed;
+  border-width: 3px 0px 0px 0px;
+  border-color: #edeae3;
+  margin: 24px 0px 24px 0px; }
 
 .maparbeid {
   display: flex;
@@ -2889,168 +2917,6 @@ hr {
     top: -20px;
     left: 30px;
     transform: scale(0.4, 0.4); }
-
-.container-producten {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-style: solid;
-  border-width: 0px 0px 0px 0px;
-  border-color: #CCCCCC;
-  width: 1100px;
-  position: relative; }
-  .container-producten .titel {
-    border-width: 0px 1px 0px 1px;
-    border-style: solid;
-    border-color: #CCCCCC;
-    padding: 8px 0px 0px 8px;
-    height: 36px; }
-
-.productenrij {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  .productenrij .productitem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 auto; }
-    .productenrij .productitem .tekst {
-      padding: 8px 0px 8px 0px; }
-    .productenrij .productitem .image {
-      margin: 0px 0px 8px 0px !important; }
-    .productenrij .productitem .border {
-      padding-top: 4px;
-      width: 100%;
-      border-bottom: 1px solid #CCCCCC; }
-    .productenrij .productitem .pijlen {
-      display: flex;
-      flex-direction: row;
-      margin-top: -8px; }
-    .productenrij .productitem .specifiek1 {
-      font-style: italic;
-      padding: 8px 0px 0px 0px; }
-    .productenrij .productitem .pijl {
-      transform: rotate(90deg);
-      margin-top: 6px;
-      background-color: #fef1f8; }
-  .productenrij .borderleft, .productenrij .borderright {
-    border-left: 1px solid #CCCCCC;
-    height: 72px; }
-  .productenrij .productitem:hover {
-    background-color: #F4F3F3; }
-
-.scheidslijn {
-  width: 1350px;
-  border-style: dashed;
-  border-width: 3px 0px 0px 0px;
-  border-color: #edeae3;
-  margin: 24px 0px 24px 0px; }
-
-.opdrachtcontainer {
-  height: 800px;
-  overflow-y: scroll;
-  padding-right: 12px; }
-
-.lesonderdeel {
-  width: 450px;
-  display: -webkit-flex;
-  flex-direction: row;
-  -webkit-justify-content: flex-start;
-  -webkit-align-items: center; }
-
-.lestitel {
-  font-size: 18px;
-  font-weight: bold;
-  padding: 2px 0px 8px 0px; }
-
-.opdrachtonderdelen {
-  height: 24px;
-  width: 200px; }
-
-.lesmethoden {
-  display: -webkit-flex;
-  flex-direction: row;
-  -webkit-justify-content: space-between;
-  -webkit-align-items: center;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding: 12px 39px 12px 48px;
-  margin-bottom: 24px;
-  border-bottom: solid 1px #E8E7E7; }
-
-.display {
-  position: absolute;
-  top: 47px;
-  left: 24px;
-  width: 521px;
-  height: 800px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 999; }
-  .display .header-navdisplay {
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-justify-content: space-between;
-    -webkit-align-items: center;
-    padding: 2px 12px 2px 48px;
-    border-bottom: solid 1px #E8E7E7;
-    background-color: #fff; }
-  .display .header {
-    font-size: 20px;
-    color: #808080; }
-  .display .body {
-    padding: 0px 48px 12px 48px; }
-  .display .module {
-    padding-top: 2px;
-    font-weight: bold;
-    line-height: 36px; }
-  .display .dark-hover:hover {
-    color: #4387f4; }
-
-.body {
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-justify-content: flex-start;
-  font-size: 14px;
-  text-align: justify;
-  /* select {
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-  } */ }
-  .body .omgedraaid {
-    transform: rotate(180deg);
-    transform: scale(50%); }
-  .body .groepje {
-    width: 90px;
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: center; }
-  .body .opdrachtinhoud {
-    margin-top: 0px; }
-  .body .starter {
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #CCCCCC;
-    padding: 10px 0px 10px 0px;
-    margin-bottom: 12px; }
-  .body .kopje {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    color: #3f67a6; }
-  .body .kopjetitel {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0px;
-    color: #3f67a6; }
-
-hr {
-  height: 40;
-  border: 40;
-  border-top: 1px solid #ccc;
-  margin: 00px 0px 10px 0px; }
 
 .accounting-all {
   align-items: center;
@@ -4741,25 +4607,6 @@ hr {
   display: none;
   margin-top: 45px; }
 
-.flex-rowstart {
-  display: flex;
-  flex-direction: row; }
-
-.navtwee {
-  background-color: #edeae3;
-  width: 124px;
-  padding: 0px 0px 0px 12px;
-  border-width: 1px 0px 0px 1px;
-  border-style: solid;
-  border-color: #CCCCCC !important; }
-  .navtwee .navheader {
-    color: #3f67a6;
-    font-size: 16px;
-    padding-top: 16px; }
-  .navtwee .navbtn {
-    padding-top: 16px;
-    color: #808080; }
-
 .flex-columnstart {
   display: flex;
   flex-direction: column; }
@@ -4767,9 +4614,7 @@ hr {
 .flex-columncenter {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 1205px;
-  border-top: 1px solid #CCCCCC; }
+  align-items: center; }
 
 .flex-cc {
   display: flex;
@@ -4789,63 +4634,38 @@ hr {
   display: flex;
   flex-direction: row; }
 
-.contain.lesson {
-  height: 1400px;
-  width: 570px;
-  position: fixed;
-  top: 100px;
-  left: 0px;
-  background-color: #edeae3;
-  overflow: visible; }
-
-.contain.assigncc {
-  height: 1220px;
-  width: 570px;
-  top: 100px;
-  left: 0px;
-  position: fixed;
-  background-color: #edeae3; }
-
 .simulation {
-  position: relative;
-  width: 1330px;
-  top: 20px;
-  left: 570px;
+  position: absolute;
+  top: 70px;
+  left: 650px;
+  width: 1250px;
   display: flex;
   flex-direction: column;
-  z-index: 3; }
-  .simulation .simrow {
-    position: relative;
-    border-right: 1px solid #F4F3F3;
-    background-color: white; }
+  z-index: 3;
+  y-overflow: scroll;
+  background-color: white; }
 
-.simrowspace {
-  position: absolute;
+.flex-rowstart {
   display: flex;
-  flex-direction: row; }
-  .simrowspace :nth-child(1) {
-    left: 0px;
-    width: 123px;
-    height: 700px;
-    z-index: 4;
-    background-color: #edeae3;
-    border-left: 1px solid #CCCCCC; }
-  .simrowspace :nth-child(2) {
-    position: absolute;
-    left: 0px;
-    width: 1000px;
-    height: 700px;
-    z-index: 0;
-    background-color: white; }
+  flex-direction: column; }
 
-.lessonassignmentspace {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 570px;
-  height: 200px;
-  z-index: 0;
-  background-color: #edeae3; }
+.navtwee {
+  display: flex;
+  flex-direction: row;
+  background-color: #edeae3;
+  height: 50px;
+  padding: 0px 0px 0px 24px;
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  border-color: #CCCCCC !important; }
+  .navtwee .navheader {
+    display: none;
+    color: #3f67a6;
+    font-size: 16px;
+    padding: 16px 48px 16px 0px; }
+  .navtwee .navbtn {
+    padding: 16px 48px 16px 0px;
+    color: #808080; }
 
 .header > .title > div:nth-child(1),
 .header > .title > div:nth-child(2) {

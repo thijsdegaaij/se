@@ -1,7 +1,16 @@
-.lessons .start, .assignments .start {
+.lessonassignmentspace { //ruimte onder de kiezers van les en assignments
+	position: fixed;
+	width: $left;
+	height: 100px;
+	background-color: $background-color-1;
+}
+
+.lessons .start, .assignments .start{ //kiezers in lessons resp assignments
 	position: absolute;
-	top: -30px;
 	display: flex;
+	top: -52px;
+	width: 160px;
+	height: 48px;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
@@ -11,34 +20,38 @@
 }
 .assignments .start {
 	left: 250px;
+	z-index: 100;
 }
 
+.contain.lesson, .contain.assigncc {
+    height: 100%;
+    width: $left;
+    position: fixed;
+    top: 121px; //is goed, 70px nav + 50navtwee
+    background-color: $background-color-1;
+    overflow: visible;
+}
 .lessons, .assignments {
-	//width:  530px;
 	position: relative;
-	top: 0px;
-	padding: 0px 30px 48px 24px;
+	padding: 0px 60px 0px 48px;
 	font-size: 14px;
 		img {
 		max-width: 510px;
 	}
 
-
-
 	.lijn {
-		width: 516px;
-		margin-top: 0px;
-		padding-top: 6px;
-		margin-bottom: 12px;
+		width: 100%;
 		border-bottom: 1px solid $border-color-base;
 	}
 	.overflow {
-		overflow: hidden;
+		//overflow: hidden;
 	}
+
+
 
 	.lesheader {
 		height: 44px;
-		margin: 5px 0px 0px 0px;
+		margin: 5px 0px 12px 0px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -48,8 +61,9 @@
 		width: 550px;
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: center;	
+		padding: 10px 0px 0px 0px;
 
 		.groepje {
 			width: 90px;
@@ -64,11 +78,10 @@
 		}
 	}
 	.lestitel {
-		font-size: 14px;
-		font-weight: bold;
+		font-size: 18px;
 		padding: 2px 0px 8px 0px;
-		text-transform: uppercase;
-		color: $kop1;
+		//text-transform: uppercase;
+		color: $kop2;
 	}
 	.lesonderdelen {
 		height: 24px;
@@ -180,23 +193,16 @@ text-align: justify;
 		padding: 10px 0px 10px 0px;
 		margin-bottom: 12px;
 	}
-	.kopje {
-		font-size: 12px;
-		font-weight: bold;
-	}
 	.kopjetitel {
-		font-size: 24px;
-		font-weight: bold;
+		font-size: 18px;
 		letter-spacing: 0px;
+		color: $kop2;
+		padding: 12px 0px 4px 0px;
+	}
+	.kopje {
+		font-size: 16px;
 		color: $kop2;
 	}
 
-}
-
-hr {
-height: 40;
-border: 40;
-border-top: 1px solid #ccc;
-margin:00px 0px 10px 0px;
 }
 

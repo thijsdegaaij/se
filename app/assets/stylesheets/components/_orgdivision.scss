@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 24px;
-    //width: 1193px;
-    margin-bottom: 12px;
    
 }
 
@@ -73,10 +70,16 @@
     left: 55px
 }
 
+.btn-inputoutput {
+    position: absolute;
+    left: 500px;
+    top: 60px;
+}
 .cont-natuurmens {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 24px;
     //width: 1193px;
 
    
@@ -133,14 +136,14 @@
 }
 
 .mens-natuur-organisaties {
-    width: 1100px;
+    width: 1150px;
 }
 
 // ORGANISATIES TOTAAL
+
 .cont-organisaties-totaal {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     position: relative;
     border: 1px solid $border-color-base;
     margin-top: 24px;
@@ -148,8 +151,9 @@
 .titel-eigendommen {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 8px 0px 0px 8px;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 4px 0px 0px 8px;
     height: 36px;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -158,9 +162,18 @@
     div {
         margin-right: 12px;
     }
+    .titel_icoon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;        
+    }
+    .buttons {
+        margin-left: 400px;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-// BEDRIJFSTAKKEN EN SECTOREN
 .cont-organisaties-all {
     display: flex;
     flex-direction: column;
@@ -174,7 +187,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 1098px;
     border-bottom: 1px solid $border-color-base;
     }
 .image-bedrijfstakken {
@@ -192,6 +204,7 @@
 
 .image-bedrijfstakken {
     padding-bottom: 4px;
+    margin-left: 150px;
 }
 
 .kopjebedrijfstakken {
@@ -246,65 +259,6 @@
     border: 4px solid purple;
 }
 
-//.bdtnamen > div:hover {
-   // color: $blue;
-//}
-
-// SBI Standaard bedrijven index
-.orgdivision_group-container {
-    // database detailuitleg
-    position: absolute;
-    //border-right: 1px solid $border-color-base;
-    //background-color: $background-color-2;
-    top: 36px;
-    left: 200px;
-    width: 308px;
-    max-height: 520px;
-    overflow: scroll;
-    text-overflow: clip;
-    z-index: 99;
-    .group1,
-    .group2,
-    .group3,
-    .groupA {
-        display: flex;
-        flex-direction: row;
-        padding: 4px 4px 4px 12px;
-    }
-    .groupA {
-        font-size: 14px;
-        font-weight: bold;
-        border-bottom: 1px solid $border-color-base;
-        color: $text-color-dark;
-        //background-color: $background-color-1;
-    }
-    .group1 {
-        color: $text-color-dark;
-        //background-color: $background-color-2;
-    }
-    .group2 {
-        //display: none;
-        color: $text-color-base;
-    }
-    .group3 {
-        //display: none;
-        font-size: 12px;
-        color: $text-color-dark;
-    }
-    .code {
-        flex: 0 0 30px;
-    }
-    .group2 > .code {
-        font-size: 12px;
-        padding-top: 1px;
-    }
-    .group3 > .code {
-        //visibility: hidden;
-    }
-    .title {
-        flex: 0 0 260px;
-    }
-}
 
 .bdt-a {
     padding: 24px;
@@ -318,7 +272,113 @@
     }
 }
 
-//B1: producten rechtsboven
+// SECTOREN
+.cont-sct {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid $border-color-base;
+
+    //width: 810px;
+    //height: 560px;
+    //width: 850px;
+    .sct-nederland {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .rij {
+        display: -webkit-flex;
+        flex-direction: row;
+        //flex-wrap: wrap;
+        -webkit-justify-content: space-around;
+        //width: 1100px;
+    }
+    .sector,
+    .sector > .title,
+    .sector > .row {
+        border-style: solid;
+        border-color: $border-color-base;
+    }
+    .sector {
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-justify-content: space-between;
+        -webkit-align-items: center;
+        height: 200px;
+        margin: 12px 24px 12px 24px;
+        border-width: 1px 1px 1px 1px;
+        > div {
+            width: 235px;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 30px;
+            color: white;
+            font-size: 15px;
+           // font-weight: bold;
+            padding: 8px;
+            border-width: 0px 0px 1px 0px;
+        }
+        .row {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: auto;
+            background-color: white;
+            padding-left: 8px;
+            border-width: 0px 0px 1px 0px;
+            cursor: pointer;
+        }
+        .row:hover {
+            background-color: $background-color-2;
+            //color: $text-color-base;
+        }
+        .row:last-of-type {
+            border-width: 0px 0px 0px 0px;
+        }
+        .huishouden {
+            background-color: $huishouden;
+        }
+        .nv {
+            background-color: $nv;
+        }
+        .overheid-d {
+            background-color: $overheid;
+        }
+        .financieel {
+            background-color: $financieel;
+        }
+    }
+}
+
+
+
+// PRODUCTEN 
+.producten_container {
+    border: 1px solid $border-color-base;
+    margin: 24px;
+    .titel_producten {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 0px 0px 8px;
+    height: 36px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: $border-color-base;
+    background-color: $background-color-2;
+    div {
+        margin-right: 12px;
+    }
+}
+}
 .cont-bedrijfstakproducten {
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -326,32 +386,30 @@
 }
 
 .part {
-    width: 1098px;
     position: relative;
     .branche {
         position: relative;
-        background-color: $background-color-2; // white;
-        
+        //background-color: $background-color-2;         
         .text {
-            color: black; // $text-color-dark;
-            padding: 8px 0px 8px 8px;
-        }
+            color: black; 
+            padding: 8px 0px 0px 8px;
+        }        
         .artwork {
             display: none;
             padding: 4px 0px 8px 0px;
             }
             img {
                 max-height: 40px;
-                max-width: 160px;
+                max-width: 260px;
             }
       }
 
 .products {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: white;
     height: 150px;
-    width: 1097px;
     overflow-x: auto;
     //border: 1px solid $border-color-base;
 
@@ -383,7 +441,7 @@
           
             img {
                 max-width: 160px;
-                max-height: 99px;
+                max-height: 90px;
             }
         }   
         .artwork.maxima {
@@ -429,88 +487,77 @@
     }
 }
 
-// C1: sectoren
-.cont-sct {
-    background-color: white;
+// Rij met producten
+.container-producten {
+    position:relative;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    //width: 810px;
-    //height: 560px;
-    //width: 850px;
-    .sct-nederland {
-        position: relative;
+    flex-direction: column;  
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: $border-color-base; 
+    //width: 1100px; 
+    position: relative;  
+    .titel {
+            border-width: 0px 0px 0px 0px;
+            border-style: solid;
+            border-color: $border-color-base;
+            //background-color: $background-color-2;
+            padding: 8px 0px 0px 8px;
+            height: 36px;
+    }
+}
+.productenrij {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    //width: 1193px; 
+    .productitem {
         display: flex;
         flex-direction: column;
-    }
-    .rij {
-        display: -webkit-flex;
-        flex-direction: row;
-        //flex-wrap: wrap;
-        -webkit-justify-content: space-between;
-        width: 1100px;
-    }
-    .sector,
-    .sector > .title,
-    .sector > .row {
-        border-style: solid;
-        border-color: $border-color-base;
-    }
-    .sector {
-        display: -webkit-flex;
-        flex-direction: column;
-        -webkit-justify-content: space-between;
-        -webkit-align-items: center;
-        height: 200px;
-        margin: 12px 24px 12px 24px;
-        border-width: 1px 1px 1px 1px;
-        > div {
-            width: 220px;
-        }
-        .title {
+        align-items: center;
+        flex: 1 1 auto;
+        .tekst {
+            padding: 8px 0px 8px 0px; 
+            }
+        .image {
+            margin: 0px 0px 8px 0px!important; 
+            }
+        .border {
+            padding-top: 4px;
+            width: 100%;
+            //border-bottom: 1px solid $border-color-base;
+            }
+        .pijlen {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            height: 30px;
-            color: white;
-            font-size: 15px;
-           // font-weight: bold;
-            padding: 8px;
-            border-width: 0px 0px 1px 0px;
+            flex-direction: row;
+            margin-top: -8px;
         }
-        .row {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: auto;
-            background-color: white;
-            padding-left: 8px;
-            border-width: 0px 0px 1px 0px;
-            cursor: pointer;
+        .specifiek1 {
+            font-style: italic;
+            padding: 8px 0px 0px 0px; 
         }
-        .row:hover {
-            background-color: $background-color-2;
-            //color: $text-color-base;
-        }
-        .row:last-of-type {
-            border-width: 0px 0px 0px 0px;
-        }
-        .huishouden {
-            background-color: $huishouden;
-        }
-        .nv {
-            background-color: $nv;
-        }
-        .overheid-d {
-            background-color: $overheid;
-        }
-        .financieel {
-            background-color: $financieel;
+        .pijl { //output
+            transform: rotate(90deg);
+            margin-top: 6px;
+            background-color: $bgoutput;
         }
     }
+    .borderleft, .borderright {
+            //border-left: 1px solid $border-color-base; 
+            //height: 72px;       
+    } 
+    .productitem:hover {
+        background-color: $background-color-2;        
+    }   
+}
+
+.scheidslijn {
+    width: 1350px;
+     border-style: dashed;
+     border-width: 3px 0px 0px 0px;
+     border-color: $background-color-1;
+     margin: 24px 0px 24px 0px;
+
 }
 
 // map producten 
@@ -562,77 +609,5 @@
         transform: scale(0.4, 0.4);
     }
 }
-// Rij met producten
 
 
-.container-producten {
-    position:relative;
-    display: flex;
-    flex-direction: column;  
-    border-style: solid;
-    border-width: 0px 0px 0px 0px;
-    border-color: $border-color-base; 
-    width: 1100px; 
-    position: relative;  
-    .titel {
-            border-width: 0px 1px 0px 1px;
-            border-style: solid;
-            border-color: $border-color-base;
-            //background-color: $background-color-2;
-            padding: 8px 0px 0px 8px;
-            height: 36px;
-    }
-}
-.productenrij {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    //width: 1193px; 
-    .productitem {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1 1 auto;
-        .tekst {
-            padding: 8px 0px 8px 0px; 
-            }
-        .image {
-            margin: 0px 0px 8px 0px!important; 
-            }
-        .border {
-            padding-top: 4px;
-            width: 100%;
-            border-bottom: 1px solid $border-color-base;
-            }
-        .pijlen {
-            display: flex;
-            flex-direction: row;
-            margin-top: -8px;
-        }
-        .specifiek1 {
-            font-style: italic;
-            padding: 8px 0px 0px 0px; 
-        }
-        .pijl { //output
-            transform: rotate(90deg);
-            margin-top: 6px;
-            background-color: $bgoutput;
-        }
-    }
-    .borderleft, .borderright {
-            border-left: 1px solid $border-color-base; 
-            height: 72px;       
-    } 
-    .productitem:hover {
-        background-color: $background-color-2;        
-    }   
-}
-
-.scheidslijn {
-    width: 1350px;
-     border-style: dashed;
-     border-width: 3px 0px 0px 0px;
-     border-color: $background-color-1;
-     margin: 24px 0px 24px 0px;
-
-}

@@ -28,6 +28,7 @@ $(document).ready(function() {
     });
 
 
+
     $(document.body).on("click", ".btn-inputoutput", function() {
         $(".btn-inputoutput").toggleClass("bold");
         $(".orgdivision .bginput, .orgdivision .bgoutput").show();
@@ -37,16 +38,16 @@ $(document).ready(function() {
 
     // knoppen in organisatie 
     $(document.body).on("click", ".btn-bedrijfstakken", function() {
-        $(".btn-bedrijfstakken").toggleClass("bold");
-        $(".cont-bdt-display").toggle();
+        $(".btn-bedrijfstakken, .btn-sectoren").toggleClass("bold");
+        $(".cont-bdt-display, .cont-sct-display").toggle("slow");
     });
     $(document.body).on("click", ".btn-sectoren", function() {
-        $(".btn-sectoren").toggleClass("bold");
-        $(".cont-sct-display").toggle();
+        $(".btn-sectoren, .btn-bedrijfstakken").toggleClass("bold");
+        $(".cont-sct-display, .cont-bdt-display ").toggle("slow");
     });
     $(document.body).on("click", ".btn-productenc", function() {
         $(".btn-productenc").toggleClass("bold");
-        $(".container-productenrij-display ").toggle();
+        $(".container-productenrij-display ").toggle("fast");
     });
 
 ;
@@ -126,7 +127,7 @@ $(document).ready(function() {
     });
     $("#overheid").click(function() {
         $(".part-display").hide();
-        $(".overheid").show();
+        $(".overheid_p").show();
     });
     $("#onderwijs").click(function() {
         $(".part-display").hide();
@@ -147,6 +148,11 @@ $(document).ready(function() {
     $("#huishouding").click(function() {
         $(".part-display").hide();
         $(".huishouding").show();
+    });
+
+    $("#extrater").click(function() {
+        $(".part-display").hide();
+        $(".extrater").show();
     });
 
 
@@ -299,7 +305,7 @@ $(document).ready(function() {
                                             <area id="handel" shape="rect" coords="324, 390, 410, 440" alt="handel">
                                             <area id="vervoer" shape="polygon" coords="245, 190, 360, 250, 360, 279, 245, 210" alt="water">
                                             <area id="horeca" shape="polygon" coords="306, 360, 350, 324, 384, 336, 340, 375" alt="horeca">
-                                            <area id="informatie" shape="polygon" coords="180/285, 260, 340, 260, 400, 180, 360" alt="info">
+                                            <area id="informatie" shape="polygon" coords="180, 285, 260, 340, 260, 400, 180, 360" alt="info">
                                             <area id="fi" shape="rect" coords="396, 144, 468, 225" alt="fi">
                                             <area id="zakelijke" shape="rect" coords="492, 36, 576, 180" alt="zakelijke">
                                             <area id="overheid" shape="polygon" coords="252, 180, 396, 36, 300, 220, 432, 108" alt="overheid">
@@ -308,6 +314,7 @@ $(document).ready(function() {
                                             <area id="csr" shape="polygon" coords="390, 330, 470, 350, 470, 425, 390, 380" alt="onderwijs">
                                             <area id="dienstverleningoverig" shape="rect" coords="10, 180, 108, 280" alt="overheid">
                                             <area id="huishouding" shape="polygon" coords="72, 360, 288, 432, 288, 470, 72, 470" alt="onderwijs">
+                                            <area id="extrater" shape="rect" coords="662,310, 806, 370" alt="extrater">
                                         </map>
                                     </div><!-- bedrijfstakkenmap -->
                                 </div>
@@ -428,15 +435,19 @@ $(document).ready(function() {
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Olie
-                                            <br>Shell</div>
+                                        <div class="text">
+                                            <div>Olie</div>
+                                            <div>Shell</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/b-olieshell.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">IJzer
-                                            <br>Tata</div>
+                                        <div class="text">
+                                            <div>IJzer</div>
+                                            <div>Tata</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/b-steelTata.jpeg">
                                         </div>
@@ -454,22 +465,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct bakkerbroodjes">
-                                        <div class="text">Brood</div>
-                                        <div class="orgtext">Bakker 'Broodjes" B.V.</div>
+                                        <div class="text">
+                                            <div>Brood</div>
+                                            <div class="orgtext">Bakker 'Broodjes" B.V.</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/c-brood.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Fiets
-                                            <br>Hummer</div>
+                                        <div class="text">
+                                            <div>Fiets</div>
+                                            <div>Hummer</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/c-fiets-hummer.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Verf
-                                            <br>DSM</div>
+                                        <div class="text">
+                                            <div>Verf</div>
+                                            <div>DSM</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/c-verfDSM.jpg">
                                         </div>
@@ -487,15 +504,19 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Elektriciteit
-                                            <br>Eneco</div>
+                                        <div class="text">
+                                            <div>Elektriciteit</div>
+                                            <div>Eneco</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/d-elektriciteit.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Water
-                                            <br>PWN</div>
+                                        <div class="text">
+                                            <div>Water</div>
+                                            <div>PWN</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/d-waterleiding.jpg">
                                         </div>
@@ -513,15 +534,19 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">hijstechniek
-                                            <br>Elcee </div>
+                                        <div class="text">
+                                            <div>hijstechniek</div>
+                                            <div>Elcee </div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/f-hijstechniek.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Bouw
-                                            <br>BAM </div>
+                                        <div class="text">
+                                            <div>Bouw</div>
+                                            <div>BAM </div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/f-bouwBam.png">
                                         </div>
@@ -539,22 +564,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct backery button">
-                                        <div class="text">Brood
-                                            <br>Backery shop</div>
+                                        <div class="text">
+                                            <div>Brood</div>
+                                            <div>Backery shop</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="/images/products/bakker/bakkerbuitenkant.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Etenswaren
-                                            <br>Albert Heyn</div>
+                                        <div class="text">
+                                            <div>Etenswaren</div>
+                                            <div>Albert Heyn</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/g-ah.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Spullen
-                                            <br>Bol </div>
+                                        <div class="text">
+                                            <div>Spullen</div>
+                                            <div>Bol </div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/g-bol.jpeg">
                                         </div>
@@ -572,22 +603,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Wegtransport
-                                            <br>G. Snel</div>
+                                        <div class="text">
+                                            <div>Wegtransport</div>
+                                            <div>G. Snel</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/h-gsnel.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Luchttransport
-                                            <br>KLM </div>
+                                        <div class="text">
+                                            <div>Luchttransport</div>
+                                            <div>KLM </div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/h-klm.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Zeetransport
-                                            <br>Samskip</div>
+                                        <div class="text">
+                                            <div>Zeetransport</div>
+                                            <div>Samskip</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/h-samskip.jpg">
                                         </div>
@@ -605,15 +642,19 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Logies
-                                            <br>Van der Valk</div>
+                                        <div class="text">
+                                            <div>Logies</div>
+                                            <div>Van der Valk</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/i-vdvalk.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Darnkverstrkking
-                                            <br>Starbucks</div>
+                                        <div class="text">
+                                            <div>Drankverstrkking</div>
+                                            <div>Starbucks</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/i-starbucks.jpeg">
                                         </div>
@@ -631,15 +672,19 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Nieuws
-                                            <br>Nu.nl</div>
+                                        <div class="text">
+                                            <div>Nieuws</div>
+                                            <div>Nu.nl</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/j-nu.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Radio en tv
-                                            <br>RTL</div>
+                                        <div class="text">
+                                            <div>Radio en tv</div>
+                                            <div>RTL</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/j-rtl.jpeg">
                                         </div>
@@ -657,22 +702,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Toezicht
-                                            <br>De Nederlandsche Bank</div>
+                                        <div class="text">
+                                            <div>Toezicht</div>
+                                            <div>De Nederlandsche Bank</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/k-dnb.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Geld en leningen
-                                            <br>ABN-AMRO</div>
+                                        <div class="text">
+                                            <div>Geld en leningen</div>
+                                            <div>ABN-AMRO</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/k-abn.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Verzekeringen
-                                            <br>Aegon</div>
+                                        <div class="text">
+                                            <div>Verzekeringen</div>
+                                            <div>Aegon</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/k-aegon.png">
                                         </div>
@@ -690,8 +741,10 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Onroerend goed
-                                            <br>Bladt </div>
+                                        <div class="text">
+                                            <div>Onroerend goed</div>
+                                            <div>Bladt </div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/l-bladt.jpg">
                                         </div>
@@ -709,22 +762,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Notariaat
-                                            <br>notaris.nl</div>
+                                        <div class="text">
+                                            <div>Notariaat</div>
+                                            <div>notaris.nl</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/m-notaris.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Advocatuur
-                                            <br>Nauta Duthil</div>
+                                        <div class="text">
+                                            <div>Advocatuur</div>
+                                            <div>Nauta Duthil</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/m-nauta.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Accountancy
-                                            <br>Deloitte</div>
+                                        <div class="text">
+                                            <div>Accountancy</div>
+                                            <div>Deloitte</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/m-deloitte.jpeg">
                                         </div>
@@ -732,7 +791,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         </div>
-                        <div class="part-display  overheid displaynone">
+                        <div class="part-display  overheid_p displaynone">
                             <div class="part">
                                 <div class="branche">
                                     <div class="text">O. Overheid</div>
@@ -742,22 +801,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Opbenbaar bestuur
-                                            <br>Staten Generaal</div>
+                                        <div class="text">
+                                            <div>Opbenbaar bestuur</div>
+                                            <div>Staten Generaal</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/o-sg.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Rechtspraak
-                                            <br>Gerechtshof</div>
+                                        <div class="text">
+                                            <div>Rechtspraak</div>
+                                            <div>Gerechtshof</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/o-justitie.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Sociale Verzekering
-                                            <br>AOW</div>
+                                        <div class="text">
+                                            <div>Sociale Verzekering</div>
+                                            <div>AOW</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/o-aow.jpeg">
                                         </div>
@@ -775,22 +840,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Openbaar onderwijs
-                                            <br>jouw school</div>
+                                        <div class="text">
+                                            <div>Openbaar onderwijs</div>
+                                            <div>jouw school</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/p-lokaal.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Prive onderwijs
-                                            <br>LOI</div>
+                                        <div class="text">
+                                            <div>Prive onderwijs</div>
+                                            <div>LOI</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/p-loi.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Autorijles
-                                            <br>Bram</div>
+                                        <div class="text">
+                                            <div>Autorijles</div>
+                                            <div>Bram</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/p-auto.jpeg">
                                         </div>
@@ -808,22 +879,28 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Gezondheidszorg
-                                            <br>Ziekenhuis</div>
+                                        <div class="text">
+                                            <div>Gezondheidszorg</div>
+                                            <div>Ziekenhuis</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/q-ziekenhuis.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Welzijnszorg
-                                            <br>Jeugdzorg</div>
+                                        <div class="text">
+                                            <div>Welzijnszorg</div>
+                                            <div>Jeugdzorg</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/q-jeugdzorg.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Gezondheidszorg
-                                            <br>Verpleeghuis</div>
+                                        <div class="text">
+                                            <div>Gezondheidszorg</div>
+                                            <div>Verpleeghuis</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/q-verpleeghuis.jpeg">
                                         </div>
@@ -841,29 +918,37 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Cultuur
-                                            <br>Rijksmuseum</div>
+                                        <div class="text">
+                                            <div>Cultuur</div>
+                                            <div>Rijksmuseum</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/r-rijks.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct wk">
-                                        <div class="text">Sport
-                                            <br>WK organisatiecomit&eacute;</div>
+                                        <div class="text">
+                                            <div>Sport</div>
+                                            <div>WK organisatiecomit&eacute;</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/r-wk.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Sport
-                                            <br>voetbalclub</div>
+                                        <div class="text">
+                                            <div>Sport</div>
+                                            <div>voetbalclub</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/r-voetbal.jpg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Recreatie
-                                            <br>Duinrell</div>
+                                        <div class="text">
+                                            <div>Recreatie</div>
+                                            <div>Duinrell</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/r-duinrell.jpeg">
                                         </div>
@@ -881,19 +966,25 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Politieke partijen</div>
+                                        <div class="text">
+                                            <div>Politieke partijen</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/s-politiek.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Reparatie</div>
+                                        <div class="text">
+                                            <div>Reparatie</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/s-reparatie.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Wellness</div>
+                                        <div class="text">
+                                            <div>Wellness</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/s-wellness.jpeg">
                                         </div>
@@ -904,53 +995,71 @@ $(document).ready(function() {
                         <div class="part-display  huishouding displaynone">
                             <div class="part">
                                 <div class="branche">
-                                    <div class="text">T. Huishouding </div>
+                                    <div class="text">
+                                        <div>T. Huishouding </div>
+                                    </div>
                                     <div class="artwork">
                                         <img src="../images/products/branches/branche_t-huishouden.png">
                                     </div>
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Maxima</div>
+                                        <div class="text">
+                                            <div>huishouden</div>
+                                            <div>Maxima</div>
+                                        </div>
                                         <div class="artwork small maxima">
                                             <img src="/images/people/figuren/figuren_maxima.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Peter</div>
+                                        <div class="text">
+                                            <div>huishouden</div>
+                                            <div>Peter</div>
+                                        </div>
                                         <div class="artwork small peter">
                                             <img src="/images/people/figuren/figuren_peter.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Bakker 1</div>
+                                        <div class="text">
+                                            <div>huishouden</div>
+                                            <div>Bakker 1</div>
+                                        </div>
                                         <div class="artwork small bakker">
                                             <img src="/images/people/figuren/figuren_bakkergroen.png">
                                             <img src="/images/people/figuren/figuren_kindje.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Bakker 2</div>
+                                        <div class="text">
+                                            <div>huishouden</div>
+                                            <div>Bakker 2</div>
+                                        </div>
                                         <div class="artwork small">
                                             <img src="/images/people/figuren/figuren_bakkerpaars.png">
                                         </div>
-                                    </div>
-                                    <div class="oneproduct">
-                                        <div class="text">Huishouden</div>
+                                    </div><!-- 
+                                    <div class="oneproduct displaynone">
+                                        <div class="text">
+                                            <div>Huishouden</div>
+                                        </div>
                                         <div class="artwork small">
                                             <img src="../images/products/t-huishouden.jpeg">
                                         </div>
                                     </div>
-                                    <div class="oneproduct">
-                                        <div class="text">Tuinman</div>
+                                    <div class="oneproduct displaynone">
+                                        <div class="text">
+                                            <div>Tuinman</div>
+                                        </div>
                                         <div class="artwork small">
                                             <img src="../images/products/t-tuinman.jpeg">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                        <div class="part-display  eo displaynone">
+                        <div class="part-display  extrater displaynone">
                             <div class="part">
                                 <div class="branche">
                                     <div class="text">U. Extraterritoriale organisaties </div>
@@ -960,25 +1069,37 @@ $(document).ready(function() {
                                 </div>
                                 <div class="products">
                                     <div class="oneproduct">
-                                        <div class="text">Europese Unie</div>
+                                        <div class="text">
+                                            <div>Europees beleid</div>
+                                            <div>Europese Unie</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/u-eu.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Verenigde Naties</div>
+                                        <div class="text">
+                                            <div>Internationaal advies</div>
+                                            <div>Verenigde Naties</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/u-un.jpeg">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Internationaal Monetair Fonds</div>
+                                        <div class="text">
+                                            <div>Leningen aan staten</div>
+                                            <div>Internationaal Monetair Fonds</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/u-imf.png">
                                         </div>
                                     </div>
                                     <div class="oneproduct">
-                                        <div class="text">Organisatie voor Economische Samenwerking en Ontwikkeling</div>
+                                        <div class="text">
+                                            <div>Internationaal advies</div>
+                                            <div>Organisatie voor Economische Samenwerking en Ontwikkeling</div>
+                                        </div>
                                         <div class="artwork">
                                             <img src="../images/products/u-oecd.jpeg">
                                         </div>

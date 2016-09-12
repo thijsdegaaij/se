@@ -38,14 +38,30 @@
   .navheaders {
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
+    align-items: center;
+    //margin-top: 5px;
+    div:first-child {
+      border-left: 1px solid $border-color-base;      
+    }
     div {
-      padding-right: 18px;
-      padding-left: 18px;
+      height: 71px;
+      padding: 21px 18px;
       border-right: 1px solid $border-color-base;
       color: $kop2;
       font-size: 20px;
     }
+  }
+
+  .navheaders .btngeselecteerd  {
+    //text-decoration: underline;
+    //color: white;
+    background-color: $background-color-2; // $text-color-base;
+  }
+  .navheaders div:hover {
+    //font-weight: bold;
+    //color: white;
+    background-color: $background-color-2; // $text-color-base;
+    cursor: pointer;
   }
   .concept {
     margin: 0px 48px 0px 48px;

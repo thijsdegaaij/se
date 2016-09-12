@@ -14,6 +14,18 @@ $(document).ready(function() {
 
 // Headerknoppen: grafiek
 
+container_ervaring-display
+
+
+
+    // knoppen in submenu
+    $(document.body).on("click", ".btn-ervaringen", function() {
+        $(".mensenxx.buttononderdeel").addClass("displaynone");
+        $(".container_ervaring-display").removeClass("displaynone");
+        $(".navbtn").removeClass("bold");
+        $(".btn-ervaringen").addClass("bold");
+    });    
+
 
     $(document.body).on("click", ".btn-meermensen", function() { 
         $(".btn-meermensen").toggleClass("bold");
@@ -42,17 +54,19 @@ $(document).ready(function() {
                 <option value="niemand">niemand</option>
             </select>    
         </div>
+		<div class="navbtn btn-ervaringen button">Ervaringen</div>
 		<div class="navbtn btn-meermensen button">Voorbeelden</div>
 		<div class="navbtn btn-mensgrafiek button">Grafieken</div>
     </div>
 
-	<div class="flex-columncenter">		
+	<div class="flex-columncenter buttononderdeel">		
 
 	    <div class="container_ervaring-display">
-	        <div class="container_ervaring">
-	        		<div class="ervaring_indeling">
-	        			ERVARING
-	        		</div>
+	        <div class="flex-columnstart">        	
+        		<div class="ervaring_titel">
+        			Ervaring
+        		</div>
+	        	<div class="container_ervaring">
 		            <div class="productenkolom">
 		                <div class="productitem">
 		                    <div class="tekst">natuur</div>
@@ -63,23 +77,29 @@ $(document).ready(function() {
 		                    <div class="specifiek1">weer, dieren en planten</div>
 		                </div>
 		                <div class="productitem">
+		                    <div class="tekst">jezelf</div>
+		                    <div class="image icon icon-mens"></div>
+		                    <div class="pijlen">
+		                        <div class="pijl extern icon icon-arbeidextern"></div>
+		                    </div>
+		                    <div class="specifiek1">je eigen gedrag, gedachten en gevoelens</div>
+		                </div>
+		                <div class="productitem">
 		                    <div class="tekst">mensen</div>
 		                    <div class="image icon icon-mens"></div>
 		                    <div class="pijlen">
 		                        <div class="pijl extern icon icon-arbeidextern"></div>
 		                    </div>
-		                    <div class="specifiek1">vriendschap, onbekenden</div>
+		                    <div class="specifiek1">vrienden	, onbekenden</div>
 		                </div>
 		                <div class="productitem">
 		                    <div class="tekst">dienst</div>
 		                    <div class="image icon icon-mens-org"></div>
 		                    <div class="border"></div>
 		                    <div class="pijlen">
-		                        <div class="pijl markt icon icon-arbeidintern"></div>
 		                        <div class="pijl markt icon icon-arbeidmarkt"></div>
-		                        <div class="pijl markt icon icon-arbeidextern"></div>
 		                    </div>
-		                    <div class="specifiek1">papa</div>
+		                    <div class="specifiek1">van verkoper</div>
 		                </div>
 		                <div class="productitem">
 		                    <div class="tekst">wet</div>
@@ -123,7 +143,7 @@ $(document).ready(function() {
 		                    <div class="pijlen">
 		                        <div class="pijl extern icon icon-dienstextern"></div>
 		                    </div>
-		                    <div class="specifiek1"></div>
+		                    <div class="specifiek1">"samen uit, samen thuis"</div>
 		                </div>
 		                <div class="productitem">
 		                    <div class="tekst">geld</div>
@@ -132,7 +152,7 @@ $(document).ready(function() {
 		                    <div class="pijlen">
 		                        <div class="pijl markt icon icon-stroommarkt"></div>
 		                    </div>
-		                    <div class="specifiek1"></div>
+		                    <div class="specifiek1">voor noodgevallen</div>
 		                </div>
 		                <div class="productitem">
 		                    <div class="tekst">gebruiksgoed</div>
@@ -157,71 +177,61 @@ $(document).ready(function() {
 		                    <div class="image icon icon-consumentenproduct"></div>
 		                    <div class="border"></div>
 		                    <div class="pijlen">
-		                        <div class="pijl intern icon icon-dienstintern"></div>
 		                        <div class="pijl intern icon icon-stroomintern"></div>
-		                        <div class="pijl extern icon icon-dienstextern"></div>
 		                    </div>
 		                    <div class="specifiek1">lunch</div>
 		                </div>
-		                <div class="productitem gedrag">
-		                    <div class="tekst">gedrag Piet</div>
-		                    <div class="image icon icon-arbeid"></div>
-		                    <div class="border"></div>
-		                    <div class="pijlen">
-		                        <div class="pijl extern icon icon-arbeidintern"></div>
-		                    </div>
-		                    <div class="specifiek1">?</div>
-		                </div>
 		            </div>
-		            <div class="menskolom">Piet
+		            <div class="menskolom">Maxima
 								<div class="icon icon-mens"></div>
 		            </div>
-				<div class="nutsberekening"> 
-		            <div class="colom3">
-		                <div class="btn-gevoelens button">
-		                    <div class="left">
-		                        <div class="icon "></div>
-		                        <div class="two">nut door gevoelens</div>
-		                    </div>
-		                    <div class="mleft">
-		                        <div class="icon icon-gevoelens"></div>
-		                        <div class="beschrijving">+2</div>
-		                    </div>
-		                </div>
-		                <div class="btn-gedachten">
-		                    <div class="left">
-		                        <div class="icon "></div>
-		                        <div class="two">nut door kennis</div>
-		                    </div>
-		                    <div class="mleft">
-		                        <div class="icon icon-gedachten"></div>
-		                        <div class="beschrijving">+4</div>
-		                    </div>
-		                </div>
-		                <div class="btn-lijf">
-		                    <div class="left">
-		                        <div class="icon "></div>
-		                        <div class="two">nut door gezondheid</div>
-		                    </div>
-		                    <div class="mleft">
-		                        <div class="icon icon-lijf"></div>
-		                        <div class="beschrijving">+3</div>
-		                	</div>
-		                </div>
-					</div>
-					<div class="colom4">					
-	                    <div class="beschrijving">
-	                        <div class="">totaal nutsbeleving</div>
+		        </div>
+		    </div>
+			<div class="nutsberekening"> 
+	            <div class="colom3">
+	                <div class="btn-gevoelens button">
+	                    <div class="left">
+	                        <div class="icon "></div>
+	                        <div class="two">nut door gevoelens</div>
 	                    </div>
-	                    <div class="plaatje_getal">
-	                        <div>
-	                        	<img class="plumbob" src="/images/mind/plumbob.jpeg">
-	                        </div>
-	                        <div class="beschrijving nut">+9</div>
+	                    <div class="mleft">
+	                        <div class="icon icon-gevoelens"></div>
+	                        <div class="beschrijving">+2</div>
 	                    </div>
-					</div>
-				</div>  
-	        </div>
+	                </div>
+	                <div class="btn-gedachten">
+	                    <div class="left">
+	                        <div class="icon "></div>
+	                        <div class="two">nut door kennis</div>
+	                    </div>
+	                    <div class="mleft">
+	                        <div class="icon icon-gedachten"></div>
+	                        <div class="beschrijving">+4</div>
+	                    </div>
+	                </div>
+	                <div class="btn-lijf">
+	                    <div class="left">
+	                        <div class="icon "></div>
+	                        <div class="two">nut door gezondheid</div>
+	                    </div>
+	                    <div class="mleft">
+	                        <div class="icon icon-lijf"></div>
+	                        <div class="beschrijving">+3</div>
+	                	</div>
+	                </div>
+				</div>	
+				<div class="colom4">					
+                    <div class="beschrijving">
+                        <div class="">totaal nutsbeleving</div>
+                    </div>
+                    <div class="plaatje_getal">
+                        <div>
+                        	<img class="plumbob" src="/images/mind/plumbob.jpeg">
+                        </div>
+                        <div class="beschrijving nut">+9</div>
+                    </div>
+				</div>
+			</div>  
 	    </div> 
 	</div>
 </div> 

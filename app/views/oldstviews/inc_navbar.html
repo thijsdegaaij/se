@@ -7,28 +7,27 @@ $(document).ready(function() {
 
 // Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
 
-    $(".btn-nederlandview").addClass("bold");
     $(document.body).on("click", ".btn-nederlandview", function() {
-        $(".navbtn").removeClass("bold");
-        $(".btn-nederlandview").addClass("bold");
+        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".btn-nederlandview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.orgdivision").show();
     });
     $(document.body).on("click", ".btn-mensview", function() {
-        $(".navbtn").removeClass("bold");
-        $(".btn-mensview").addClass("bold");
+        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".btn-mensview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.mensen").show();
     });
     $(document.body).on("click", ".btn-organisatieview", function() {
-        $(".navbtn").removeClass("bold");
-        $(".btn-organisatieview").addClass("bold");
+        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".btn-organisatieview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.simrow-organisations").show();
     });
     $(document.body).on("click", ".btn-marktview", function() {
-        $(".navbtn").removeClass("bold");
-        $(".btn-marktview").addClass("bold");
+        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".btn-marktview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.markets").show();
     });
@@ -51,10 +50,10 @@ $(document).ready(function() {
 
      <div class="navheading">
         <div class="navheaders">
-          <div class="navbtn btn-nederlandview button">Land</div>
-          <div class="navbtn btn-mensview button">Mensen</div>
-          <div class="navbtn btn-organisatieview button">Organisaties</div>
-          <div class="navbtn btn-marktview button">Markten</div>           
+          <div class="navbtn btn-nederlandview  btngeselecteerd">Land</div>
+          <div class="navbtn btn-mensview ">Mensen</div>
+          <div class="navbtn btn-organisatieview ">Organisaties</div>
+          <div class="navbtn btn-marktview ">Markten</div>           
         </div>
 
       <!-- Zoek concepten -->

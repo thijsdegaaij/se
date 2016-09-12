@@ -127,7 +127,7 @@ Mens.create!([
   {naam: "Bert de Bakker", leeftijd: 34, geslacht: "man", kennisniveau: "4", gezondheidsniveau: "4", geluksniveau: "4"}
 ])
 Organisatie.create!([
-  {naam: "Maxima", bedrijfstak_id: 19, rechtsvorm_id: 1, voorkant_image: nil},
+  {naam: "Huishouden van Maxima", bedrijfstak_id: 19, rechtsvorm_id: 1, voorkant_image: nil},
   {naam: "Bakker Bart", bedrijfstak_id: 7, rechtsvorm_id: 2, voorkant_image: nil},
   {naam: "MediaMarkt", bedrijfstak_id: 7, rechtsvorm_id: 10, voorkant_image: nil},
   {naam: "Shell", bedrijfstak_id: 3, rechtsvorm_id: 10, voorkant_image: nil},

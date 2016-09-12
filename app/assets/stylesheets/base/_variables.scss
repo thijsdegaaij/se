@@ -22,10 +22,6 @@ $gray9:			#343434;
 $gray10:		#1A1A1A;
 
 
-$kop1:			hsl(217, 65%, 55%);
-$kop2:			hsl(217, 45%, 45%);
-
-
 $beige:			hsl(42, 23%, 91%);
 $beigedark:	    hsl(42, 23%, 45%);
 $x: hsl(42, 31%, 56%);
@@ -96,4 +92,8 @@ $breedte_b			: $breedte_organisatie - 360px;
 
 
 $procescolor		: $text-color-grey;
+
+
+$kop1:		$text-color-base; //	hsl(217, 65%, 55%);
+$kop2:		$text-color-base; //	hsl(217, 45%, 45%);
 

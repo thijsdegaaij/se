@@ -108,66 +108,6 @@
                         <div class="item">crediteuren</div>                           
                     </div>
 
-<!-- //overheid -->                       
-                    <div id="overheid" class="overheid">
-                        <div class="itemheader itemheaderoverheid">
-                            <div class="icon icon-plichtgeld"></div>
-                            <div class="icon icon-rechtgeld"></div>
-                            <div>Overheid </div>
-                            <div></div>
-                        </div>
-
-                            <div class=" pijllinks">
-                                <div class="pijluitleg">
-                                    <div class="iconwide icon-neg"></div>
-                                    <div class="pijlwaarde ">&euro; <%= @te_betalen_btw %></div>                                        
-                                </div>
-                            </div>                                   
-                            <div class="gbrrekeningen item">te betalen btw</div>
-
-
-                            <div class=" pijllinks">
-                                <div class="pijluitleg">
-                                    <div class="iconwide icon-pos"></div>
-                                     <div class="pijlwaarde ">
-                                    <div class=" ">&euro; <%= @te_ontvangen_btw %></div>  
-                                    </div>
-                                </div>
-                            </div>                                   
-                            <div class="gbrrekeningen item">te ontvangen btw</div>
-
-                            <div class=" pijllinks">
-                                <div class="pijluitleg">
-                                    <div class="iconwide icon-belasting-neg  "></div>
-                                     <div class="pijlwaarde">
-                                    <div class=" ">&euro; <%= @belasting_org %></div>  
-                                    </div>
-                                </div>
-                            </div>                                   
-                            <div class="gbrrekeningen item">diverse heffingen</div>
-
-                    </div>
-<!-- //eigenaren -->                       
-                    <div id="eigenaren" class="overheid">
-                        <div class="itemheader itemheaderoverheid">
-                            <div class="icon icon-plichtgeld"></div>
-                            <div class="icon icon-rechtgeld"></div>
-                            <div>Eigenaar </div>
-                            <div></div>
-                        </div> 
-                            <div class=" pijllinks">
-                                <div class="pijluitleg">
-                                    <div class="iconwide icon-dividend"></div>
-                                    <div class="pijlwaarde ">&euro; <%= @dividend %></div>                                        
-                                </div>
-                            </div>    
-                        <div class="gbrrekeningen"> 
-                            <div class="overzicht-rente">
-                                <div class="item">dividend gereserveerd</div>
-                            </div>  
-                        </div>   
-                    </div>
-
 
 <!-- //financiele producten -->                        
                     <div id="finprod" class="finprod overheid">
@@ -194,6 +134,67 @@
 
                     </div>
                 </div>
+
+<!-- //overheid -->                       
+                    <div id="overheid" class="overheid">
+                        <div class="itemheader itemheaderoverheid">
+                            <div class="icon icon-plichtgeld"></div>
+                            <div class="icon icon-rechtgeld"></div>
+                            <div>Overheid </div>
+                            <div></div>
+                        </div>
+
+                            <div class=" pijllinks">
+                                <div class="pijluitleg">
+                                    <div class="iconwide icon-belasting-neg"></div>
+                                    <div class="pijlwaarde ">&euro; <%= @te_betalen_btw %></div>                                        
+                                </div>
+                            </div>                                   
+                            <div class="gbrrekeningen item">te betalen btw</div>
+
+
+                            <div class=" pijllinks">
+                                <div class="pijluitleg">
+                                    <div class="iconwide icon-belasting-pos"></div>
+                                     <div class="pijlwaarde ">
+                                    <div class=" ">&euro; <%= @te_ontvangen_btw %></div>  
+                                    </div>
+                                </div>
+                            </div>                                   
+                            <div class="gbrrekeningen item">te ontvangen btw</div>
+
+                            <div class=" pijllinks">
+                                <div class="pijluitleg">
+                                    <div class="iconwide icon-belasting-neg  "></div>
+                                     <div class="pijlwaarde">
+                                    <div class=" ">&euro; <%= @belasting_org %></div>  
+                                    </div>
+                                </div>
+                            </div>                                   
+                            <div class="gbrrekeningen item">diverse overige belastingen</div>
+
+                    </div>
+<!-- //eigenaren -->                       
+                    <div id="eigenaren" class="overheid">
+                        <div class="itemheader itemheaderoverheid">
+                            <div class="icon icon-plichtgeld"></div>
+                            <div class="icon icon-rechtgeld"></div>
+                            <div>Eigenaar </div>
+                            <div></div>
+                        </div> 
+                            <div class=" pijllinks">
+                                <div class="pijluitleg">
+                                    <div class="iconwide icon-dividend"></div>
+                                    <div class="pijlwaarde ">&euro; <%= @dividend %></div>                                        
+                                </div>
+                            </div>    
+                        <div class="gbrrekeningen"> 
+                            <div class="overzicht-rente">
+                                <div class="item">dividend gereserveerd</div>
+                            </div>  
+                        </div>   
+                    </div>
+
 
 <!-- input / output -->                    
                 <div class="abc">
@@ -660,7 +661,7 @@
                         <div class="knowhow">
                             <div class=" pijlrechts">
                                 <div class="pijluitleg">
-                                    <div class="icon icon-dienstmarkt"></div>
+                                    <div class="icon icon-dienstextern"></div>
                                     <div class="pijlwaarde waardeniet">
                                         <div>Gratis</div>
                                     </div>
@@ -780,7 +781,7 @@
                                         <div>&euro; <%= @rente %></div>
                                     </div>
                                     <div class="winstonderdeel"> 
-                                        <div>Diverse heffingen</div>                                           
+                                        <div>Diverse belastingen</div>                                           
                                         <div class="iconwide icon-belasting-neg"></div>
                                         <div>&euro; <%= @belasting_org %></div>
                                     </div>

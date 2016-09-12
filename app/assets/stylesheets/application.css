@@ -802,6 +802,9 @@ a {
 .icon-belasting-neg {
   background-image: url("/images/icons/icon_belasting-neg.png"); }
 
+.icon-belasting-pos {
+  background-image: url("/images/icons/icon_belastingpos.png"); }
+
 .icon-rondje {
   background-image: url("/images/icons/icon_rondje.png"); }
 
@@ -1156,13 +1159,20 @@ a {
   .navb .navheaders {
     display: flex;
     flex-direction: row;
-    margin-top: 5px; }
+    align-items: center; }
+    .navb .navheaders div:first-child {
+      border-left: 1px solid #CCCCCC; }
     .navb .navheaders div {
-      padding-right: 18px;
-      padding-left: 18px;
+      height: 71px;
+      padding: 21px 18px;
       border-right: 1px solid #CCCCCC;
-      color: #3f67a6;
+      color: #808080;
       font-size: 20px; }
+  .navb .navheaders .btngeselecteerd {
+    background-color: #F4F3F3; }
+  .navb .navheaders div:hover {
+    background-color: #F4F3F3;
+    cursor: pointer; }
   .navb .concept {
     margin: 0px 48px 0px 48px; }
   .navb .img-learner {
@@ -1282,7 +1292,8 @@ a {
 .orgscontainer {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 24px; }
 
 .org {
   position: relative;
@@ -1500,7 +1511,8 @@ a1a2 > .a2 .kolom,
   align-items: center;
   position: relative;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+  padding-bottom: 12px; }
 
 .itembody {
   padding: 0px 0px 0px 0px; }
@@ -2360,9 +2372,10 @@ table.tablesorter thead tr .headerSortDown {
       transform: rotate(180deg);
       transform: scale(50%); }
   .lessons .lestitel, .assignments .lestitel {
+    font-weight: bold;
     font-size: 18px;
     padding: 2px 0px 8px 0px;
-    color: #3f67a6; }
+    color: #4D4D4D; }
   .lessons .lesonderdelen, .assignments .lesonderdelen {
     height: 24px;
     width: 200px; }
@@ -2447,13 +2460,14 @@ table.tablesorter thead tr .headerSortDown {
     padding: 10px 0px 10px 0px;
     margin-bottom: 12px; }
   .body .kopjetitel {
+    font-weight: bold;
     font-size: 18px;
     letter-spacing: 0px;
-    color: #3f67a6;
+    color: #4D4D4D;
     padding: 12px 0px 4px 0px; }
   .body .kopje {
-    font-size: 16px;
-    color: #3f67a6; }
+    font-weight: bold;
+    color: #4D4D4D; }
 
 .cont-nl {
   display: flex;
@@ -2731,7 +2745,9 @@ table.tablesorter thead tr .headerSortDown {
       background-color: #4387f4; }
 
 .producten_container {
-  border: 1px solid #CCCCCC;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
   margin: 24px; }
   .producten_container .titel_producten {
     display: flex;
@@ -2770,8 +2786,8 @@ table.tablesorter thead tr .headerSortDown {
     flex-direction: row;
     justify-content: center;
     background-color: white;
-    height: 150px;
-    overflow-x: auto; }
+    height: 245px;
+    overflow-x: hidden; }
     .part .products .oneproduct {
       display: flex;
       flex-direction: column;
@@ -2792,16 +2808,14 @@ table.tablesorter thead tr .headerSortDown {
       .part .products .oneproduct .artwork {
         padding: 0px 2px 8px 2px; }
         .part .products .oneproduct .artwork img {
-          max-width: 160px;
-          max-height: 90px; }
+          max-width: 320px;
+          max-height: 175px; }
       .part .products .oneproduct .artwork.maxima {
         background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
         background-size: 250px 130px;
         background-repeat: no-repeat;
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center; }
+        flex-direction: column; }
       .part .products .oneproduct .artwork.peter {
         background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
         background-size: 250px 130px;
@@ -2819,8 +2833,7 @@ table.tablesorter thead tr .headerSortDown {
         background-repeat: no-repeat;
         width: 100%; }
       .part .products .oneproduct .artwork.small img {
-        max-width: 70px;
-        max-height: 100%; }
+        max-width: 190px; }
   .part .oneproduct .text:hover {
     background-color: #F4F3F3;
     cursor: pointer; }
@@ -2830,7 +2843,7 @@ table.tablesorter thead tr .headerSortDown {
   display: flex;
   flex-direction: column;
   border-style: solid;
-  border-width: 0px 0px 0px 0px;
+  border-width: 0px 0px 1px 0px;
   border-color: #CCCCCC;
   position: relative; }
   .container-producten .titel {
@@ -3564,7 +3577,7 @@ table.tablesorter thead tr .headerSortDown {
   position: relative;
   z-index: 1;
   width: 1193px;
-  margin-bottom: 4px; }
+  margin-bottom: 100px; }
   .accounting-extern .btn-row {
     position: absolute;
     top: 8px;
@@ -3676,85 +3689,99 @@ table.tablesorter thead tr .headerSortDown {
   left: 150px;
   width: 180px; }
 
-.container_ervaring-display .container_ervaring {
-  position: relative;
+.container_ervaring-display {
+  margin: 48px 0px;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  border-style: solid;
-  border-width: 0px 0px 0px 0px;
-  border-color: #CCCCCC;
-  position: relative;
-  margin: 24px; }
-  .container_ervaring-display .container_ervaring .titel {
-    border-width: 0px 1px 1px 1px;
+  flex-direction: row; }
+  .container_ervaring-display .container_ervaring {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: #CCCCCC; }
+    .container_ervaring-display .container_ervaring .titel {
+      border-width: 0px 1px 1px 1px;
+      border-style: solid;
+      border-color: #CCCCCC;
+      background-color: #F4F3F3;
+      padding: 8px 0px 0px 8px;
+      height: 36px; }
+  .container_ervaring-display .ervaring_titel {
+    border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: #CCCCCC;
     background-color: #F4F3F3;
-    padding: 8px 0px 0px 8px;
-    height: 36px; }
-.container_ervaring-display .ervaring_indeling {
-  border-width: 1px 1px 0px 1px;
-  border-style: solid;
-  border-color: #CCCCCC; }
-.container_ervaring-display .productenkolom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .container_ervaring-display .productenkolom .productitem {
+    padding: 7px 8px; }
+  .container_ervaring-display .productenkolom {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-style: solid;
-    border-width: 1px 1px 0px 1px;
-    border-color: #CCCCCC; }
-    .container_ervaring-display .productenkolom .productitem .image {
-      margin: 0px 0px 0px 12px !important;
-      width: 50px;
-      order: 3; }
-    .container_ervaring-display .productenkolom .productitem .tekst {
-      width: 160px;
-      order: 2;
-      margin-left: 8px; }
-    .container_ervaring-display .productenkolom .productitem .specifiek1 {
-      order: 2;
-      font-style: italic;
-      width: 180px; }
-    .container_ervaring-display .productenkolom .productitem .pijlen {
-      order: 4;
+    flex-direction: column;
+    justify-content: center; }
+    .container_ervaring-display .productenkolom .productitem {
       display: flex;
-      flex-direction: column;
-      width: 50px; }
-      .container_ervaring-display .productenkolom .productitem .pijlen .pijl {
-        margin: 0px 0px 0px 0px;
-        border-left: 1px solid #CCCCCC;
-        transform: rotate(0deg); }
-    .container_ervaring-display .productenkolom .productitem .border {
-      display: none;
-      border-bottom: 1px solid #CCCCCC; }
-  .container_ervaring-display .productenkolom .productitem:hover {
-    background-color: #F4F3F3; }
-  .container_ervaring-display .productenkolom .productitem:last-child {
+      flex-direction: row;
+      align-items: center;
+      border-style: solid;
+      border-width: 1px 1px 0px 1px;
+      border-color: #CCCCCC; }
+      .container_ervaring-display .productenkolom .productitem .image {
+        margin: 0px 0px 0px 12px !important;
+        width: 50px;
+        order: 3; }
+      .container_ervaring-display .productenkolom .productitem .tekst {
+        width: 160px;
+        order: 2;
+        margin-left: 8px; }
+      .container_ervaring-display .productenkolom .productitem .specifiek1 {
+        order: 2;
+        font-style: italic;
+        width: 180px; }
+      .container_ervaring-display .productenkolom .productitem .pijlen {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+        width: 50px; }
+        .container_ervaring-display .productenkolom .productitem .pijlen .pijl {
+          margin: 0px 0px 0px 0px;
+          border-left: 1px solid #CCCCCC;
+          transform: rotate(0deg); }
+      .container_ervaring-display .productenkolom .productitem .gedragsinvloed {
+        display: flex;
+        flex-direction: column;
+        align-items: start; }
+        .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(1) {
+          order: 1; }
+        .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(2) {
+          order: 2; }
+      .container_ervaring-display .productenkolom .productitem .up {
+        transform: rotate(270deg); }
+      .container_ervaring-display .productenkolom .productitem .border {
+        display: none;
+        border-bottom: 1px solid #CCCCCC; }
+    .container_ervaring-display .productenkolom .productitem:hover {
+      background-color: #F4F3F3; }
+    .container_ervaring-display .productenkolom .productitem:last-child {
+      border-style: solid;
+      border-width: 1px 1px 1px 1px;
+      border-color: #CCCCCC; }
+  .container_ervaring-display .gedrag .pijlen {
+    transform: rotate(180deg); }
+  .container_ervaring-display .menskolom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: initial;
     border-style: solid;
-    border-width: 1px 1px 1px 1px;
+    border-width: 1px 1px 1px 0px;
     border-color: #CCCCCC; }
-.container_ervaring-display .gedrag .pijlen {
-  transform: rotate(180deg); }
-.container_ervaring-display .menskolom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: initial;
-  border-style: solid;
-  border-width: 1px 1px 1px 0px;
-  border-color: #CCCCCC; }
 
 .nutsberekening {
   display: flex;
   flex-direction: row;
-  margin-top: 60px;
+  margin-top: 75px;
   margin-left: 24px;
   height: 250px; }
   .nutsberekening .colom3 {
@@ -4660,7 +4687,7 @@ table.tablesorter thead tr .headerSortDown {
   border-color: #CCCCCC !important; }
   .navtwee .navheader {
     display: none;
-    color: #3f67a6;
+    color: #808080;
     font-size: 16px;
     padding: 16px 48px 16px 0px; }
   .navtwee .navbtn {

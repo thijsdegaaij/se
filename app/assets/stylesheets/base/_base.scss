@@ -36,6 +36,12 @@ a {
   cursor: pointer;
 }
 
+  .flex-row-left {
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: left; 
+    align-items: center;
+  }
   .flex-row {
     display: -webkit-flex;
     flex-direction: row;

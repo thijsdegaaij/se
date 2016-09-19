@@ -9,22 +9,22 @@ $(document).ready(function() {
 
     // knoppen in submenu
     $(document.body).on("click", ".btn-land_overzicht", function() {
-        $(".simrow.geldkringloop_q, .simrow.situations").addClass("displaynone");
+        $(".geldkringloop_q, .situations").addClass("displaynone");
         $(".cont_nl").removeClass("displaynone");
-        $(".navbtn").removeClass("bold");
-        $(".btn-land_overzicht").addClass("bold");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
+        $(".landenxx .btn-land_overzicht").addClass("btngeselecteerd_navtwee");
     });    
     $(document.body).on("click", ".btn-geldkringloop_view", function() {
-        $(".cont_nl, .simrow.situations").addClass("displaynone");
-        $(".simrow.geldkringloop_q").removeClass("displaynone");
-        $(".navbtn").removeClass("bold");
-        $(".btn-geldkringloop_view").addClass("bold");
+        $(".cont_nl, .situations").addClass("displaynone");
+        $(".geldkringloop_q").removeClass("displaynone");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
+        $(".landenxx .btn-geldkringloop_view").addClass("btngeselecteerd_navtwee");
     });
     $(document.body).on("click", ".btn-situationsview", function() {
-        $(".cont_nl, .simrow.geldkringloop_q").addClass("displaynone");
-        $(".simrow.situations").removeClass("displaynone");
-        $(".navbtn").removeClass("bold");
-        $(".btn-situationsview").addClass("bold");
+        $(".cont_nl, .geldkringloop_q").addClass("displaynone");
+        $(".situations").removeClass("displaynone");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
+        $(".landenxx .btn-situationsview").addClass("btngeselecteerd_navtwee");
     });
 
 
@@ -162,10 +162,10 @@ $(document).ready(function() {
 
 });
 </script>
-<div class="flex-rowstart">
+<div class="flex-rowstart landenxx">
     <div class="navtwee ">
-            <div class="iconwide icon-organisatie-mv displaynone"></div>
-            <div class="navheader">Land</div>
+            <div class="navbtn iconwide icon-organisatie-mv displaynone"></div>
+            <div class="navbtn navheader">Landen</div>
             <div class="navbtn styled-select">
                 <select class="orgonderdelen">
                     <option value="mensmaxima">Schateiland</option>
@@ -173,11 +173,12 @@ $(document).ready(function() {
                     <option value="niemand">Belgie</option>
                 </select>    
             </div>
-            <div class="navbtn btn-land_overzicht button bold">Overzicht</div>
-            <div class="navbtn btn-geldkringloop_view button">Geldkringloop</div>
-            <div class="navbtn btn-situationsview button">Situaties</div>        
+            <div class="navbtn btn-land_overzicht btngeselecteerd_navtwee ">Overzicht</div>
+            <div class="navbtn btn-geldkringloop_view ">Geldkringloop</div>
+            <div class="navbtn btn-situationsview ">Situaties</div>        
     </div>
     <div class="flex-columncenter">
+
         <div class="cont_nl ">
             <div class="mens-natuur-organisaties ">
                 <div class="cont-natuurmens">
@@ -207,54 +208,7 @@ $(document).ready(function() {
                         <div class="icon icon-pijlnaarboven organisaties bgoutput uitrechts "></div>
                     </div>
                     <div class="mensleft ">
-                        <div class="titel">
-                            <div class="iconwide icon-mens-mv"></div>
-                            <div>Mensen</div>
-                        </div>
-                        <div class="line">
-                            <div class="person ik   btn-maxima">
-                                <div class="name"></div>
-                                <div class="artwork foto-ik">
-                                    <img class="" src="/images/people/pasfoto/jongen.jpeg">
-                                </div>
-                            </div>
-                            <div class="person  ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_bakkergroen.png">
-                                </div>
-                            </div>
-                            <div class="person ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_bakkerpaars.png">
-                                </div>
-                            </div>
-                            <div class="person ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_bakkermuts.png">
-                                </div>
-                            </div>
-                            <div class="person ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_kindje.png">
-                                </div>
-                            </div>
-                            <div class="person button maxima ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_maxima.png">
-                                </div>
-                            </div>
-                            <div class="person ">
-                                <div class="name"></div>
-                                <div class="artwork">
-                                    <img src="/images/people/figuren/figuren_peter.png">
-                                </div>
-                            </div>
-                        </div>
+                        <%= render template: "oldstviews/inc_x_mensen_mensenrij" %> 
                         <div class="icon icon-pijlnaarboven mensen bgoutput "></div>
                         <div class="icon icon-pijlnaarboven mensen bginput in "></div>
                         <div class="icon icon-pijlnaarboven mensen bginput "></div>
@@ -1217,6 +1171,14 @@ $(document).ready(function() {
                 </div>
             </div>  
 
+        </div>
+
+        <div class=" geldkringloop_q  displaynone">
+            <%= render template: "oldstviews/inc_geldkringloop.html" %>
+        </div>
+
+        <div class=" situations  displaynone ">
+            <%= render template: "oldstviews/inc_sit.html" %>
         </div>
     </div>
 

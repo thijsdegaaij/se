@@ -284,77 +284,6 @@
   // Mensenvoorbeelden
 
 
-  .container-people {
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;     
-    margin: 0px;
-    background-color: white;
-    padding: 12px 0px 24px 0px;
-
-    .ik-anderen {
-      position: relative;
-      left: -365px;
-    background-color: white;
-      
-      > :nth-child(1) {
-        width: 129px;
-        text-align: center;   
-        border-style: solid;    
-        border-width: 1px 1px 0px 1px;
-        border-color: $border-color-base;
-      }    
-      > :nth-child(2) {
-        width: 771px;
-        text-align: center;   
-        border-style: solid;    
-        border-width: 1px 1px 0px 0px;
-        border-color: $border-color-base;
-      }  
-    }
-
-    .foto-ik {
-      max-width: 80px;
-      max-height: 80px;
-      //background-color: $background-color-1;
-    }
-
-    .line {
-        display: -webkit-flex;
-        flex-direction: row;      
-        justify-content: flex-start;
-        width: 900px;
-        background-color: white;
-        color: $text-color-base;    
-        border-style: solid;    
-        border-width: 1px 1px 1px 1px;
-        border-color: $border-color-base;
-      }
-    .person {
-        display: -webkit-flex;
-        flex-direction: column;
-        align-items: center;
-        width: 150px;
-        padding: 12px;      
-    }
-    .person:hover {
-      background-color: $background-color-2;
-      cursor: pointer;
-    }
-    .name {}
-    .artwork {
-      max-width: 70px;
-      max-height: 200px;
-        display: -webkit-flex;
-        flex-direction: column;
-        align-items: center;
-        :nth-child(1) {
-          margin: 7px;        
-          transform:scale(0.7,0.7);
-        }
-    }
-  }
-
   // ik / Maxima Mulder 
   .container-mensen {  
           padding-left: 200px;
@@ -696,9 +625,6 @@
     font-size: 12px; 
     }
   .beschrijving-persbele { //belevenissen
-    position: absolute;
-    top: -18px;
-    left: -135px; 
     }
   .beschrijving-fotobele { //belevenissen
     position: relative;
@@ -706,12 +632,33 @@
     }
   .ervaringenslider {
     z-index: 3;
-    position: absolute;
-    top: 20px;
-    left: -475px;
-     box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-     background-color: $ervaringsproduct1;
-     padding: 24px;
+    #slider1_container {
+      position: relative; 
+      width: 300px; 
+      height: 255px; 
+      .slidesx {
+        z-index: 13;
+        cursor: move; 
+        left: 0px; top: 0px; 
+        width: 299px; height: 255px; 
+	   overflow: hidden;
+      }
+      .jssora21l {
+        z-index:10;
+        top: 25px; 
+        left: 0px;
+      }
+      .jssora21r {
+        top: 5px; 
+        left: 270px;        
+      }
+      .jssorb02 {
+        position: relative;
+        top: 220px; 
+        left: 140px;
+      }  
+    }  
+
     .titel {
       position: relative;
       left: 30px;
@@ -731,6 +678,9 @@
     //top: 24px;
     //left: 0px;
      box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
+     img {
+       width: 100%;
+     }
   }
 
   .menskleur {

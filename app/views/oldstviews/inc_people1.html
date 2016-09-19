@@ -15,16 +15,6 @@ $(document).ready(function() {
 // Headerknoppen: grafiek
 
 
-    $(document.body).on("click", ".btn-meermensen", function() { 
-        $(".btn-meermensen").toggleClass("bold");
-        $(".meermensen").toggle();
-      });
-
-
-    $(document.body).on("click", ".btn-mensgrafiek", function() { 
-        $(".btn-mensgrafiek").toggleClass("bold");
-        $(".mensgrafiek").toggle();
-      });
 
 
 // Input knoppen
@@ -96,19 +86,7 @@ $(document).ready(function() {
 
 <div class="people1">
 	<div class="flex-rowstart mensenxx">
-	    <div class="navtwee ">
-	        <div class="iconwide icon-mens-mv displaynone"></div>
-	        <div class="navheader">Mensen 1</div>
-	        <div class="navbtn styled-select">
-	            <select class="orgonderdelen">
-	                <option value="mensmaxima">Maxima</option>
-	                <option value="mensalgemeen">algemeen</option>
-	                <option value="niemand">niemand</option>
-	            </select>    
-	        </div>
-			<div class="navbtn btn-meermensen button">Voorbeelden</div>
-			<div class="navbtn btn-mensgrafiek button">Grafieken</div>
-	    </div>
+	    
 
 		<div class="flex-columncenter"> <!-- mens met ervaring en input/output/nut -->
 			
@@ -371,12 +349,6 @@ $(document).ready(function() {
 				    </div>
 				</div>
 
-				<div class="lijst-gevoelens displaynone">
-					<div class="cont-flex-columncenter">
-						<div>Voorbeelden van gevoelens</div>
-						<img src="../images/icons/gevoelens-01.png"/>
-					</div>		
-				</div>
 			</div>
 
 
@@ -390,7 +362,7 @@ $(document).ready(function() {
 			
 
 			<!--  Meermensen, misschien nog leuk omdat nut-icoon boven hoofden zweeft -->
-			<div class="meermensen container-people-display displaynone ">
+			<div class="meermensen container-people-display  ">
 				<div class="container-people ">
 					<div class="ik-anderen">Voorbeelden van mensen</div>
 					<div class="line">
@@ -447,7 +419,7 @@ $(document).ready(function() {
 					</div>
 
 
-					<div class="container-mensen displaynone">
+					<div class="container-mensen ">
 				<!--  MENS INPUT EN OUTPUT -->
 						<div class="beschrijving-persbele">Mens</div>
 						<div class="container-menskort">
@@ -656,7 +628,7 @@ $(document).ready(function() {
 						    </div>
 						</div>
 
-						<div class="body ervaringenslider displaynone"> <!-- ervaringen slider -->
+						<div class="body ervaringenslider "> <!-- ervaringen slider -->
 							<div class="beschrijving-fotobele">Experiences (totaal eindproduct)</div>
 
 							<div id="slider1_container" style="position: relative; width: 260px; height: 205px;  overflow: hidden;">
@@ -679,7 +651,7 @@ $(document).ready(function() {
 						</div>
 
 				<!--   NUT -->
-						<div class="container-menslang displaynone">
+						<div class="container-menslang ">
 							<div class="titel-nut">Verwacht nut van een aankoop</div>
 					    	<div class="sectoruitgebreid ">
 					    		<div class="vlak-nut"></div>

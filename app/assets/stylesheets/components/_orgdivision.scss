@@ -204,9 +204,10 @@
 
 .image-bedrijfstakken {
     padding-bottom: 4px;
-    margin-left: 150px;
+    margin-left: 160px;
+    //height: 650px; //vergroten van het plaatje, door omnhulsel van img te vergoten
     img {
-
+        height: 100%;
     }
 }
 

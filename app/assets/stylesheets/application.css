@@ -46,6 +46,12 @@ hr {
 a {
   cursor: pointer; }
 
+.flex-row-left {
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center; }
+
 .flex-row {
   display: -webkit-flex;
   flex-direction: row;
@@ -1279,6 +1285,60 @@ a {
     width: 200px; }
   .sito .rightside img {
     max-width: 700px; }
+
+.navtwee, .navdrie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #edeae3;
+  height: 48px;
+  padding: 0px 24px 0px 24px;
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  border-color: #CCCCCC !important; }
+  .navtwee .navheader, .navdrie .navheader {
+    display: none;
+    color: #808080;
+    font-size: 16px;
+    padding: 16px 48px 16px 0px; }
+  .navtwee .navbtn, .navdrie .navbtn {
+    padding: 12px 48px 12px 48px;
+    color: #808080;
+    border-right: 1px solid #CCCCCC;
+    color: #808080;
+    font-size: 16px;
+    cursor: pointer; }
+  .navtwee .navbtn:hover,
+  .navtwee .btngeselecteerd_navtwee, .navdrie .navbtn:hover,
+  .navdrie .btngeselecteerd_navtwee {
+    background-color: #F4F3F3; }
+
+.navdrie {
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+  height: 38px !important; }
+  .navdrie .navbtn {
+    padding: 6px 48px 6px 48px; }
+
+.btngeselecteerd_navdrie {
+  background-color: #F4F3F3; }
+
+.nav_vier {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+  .nav_vier .nav_vier_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 0px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-left: 1px solid #CCCCCC; }
+  .nav_vier .nav_vier_btn:hover,
+  .nav_vier .nav_vier_btn.btngeselecteerd {
+    font-weight: bold; }
 
 .artwork-klappers {
   position: absolute;
@@ -2630,7 +2690,9 @@ table.tablesorter thead tr .headerSortDown {
 
 .image-bedrijfstakken {
   padding-bottom: 4px;
-  margin-left: 150px; }
+  margin-left: 160px; }
+  .image-bedrijfstakken img {
+    height: 100%; }
 
 .kopjebedrijfstakken {
   position: absolute;
@@ -3689,129 +3751,326 @@ table.tablesorter thead tr .headerSortDown {
   left: 150px;
   width: 180px; }
 
-.container_ervaring-display {
-  margin: 48px 0px;
+.mens_eigenschappen {
   display: flex;
-  flex-direction: row; }
-  .container_ervaring-display .container_ervaring {
-    position: relative;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.mensenvoorbeelden .maxima {
+  background-color: #F4F3F3; }
+
+.mens_eigenschappen {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .mens_eigenschappen .mens_naam {
+    font-weight: bold;
+    font-size: 18px; }
+  .mens_eigenschappen .eigenschap {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    border-style: solid;
-    border-width: 0px 0px 0px 0px;
-    border-color: #CCCCCC; }
-    .container_ervaring-display .container_ervaring .titel {
-      border-width: 0px 1px 1px 1px;
-      border-style: solid;
-      border-color: #CCCCCC;
-      background-color: #F4F3F3;
-      padding: 8px 0px 0px 8px;
-      height: 36px; }
-  .container_ervaring-display .ervaring_titel {
+    margin-top: 12px; }
+    .mens_eigenschappen .eigenschap :nth-child(1) {
+      text-align: right; }
+    .mens_eigenschappen .eigenschap :nth-child(2) {
+      margin-left: 24px; }
+
+.container-people {
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  background-color: white;
+  padding: 12px 0px 24px 0px;
+  width: 1100px; }
+  .container-people .ik-anderen {
+    background-color: #F4F3F3;
+    width: inherit;
     border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: #CCCCCC;
-    background-color: #F4F3F3;
-    padding: 7px 8px; }
-  .container_ervaring-display .productenkolom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .container_ervaring-display .productenkolom .productitem {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    padding: 8px 12px; }
+    .container-people .ik-anderen > :nth-child(1) {
+      text-align: center;
       border-style: solid;
       border-width: 1px 1px 0px 1px;
       border-color: #CCCCCC; }
-      .container_ervaring-display .productenkolom .productitem .image {
-        margin: 0px 0px 0px 12px !important;
-        width: 50px;
-        order: 3; }
-      .container_ervaring-display .productenkolom .productitem .tekst {
-        width: 160px;
-        order: 2;
-        margin-left: 8px; }
-      .container_ervaring-display .productenkolom .productitem .specifiek1 {
-        order: 2;
-        font-style: italic;
-        width: 180px; }
-      .container_ervaring-display .productenkolom .productitem .pijlen {
-        order: 4;
-        display: flex;
-        flex-direction: column;
-        width: 50px; }
-        .container_ervaring-display .productenkolom .productitem .pijlen .pijl {
-          margin: 0px 0px 0px 0px;
-          border-left: 1px solid #CCCCCC;
-          transform: rotate(0deg); }
-      .container_ervaring-display .productenkolom .productitem .gedragsinvloed {
-        display: flex;
-        flex-direction: column;
-        align-items: start; }
-        .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(1) {
-          order: 1; }
-        .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(2) {
-          order: 2; }
-      .container_ervaring-display .productenkolom .productitem .up {
-        transform: rotate(270deg); }
-      .container_ervaring-display .productenkolom .productitem .border {
-        display: none;
-        border-bottom: 1px solid #CCCCCC; }
-    .container_ervaring-display .productenkolom .productitem:hover {
-      background-color: #F4F3F3; }
-    .container_ervaring-display .productenkolom .productitem:last-child {
+    .container-people .ik-anderen > :nth-child(2) {
+      text-align: center;
       border-style: solid;
-      border-width: 1px 1px 1px 1px;
+      border-width: 1px 1px 0px 0px;
       border-color: #CCCCCC; }
-  .container_ervaring-display .gedrag .pijlen {
-    transform: rotate(180deg); }
-  .container_ervaring-display .menskolom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: initial;
-    border-style: solid;
-    border-width: 1px 1px 1px 0px;
-    border-color: #CCCCCC; }
-
-.nutsberekening {
-  display: flex;
-  flex-direction: row;
-  margin-top: 75px;
-  margin-left: 24px;
-  height: 250px; }
-  .nutsberekening .colom3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .container-people .foto-ik {
+    max-width: 80px;
+    max-height: 80px; }
+  .container-people .line {
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    color: #808080;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: #CCCCCC;
-    width: 170px;
+    width: inherit; }
+  .container-people .person {
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
     padding: 12px; }
-    .nutsberekening .colom3 .mleft {
-      display: flex;
-      flex-direction: row; }
-      .nutsberekening .colom3 .mleft :nth-child(1) {
-        width: 50px; }
-  .nutsberekening .colom4 {
+  .container-people .person:hover {
+    background-color: #F4F3F3;
+    cursor: pointer; }
+  .container-people .artwork {
+    max-width: 70px;
+    max-height: 200px;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center; }
+    .container-people .artwork :nth-child(1) {
+      margin: 7px;
+      transform: scale(0.7, 0.7); }
+
+.buiten_binnen {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 24px;
+  background-color: #F4F3F3; }
+  .buiten_binnen .row1 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: center;
+    padding: 8px 24px; }
+    .buiten_binnen .row1 div {
+      padding-right: 8px; }
+  .buiten_binnen .row2 {
+    display: flex;
+    justify-content: space-around; }
+    .buiten_binnen .row2 div {
+      padding: 8px 24px;
+      width: 550px;
+      text-align: center; }
+    .buiten_binnen .row2 div:first-child {
+      border-right: 1px solid #CCCCCC; }
+
+.mens_ervaring {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1100px; }
+  .mens_ervaring .buiten, .mens_ervaring .mensMaxima, .mens_ervaring .binnen {
+    width: 398px;
+    height: 350px;
+    border: 1px solid #CCCCCC; }
+  .mens_ervaring .buiten {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-style: solid;
-    border-width: 1px 1px 1px 0px;
-    border-color: #CCCCCC;
-    padding: 12px;
-    width: 150px; }
-    .nutsberekening .colom4 .plaatje_getal {
+    justify-content: space-around;
+    border: 1px dashed #CCCCCC; }
+    .mens_ervaring .buiten .ervaringenslider {
+      z-index: 3; }
+      .mens_ervaring .buiten .ervaringenslider #slider1_container {
+        position: relative;
+        width: 400px;
+        height: 350px; }
+        .mens_ervaring .buiten .ervaringenslider #slider1_container .slidesx {
+          z-index: 13;
+          cursor: move;
+          left: 0px;
+          top: 0px;
+          width: 400px;
+          height: 350px;
+          overflow: hidden; }
+        .mens_ervaring .buiten .ervaringenslider #slider1_container .jssora21l {
+          z-index: 10;
+          top: 25px;
+          left: 0px; }
+        .mens_ervaring .buiten .ervaringenslider #slider1_container .jssora21r {
+          top: 5px;
+          left: 270px; }
+        .mens_ervaring .buiten .ervaringenslider #slider1_container .jssorb02 {
+          position: relative;
+          top: 220px;
+          left: 140px; }
+      .mens_ervaring .buiten .ervaringenslider .titel {
+        position: relative;
+        left: 30px; }
+  .mens_ervaring .mensMaxima {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .mens_ervaring .mensMaxima .artwork {
+      max-width: 70px;
+      max-height: 200px; }
+      .mens_ervaring .mensMaxima .artwork :nth-child(1) {
+        margin: 7px;
+        transform: scale(0.7, 0.7); }
+  .mens_ervaring .binnen .titel {
+    padding: 2px 8px; }
+  .mens_ervaring .binnen .nutsberekening {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .mens_ervaring .binnen .nutsberekening .colom3 {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-style: solid;
+      border-width: 1px 1px 0px 0px;
+      border-color: #CCCCCC;
+      padding: 8px;
+      width: 150px; }
+      .mens_ervaring .binnen .nutsberekening .colom3 .mleft {
+        display: flex;
+        flex-direction: row; }
+        .mens_ervaring .binnen .nutsberekening .colom3 .mleft :nth-child(1) {
+          width: 50px; }
+    .mens_ervaring .binnen .nutsberekening .colom4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-style: solid;
+      border-width: 1px 0px 0px 0px;
+      border-color: #CCCCCC;
+      padding: 12px;
+      width: 150px; }
+      .mens_ervaring .binnen .nutsberekening .colom4 .plaatje_getal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70px; }
+        .mens_ervaring .binnen .nutsberekening .colom4 .plaatje_getal img {
+          width: 24px; }
+
+.ervaring_geheel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0px; }
+
+.container_ervaring-display .flex-columnstart {
+  margin-right: 24px; }
+.container_ervaring-display .container_ervaring {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #CCCCCC; }
+  .container_ervaring-display .container_ervaring .titel {
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-color: #F4F3F3;
+    padding: 8px 0px 0px 8px;
+    height: 36px; }
+.container_ervaring-display .ervaring_titel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  background-color: #F4F3F3;
+  height: 36px; }
+.container_ervaring-display .productenkolom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .container_ervaring-display .productenkolom .productitem:first-child {
+    background-color: #F4F3F3; }
+  .container_ervaring-display .productenkolom .productitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: #CCCCCC; }
+    .container_ervaring-display .productenkolom .productitem .image {
+      margin: 0px 0px 0px 12px !important;
+      width: 50px;
+      order: 3; }
+    .container_ervaring-display .productenkolom .productitem .tekst {
+      width: 160px;
+      order: 2;
+      margin-left: 8px; }
+    .container_ervaring-display .productenkolom .productitem .specifiek1 {
+      order: 2;
+      width: 160px; }
+    .container_ervaring-display .productenkolom .productitem .pijlen {
+      order: 4;
+      display: flex;
+      flex-direction: column;
+      width: 50px; }
+      .container_ervaring-display .productenkolom .productitem .pijlen .pijl {
+        margin: 0px 0px 0px 0px;
+        border-left: 1px solid #CCCCCC;
+        transform: rotate(0deg); }
+    .container_ervaring-display .productenkolom .productitem .pijlen_arbeid {
+      order: 5;
+      display: none;
       flex-direction: row; }
-      .nutsberekening .colom4 .plaatje_getal img {
-        width: 24px; }
+      .container_ervaring-display .productenkolom .productitem .pijlen_arbeid .pijl {
+        width: 50px;
+        transform: rotate(180deg);
+        padding: 0px 2px;
+        border-left: 1px solid #CCCCCC; }
+      .container_ervaring-display .productenkolom .productitem .pijlen_arbeid .pijl.eerste {
+        transform: rotate(0deg);
+        border-left: 0px solid #CCCCCC;
+        border-right: 1px solid #CCCCCC; }
+      .container_ervaring-display .productenkolom .productitem .pijlen_arbeid .arbeids_proces {
+        padding: 0px 8px; }
+    .container_ervaring-display .productenkolom .productitem .gedragsinvloed {
+      display: flex;
+      flex-direction: column;
+      align-items: start; }
+      .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(1) {
+        order: 1; }
+      .container_ervaring-display .productenkolom .productitem .gedragsinvloed :nth-child(2) {
+        order: 2; }
+    .container_ervaring-display .productenkolom .productitem .up {
+      transform: rotate(270deg); }
+    .container_ervaring-display .productenkolom .productitem .border {
+      display: none;
+      border-bottom: 1px solid #CCCCCC; }
+  .container_ervaring-display .productenkolom .productitem:hover {
+    background-color: #F4F3F3; }
+  .container_ervaring-display .productenkolom .productitem:last-child {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #CCCCCC; }
+.container_ervaring-display .gedrag .pijlen {
+  transform: rotate(180deg); }
+.container_ervaring-display .menskolom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: initial;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC; }
+
+.mensen_grafiek {
+  width: 100%; }
+  .mensen_grafiek .view_btn_1,
+  .mensen_grafiek .view_btn_2,
+  .mensen_grafiek .view_btn_3,
+  .mensen_grafiek .view_btn_4 {
+    margin-top: 48px; }
+  .mensen_grafiek .view_btn_2 img {
+    height: 900px; }
 
 .btn-extra {
   position: absolute;
@@ -4012,61 +4271,6 @@ table.tablesorter thead tr .headerSortDown {
   border-color: #ea4334;
   padding: 4px;
   margin-top: 4px; }
-
-.container-people {
-  display: -webkit-flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px;
-  background-color: white;
-  padding: 12px 0px 24px 0px; }
-  .container-people .ik-anderen {
-    position: relative;
-    left: -365px;
-    background-color: white; }
-    .container-people .ik-anderen > :nth-child(1) {
-      width: 129px;
-      text-align: center;
-      border-style: solid;
-      border-width: 1px 1px 0px 1px;
-      border-color: #CCCCCC; }
-    .container-people .ik-anderen > :nth-child(2) {
-      width: 771px;
-      text-align: center;
-      border-style: solid;
-      border-width: 1px 1px 0px 0px;
-      border-color: #CCCCCC; }
-  .container-people .foto-ik {
-    max-width: 80px;
-    max-height: 80px; }
-  .container-people .line {
-    display: -webkit-flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 900px;
-    background-color: white;
-    color: #808080;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #CCCCCC; }
-  .container-people .person {
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    padding: 12px; }
-  .container-people .person:hover {
-    background-color: #F4F3F3;
-    cursor: pointer; }
-  .container-people .artwork {
-    max-width: 70px;
-    max-height: 200px;
-    display: -webkit-flex;
-    flex-direction: column;
-    align-items: center; }
-    .container-people .artwork :nth-child(1) {
-      margin: 7px;
-      transform: scale(0.7, 0.7); }
 
 .container-mensen {
   padding-left: 200px;
@@ -4313,23 +4517,35 @@ table.tablesorter thead tr .headerSortDown {
   cursor: pointer;
   font-size: 12px; }
 
-.beschrijving-persbele {
-  position: absolute;
-  top: -18px;
-  left: -135px; }
-
 .beschrijving-fotobele {
   position: relative;
   left: 30px; }
 
 .ervaringenslider {
-  z-index: 3;
-  position: absolute;
-  top: 20px;
-  left: -475px;
-  box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
-  background-color: #f9ebf7;
-  padding: 24px; }
+  z-index: 3; }
+  .ervaringenslider #slider1_container {
+    position: relative;
+    width: 300px;
+    height: 255px; }
+    .ervaringenslider #slider1_container .slidesx {
+      z-index: 13;
+      cursor: move;
+      left: 0px;
+      top: 0px;
+      width: 299px;
+      height: 255px;
+      overflow: hidden; }
+    .ervaringenslider #slider1_container .jssora21l {
+      z-index: 10;
+      top: 25px;
+      left: 0px; }
+    .ervaringenslider #slider1_container .jssora21r {
+      top: 5px;
+      left: 270px; }
+    .ervaringenslider #slider1_container .jssorb02 {
+      position: relative;
+      top: 220px;
+      left: 140px; }
   .ervaringenslider .titel {
     position: relative;
     left: 30px; }
@@ -4342,6 +4558,8 @@ table.tablesorter thead tr .headerSortDown {
 
 .lijst-gevoelens {
   box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27); }
+  .lijst-gevoelens img {
+    width: 100%; }
 
 .menskleur {
   background-color: #f9efeb !important; }
@@ -4675,24 +4893,6 @@ table.tablesorter thead tr .headerSortDown {
 .flex-rowstart {
   display: flex;
   flex-direction: column; }
-
-.navtwee {
-  display: flex;
-  flex-direction: row;
-  background-color: #edeae3;
-  height: 50px;
-  padding: 0px 0px 0px 24px;
-  border-width: 0px 0px 0px 1px;
-  border-style: solid;
-  border-color: #CCCCCC !important; }
-  .navtwee .navheader {
-    display: none;
-    color: #808080;
-    font-size: 16px;
-    padding: 16px 48px 16px 0px; }
-  .navtwee .navbtn {
-    padding: 16px 48px 16px 0px;
-    color: #808080; }
 
 .header > .title > div:nth-child(1),
 .header > .title > div:nth-child(2) {

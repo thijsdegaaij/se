@@ -6,14 +6,286 @@
   width: 180px;
 }
 
-
-
-
- .container_ervaring-display {
-   margin: 48px 0px;
+// OVERZICHT
+.mens_eigenschappen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mensenvoorbeelden {
+  .maxima {
+    background-color: $background-color-2;
+  }
+}
+.mens_eigenschappen {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .mens_naam {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .eigenschap {
    display: flex;
    flex-direction: row;
+   margin-top: 12px;
+    :nth-child(1) {
+      text-align: right;
+    }
+    :nth-child(2) {
+      margin-left: 24px;
+    }
+  }
+}
 
+// ERVARINGEN
+
+
+  .container-people {
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;     
+    margin: 0px;
+    background-color: white;
+    padding: 12px 0px 24px 0px;
+    width: 1100px;
+
+    .ik-anderen {
+      background-color: $background-color-2;
+      width: inherit;
+      border-width: 1px 1px 0px 1px;
+      border-style: solid;
+      border-color: $border-color-base;
+      padding: 8px 12px;
+      
+      > :nth-child(1) {
+        // width: 129px;
+        text-align: center;   
+        border-style: solid;    
+        border-width: 1px 1px 0px 1px;
+        border-color: $border-color-base;
+      }    
+      > :nth-child(2) {
+        // width: 771px;
+        text-align: center;   
+        border-style: solid;    
+        border-width: 1px 1px 0px 0px;
+        border-color: $border-color-base;
+      }  
+    }
+
+    .foto-ik {
+      max-width: 80px;
+      max-height: 80px;
+      //background-color: $background-color-1;
+    }
+
+    .line {
+        display: -webkit-flex;
+        flex-direction: row;      
+        justify-content: space-between;
+        background-color: white;
+        color: $text-color-base;    
+        border-style: solid;    
+        border-width: 1px 1px 1px 1px;
+        border-color: $border-color-base;
+        width: inherit;
+      }
+    .person {
+        display: -webkit-flex;
+        flex-direction: column;
+        align-items: center;
+        width: 150px;
+        padding: 12px;      
+    }
+    .person:hover {
+      background-color: $background-color-2;
+      cursor: pointer;
+    }
+    .name {}
+    .artwork {
+      max-width: 70px;
+      max-height: 200px;
+        display: -webkit-flex;
+        flex-direction: column;
+        align-items: center;
+        :nth-child(1) {
+          margin: 7px;        
+          transform:scale(0.7,0.7);
+        }
+    }
+  }
+
+
+// buiten binnen
+.buiten_binnen {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color-base;
+  margin-bottom: 24px;
+  background-color: $background-color-2;
+  .row1 {
+    display: flex;
+    justify-content: center;
+  border-bottom: 1px solid $border-color-base; 
+  text-align: center;
+      padding: 8px 24px;    
+      div {
+        padding-right: 8px;
+      } 
+  }
+  .row2 {
+    display: flex;
+    justify-content: space-around;
+    div {
+      padding: 8px 24px;
+      width: 550px;
+      text-align: center;
+    }
+    div:first-child {
+      border-right: 1px solid $border-color-base;
+    }
+  }
+}
+
+.mens_ervaring {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1100px;
+  .buiten, .mensMaxima, .binnen {
+    width: 398px;
+    height: 350px;
+    border: 1px solid $border-color-base;
+  }
+  .buiten {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px dashed $border-color-base;
+    .ervaringenslider {
+      z-index: 3;
+      #slider1_container {
+        position: relative; 
+        width: 400px; 
+        height: 350px; 
+        .slidesx {
+          z-index: 13;
+          cursor: move; 
+          left: 0px; top: 0px; 
+          width: 400px; height: 350px; 
+         overflow: hidden;
+        }
+        .jssora21l {
+          z-index:10;
+          top: 25px; 
+          left: 0px;
+        }
+        .jssora21r {
+          top: 5px; 
+          left: 270px;        
+        }
+        .jssorb02 {
+          position: relative;
+          top: 220px; 
+          left: 140px;
+        }  
+      }  
+
+      .titel {
+        position: relative;
+        left: 30px;
+      }
+    }
+  }
+  .mensMaxima {
+    width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    .artwork {
+      max-width: 70px;
+      max-height: 200px;
+        :nth-child(1) {
+          margin: 7px;        
+          transform:scale(0.7,0.7);
+        }
+    }
+  }
+
+  .binnen {  
+    .titel {
+      padding: 2px 8px;
+    }
+     .nutsberekening {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+          .colom3 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border-style: solid;
+              border-width: 1px 1px 0px 0px;
+              border-color: $border-color-base;
+              padding: 8px;
+              width: 150px;
+            .beschrijving {
+            }
+            .mleft {
+                display: flex;
+                flex-direction: row;
+                    :nth-child(1) {
+                      width: 50px;
+                    }
+            }
+          }
+          .colom4 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border-style: solid;
+              border-width: 1px 0px 0px 0px;
+              border-color: $border-color-base;
+              padding: 12px;
+              width: 150px;
+            .plaatje_getal {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 70px;
+              .beschrijving {
+              }
+              img {
+                width: 24px;
+              }
+
+            }
+          }
+  }
+
+
+
+  }
+}
+
+
+// ervaringen berekeningen
+
+.ervaring_geheel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0px;
+}
+ .container_ervaring-display {
+   // padding: 24px 0px 48px 0px;
+  .flex-columnstart {
+    margin-right: 24px;
+  }
   .container_ervaring {
       position:relative;
       display: flex;
@@ -32,19 +304,25 @@
       }
   }
   .ervaring_titel {
-              border-width: 1px 1px 0px 1px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;              
+              border-width: 1px 1px 0px 0px;
               border-style: solid;
               border-color: $border-color-base;
               background-color:$background-color-2;   
-              padding: 7px 8px;
+              height: 36px;
+              div {}
   }
-
-
 
   .productenkolom {
       display: flex;
       flex-direction: column;
-      justify-content: center; 
+      justify-content: center;
+      .productitem:first-child {
+        background-color: $background-color-2;
+      } 
       .productitem {
           display: flex;
           flex-direction: row;
@@ -65,8 +343,8 @@
               }
           .specifiek1 {
               order: 2;
-              font-style: italic;
-              width: 180px;
+              // font-style: italic;
+              width: 160px;
           }
           .pijlen {
               order: 4;
@@ -79,6 +357,27 @@
                   transform: rotate(0deg);
                   //background-color: $bginput;
               }
+          }
+          .pijlen_arbeid {
+            order: 5;
+            display: none; // flex;
+            flex-direction: row;
+            .pijl {
+              width:50px;                 
+              transform: rotate(180deg);
+              padding: 0px 2px;
+              border-left: 1px solid $border-color-base;
+            }
+            .pijl.eerste {              
+              transform: rotate(0deg);
+              border-left: 0px solid $border-color-base;
+              border-right: 1px solid $border-color-base;
+
+            }
+            .arbeids_proces {
+              padding: 0px 8px;
+            }
+
           }
           .gedragsinvloed {
             display: flex;
@@ -123,7 +422,7 @@
         width: 100px;
          height: initial;  
           border-style: solid;
-          border-width: 1px 1px 1px 0px;
+          border-width: 1px 1px 1px 1px;
           border-color: $border-color-base; 
         } 
 
@@ -132,57 +431,24 @@
 
  }
 
-  .nutsberekening {
-      //position: absolute;
-      //left: 524px;
-      display: flex;
-      flex-direction: row;
-        margin-top: 75px;
-      margin-left: 24px; 
-      height: 250px;
-          .colom3,{
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              border-style: solid;
-              border-width: 1px 1px 1px 1px;
-              border-color: $border-color-base;
-              width: 170px;
-              padding: 12px;
 
-              .mleft {
-                  display: flex;
-                  flex-direction: row;
-                      :nth-child(1) {
-                        width: 50px;
-                      }
-              }
-          }
-          .colom4 {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              border-style: solid;
-              border-width: 1px 1px 1px 0px;
-              border-color: $border-color-base;
-              padding: 12px;
-              width: 150px;
-            .beschrijving {
 
-            }
-            .plaatje_getal {
-              display: flex;
-              flex-direction: row;
-              :nth-child(1) {
-                //width: 48px;
-              }
-              img {
-                width: 24px;
-              }
 
-            }
-          }
+// GRAFIEKEN
+.mensen_grafiek {
+  width: 100%;
+  .view_btn_1, 
+  .view_btn_2,
+  .view_btn_3, 
+  .view_btn_4 {
+  margin-top: 48px;    
   }
-
+  .view_btn_2
+  {
+    img {
+      height: 900px;
+    }
+  }
+}
 
 

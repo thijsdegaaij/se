@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
 
-    // knoppen in submenu
+    // knoppen in menu twee
     $(document.body).on("click", ".btn-overzicht", function() {
         $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiek").addClass("displaynone");
         $(".mensen_overzicht").removeClass("displaynone");
@@ -71,6 +71,18 @@ $(document).ready(function() {
     });    
 
 
+// Ervaring   
+    $(document.body).on("click", ".btn_view-mensen", function() {
+        $(".container-people-display").toggle();
+    });
+    $(document.body).on("click", ".ervaringenslider", function() {
+        $(".ervaring_geheel_container").toggle();
+    });
+
+// Gevoelens
+    $(document.body).on("click", ".btn-gevoelens", function() {
+        $(".lijst-gevoelens").toggle();
+    });
 
 
 });
@@ -78,6 +90,7 @@ $(document).ready(function() {
 
 
 
+<!-- NAV TWEE -->
 <div class="flex-rowstart mensenxx">
     <div class="navtwee ">
         <div class="iconwide icon-mens-mv displaynone"></div>
@@ -97,11 +110,11 @@ $(document).ready(function() {
 
 	<div class="flex-columncenter ">	
 
-
-		<div class="container_ervaring-display displaynone ">
+<!-- ERVARINGEN -->
+		<div class="container_ervaring-display displaynone  ">
 
 				<!--  Meermensen, misschien nog leuk omdat nut-icoon boven hoofden zweeft -->
-				<div class="meermensen container-people-display  ">
+				<div class="container-people-display displaynone  ">
 					<div class="container-people ">
 						<div class="ik-anderen">Voorbeelden van mensen</div>
 						<div class="line">
@@ -162,7 +175,7 @@ $(document).ready(function() {
 
 
 				<!--  Mensen, klein. Met eigenschappen -->
-				<div class="mensen_overzicht">
+				<div class="mensen_overzicht displaynone ">
 					<div class="cont-natuurmens  flex-columncenter">
 				        <div class="mensenvoorbeelden mensleft ">
 				         <%= render template: "oldstviews/inc_x_mensen_mensenrij" %> 
@@ -194,7 +207,8 @@ $(document).ready(function() {
 				<!--  Ervaring, binnen en buitenwereld -->
 
 				<div class="buiten_binnen">
-					<div class="row1">
+					<div class="tit">Ervaringen</div>
+					<div class="row1 btn_view-mensen">
 						<div>Kies persoon</div>
 						<div class="icon icon-hamburger button"></div>
 					</div>
@@ -204,31 +218,30 @@ $(document).ready(function() {
 					</div>
 				</div>
 
-				<div class="mens_ervaring">
+				<div class="mens_ervaring ">
 					<div class="buiten">       	
 		        		<div class="ervaring_titel">
 		        			<div class="nav_vier">
-		        				<div class="btn_werkelijkheid nav_vier_btn btngeselecteerd">Werkelijkheid</div>
+		        				<div class="btn_werkelijkheid nav_vier_btn btngeselecteerd">
+		        					<div class="icon icon-werkelijkheid"></div>
+		        					<div class="">Werkelijk</div>
+		        				</div>
+		        				<div class="btn_ideaal nav_vier_btn ">
+		        					<div class="icon icon-gedachten"></div>
+		        					<div class="">Wenselijk</div>
+		        				</div>
 		        				<div class="btn_ideaal nav_vier_btn ">
 		        					<div class="icon icon-gedachten"></div>
 		        					<div class="">Herinnering</div>
-		        				</div>
-		        				<div class="btn_ideaal nav_vier_btn ">
-		        					<div class="icon icon-gedachten"></div>
-		        					<div class="">Ideaal</div>
-		        				</div>
-		        				<div class="btn_ideaal nav_vier_btn ">
-		        					<div class="icon icon-gedachten"></div>
-		        					<div class="">Verschil</div>
 		        				</div>
 		        			</div>	        			
 		        		</div>
 						<div class="body ervaringenslider "> 
 
-							<div id="slider1_container">
+							<div id="slider2_container">
 								<div class="slidesx" u="slides" >
-									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceBoom.png" /></div>
 									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceFiets.png" /></div>
+									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceBoom.png" /></div>
 									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceGroteBoom.png"/></div>
 									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceKoken.png" /></div>
 									<div><img u="image" src="../images/B/1-marktvormen/B2-experienceVoetballen.png" /></div>
@@ -243,8 +256,6 @@ $(document).ready(function() {
 				            	</div>
 							 </div>
 						</div>
-
-
 					</div>
 					<div class="mensMaxima">
 							<div class="person">
@@ -256,11 +267,11 @@ $(document).ready(function() {
 							</div>				
 					</div>
 					<div class="binnen">
-						<div class="titel">Nutsproductie</div>
+						<div class="titel">Nutsberekening</div>
 						<div class="nutsberekening"> 
 				            <div class="colom3">
-				                <div class="btn-gevoelens button">
-				                    <div class="left">
+				                <div class="">
+				                    <div class="btn-gevoelens button left">
 				                        <div class="icon "></div>
 				                        <div class="two">Gevoelens</div>
 				                    </div>
@@ -292,7 +303,7 @@ $(document).ready(function() {
 							</div>	
 							<div class="colom4">					
 			                    <div class="beschrijving">
-			                        <div class="">nutsbeleving</div>
+			                        <div class="">nut</div>
 			                    </div>
 			                    <div class="plaatje_getal">
 			                        <div>
@@ -308,214 +319,221 @@ $(document).ready(function() {
 
 
 
-				<!--  ERVARING -->
-				<div class="ervaring_geheel">
-			    	<div class="flex-row-left view_ervaring">
-				        <div class="flex-columnstart"> <!--        	
-			        		<div class="ervaring_titel">
-			        			<div>Ervaring</div>
-			        			<div class="nav_vier">
-			        				<div class="btn_werkelijkheid nav_vier_btn btngeselecteerd">Werkelijkheid</div>
-			        				<div class="btn_ideaal nav_vier_btn">Ideaal</div>
-			        				<div class="btn_ideaal nav_vier_btn">Verschil</div>
-			        			</div>	        			
-			        		</div> -->
-				        	<div class="container_ervaring">
-					            <div class="productenkolom">
-					                <div class="productitem">
-					                    <div class="tekst">Productsoort</div>
-					                    <div class="image icon ">Icoon</div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon ">Input</div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon eerste">Output</div>
-					                        <div class="arbeids_proces">Proces</div>
-					                    </div>
-					                    <div class="specifiek1">Producten</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">jezelf</div>
-					                    <div class="image icon icon-mens"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-arbeidextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">je eigen gedrag, gedachten en gevoelens</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">natuur</div>
-					                    <div class="image icon icon-natuur"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">weer, dieren en planten</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">mensen</div>
-					                    <div class="image icon icon-mens"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-arbeidextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">vrienden	, onbekenden</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">dienst</div>
-					                    <div class="image icon icon-mens-org"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl markt icon icon-arbeidmarkt"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">van verkoper</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">wet</div>
-					                    <div class="image icon icon-wet"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">veiligheid</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">collectiefgoed</div>
-					                    <div class="image icon icon-collectiefgoed"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">bos</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">openbare kennis</div>
-					                    <div class="image icon icon-receptT"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">van natuur</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">reclame</div>
-					                    <div class="image icon icon-reclame"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">?</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">overeenkomst</div>
-					                    <div class="image icon icon-overeenkomst"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl extern icon icon-dienstextern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">"samen uit, samen thuis"</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">geld</div>
-					                    <div class="image icon icon-geld"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl markt icon icon-stroommarkt"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">voor noodgevallen</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">gebruiksgoed</div>
-					                    <div class="image icon icon-vierkant"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl markt icon icon-stroommarkt"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">fiets</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">verbruiksgoed</div>
-					                    <div class="image icon icon-rondje"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl markt icon icon-stroommarkt"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">brood</div>
-					                </div>
-					                <div class="productitem">
-					                    <div class="tekst">consumentenproduct</div>
-					                    <div class="image icon icon-consumentenproduct"></div>
-					                    <div class="border"></div>
-					                    <div class="pijlen">
-					                        <div class="pijl intern icon icon-stroomintern"></div>
-					                    </div>
-					                    <div class="pijlen_arbeid">
-					                        <div class="pijl extern icon icon-arbeidintern"></div>
-					                        <div class="arbeids_proces">ervaren</div>
-					                    </div>
-					                    <div class="specifiek1">lunch</div>
-					                </div>
-					            </div>
-					        </div>
-					    </div>				
-					</div>
-					<div class="flex-columncenter">
-						<div>Maxima</div>
-						<div class="icon icon-mens"></div>
-					</div>
-					<div class="ervaring_nut">
-						Berekenen van nut
-					</div>
-			    </div> 
+				<!--  ERVARING uitgewerkt met producten en processen -->
+				<div class="ervaring_geheel_container displaynone">
+					<div class="ervaring_geheel ">
+				    	<div class="flex-row-left view_ervaring">
+					        <div class="flex-columnstart"> <!--        	
+				        		<div class="ervaring_titel">
+				        			<div>Ervaring</div>
+				        			<div class="nav_vier">
+				        				<div class="btn_werkelijkheid nav_vier_btn btngeselecteerd">Werkelijkheid</div>
+				        				<div class="btn_ideaal nav_vier_btn">Ideaal</div>
+				        				<div class="btn_ideaal nav_vier_btn">Verschil</div>
+				        			</div>	        			
+				        		</div> -->
+					        	<div class="container_ervaring">
+						            <div class="productenkolom">
+						                <div class="productitem">
+						                    <div class="tekst">Productsoort</div>
+						                    <div class="image icon ">Icoon</div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon ">Input</div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon eerste">Output</div>
+						                        <div class="arbeids_proces">Proces</div>
+						                    </div>
+						                    <div class="specifiek1">Producten</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">jezelf</div>
+						                    <div class="image icon icon-mens"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-arbeidextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">je eigen gedrag, gedachten en gevoelens</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">natuur</div>
+						                    <div class="image icon icon-natuur"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">weer, dieren en planten</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">mensen</div>
+						                    <div class="image icon icon-mens"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-arbeidextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">vrienden	, onbekenden</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">dienst</div>
+						                    <div class="image icon icon-mens-org"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl markt icon icon-arbeidmarkt"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">van verkoper</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">wet</div>
+						                    <div class="image icon icon-wet"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">veiligheid</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">collectiefgoed</div>
+						                    <div class="image icon icon-collectiefgoed"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">bos</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">openbare kennis</div>
+						                    <div class="image icon icon-receptT"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">van natuur</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">reclame</div>
+						                    <div class="image icon icon-reclame"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">?</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">overeenkomst</div>
+						                    <div class="image icon icon-overeenkomst"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl extern icon icon-dienstextern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">"samen uit, samen thuis"</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">geld</div>
+						                    <div class="image icon icon-geld"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl markt icon icon-stroommarkt"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">voor noodgevallen</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">gebruiksgoed</div>
+						                    <div class="image icon icon-vierkant"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl markt icon icon-stroommarkt"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">fiets</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">verbruiksgoed</div>
+						                    <div class="image icon icon-rondje"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl markt icon icon-stroommarkt"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">brood</div>
+						                </div>
+						                <div class="productitem">
+						                    <div class="tekst">consumentenproduct</div>
+						                    <div class="image icon icon-consumentenproduct"></div>
+						                    <div class="border"></div>
+						                    <div class="pijlen">
+						                        <div class="pijl intern icon icon-stroomintern"></div>
+						                    </div>
+						                    <div class="pijlen_arbeid">
+						                        <div class="pijl extern icon icon-arbeidintern"></div>
+						                        <div class="arbeids_proces">ervaren</div>
+						                    </div>
+						                    <div class="specifiek1">lunch</div>
+						                </div>
+						            </div>
+						        </div>
+						    </div>				
+						</div>
+<!-- 
+						<div class="flex-columncenter ">
+							<div>Maxima</div>
+							<div class="icon icon-mens"></div>
+						</div>
+						<div class="ervaring_nut ">
+							Berekenen van nut
+						</div>
+						 -->
+				    </div> 
+				</div>
 
 				<!--  GEVOELENS -->
-				<div class="lijst-gevoelens ">
+				<div class="lijst-gevoelens displaynone">
 					<div class="cont-flex-columncenter">
-						<div>Voorbeelden van gevoelens</div>
+						<div class="flex-row-left titel">
+							<div class="icon icon-gevoelens"></div>
+							<div class="">Voorbeelden van gevoelens</div>
+						</div>
 						<div class="plaatje_gevoelens">
 							<img src="../images/icons/gevoelens-01.png"/>
 						</div>
@@ -529,17 +547,19 @@ $(document).ready(function() {
 		</div>
 
 
+<!-- IDEAAL -->
 
 	    <div class="mensen_ideaal displaynone">
 		    <%= render template: "oldstviews/inc_people1.html" %>
 		</div>
 
 
+<!-- GRAFIEKEN -->
 		<div class="mensen_grafiek displaynone">
 			<div class="flex-columncenter">
 				<div class="navdrie ">
 					<div class="navbtn btn_2 btngeselecteerd_navdrie">Leeftijdsopbouw</div>
-					<div class="navbtn btn_1  ">Inkomensongelijkheid</div>
+					<div class="navbtn btn_1 ">Inkomensongelijkheid</div>
 					<div class="navbtn btn_3 ">Marketing targetgroepen</div>
 					<div class="navbtn btn_4 ">Beroepsbevolking</div>
 			    </div>

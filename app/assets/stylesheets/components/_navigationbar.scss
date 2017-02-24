@@ -276,10 +276,12 @@
           padding: 0px 8px;
           cursor: pointer;
           font-size: 14px;
-          border-left: 1px solid $border-color-base;          
+          border-left: 1px solid $border-color-base;   
+          .icon {
+            margin-right: 2px;
+          }       
         }
 .nav_vier_btn:hover,
 .nav_vier_btn.btngeselecteerd {
-            font-weight: bold;
-          }
+   background-color: $background-color-1;          }
 }

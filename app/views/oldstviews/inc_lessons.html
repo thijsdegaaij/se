@@ -18,43 +18,99 @@ $(document).ready(function() {
     });
 
 
+// navigatie 1
+    $('.lessons .lesinhoud').hide();
 
-    $('.lessons .les1 .lesinhoud').hide();
-    $('.lessons .les1 .welkom').show();
+    $('.lessons .les1 .v1').show();
     $('.lessons .les1 .lesonderdelen').change(function() {
         $('.lessons .les1 .lesinhoud').hide();
         $('.lessons .les1 .' + $(this).val()).show();
     })
 
-    $('.lessons .les2 .lesinhoud').hide();
-    $('.lessons .les2 .welkom').show();
+    $('.lessons .les2 .v1').show();
     $('.lessons .les2 .lesonderdelen').change(function() {
-        $('.lessons .les2 .lesinhoud').hide();
+        $('.lessons .lesinhoud').hide();
         $('.lessons .les2 .' + $(this).val()).show();
     })
 
+    $('.lessons .les3 .v1').show();
+    $('.lessons .les3 .lesonderdelen').change(function() {
+        $('.lessons .lesinhoud').hide();
+        $('.lessons .les3 .' + $(this).val()).show();
+    })
+    $('.lessons .les4 .v1').show();
+    $('.lessons .les4 .lesonderdelen').change(function() {
+        $('.lessons .lesinhoud').hide();
+        $('.lessons .les4 .' + $(this).val()).show();
+    })
+    $('.lessons .les5 .v1').show();
+    $('.lessons .les5 .lesonderdelen').change(function() {
+        $('.lessons .lesinhoud').hide();
+        $('.lessons .les5 .' + $(this).val()).show();
+    })
 
+
+
+// Navigatie 2
     $(document.body).on("click", ".lessons .icon-hamburger", function() {
         $(".lessons-display").toggle();
     });
 
     $(document.body).on("click", ".lessons .btn-les1", function() {
         $(".lessons .lessons-display").slideUp();
-        $(".lessons .les2").hide();
         $(".lessons .les1").show();
+        $(".lessons .les2").hide();
+        $(".lessons .les3").hide();
+        $(".lessons .les4").hide();
+        $(".lessons .les5").hide();
     });
 
     $(document.body).on("click", ".lessons .btn-les2", function() {
         $(".lessons .lessons-display").slideUp();
         $(".lessons .les1").hide();
         $(".lessons .les2").show();
+        $(".lessons .les3").hide();
+        $(".lessons .les4").hide();
+        $(".lessons .les5").hide();
+    });
+    $(document.body).on("click", ".lessons .btn-les3", function() {
+        $(".lessons .lessons-display").slideUp();
+        $(".lessons .les1").hide();
+        $(".lessons .les2").hide();
+        $(".lessons .les3").show();
+        $(".lessons .les4").hide();
+        $(".lessons .les5").hide();
+    });
+    $(document.body).on("click", ".lessons .btn-les4", function() {
+        $(".lessons .lessons-display").slideUp();
+        $(".lessons .les1").hide();
+        $(".lessons .les2").hide();
+        $(".lessons .les3").hide();
+        $(".lessons .les4").show();
+        $(".lessons .les5").hide();
+    });
+    $(document.body).on("click", ".lessons .btn-les5", function() {
+        $(".lessons .lessons-display").slideUp();
+        $(".lessons .les1").hide();
+        $(".lessons .les2").hide();
+        $(".lessons .les3").hide();
+        $(".lessons .les4").hide();
+        $(".lessons .les5").show(); 
+    });
+
+// voor gameplay
+    $(document.body).on("click", ".btn_kostensoorten", function() {
+        $(".middenlinks").toggleClass("showtarget1");
+    });
+    $(document.body).on("click", ".btn_functionelekosten", function() {
+        $(".middenmidden").toggleClass("showtarget1");
     });
 
 });
 </script>
 <div class="lessons">
     <div class="start button">
-        <div>Lessen</div>
+        <div>Hoofdstukken</div>
         <div class="icon icon-hamburger button"></div>
     </div>
     <!-- leskiezer display -->
@@ -65,13 +121,13 @@ $(document).ready(function() {
         </div>
         <div class="body">
             <div id="le-supereconomics" class="active">
-                <div class="btn-les1 dark-hover button">Introductie</div>
+                <div class="btn-les1 dark-hover button">Hoe werkt deze lesmethode?</div>
                 <div class="module">Algemene economie</div>
                 <ul>
-                    <li class="btn-les2 dark-hover button">H1. Mensen, nut en behoeften</li>
-                    <li class="">H2. Organisaties en hun producten</li>
-                    <li class="">H3. Markten en samenwerken</li>
-                    <li class="">H4. Financi&euml;le producten</li>
+                    <li class="btn-les2 dark-hover button">H1. Land</li>
+                    <li class="btn-les4 dark-hover button">H2. Mensen </li>
+                    <li class="btn-les3 dark-hover button">H3. Organisaties </li>
+                    <li class="btn-les5 dark-hover button">H4. Markten</li>
                     <li class="">H5. Overheid</li>
                     <li class="">H6. Risico's</li>
                     <li class="">H7. Welvaart en groei</li>
@@ -89,19 +145,17 @@ $(document).ready(function() {
             </div>
         </div>
     </div>
-    <!-- les 1 -->
+    <!-- les 1 HOE WERKT DEZE LESMETHODE?-->
     <div class="les1 ">
         <div class="lesheader ">
             <div class="lesonderdeel">
-                <div class="lestitel">Introductie:</div>
+                <div class="lestitel">Hoe werkt deze lesmethode?</div>
                 <div class="styled-select">
                     <select class="lesonderdelen">
-                        <option value="welkom">1. Start met simulatiespel</option>
-                        <option value="situaties">2. Situaties</option>
-                        <option value="mensen">3. Mensen</option>
-                        <option value="producten">4. Producten</option>>
-                        <option value="begrippen">5. Begrippen-browser</option>
-                        <option value="mijnresultaten">6. Mijn resultaten</option>
+                        <option value="v1">1. Start met simulatiespel</option>
+                        <option value="v2">2. Niveaus</option>
+                        <option value="v3">3. Begrippen-browser</option>
+                        <option value="v4">4. Mijn resultaten</option>
                     </select>
                 </div>
                 <div class="displaynone">
@@ -114,8 +168,8 @@ $(document).ready(function() {
         </div>
         <div class="le-container">
             <div class="body">
-                <div class="welkom lesinhoud">
-                    <div class="kopje">0.1 Start met simulatiespel</div>
+                <div class="v1 lesinhoud">
+                    <div class="kopje">1 Start met simulatiespel</div>
                     <div class="overflow">
                         <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
                         <div class="kopje">Kan ik zo beginnen?</div>
@@ -126,55 +180,38 @@ $(document).ready(function() {
                         <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
                         <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
                     </div>
-                    <div class="situaties lesinhoud">
-                        Het icoon voor situaties is
-                        <div class="icon icon-situatie"> </div> dat je vind in de bovenste balk.
-                        <br>
-                        <br> Je kunt meerdere situaties bestuderen. We beginnen eenvoudig met 1n persoon op een onbewoond eiland.
-                    </div>
-                    <div class="mensen lesinhoud">
-                        De economie is een menswetenschap: de mens staat centraal. Het bestudeert hoe mensen hun behoeften bevredigen met de schaarse middelen die er zijn. Anders gezegd hoe mensen hun geluk optimaliseren met de producten in de wereld.
-                        <br>
-                        <br> Het icoon voor een mens is
-                        <div class="icon icon-mens"> </div> dat je vind in de bovenste balk. <span class="button actionAI" data-target="people-nav-expmenu_T;people-nav-triangle_T;product-nav-expmenu_I;product-nav-triangle_I;begrip-nav-expmenu_I;begrip-nav-triangle_I;situations-nav-expmenu_I;situations-nav-triangle_I;">Hier </span>dus.
-                        <br>
-                        <br>
-                        <p>Uit onze wereld hebben wij een selectie van mensen gemaakt die je kunt gebruiken. </p>
-                    </div>
-                    <div class="producten lesinhoud">
-                        Mensen hebben vele producten ter beschiking. De zon van de natuur, een schoen van Nike en olie van Shell.
-                        <br>
-                        <br> Het icoon voor een willekeurig product is
-                        <div class="icon icon-product"> </div> en vind je in de bovenste balk.
-                        <br>
-                        <br>
-                        <p>Hier staat een selectie van producten die in Nederland beschikbaar zijn. </p>
-                        <p>Productie is het beinvloeden van (de fysieke toestand van) dingen (producten) om (daarmee voor de mens) de gewenste eigenschappen te verkrijgen. Het begrip productiviteit is afgeleid van dit begrip productie.</p>
-                    </div>
+                </div>
+                <div class="v2 lesinhoud">
+                    <div class="kopjetitel">2.  Niveaus</div>
+                    <div>De niveaus zijn .dfjkas;lfjasd ;flakdsjf ;lkj</div>
+                </div>
+                <div class="v3 lesinhoud">                        
+                    <div class="kopjetitel">3. Begrippen-browser</div>
+                    <p> de begrippenbrowser is ..jflkasl;fdj;ldaskjf 
                 </div>
             </div>
         </div>
     </div>
-    <!-- les2 -->
+ <!-- les2 LAND -->
     <div class="les2 displaynone">
         <div class="lesheader overzicht">
             <div class="lesonderdeel">
-                <div class="lestitel">H1. Mensen, nut en behoeften</div>
+                <div class="lestitel">H1. Land</div>
                 <div class="styled-select">
                     <select class="lesonderdelen">
-                        <option value="welkom">1. Inleiding</option>
-                        <option value="situaties">2. Situaties</option>
-                        <option value="mensen">3. Mensen</option>
-                        <option value="producten">4. Producten</option>>
-                        <option value="begrippen">5. Begrippen-browser</option>
-                        <option value="mijnresultaten">6. Mijn resultaten</option>
+                        <option value="v1">1. Inleiding</option>
+                        <option value="v2">2. Organisaties</option>
+                        <option value="v3">3. Mensen</option>
+                        <option value="v4">4. Nut</option>>
+                        <option value="v5">5. Gevoelens</option>
+                        <option value="v6">6. Gedachten</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="le-container">
             <div class="body">
-                <div class="welkom lesinhoud">
+                <div class="v1 lesinhoud">
                     <div class="starter displaynone">De hoofdindeling is eenvoudig</div>
                     <div class="kopjetitel">1 Inleiding</div>
                     <div class="overflow">
@@ -182,26 +219,83 @@ $(document).ready(function() {
                         <p>De organisaties in Schatland doen hun best om dingen te maken waar de mensen en de natuur behoeften aan hebben.</p>
                         <p>Er zijn 26 organisaties verstopt. Zoek bakker 'Bakery' en klik er op om deze organisatie nader te onderzoeken.</p>
                         <p></p>
-                        <!-- 
-                        <p>Kijkend met een economische bril naar een land als Nederland, zien wij eigendommen en alles wat niet een eigendom is, zoals de natuur en de mensen.
-                            <ol>
-                                <li>Geen eigendom
-                                    <ul>
-                                        <li class="">natuur</li>
-                                        <li class="">mensen</li>
-                                    </ul>
-                                </li>
-                                <li>Eigendommen
-                                    <ul>
-                                        <li class="">wetten</li>
-                                        <li class="">Producten</li>
-                                        <li class="">edrijfstakken</li>
-                                        <li class="">Producten</li>
-                                        <li class="">edrijfstakken</li>
-                                        <li class="">Producten</li>
-                                    </ul>
-                            </ol>
- -->
+                        <div class="kopje">Mensen</div>
+                        <p>Mensen zijn het uitgangspunt van de economie. Hier kun je onderzoeken hoe economen naar de besluitvorming van mensen kijken. Hoe mensen behoeften hebben en daar nut aan toekennen. </p>
+                        <div class="kopje">Natuur</div>
+                        <p>Onder natuur valt de zon, de atmosfeer en de wilde flora en fauna. Dieren in het wild, zoals de ooievaar en de leeuw, zijn van niemand. </p>
+                        <div class="kopje">Organisaties</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+                        <div class="kopje">Producten</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+                    </div>
+                    <div class="kopje">Naar de opdrachten</div>
+                    <p class="button">Maak de bijbehorende opdrachten.</p>
+                </div>
+                <div class="v2 lesinhoud">
+                    <div class="kopjetitel">2 Organisaties</div>
+                    <p>Het icoon voor situaties is</p>
+                    <div class="icon icon-situatie"> </div> dat je vind in de bovenste balk.
+                    <br>
+                    <br> Je kunt meerdere situaties bestuderen. We beginnen eenvoudig met 1n persoon op een onbewoond eiland.
+                </div>
+                <div class="v3 lesinhoud">
+                    <div class="kopjetitel">3 Mensen</div>
+                    <p>Mensen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- les3 ORGANISATIE -->
+    <div class="les3 displaynone">
+        <div class="lesheader overzicht">
+            <div class="lesonderdeel">
+                <div class="lestitel">H3. Organisaties</div>
+                <div class="styled-select">
+                    <select class="lesonderdelen">
+                        <option value="v1">Inleiding</option>
+                        <option value="v2">Geld</option>
+                        <option value="v3">Overeenkomsten</option>
+                        <option value="v4">Dibiteuren en crediteuren</option>>
+                        <option value="v5">Financiële producten</option>
+                        <option value="v6">Overheidsrechten en -plichten</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="le-container">
+            <div class="body">
+                <div class="v1 lesinhoud">
+                    <div class="kopjetitel">Kosten</div>
+                    <p>Kosten</p>
+                    <div> 
+                        <div class="btn_kostensoorten item button">Kostensoorten</div>
+                        <div>Uitsplitsing van de kosten naar hun ontstaansbron tijdens het bedrijfsproces: grondstoffen, arbeid, afschrijving op vaste activa, gebruik van grond, diensten van derden, belastingen die de kostprijs verhogen en geleend geld. <br><br>
+                        De categorie geleend geld (in casu: interestkosten) neemt een bijzondere plaats in, omdat zij herverdeeld kan worden over de andere kostensoorten vanwege het beslag op vermogen dat gekoppeld kan worden aan de ontstaansbronnen. <br><br>
+                        Elke van deze kostensoorten kan vervolgens toegerekend (c.q. verbijzonderd) worden naar een indeling op basis van de functie die zij hebben in het bedrijfsproces: de functionele kosten.</div>
+                        <br><br>
+                        <div class="btn_functionelekosten item button">Functionele kosten</div>
+                        <div>Uitsplitsing van de kosten naar hun functie in het bedrijfsproces: inkoop, productie, algemeen, verkoop. <br>
+                        De categorie ‘algemeen’ is een restcategorie. Elke van deze groepen kosten kan weer opgebouwd zijn uit kostensoorten.</div>
+                    </div>
+
+                </div>
+                <div class="v2 lesinhoud">
+                    <div class="kopjetitel">Geld</div>
+                    <p>HGEldtekst</p>
+                </div>
+                <div class="v3 lesinhoud">
+                    <div class="kopjetitel">Overeenkomsten</div>
+                    <p>Overeenkomstktekst</p>
+                </div>
+                <div class="v4 lesinhoud">
+                    <div class="starter displaynone">De hoofdindeling is eenvoudig</div>
+                    <div class="kopjetitel">1 Inleiding</div>
+                    <div class="overflow">
+                        <p>Hiernaast zie je de organisatie van de bakker. Met alle inkomende en uitgaande stromingen.  </p>
+                        <p></p>
                             <div class="kopje">Mensen</div>
                             <p>Mensen zijn het uitgangspunt van de economie. Hier kun je onderzoeken hoe economen naar de besluitvorming van mensen kijken. Hoe mensen behoeften hebben en daar nut aan toekennen. </p>
                             <div class="kopje">Natuur</div>
@@ -222,6 +316,61 @@ $(document).ready(function() {
                     <div class="icon icon-situatie"> </div> dat je vind in de bovenste balk.
                     <br>
                     <br> Je kunt meerdere situaties bestuderen. We beginnen eenvoudig met 1n persoon op een onbewoond eiland.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- les4 MENSEN -->
+    <div class="les4 displaynone">
+        <div class="lesheader overzicht">
+            <div class="lesonderdeel">
+                <div class="lestitel">H2. Mensen</div>
+                <div class="styled-select">
+                    <select class="lesonderdelen">
+                        <option value="v1">Inleiding</option>
+                        <option value="v2">Geld</option>
+                        <option value="v3">Overeenkomsten</option>
+                        <option value="v4">Dibiteuren en crediteuren</option>>
+                        <option value="v5">Financiële producten</option>
+                        <option value="v6">Overheidsrechten en -plichten</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="le-container">
+            <div class="body">
+                <div class="v1 lesinhoud">
+                    <div class="kopjetitel">hjkljh</div>
+                    <p>Mensen asdflkasjf;asldk jfkj</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- les5 MARKTEN -->
+    <div class="les5 displaynone">
+        <div class="lesheader overzicht">
+            <div class="lesonderdeel">
+                <div class="lestitel">H4. Markten</div>
+                <div class="styled-select">
+                    <select class="lesonderdelen">
+                        <option value="v1">Inleiding</option>
+                        <option value="v2">Geld</option>
+                        <option value="v3">Overeenkomsten</option>
+                        <option value="v4">Dibiteuren en crediteuren</option>>
+                        <option value="v5">Financiële producten</option>
+                        <option value="v6">Overheidsrechten en -plichten</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="le-container">
+            <div class="body">
+                <div class="v1 lesinhoud">
+                    <div class="kopjetitel">Markten</div>
+                    <p>Markten ajdfas;lfkasj;lj</p>
                 </div>
             </div>
         </div>

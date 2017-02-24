@@ -41,15 +41,18 @@
 
 // ERVARINGEN
 
-
+  
   .container-people {
+    position: relative;
+    top: 175px;
+    z-index: 5;    
+    box-shadow: 0px 20px 250px #888;
     display: -webkit-flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;     
     margin: 0px;
-    background-color: white;
-    padding: 12px 0px 24px 0px;
+    background-color: white;    
     width: 1100px;
 
     .ik-anderen {
@@ -124,8 +127,14 @@
   display: flex;
   flex-direction: column;
   border: 1px solid $border-color-base;
-  margin-bottom: 24px;
+  margin: 24px 0px;
   background-color: $background-color-2;
+  .tit {
+    display: flex;
+    justify-content: center; 
+  border-bottom: 1px solid $border-color-base; 
+      padding: 8px 24px; 
+  }
   .row1 {
     display: flex;
     justify-content: center;
@@ -150,49 +159,82 @@
   }
 }
 
+// ervaring basis
 .mens_ervaring {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 1100px;
-  .buiten, .mensMaxima, .binnen {
-    width: 398px;
-    height: 350px;
+  .buiten, 
+  .mensMaxima, 
+  .binnen {
+    width: 350px;
+    height: 300px;
     border: 1px solid $border-color-base;
   }
+
   .buiten {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: 1px dashed $border-color-base;
     .ervaringenslider {
       z-index: 3;
-      #slider1_container {
-        position: relative; 
-        width: 400px; 
-        height: 350px; 
+        position: relative;
+      .slider2_container {
+        transform-origin: 0px 0px 0px;
+      }
         .slidesx {
-          z-index: 13;
           cursor: move; 
-          left: 0px; top: 0px; 
-          width: 400px; height: 350px; 
-         overflow: hidden;
+          width: 300px;
+          height: 240px;
         }
         .jssora21l {
-          z-index:10;
-          top: 25px; 
-          left: 0px;
+          position: relative;
+          top: 260px;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          background: url(/images/icons/icon_sliderarrow.svg) center center no-repeat;
+          -ms-transform: rotate(180deg); /* IE 9 */
+          -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+          transform: rotate(180deg);
+         
         }
-        .jssora21r {
-          top: 5px; 
-          left: 270px;        
+        .jssora21r {position: absolute;
+        top: 260px;
+        left: 300px;
+          /* size of arrow element */
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          background: url(/images/icons/icon_sliderarrow.svg) center center no-repeat;   
         }
         .jssorb02 {
-          position: relative;
-          top: 220px; 
-          left: 140px;
         }  
-      }  
+
+.jssorb02 div, 
+.jssorb02 div:hover, 
+.jssorb02 .av {
+    /* size of bullet elment */
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    color: white;
+    font-size: 12px;
+    background: url(/libs/jssor_slider/img/b02.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb02 div { background-position: -5px -5px; }
+.jssorb02 div:hover, 
+.jssorb02 .av:hover { background-position: -35px -5px; }
+.jssorb02 .av { background-position: -65px -5px; }
+.jssorb02 .dn, 
+.jssorb02 .dn:hover { background-position: -95px -5px; }
+
 
       .titel {
         position: relative;
@@ -200,6 +242,7 @@
       }
     }
   }
+
   .mensMaxima {
     width: 150px;
         display: flex;
@@ -223,7 +266,9 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: stretch;
           .colom3 {
+              flex: 1 1 auto;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -231,7 +276,7 @@
               border-width: 1px 1px 0px 0px;
               border-color: $border-color-base;
               padding: 8px;
-              width: 150px;
+              width: 200px;
             .beschrijving {
             }
             .mleft {
@@ -250,7 +295,7 @@
               border-width: 1px 0px 0px 0px;
               border-color: $border-color-base;
               padding: 12px;
-              width: 150px;
+              width: 200px;
             .plaatje_getal {
               display: flex;
               flex-direction: row;
@@ -308,11 +353,12 @@
               flex-direction: row;
               justify-content: space-between;
               align-items: center;              
-              border-width: 1px 1px 0px 0px;
+              border-width: 1px 1px 1px 0px;
               border-style: solid;
               border-color: $border-color-base;
               background-color:$background-color-2;   
               height: 36px;
+              width: 100%;
               div {}
   }
 

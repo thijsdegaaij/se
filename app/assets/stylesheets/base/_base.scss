@@ -36,6 +36,11 @@ a {
   cursor: pointer;
 }
 
+  .showtarget1 {
+    background-color: $showtargetcolor1;
+  }
+
+
   .flex-row-left {
     display: -webkit-flex;
     flex-direction: row;

@@ -630,40 +630,6 @@
     position: relative;
     left: 30px; 
     }
-  .ervaringenslider {
-    z-index: 3;
-    #slider1_container {
-      position: relative; 
-      width: 300px; 
-      height: 255px; 
-      .slidesx {
-        z-index: 13;
-        cursor: move; 
-        left: 0px; top: 0px; 
-        width: 299px; height: 255px; 
-	   overflow: hidden;
-      }
-      .jssora21l {
-        z-index:10;
-        top: 25px; 
-        left: 0px;
-      }
-      .jssora21r {
-        top: 5px; 
-        left: 270px;        
-      }
-      .jssorb02 {
-        position: relative;
-        top: 220px; 
-        left: 140px;
-      }  
-    }  
-
-    .titel {
-      position: relative;
-      left: 30px;
-    }
-  }
 
 
   .lijst-arbeid, .lijst-vrijetijd {
@@ -674,10 +640,16 @@
   }
 
   .lijst-gevoelens {
-    //position: relative;
-    //top: 24px;
-    //left: 0px;
-     box-shadow: 0px 0px 36px 0px rgba(1, 0, 0, 0.27);
+    position: relative;
+    top: 24px;
+    box-shadow: 0px 0px 200px 0px rgba(1, 0, 0, 0.7);
+    .titel {
+       background-color: $background-color-2;
+       padding: 8px 14px;   
+       div {
+         margin-right: 8px;
+       }    
+     }
      img {
        width: 100%;
      }

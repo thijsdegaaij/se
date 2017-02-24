@@ -7,25 +7,25 @@ $(document).ready(function() {
 
 // Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
 
-    $(document.body).on("click", ".btn-nederlandview", function() {
+    $(document.body).on("click", ".btn-nederlandview, .btn-les2", function() {
         $(".navbtn").removeClass(" btngeselecteerd");
         $(".btn-nederlandview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.orgdivision").show();
     });
-    $(document.body).on("click", ".btn-mensview", function() {
+    $(document.body).on("click", ".btn-mensview, .btn-les4", function() {
         $(".navbtn").removeClass(" btngeselecteerd");
         $(".btn-mensview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.mensen").show();
     });
-    $(document.body).on("click", ".btn-organisatieview", function() {
+    $(document.body).on("click", ".btn-organisatieview, .btn-les3", function() {
         $(".navbtn").removeClass(" btngeselecteerd");
         $(".btn-organisatieview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.simrow-organisations").show();
     });
-    $(document.body).on("click", ".btn-marktview", function() {
+    $(document.body).on("click", ".btn-marktview, .btn-les5", function() {
         $(".navbtn").removeClass(" btngeselecteerd");
         $(".btn-marktview").addClass(" btngeselecteerd");
         $(".simrow").hide();
@@ -42,7 +42,7 @@ $(document).ready(function() {
   <div class="lijn_navb"></div> 
   <!-- LOGO -->
     <div class="logo-se">
-      <img src="/images/logos/logo-se.png" alt="SuperEconomics">
+      <img src="/images/logos/Logo_VisualEconomics.png" alt="SuperEconomics">
     </div>
 
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
      <div class="navheading">
         <div class="navheaders">
-          <div class="navbtn btn-nederlandview  btngeselecteerd">Landen</div>
+          <div class="navbtn btn-nederlandview  btngeselecteerd">Land</div>
           <div class="navbtn btn-mensview ">Mensen</div>
           <div class="navbtn btn-organisatieview ">Organisaties</div>
           <div class="navbtn btn-marktview ">Markten</div>           

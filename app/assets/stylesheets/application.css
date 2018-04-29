@@ -1064,8 +1064,6 @@ a {
     .lessons .lessons-display .header, .assignments .lessons-display .header {
       font-size: 20px;
       color: #808080; }
-    .lessons .lessons-display .body, .assignments .lessons-display .body {
-      padding: 0px 48px 12px 48px; }
     .lessons .lessons-display .module, .assignments .lessons-display .module {
       padding-top: 2px;
       font-weight: bold;
@@ -1074,12 +1072,15 @@ a {
       color: #4387f4; }
     .lessons .lessons-display li, .assignments .lessons-display li {
       list-style-type: none; }
+  .lessons .le-container, .assignments .le-container {
+    height: 1233px;
+    overflow-y: auto; }
   .lessons .body, .assignments .body {
+    padding-right: 24px;
     display: -webkit-flex;
     flex-direction: column;
     -webkit-justify-content: flex-start;
     text-align: justify;
-    overflow-y: auto;
     /* select {
        -webkit-appearance: none;
        -moz-appearance: none;
@@ -2719,14 +2720,18 @@ table.tablesorter thead tr .headerSortDown {
   color: #808080;
   background: url("/images/icons/icon_arrow-dropdown.png") no-repeat right;
   background-size: 30px 30px;
-  padding: 12px 24px; }
+  padding: 12px 24px;
+  text-transform: uppercase; }
   .game_btn div:nth-child(1),
   .lessons_btn div:nth-child(1),
   .assignments_btn div:nth-child(1) {
     margin-right: 24px; }
 
+.game_btn {
+  left: 10px; }
+
 .lessons_btn {
-  left: 238px; }
+  left: 228px; }
 
 .assignments_btn {
   left: 450px; }
@@ -5300,14 +5305,10 @@ table.tablesorter thead tr .headerSortDown {
 
 .simulation {
   position: absolute;
-  top: -122px;
   left: 650px;
   width: 1250px;
   display: flex;
-  flex-direction: column;
-  overflow-y: auto; }
-  .simulation .simrow {
-    overflow-y: auto; }
+  flex-direction: column; }
 
 .flex-rowstart {
   display: flex;

@@ -18,14 +18,28 @@ var ready = function() {
  //        $('.orgscontainer #' + $(this).val()).show();
     })
 
+    // navtwee onder organisatie 
 
+  $(document.body).on("click", ".btn-organisatieview", function() {
+        $(".orgx .navtwee .navbtn").removeClass(" btngeselecteerd");
+        $(".btn-organisatieview").addClass(" btngeselecteerd");
+        $(".basisorganisatie").show();
+        $(".simrow.accountingintern").hide();
+        $(".simrow.accountingextern").hide();
+    });
     $(document.body).on("click", ".btn-intverslagview", function() {
-        $(".btn-intverslagview").toggleClass("bold");
-        $(".simrow.accountingintern").toggle();
+        $(".orgx .navtwee .navbtn").removeClass(" btngeselecteerd");
+        $(".btn-intverslagview").addClass(" btngeselecteerd");
+        $(".basisorganisatie").hide();
+        $(".simrow.accountingintern").show();
+        $(".simrow.accountingextern").hide();
     });
     $(document.body).on("click", ".btn-extverslagview", function() {
-        $(".btn-extverslagview").toggleClass("bold");
-        $(".simrow.accountingextern").toggle();
+        $(".orgx .navtwee .navbtn").removeClass(" btngeselecteerd");
+        $(".btn-extverslagview").addClass(" btngeselecteerd");
+        $(".basisorganisatie").hide();
+        $(".simrow.accountingintern").hide();
+        $(".simrow.accountingextern").show();
     });
 
 
@@ -142,6 +156,12 @@ var ready = function() {
         }
     });
 
+//  Grootboekrekening Voorraad brood
+
+    $(document.body).on("click", ".toon_gbr_inkoopbrood", function() {
+        $(".grootboek-rails").toggleClass("displaynone");
+    });
+
 
 // GBR vergroting
 
@@ -207,3 +227,5 @@ var ready = function() {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+

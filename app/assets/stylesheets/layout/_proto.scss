@@ -140,6 +140,7 @@
     align-items: center;
 }
 
+
 .flex-cc {
     display: flex;
     flex-direction: column;
@@ -165,21 +166,22 @@
 
 .simulation {
     position: absolute;
-    top: 70px;
+    top: -122px;
     left: $left;
-    width: 1250px;
+    width: 1250px;    
     display: flex;
     flex-direction: column;
-    z-index: 3;
-    y-overflow: scroll;
-    background-color: white;
+    overflow-y: auto;
     .simrow {
+    overflow-y: auto;
     }
 }
 
 .flex-rowstart {
     display: flex;
     flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    overflow-y: auto;
 }
 
 
@@ -228,7 +230,16 @@
 .bgoutput {
     background-color: $bgoutput!important;
 }
-
+ 
 .bginput {
     background-color: $bginput!important;
+}
+
+.bgwinst {
+    background-color: $bgwinst;
+}
+
+.icon.bgoutput, .icon.bginput {
+    padding-left: 8px;
+    color: black;
 }

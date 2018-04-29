@@ -1,56 +1,112 @@
+
+    //dropdown-css van bavotasan.com
+    .styled-select select {
+        background: transparent;
+        padding: 0px 0px 0px 5px;
+        border: 0;
+        height: 100%;
+        width: 100%;
+        -webkit-appearance: none;
+        cursor: pointer;
+    }
+    .styled-select {
+        width: 230px;
+        height: 34px;
+        overflow: hidden;
+        background: url('/images/icons/icon_arrow-dropdown.png') no-repeat right;
+        background-size: 30px 30px;
+        border: 1px solid $border-color-base;
+    }
+
+ .navtwee .styled-select {
+    width: 120px;
+  }
+
+   .lessons .styled-select select {
+    font-weight: bold;
+    padding-left: 0px;
+
+  }
+  .lessons .styled-select {
+    border: 0px;
+  }
+
+rood {
+  color: red;
+}
+.padding_right {
+  padding-right: 18px;
+}
+
+  .logo-se {
+    position: fixed;
+    z-index:1000;
+    margin: 5px 0px 0px 32px;
+    top: 10px;
+    left: 0px;
+    img {
+      height: 35px;
+      opacity: 0.8;
+      width: 520px;
+      height: auto;
+    }
+  }
 .navb {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: fixed; 
+  position: relative; 
   z-index: 10;
   top: 0px;
   left: 0px;
   background-color: $background-color-1;
-  height: 70px;
-  width: 1900px;
+  //height: 40px;
+  width: 1900px - $left;
   //border-bottom: 1px solid $border-color-base;
 
+
+
   .lijn_navb {
-    position: fixed;
-    top: 71px;
-    left: $left;
+    position: absolute;
+    top: 48px;
+    //left: $left;
     height: 1px;
     width: 1250px;
     background-color: $border-color-base;
   }
-  .logo-se {
-    width: 300px;
-    height: 40px;
-    margin: 2px 0px 0px 48px;
-    img {
-      height: 40px;
-    }
-  }
 
   .navheading {
-    position: absolute;
-    left: $left;
-    display: flex;
-    flex-direction: row;
-    -webkit-align-items: center;
-  }
-  .navheaders {
+    width: 1900px - $left;
+    background-color: $background-color-1;
+    position: relative;
+    //left: $left;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
+  }
+  .navheaders {
+    background-color: $background-color-1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    //height: 48px;
     //margin-top: 5px;
     div:first-child {
       border-left: 1px solid $border-color-base;      
     }
     div {
-      height: 71px;
-      padding: 21px 18px;
+      height: 100%;
+      padding: 12px 18px 10px;
       border-right: 1px solid $border-color-base;
       color: $kop2;
-      font-size: 20px;
+      font-size: 16px;
+      //letter-spacing: .5pt;
+      text-transform: uppercase;
     }
   }
+
 
   .navheaders .btngeselecteerd  {
     //text-decoration: underline;
@@ -64,7 +120,9 @@
     cursor: pointer;
   }
   .concept {
-    margin: 0px 48px 0px 48px;
+    display: flex;
+    align-items: center;
+    //margin: 10px 48px 0px 48px;
   }
 /* space */
   .space {
@@ -218,49 +276,53 @@
 
 
 // tweede navigatiebar
+
 .navtwee, .navdrie {
-    // position: fixed;
+    height: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: $background-color-1;
-    height: 48px;
-    padding: 0px 24px 0px 24px;
-    border-width: 0px 0px 0px 1px;
+    padding: 0px 24px 0px 2px;
+    border-width: 0px 0px 1px 1px;
     border-style: solid;
     border-color: $border-color-base!important;
     .navheader {
-        display: none;
-        color: $kop2;
-        font-size: 16px;
-        padding: 16px 48px 16px 0px;
-
+      display: none;
+      color: $kop2;
+      font-size: 16px;
+      //padding: 16px 48px 16px 0px;
     }
     .navbtn {
-        padding: 12px 48px 12px 48px;
-        color: $text-color-base;
+      display: flex;
+      align-items: center;
+      padding: 0px 48px;
+      color: $text-color-base;
       border-right: 1px solid $border-color-base;
       color: $kop2;
       font-size: 16px;
       cursor: pointer;
+      height: 100%;
+    } 
+    .navbtn:hover {
+      background-color: $background-color-2;
     }
-    .navbtn:hover,
-    .btngeselecteerd_navtwee {
+    .btngeselecteerd {
       background-color: $background-color-2;
     }
 }
 
-.navdrie {
-  border-top: 1px solid $border-color-base;
-  width: 100%;
-  height: 38px !important;
-    .navbtn {
-        padding: 6px 48px 6px 48px;
+.navbtn .btngeselecteerd,
+.navbtn.btngeselecteerd {
+      background-color: $background-color-2;
     }
+
+.bedrijfskolomxx{ //voor bedrijfskolom 100% te zetten
+  width: 1250px;
 }
 
     .btngeselecteerd_navdrie {
-      background-color: $background-color-2;
+      background-color: red;// $background-color-2;
     }
 
 

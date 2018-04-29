@@ -1,17 +1,17 @@
+<!-- h_organisatie.html.erb -->
 <%= form_tag organisaties_h_organisatie_path, id: "organisatie", multipart: true, :method => 'get', remote: true do %>
 <div class="flex-rowstart orgx">
     <div class="navtwee ">
-        <div class="icon icon-organisatie displaynone"></div>
-        <div class="navheader">Organisaties</div>
-        <div class="navbtn styled-select">
-          <div class="orgonderdelen">
-              <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
-          </div>  
+        <div class="flex-row-left navbtn btn-organisatieview btngeselecteerd">
+            <div class="   padding_right">E&#233;n organisatie</div>
+            <div class=" styled-select">
+               <div class="orgonderdelen">
+                    <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
+                </div>  
+            </div>
         </div>
-
-        <div class="navbtn btn-intverslagview button">Overzicht</div>
-        <div class="navbtn btn-intverslagview button">Interne verslaglegging</div>
-        <div class="navbtn btn-extverslagview button">Externe verslaglegging</div>
+        <div class="navbtn btn-intverslagview ">Interne verslaglegging</div>
+        <div class="navbtn btn-extverslagview ">Externe verslaglegging</div>
     </div>
     <%= submit_tag "Zet organisatie", class: "btn btn-primary", id: "search_submit", style: "display: none;" %>
   

@@ -43,6 +43,12 @@
   padding: 24px 24px 24px 24px;
 	border: 1px solid $border-color-base;
 	//background-color: white; // $background-color-2;
+	
+	.flex-columncenter {
+		top: 300px;
+		background-color: red;
+	}
+	
 }
 .grootboeken {
   display: flex;
@@ -151,7 +157,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 60px;
+  left: 67px;
 
   .hor {
   display: flex;
@@ -162,7 +168,7 @@
   :nth-child(2) {flex: 0 0 85px; padding: 1px 0px 0px 0px; }
   :nth-child(3) {flex: 0 0 130px; padding: 1px 8px 0px 2px;}        
   :nth-child(4) {flex: 0 0 50px;}       
-  :nth-child(5) {flex: 0 0 190px; align-self: center;}
+  :nth-child(5) {flex: 0 0 240px; align-self: center;}
   }
   .hor.k2 :nth-child(2), 
   .hor.k2 :nth-child(3) {
@@ -248,60 +254,54 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	background-color: red;
 }
 .boeking_row {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	.field {
-		width: 136px;
+		width: 143px;
 	}
 }
 
 .journaals {
-  position: absolute;
-   padding: 24px;
-   top: 0px; 
-   left: -565px; 
+   padding: 0px;
    display: flex;
-   flex-direction: column;
-   width: 563px;
-   height:730px;
-   background-color: white;
-   box-shadow: 0px 0px 36px 0px rgba(1,0,0,0.27);
-   border: 1px solid $border-color-base;  
-   padding-top: 175px;
+   flex-direction: row;
+   justify-content: flex-start;
+   //box-shadow: 0px 0px 36px 0px rgba(1,0,0,0.27);
+   //border-bottom: 1px solid $border-color-base;  
+   padding-top:36px;
    
    .header {
-      position: relative;
-
+   	position: absolute;
+   	top: 110px;
       text-transform: uppercase;
       color: $text-color-grey;
       font-weight: bold;
-      position: absolute;
-      top: 24px;
       }
-   .klap img {
-     color: red;
+   .klappers {
+   		background: url(klappers.png);
+   		background-repeat: no-repeat;
+   		background-size: 300px;
+   		height: 300px;
+   		width: 330px;
+   		margin-top: 24px;
+   		margin-left: -10px;
      //background-color: yellow;
-     //background-image: url("/images/orgbakker/klappers.png")!important;
-      position: absolute;
-       padding: 24px; 
-       top: -10px;
-      left: 120px;
-      width: 300px;
-      z-index: 0;
-      //height: 160px;
-      }
+   }
   .btns {     
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 505px;   
-    margin-top: 36px;
-    border-bottom: 1px solid $border-color-base;
+    flex-direction: column;
+    align-items: flex-end;
+    //justify-content: flex-end;
+    //width: 505px;   
+    margin-top: 66px;
+    //border-bottom: 1px solid $border-color-base;
     margin-bottom: 12px;
     z-index: 1;
+      padding-right: 24px;
       >div {
        color: $text-color-base;
         margin-top: 8px;
@@ -607,11 +607,11 @@
 
 //  GBR DYN 
 .gbr_vergroot {
-       position: absolute !important;
-       top: 870px;
-       left: 180px;
-       background-color: white; 
-       padding: 24px 48px;
+       //position: absolute !important;
+       //top: 870px;
+       //left: 180px;
+       //background-color: white; 
+      // padding: 24px 48px;
        border: 1px solid $border-color-base;        
        box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);       
        width: 1098px;
@@ -629,6 +629,18 @@
       color: $text-color-grey; 
       }
 	}
+
+.grootboek-rails {
+	z-index:10;
+	background-color: #fcfcfc;
+	//box-shadow: 0px 0px 7px 14px #00000033;
+	margin-top: 24px;
+	border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $border-color-dark;
+    padding: 12px 12px 12px 12px;
+    margin-bottom: 48px;
+}
 .grootboekrekeningen_titel {
 	font-size: 14px;
 	text-transform: uppercase; 
@@ -637,36 +649,39 @@
 	padding: 12px 0px;
 }
 .grootboekrekening_all {
-	height: 500px;
+	//height: 1000px;
 	overflow-y: scroll;
 	width: 1100px; 
+	padding-left: 12px;
 }
 .grootboekrekening_one {
-	 border-style: dashed;
-     border-width: 1px 0px 1px 0px;
-     border-color: $border-color-dark;
-     padding: 12px 0px 12px 0px;
+	// border-style: dashed;
+    // border-width: 1px 0px 1px 0px;
+    // border-color: $border-color-dark;
+    // padding: 12px 0px 12px 0px;
 }
 
 .gbr_dyn { //start van big 1 grootboekrekening
 	         
-       width: 1005px;
+       //width: 1005px;
    
-
+.kopkop {
+	text-align: center;
+}
    .titel {
       display: flex;
       flex-direction: row;
-      font-size: 18px;
-      font-weight: bold;
-      padding-bottom: 24px;
-      :nth-child(1) {flex: 0 0 40px; margin-top: 4px; margin-left: 8px}
-      :nth-child(2) {flex: 0 0 150px; margin-top: 6px;}
+      font-size: 24px;
+      //font-weight: bold;
+      padding-bottom: 12px;
+      :nth-child(1) {flex: 0 0 40px; margin-top: 10px; margin-left: 0px}
+      :nth-child(2) {flex: 0 0 450px; margin-top: 6px;}
       :nth-child(3) {flex: 0 0 260px; margin-top: 8px; font-size: 14px; font-weight: normal;}
       :nth-child(4) {flex: 0 0 30px; margin-top: 3px;  margin-left: auto; }
    }
      .header {
        font-weight: bold;
-       margin: 0px 0px 8px 0px;
+       margin: 16px 0px 2px 0px;
      }
      
    .info {
@@ -714,10 +729,12 @@
    .gbr-rows-scroll .gbr-w::before {content: '€ ';}
    .gbr-rows-scroll .gbr-p::before {content: '€ ';}
 
-   .gbr-row-header {font-weight: bold; 
+   .gbr-row-header {
+   //font-weight: bold; 
    height: 30px; 
    padding-top: 3px;
-   border-bottom: 2px solid $border-color-base;}
+   border-bottom: 1px solid $border-color-base;
+   }
    
    .gbr-rows-scroll {
      height: 284px;

@@ -1,4 +1,4 @@
-/*!
+/*! 33
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
  *
@@ -8544,6 +8544,7 @@ if ( window.attachEvent ) {
 	});
 }
 
+
 support.cors = !!xhrSupported && ( "withCredentials" in xhrSupported );
 support.ajax = xhrSupported = !!xhrSupported;
 
@@ -8585,6 +8586,7 @@ jQuery.ajaxTransport(function( options ) {
 				for ( i in headers ) {
 					xhr.setRequestHeader( i, headers[ i ] );
 				}
+
 
 				// Callback
 				callback = function( type ) {
@@ -8646,6 +8648,7 @@ jQuery.ajaxTransport(function( options ) {
 });
 
 
+				*/
 
 
 // Install script dataType

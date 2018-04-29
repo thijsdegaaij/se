@@ -24,7 +24,7 @@
       padding-bottom: 24px;
       //padding-right: 300px;
       //padding-left: 200px;
-      //background-color: yellow;
+      //background-color: #3500ff;
   }
   
   .container-movie,
@@ -68,7 +68,7 @@
       position: absolute;
       top: -45px;
       text-transform: uppercase;
-      font-size: 14px;
+      //font-size: 14px;
       color: $text-color-grey;
   }
   
@@ -91,13 +91,13 @@
   
   .timeshowheader {
       position: absolute;
-      left: 135px;
-      top: 10px;
+      left: 24px;
+      top: 59px;
       justify-content: flex-start;
       width: 1230px;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: bold;
+      //padding: 12px;
+      //font-size: 16px;
+      //font-weight: bold;
       //text-align: center;
   }
   
@@ -186,7 +186,7 @@
           top: -10px;
           background-color: white;
           color: $text-color-grey;
-          font-size: 12px;
+          //font-size: 12px;
       }
       .k-vrk,
       .k-alg {
@@ -198,7 +198,7 @@
       .k-ink,
       .k-vrk,
       .k-alg {
-          font-size: 14px;
+          //font-size: 14px;
           font-weight: normal;
           .pijlwaarde {
               margin-top: -5px;
@@ -306,7 +306,11 @@
       > img {
           max-width: 140px;
           max-height: 50px;
+          padding-bottom: 4px;
       }
+      .randlinks { //voor verkocht boord
+            padding-left: 12px;
+          }
   }
 
   
@@ -342,7 +346,7 @@
       :nth-child(5) { //sector
           flex: 0 1 65px;
           padding: 4px 0px 2px 6px;
-          color: white;
+          //color: white;
           height: 41px;
       }
       .Huishoudens {
@@ -363,8 +367,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 19px;
-    width: 285px;
+    width: 195px;
     :nth-child(1) {
       flex: 0 1 177px;
     }
@@ -490,7 +493,7 @@
   
   .tw-waarde {
       padding-left: 32px;
-      font-size: 12px;
+      //font-size: 12px;
   }
   
   .listhoofd {
@@ -504,12 +507,12 @@
   
   .listitems {
       padding: 0px 0px 0px 20px;
-      font-size: 12px;
+      //font-size: 12px;
   }
   
   .vergroting .header {
       // van vergroting
-      font-weight: bold;
+      //font-weight: bold;
       text-align: center;
       height: 36px;
       padding-top: 8px;
@@ -528,10 +531,10 @@
   
   .overzichtsfoto-div {
       position: absolute;
-      top: 90px;
+      top: 147px;
       z-index: 1;
-      width: $breedte_organisatie - 2px;
-      height: 628px;
+      width: $breedte_organisatie - 1px;
+      height: 1100px;
       background-color: white;
       border-style: solid;
       border-width: 0px 1px 1px 1px;
@@ -540,7 +543,7 @@
   
   .overzichtsfoto-img {
       width: $breedte_organisatie - 2px;
-      height: 600px;
+      //height: 600px;
   }
   
   .tekoop {}
@@ -640,9 +643,10 @@
       }
   }
 
- .geld .pijlrechts {
+ .geld .pijlrechts,
+ .overheid .pijlrechts {
    position: absolute;
-    left: 775px;
+    left: 784px;
   }
 
   .container-ev,
@@ -663,11 +667,14 @@
 
   
   .org .item {
-    padding-left: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .pijluitleg {
     justify-content: space-between;
-    width: 110px; 
+    width: 120px; 
+    //      height: 40px;
+    // background-color:yellow;
   }  
 
 .pijllinks, .pijlrechts, .middenlinks,
@@ -675,8 +682,23 @@
     color: $procescolor;
 }
 
+.gbrrekeningen {
+  //padding-bottom: 20px;
+}
 
+.horizontale_split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+  .c .itemheader {
+    margin-left: 1px;
+  }
+
+  .itemheaderfinprod{
+    //padding-top: 1px;
+  }
   .overheid .pijluitleg {
     margin-top: -6px;  
   }  
@@ -689,13 +711,17 @@
       padding: 2px;
   }  
   .pijluitlegwoord {
-      padding: 4px 0px 0px 0px;
+    color: $text-color-grey;
+      padding: 0px 0px 0px 0px;
       //font-style: italic;
       cursor: pointer;
-      margin-top: -12px;
+      margin-top: -6px;
+      //background-color:yellow;
   } 
 
-  
+  .pijluitlegwoord, .uitlegproces {
+    //font-size: 14px;
+  }
 
   
   .waardeinvestering {
@@ -714,8 +740,8 @@
  } 
  .middenmidden {
    position: absolute;
-   left: 322px;
-   width: 109px;
+   left: 310px;
+   width: 122px;
    display: none;
    //background-color: $background-color-2;
  } 
@@ -725,7 +751,7 @@
    flex-direction: column;
    position: absolute;
    left: -115px;
-   width: 105px;
+   width: 110px;
    display: none;
  }
  .middenrechts {
@@ -748,12 +774,25 @@
 
  }
 
+
    .uitlegproces{     
-     margin-top: -6px;
+   color: $text-color-grey;
+     margin-top:  -4px;
+     margin-bottom: 4px; 
+
      line-height: 1.1;
+     //font-size: 12px;
    }
 
+.foto_spullen {
+  display: flex;
+  flex-direction: row;
+}
 
+
+.container-ev-display {
+  display: none;
+}
   .container-ev-column {
       display: flex;
       flex-direction: column;
@@ -772,26 +811,23 @@
   }
   
   .container-ev {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-      font-size: 12px;
+      //display: flex;
+      //flex-direction: row;
+      //align-items: center;
+      //position: relative;
       .bar-ev {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          //width: 600px;
-          background-color: white;
           .wl,
           .wm,
           .wr
           {
-              width: 180px;
+              flex: 1 0 50%;
               border-width: 1px 0px 1px 1px;
               border-style: solid;
               border-color: $border-color-base;
               padding: 4px 0px 4px 8px;
+              //background-color: purple;  
           }
           .wr {
               border: 1px solid $border-color-base !important;
@@ -809,22 +845,21 @@
     justify-content: flex-start;
     align-items: center;
     :nth-child(1) {
-      flex: 0 0 150px;
+      flex: 0 0 180px;
     }
     :nth-child(2) {
-      flex: 0 0 auto;
+      flex: 0 1 48px;
     }
     :nth-child(3) {
-      flex: 0 0 60px;
-      //justify-content: flex-end;
+      flex: 0 0 70px;
+      //background-color: yellow;
       text-align: right;
-      //align-self: flex-end;
     }
 
   }
     .winstonderdeel.toename-ev{
-      font-weight: bold;
-      text-decoration: underline;
+      //font-weight: bold;
+      //text-decoration: underline; 
     }
   
 
@@ -835,6 +870,9 @@
       border-color: $border-color-base;
   }
 
+.bedrijfsprocessen-b, .bedrijfsprocessen-ac {
+  background-color: $background-color-1;
+}
 
   .orgheader,
   .overeenkomsten,
@@ -911,7 +949,7 @@
   }
   
   .ovrheader {
-      font-size: 14px;
+      //font-size: 14px;
       border: solid;
       border-color: $border-color-base;
       background-color: $background-color-1;
@@ -919,7 +957,7 @@
   }
   
   .ovrprijs {
-      font-size: 14px;
+      //font-size: 14px;
       border: solid;
       border-color: $border-color-base;
       background-color: $background-color-2;
@@ -941,7 +979,20 @@
   .ovrprijs {
       width: 150px;
   }
- 
+
+
+
+  .icon-prod-pos {
+    background-color: $bgwinst;
+  }
+
+  .winstonderdeel .icon-rente-neg,
+  .winstonderdeel .icon-belasting-neg,
+  .winstonderdeel .icon-dividend {
+    background-color: $bgoutput;
+  }
+
+  
   
   // DRY 
   .bold {
@@ -958,7 +1009,7 @@
       position: absolute;
       top: 2px;
       left: 8px;
-      font-size: 14px;
+      //font-size: 14px;
       //font-weight: bold;
       color: black; // $text-color-grey;
       //margin-bottom: 8px; 
@@ -1245,3 +1296,88 @@
           background-color: $background-color-2;
       }
   }
+
+
+
+
+
+//  VERGROOT
+
+.gbr-vergroot { //start van big 1 grootboekrekening
+       position: absolute !important;
+       top: 60px;
+       left: 75px;
+       background-color: white; 
+       padding: 24px;
+       border: 1px solid $border-color-base;        
+       box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);       
+       width: 1100px;
+       z-index: 3;
+   .titel {
+      display: flex;
+      flex-direction: row;
+      font-size: 16px;
+      font-weight: bold;
+      :nth-child(1) {flex: 0 0 40px; margin-top: 4px; margin-left: 8px}
+      :nth-child(2) {flex: 0 0 150px; margin-top: 6px;}
+      :nth-child(3) {flex: 0 0 260px; margin-top: 8px; font-size: 14px; font-weight: normal;}
+      :nth-child(4) {flex: 0 0 30px; margin-top: 3px;  margin-left: auto; }
+   }
+     .header {
+       font-weight: bold;
+       margin-top: 24px;
+     }
+     
+   .info {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     margin-bottom: 12px;
+     >.rij {
+     display: flex;
+     flex-direction: row;
+    :nth-child(1) {flex: 0 0 240px;}
+    :nth-child(2) {flex: 0 0 30px;}
+    :nth-child(3) {flex: 0 0 300px;}
+      }      
+   }
+   .info2 >.rij {
+     display: flex;
+     flex-direction: row;
+    :nth-child(1) {flex: 0 0 240px;}
+    :nth-child(2) {flex: 0 0 400px;}
+      }    
+
+   .gbr-row { //in gb
+       padding-left: 8px;
+       display: flex;
+       flex-direction: row; 
+       > div {       
+       padding-top: 4px;
+       }
+       .dd          {flex: 0 0 60px;}
+       .gbr-ovr     {flex: 0 0 100px;}
+       .beschrijving{flex: 0 0 150px;}
+       .icoon       {flex: 0 0 70px;}
+       .sign        {flex: 0 0 40px; text-align: center;} 
+       .gbr-w       {flex: 0 0 70px; text-align: right;}
+       .gbr-h       {flex: 0 0 60px; text-align: right;}
+       .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 12px;}
+       .ks          {flex: 0 0 200px;}
+       .kf          {flex: 0 0 200px;}
+   }
+   .gbr-rows-scroll .gbr-w::before {content: '€ ';}
+   .gbr-rows-scroll .gbr-p::before {content: '€ ';}
+
+   .gbr-row-header {font-weight: bold; 
+   height: 30px; 
+   padding-top: 3px;
+   border-bottom: 2px solid $border-color-base;}
+   .gbr-rows {
+    height: 360px;
+    }
+   .gbr-rows-scroll {
+     height: 284px;
+     overflow-y: scroll;
+   }
+ } //einde van big 1 grootboekrekening

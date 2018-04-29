@@ -4,22 +4,22 @@ $(document).ready(function() {
 
   $(document.body).on("click", ".btn-kleinview", function() {
         $(".one-situation").hide();
-        $(".navbtn").removeClass("bold");
-        $(".btn-kleinview").addClass("bold");
+        $(".bedrijfskolomxx .navbtn").removeClass("btngeselecteerd");
+        $(".btn-kleinview").addClass("btngeselecteerd");
         $(".kleinview").toggle();
     });
 
     $(document.body).on("click", ".btn-mens", function() {
         $(".one-situation").hide();
-        $(".navbtn").removeClass("bold");
-        $(".btn-mens").addClass("bold");
+        $(".bedrijfskolomxx .navbtn").removeClass("btngeselecteerd");
+        $(".btn-mens").addClass("btngeselecteerd");
         $(".mensviewx").toggle();
     });
 
     $(document.body).on("click", ".btn-grootview", function() {
         $(".one-situation").hide();
-        $(".navbtn").removeClass("bold");
-        $(".btn-grootview").addClass("bold");
+        $(".bedrijfskolomxx .navbtn").removeClass("btngeselecteerd");
+        $(".btn-grootview").addClass("btngeselecteerd");
         $(".grootview").toggle();
     });
 
@@ -28,13 +28,11 @@ $(document).ready(function() {
 }); 
 </script>
 
-<div class="flex-rowstart">
-  <div class="navtwee ">
-    <div class="icon icon-informatie displaynone"></div>
-    <div class="navheader">Situaties</div>
-    <div class="navbtn btn-kleinview button bold">Middel-doel organisaties</div>
-    <div class="navbtn btn-mens button ">Middel-doel persoonlijk</div>
-    <div class="navbtn btn-grootview button">Middel-doel (groot)</div>
+<div class="flex-rowstart bedrijfskolomxx">
+  <div class="navdrie">
+    <div class="navbtn btn-kleinview btngeselecteerd rood">Organisaties</div>
+    <div class="navbtn btn-mens">Persoonlijk</div>
+    <div class="navbtn btn-grootview">Organisatie en persoonlijk</div>
   </div>
 
   <div class="flex-columncenter">

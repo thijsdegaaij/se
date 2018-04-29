@@ -1,5 +1,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
+    
+        $(".btn-geld").addClass("bold");
 
 
     // Sectoren
@@ -32,24 +34,74 @@ $(document).ready(function() {
 
 
     // Geldkringloop
-    $(document.body).on("click", ".btn-geldkringloop", function() {
-        $(".sectoruitgebreid").toggle();
+    $(document.body).on("click", ".btn-geld", function() {
+        //$(".sectoruitgebreid").show();
         $(".notmoney").hide();
+        $(".btn-geld").addClass("bold");
+        $(".btn-geldGD").removeClass("bold");
     });
-    $(document.body).on("click", ".btn-notmoney", function() {
-        $(".btn-notmoney").toggleClass("bold");
-        $(".notmoney").toggle();
+    $(document.body).on("click", ".btn-geldGD", function() {
+        $(".btn-geld").removeClass("bold");
+        $(".btn-geldGD").addClass("bold");
+        $(".notmoney").show();
     });
+
+
+/*
+    $(document.body).on("mouseenter", ".gezinnen .titel-sector", function() {
+        $(".vennootschappen .left .I, .vennootschappen .left .B").hide();   
+        $(".fiin .left, .fiin .right").hide();    
+        $(".overheidc .left .O, .overheidc .right .OB ").hide();   
+    });
+    $(document.body).on("mouseleave", ".gezinnen .titel-sector", function() {
+        $(".vennootschappen .left .I, .vennootschappen .left .B").show();  
+        $(".fiin .left, .fiin .right").show();      
+        $(".overheidc .left .O, .overheidc .right .OB ").show();
+    });
+*/
+    // GEZINNEN LEFT
+    $(document.body).on("mouseenter", ".gezinnen .left .icon-geldpijl", function() {
+        $(".gezinnen .left div ").addClass("newColor"); 
+        $(".vennootschappen .right div").addClass("newColor");   
+        //$(".fiin .left, .fiin .right").addClass("newColor");  
+        $(".overheidc .right .B, .overheidc .right .S-premie").addClass("newColor");   
+    });
+    $(document.body).on("mouseleave", ".gezinnen .left .icon-geldpijl", function() {
+        $(".gezinnen .left div").removeClass("newColor"); 
+        $(".vennootschappen .right div").removeClass("newColor");   
+        //$(".fiin .left, .fiin .right").removeClass("newColor");  
+        $(".overheidc .right .B, .overheidc .right .S-premie ").removeClass("newColor");   
+    });
+    //GEZINNEN RIGHT
+       $(document.body).on("mouseenter", ".gezinnen .right .icon-geldpijl", function() {
+        //$(".vennootschappen .left .I, .vennootschappen .left .B").addClass("newColor");   
+        $(".fiin .right").addClass("newColor");  
+        $(".overheidc .right .OB ").addClass("newColor");   
+    });
+    $(document.body).on("mouseleave", ".gezinnen .right .icon-geldpijl", function() {
+        //$(".vennootschappen .left .I, .vennootschappen .left .B").removeClass("newColor");  
+        $(".fiin .right").removeClass("newColor"); 
+        $(".overheidc .right .OB ").removeClass("newColor"); 
+    });
+
+
 
 
 });
 </script>
 <div class="flex-rowstart sim_screen">
-    <div class="navtwee ">
+    <!-- <div class="navtwee ">
         <div class="iconwide icon-organisatie-mv displaynone"></div>
         <div class="navheader btn-geldkringloop button">Geldkringloop</div>
         <div class="navbtn bold">Monetaire sfeer</div>
         <div class="navbtn btn-notmoney button">Re&euml;le sfeer</div>
+    </div> -->
+    <div class="pagnav">
+        <div class="pagtitel">Geldkringloop</div>
+    </div>
+    <div class="pagbuttons">
+        <div class="btn-geld">geld</div>
+        <div class="btn-geldGD">geld, goederen en diensten</div>
     </div>
     <div class="flex-columncenter">      
         <div class="container-sectorenuitgebreid">
@@ -70,7 +122,12 @@ $(document).ready(function() {
                     </div>
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">C, I, B, S-premie</div>
+                        <div class="naam">
+                            <div class="C">C </div>
+                            <div class="I">I</div>
+                            <div class="B">B </div>
+                            <div class="S-premie">S-premie</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -78,7 +135,11 @@ $(document).ready(function() {
                     </div>
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">Y-arbeid, Y-kapitaal, S-uitkering</div>
+                        <div class="naam">
+                            <div class="Y-arbeid">Y-arbeid</div> 
+                            <div class="Y-kapitaal">Y-kapitaal</div> 
+                            <div class="S-uitkering">S-uitkering</div> 
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -271,7 +332,12 @@ $(document).ready(function() {
                     </div>
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">Y-arbeid, Y-kapitaal, I, B</div>
+                        <div class="naam">
+                            <div class="Y-arbeid">Y-arbeid</div>
+                            <div class="Y-kapitaal">Y-kapitaal</div>
+                            <div class="I">I </div>
+                            <div class="B">B</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -279,7 +345,10 @@ $(document).ready(function() {
                     </div>
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">C, I</div>
+                        <div class="naam">
+                            <div class="C">C</div>
+                            <div class="I">I </div>
+                            </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -500,7 +569,10 @@ $(document).ready(function() {
                     </div>
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">I, (O-B)</div>
+                        <div class="naam">
+                            <div class="I">I</div>
+                            <div class="(O-B)">O-B</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -508,7 +580,9 @@ $(document).ready(function() {
                     </div>
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">S</div>
+                        <div class="naam">
+                            <div class="S">S</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -557,7 +631,7 @@ $(document).ready(function() {
                         </div>
                         <div class="left">
                             <div class="icon icon-pos"></div>
-                            <div class="naam">Geld uitlenen aan overheid en bedrijven (I, O)</div>
+                            <div class="naam">Geld uitlenen aan overheid en bedrijven (I O)</div>
                             <div class="waarde"></div>
                             <div class="sect"></div>
                             <div class="bdt"></div>
@@ -617,7 +691,10 @@ $(document).ready(function() {
                     </div>
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">O, S-uitkering</div>
+                        <div class="naam">
+                            <div class="O">O </div>
+                            <div class="S-uitkering">S-uitkering</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>
@@ -625,7 +702,11 @@ $(document).ready(function() {
                     </div>
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
-                        <div class="naam">B, S-premie</div>
+                        <div class="naam">
+                            <div class="B">B </div>
+                            <div class="OB">O-B </div>
+                            <div class="S-premie">S-premie</div>
+                        </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
                         <div class="bdt"></div>

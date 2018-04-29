@@ -8,25 +8,25 @@ $(document).ready(function() {
 // Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
 
     $(document.body).on("click", ".btn-nederlandview, .btn-les2", function() {
-        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".navheaders .navbtn").removeClass(" btngeselecteerd");
         $(".btn-nederlandview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.orgdivision").show();
     });
     $(document.body).on("click", ".btn-mensview, .btn-les4", function() {
-        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".navheaders .navbtn").removeClass(" btngeselecteerd");
         $(".btn-mensview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.mensen").show();
     });
     $(document.body).on("click", ".btn-organisatieview, .btn-les3", function() {
-        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".navheaders .navbtn").removeClass(" btngeselecteerd");
         $(".btn-organisatieview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.simrow-organisations").show();
     });
     $(document.body).on("click", ".btn-marktview, .btn-les5", function() {
-        $(".navbtn").removeClass(" btngeselecteerd");
+        $(".navheaders .navbtn").removeClass(" btngeselecteerd");
         $(".btn-marktview").addClass(" btngeselecteerd");
         $(".simrow").hide();
         $(".simrow.markets").show();
@@ -36,15 +36,12 @@ $(document).ready(function() {
 });
 
 </script>
-
 <div class="navb"> 
-  <!-- lijn hier nodig, blijft altijd staan -->
-  <div class="lijn_navb"></div> 
-  <!-- LOGO -->
-    <div class="logo-se">
-      <img src="/images/logos/Logo_VisualEconomics.png" alt="SuperEconomics">
-    </div>
+  <!-- lijn hier nodig, blijft altijd staan --> 
+    
 
+  <!-- LOGO -->
+   
 
   <!-- simrows aanklikken; jquery bij orgdivsion.html!! -->
 
@@ -53,8 +50,9 @@ $(document).ready(function() {
           <div class="navbtn btn-nederlandview  btngeselecteerd">Land</div>
           <div class="navbtn btn-mensview ">Mensen</div>
           <div class="navbtn btn-organisatieview ">Organisaties</div>
-          <div class="navbtn btn-marktview ">Markten</div>           
+          <div class="navbtn btn-marktview ">Markt</div>           
         </div>
+  <div class="lijn_navb"></div> 
 
       <!-- Zoek concepten -->
           <div class="concept">

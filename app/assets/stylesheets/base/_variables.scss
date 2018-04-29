@@ -29,8 +29,9 @@ $x: hsl(42, 31%, 56%);
 /* Functional colors */
 $output				: hsl(329, 85%, 70%);
 $input				: hsl(28, 15%, 47%);
-$bgoutput			: hsl(329, 85%, 97%);
-$bginput			: hsl(28, 15%, 92%);
+$bgoutput			: hsl(0, 100%, 85%);
+$bginput			: hsl(130, 41%, 80%);
+$bgwinst			: hsl(300, 100%, 70%);
 
 $blue				:	$ggblue;
 $red				:	$ggred;
@@ -58,10 +59,10 @@ $bg-rr				: hsl(61, 100%, 95%);
 
 $gray-light			: 	$gray1;
 
-$huishouden			:	$red;
-$nv					: 	$orange;
-$overheid			: 	$green;
-$financieel			: 	$blue;
+$huishouden			:	$gray2; //grey; //red; // $gray2; // hsl(0, 100%, 94%);// purple; //$red;
+$nv					: 	hsl(188, 75%, 90%);// blue; //$orange;
+$financieel			: 	hsl(188, 75%, 72%); //green; //$green;
+$overheid			: 	hsl(57, 75%, 88%);//darkblue; //$blue;
 
 $tekst-verleden		: 	hsl(45, 23%,45%); 
 $bg-verleden		:	hsl(45, 23%,97%);
@@ -80,7 +81,7 @@ $border-color-try	:	$white;
 $text-color-light	:	$gray1;
 $text-color-grey	:	$gray5;
 $text-color-base	:	$gray6;
-$text-color-dark	:	$gray8;
+$text-color-dark	:	$gray9;
 
 $colorhover			:	$gray1;
 
@@ -91,7 +92,7 @@ $breedte_organisatie: 750px;
 $breedte_b			: $breedte_organisatie - 360px;
 
 
-$procescolor		: $text-color-grey;
+$procescolor		: $text-color-dark; //$text-color-grey;
 
 
 $kop1:		$text-color-base; //	hsl(217, 65%, 55%);

@@ -1,0 +1,6 @@
+img.size {
+    box-shadow: 12px 20px 6px 14px black;
+    background-color: #c5bb2a;
+}
+
+img.size {}

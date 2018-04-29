@@ -1,6 +1,31 @@
 
 // C2: sectoren uitgebreid
 
+
+.pagnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $text-color-base;
+}
+.pagtitel {
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 0px 12px 0px;
+}.pagbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $text-color-base;
+  div {
+    margin: 0px 24px 0px 24px;
+  }
+}
+
 .container-sectorenuitgebreid {
       padding: 24px 0px 4px 0px;
       position: relative;
@@ -10,18 +35,30 @@
       //background-color: yellow;
       width: 1093px;
 
+      .icon-geldpijl {
+        cursor: pointer;
+      }
+
   .titel-sector {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         height: 30px;
-        color: white;
-        font-size: 16px;
+        //color: white;
+        //font-weight: bold;
+        font-size: 14px;
         padding: 8px;
-        border-width: 0px 0px 1px 0px; 
+        border-color: $border-color-base;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px; 
         //width: 202px;
+        cursor: pointer;
       }
+
+  .newColor {
+    color: red;
+  }
   .sectoruitgebreid {
     margin: 12px 0px 12px 0px;
     //background-color: purple;
@@ -70,6 +107,11 @@
       }
       .naam {
         width: 290px;
+        display: flex;
+        flex-direction: row;   
+        div {
+        margin-right:24px;
+        }     
       }
       .waarde {
       }
@@ -93,6 +135,11 @@
       }
       .naam {
         width: 4000px;
+        display: flex;
+        flex-direction: row;
+        div {
+        margin-right: 24px;
+        }
       }
       .waarde {
       }
@@ -106,23 +153,23 @@
   }
 }
 .onderdeel.geldc .naam, .onderdeel.geldc .naam {   
-    color: blue;
+    color: blue;  
   }
  
 .gezinnen .titel-sector {
       background-color: $huishouden;
-      color: white;
+      //color: white;
       }
        
 .vennootschappen .titel-sector {
       background-color: $nv;
-      color: white;
+      //color: white;
       }      
 .fiin .titel-sector {
       background-color: $financieel;
-      color: white;
+      //color: white;
       }    
 .overheidc .titel-sector {
       background-color: $overheid;
-      color: white;
+      //color: white;
       }

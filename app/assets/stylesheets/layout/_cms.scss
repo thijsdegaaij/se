@@ -46,6 +46,8 @@
 }
 
 .cmsTabel {
+	
+	
 	.rechtsuitlijnen {
 			text-align: right; //waarom werkt dit niet??
 			padding-right: 4px;
@@ -80,18 +82,22 @@
    .gbr-row {
        display: flex;
        flex-direction: row;       
-       .dd          {flex: 0 0 90px;}
+       .dd          {flex: 0 0 112px;}
        .gbr-ovr     {flex: 0 0 120px;}
-       .beschrijving{flex: 0 0 90px;}
+       .beschrijving{flex: 0 0 110px;}
        .icoon       {flex: 0 0 30px;}
        .sign        {flex: 0 0 80px; text-align: center;} 
-       .gbr-w       {flex: 0 0 80px; text-align: right;}
-       .gbr-h       {flex: 0 0 90px; text-align: right; padding-right: 12px;}
+       .gbr-w       {flex: 0 0 90px; text-align: right; }
+       .gbr-h       {flex: 0 0 120px; text-align: right; padding-right: 12px;}
        .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 24px;}
-       .show        {flex: 0 0 40px;}
-       .edit        {flex: 0 0 30px;}
-       .destroy     {flex: 0 0 40px;}
+       .show        {flex: 0 0 40px; font-size: 10px;}
+       .edit        {flex: 0 0 30px;; font-size: 10px;}
+       .destroy     {flex: 0 0 40px;; font-size: 10px;}
+        .saldo 		{	padding-left: 486.3px;}
+        .bedragg	{padding-left: 48px; text-align:right;}
+        .nweboeking {padding-left: 181px; }
    }
+   .gbr-row
 
    .gbr-row-header {
 		font-weight: bold; 
@@ -100,10 +106,10 @@
 	    border-bottom: 2px solid $border-color-base;}
    .gbr-rows {
    	.newboeking {
-   		padding-top: 24px;
+   		padding-top: 4px;
    		display: flex;
-   		justify-content: flex-end;
-   		padding-right: 24px;
+   		justify-content: space-between;
+   		padding-right: 79px;
    		}
     }
    .gbr-rows-scroll {

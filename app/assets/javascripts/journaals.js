@@ -11,22 +11,22 @@ var ready = function() {
     $(document.body).on("click", ".btngrootboek, .artwork-klappers", function() {
         $("#search_gb_results").removeClass('displaynone');
         $(".containerinboeken, .kprijscontainer").addClass('displaynone');
-        $(".btngrootboek").addClass('bold');
-        $(".btninboeken, .btnkostprijs").removeClass('bold');
+        $(".navdrie .navbtn").removeClass(" btngeselecteerd");
+        $(".btngrootboek").addClass(" btngeselecteerd");
     });
 
     $(document.body).on("click", ".btninboeken, .artwork-klappers", function() {
         $(".containerinboeken").removeClass('displaynone');
         $("#search_gb_results, .kprijscontainer").addClass('displaynone');
-        $(".btninboeken ").addClass('bold');
-        $(".btngrootboek, .btnkostprijs").removeClass('bold');
+        $(".navdrie .navbtn").removeClass(" btngeselecteerd");
+        $(".btninboeken").addClass(" btngeselecteerd");
     });
 
     $(document.body).on("click", ".btnkostprijs", function() {
         $(".kprijscontainer").removeClass('displaynone');
         $(".containerinboeken, #search_gb_results").addClass('displaynone');
-        $(".btnkostprijs").addClass('bold');
-        $(".btninboeken, .btngrootboek").removeClass('bold');
+        $(".navdrie .navbtn").removeClass(" btngeselecteerd");
+        $(".btnkostprijs").addClass(" btngeselecteerd");
         /*
         $(".btns-intern button").removeClass("bold");   
         $(".btnkostprijs").addClass("bold");  */
@@ -78,12 +78,12 @@ var ready = function() {
         $(".inboekingsmogelijkheden").addClass("displaynone");
         $(".inboekingsmogelijkheden.bank").removeClass("displaynone");
     });
-    $(document.body).on("click", ".btn-inboeken.kas", function() {
+    $(document.body).on("click", ".btn-inboeken.kas", function() { // button is er niet
         $(".btn-inboeken").removeClass("bold");
         $(".btn-inboeken.kas").addClass("bold");
         $(".journaal").addClass("displaynone");
         $(".journaal.kas").removeClass("displaynone");
-        $(".inboekingsmogelijkheden").addClass("displaynone");
+        $(".inboekingsmogelijkheden.kas").addClass("displaynone");
     });
     $(document.body).on("click", ".btn-inboeken.leveringen", function() {
         $(".btn-inboeken").removeClass("bold");
@@ -120,3 +120,7 @@ var ready = function() {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+
+
+

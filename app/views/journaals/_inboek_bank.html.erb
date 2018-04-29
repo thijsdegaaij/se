@@ -10,7 +10,11 @@
   <%= f.number_field :journaal_id, value: session[:jnl_bank_id], style: "display: none;" %>
   
   <div class="boeking_column">
-      <div class="boeking_row">   
+      <div class="boeking_row">  
+         <div class="field">
+           <p><%= f.label "Boeknummer" %></p>
+           <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+         </div>   
          <div class="field">
            <p><%= f.label "Grootboekrekening" %></p>
            <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>

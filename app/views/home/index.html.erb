@@ -1,42 +1,39 @@
-
-<script src='js/proto.js'></script>
-
-<%= render template: "oldstviews/inc_navbar" %>
-
-<div class="lessonassignmentspace"></div>
-
-<div class="contain assigncc  "> 
-  <%= render template: "oldstviews/inc_assignments.html" %>
+<script src='js/proto.js'>
+</script>
+<div class="logo-se">
+    <img src="/images/logos/Logo_economieInDeKlas.png" alt="SuperEconomics">
 </div>
-
-<div class="contain lesson ">
-  <%= render template: "oldstviews/inc_lessons.html" %>
-</div>
-
-<div class="simulation">
-  <div class="simrow orgdivision ">
-    <%= render template: "oldstviews/inc_orgdivision.html" %>
-  </div>
-
-  <div class="simrow mensen displaynone">
-    <%= render template: "oldstviews/inc_people.html" %>
-  </div>
-  
-  <div class="simrow simrow-organisations displaynone">
-    <%= render template: "organisaties/h_organisatie.html" %>
-  </div>
-
-  <div id="journaals" class="simrow accountingintern displaynone ">
-    <%= render template: "journaals/h_journaal.html" %>
-  </div>
-
-  <div class="simrow accountingextern displaynone">
-    <%= render template: "oldstviews/inc_accextern.html" %>
-  </div>
-
-  <div class="simrow markets displaynone ">
-    <%= render template: "oldstviews/inc_markets.html" %>
-  </div>
+    <div class="lessonassignmentspace"></div>
+    <div class="contain game_cc  ">
+        <%= render template: "oldstviews/inc_gameopdracht" %>
+    </div>
+    <div class="contain assignments_cc  ">
+        <%= render template: "oldstviews/inc_assignments" %>
+    </div>
+    <div class="contain lessons_cc ">
+        <%= render template: "oldstviews/inc_lessons" %>
+    </div>
 
 
-</div>
+    <div class="simulation">
+        <%= render template: "oldstviews/inc_navbar" %>
+        <!--land -->
+        <div class="simrow orgdivision displaynone">
+            <%= render template: "oldstviews/inc_orgdivision" %>
+        </div>
+        <div class="simrow mensen displaynone">
+            <%= render template: "oldstviews/inc_people" %>
+        </div>
+        <div class="simrow markets  ">
+            <%= render template: "oldstviews/inc_markets" %>
+        </div>
+        <div class="simrow simrow-organisations displaynone">
+            <%= render template: "organisaties/h_organisatie" %>
+        </div>
+        <div id="journaals" class="simrow accountingintern displaynone ">
+            <%= render template: "journaals/h_journaal" %>
+        </div>
+        <div class="simrow accountingextern ">
+            <%= render template: "oldstviews/inc_accextern" %>
+        </div>
+    </div>

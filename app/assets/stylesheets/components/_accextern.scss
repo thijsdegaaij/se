@@ -19,7 +19,7 @@
   }
 
   .container-scontro {
-    padding: 12px 24px 12px 24px;
+    padding: 12px 12px 12px 12px;
     margin: 0px 8px 0px 8px;
     border: 1px solid $border-color-base; 
     width: 560px;
@@ -55,16 +55,16 @@
     .debet {
       padding: 8px 8px 8px 8px ;
       border-right: 1px solid $border-color-base;
-    }
+    
     .credit {
       padding: 8px 8px 8px 16px;
       //color: beige;
     }
     .regel .naam {
-      width: 150px;
+      width: 170px;
     }
     .regel .bedrag {
-      width:70px;
+      width:90px;
       align-items: flex-end;
     }
     .regel.vrij {
@@ -76,6 +76,11 @@
       >.bedrag {
           text-decoration: underline;
       }
+    }
+    }
+    .credit {
+    	padding: 8px;
+    	.naam {width: 150px;}
     }
   }
   

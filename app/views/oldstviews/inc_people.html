@@ -18,56 +18,56 @@ $(document).ready(function() {
 
     // knoppen in menu twee
     $(document.body).on("click", ".btn-overzicht", function() {
-        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiek").addClass("displaynone");
+        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiekxx").addClass("displaynone");
         $(".mensen_overzicht").removeClass("displaynone");
-        $(".mensenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".mensenxx .btn-overzicht").addClass("btngeselecteerd_navtwee");
+        $(".mensenxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensenxx .btn-overzicht").addClass("btngeselecteerd");
     });    
     $(document.body).on("click", ".btn-ervaringen", function() {
-        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiek").addClass("displaynone");
+        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiekxx").addClass("displaynone");
         $(".container_ervaring-display").removeClass("displaynone");
-        $(".mensenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".mensenxx .btn-ervaringen").addClass("btngeselecteerd_navtwee");
+        $(".mensenxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensenxx .btn-ervaringen").addClass("btngeselecteerd");
     });    
     $(document.body).on("click", ".btn-ideaal", function() { 
-        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiek").addClass("displaynone");
+        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiekxx").addClass("displaynone");
         $(".mensen_ideaal").removeClass("displaynone");
-        $(".mensenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".mensenxx .btn-ideaal").addClass("btngeselecteerd_navtwee");
+        $(".mensenxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensenxx .btn-ideaal").addClass("btngeselecteerd");
       });
     $(document.body).on("click", ".btn-mensgrafiek", function() { 
-        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiek").addClass("displaynone");
-        $(".mensenxx .mensen_grafiek").removeClass("displaynone");
-        $(".mensenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".mensenxx .btn-mensgrafiek").addClass("btngeselecteerd_navtwee");
+        $(".mensen_overzicht, .container_ervaring-display, .mensen_ideaal, .mensen_grafiekxx").addClass("displaynone");
+        $(".mensen_grafiekxx").removeClass("displaynone");
+        $(".mensenxx .navbtn").removeClass("btngeselecteerd");
+        $(".btn-mensgrafiek").addClass("btngeselecteerd");
       });
 
 
 
     // knoppen in menu drie
-    $(document.body).on("click", ".btn_1", function() {
-        $(".view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
-        $(".view_btn_1").removeClass("displaynone");
-        $(".mensen_grafiek .navbtn").removeClass("btngeselecteerd_navdrie");
-        $(".mensen_grafiek .btn_1").addClass("btngeselecteerd_navdrie");
+    $(document.body).on("click", ".mensen_grafiekxx .btn_1", function() {
+        $(".mensen_grafiekxx .view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
+        $(".mensen_grafiekxx .view_btn_1").removeClass("displaynone");
+        $(".mensen_grafiekxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensen_grafiekxx .btn_1").addClass("btngeselecteerd");
     });    
-    $(document.body).on("click", ".btn_2", function() {
-        $(".view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
-        $(".view_btn_2").removeClass("displaynone");
-        $(".mensen_grafiek .navbtn").removeClass("btngeselecteerd_navdrie");
-        $(".mensen_grafiek .btn_2").addClass("btngeselecteerd_navdrie");
+    $(document.body).on("click", ".mensen_grafiekxx .btn_2", function() {
+        $(".mensen_grafiekxx .view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
+        $(".mensen_grafiekxx .view_btn_2").removeClass("displaynone");
+        $(".mensen_grafiekxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensen_grafiekxx .btn_2").addClass("btngeselecteerd");
     });    
-    $(document.body).on("click", ".btn_3", function() {
-        $(".view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
-        $(".view_btn_3").removeClass("displaynone");
-        $(".mensen_grafiek .navbtn").removeClass("btngeselecteerd_navdrie");
-        $(".mensen_grafiek .btn_3").addClass("btngeselecteerd_navdrie");
+    $(document.body).on("click", ".mensen_grafiekxx .btn_3", function() {
+        $(".mensen_grafiekxx .view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
+        $(".mensen_grafiekxx .view_btn_3").removeClass("displaynone");
+        $(".mensen_grafiekxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensen_grafiekxx .btn_3").addClass("btngeselecteerd");
     });    
-    $(document.body).on("click", ".btn_4", function() {
-        $(".view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
-        $(".view_btn_4").removeClass("displaynone");
-        $(".mensen_grafiek .navbtn").removeClass("btngeselecteerd_navdrie");
-        $(".mensen_grafiek .btn_4").addClass("btngeselecteerd_navdrie");
+    $(document.body).on("click", ".mensen_grafiekxx .btn_4", function() {
+        $(".mensen_grafiekxx .view_btn_1, .view_btn_2, .view_btn_3, .view_btn_4").addClass("displaynone");
+        $(".mensen_grafiekxx .view_btn_4").removeClass("displaynone");
+        $(".mensen_grafiekxx .navbtn").removeClass("btngeselecteerd");
+        $(".mensen_grafiekxx .btn_4").addClass("btngeselecteerd");
     });    
 
 
@@ -91,30 +91,33 @@ $(document).ready(function() {
 
 
 <!-- NAV TWEE -->
-<div class="flex-rowstart mensenxx">
-    <div class="navtwee ">
-        <div class="iconwide icon-mens-mv displaynone"></div>
-        <div class="navheader">Mensen</div>
-        <div class="navbtn styled-select">
-            <select class="orgonderdelen">
-                <option value="mensmaxima">Maxima</option>
-                <option value="mensalgemeen">algemeen</option>
-                <option value="niemand">niemand</option>
-            </select>    
-        </div>
-		<div class="navbtn btn-overzicht btngeselecteerd_navtwee ">Overzicht</div>
+<div class="flex-rowstart  ">
+    <div class="navtwee mensenxx">
+        <div class="flex-row-left btn-overzicht navbtn btngeselecteerd">
+			<div class="padding_right ">E&#233;n mens</div>
+	        <div class=" styled-select">
+	            <select class="orgonderdelen">
+	                <option value="mensmaxima">Maxima</option>
+	                <option value="mensalgemeen">algemeen</option>
+	                <option value="niemand">niemand</option>
+	            </select>    
+	        </div>
+		</div>
 		<div class="navbtn btn-mensgrafiek ">Grafieken</div>
 		<div class="navbtn btn-ervaringen ">Ervaringen</div>
 		<div class="navbtn btn-ideaal ">Ideaal</div>
     </div>
 
 	<div class="flex-columncenter ">	
+<!-- ANIMATIE -->
+<iframe width="1000" height="700" src="http://www.powtoon.com/embed/bWFPc346faf/" frameborder="0"></iframe>
 
+<img width="500" src="/images/people/Plutchik-wheel.svg">
 <!-- ERVARINGEN -->
 		<div class="container_ervaring-display displaynone  ">
 
 				<!--  Meermensen, misschien nog leuk omdat nut-icoon boven hoofden zweeft -->
-				<div class="container-people-display displaynone  ">
+				<div class="container-people-display   ">
 					<div class="container-people ">
 						<div class="ik-anderen">Voorbeelden van mensen</div>
 						<div class="line">
@@ -555,10 +558,10 @@ $(document).ready(function() {
 
 
 <!-- GRAFIEKEN -->
-		<div class="mensen_grafiek displaynone">
+		<div class="mensen_grafiekxx displaynone">
 			<div class="flex-columncenter">
 				<div class="navdrie ">
-					<div class="navbtn btn_2 btngeselecteerd_navdrie">Leeftijdsopbouw</div>
+					<div class="navbtn btn_2 btngeselecteerd">Leeftijdsopbouw</div>
 					<div class="navbtn btn_1 ">Inkomensongelijkheid</div>
 					<div class="navbtn btn_3 ">Marketing targetgroepen</div>
 					<div class="navbtn btn_4 ">Beroepsbevolking</div>

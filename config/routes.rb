@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :mensen
-  resources :boekprocessen
-  resources :boekproces
   root "home#index"
   
   get '/cms'=> 'cms#index'
 
+  resources :mensen
+  resources :boekprocessen
+  resources :boekproces
   resources :journaaltypes
   
   get 'journaals/h_journaal'

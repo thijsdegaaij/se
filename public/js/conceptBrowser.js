@@ -1,3 +1,6 @@
+/* Thijs heeft dit uitgezet; maakte een fout
+
+
 var InitTypeAhead = function(){
   // create's auto fill concept search bar 
   $.get("/basic/requests/typeaheadInput", function(typeaheadConceptList){
@@ -34,6 +37,7 @@ var InitTypeAhead = function(){
   });  
 }
 
+
 var ClickTypeAhead = function(){
   var id = $(this).attr('id'); 
   var datatarget = "concept-nav-expmenu_A:concept-nav-triangle_IA_A";
@@ -69,3 +73,6 @@ jQuery(document).ready(function( $ ) {
   $(document.body).on('click', '.clickAbleConcept', ClickTypeAhead); 
  
 })
+
+
+*/

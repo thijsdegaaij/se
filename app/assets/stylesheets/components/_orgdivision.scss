@@ -4,6 +4,7 @@
     align-items: center;
 }
 .allemiddelen {
+    text-transform: uppercase;
     position: absolute;
     top: 54px;
     left: 70px;
@@ -11,8 +12,22 @@
 .mens-natuur-organisaties {
     position: relative;
     top: 24px;   
-    border: 4px dashed $border-color-base;
-    padding: 24px;
+    //border: 1px dashed $border-color-base;
+    padding: 12px;
+
+background: linear-gradient( black 33%, rgba(255,255,255,0) 0%);
+background-position: bottom;
+background-size: 3px 1px;
+background-repeat: repeat-x;
+
+/*Vertical*/
+background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
+background-position: right;
+background-size: 1px 3px;
+background-repeat: repeat-y;
+
+
+
 }
 
 // input output pijlen
@@ -89,7 +104,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 1px;
     //width: 1193px;
 
    
@@ -100,10 +115,11 @@
         border-color: $border-color-base;
         //padding-bottom: 4px;
         position: relative;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+        //background-color: red;    
 
         > div:nth-child(1) {    //titel
-            border-width: 0px 0px 1px 0px;
+            border-width: 0px 1px 1px 0px;
             border-style: solid;
             border-color: $border-color-base;
             background-color: $background-color-2;
@@ -332,8 +348,8 @@
             justify-content: center;
             text-align: center;
             height: 30px;
-            color: white;
-            font-size: 15px;
+           // color: white;
+            //font-size: 15px;
            // font-weight: bold;
             padding: 8px;
             border-width: 0px 0px 1px 0px;
@@ -375,13 +391,14 @@
 
 // PRODUCTEN 
 .producten_container {
-    border-width: 1px 1px 0px 1px; 
+    border-width: 0px 0px 0px 0px; 
     border-style: solid;
     border-color: $border-color-base;
-    margin: 24px;
+    //margin: 24px;
     .titel_producten {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: 4px 0px 0px 8px;
     height: 36px;
@@ -389,7 +406,7 @@
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     border-color: $border-color-base;
-    background-color: $background-color-2;
+    //background-color: $background-color-2;
     div {
         margin-right: 12px;
     }

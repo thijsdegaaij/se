@@ -13,7 +13,7 @@
   background-position: center center;
   display: inline-block; 
   width: 48px !important;
-  height: 32px;
+  height: 24px;
   //border-radius: 18px;
   //flex: 1 1 48px;
 }
@@ -33,6 +33,8 @@
  height: 72px;
 }
 
+.icon-foto               {background-image: url('/images/icons/icon_foto.png'); }
+.icon-video              {background-image: url('/images/icons/icon_video.png'); }
 .icon-arbeidintern       {background-image: url('/images/icons/icon_arbeidintern.png'); }
 .icon-arbeidinternin     {background-image: url('/images/icons/icon_arbeidinternin.png'); }
 .icon-arbeidinternuit    {background-image: url('/images/icons/icon_arbeidinternuit.png'); }
@@ -76,7 +78,6 @@
 .icon-ervaring           {background-image: url('/images/icons/icon_ervaring.png'); }
 .icon-gedachten          {background-image: url('/images/icons/icon_gedachten.png'); }
 .icon-gevoelens          {background-image: url('/images/icons/icon_gevoelens.png'); }
-.icon-informatie         {background-image: url('/images/icons/icon_informatie.png'); }
 .icon-kosten             {background-image: url('/images/icons/icon_kosten.png'); }
 .icon-lijf               {background-image: url('/images/icons/icon_lijf.png'); }
 .icon-mens               {background-image: url('/images/icons/icon_mens.png'); }
@@ -88,12 +89,15 @@
 .icon-pijl               {background-image: url('/images/icons/icon_pijl.png'); }
 .icon-pijlnaarboven      {background-image: url('/images/icons/icon_pijlnaarboven.png'); }
 
+
+
+.icon-wet                 {background-image: url('/images/icons/icon_wet_overeenkomst.png'); }
+.icon-overeenkomst        {background-image: url('/images/icons/icon_overeenkomst.png'); }
+.icon-rechtgeld          {background-image: url('/images/icons/icon_recht.png'); }
 .icon-plicht             {background-image: url('/images/icons/icon_plicht.png'); }
 .icon-productie          {background-image: url('/images/icons/icon_productie.png'); }
 .icon-techniek           {background-image: url('/images/icons/icon_recept_T.png'); }
-.icon-recept             {background-image: url('/images/icons/icon_recept.png'); }
-.icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); 
-                          height: 22px;}
+.icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); height: 22px;}
 .icon-rechtgeld          {background-image: url('/images/icons/icon_recht_geld.png'); }
 .icon-rechtrente         {background-image: url('/images/icons/icon_recht_rente.png'); }
 .icon-plichtrente        {background-image: url('/images/icons/icon_plicht_rente.png'); }
@@ -104,12 +108,22 @@
 .icon-rechtverzekering   {background-image: url('/images/icons/icon_recht_verzekering.png'); }
 .icon-relatief           {background-image: url('/images/icons/icon_relatief.png'); }
 .icon-situatie           {background-image: url('/images/icons/icon_situatie.png'); }
+
+.icon-kosten             {background-image: url('/images/icons/icon_kosten-15.png'); }
+.icon-personeelkosten    {background-image: url('/images/icons/icon_personeelkosten.png'); }
+.icon-personeelproduct   {background-image: url('/images/icons/icon_personeel-product.png'); }
+.icon-product-verkocht   {background-image: url('/images/icons/icon_product-verkocht.png'); }
+.icon-product-leeg       {background-image: url('/images/icons/icon_product-leeg.png'); }
+
+
 .icon-sliderarrow        {background-image: url('/images/icons/icon_sliderarrow.png'); }
 .icon-vierkant           {background-image: url('/images/icons/icon_vierkant.png'); }
 .icon-voorraad           {background-image: url('/images/icons/icon_voorraad.png'); }
 .icon-wetbeschrijving    {background-image: url('/images/icons/icon_wet_beschrijving.png'); }
+
 .icon-winst              {background-image: url('/images/icons/icon_winst.png'); 
                           margin-top: 7px; margin-left: -12px;}
+.icon-basiswinst         {background-image: url('/images/icons/icon_basiswinst.png');}
 .icon-winst-pos          {background-image: url('/images/icons/icon_winst_pos.png');} 
 .icon-winstpos           {background-image: url('/images/icons/icon_winstpos.png'); }
 .icon-dividend           {background-image: url('/images/icons/icon_dividend.png'); }
@@ -167,21 +181,23 @@
 .icon-product             {background-image: url('/images/icons/icon_product.png'); }
 .icon-nut                 {background-image: url('/images/icons/icon_nut.png'); }
 
-.icon-receptT             {background-image: url('/images/icons/icon_recept_T.png'); }
-.icon-recept              {background-image: url('/images/icons/icon_recept.png'); }
-.icon-reclame             {background-image: url('/images/icons/icon_reclame.png'); }
+.icon-informatie         {background-image: url('/images/icons/icon_informatie.png'); }
+.icon-receptT            {background-image: url('/images/icons/icon_recept_T.png'); }
+.icon-recept             {background-image: url('/images/icons/icon_recept.png'); }
+.icon-reclame            {background-image: url('/images/icons/icon_reclame.png'); }
+
+.icon-winkel              {background-image: url('/images/icons/icon_winkel.png'); }
 
 
-.icon-natuur              {background-image: url('/images/icons/icon_vierkant_N.png'); }
 .icon-collectiefgoed      {background-image: url('/images/icons/icon_vierkant_C.png'); }
 .icon-consumentenproduct  {background-image: url('/images/icons/icon_consumentenproduct.png'); }
-.icon-wet                 {background-image: url('/images/icons/icon_wet_overeenkomst.png'); }
-.icon-overeenkomst        {background-image: url('/images/icons/icon_overeenkomst.png'); }
 
 .icon-werkelijkheid        {background-image: url('/images/icons/icon_nu.png'); }
 
 
-
+.rotate180 {
+  transform: rotate(180deg); 
+}
 
 
 

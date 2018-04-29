@@ -11,20 +11,20 @@ $(document).ready(function() {
     $(document.body).on("click", ".btn-land_overzicht", function() {
         $(".geldkringloop_q, .situations").addClass("displaynone");
         $(".cont_nl").removeClass("displaynone");
-        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".landenxx .btn-land_overzicht").addClass("btngeselecteerd_navtwee");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd");
+        $(".landenxx .btn-land_overzicht").addClass("btngeselecteerd");
     });    
     $(document.body).on("click", ".btn-geldkringloop_view", function() {
         $(".cont_nl, .situations").addClass("displaynone");
         $(".geldkringloop_q").removeClass("displaynone");
-        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".landenxx .btn-geldkringloop_view").addClass("btngeselecteerd_navtwee");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd");
+        $(".landenxx .btn-geldkringloop_view").addClass("btngeselecteerd");
     });
     $(document.body).on("click", ".btn-situationsview", function() {
         $(".cont_nl, .geldkringloop_q").addClass("displaynone");
         $(".situations").removeClass("displaynone");
-        $(".landenxx .navbtn").removeClass("btngeselecteerd_navtwee");
-        $(".landenxx .btn-situationsview").addClass("btngeselecteerd_navtwee");
+        $(".landenxx .navbtn").removeClass("btngeselecteerd");
+        $(".landenxx .btn-situationsview").addClass("btngeselecteerd");
     });
 
 
@@ -164,16 +164,19 @@ $(document).ready(function() {
 </script>
 <div class="flex-rowstart landenxx">
     <div class="navtwee ">
-            <div class="navbtn iconwide icon-organisatie-mv displaynone"></div>
-            <div class="navbtn navheader">Landen</div>
-            <div class="navbtn styled-select">
-                <select class="orgonderdelen">
-                    <option value="mensmaxima">Schateiland</option>
-                    <option value="mensalgemeen">Nederland</option>
-                    <option value="niemand">Belgie</option>
-                </select>    
+
+             <div class=" btn-land_overzicht flex-row-left navbtn btngeselecteerd">
+                <div class=" padding_right ">E&#233;n land</div>
+                <div class=" styled-select">
+                    <select class="orgonderdelen">
+                        <option value="mensalgemeen">Nederland</option>
+                        <option value="niemand">Belgi&#235;</option>
+                        <option value="niemand">Duitsland</option>
+                        <option value="niemand">VS</option>
+                        <option value="mensmaxima">Schateiland</option>
+                    </select>    
+                </div>
             </div>
-            <div class="navbtn btn-land_overzicht btngeselecteerd_navtwee ">Overzicht</div>
             <div class="navbtn ">Bedrijfstakken</div>
             <div class="navbtn btn-geldkringloop_view ">Sectoren</div>
             <div class="navbtn btn-situationsview ">Bedrijfskolommen</div>        
@@ -182,7 +185,6 @@ $(document).ready(function() {
 
 
         <div class="cont_nl ">
-            <div class="allemiddelen">Alle middelen</div>
             <div class="mens-natuur-organisaties ">
                 <div class="cont-natuurmens">
                     <div class="navbtn btn-inputoutput button">Input - output</div>
@@ -229,7 +231,7 @@ $(document).ready(function() {
                             <div class="buttons">
                                 <div class="navbtn btn-bedrijfstakken button bold">Bedrijfstakken</div>
                                 <div class="navbtn btn-sectoren button ">Sectoren</div>
-                                <div class="navbtn btn-productenc button ">Producten</div>
+                                <div class="navbtn btn-productenc button ">Productsoorten</div>
                             </div>
                         </div>
                     <div class="cont-organisaties-all">
@@ -312,18 +314,18 @@ $(document).ready(function() {
                                             <div class="row">Besloten vennootschappen (bv)</div>
                                             <div class="row">Naamloze vennootschappen (nv)</div>
                                         </div>
-                                        <div class="sector">
-                                            <div class="title  sctoverheid button">Overheid</div>
-                                            <div class="row">Bestuurlijk</div>
-                                            <div class="row">Uitvoerend</div>
-                                            <div class="row">Rechtelijke macht</div>
-                                        </div>
                                         <div class="sector ">
                                             <div class="title  sctfinancieel button">Financi&euml;le instellingen</div>
                                             <div class="row ">Monetaire instellingen (mntr)</div>
                                             <div class="row ">Verzekeringsinstellingen (verz)</div>
                                             <div class="row ">Pensioeninstellingen (pnsn)</div>
-                                            <div class="row ">Overige</div>
+                                            <div class="" ass="row ">Overige</div>
+                                        </div>
+                                        <div class="sector">
+                                            <div class="title  sctoverheid button">Overheid</div>
+                                            <div class="row">Bestuurlijk</div>
+                                            <div class="row">Uitvoerend</div>
+                                            <div class="row">Rechtelijke macht</div>
                                         </div>
                                     </div>
                                 </div>
@@ -331,8 +333,8 @@ $(document).ready(function() {
                         </div>
                     </div>
 
-                <div class="producten_container">
-                    <div class="titel_producten">Producten</div>
+                <div class="producten_container"><!-- 
+                    <div class="titel_producten">Producten</div> -->
                     <div class="cont-bedrijfstakproducten"> 
                         <div class="part-display landbouw  ">
                             <div class="part">
@@ -1175,6 +1177,7 @@ $(document).ready(function() {
             </div>  
 
         </div>
+
 
         <div class=" geldkringloop_q  displaynone">
             <%= render template: "oldstviews/inc_geldkringloop.html" %>

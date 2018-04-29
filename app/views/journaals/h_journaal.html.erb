@@ -1,3 +1,4 @@
+<!-- h_journaal.html.erb -->
 <script>
   // AN: Kies een journaal
   $('#jnl_ink').change(function() {
@@ -20,12 +21,10 @@
 <div class="">
  
 <div class="flex-rowstart ">
-    <div class="navtwee ">
-        <div class="icon icon-informatie displaynone"></div>
-        <div class="navheader">Interne verslaggeving</div>
-        <div class="navbtn btngrootboek button bold">Grootboek</div>
-        <div class="navbtn btninboeken button">Journaals inboeken</div>
-        <div class="navbtn btnkostprijs button">Berekeningen</div>
+    <div class="navdrie ">
+        <div class="navbtn btngrootboek btngeselecteerd">Grootboek</div>
+        <div class="navbtn btninboeken ">Journaals inboeken</div>
+        <div class="navbtn btnkostprijs ">Berekeningen</div>
     </div>
 
 
@@ -44,7 +43,6 @@
             <div class="inboeken-all">
                 <div class="journaals">
                     <div class="header">Journaals</div>
-                    <div class="klap"><img src="/images/orgbakker/klappers.png"></div>
                     <div class="btns">
                         <div class="btn-inboeken inkoop button bold">inkoopboek</div>
                         <div class="btn-inboeken verkoop button">verkoopboek</div>
@@ -52,6 +50,7 @@
                         <div class="btn-inboeken leveringen button">leveringen</div>
                         <div class="btn-inboeken intern button">Interne Boekingen</div>
                     </div>
+                    <div>
                     <!-- inkoopboek -->
                     <%= render 'journaals/jnlinkoop' %>
                   
@@ -66,7 +65,8 @@
                     
                     <!-- Interne boekingen -->
                     <%= render 'journaals/jnlintern' %>
-               
+                    </div>
+                    <div class="klappers"></div>
                 </div>
             </div>
 

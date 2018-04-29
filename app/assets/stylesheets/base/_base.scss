@@ -5,10 +5,10 @@ html{
 }
 
 html body{
-  margin-top: 50px;
   color: $text-color-dark;
+  -webkit-font-smoothing: antialiased;//uit google-html-pagina
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.428571429;
 }
 div {  
@@ -113,5 +113,4 @@ a {
   .sctfinancieel {
     background-color: $financieel;
   }
-
 

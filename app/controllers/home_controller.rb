@@ -123,7 +123,18 @@ class HomeController < ApplicationController
     @boekingen = Boeking.all.includes(:organisatie).order("organisaties.naam, boekingen.grootboekrekening_id")
     @boekingen_vla = @organisatie_search.boekingen.where("grootboekrekening_id = ?", 10)
 
+ 
+      # TOTALE VOORRADEN DOOR THIJS
+      # Geld
+      @geld = 0
+      @geld= calc_boekproces(@organisatie_search, [1,2])[2] # inkomen + uitgaven
+      logger.debug(": #{@overigekosten}")
 
+      # Overheid
+      @overheid = 0
+      @overheid= calc_boekproces(@organisatie_search, [7,8,9,10])[2] # nog te belaten btw + nog te ontvangen btw + vennootschapsb.
+      logger.debug(": #{@overigekosten}")
+      
             
       # OUTPUT GROOTBOEK
       # Inkoopwaarde van de omzet
@@ -144,8 +155,8 @@ class HomeController < ApplicationController
       @omzet = 0
       @omzet= calc_boekproces(@organisatie_search, 29)[1]
       logger.debug("OMZET: #{@omzet}")
-      
-   
+     
+
      
       # inkomsten / door thijs
       @inkomsten = 0

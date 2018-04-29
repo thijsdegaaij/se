@@ -2,19 +2,29 @@
 $(document).ready(function() {
 
 
-    // Lessen en opdrachten
-    $(".lessons .start").click(function() {
-        $(".assigncc").css("z-index", "1");
-        $(".lesson").css("z-index", "2");
-        $(".btn-lesson").addClass("bold");
-        $(".btn-assign").removeClass("bold");
+    // Knoppen 'game', 'lessons' en "opdrachten"
 
+
+    $(".lessons_btn").click(function() {
+        $(".assignments_cc").css("z-index", "1");
+        $(".lessons_cc").css("z-index", "2");
+        $(".lessons .button").removeClass("bold");
+        $(".lessons_btn").addClass("bold");
     });
-    $(".assignments .start").click(function() {
-        $(".assigncc").css("z-index", "2");
-        $(".lesson").css("z-index", "1");
-        $(".btn-assign").addClass("bold");
-        $(".btn-lesson").removeClass("bold");
+
+    $(".game_btn").click(function() {
+        $(".game_cc").css("z-index", "4");
+        $(".assignments_cc").css("z-index", "1");
+        $(".lessons_cc").css("z-index", "2");
+        $(".lessons .button").removeClass("bold");
+        $(".game_btn").addClass("bold");
+    });
+
+    $(".assignments_btn").click(function() {
+        $(".assignments_cc").css("z-index", "2");
+        $(".lessons_cc").css("z-index", "1");
+        $(".lessons .button").removeClass("bold");
+        $(".assignments_btn").addClass("bold");
     });
 
 
@@ -52,7 +62,7 @@ $(document).ready(function() {
 
 
 // Navigatie 2
-    $(document.body).on("click", ".lessons .icon-hamburger", function() {
+    $(document.body).on("click", ".lessons_btn", function() {
         $(".lessons-display").toggle();
     });
 
@@ -108,12 +118,33 @@ $(document).ready(function() {
 
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
 <div class="lessons">
-    <div class="start button">
-        <div>Hoofdstukken</div>
-        <div class="icon icon-hamburger button"></div>
+
+<!-- Buttons voor Game, Uitleg en Opdrachten -->
+
+    <div class="game_btn button">
+        <div>Game</div>
     </div>
-    <!-- leskiezer display -->
+
+    <div class="lessons_btn button bold">
+        <div>Lessen</div>
+    </div>
+
+    <div class="assignments_btn button">
+        <div>Opdrachten</div>
+    </div>
+    <!-- lessen kiezer display -->
     <div class="lessons-display displaynone">
         <div class="header-navdisplay">
             <div class="header">Onderwerpen</div>
@@ -121,7 +152,7 @@ $(document).ready(function() {
         </div>
         <div class="body">
             <div id="le-supereconomics" class="active">
-                <div class="btn-les1 dark-hover button">Hoe werkt deze lesmethode?</div>
+                <div class="btn-les1 dark-hover button navbtn">H0. Hoe werkt deze lesmethode?</div>
                 <div class="module">Algemene economie</div>
                 <ul>
                     <li class="btn-les2 dark-hover button">H1. Land</li>
@@ -149,7 +180,7 @@ $(document).ready(function() {
     <div class="les1 ">
         <div class="lesheader ">
             <div class="lesonderdeel">
-                <div class="lestitel">Hoe werkt deze lesmethode?</div>
+                <div class="lestitel">H0. Hoe werkt deze lesmethode?</div>
                 <div class="styled-select">
                     <select class="lesonderdelen">
                         <option value="v1">1. Start met simulatiespel</option>
@@ -158,19 +189,56 @@ $(document).ready(function() {
                         <option value="v4">4. Mijn resultaten</option>
                     </select>
                 </div>
+                <!--Heen-en-weer naar volgende paragraaf-knop, 
                 <div class="displaynone">
                     <div class="groepje ">
                         <div class="icon icon-sliderarrow  omgedraaid"></div>
                         <div class="icon icon-sliderarrow "></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="le-container">
             <div class="body">
                 <div class="v1 lesinhoud">
-                    <div class="kopje">1 Start met simulatiespel</div>
+                    <div class="kopjetitel">Start met simulatiespel</div>
                     <div class="overflow">
+                        <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
+                        <div class="kopje">Kan ik zo beginnen?</div>
+                        <p>Ja, op jouw leeftijd weet je al veel van de economie.</p>
+                        <div class="kopje">Wat is het doel?</div>
+                        <p>Je krijgt nutspunten als je de mensen (avatars) plezier, tevredenheid en geluk laat ervaren. Bij het goed uitvoeren van opdrachten verhoog je je level. En je krijgt beheerspunten als je eerdere vragen nog steeds goed kunt beantwoorden. </p>
+                        <div class="kopje">Wat kan ik doen?</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+
+                        <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
+                        <div class="kopje">Kan ik zo beginnen?</div>
+                        <p>Ja, op jouw leeftijd weet je al veel van de economie.</p>
+                        <div class="kopje">Wat is het doel?</div>
+                        <p>Je krijgt nutspunten als je de mensen (avatars) plezier, tevredenheid en geluk laat ervaren. Bij het goed uitvoeren van opdrachten verhoog je je level. En je krijgt beheerspunten als je eerdere vragen nog steeds goed kunt beantwoorden. </p>
+                        <div class="kopje">Wat kan ik doen?</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+
+                        <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
+                        <div class="kopje">Kan ik zo beginnen?</div>
+                        <p>Ja, op jouw leeftijd weet je al veel van de economie.</p>
+                        <div class="kopje">Wat is het doel?</div>
+                        <p>Je krijgt nutspunten als je de mensen (avatars) plezier, tevredenheid en geluk laat ervaren. Bij het goed uitvoeren van opdrachten verhoog je je level. En je krijgt beheerspunten als je eerdere vragen nog steeds goed kunt beantwoorden. </p>
+                        <div class="kopje">Wat kan ik doen?</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+
+                        <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
+                        <div class="kopje">Kan ik zo beginnen?</div>
+                        <p>Ja, op jouw leeftijd weet je al veel van de economie.</p>
+                        <div class="kopje">Wat is het doel?</div>
+                        <p>Je krijgt nutspunten als je de mensen (avatars) plezier, tevredenheid en geluk laat ervaren. Bij het goed uitvoeren van opdrachten verhoog je je level. En je krijgt beheerspunten als je eerdere vragen nog steeds goed kunt beantwoorden. </p>
+                        <div class="kopje">Wat kan ik doen?</div>
+                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
+                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+                        
                         <p>Gefeliciteerd. Hier leer je alles voor je examen Economie en M&O. En hoe je succesvol in je verdere leven kunt zijn.</p>
                         <div class="kopje">Kan ik zo beginnen?</div>
                         <p>Ja, op jouw leeftijd weet je al veel van de economie.</p>
@@ -199,12 +267,16 @@ $(document).ready(function() {
                 <div class="lestitel">H1. Land</div>
                 <div class="styled-select">
                     <select class="lesonderdelen">
-                        <option value="v1">1. Inleiding</option>
-                        <option value="v2">2. Organisaties</option>
-                        <option value="v3">3. Mensen</option>
-                        <option value="v4">4. Nut</option>>
-                        <option value="v5">5. Gevoelens</option>
-                        <option value="v6">6. Gedachten</option>
+                        <option value="v1">1. Sectoren</option>
+                        <option value="v2">2. Geldkringloop</option>
+                        <option value="v3">3. Reele economie</option>
+                        <option value="v4">4. Bruto binnenlands product</option>>
+                        <option value="v5">5. Conjunctuur</option>
+                        <option value="v6">6. Bedrijfstakken</option>
+                        <option value="v6">7. Inflatie</option>
+                        <option value="v6">8. Import en export</option>
+                        <option value="v6">9. Europese Unie</option>
+                        <option value="v6">10. Consumentenvertrouen</option>
                     </select>
                 </div>
             </div>
@@ -213,35 +285,31 @@ $(document).ready(function() {
             <div class="body">
                 <div class="v1 lesinhoud">
                     <div class="starter displaynone">De hoofdindeling is eenvoudig</div>
-                    <div class="kopjetitel">1 Inleiding</div>
+                    <div class="kopjetitel">Sectoren</div>
                     <div class="overflow">
-                        <p>Hiernaast zie je Schatland. Het land lijkt op Nederland, maar is net anders. </p>
-                        <p>De organisaties in Schatland doen hun best om dingen te maken waar de mensen en de natuur behoeften aan hebben.</p>
-                        <p>Er zijn 26 organisaties verstopt. Zoek bakker 'Bakery' en klik er op om deze organisatie nader te onderzoeken.</p>
+                        <p>Hiernaast zie je Nederland.  </p>
+                        <p>De organisaties in Nederlands doen hun best om dingen te maken waar de mensen en de natuur behoeften aan hebben.</p>
                         <p></p>
                         <div class="kopje">Mensen</div>
-                        <p>Mensen zijn het uitgangspunt van de economie. Hier kun je onderzoeken hoe economen naar de besluitvorming van mensen kijken. Hoe mensen behoeften hebben en daar nut aan toekennen. </p>
+                        <p>Mensen zijn het uitgangspunt van de economie.  </p>
                         <div class="kopje">Natuur</div>
-                        <p>Onder natuur valt de zon, de atmosfeer en de wilde flora en fauna. Dieren in het wild, zoals de ooievaar en de leeuw, zijn van niemand. </p>
+                        <p>Onder natuur valt de zon, de atmosfeer en de wilde flora en fauna.  </p>
                         <div class="kopje">Organisaties</div>
-                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
-                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+                        <p>
                         <div class="kopje">Producten</div>
-                        <p>Laat de mensen efficient met alle middelen omgaan. Kies een organisatie en maak een goed product waar je klanten veel nut door ervaren. Verkoop ze vervolgens. </p>
-                        <p>Verander als je wilt ook de wetten en andere overheidsvoorzieningen volgens de wensen van de mensen. Check de boekhouding van je organisaties of je winst maakt, en de boekhouding van de hele economie om te zien hoe jouw land presteert.</p>
+                        <p></p>
                     </div>
                     <div class="kopje">Naar de opdrachten</div>
                     <p class="button">Maak de bijbehorende opdrachten.</p>
                 </div>
                 <div class="v2 lesinhoud">
-                    <div class="kopjetitel">2 Organisaties</div>
-                    <p>Het icoon voor situaties is</p>
-                    <div class="icon icon-situatie"> </div> dat je vind in de bovenste balk.
+                    <div class="kopjetitel">Geldringloop</div>
+                    <p>Ga naar sectoren --> Geldkringloop</p>
                     <br>
-                    <br> Je kunt meerdere situaties bestuderen. We beginnen eenvoudig met 1n persoon op een onbewoond eiland.
+                    <br> 
                 </div>
                 <div class="v3 lesinhoud">
-                    <div class="kopjetitel">3 Mensen</div>
+                    <div class="kopjetitel">Mensen</div>
                     <p>Mensen</p>
                 </div>
             </div>

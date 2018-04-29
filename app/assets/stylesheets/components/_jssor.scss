@@ -1,0 +1,195 @@
+.lessonassignmentspace { //ruimte onder de kiezers van les en assignments
+  position: fixed;
+  width: $left;
+  height: 68px;
+  background-color: $background-color-1;
+  border-bottom: 1px solid $border-color-base;
+  
+}
+.lessons .start, .assignments .start{ //kiezers in lessons resp assignments
+  position: absolute;
+  display: flex;
+  top: -52px;
+  width: 160px;
+  height: 48px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: $kop2;
+  div:nth-child(1){
+    margin-right: 24px;
+  }
+}
+.assignments .start {
+  left: 250px;
+  z-index: 100;
+}
+.contain.lesson, .contain.assigncc {
+    height: 100%;
+    width: $left;
+    position: fixed;
+    top: 118px; //is goed, 70px nav + 50navtwee
+    background-color: $background-color-2;
+    overflow: visible;
+}
+.lessons, .assignments {
+  position: relative;
+  padding: 0px 60px 0px 48px;
+  //font-size: 14px;
+    img {
+    max-width: 510px;
+  }
+
+  .lijn {
+    width: 100%;
+    border-bottom: 1px solid $border-color-base;
+  }
+  .overflow {
+    //overflow: hidden;
+  }
+
+
+
+  .lesheader {
+    height: 44px;
+    margin: 5px 0px 12px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;}
+
+  .lesonderdeel {
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 10px 0px 0px 0px;
+
+    .groepje {
+      width: 90px;
+      display: -webkit-flex;
+      flex-direction: row;
+      -webkit-justify-content: space-around; 
+      -webkit-align-items: center;
+    }
+    .omgedraaid {
+       transform: rotate(180deg);
+       transform: scale(50%);
+    }
+  }
+  .lestitel {
+    //font-weight: bold;
+    font-size: 20px;
+    padding: 2px 0px 8px 0px;
+    //text-transform: uppercase;
+    color: $text-color-dark; // $kop2;
+  }
+  .lesonderdelen {
+    //height: 24px;
+    width: 200px;
+    //-webkit-appearance: menulist-button;
+  }
+
+
+
+.lesmethoden {
+display: -webkit-flex;
+flex-direction: row;
+-webkit-justify-content: space-between; 
+-webkit-align-items: center;
+text-transform: uppercase;
+font-size: 12px;
+padding: 12px 39px 12px 48px;
+margin-bottom: 24px;
+border-bottom: solid 1px $border-color-light;
+ }
+ 
+// LESKIEZER
+.lessons-display {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 521px;
+  height: 950px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  z-index: 999;
+
+    .header-navdisplay {
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;      
+    //letter-spacing: 1px;
+    margin-bottom: 24px;    
+    padding: 12px 12px 12px 48px; 
+    border-bottom: solid 1px $border-color-light;
+    background-color: #fff;
+    }
+    .header {
+    font-size: 20px;
+    color: $text-color-base;
+    }
+
+
+  .body {
+  padding: 0px 48px 12px 48px;
+  }
+  .module {
+    padding-top: 2px;
+    font-weight: bold;
+    line-height: 36px;    
+  }
+  .dark-hover:hover {
+    color: $blue;
+  }
+  li {
+    list-style-type: none;
+  } 
+ }
+ 
+// LES
+.body {
+display: -webkit-flex;
+flex-direction: column;
+-webkit-justify-content: flex-start;
+//font-size: 14px; 
+text-align: justify;
+overflow-y: auto;
+  /* select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+  } */
+
+  .lesinhoud{
+    margin-top: 0px;
+  }
+  .starter {
+    border-bottom: 1px solid $border-color-base;
+    border-top: 1px solid $border-color-base;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 12px;
+  }
+  .kopjetitel {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: $text-color-dark; //$kop2;
+    padding: 12px 0px 4px 0px;
+  }
+  .kopje {
+    font-weight: bold;
+    //font-size: 16px;
+    color: aliceblue;// $text-color-dark; // $kop2;
+  }
+  .item {
+    font-weight: bold;
+    color: red;
+  }
+ 
+}
+}
+
+

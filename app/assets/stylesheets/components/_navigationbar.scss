@@ -38,19 +38,33 @@ rood {
   padding-right: 18px;
 }
 
-  .logo-se {
-    position: fixed;
-    z-index:1000;
-    margin: 5px 0px 0px 32px;
-    top: 10px;
-    left: 0px;
-    img {
-      height: 35px;
-      opacity: 0.8;
-      width: 520px;
-      height: auto;
-    }
+.logo-se {
+  position: fixed;
+  top: 4px;
+  left: 0px;
+  //z-index:1;
+  margin: 5px 0px 0px 32px;
+  img {
+    height: 35px;
+    opacity: 0.8;
+    width: 520px;
+    height: auto;
+    opacity: 0.5;
   }
+}
+
+.lessonassignmentspace {
+  //ruimte onder de kiezers van les en assignments
+  position: fixed;
+  width: $left;
+  //z-index: 5;
+  top: 0px;
+  height: 122px;
+  background-color: $background-color-1;
+  border-bottom: 1px solid $border-color-base;
+}
+
+
 .navb {
   display: flex;
   flex-direction: row;
@@ -283,7 +297,7 @@ rood {
     flex-direction: row;
     align-items: center;
     background-color: $background-color-1;
-    padding: 0px 24px 0px 2px;
+    padding: 0px 24px 0px 1px;
     border-width: 0px 0px 1px 1px;
     border-style: solid;
     border-color: $border-color-base!important;

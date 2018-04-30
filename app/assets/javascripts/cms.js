@@ -331,12 +331,12 @@
     var span = formgroup.find("span")
     $("<input type='text' class='form-control' name='tagSE' placeholder='SE tag van het begrip' value=''>").insertBefore(span); 
   }
-
+/*
 
   var InitNiceScroll = function(){ 
     $("html").niceScroll();
     $("html").getNiceScroll().hide();
-  }
+  }*/
 
 
 

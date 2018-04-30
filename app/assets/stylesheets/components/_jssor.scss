@@ -48,7 +48,8 @@
     //overflow: hidden;
   }
 
-
+.les_wrap {
+}
 
   .lesheader {
     height: 44px;
@@ -56,7 +57,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+    }
 
   .lesonderdeel {
     width: 550px;
@@ -133,9 +135,6 @@ border-bottom: solid 1px $border-color-light;
     }
 
 
-  .body {
-  padding: 0px 48px 12px 48px;
-  }
   .module {
     padding-top: 2px;
     font-weight: bold;
@@ -150,13 +149,18 @@ border-bottom: solid 1px $border-color-light;
  }
  
 // LES
+.le-container {
+   height: 1233px;
+   overflow-y: auto;  
+}
 .body {
+  //padding: 0px 48px 12px 48px;
+  padding-right: 24px;
 display: -webkit-flex;
 flex-direction: column;
 -webkit-justify-content: flex-start;
 //font-size: 14px; 
 text-align: justify;
-overflow-y: auto;
   /* select {
      -webkit-appearance: none;
      -moz-appearance: none;

@@ -1,15 +1,7 @@
 /*  hjkljhlkj */
 
 
-.lessonassignmentspace {
-    //ruimte onder de kiezers van les en assignments
-    position: fixed;
-    width: $left;
-    top: 0px;
-    height: 168px;
-    background-color: $background-color-1;
-    border-bottom: 1px solid $border-color-base;
-}
+
 
 .game_btn,
 .lessons_btn,
@@ -19,19 +11,22 @@
     align-items: center;
     //z-index: 22;
     top: -51px;
-    //left: 34px;
-    //width: 100%;
     height: 48px;
     color: $kop2;    
     background: url('/images/icons/icon_arrow-dropdown.png') no-repeat right;     background-size: 30px 30px;
     padding: 12px 24px;
+    text-transform: uppercase;
     div:nth-child(1) {
         margin-right: 24px;
     }
 }
 
+.game_btn {
+    left: 10px;
+}
+
 .lessons_btn {
-    left: 238px;
+    left: 228px;
 }
 
 .assignments_btn {
@@ -93,7 +88,7 @@
         }
     }
     .lestitel {
-        //font-weight: bold;
+        font-weight: bolder;
         font-size: 24px;
         padding: 2px 0px 8px 0px;
         //text-transform: uppercase;

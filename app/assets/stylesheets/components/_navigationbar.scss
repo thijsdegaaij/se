@@ -37,35 +37,22 @@ rood {
 .padding_right {
   padding-right: 18px;
 }
-
-.logo-se {
+.rightside.flexrow {
   position: fixed;
   top: 4px;
-  left: 0px;
-  //z-index:1;
-  margin: 5px 0px 0px 32px;
-  background-color: blue; //red;
-  
-  img {
-    height: 35px;
-    opacity: 0.8;
-    width: 520px;
-    height: auto;
-    opacity: 0.5;
-  }
 }
 
-.lessonassignmentspace {
-  //ruimte onder de kiezers van les en assignments
-  position: fixed;
-  width: $left;
-  //z-index: 5;
-  top: 0px;
-  height: 122px;
+.simulatiegame_text {
   background-color: $background-color-1;
+  font-size: 32px;
+  color: $text-color-base;
+  //text-align: center;
   border-bottom: 1px solid $border-color-base;
-}
+  border-left: 1px solid $border-color-base;
+  letter-spacing: 2px;
+  padding: 12px 19px;
 
+}
 
 .navb {
   display: flex;
@@ -84,7 +71,7 @@ rood {
 
   .lijn_navb {
     position: absolute;
-    top: 48px;
+    top: 43px;
     //left: $left;
     height: 1px;
     width: 1250px;
@@ -138,41 +125,14 @@ rood {
   .concept {
     display: flex;
     align-items: center;
-    //margin: 10px 48px 0px 48px;
+    margin: 0px 24px 0px 0px;
   }
 /* space */
   .space {
     //width: 120px;
   }
 
-/* user */
-  .img-learner {
-    margin-top: 0px;
-    margin-left: 0px;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-  }
 
-    .plaatjenaam { 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-     > div {
-      padding: 0px 7px 0px 7px;
-    } 
-  }
-/* level */
-  .level{
-    width: 400px;
-  }
-  .navtext {
-    text-align: center;
-    color: $text-color-base;
-  }
-  .navtext:hover {
-    color: $text-color-dark;
-  }
 
   .expmenu{
     position: fixed;
@@ -264,29 +224,7 @@ rood {
 
 
 
-//Situation overview
-.sito {
-    display: -webkit-flex;
-    flex-direction: column;
 
-  
-  .line {
-    display: -webkit-flex;
-    flex-direction: row;
-    color: $text-color-base;
-    padding: 12px 48px 12px 48px; 
-    border-bottom: solid 1px $border-color-light;
-  }
-  .leftside {
-    width: 200px;
-
-  }
-  .rightside {
-    img {
-      max-width: 700px;
-      }
-  }
-}
 
 
 
@@ -314,17 +252,18 @@ rood {
       align-items: center;
       padding: 0px 48px;
       color: $text-color-base;
-      border-right: 1px solid $border-color-base;
+      border-right: 1px solid $border-color-base !important;
       color: $kop2;
       font-size: 16px;
       cursor: pointer;
       height: 100%;
+      text-transform: uppercase;
     } 
     .navbtn:hover {
       background-color: $background-color-2;
     }
     .btngeselecteerd {
-      background-color: $background-color-2;
+      background-color: $background-color-2 !important;
     }
 }
 

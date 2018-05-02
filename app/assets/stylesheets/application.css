@@ -1128,26 +1128,28 @@ a {
   color: white;
   text-align: center; }
 
+.header_laag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 36px 0px 12px; }
+
 .container-markt {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .container-markt .laag {
+  .container-markt .tweede.laag {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     width: 1220px;
-    background-color: white;
-    padding: 2px 24px 0px 24px; }
-  .container-markt .eerste {
-    justify-content: center;
-    font-size: 24px;
-    padding: 4px 0px 0px; }
-  .container-markt .tweede, .container-markt .derde, .container-markt .vierde {
-    justify-content: space-between; }
-    .container-markt .tweede > div, .container-markt .derde > div, .container-markt .vierde > div {
-      position: relative; }
-  .container-markt .tweede {
-    padding-bottom: 12px; }
+    padding: 0px 24px 20px 24px; }
+  .container-markt .vierde.laag {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .container-markt .vierde .logo {
     font-size: 24px;
     padding: 0px 12px;
@@ -1155,10 +1157,54 @@ a {
   .container-markt .logo.bakker {
     background-image: url '/images/products/bakker/bakkerbuitenkant.jpeg'; }
 
+.duiding {
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  left: -300px; }
+
+.duiding_overeenkomst {
+  display: none;
+  position: relative;
+  left: -350px; }
+
+.header {
+  display: none;
+  text-weight: bold;
+  text-align: center;
+  background-color: #F4F3F3;
+  padding: 2px 12px; }
+
+.cont-overeenkomst {
+  align-items: center;
+  border: 1px solid #CCCCCC;
+  width: 280px;
+  height: 170px;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 24px 0px; }
+  .cont-overeenkomst .titel {
+    border-bottom: 1px solid #CCCCCC;
+    height: 24px;
+    width: 100%;
+    padding-top: 3px;
+    text-transform: uppercase; }
+  .cont-overeenkomst .eerstelaag, .cont-overeenkomst .tweedelaag, .cont-overeenkomst .derdelaag {
+    justify-content: flex-start;
+    width: 250px; }
+    .cont-overeenkomst .eerstelaag .one, .cont-overeenkomst .tweedelaag .one, .cont-overeenkomst .derdelaag .one {
+      flex: 0 1 80px;
+      margin-left: 10px; }
+    .cont-overeenkomst .eerstelaag .two, .cont-overeenkomst .tweedelaag .two, .cont-overeenkomst .derdelaag .two {
+      flex: 0 1 160px; }
+    .cont-overeenkomst .eerstelaag .three, .cont-overeenkomst .tweedelaag .three, .cont-overeenkomst .derdelaag .three {
+      flex: 0 1 80px; }
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  padding: 2px; }
   .slideshow-container img {
     vertical-align: middle;
     width: 397px;
@@ -1189,25 +1235,22 @@ a {
   background-color: #f1f1f1;
   color: black; }
 
-.market {
+.organisations {
   position: relative;
-  margin: auto; }
-  .market .body {
+  padding: 2px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCCCCC; }
+  .organisations .body {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .market > * {
-    border-style: solid;
+  .organisations > * {
     border-width: 1px 1px 0px 1px;
     border-color: #CCCCCC; }
-  .market :last-child {
+  .organisations :last-child {
     border-bottom-width: 1px; }
-  .market .header {
-    text-weight: bold;
-    text-align: center;
-    background-color: #F4F3F3;
-    padding: 2px 12px; }
-  .market .dot {
+  .organisations .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -1216,12 +1259,23 @@ a {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease; }
-  .market .active, .market .dot:hover {
+  .organisations .active, .organisations .dot:hover {
     background-color: #717171; }
-  .market .text {
-    padding: 2px 8px;
+  .organisations .text {
     display: flex;
-    justify-content: center; }
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    padding: 8px; }
+  .organisations .gelduitkoper, .organisations .inputkoper,
+  .organisations .geldinverkoper, .organisations .outputverkoper {
+    position: absolute;
+    top: 187px; }
+  .organisations .geldinverkoper, .organisations .inputkoper {
+    left: -24px; }
+  .organisations .gelduitkoper, .organisations .outputverkoper {
+    left: 397px; }
 
 .ruilding {
   font-style: italic; }
@@ -1231,28 +1285,6 @@ a {
   top: 20px;
   left: 10px;
   transform: scale(2, 2); }
-
-.geldverkoper, .geldkoper {
-  position: absolute;
-  top: 74px; }
-
-.gelduitverkoper, .geldinverkoper,
-.gelduitkoper, .nutkoper {
-  position: absolute;
-  top: 74px; }
-
-.inputverkoper, .outputverkoper,
-.inputkoper, .outputkoper {
-  position: absolute;
-  top: 104px; }
-
-.gelduitverkoper, .gelduitkoper,
-.inputkoper, .inputverkoper {
-  left: -24px; }
-
-.geldinverkoper, .nutkoper,
-.outputkoper, .outputverkoper {
-  left: 240px; }
 
 .marktnut {
   position: absolute;
@@ -1266,48 +1298,61 @@ a {
   left: 290px;
   transform: scale(0.9, 0.9); }
 
+.overeenkomst_wrap {
+  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightyellow;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #CCCCCC; }
+  .overeenkomst_wrap .regel, .overeenkomst_wrap .regel_vw {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px; }
+  .overeenkomst_wrap .regel {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 3px 12px; }
+  .overeenkomst_wrap .een {
+    flex: 0 1 150px; }
+  .overeenkomst_wrap .twee {
+    flex: 0 1 100px; }
+  .overeenkomst_wrap .drie {
+    flex: 0 1 100px; }
+  .overeenkomst_wrap .bovenkant {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold; }
+    .overeenkomst_wrap .bovenkant .icon {
+      flex: 0 1 24px; }
+    .overeenkomst_wrap .bovenkant .titel {
+      flex: 0 1 270px;
+      justify-content: center; }
+  .overeenkomst_wrap .voorwaarden {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: none; }
+  .overeenkomst_wrap .regel_vw {
+    padding: 3px 12px; }
+    .overeenkomst_wrap .regel_vw .een {
+      flex: 0 1 102px; }
+    .overeenkomst_wrap .regel_vw .twee {
+      flex: 0 1 16px; }
+    .overeenkomst_wrap .regel_vw .drie {
+      flex: 0 1 100px; }
+
 .grafiekenmarkt {
-  border-style: dashed;
-  border-width: 1px 0px 0px 0px;
-  border-color: #CCCCCC;
-  margin-top: 24px; }
+  margin: 24px; }
   .grafiekenmarkt .titel {
     padding: 8px; }
+  .grafiekenmarkt img {
+    padding: 24px; }
 
-.berekeningenmarkt {
-  border-style: dashed;
-  border-width: 1px 0px 0px 0px;
-  border-color: #CCCCCC;
-  margin-top: 24px; }
-  .berekeningenmarkt .titel {
-    padding: 8px; }
-
-.cont-overeenkomst {
-  border: 1px solid #CCCCCC;
-  width: 280px;
-  height: 170px;
-  justify-content: space-between;
-  border-radius: 12px;
-  margin-top: 98px; }
-  .cont-overeenkomst .titel {
-    border-bottom: 1px solid #CCCCCC;
-    height: 24px;
-    width: 100%;
-    padding-top: 3px;
-    text-transform: uppercase; }
-  .cont-overeenkomst .eerstelaag, .cont-overeenkomst .tweedelaag, .cont-overeenkomst .derdelaag {
-    justify-content: flex-start;
-    width: 250px; }
-    .cont-overeenkomst .eerstelaag .one, .cont-overeenkomst .tweedelaag .one, .cont-overeenkomst .derdelaag .one {
-      flex: 0 1 80px;
-      margin-left: 10px; }
-    .cont-overeenkomst .eerstelaag .two, .cont-overeenkomst .tweedelaag .two, .cont-overeenkomst .derdelaag .two {
-      flex: 0 1 160px; }
-    .cont-overeenkomst .eerstelaag .three, .cont-overeenkomst .tweedelaag .three, .cont-overeenkomst .derdelaag .three {
-      flex: 0 1 80px; }
-
-.vierde.laag.vertikaal_wrap {
-  flex-direction: column; }
+.berekeningenmarkt .titel {
+  padding: 24px; }
 
 .styled-select select {
   background: transparent;
@@ -1342,26 +1387,18 @@ rood {
 .padding_right {
   padding-right: 18px; }
 
-.logo-se {
+.rightside.flexrow {
   position: fixed;
-  top: 4px;
-  left: 0px;
-  margin: 5px 0px 0px 32px;
-  background-color: blue; }
-  .logo-se img {
-    height: 35px;
-    opacity: 0.8;
-    width: 520px;
-    height: auto;
-    opacity: 0.5; }
+  top: 4px; }
 
-.lessonassignmentspace {
-  position: fixed;
-  width: 650px;
-  top: 0px;
-  height: 122px;
+.simulatiegame_text {
   background-color: #edeae3;
-  border-bottom: 1px solid #CCCCCC; }
+  font-size: 32px;
+  color: #808080;
+  border-bottom: 1px solid #CCCCCC;
+  border-left: 1px solid #CCCCCC;
+  letter-spacing: 2px;
+  padding: 12px 19px; }
 
 .navb {
   display: flex;
@@ -1373,12 +1410,10 @@ rood {
   left: 0px;
   background-color: #edeae3;
   width: 1250px;
-  /* space */
-  /* user */
-  /* level */ }
+  /* space */ }
   .navb .lijn_navb {
     position: absolute;
-    top: 48px;
+    top: 43px;
     height: 1px;
     width: 1250px;
     background-color: #CCCCCC; }
@@ -1411,26 +1446,8 @@ rood {
     cursor: pointer; }
   .navb .concept {
     display: flex;
-    align-items: center; }
-  .navb .img-learner {
-    margin-top: 0px;
-    margin-left: 0px;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%; }
-  .navb .plaatjenaam {
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-    .navb .plaatjenaam > div {
-      padding: 0px 7px 0px 7px; }
-  .navb .level {
-    width: 400px; }
-  .navb .navtext {
-    text-align: center;
-    color: #808080; }
-  .navb .navtext:hover {
-    color: #343434; }
+    align-items: center;
+    margin: 0px 24px 0px 0px; }
   .navb .expmenu {
     position: fixed;
     z-index: 5;
@@ -1503,20 +1520,6 @@ rood {
 .delete-navdisplay {
   margin: 24px; }
 
-.sito {
-  display: -webkit-flex;
-  flex-direction: column; }
-  .sito .line {
-    display: -webkit-flex;
-    flex-direction: row;
-    color: #808080;
-    padding: 12px 48px 12px 48px;
-    border-bottom: solid 1px #E8E7E7; }
-  .sito .leftside {
-    width: 200px; }
-  .sito .rightside img {
-    max-width: 700px; }
-
 .navtwee, .navdrie {
   height: 36px;
   display: flex;
@@ -1536,15 +1539,16 @@ rood {
     align-items: center;
     padding: 0px 48px;
     color: #808080;
-    border-right: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC !important;
     color: #808080;
     font-size: 16px;
     cursor: pointer;
-    height: 100%; }
+    height: 100%;
+    text-transform: uppercase; }
   .navtwee .navbtn:hover, .navdrie .navbtn:hover {
     background-color: #F4F3F3; }
   .navtwee .btngeselecteerd, .navdrie .btngeselecteerd {
-    background-color: #F4F3F3; }
+    background-color: #F4F3F3 !important; }
 
 .navbtn .btngeselecteerd,
 .navbtn.btngeselecteerd {
@@ -2712,7 +2716,73 @@ table.tablesorter thead tr .headerSortDown {
   color: #fff;
   background-color: #0097cf; }
 
-/*  hjkljhlkj */
+/*  GAME PUNTEN */
+.game_points {
+  position: fixed;
+  width: 650px;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 26px;
+  /* user */
+  /* level */ }
+  .game_points .plaatjenaam {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .game_points .plaatjenaam > div {
+      padding: 0px 7px 0px 7px; }
+    .game_points .plaatjenaam .img-learner {
+      margin-top: 0px;
+      margin-left: 0px;
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 50%; }
+  .game_points .level {
+    width: 458px;
+    justify-content: space-between;
+    padding-left: 63px; }
+  .game_points .navtext {
+    text-align: center;
+    color: #808080;
+    cursor: pointer; }
+  .game_points .navtext:hover {
+    color: #343434; }
+  .game_points .sito {
+    display: -webkit-flex;
+    flex-direction: column; }
+    .game_points .sito .line {
+      display: -webkit-flex;
+      flex-direction: row;
+      color: #808080;
+      padding: 12px 48px 12px 48px;
+      border-bottom: solid 1px #E8E7E7; }
+    .game_points .sito .leftside {
+      width: 200px; }
+    .game_points .sito .rightside img {
+      max-width: 700px; }
+
+.logo-se {
+  display: none;
+  position: fixed;
+  top: 4px;
+  left: 0px;
+  margin: 5px 0px 0px 32px; }
+  .logo-se img {
+    height: 35px;
+    opacity: 0.8;
+    width: 520px;
+    height: auto;
+    opacity: 0.5; }
+
+.lessonassignmentspace {
+  position: fixed;
+  width: 650px;
+  top: 0px;
+  height: 122px;
+  background-color: #edeae3;
+  border-bottom: 1px solid #CCCCCC; }
+
 .game_btn,
 .lessons_btn,
 .assignments_btn {
@@ -2745,7 +2815,7 @@ table.tablesorter thead tr .headerSortDown {
   height: 100%;
   width: 650px;
   position: fixed;
-  top: 122px;
+  top: 115px;
   background-color: #edeae3;
   overflow: visible; }
 
@@ -3236,7 +3306,7 @@ table.tablesorter thead tr .headerSortDown {
         padding: 0px 2px 8px 2px; }
         .part .products .oneproduct .artwork img {
           max-width: 320px;
-          max-height: 175px; }
+          height: 175px; }
       .part .products .oneproduct .artwork.maxima {
         background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
         background-size: 250px 130px;

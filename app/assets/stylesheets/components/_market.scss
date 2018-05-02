@@ -25,51 +25,100 @@ text-align:center;
 }  
 
 
+.header_laag {//Titel met Markt
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 36px 0px 12px;
+}
 
 
-.container-markt {
+
+
+.container-markt { // selector + vierde laag
   display: flex;
   flex-direction: column;
   align-items: center;
-  //padding: 12px;
-  //background-color: red;   
 
-// .eerste .laag, .tweede .laag, .derde 
- .laag {
+  .tweede.laag { // Selector met markten
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     width: 1220px;
-  background-color: white;
-  padding: 2px 24px 0px 24px;
-  }
-  .eerste {
-    justify-content: center;
-    //font-weight: bold;
-    font-size: 24px;
-    padding: 4px 0px 0px;
-  }
-  .tweede, .derde, .vierde {
-    justify-content: space-between;
-    > div {      
-    position: relative;
+    padding: 0px 24px 20px 24px;
     }
+  
+  .vierde.laag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 
-
-  .tweede {
-    //font-weight: bold;
-    padding-bottom: 12px;
-  }
   .vierde .logo {
     font-size: 24px;
     padding: 0px 12px;
     font-weight: bold;   
   }
-.logo.bakker {
-    background-image: url '/images/products/bakker/bakkerbuitenkant.jpeg';
-    }
 
+  .logo.bakker {
+      background-image: url '/images/products/bakker/bakkerbuitenkant.jpeg';
+      }
+}
+
+  .duiding {
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: -300px;
+  }
+  .duiding_overeenkomst {
+    display: none;
+    position: relative;
+    left: -350px;
+  }
+
+  .header {
+    display: none;
+    text-weight: bold;
+    text-align: center;
+    background-color: $background-color-2;
+    padding: 2px 12px;
+  }
+
+
+.cont-overeenkomst {
+  align-items: center;
+  border: 1px solid $border-color-base;
+  width: 280px;
+  height: 170px;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 24px 0px;
+
+  .titel {
+    border-bottom: 1px solid $border-color-base;
+    height: 24px;
+    width: 100%;
+    padding-top: 3px;
+    text-transform: uppercase;
+  }
+  .eerstelaag, .tweedelaag, .derdelaag {
+    justify-content: flex-start;
+    width: 250px;
+    .one {
+      flex: 0 1 80px;
+      margin-left: 10px;
+    }
+    .two {
+      flex: 0 1 160px;
+    }
+    .three {
+      flex: 0 1 80px;
+    }
+  }
 }
 
 //sliders
@@ -79,6 +128,7 @@ text-align:center;
 .slideshow-container {
   position: relative;
   margin: auto;
+  padding: 2px;
 
 .mySlides1, .mySlides2 {}
 
@@ -119,25 +169,26 @@ text-align:center;
 //einde sliders
 
 // Vragers en aanbieders
-.market{
+.organisations{
     position: relative;
-    margin: auto;
+    padding: 2px;    
+    border-style: solid;
+    border-width: 1px 1px 1px 1px; 
+    border-color: $border-color-base;
 
     .body {
       display: flex;
       justify-content: center;
       align-items: center;
-      //width: 400px;
-      //height: 300px; 
-      //padding-bottom: 34px;
-      //padding: 8px;
+    }
 
+    .dots {
 
     }
 
       
   > * {
-    border-style: solid;
+    //border-style: solid;
     border-width: 1px 1px 0px 1px; 
     border-color: $border-color-base;
     //padding-bottom: 26px;
@@ -147,12 +198,8 @@ text-align:center;
     border-bottom-width: 1px;
   }
 
-  .header {
-    text-weight: bold;
-    text-align: center;
-    background-color: $background-color-2;
-    padding: 2px 12px;
-  }
+
+  .dots {}
 
     .dot {
     cursor: pointer;
@@ -168,13 +215,28 @@ text-align:center;
     .active, .dot:hover {
       background-color: #717171;
     }
-    .text {  
-    padding: 2px 8px;
+    .text {   
     display: flex;
-    justify-content: center;
-    //background-color: red;  
-}
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    padding: 8px;
+  }
 
+
+  .gelduitkoper,.inputkoper,
+  .geldinverkoper, .outputverkoper {
+    position: absolute;
+    top: 187px;
+  }
+
+  .geldinverkoper, .inputkoper {
+  left: -24px;
+  }
+  .gelduitkoper, .outputverkoper {
+    left: 397px;
+  }
 }
 
 .ruilding {
@@ -186,29 +248,7 @@ text-align:center;
   left: 10px;
   transform: scale(2,2);
 }
-.geldverkoper, .geldkoper {
-  position: absolute;
-  top: 74px;
-}
-.gelduitverkoper, .geldinverkoper,
-.gelduitkoper, .nutkoper {
-  position: absolute;
-  top: 74px;
-}
 
-.inputverkoper, .outputverkoper, 
-.inputkoper, .outputkoper {
-  position: absolute;
-  top: 104px;
-}
-.gelduitverkoper, .gelduitkoper,
-.inputkoper, .inputverkoper {
-  left: -24px;
-}
-.geldinverkoper, .nutkoper,
-.outputkoper, .outputverkoper {
-  left: 240px;
-}
 .marktnut {
   position: absolute;
   top: -55px;
@@ -221,56 +261,114 @@ text-align:center;
   left: 290px;  
   transform: scale(0.9,0.9);  
 }
+
+
+//overeenkomst
+
+.overeenkomst_wrap {
+  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightyellow; //$background-color-2;
+  border-width: 1px 1px 1px 1px; 
+  border-style: solid;
+  border-color: $border-color-base;
+  .regel, .regel_vw {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+  }
+  .regel{
+    border-bottom: 1px solid $border-color-base;
+    padding: 3px 12px;
+
+  }
+  .een {
+    flex: 0 1 150px;
+  }
+  .twee {
+    flex: 0 1 100px;
+  }
+  .drie {
+    flex: 0 1 100px;
+  }
+    .bovenkant {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    .icon {
+      flex: 0 1 24px;
+    }
+    .titel {
+      flex: 0 1 270px;
+      justify-content: center;
+    }
+  }
+  .voorwaarden {
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: none;
+  }
+  
+  .vw {
+  //text-transform: uppercase
+  }
+
+  .regel_vw {
+    padding: 3px 12px;
+
+  .een {
+    flex: 0 1 102px;
+  }
+  .twee {
+    flex: 0 1 16px;
+  }
+  .drie {
+    flex: 0 1 100px;
+  }
+    
+  }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
 .grafiekenmarkt {
-    border-style: dashed;
-    border-width: 1px 0px 0px 0px; 
-    border-color: $border-color-base;
-    margin-top: 24px;
+    //border-style: solid;
+    //border-width: 1px 0px 0px 0px; 
+    //border-color: $border-color-base;
+    margin: 24px;
     //transform: scale(0.94,0.94);
     .titel {
       padding: 8px;
+    }
+    img {
+      padding: 24px;
     }
 }
 .berekeningenmarkt {
-    border-style: dashed;
-    border-width: 1px 0px 0px 0px; 
-    border-color: $border-color-base;
-    margin-top: 24px;
+    //border-style: dashed;
+    //border-width: 1px 0px 0px 0px; 
+    //border-color: $border-color-base;
+    //margin-top: 24px;
     //transform: scale(0.94,0.94);
     .titel {
-      padding: 8px;
+      padding: 24px;
     }  
 }
 
-.cont-overeenkomst {
-  border: 1px solid $border-color-base;
-  width: 280px;
-  height: 170px;
-  justify-content: space-between;
-  border-radius: 12px;
-  margin-top: 98px;
-  .titel {
-    border-bottom: 1px solid $border-color-base;
-    height: 24px;
-    width: 100%;
-    padding-top: 3px;
-    text-transform: uppercase;
-  }
-  .eerstelaag, .tweedelaag, .derdelaag {
-    justify-content: flex-start;
-    width: 250px;
-    .one {
-      flex: 0 1 80px;
-      margin-left: 10px;
-    }
-    .two {
-      flex: 0 1 160px;
-    }
-    .three {
-      flex: 0 1 80px;
-    }
-  }
-}
 
 
 
@@ -290,10 +388,4 @@ text-align:center;
 
 
 
-
-
-
-.vierde.laag.vertikaal_wrap {
-  flex-direction: column;
-}
 

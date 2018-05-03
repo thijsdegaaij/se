@@ -1,4 +1,134 @@
- 
+.one_org_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .headerorg {
+    margin-top: 48px;
+    .middle {
+    background-color: $background-color-1 !important;
+  }
+    .five {
+      //padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+  }
+  .eigen_vermogen {
+    margin-top: 24px;
+  }
+  .ledger_type {
+    width: 1350px;
+    
+    .first_layer, .other_layer {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      .one {
+       flex: 240px;
+      }
+      .two {
+       flex: 80px;
+      }
+      .three {
+       flex: 24px;
+      }
+      .four {
+       flex: 34px;
+      }
+      .five {
+       flex: 250px;
+
+      }
+      .six {
+        flex: 70px;
+      }
+      .seven {
+        flex: 60px;
+      }
+      .eight {
+       flex: 24px;
+      }
+      .nine {
+       flex:90px;
+       }
+      .ten {
+        flex:330px; 
+      }
+      .one, .two, .seven, .nine {
+       text-align: right;
+       padding-right: 12px;        
+      }
+      .six, .nine { 
+        img {
+          max-height: 30px;
+        }
+      }
+    }
+    .left, .middle, .right {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    } 
+    .left {
+      flex: 300px;
+    }
+    .middle {
+      flex: 470px;
+    }
+    .right {
+      flex:400px;
+    }
+    .first_layer .middle {
+      background-color: $background-color-2;
+      } 
+    .first_layer .middle {
+      border-width: 1px 1px 0px 1px;
+      border-style:  solid;
+      border-color: $border-color-base;
+    } 
+    .other_layer .middle {
+      border-width: 0px 1px 0px 1px;
+      border-style:  solid;
+      border-color: $border-color-base;
+    }
+    .personeel .middle {
+      border-bottom: 1px solid $border-color-base;
+    }
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .artwork-klappers {
       position: absolute;
       left: 300px;
@@ -1032,7 +1162,7 @@
           text-align: center;
           height: 30px;
           color: white;
-          font-size: 16px;
+          font-size: $fontSize;
           padding: 8px;
           border-width: 0px 0px 1px 0px;
       }

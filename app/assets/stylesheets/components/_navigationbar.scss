@@ -118,7 +118,7 @@ rood {
       padding: 12px 18px 10px;
       border-right: 1px solid $border-color-base;
       color: $kop2;
-      font-size: 16px;
+      font-size: $fontSizeHeader;
       //letter-spacing: .5pt;
       text-transform: uppercase;
     }
@@ -256,7 +256,7 @@ rood {
     border-style: solid;
     border-color: $border-color-base!important;
     div:first-child {
-      border-left: solid 1px $border-color-base;
+      //border-left: solid 1px $border-color-base;
       //background-color: yellow;
     }
     .navheader {
@@ -272,7 +272,7 @@ rood {
       color: $text-color-base;
       border-right: 1px solid $border-color-base !important;
       color: $kop2;
-      font-size: 16px;
+      font-size: $fontSizeHeader;
       cursor: pointer;
       height: 100%;
       text-transform: uppercase;

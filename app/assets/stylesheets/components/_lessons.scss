@@ -3,7 +3,7 @@
 .game_points {
     position: fixed;
     width: $left;
-    z-index:100;
+    //z-index:0;
     display: flex;
     flex-direction: row;
     padding: 10px 26px;
@@ -210,7 +210,7 @@
         -webkit-justify-content: space-between;
         -webkit-align-items: center;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: $fontSize;
         padding: 12px 39px 12px 48px;
         margin-bottom: 24px;
         border-bottom: solid 1px $border-color-light;
@@ -261,7 +261,7 @@
         flex-direction: column;
         justify-content: flex-start;
         text-align: justify;
-        font-size: 16px;
+        font-size: $fontSize;
         //background-color: red;
         position: relative;
         top: 40px; 

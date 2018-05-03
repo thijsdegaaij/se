@@ -31,6 +31,8 @@ $output				: hsl(329, 85%, 70%);
 $input				: hsl(28, 15%, 47%);
 $bgoutput			: hsl(0, 100%, 85%);
 $bginput			: hsl(130, 41%, 80%);
+$bginternin			: hsl(28, 41%, 90%);
+$bginternuit		: hsl(28, 41%, 90%);
 $bgwinst			: hsl(300, 100%, 70%);
 
 $blue				:	$ggblue;
@@ -84,6 +86,9 @@ $text-color-base	:	$gray7;
 $text-color-dark	:	$gray9;
 
 $colorhover			:	$gray1;
+
+$fontSize            :   14px;
+$fontSizeHeader      : 16px;
 
 $leftq				: 650;
 $left				: 650px;

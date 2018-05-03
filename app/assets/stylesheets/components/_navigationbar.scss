@@ -20,6 +20,7 @@
 
  .navtwee .styled-select {
     width: 120px;
+    height: 22px;
   }
 
    .lessons .styled-select select {
@@ -245,15 +246,19 @@ rood {
 // tweede navigatiebar
 
 .navtwee, .navdrie {
-    height: 36px;
+    //height: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: $background-color-1;
-    padding: 0px 24px 0px 1px;
+    //padding: 0px 24px 0px 1px;
     border-width: 0px 0px 1px 1px;
     border-style: solid;
     border-color: $border-color-base!important;
+    div:first-child {
+      border-left: solid 1px $border-color-base;
+      //background-color: yellow;
+    }
     .navheader {
       display: none;
       color: $kop2;
@@ -263,7 +268,7 @@ rood {
     .navbtn {
       display: flex;
       align-items: center;
-      padding: 0px 48px;
+      padding: 12px 18px 10px 18px;
       color: $text-color-base;
       border-right: 1px solid $border-color-base !important;
       color: $kop2;

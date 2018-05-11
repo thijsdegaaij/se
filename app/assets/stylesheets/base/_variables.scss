@@ -26,14 +26,33 @@ $beige:			hsl(42, 23%, 91%);
 $beigedark:	    hsl(42, 23%, 45%);
 $x: hsl(42, 31%, 56%);
 
+$background-color-1	:	$beige;
+$background-color-2	:	$gray1;
+$background-color-dark	:	$gray5;
+
+$border-color-light	:	$gray2;
+$border-color-base	:	$gray3;
+$border-color-dark	:	$gray4;
+$border-color-try	:	$white;
+
+$text-color-light	:	$gray1;
+$text-color-grey	:	$gray5;
+$text-color-base	:	$gray7;
+$text-color-dark	:	$gray9;
+
+$colorhover			:	$gray1;
+
 /* Functional colors */
+$bgovereenkomst     : hsl(60, 85%, 95%);
 $output				: hsl(329, 85%, 70%);
 $input				: hsl(28, 15%, 47%);
-$bgoutput			: hsl(0, 100%, 85%);
-$bginput			: hsl(130, 41%, 80%);
-$bginternin			: hsl(28, 41%, 90%);
-$bginternuit		: hsl(28, 41%, 90%);
-$bgwinst			: hsl(300, 100%, 70%);
+$bggeld				: hsl(216, 100%, 95%);
+$bgoutput			: hsl(0, 100%, 95%);
+$bginput			: $gray2;
+$bgbelasting_eigenaar : hsl(130, 41%, 95%);
+$bginternin			: hsl(0, 25%, 93%);//$background-color-2;
+$bginternuit		: hsl(0, 25%, 93%);//$background-color-2;//hsl(28, 41%, 90%);
+$bgwinst			: $background-color-1;//hsl(300, 100%, 95%);
 
 $blue				:	$ggblue;
 $red				:	$ggred;
@@ -53,7 +72,7 @@ $ervaringsproduct1	: hsl(312, 56%, 95%);
 $blue-light			:hsl(217, 100%, 99%);
 $red-light			:hsl(0, 56%, 95%);
 $orange-light		:hsl(45, 97%, 95%);
-$green-light		:hsl(136, 53%, 95%);
+$green-light		:hsl(224, 53%, 95%);
 
 $bg-balans			: hsl(61, 100%, 89%);
 $bg-rr				: hsl(61, 100%, 95%);
@@ -71,21 +90,7 @@ $bg-verleden		:	hsl(45, 23%,97%);
 
 $verleden			:	hsl(85, 23%, 96%);
 $toekomst			:	#FFFFCC;
-$background-color-1	:	$beige;
-$background-color-2	:	$gray1;
-$background-color-dark	:	$gray5;
 
-$border-color-light	:	$gray2;
-$border-color-base	:	$gray3;
-$border-color-dark	:	$gray4;
-$border-color-try	:	$white;
-
-$text-color-light	:	$gray1;
-$text-color-grey	:	$gray5;
-$text-color-base	:	$gray7;
-$text-color-dark	:	$gray9;
-
-$colorhover			:	$gray1;
 
 $fontSize            :   14px;
 $fontSizeHeader      : 16px;

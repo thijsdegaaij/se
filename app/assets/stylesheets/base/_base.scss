@@ -35,7 +35,9 @@ hr {
 a {
   cursor: pointer;
 }
-
+.visible {
+  visibility: hidden;
+}
   .showtarget1 {
     background-color: $showtargetcolor1;
   }

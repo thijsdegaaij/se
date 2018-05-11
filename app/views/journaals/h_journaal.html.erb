@@ -1,75 +1,64 @@
 <!-- h_journaal.html.erb -->
 <script>
-  // AN: Kies een journaal
-  $('#jnl_ink').change(function() {
-     $("#search_jnlink_submit").click();
-  });
-  $('#jnl_verk').change(function() {
-     $("#search_jnlverk_submit").click();
-  });
-  $('#jnl_bank').change(function() {
-     $("#search_jnlbank_submit").click();
-  });
-  $('#jnl_lev').change(function() {
-     $("#search_jnllev_submit").click();
-  });
-  $('#jnl_intern').change(function() {
-     $("#search_jnlintern_submit").click();
-  });
+// AN: Kies een journaal
+$('#jnl_ink').change(function() {
+    $("#search_jnlink_submit").click();
+});
+$('#jnl_verk').change(function() {
+    $("#search_jnlverk_submit").click();
+});
+$('#jnl_bank').change(function() {
+    $("#search_jnlbank_submit").click();
+});
+$('#jnl_lev').change(function() {
+    $("#search_jnllev_submit").click();
+});
+$('#jnl_intern').change(function() {
+    $("#search_jnlintern_submit").click();
+});
 </script>
-
+<div class="header_laag">
+    Interne verslaglegging</div>
 <div class="">
- 
-<div class="flex-rowstart ">
-    <div class="navdrie ">
-        <div class="navbtn btngrootboek btngeselecteerd">Grootboek</div>
-        <div class="navbtn btninboeken ">Journaals inboeken</div>
-        <div class="navbtn btnkostprijs ">Berekeningen</div>
-    </div>
-
-
-
-    <div class="flex-columncenter">
-
-
-<!-- grootboek  -->  
-          <div id="search_gb_results">
-            <%= render 'journaals/grootboek' %>
-          </div>
-
-<!-- inboeken  -->
-        <div class="containerinboeken displaynone">
-            <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
-            <div class="inboeken-all">
-                <div class="journaals">
-                    <div class="header">Journaals</div>
-                    <div class="btns">
-                        <div class="btn-inboeken inkoop button bold">inkoopboek</div>
-                        <div class="btn-inboeken verkoop button">verkoopboek</div>
-                        <div class="btn-inboeken bank button">bankboek</div>
-                        <div class="btn-inboeken leveringen button">leveringen</div>
-                        <div class="btn-inboeken intern button">Interne Boekingen</div>
-                    </div>
-                    <div>
-                    <!-- inkoopboek -->
-                    <%= render 'journaals/jnlinkoop' %>
-                  
-                    <!-- verkoopboek -->
-                    <%= render 'journaals/jnlverkoop' %>
-                    
-                    <!-- bankboek -->
-                    <%= render 'journaals/jnlbank' %>
-                    
-                    <!-- leveringen -->
-                    <%= render 'journaals/jnllevering' %>
-                    
-                    <!-- Interne boekingen -->
-                    <%= render 'journaals/jnlintern' %>
-                    </div>
-                    <div class="klappers"></div>
-                </div>
+    <div class="flex-rowstart ">
+        <div class="navdrie ">
+            <div class="navbtn btngrootboek btngeselecteerd">Grootboek yyy</div>
+            <div class="navbtn btninboeken ">Journaals inboeken</div>
+            <div class="navbtn btnkostprijs ">Berekeningen</div>
+        </div>
+        <div class="flex-columncenter">
+            <!-- grootboek  -->
+            <div id="search_gb_results">
+                <%= render 'journaals/grootboek' %>
             </div>
-
+            <!-- inboeken  -->
+            <div class="containerinboeken displaynone">
+                <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
+                <div class="inboeken-all">
+                    <div class="journaals">
+                        <div class="header">Journaals</div>
+                        <div class="btns">
+                            <div class="btn-inboeken inkoop button bold">inkoopboek</div>
+                            <div class="btn-inboeken verkoop button">verkoopboek</div>
+                            <div class="btn-inboeken bank button">bankboek</div>
+                            <div class="btn-inboeken leveringen button">leveringen</div>
+                            <div class="btn-inboeken intern button">Interne Boekingen</div>
+                        </div>
+                        <div>
+                            <!-- inkoopboek -->
+                            <%= render 'journaals/jnlinkoop' %>
+                                <!-- verkoopboek -->
+                                <%= render 'journaals/jnlverkoop' %>
+                                    <!-- bankboek -->
+                                    <%= render 'journaals/jnlbank' %>
+                                        <!-- leveringen -->
+                                        <%= render 'journaals/jnllevering' %>
+                                            <!-- Interne boekingen -->
+                                            <%= render 'journaals/jnlintern' %>
+                        </div>
+                        <div class="klappers"></div>
+                    </div>
+                </div>
                 <div class="kopje displaynone">Inboeken</div>
                 <div class="boekin inkoop">
                     <!-- <div class="inboekingsmogelijkheden inkoop">
@@ -173,100 +162,99 @@
                             </div>
                         </div>
                     </div> -->
-                      <div class="inboekingsmogelijkheden inkoop">
+                    <div class="inboekingsmogelijkheden inkoop">
                         <div id="search_bkninkoop_results">
-                          <%= render 'journaals/inboek_ink' %>
+                            <%= render 'journaals/inboek_ink' %>
                         </div>
-                      </div>  
+                    </div>
                     <div class="inboekingsmogelijkheden verkoop displaynone">
                         <div id="search_bknverkoop_results">
-                          <%= render 'journaals/inboek_verk' %>
+                            <%= render 'journaals/inboek_verk' %>
                         </div>
                     </div>
                     <div class="inboekingsmogelijkheden bank displaynone">
                         <div id="search_bknbank_results">
-                          <%= render 'journaals/inboek_bank' %>
+                            <%= render 'journaals/inboek_bank' %>
                         </div>
                     </div>
                     <div class="inboekingsmogelijkheden leveringen displaynone">
                         <div id="search_bknlev_results">
-                          <%= render 'journaals/inboek_lev' %>
+                            <%= render 'journaals/inboek_lev' %>
                         </div>
                     </div>
                     <div class="inboekingsmogelijkheden intern displaynone">
                         <div id="search_bknintern_results">
-                          <%= render 'journaals/inboek_intern' %>
+                            <%= render 'journaals/inboek_intern' %>
                         </div>
                     </div>
                 </div>
             </div>
-        
-<!-- interne berekeningen -->
-        <div class="kprijscontainer displaynone">
+            <!-- interne berekeningen -->
+            <div class="kprijscontainer displaynone">
                 <div class="titelhoofd displaynone">Interne berekeningen</div>
                 <div class="titel">prijzen </div>
                 <div class="ondertitel">Vaste verrekenprijs, kostprijs en verkoopprijs</div>
-            <div class="kprijsb ">
-                <div class="col col1">
-                    <div class="k-iwo omtrek">
-                        <div class="text">Inkoopwaarde van de omzet</div>
-                        <div class=" ">&euro; 100.000 (totaal)</div>
-                        <div class=" ">&euro; 1,00 (per stuk)</div>
-                    </div>
-                    <div class="k-bdv"><span class="verhoogd">Kosten voor bedrijfsvoering</span>
-                        <div class="k-ink">
-                            <div class="text">Inkoopkosten</div>
-                            <div class=" ">&euro; 10.000 (totaal)</div>
-                            <div class=" ">&euro; 0,10 (per stuk)</div>
+                <div class="kprijsb ">
+                    <div class="col col1">
+                        <div class="k-iwo omtrek">
+                            <div class="text">Inkoopwaarde van de omzet</div>
+                            <div class=" ">&euro; 100.000 (totaal)</div>
+                            <div class=" ">&euro; 1,00 (per stuk)</div>
                         </div>
-                        <div class="k-ovh"><span class="verhoogd">Overheadkosten</span>
-                            <div class="k-vrk">
-                                <div class="text">Verkoopkosten</div>
+                        <div class="k-bdv"><span class="verhoogd">Kosten voor bedrijfsvoering</span>
+                            <div class="k-ink">
+                                <div class="text">Inkoopkosten</div>
                                 <div class=" ">&euro; 10.000 (totaal)</div>
                                 <div class=" ">&euro; 0,10 (per stuk)</div>
                             </div>
-                            <div class="k-alg">
-                                <div class="text">Algemene kosten</div>
-                                <div class=" ">&euro; 52.000 (totaal)</div>
-                                <div class=" ">&euro; 0,52 (per stuk)</div>
+                            <div class="k-ovh"><span class="verhoogd">Overheadkosten</span>
+                                <div class="k-vrk">
+                                    <div class="text">Verkoopkosten</div>
+                                    <div class=" ">&euro; 10.000 (totaal)</div>
+                                    <div class=" ">&euro; 0,10 (per stuk)</div>
+                                </div>
+                                <div class="k-alg">
+                                    <div class="text">Algemene kosten</div>
+                                    <div class=" ">&euro; 52.000 (totaal)</div>
+                                    <div class=" ">&euro; 0,52 (per stuk)</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col col2">
-                    <div class="vvpbuiten">
-                        <div class="vvp">
-                            <div class="text">Vaste verrekenprijs (vvp)</div>
-                            <div></div>
-                            <div class=" ">&euro; 1,10</div>
+                    <div class="col col2">
+                        <div class="vvpbuiten">
+                            <div class="vvp">
+                                <div class="text">Vaste verrekenprijs (vvp)</div>
+                                <div></div>
+                                <div class=" ">&euro; 1,10</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col col3">
-                    <div class="k-kpbuiten">
-                        <div class="k-kp">
-                            <div class="text">Kostprijs</div>
+                    <div class="col col3">
+                        <div class="k-kpbuiten">
+                            <div class="k-kp">
+                                <div class="text">Kostprijs</div>
+                                <div></div>
+                                <div class=" ">&euro; 1,72</div>
+                            </div>
+                        </div>
+                        <div class="winstm">
+                            <div class="text">Winstmarge</div>
                             <div></div>
-                            <div class=" ">&euro; 1,72</div>
+                            <div class=" ">&euro; 0,28</div>
                         </div>
                     </div>
-                    <div class="winstm">
-                        <div class="text">Winstmarge</div>
-                        <div></div>
-                        <div class=" ">&euro; 0,28</div>
-                    </div>
-                </div>
-                <div class="col col4">
-                    <div class="pverkoop">
-                        <div class="text">Verkoopprijs</div>
-                        <div></div>
-                        <div class=" ">&euro; 2,00</div>
+                    <div class="col col4">
+                        <div class="pverkoop">
+                            <div class="text">Verkoopprijs</div>
+                            <div></div>
+                            <div class=" ">&euro; 2,00</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- gb -->
-        <!-- <div class="gbr-vergroot voorraad displaynone">
+            <!-- gb -->
+            <!-- <div class="gbr-vergroot voorraad displaynone">
             <div class="titel button">
                 <div class="icon icon-rondje"></div>
                 <div>Voorraad</div>
@@ -517,8 +505,8 @@
                 </div>
             </div>
         </div> -->
-        <!-- gbr-vergroot -->
-        <!-- <div class="gbr-vergroot verkopen displaynone">
+            <!-- gbr-vergroot -->
+            <!-- <div class="gbr-vergroot verkopen displaynone">
             <div class="titel button">
                 <div class="icon icon-rondje"></div>
                 <div>Vooorraad winkel</div>
@@ -695,16 +683,7 @@
                 </div>
             </div>
         </div> -->
-        <!-- gbr-vergroot -->
-        
+            <!-- gbr-vergroot -->
+        </div>
     </div>
 </div>
-
-</div>
-
-
-
-
-
-
-

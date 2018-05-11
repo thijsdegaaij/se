@@ -2,8 +2,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .btn_boven_organisatie {
+    position: absolute;
+    top: 170px;
+    left: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    justify-content: space-between;
+    width: 200px;
+    cursor: pointer;
+    :first-child  {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+
   .headerorg {
-    margin-top: 48px;
+    margin-top: 0px;
     .middle {
     background-color: $background-color-1 !important;
   }
@@ -17,42 +35,55 @@
     margin-top: 24px;
   }
   .ledger_type {
-    width: 1350px;
+    width: 1190px;
+
+    .movie_org, .foto_org {
+      position:absolute;
+      top: 270px;
+      left: 300px;
+      z-index:1;
+      width: 900px;
+      height: 700px;
+      //background-color: aliceblue;
+    }
     
     .first_layer, .other_layer {
       display: flex;
       flex-direction: row;
       justify-content: start;
       .one {
-       flex: 240px;
+       flex: 1 0 200px;
+       display: none;
       }
       .two {
-       flex: 80px;
+       flex: 1 0 50px;
       }
       .three {
-       flex: 24px;
+       //flex: 1 0 24px;
       }
       .four {
-       flex: 34px;
+       flex: 24px;
       }
       .five {
-       flex: 250px;
+       flex: 260px;
+       margin-left: 10px;
 
       }
       .six {
-        flex: 70px;
+        flex: 80px;
       }
       .seven {
         flex: 60px;
       }
       .eight {
-       flex: 24px;
+       //flex: 24px;
       }
       .nine {
-       flex:90px;
+       flex:50px;
        }
       .ten {
-        flex:330px; 
+        flex:220px; 
+        //visibility: hidden; //met display none verspringt het.
       }
       .one, .two, .seven, .nine {
        text-align: right;
@@ -68,34 +99,132 @@
       display: flex;
       flex-direction: row;
       justify-content: start;
+      align-items: center;
     } 
     .left {
-      flex: 300px;
+      flex: 275px;
     }
     .middle {
-      flex: 470px;
+      flex: 390px;
     }
     .right {
-      flex:400px;
-    }
-    .first_layer .middle {
-      background-color: $background-color-2;
-      } 
-    .first_layer .middle {
-      border-width: 1px 1px 0px 1px;
-      border-style:  solid;
-      border-color: $border-color-base;
-    } 
-    .other_layer .middle {
-      border-width: 0px 1px 0px 1px;
-      border-style:  solid;
-      border-color: $border-color-base;
-    }
-    .personeel .middle {
-      border-bottom: 1px solid $border-color-base;
+      flex:294px;
     }
   }
+
+    .first_layer .middle {
+      //background-color: $background-color-2;
+      font-weight: bold;
+      } 
+    .first_layer .middle {
+      border-width: 2px 2px 0px 2px;
+      border-style:  solid;
+      border-color: $border-color-base;
+      cursor: pointer;
+    } 
+    .other_layer .middle {
+      border-width: 0px 2px 0px 2px;
+      border-style:  solid;
+      border-color: $border-color-base;
+    }
+    .l_eigenaar .middle, .l_ev .middle {
+      border-bottom: 1px solid $border-color-base;
+    }
+  
+
+  .btn_vraagteken {
+    //position: absolute;
+    //left: -36px;
+    //top: -21px;
+    margin-right: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: hsl(60, 90%, 50%);
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid hsl(60, 60%, 50%)
+  }
+    .btn_vraagteken:hover {
+      background-color: hsl(60, 100%, 50%);
+    }
+    .attention_yellowbackground {
+      background-color: yellow !important;
+    }
+   .l_product_dienstverlenend .middle, 
+   .l_functionele_kosten .middle,
+   .l_kostensoorten .middle {
+     cursor: pointer;
+   }
+
+
+   .l_vla .other_layer {
+     cursor: pointer;
+   }
+.gek {
+  font-size: 34px;
+}
+
+.other_layer_close {
+  display: none;
+}
+ 
+     .bg_kleur_overeenkomst {
+       background-color: $bgovereenkomst !important;
+     }
+     .bg_kleur_geld {
+       background-color: $bggeld;
+     }
+ 
+     .bg_kleur_verkocht {
+       background-color: $bgoutput;// hsl(0, 100%, 96%)
+     }
+     .bg_kleur_kosten {
+       background-color: $bginternuit;// hsl(25, 100%, 96%);
+      }
+     .bg_kleur_input{
+       background-color: $bginput; // hsl(111, 100%, 96%);
+       }
+     
+     .bg_kleur_ev {
+       background-color: $bgwinst;
+     }
+     .bg_kleur_winst {
+       background-color: purple;
+     }
+
+     .bg_kleur_belasting_eigenaar {
+       background-color:$bgbelasting_eigenaar !important;
+     }
+  
+  @mixin hulprondje {cursor: pointer;  
+     width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: hsl(60, 90%, 50%);
+    border: 2px solid hsl(60, 60%, 50%);    
+  }
+
+   .ledger_type .other_layer .four:hover {
+     width: 24px;
+     background-color: $background-color-2;
+     @include hulprondje;
+    text-align: center;
+    cursor: pointer;
+
+    
+   }
+    .ledger_type .other_layer .four:hover:before {
+      content: "?";
+      font-size: 20px;
+      //padding-left: 8px;
+    }
 } 
+
+.journaals_voor_organisatie {
+  justify-content: center !important;
+}
 
 
 

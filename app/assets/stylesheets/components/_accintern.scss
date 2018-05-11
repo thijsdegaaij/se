@@ -1,3 +1,7 @@
+
+
+
+
 .accounting-all {  
   align-items: center;
 	position: relative;
@@ -234,8 +238,7 @@
 //  INBOEKEN
 
 .inboeken-all {  
-  
-  .kopje {
+    .kopje {
      position: relative;
 	 padding-left: 24px; 
 		padding-top: 24px;   
@@ -243,7 +246,7 @@
 		//font-weight: bold;
 		text-transform: uppercase;
 		color: $text-color-grey;
-  }
+  	}
 }
 .boeking_titel {
 	padding: 0px 0px 24px 0px;
@@ -309,13 +312,33 @@
         //text-transform: uppercase;
       }
     }
-   .journaal {
-       .kies {
-         margin: 24px 0px 12px 0px;
-         font-weight: bold;
-       }
-   }
-}  
+	.journaal {
+	   .kies {
+		 margin: 24px 0px 12px 0px;
+		 font-weight: bold;
+	   }
+	}
+} 
+.journaals_kort {
+	padding-bottom: 8px;
+}
+.journaals_kort .journaals {
+	display: contents;
+	padding-top:0px;
+	
+}
+.journaals_kort .btns {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    //background-color: red;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding-right: 0px;
+}
+
+ 
 .inboekveld {
 	background-color: yellowgreen;
 }
@@ -417,7 +440,7 @@
 
 .overeenkomst {  
      .inkoop-ovr {
-        background-color: white;   
+        background-color: lightyellow;   
 		width: 380px; 
 		border: 1px solid $border-color-base;  
 		border-radius: 6px;	
@@ -441,26 +464,40 @@
 	    .inline {
 	        display: flex;
 	        flex-direction: row;
-	        margin: 2px 0px 2px 12px;
+	        margin: 0px 0px 0px 0px;
 	        position: relative;
+	        padding-bottom: 2px;
+	        border-bottom: 1px solid $border-color-base;
 	        //top: -6px;	 	        
-            //:nth-child(1) {flex: 0 0 160px; }
-            //:nth-child(2) {flex: 0 0 101px; }
-            //:nth-child(3) {flex: 0 0 260px; } 
+            :nth-child(1) {
+            	width: 140px;
+            	:nth-child(1) { margin-left: 12px;}
+            	:nth-child(2) { margin-left: 12px;}
+            }
+            :nth-child(2) {width: 120px; }
+            :nth-child(3) {wid: 120px; } 
 	    }
+
 	    .blok {
 	        display: flex;
 	        flex-direction: column; 
 	        width: 120px;
 	        height: 50px;       
             :nth-child(1) {width: 100px;}
-            :nth-child(2) {width: 100px;}
+            :nth-child(2) {width: 80px;}
             //:nth-child(3) {width: 120px;} 
-	      }
-	    .form {
-	        width: 70px;
+	      }	    .form {
+	        width: 50px;
 	        color: $blue;  
 	     }
+	     .form.euro {
+	     	text-align: right;
+	     }
+            .form.euro::before {
+            	content: "euro";
+            	//width: 50px;
+            }
+
 	    .text {
 	      font-size: 13px; 
 	      color: $text-color-base; 
@@ -473,6 +510,9 @@
 	        margin: 14px 0px 4px 12px;
 	        font-size: 12px;
 	        color: $text-color-base;
+	        .inline {
+	    	:nth-child(1) {width: 128px!important;}
+	    	}
 	    }
      }
 	}  

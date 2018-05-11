@@ -5,7 +5,6 @@
     
       <!-- verkoopboek -->
       <div id="jnl_lev">
-        Kies leveringsbon:
         <%= collection_select(:jnllev, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 4, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
       </div>
     

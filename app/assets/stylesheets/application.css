@@ -46,6 +46,9 @@ hr {
 a {
   cursor: pointer; }
 
+.visible {
+  visibility: hidden; }
+
 .showtarget1 {
   background-color: #f9f795; }
 
@@ -500,7 +503,7 @@ a {
     margin-top: -14px;
     margin-bottom: 8px; }
 .grootboek .posev {
-  background-color: #ebf9ef; }
+  background-color: #ebeff9; }
 .grootboek .negev {
   background-color: #f9ebeb; }
 .grootboek .winstev {
@@ -788,12 +791,6 @@ a {
 .icon-personeelproduct {
   background-image: url("/images/icons/icon_personeel-product.png"); }
 
-.icon-product-verkocht {
-  background-image: url("/images/icons/icon_product-verkocht.png"); }
-
-.icon-product-leeg {
-  background-image: url("/images/icons/icon_product-leeg.png"); }
-
 .icon-sliderarrow {
   background-image: url("/images/icons/icon_sliderarrow.png"); }
 
@@ -930,6 +927,15 @@ a {
 
 .icon-kindje {
   background-image: url("/images/people/figuren/figuren_kindje.png"); }
+
+.icon-product-verkocht {
+  background-image: url("/images/icons/icon_product-verkocht.png"); }
+
+.icon-product-leeg {
+  background-image: url("/images/icons/icon_product-leeg.png"); }
+
+.icon-product-geproduceerd {
+  background-image: url("/images/icons/icon_product-geproduceerd.png"); }
 
 .icon-product {
   background-image: url("/images/icons/icon_product.png"); }
@@ -1215,14 +1221,14 @@ a {
     padding: 2px; }
     .organisations .slideshow-container .mySlides1 .text, .organisations .slideshow-container .mySlides2 .text {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       position: absolute;
-      top: 208px;
+      top: 0px;
       left: 132px;
       width: 150px;
       height: 31px;
       padding: 6px;
-      border-radius: 5px 5px 0px 0px; }
+      border-radius: 0px 0px 5px 5px; }
     .organisations .slideshow-container img {
       vertical-align: middle;
       width: 397px;
@@ -1254,15 +1260,16 @@ a {
   .organisations .dots {
     text-align: center;
     position: absolute;
-    top: 239px;
+    top: 241px;
     left: 132px;
     width: 150px;
-    background-color: rgba(255, 255, 255, 0.9); }
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px 5px 0px 0px; }
   .organisations .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 5px 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -1461,7 +1468,8 @@ rood {
   .navb .concept {
     display: flex;
     align-items: center;
-    margin: 0px 24px 0px 0px; }
+    margin: 0px px 0px 0px;
+    width: 200px; }
   .navb .expmenu {
     position: fixed;
     z-index: 5;
@@ -1595,8 +1603,21 @@ rood {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .one_org_wrap .btn_boven_organisatie {
+    position: absolute;
+    top: 170px;
+    left: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    justify-content: space-between;
+    width: 200px;
+    cursor: pointer; }
+    .one_org_wrap .btn_boven_organisatie :first-child {
+      text-transform: uppercase;
+      font-weight: bold; }
   .one_org_wrap .headerorg {
-    margin-top: 48px; }
+    margin-top: 0px; }
     .one_org_wrap .headerorg .middle {
       background-color: #edeae3 !important; }
     .one_org_wrap .headerorg .five {
@@ -1605,31 +1626,36 @@ rood {
   .one_org_wrap .eigen_vermogen {
     margin-top: 24px; }
   .one_org_wrap .ledger_type {
-    width: 1350px; }
+    width: 1190px; }
+    .one_org_wrap .ledger_type .movie_org, .one_org_wrap .ledger_type .foto_org {
+      position: absolute;
+      top: 270px;
+      left: 300px;
+      z-index: 1;
+      width: 900px;
+      height: 700px; }
     .one_org_wrap .ledger_type .first_layer, .one_org_wrap .ledger_type .other_layer {
       display: flex;
       flex-direction: row;
       justify-content: start; }
       .one_org_wrap .ledger_type .first_layer .one, .one_org_wrap .ledger_type .other_layer .one {
-        flex: 240px; }
+        flex: 1 0 200px;
+        display: none; }
       .one_org_wrap .ledger_type .first_layer .two, .one_org_wrap .ledger_type .other_layer .two {
-        flex: 80px; }
-      .one_org_wrap .ledger_type .first_layer .three, .one_org_wrap .ledger_type .other_layer .three {
-        flex: 24px; }
+        flex: 1 0 50px; }
       .one_org_wrap .ledger_type .first_layer .four, .one_org_wrap .ledger_type .other_layer .four {
-        flex: 34px; }
+        flex: 24px; }
       .one_org_wrap .ledger_type .first_layer .five, .one_org_wrap .ledger_type .other_layer .five {
-        flex: 250px; }
+        flex: 260px;
+        margin-left: 10px; }
       .one_org_wrap .ledger_type .first_layer .six, .one_org_wrap .ledger_type .other_layer .six {
-        flex: 70px; }
+        flex: 80px; }
       .one_org_wrap .ledger_type .first_layer .seven, .one_org_wrap .ledger_type .other_layer .seven {
         flex: 60px; }
-      .one_org_wrap .ledger_type .first_layer .eight, .one_org_wrap .ledger_type .other_layer .eight {
-        flex: 24px; }
       .one_org_wrap .ledger_type .first_layer .nine, .one_org_wrap .ledger_type .other_layer .nine {
-        flex: 90px; }
+        flex: 50px; }
       .one_org_wrap .ledger_type .first_layer .ten, .one_org_wrap .ledger_type .other_layer .ten {
-        flex: 330px; }
+        flex: 220px; }
       .one_org_wrap .ledger_type .first_layer .one, .one_org_wrap .ledger_type .first_layer .two, .one_org_wrap .ledger_type .first_layer .seven, .one_org_wrap .ledger_type .first_layer .nine, .one_org_wrap .ledger_type .other_layer .one, .one_org_wrap .ledger_type .other_layer .two, .one_org_wrap .ledger_type .other_layer .seven, .one_org_wrap .ledger_type .other_layer .nine {
         text-align: right;
         padding-right: 12px; }
@@ -1638,25 +1664,84 @@ rood {
     .one_org_wrap .ledger_type .left, .one_org_wrap .ledger_type .middle, .one_org_wrap .ledger_type .right {
       display: flex;
       flex-direction: row;
-      justify-content: start; }
+      justify-content: start;
+      align-items: center; }
     .one_org_wrap .ledger_type .left {
-      flex: 300px; }
+      flex: 275px; }
     .one_org_wrap .ledger_type .middle {
-      flex: 470px; }
+      flex: 390px; }
     .one_org_wrap .ledger_type .right {
-      flex: 400px; }
-    .one_org_wrap .ledger_type .first_layer .middle {
-      background-color: #F4F3F3; }
-    .one_org_wrap .ledger_type .first_layer .middle {
-      border-width: 1px 1px 0px 1px;
-      border-style: solid;
-      border-color: #CCCCCC; }
-    .one_org_wrap .ledger_type .other_layer .middle {
-      border-width: 0px 1px 0px 1px;
-      border-style: solid;
-      border-color: #CCCCCC; }
-    .one_org_wrap .ledger_type .personeel .middle {
-      border-bottom: 1px solid #CCCCCC; }
+      flex: 294px; }
+  .one_org_wrap .first_layer .middle {
+    font-weight: bold; }
+  .one_org_wrap .first_layer .middle {
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    cursor: pointer; }
+  .one_org_wrap .other_layer .middle {
+    border-width: 0px 2px 0px 2px;
+    border-style: solid;
+    border-color: #CCCCCC; }
+  .one_org_wrap .l_eigenaar .middle, .one_org_wrap .l_ev .middle {
+    border-bottom: 1px solid #CCCCCC; }
+  .one_org_wrap .btn_vraagteken {
+    margin-right: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f2f20d;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #cccc33; }
+  .one_org_wrap .btn_vraagteken:hover {
+    background-color: yellow; }
+  .one_org_wrap .attention_yellowbackground {
+    background-color: yellow !important; }
+  .one_org_wrap .l_product_dienstverlenend .middle,
+  .one_org_wrap .l_functionele_kosten .middle,
+  .one_org_wrap .l_kostensoorten .middle {
+    cursor: pointer; }
+  .one_org_wrap .l_vla .other_layer {
+    cursor: pointer; }
+  .one_org_wrap .gek {
+    font-size: 34px; }
+  .one_org_wrap .other_layer_close {
+    display: none; }
+  .one_org_wrap .bg_kleur_overeenkomst {
+    background-color: #fdfde7 !important; }
+  .one_org_wrap .bg_kleur_geld {
+    background-color: #e6f0ff; }
+  .one_org_wrap .bg_kleur_verkocht {
+    background-color: #ffe6e6; }
+  .one_org_wrap .bg_kleur_kosten {
+    background-color: #f2e9e9; }
+  .one_org_wrap .bg_kleur_input {
+    background-color: #E8E7E7; }
+  .one_org_wrap .bg_kleur_ev {
+    background-color: #edeae3; }
+  .one_org_wrap .bg_kleur_winst {
+    background-color: purple; }
+  .one_org_wrap .bg_kleur_belasting_eigenaar {
+    background-color: #edf7ef !important; }
+  .one_org_wrap .ledger_type .other_layer .four:hover {
+    width: 24px;
+    background-color: #F4F3F3;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f2f20d;
+    border: 2px solid #cccc33;
+    text-align: center;
+    cursor: pointer; }
+  .one_org_wrap .ledger_type .other_layer .four:hover:before {
+    content: "?";
+    font-size: 20px; }
+
+.journaals_voor_organisatie {
+  justify-content: center !important; }
 
 .artwork-klappers {
   position: absolute;
@@ -2365,12 +2450,12 @@ a1a2 > .a2 .kolom,
   width: 150px; }
 
 .icon-prod-pos {
-  background-color: #ff66ff; }
+  background-color: #edeae3; }
 
 .winstonderdeel .icon-rente-neg,
 .winstonderdeel .icon-belasting-neg,
 .winstonderdeel .icon-dividend {
-  background-color: #ffb3b3; }
+  background-color: #ffe6e6; }
 
 .bold {
   font-weight: bold; }
@@ -3454,7 +3539,7 @@ table.tablesorter thead tr .headerSortDown {
     .productenrij .productitem .pijl {
       transform: rotate(90deg);
       margin-top: 6px;
-      background-color: #ffb3b3; }
+      background-color: #ffe6e6; }
   .productenrij .productitem:hover {
     background-color: #F4F3F3; }
 
@@ -3750,6 +3835,22 @@ table.tablesorter thead tr .headerSortDown {
     margin: 24px 0px 12px 0px;
     font-weight: bold; }
 
+.journaals_kort {
+  padding-bottom: 8px; }
+
+.journaals_kort .journaals {
+  display: contents;
+  padding-top: 0px; }
+
+.journaals_kort .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  padding-right: 0px; }
+
 .inboekveld {
   background-color: yellowgreen; }
 
@@ -3880,7 +3981,7 @@ table.tablesorter thead tr .headerSortDown {
       flex: 0 0 200px; }
 
 .overeenkomst .inkoop-ovr {
-  background-color: white;
+  background-color: lightyellow;
   width: 380px;
   border: 1px solid #CCCCCC;
   border-radius: 6px;
@@ -3902,8 +4003,20 @@ table.tablesorter thead tr .headerSortDown {
   .overeenkomst .inkoop-ovr .inline {
     display: flex;
     flex-direction: row;
-    margin: 2px 0px 2px 12px;
-    position: relative; }
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #CCCCCC; }
+    .overeenkomst .inkoop-ovr .inline :nth-child(1) {
+      width: 140px; }
+      .overeenkomst .inkoop-ovr .inline :nth-child(1) :nth-child(1) {
+        margin-left: 12px; }
+      .overeenkomst .inkoop-ovr .inline :nth-child(1) :nth-child(2) {
+        margin-left: 12px; }
+    .overeenkomst .inkoop-ovr .inline :nth-child(2) {
+      width: 120px; }
+    .overeenkomst .inkoop-ovr .inline :nth-child(3) {
+      wid: 120px; }
   .overeenkomst .inkoop-ovr .blok {
     display: flex;
     flex-direction: column;
@@ -3912,10 +4025,14 @@ table.tablesorter thead tr .headerSortDown {
     .overeenkomst .inkoop-ovr .blok :nth-child(1) {
       width: 100px; }
     .overeenkomst .inkoop-ovr .blok :nth-child(2) {
-      width: 100px; }
+      width: 80px; }
   .overeenkomst .inkoop-ovr .form {
-    width: 70px;
+    width: 50px;
     color: #4387f4; }
+  .overeenkomst .inkoop-ovr .form.euro {
+    text-align: right; }
+  .overeenkomst .inkoop-ovr .form.euro::before {
+    content: "euro"; }
   .overeenkomst .inkoop-ovr .text {
     font-size: 13px;
     color: #666666;
@@ -3927,6 +4044,8 @@ table.tablesorter thead tr .headerSortDown {
     margin: 14px 0px 4px 12px;
     font-size: 12px;
     color: #666666; }
+    .overeenkomst .inkoop-ovr .scrollyvoorwaarden .inline :nth-child(1) {
+      width: 128px !important; }
 
 .kprijscontainer {
   width: 1100px; }
@@ -4635,7 +4754,7 @@ table.tablesorter thead tr .headerSortDown {
 .ervaringmenspijl {
   transform: rotate(180deg);
   margin-left: 540px;
-  background-color: #b7e1be; }
+  background-color: #E8E7E7; }
 
 .cont-mens {
   margin-top: 12px;
@@ -5501,20 +5620,23 @@ table.tablesorter thead tr .headerSortDown {
 .adinput {
   color: #8a7766; }
 
+.bggeld {
+  background-color: #e6f0ff !important; }
+
 .bgoutput {
-  background-color: #ffb3b3 !important; }
+  background-color: #ffe6e6 !important; }
 
 .bginput {
-  background-color: #b7e1be !important; }
+  background-color: #E8E7E7 !important; }
 
 .bginternin {
-  background-color: #f0e5db !important; }
+  background-color: #f2e9e9 !important; }
 
 .bginternuit {
-  background-color: #f0e5db !important; }
+  background-color: #f2e9e9 !important; }
 
 .bgwinst {
-  background-color: #ff66ff; }
+  background-color: #edeae3; }
 
 .icon.bgoutput, .icon.bginput {
   padding-left: 8px;

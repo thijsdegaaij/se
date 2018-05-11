@@ -5,7 +5,6 @@
     
       <!-- bankboek -->
       <div id="jnl_bank">
-        Kies bankafschrift:
         <%= collection_select(:jnlbank, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 3, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
       </div>
     

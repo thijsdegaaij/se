@@ -5,10 +5,8 @@
 
     <!-- inkoopboek -->
     <div id="jnl_ink">
-      Kies inkoopovereenkomst haloooo:
       <%= collection_select(:jnlink, :id, Journaal.where("journaaltype_id = ? and organisatie_id = ?", 1, session[:org_id]), :id, :boeknummer, {:include_hidden => false}) %>
     </div>
-    <div>hhhhhhh</div>
 
     <div id="search_jnlinkoop_results">
       <!-- inkoopboek -->

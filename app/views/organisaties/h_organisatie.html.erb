@@ -1,27 +1,25 @@
 <!-- h_organisatie.html.erb -->
 <%= form_tag organisaties_h_organisatie_path, id: "organisatie", multipart: true, :method => 'get', remote: true do %>
-<div class="flex-rowstart orgx">
-    <div class="navtwee ">
-        <div class="flex-row-left navbtn btn-organisatieview btngeselecteerd">
-            <div class="   padding_right">E&#233;n organisatie</div>
-            <div class=" styled-select">
-               <div class="orgonderdelen">
-                    <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
-                </div>  
-            </div>
+    <div class="flex-rowstart orgx">
+        <div class="displaynone">
+            <div class="navtwee displaynone">
+                <div class="flex-row-left navbtn btn-organisatieview btngeselecteerd">
+                    <div class="   padding_right">E&#233;n organisatie</div>
+                    <div class=" styled-select">
+                        <div class="orgonderdelen">
+                            <%= collection_select(:organisatie, :id, Organisatie.all, :id, :naam, {:include_hidden => false}) %>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbtn btn-intverslagview ">Interne verslaglegging xxx</div>
+                <div class="navbtn btn-extverslagview ">Externe verslaglegging</div>
+            </div>  
         </div>
-        <div class="navbtn btn-intverslagview ">Interne verslaglegging</div>
-        <div class="navbtn btn-extverslagview ">Externe verslaglegging</div>
+            <%= submit_tag "Zet organisatie", class: "btn btn-primary", id: "search_submit", style: "display: none;" %>
+      
+        <div id="search_results">
+            <!-- searched_organisaties partial is loaded AND refreshed here   -->
+            <%= render 'organisaties/org_vertikaal' %>
+        </div>
     </div>
-    <%= submit_tag "Zet organisatie", class: "btn btn-primary", id: "search_submit", style: "display: none;" %>
-  
-    <div id="search_results">
-      <!-- searched_organisaties partial is loaded AND refreshed here   -->
-      <%= render 'organisaties/org_vertikaal' %>
-    </div>
-  
-</div>
-<% end %>
-
-
-
+    <% end %>

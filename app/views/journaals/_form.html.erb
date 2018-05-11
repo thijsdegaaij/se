@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div class="journaal_formulier">[journaal/-form]
   <div class="field">
     <p><%= f.label "Organisatie" %></p>
     <p><%= f.select :organisatie_id, Organisatie.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
@@ -78,4 +78,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>

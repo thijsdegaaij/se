@@ -1,0 +1,77 @@
+<!-- h_journaal.html.erb -->
+<script>
+// AN: Kies een journaal
+$('#jnl_verk').change(function() {
+    $("#search_jnlverk_submit").click();
+});
+$('#jnl_ink').change(function() {
+    $("#search_jnlink_submit").click();
+});
+$('#jnl_bank').change(function() {
+    $("#search_jnlbank_submit").click();
+});
+$('#jnl_lev').change(function() {
+    $("#search_jnllev_submit").click();
+});
+$('#jnl_intern').change(function() {
+    $("#search_jnlintern_submit").click();
+});
+</script>
+<!-- inboeken  -->
+
+
+<div class="journaals_kort "> <!-- class voor bijsturing van journaals laten zien -->
+    <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
+    <div class="inboeken-all">
+        <div class="journaals">
+            <div class="header">Journaals</div>
+            <div class="btns">
+                <div class="btn-inboeken verkoop button bold">verkoop</div>
+                <div class="btn-inboeken inkoop button ">inkoop</div>
+                <div class="btn-inboeken bank button">bank</div>
+                <div class="btn-inboeken leveringen button">leveringen</div>
+                <div class="btn-inboeken intern button">intern</div>
+            </div>
+        </div>
+        <div>
+                <!-- verkoopboek -->
+                <%= render 'journaals/jnlverkoop' %>
+            <!-- inkoopboek -->
+            <%= render 'journaals/jnlinkoop' %>
+                    <!-- bankboek -->
+                    <%= render 'journaals/jnlbank' %>
+                        <!-- leveringen -->
+                        <%= render 'journaals/jnllevering' %>
+                            <!-- Interne boekingen -->
+                            <%= render 'journaals/jnlintern' %>
+        </div>
+    </div>
+    <div class="kopje displaynone">Inboeken</div>
+    <div class="boekin inkoop displaynone">
+        <div class="inboekingsmogelijkheden verkoop ">
+            <div id="search_bknverkoop_results">
+                <%= render 'journaals/inboek_verk' %>
+            </div>
+        </div>
+        <div class="inboekingsmogelijkheden inkoop  displaynone">
+            <div id="search_bkninkoop_results">
+                <%= render 'journaals/inboek_ink' %>
+            </div>
+        </div>
+        <div class="inboekingsmogelijkheden bank displaynone">
+            <div id="search_bknbank_results">
+                <%= render 'journaals/inboek_bank' %>
+            </div>
+        </div>
+        <div class="inboekingsmogelijkheden leveringen displaynone">
+            <div id="search_bknlev_results">
+                <%= render 'journaals/inboek_lev' %>
+            </div>
+        </div>
+        <div class="inboekingsmogelijkheden intern displaynone">
+            <div id="search_bknintern_results">
+                <%= render 'journaals/inboek_intern' %>
+            </div>
+        </div>
+    </div>
+</div>

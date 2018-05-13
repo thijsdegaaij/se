@@ -53,6 +53,10 @@ var ready = function() {
     $(".btn_boven_organisatie .btnorg1").click(function() { // klein
         $(".other_layer").toggle();
     });
+    /*processen*/
+    $(".btn_boven_organisatie .btnorg8").click(function() { // klein
+        $(".other_layer .two, .other_layer .ten").toggle();
+    });
     /*dienstverlenende producten*/
     $(".btn_boven_organisatie .btnorg2").click(function() { // klein
         $(".l_functionele_kosten, .l_product_dienstverlenend, .l_kostensoorten").toggle();
@@ -79,14 +83,7 @@ var ready = function() {
    $(".headerorg .btn-movie").click(function() { // waarde
         $(".movie_org").toggle();
     });
-   $(".other_layer .two").hover(function() { // waarde
-        $(".other_layer .one").toggle();
-    });
 
-    $(".other_layer .ten").toggleClass("visible");
-   $(".other_layer .nine").hover(function() { // waarde
-        $(".other_layer .ten").toggleClass("visible");
-    });
 /*    per regel other_layer laten zien*/
     $(".ledger_type").children(".first_layer").hover(function() {
         marked($(this));

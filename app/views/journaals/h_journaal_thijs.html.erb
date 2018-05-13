@@ -18,9 +18,8 @@ $('#jnl_intern').change(function() {
 });
 </script>
 <!-- inboeken  -->
-
-
-<div class="journaals_kort "> <!-- class voor bijsturing van journaals laten zien -->
+<div class="journaals_kort ">
+    <!-- class voor bijsturing van journaals laten zien -->
     <!-- nodig voor displaynone (aparte div, andere heeft al display gebruikt) -->
     <div class="inboeken-all">
         <div class="journaals">
@@ -34,10 +33,10 @@ $('#jnl_intern').change(function() {
             </div>
         </div>
         <div>
-                <!-- verkoopboek -->
-                <%= render 'journaals/jnlverkoop' %>
-            <!-- inkoopboek -->
-            <%= render 'journaals/jnlinkoop' %>
+            <!-- verkoopboek -->
+            <%= render 'journaals/jnlverkoop' %>
+                <!-- inkoopboek -->
+                <%= render 'journaals/jnlinkoop' %>
                     <!-- bankboek -->
                     <%= render 'journaals/jnlbank' %>
                         <!-- leveringen -->
@@ -53,7 +52,7 @@ $('#jnl_intern').change(function() {
                 <%= render 'journaals/inboek_verk' %>
             </div>
         </div>
-        <div class="inboekingsmogelijkheden inkoop  displaynone">
+        <div class="inboekingsmogelijkheden inkoop  ">
             <div id="search_bkninkoop_results">
                 <%= render 'journaals/inboek_ink' %>
             </div>
@@ -71,6 +70,11 @@ $('#jnl_intern').change(function() {
         <div class="inboekingsmogelijkheden intern displaynone">
             <div id="search_bknintern_results">
                 <%= render 'journaals/inboek_intern' %>
+            </div>
+        </div>
+        <div class="inboekingsmogelijkheden intern ">
+            <div id="search_bknintern_results">
+                <%= render 'journaals/grootboek' %>
             </div>
         </div>
     </div>

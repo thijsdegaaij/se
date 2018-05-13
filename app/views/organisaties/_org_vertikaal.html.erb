@@ -10,6 +10,7 @@
             <div>Toon:</div>
             <div class="btnorg1 button">details</div>
             <div class="btnorg5 button ">kleuren</div>
+            <div class="btnorg8 button ">processen</div>
             <div class="btnorg6 button">overeenkomsten</div>
             <div class="btnorg3 button">leveranciers en klanten</div>
             <div class="btnorg2 button ">kostenstructuur</div>
@@ -74,6 +75,7 @@
                     <div class="four icon icon-overeenkomst ">
                     </div>
                     <div class="five">Overeenkomsten
+                        <%= render template: 'journaals/h_journaal_thijs' %>
                     </div>
                     <div class="six">
                         <%=  image_tag("/assets/klappers.png", class: "boekhoudboeken")%>
@@ -100,9 +102,6 @@
                     </div>
                 </div>
                 <div class="middle journaals_voor_organisatie ">
-                    <div class="journaals_wrap ">
-                        <%= render template: "journaals/h_journaal_kort" %>
-                    </div>
                 </div>
                 <div class="right">
                     <div class="eight">

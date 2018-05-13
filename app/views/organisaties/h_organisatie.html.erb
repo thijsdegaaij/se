@@ -13,13 +13,12 @@
                 </div>
                 <div class="navbtn btn-intverslagview ">Interne verslaglegging xxx</div>
                 <div class="navbtn btn-extverslagview ">Externe verslaglegging</div>
-            </div>  
+            </div>
         </div>
-            <%= submit_tag "Zet organisatie", class: "btn btn-primary", id: "search_submit", style: "display: none;" %>
-      
-        <div id="search_results">
-            <!-- searched_organisaties partial is loaded AND refreshed here   -->
-            <%= render 'organisaties/org_vertikaal' %>
-        </div>
+        <%= submit_tag "Zet organisatie", class: "btn btn-primary", id: "search_submit", style: "display: none;" %>
+            <div id="search_results">
+                <!-- searched_organisaties partial is loaded AND refreshed here   -->
+                <%= render 'organisaties/org_vertikaal' %>
+            </div>
     </div>
     <% end %>

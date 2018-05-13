@@ -1605,7 +1605,7 @@ rood {
   align-items: center; }
   .one_org_wrap .btn_boven_organisatie {
     position: absolute;
-    top: 170px;
+    top: 100px;
     left: 48px;
     display: flex;
     flex-direction: column;
@@ -2681,13 +2681,11 @@ a1a2 > .a2 .kolom,
     background-color: #F4F3F3; }
 
 .gbr-vergroot {
-  position: absolute !important;
   top: 60px;
   left: 75px;
   background-color: white;
   padding: 24px;
   border: 1px solid #CCCCCC;
-  box-shadow: 0px 0px 100px 0px rgba(1, 1, 2, 0.5);
   width: 1100px;
   z-index: 3; }
   .gbr-vergroot .titel {
@@ -3804,7 +3802,8 @@ table.tablesorter thead tr .headerSortDown {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding-top: 36px; }
+  padding-top: 36px;
+  height: 500px; }
   .journaals .header {
     position: absolute;
     top: 110px;
@@ -3823,6 +3822,7 @@ table.tablesorter thead tr .headerSortDown {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 305px;
     margin-top: 66px;
     margin-bottom: 12px;
     z-index: 1;
@@ -3865,8 +3865,12 @@ table.tablesorter thead tr .headerSortDown {
     border: 25px solid white;
     left: -25px;
     background-color: white; }
+    .inboekingsmogelijkheden .inboek thead {
+      background-color: #fdfde7; }
     .inboekingsmogelijkheden .inboek th, .inboekingsmogelijkheden .inboek td {
       padding: 8px 4px; }
+    .inboekingsmogelijkheden .inboek tr:nth-child(odd) td {
+      background: none repeat scroll 0 0 #F4F3F3; }
   .inboekingsmogelijkheden .header {
     font-size: 14px;
     font-weight: bold;

@@ -12,31 +12,12 @@ class JournaalsController < ApplicationController
   def h_journaal
 
     @org = Organisatie.find(session[:org_id])
-    session[:jnl_ink_id] = nil
     session[:jnl_verk_id] = nil
+    session[:jnl_ink_id] = nil
     session[:jnl_bank_id] = nil
     session[:jnl_lev_id] = nil
     session[:jnl_intern_id] = nil
         
-    # Inkoopboek
-    if (params[:jnlink] != nil and params[:jnlink][:id] != "")
-      if @org.journaals.first
-        @jnl_ink_search = @org.journaals.find(params[:jnlink][:id])
-        session[:jnl_ink_id] = @jnl_ink_search.id
-      end
-    else
-      @jnl_ink_search = @org.journaals.where("journaaltype_id = ?", 1).first
-      if @jnl_ink_search
-        session[:jnl_ink_id] = @jnl_ink_search.id
-      end
-    end
-    # Inkoop boekingen
-    if @jnl_ink_search
-      @bkg_ink_search = @jnl_ink_search.boekingen
-      if @bkg_ink_search.count == 0
-        @bkg_ink_search = nil
-      end
-    end
     
     # Verkoopboek
     if (params[:jnlverk] != nil and params[:jnlverk][:id] != "")
@@ -58,6 +39,25 @@ class JournaalsController < ApplicationController
       end
     end
     
+    # Inkoopboek
+    if (params[:jnlink] != nil and params[:jnlink][:id] != "")
+      if @org.journaals.first
+        @jnl_ink_search = @org.journaals.find(params[:jnlink][:id])
+        session[:jnl_ink_id] = @jnl_ink_search.id
+      end
+    else
+      @jnl_ink_search = @org.journaals.where("journaaltype_id = ?", 1).first
+      if @jnl_ink_search
+        session[:jnl_ink_id] = @jnl_ink_search.id
+      end
+    end
+    # Inkoop boekingen
+    if @jnl_ink_search
+      @bkg_ink_search = @jnl_ink_search.boekingen
+      if @bkg_ink_search.count == 0
+        @bkg_ink_search = nil
+      end
+    end
     # Bankboek
     if (params[:jnlbank] != nil and params[:jnlbank][:id] != "")
       if @org.journaals.first

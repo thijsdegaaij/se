@@ -62,7 +62,7 @@
           <th>Procesnaam</th>
           <th>Product</th>
           <th>Datum</th>
-          <th>Icoon</th>
+          <th class="displaynone">Icoon</th>
           <th>Bij af</th>
           <th>Waarde</th>
           <th>P inkoop</th>
@@ -79,7 +79,7 @@
             <td><%= boeking.boekproces.naam %></td>
             <td><%= boeking.product.naam %></td>
             <td><%= boeking.datum %></td>
-            <td><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
+            <td class="displaynone"><%= image_tag boeking.icoon_url(:thumb).to_s %></td>
             <td><%= boeking.bij_af %></td>
             <td><%= boeking.waarde %></td>
             <td><%= boeking.p_inkoop %></td>

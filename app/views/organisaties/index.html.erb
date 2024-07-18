@@ -5,6 +5,7 @@
 <table class="cmsTabel">
   <thead>
     <tr>
+      <th>id</th>
       <th>Naam</th>
       <th>Bedrijfstak</th>
       <th>Rechtsvorm</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @organisaties.each do |organisatie| %>
       <tr>
+        <td><%= organisatie.id %></td>
         <td><%= organisatie.naam %></td>
         <td><%= organisatie.bedrijfstak.naam %></td>
         <td><%= organisatie.rechtsvorm.naam %></td>

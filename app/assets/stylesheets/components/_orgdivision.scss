@@ -3,85 +3,101 @@
     flex-direction: column;
     align-items: center;
 }
+
 .allemiddelen {
     text-transform: uppercase;
     position: absolute;
     top: 54px;
     left: 70px;
 }
+
 .mens-natuur-organisaties {
+    width: 1150px;
     position: relative;
-    top: 24px;   
-    //border: 1px dashed $border-color-base;
-    padding: 12px;
-
-background: linear-gradient( black 33%, rgba(255,255,255,0) 0%);
-background-position: bottom;
-background-size: 3px 1px;
-background-repeat: repeat-x;
-
-/*Vertical*/
-background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
-background-position: right;
-background-size: 1px 3px;
-background-repeat: repeat-y;
-
-
-
+    margin-top: 48px;
+    border-width: 0px 1px 0px 1px;
+    border-style: solid; 
+    border-color: $border-color-base;
+    background: linear-gradient( black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    /*Vertical*/
+    background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-size: 1px 3px;
+    background-repeat: repeat-y;
 }
 
 // input output pijlen
-
-.mensen.bgoutput, .natuur.bgoutput {
+.mensen.bgoutput,
+.natuur.bgoutput {
+    display: none;
     position: absolute;
     transform: rotate(180deg);
     top: 94px;
 }
+
 .mensen.bginput {
+    display: none;
     position: absolute;
-    top: 118px;;
+    top: 118px;
+    ;
     transform: rotate(180deg);
 }
+
 .mensen.bginput.in {
+    display: none;
     position: absolute;
     top: 94px;
     left: 55px;
     transform: rotate(0deg);
 }
-.natuur.bginput{
+
+.natuur.bginput {
+    display: none;
     position: absolute;
     top: 118px;
     transform: rotate(180deg);
 }
+
 .natuur.bginput.in {
+    display: none;
     position: absolute;
     top: 94px;
     left: 55px;
     transform: rotate(0deg);
 }
+
 .organisaties.bgoutput {
+    display: none;
     position: absolute;
     transform: rotate(180deg);
     top: -26px;
 }
+
 .organisaties.bgoutput.uitlinks {
+    display: none;
     position: absolute;
     transform: rotate(0deg);
     top: 118px;
     left: 55px
 }
+
 .organisaties.bgoutput.uitrechts {
+    display: none;
     position: absolute;
     transform: rotate(90deg);
     top: 47px;
     left: 1100px
 }
+
+
 .lijn-eigendom {
     position: absolute;
-    border-left: 6px dotted $border-color-base;
+    border-left: 6px dotted red; // $border-color-base;
     top: 94px;
-    left: 200px;
-    //width: 200px;
+    left: 200px; //width: 200px;
     height: 48px;
     z-index: 5;
     padding-top: 13px;
@@ -89,6 +105,8 @@ background-repeat: repeat-y;
 }
 
 .organisaties.bgoutput.uitrechts {
+    //input en output-pijlen
+    display: none;
     position: absolute;
     transform: rotate(0deg);
     top: 118px;
@@ -96,41 +114,40 @@ background-repeat: repeat-y;
 }
 
 .btn-inputoutput {
+    //voor input en output-pijlen
+    display: none;
     position: absolute;
     left: 500px;
     top: 60px;
 }
+
 .cont-natuurmens {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1px;
+    flex-direction: column-reverse;
+    justify-content: space-between; //margin-top: 1px;
     //width: 1193px;
-
-   
     .natuurleft,
     .mensleft {
-        border-width: 1px 1px 1px 1px;
+        border-width: 0px 0px 0px 0px;
         border-style: solid;
-        border-color: $border-color-base;
-        //padding-bottom: 4px;
-        position: relative;
-        margin-bottom: 12px;
+        border-color: $border-color-base; //padding-bottom: 4px;
+        position: relative; //margin-bottom: 12px;
         //background-color: red;    
-
-        > div:nth-child(1) {    //titel
-            border-width: 0px 1px 1px 0px;
+        >div:nth-child(1) {
+            //titel
+            display: flex;
+            flex-direction: row;
+            border-width: 1px 0px 0px 0px;
             border-style: solid;
             border-color: $border-color-base;
-            background-color: $background-color-2;
-            padding: 8px 0px 0px 4px;
-            height: 36px;
+            //background-color: $background-color-2;
+            padding: 4px 0px 0px 4px;
+            height: 24px;
             div {
-                margin-right: 12px;
-                //color: blue;
+                margin-right: 19px; //color: blue;
             }
-                }
-        > div:nth-child(2) {
+        }
+        >div:nth-child(2) {
             //background-color: red;
             //max-height:277px;
             //overflow-y: hidden;
@@ -141,63 +158,80 @@ background-repeat: repeat-y;
     }
     .line {
         display: flex;
-        flex-direction: row; 
-        align-items: center;
-        //flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center; //flex-wrap: wrap;
+        border-width: 0px 0px 1px 0px;
+        border-style:  solid;
+        border-color: $border-color-base;        
+        padding-bottom: 12px;
         .person {
+            cursor: pointer;
             img {
                 max-height: 56px;
                 padding: 2px 18px 2px 18px;
                 border-radius: 50%;
             }
         }
-          .person:hover, .natuurleft div:hover {
+        .person:hover,
+        .natuurleft div:hover {
             background-color: $background-color-2;
-          }
-          .foto-ik {
-              padding: 0px 0px 0px 4px;
-              transform: scale(.8,.8);
-          }
+        }
+        .foto-ik {
+            padding: 0px 0px 0px 4px;
+            transform: scale(.8, .8);
+        }
     }
 }
 
-.mens-natuur-organisaties {
-    width: 1150px;
-}
 
 // ORGANISATIES TOTAAL
-
 .cont-organisaties-totaal {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    border: 1px solid $border-color-base;
-    margin-top: 24px;
+    flex-direction: column; //position: relative;
+    margin-top: 4px;
+    margin-right: 1px;
 }
+
 .titel-eigendommen {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 4px 0px 0px 8px;
-    height: 36px;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: $border-color-base;
-    background-color: $background-color-2;
+    align-items: center;
+    //justify-content: space-between;
+    //padding: 0px 0px 0px 8px;
+    height: 24px;
+    margin-bottom: 18px;
+    //border-style: solid;
+    //border-width: 1px 0px 0px 0px;
+    //border-color: $border-color-base;
+    //background-color: $background-color-2;
     div {
-        margin-right: 12px;
+        margin-right: 16px;
     }
     .titel_icoon {
+        margin-left: 4px;
         display: flex;
         flex-direction: row;
-        align-items: center;        
+        align-items: center;
     }
     .buttons {
-        margin-left: 400px;
+        margin-left: 124px;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        width: unset;
+        text-transform: uppercase;
     }
+}
+.producten_header {
+    display: flex;
+    margin-left: 251px;
+
+}
+.productenPlusOrganisaties {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
 }
 
 .cont-organisaties-all {
@@ -206,15 +240,16 @@ background-repeat: repeat-y;
     justify-content: space-between;
 }
 
-//  BEDRIJFSTAKKEN
 .cont-bdt {
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    border-bottom: 1px solid $border-color-base;
-    }
+    margin-left: 4px; //border-bottom: 1px solid $border-color-base;
+    margin-right: 1px;
+}
+
 .image-bedrijfstakken {
     //width:820px;
 }
@@ -224,13 +259,13 @@ background-repeat: repeat-y;
 }
 
 .titel-nederland {
+    display: none;
     margin: 8px 0px 0px 8px;
     font-size: 14px;
 }
 
 .image-bedrijfstakken {
-    padding-bottom: 4px;
-    margin-left: 160px;
+    padding: 12px 0px; //margin-left: 160px;
     //height: 650px; //vergroten van het plaatje, door omnhulsel van img te vergoten
     img {
         height: 100%;
@@ -238,6 +273,7 @@ background-repeat: repeat-y;
 }
 
 .kopjebedrijfstakken {
+    visibility: hidden;
     position: absolute;
     top: 32px;
     left: 8px;
@@ -278,10 +314,9 @@ background-repeat: repeat-y;
     background-color: green;
 }
 
-.bdtnamen > div {
+.bdtnamen>div {
     width: 227px;
-    height: 24px;
-    //overflow: hidden;
+    height: 24px; //overflow: hidden;
     //text-overflow: clip;
     //color: $text-color-dark;
     cursor: pointer;
@@ -296,9 +331,152 @@ background-repeat: repeat-y;
 
 .bdt-img {
     display: none;
-    > img {
+    >img {
         position: absolute;
         z-index: -2;
+    }
+}
+
+
+// PRODUCTEN 
+.producten_container {
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: $border-color-base;
+    overflow-y: scroll;
+    height: 100%;
+    padding-right: 16px;
+            .huishouding .artwork{
+                width: 280px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    .titel_producten {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 0px 0px 8px;
+        height: 36px;
+        width: 100%;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: $border-color-base;
+        div {
+            margin-right: 12px;
+        }
+    }
+}
+.producten_container {
+    border-left: 2px solid $border-color-base;
+}
+.cont-bedrijfstakproducten {
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: $border-color-base;
+    height: 510px;
+    padding-left: 16px;
+}
+
+
+.part {
+    position: relative;
+    .branche {
+        position: relative;
+        .text {
+            padding: 0px 0px 12px 0px;
+            //font-weight: bold;
+            //font-size: 1.17em;
+        }
+        .artwork {
+            display: none;
+            padding: 4px 0px 0px 0px;
+        }
+        img {
+            max-height: 40px;
+            max-width: 20px;
+        }
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //background-color: white;
+        height: 100%; //border: 1px solid $border-color-base;
+        .oneproduct {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid $border-color-base; //margin: 0px 24px;
+            .text {
+                color: $text-color-dark; // $blue;
+                padding: 12px 0px 8px 0px;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: left; //font-size: 14px;
+                 :nth-child(1) {
+                    order: 2;
+                    text-transform: uppercase;
+                }
+                 :nth-child(2) {
+                    order: 1;
+                    //font-weight: bold; //background-color: red;
+                    //margin-left: 12px;
+                    //text-transform: capitalize;
+                }
+            }
+            .artwork {
+                padding: 0px 2px 4px 2px;
+                img {
+                    max-width: 280px;
+                    max-height: 205px;
+                    //min-width: 250px;
+                }
+            }
+           
+            .artwork.maxima {
+                background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
+                background-size: 250px 130px !important;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .artwork.peter {
+                background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
+                background-size: 250px 130px;
+                background-repeat: no-repeat;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .artwork.bakker {
+                background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
+                //background-size: cover;
+                flex-direction: row;
+                display: flex;
+                justify-content: center;
+                background-repeat: no-repeat;
+                width: 100%;
+            }
+
+            .artwork.small img {
+                //max-width: 190px;
+                //max-height: 100%;
+            }
+        }
+         :last-child.oneproduct {
+            //border-width: 0px 0px 0px 0px;        
+        }
+    }
+    .oneproduct .text:hover {
+        background-color: $background-color-2;
+        cursor: pointer;
     }
 }
 
@@ -307,27 +485,20 @@ background-repeat: repeat-y;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    border-bottom: 1px solid $border-color-base;
-
-    //width: 810px;
-    //height: 560px;
-    //width: 850px;
-    .sct-nederland {
+    align-items: left;
+     .sct-nederland {
         position: relative;
         display: flex;
         flex-direction: column;
     }
     .rij {
         display: -webkit-flex;
-        flex-direction: row;
-        //flex-wrap: wrap;
-        -webkit-justify-content: space-around;
-        //width: 1100px;
+        flex-direction: column; //flex-wrap: wrap;
+        -webkit-justify-content: space-around; //width: 1100px;
     }
     .sector,
-    .sector > .title,
-    .sector > .row {
+    .sector>.title,
+    .sector>.row {
         border-style: solid;
         border-color: $border-color-base;
     }
@@ -335,22 +506,21 @@ background-repeat: repeat-y;
         display: -webkit-flex;
         flex-direction: column;
         -webkit-justify-content: space-between;
-        -webkit-align-items: center;
-        height: 200px;
-        margin: 12px 24px 12px 24px;
+        -webkit-align-items: center; //height: 200px;
+        margin: 0px 24px 0px 47px;
         border-width: 1px 1px 1px 1px;
-        > div {
-            width: 235px;
+        >div {
+            width: 255px;
         }
         .title {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            text-align: center;
-            height: 30px;
-           // color: white;
+            text-align: left;
+            font-weight: bold;
+            height: 30px; // color: white;
             //font-size: 15px;
-           // font-weight: bold;
+            // font-weight: bold;
             padding: 8px;
             border-width: 0px 0px 1px 0px;
         }
@@ -359,6 +529,7 @@ background-repeat: repeat-y;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            height: 24px;
             padding: auto;
             background-color: white;
             padding-left: 8px;
@@ -366,8 +537,7 @@ background-repeat: repeat-y;
             cursor: pointer;
         }
         .row:hover {
-            background-color: $background-color-2;
-            //color: $text-color-base;
+            background-color: $background-color-2; //color: $text-color-base;
         }
         .row:last-of-type {
             border-width: 0px 0px 0px 0px;
@@ -389,212 +559,147 @@ background-repeat: repeat-y;
 
 
 
-// PRODUCTEN 
-.producten_container {
-    border-width: 0px 0px 0px 0px; 
-    border-style: solid;
-    border-color: $border-color-base;
-    //margin: 24px;
-    .titel_producten {
+// Rij met producten
+
+//nieuw
+.productsoorten_container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0px 0px 8px;
-    height: 36px;
-    width: 100%;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: $border-color-base;
-    //background-color: $background-color-2;
-    div {
-        margin-right: 12px;
+    flex-direction:column;
+    padding-left: 50px;
+    .eersteRij, .tweedeRij {
+        display: flex;
+        flex-direction: row;
     }
-}
-}
-.cont-bedrijfstakproducten {
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: $border-color-base;
-}
-
-.part {
-    position: relative;
-    .branche {
-        position: relative;
-        //background-color: $background-color-2;         
-        .text {
-            color: black; 
-            padding: 8px 0px 0px 8px;
-        }        
-        .artwork {
-            display: none;
-            padding: 4px 0px 8px 0px;
-            }
-            img {
-                max-height: 40px;
-                max-width: 260px;
-            }
-      }
-
-.products {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    height: 245px;
-    overflow-x: hidden;
-    //border: 1px solid $border-color-base;
-
-    .oneproduct {
+    .tweedeRij {
+        padding-top: 2px;
+    }
+    .productsoort {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-right: 48px;
+        padding-top: 24px;
+        align-items: left;
+        width: 240px;
 
-        .text {
-            color: $text-color-dark; // $blue;
-            text-align: center;
-            padding: 12px 0px 8px 8px;
-            width: 100%;
+        
+        .titel, .rij, .boventitel {
             display: flex;
-            flex-direction: column;
-            //font-size: 14px;
-            :nth-child(1) {
-                order: 2;
+            flex-direction: row;
+            justify-content: left;
+            padding-top: 12px;
+            .icon {
+                width: 32px;
             }
-            :nth-child(2) {
-                order: 1;
-                font-weight: bold;
+            .uitleg {
+                //width: 150px;
+                padding-left: 4px;
             }
+        }
+        .titel, .rij{
+            cursor: pointer;
+            :hover {
+                background-color: $border-color-base;
+            }
+        }
+        .boventitel {
+            //font-weight: bold;
+            text-transform: uppercase;
+            .uitleg {
+            text-align: left;
+            padding-left: 0px;
+            }
+        }
+        .rij {
+            display: flex;
+            flex-direction:row;
 
         }
-        .artwork {
-            padding: 0px 2px 8px 2px;
-          
-            img {
-                max-width: 320px;
-                height: 175px;
-            }
-        }   
-        .artwork.maxima {
-         background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
-         background-size: 250px 130px;
-        background-repeat: no-repeat;
-            //width: 100%;
-            display: flex;
-            flex-direction: column;
-            //align-items: center;
-            }   
-        .artwork.peter {
-         background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
-         background-size: 250px 130px;
-        background-repeat: no-repeat;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            }    
-        .artwork.bakker {
-         background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
-         background-size: cover;
-         flex-direction: row;
-            display: flex;
-         justify-content: center;
-        background-repeat: no-repeat;
-            width: 100%;
-            }     
-              
-       .artwork.small  img {
-                max-width: 190px;
-                //max-height: 100%;
-         }
-    }
-    :last-child.oneproduct {
-        //border-width: 0px 0px 0px 0px;        
-    }
-}
-    .oneproduct .text:hover {
-        background-color: $background-color-2;
-        cursor: pointer;
     }
 }
 
-// Rij met producten
+
+
+//oud
 .container-producten {
-    position:relative;
     display: flex;
-    flex-direction: column;  
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: $border-color-base; 
-    //width: 1100px; 
-    position: relative;  
+    flex-direction: column;
+    align-items: left;
+    //padding: 20px 45px;
     .titel {
-            border-width: 0px 0px 0px 0px;
-            border-style: solid;
-            border-color: $border-color-base;
-            //background-color: $background-color-2;
-            padding: 8px 0px 0px 8px;
-            height: 36px;
+        display: none;
+        border-width: 0px 0px 0px 0px;
+        border-style: solid;
+        border-color: $border-color-base; //background-color: $background-color-2;
+       // padding: 8px 0px 0px 8px;
+        //height: 36px;
     }
 }
+
 .productenrij {
     display: flex;
     flex-direction: row;
-    justify-content: center; 
-    //width: 1193px; 
+    justify-content: left;
+    align-items: left;
+    .borderleft {
+        display: none;
+    }
     .productitem {
         display: flex;
         flex-direction: column;
+        justify-content:flex-end;
         align-items: center;
-        flex: 1 1 auto;
+        //padding-top: 10px;
+        cursor: pointer;
+
         .tekst {
-            padding: 8px 0px 8px 0px; 
-            }
+            padding: 0px 0px 8px 9px;
+        }
         .image {
-            margin: 0px 0px 8px 0px!important; 
-            }
+            margin: 0px 0px 8px 0px!important;
+        }
         .border {
+            display: none;
             padding-top: 4px;
-            width: 100%;
-            //border-bottom: 1px solid $border-color-base;
-            }
+            width: 100%; //border-bottom: 1px solid $border-color-base;
+        }
         .pijlen {
-            display: flex;
+
+            display: none;
             flex-direction: row;
             margin-top: -8px;
         }
         .specifiek1 {
             font-style: italic;
-            padding: 8px 0px 0px 0px; 
+            padding: 8px 0px 0px 0px;
         }
-        .pijl { //output
+        .pijl {
+            display: none;
             transform: rotate(90deg);
             margin-top: 6px;
             background-color: $bgoutput;
         }
     }
-    .borderleft, .borderright {
-            //border-left: 1px solid $border-color-base; 
-            //height: 72px;       
-    } 
+    .borderleft,
+    .borderright {
+        //border-left: 1px solid $border-color-base; 
+        //height: 72px;       
+    }
     .productitem:hover {
-        background-color: $background-color-2;        
-    }   
+        background-color: $background-color-2;
+    }
 }
 
 .scheidslijn {
     width: 1350px;
-     border-style: dashed;
-     border-width: 3px 0px 0px 0px;
-     border-color: $background-color-1;
-     margin: 24px 0px 24px 0px;
-
+    border-style:  solid; // dashed;
+    border-width: 3px 0px 0px 0px;
+    border-color: $background-color-1;
+    margin: 24px 0px 24px 0px;
+}
+.hr_geldkringloop {
+    margin-top: 24px;
 }
 
 // map producten 
-
 .maparbeid {
     display: flex;
     flex-direction: row;
@@ -602,10 +707,10 @@ background-repeat: repeat-y;
     top: 238px;
     left: 296px;
     background-color: yellow;
-    z-index: 5;
-    //opacity: 0.8;
+    z-index: 5; //opacity: 0.8;
     padding: 4px 6px 4px 8px;
 }
+
 .mapvrijetijd {
     display: flex;
     flex-direction: row;
@@ -613,10 +718,10 @@ background-repeat: repeat-y;
     top: 468px;
     left: 45px;
     background-color: yellow;
-    z-index: 5;
-    //opacity: 0.8;
+    z-index: 5; //opacity: 0.8;
     padding: 4px 6px 4px 8px;
 }
+
 .mapeigendom {
     display: flex;
     flex-direction: column;
@@ -628,19 +733,15 @@ background-repeat: repeat-y;
     border-style: dashed;
     border-width: 1px 1px 1px 1px;
     border-color: $red;
-    z-index: 5;
-    //opacity: 1;
+    z-index: 5; //opacity: 1;
     >div {
         background-color: white;
         margin-left: 8px;
-
     }
-    img {   
+    img {
         position: absolute;
         top: -20px;
         left: 30px;
         transform: scale(0.4, 0.4);
     }
 }
-
-

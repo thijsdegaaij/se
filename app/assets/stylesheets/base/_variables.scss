@@ -43,16 +43,24 @@ $text-color-dark	:	$gray9;
 $colorhover			:	$gray1;
 
 /* Functional colors */
-$bgovereenkomst     : hsl(60, 85%, 95%);
+$bgovereenkomst     : $background-color-2;
 $output				: hsl(329, 85%, 70%);
 $input				: hsl(28, 15%, 47%);
-$bggeld				: hsl(216, 100%, 95%);
-$bgoutput			: hsl(0, 100%, 95%);
-$bginput			: $gray2;
-$bgbelasting_eigenaar : hsl(130, 41%, 95%);
-$bginternin			: hsl(0, 25%, 93%);//$background-color-2;
-$bginternuit		: hsl(0, 25%, 93%);//$background-color-2;//hsl(28, 41%, 90%);
-$bgwinst			: $background-color-1;//hsl(300, 100%, 95%);
+$bgkosten           :hsl(0, 29%, 91%);
+$bgttkosten         :  hsla(0, 39%, 41%, 0.15);
+$bggeld				: hsla(213, 53%, 81%, .32);
+$bgoutput			: hsla(124, 41%, 64%, .12);
+$bginput			: #ffe9e9;// hsl (0, 100%, 96%); //#ff4d4d1f;
+
+$bgbelasting_eigenaar : $background-color-2;
+$bgomzet            :  hsl(130, 30%, 87%);
+$bginternin			: hsl(130, 30%, 93%);
+$bginternuit		: hsla(124, 41%, 64%, .12);
+$bgnonwinst         : hsla(361, 61%, 55, 0.3);
+$bgwinst			: hsla(312 , 36%, 46%, 0.3);
+$bgwinst_nbd		: hsla(312, 36%, 46%, 1);
+$bgplanning			: hsl(64, 72%, 90%);
+$bgprocedures       : hsl(47, 72%, 90%);//hsla (64, 72%, 90%);
 
 $blue				:	$ggblue;
 $red				:	$ggred;
@@ -80,10 +88,10 @@ $bg-rr				: hsl(61, 100%, 95%);
 
 $gray-light			: 	$gray1;
 
-$huishouden			:	$gray2; //grey; //red; // $gray2; // hsl(0, 100%, 94%);// purple; //$red;
-$nv					: 	hsl(188, 75%, 90%);// blue; //$orange;
-$financieel			: 	hsl(188, 75%, 72%); //green; //$green;
-$overheid			: 	hsl(57, 75%, 88%);//darkblue; //$blue;
+$huishouden			:	$gray2; 
+$nv					: 	hsl(188, 75%, 90%);
+$financieel			: 	hsl(188, 75%, 72%);
+$overheid			: 	hsl(57, 75%, 88%);
 
 $tekst-verleden		: 	hsl(45, 23%,45%); 
 $bg-verleden		:	hsl(45, 23%,97%);
@@ -93,7 +101,7 @@ $toekomst			:	#FFFFCC;
 
 
 $fontSize            :   14px;
-$fontSizeHeader      : 16px;
+$fontSizeHeader      : 18px;
 
 $leftq				: 650;
 $left				: 650px;
@@ -102,11 +110,11 @@ $breedte_organisatie: 750px;
 $breedte_b			: $breedte_organisatie - 360px;
 
 
-$procescolor		: $text-color-dark; //$text-color-grey;
+$procescolor		: $text-color-dark; 
 
 
-$kop1:		$text-color-base; //	hsl(217, 65%, 55%);
-$kop2:		$text-color-base; //	hsl(217, 45%, 45%);
+$kop1:		$text-color-base; 
+$kop2:		$text-color-base;
 
 $showtargetcolor1	: hsl(59, 89%, 78%);
 

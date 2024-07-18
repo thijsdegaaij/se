@@ -1,0 +1,21 @@
+<script src='js/proto.js'>
+</script>
+
+<div> hoiThijs<div>
+
+	<div>
+		    <% @bedrijfstakken.each do |bedrijfstak| %>
+      <tr>
+        <td><%= bedrijfstak.id %></td>
+        <td><%= bedrijfstak.letter %></td>
+        <td><%= bedrijfstak.naam %></td>
+        <td><%= link_to 'Show', bedrijfstak %></td>
+        <td><%= link_to 'Edit', edit_bedrijfstak_path(bedrijfstak) %></td>
+        <td><%= link_to 'Destroy', bedrijfstak, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+	</div>
+	<div>
+
+
+</div>

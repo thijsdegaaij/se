@@ -8,9 +8,12 @@
 
   // MENS
 
-
+.orgshow {
+  display: flex;
+  flex-direction: column-reverse;
+}
   .ervaringmenspijl {
-      transform: rotate(180deg);
+      //transform: rotate(180deg);
       margin-left: 540px;
       background-color: $bginput;
   }
@@ -250,16 +253,11 @@
   .maxima .arbeid {
           width: 60px!important;
           }
-  .maxima .lijst-vrijetijd {
+  .maxima .lijst-vrijetijd, .maxima .lijst-arbeid{
       position: absolute;
-      top: -90px;
-      left: 840px;
+      top: -0px;
+      left: 550px;
   }       
-  .maxima .lijst-arbeid {
-      position: absolute;
-      top: -90px;
-      left: 840px;
-  }   
 
   .orgindeling-eigendommen {
       position: relative;

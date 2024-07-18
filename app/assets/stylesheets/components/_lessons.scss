@@ -1,102 +1,3 @@
-/*  GAME PUNTEN */
-
-.game_points {
-    position: fixed;
-    width: $left;
-    //z-index:0;
-    display: flex;
-    flex-direction: row;
-    padding: 10px 26px;
-   
-/* user */
-    .plaatjenaam { 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-     > div {
-      padding: 0px 7px 0px 7px;
-    } 
-  .img-learner {
-    margin-top: 0px;
-    margin-left: 0px;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-  }
-
-  }
-   /* level */
-  .level{
-    width: 458px;
-    justify-content:space-between;
-    padding-left: 63px;
-
-  }
-  .navtext {
-    text-align: center;
-    color: $text-color-base;
-    cursor: pointer;
-  }
-  .navtext:hover {
-    color: $text-color-dark;
-  }
-  //Situation overview
-    .sito {
-        display: -webkit-flex;
-        flex-direction: column;
-
-
-      .line {
-        display: -webkit-flex;
-        flex-direction: row;
-        color: $text-color-base;
-        padding: 12px 48px 12px 48px; 
-        border-bottom: solid 1px $border-color-light;
-      }
-      .leftside {
-        width: 200px;
-
-      }
-      .rightside {
-        img {
-          max-width: 700px;
-          }
-      }
-    }
-
-}
-
-
-.logo-se,  {
-  display: none;
-  position: fixed;
-  top: 4px;
-  left: 0px;
-  //z-index:1;
-  margin: 5px 0px 0px 32px;
-  
-  img {
-    height: 35px;
-    opacity: 0.8;
-    width: 520px;
-    height: auto;
-    opacity: 0.5;
-  }
-}
-
-.lessonassignmentspace {
-  //ruimte onder de kiezers van les en assignments
-  //display: none;
-  position: fixed;
-  width: $left;
-  //z-index: 5;
-  top: 0px;
-  height: 122px;
-  background-color: $background-color-1;
-  border-bottom: 1px solid $border-color-base;
-}
-
-
 
 
 
@@ -143,7 +44,7 @@
     height: 100%;
     width: $left;
     position: fixed;
-    top: 115px; //is goed, 70px nav + 50navtwee
+    top: 175px; //is goed, 70px nav + 50navtwee
     background-color: $background-color-1;
     overflow: visible;
     //border-right: 12px $background-color-1 solid;
@@ -154,6 +55,7 @@
     position: relative;
     padding: 0px 32px 0px 32px;
     //font-size: 14px;
+    border-top: 1px solid $border-color-base;
     img {
         max-width: 510px;
     }

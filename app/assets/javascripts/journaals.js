@@ -85,21 +85,21 @@ var ready = function() {
         $(".journaal.kas").removeClass("displaynone");
         $(".inboekingsmogelijkheden.kas").addClass("displaynone");
     });
-    $(document.body).on("click", ".btn-inboeken.leveringen", function() {
+    $(document.body).on("click", ".btn-inboeken.leveringen_uit", function() {
         $(".btn-inboeken").removeClass("bold");
-        $(".btn-inboeken.leveringen").addClass("bold");
+        $(".btn-inboeken.leveringen_uit").addClass("bold");
         $(".journaal").addClass("displaynone");
-        $(".journaal.leveringen").removeClass("displaynone");
+        $(".journaal.leveringen_uit").removeClass("displaynone");
         $(".inboekingsmogelijkheden").addClass("displaynone");
-        $(".inboekingsmogelijkheden.leveringen").removeClass("displaynone");
+        $(".inboekingsmogelijkheden.leveringen_uit").removeClass("displaynone");
     });
-    $(document.body).on("click", ".btn-inboeken.intern", function() {
+    $(document.body).on("click", ".btn-inboeken.intern_boekingen", function() {
         $(".btn-inboeken").removeClass("bold");
-        $(".btn-inboeken.intern").addClass("bold");
+        $(".btn-inboeken.intern_boekingen").addClass("bold");
         $(".journaal").addClass("displaynone");
-        $(".journaal.intern").removeClass("displaynone");
+        $(".journaal.intern_boekingen").removeClass("displaynone");
         $(".inboekingsmogelijkheden").addClass("displaynone");
-        $(".inboekingsmogelijkheden.intern").removeClass("displaynone");
+        $(".inboekingsmogelijkheden.intern_boekingen").removeClass("displaynone");
     });
 
     // gbr-vergroot ()

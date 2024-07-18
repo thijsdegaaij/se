@@ -2,943 +2,1051 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 48px;
+  //background-color: red;
 
   .btn_boven_organisatie {
     position: absolute;
-    top: 100px;
-    left: 48px;
+    top: 106px;
+    left: 24px;
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
     justify-content: space-between;
     width: 200px;
     cursor: pointer;
-    :first-child  {
+    color: $text-color-grey;
+    :first-child {
       text-transform: uppercase;
       font-weight: bold;
     }
   }
 
-
   .headerorg {
     margin-top: 0px;
     .middle {
-    background-color: $background-color-1 !important;
-  }
+      background-color: $background-color-1 !important;
+    }
     .five {
       //padding-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
+      font-size: 18px;
+      font-weight: bold;
     }
   }
   .eigen_vermogen {
-    margin-top: 24px;
+    //margin-top: 24px;
   }
   .ledger_type {
     width: 1190px;
 
-    .movie_org, .foto_org {
-      position:absolute;
+    .show {
+      display: block;
+      position: absolute;
+      left: 580px;
+      top: 108px;
+    }
+
+    .movie_org,
+    .foto_org {
+      position: absolute;
       top: 270px;
       left: 300px;
-      z-index:1;
+      z-index: 1;
       width: 900px;
       height: 700px;
       //background-color: aliceblue;
     }
-    
-    .first_layer, .other_layer {
+
+    .one_org_wrap:last-child {
+      background-color: red;
+      font-size: 33px;
+    }
+
+    .first_layer,
+    .other_layer {
       display: flex;
       flex-direction: row;
-      justify-content: start;
+
       .one {
-       flex: 1 0 200px;
-       display: none;
+        flex: 1 0 100px;
+        display: none;
       }
       .two {
-       flex: 1 0 50px;
+        flex: 1 0 50px;
+        display: none;
       }
       .three {
-       //flex: 1 0 24px;
+        //flex: 1 0 24px;
+        display: none;
       }
       .four {
-       flex: 24px;
+        flex: 24px;
+        padding-left: 6px;
+        :last-child {
+          font-size: 33px;
+        }
       }
-      .five {
-       flex: 260px;
-       margin-left: 10px;
+      .four:last-child {
+        border-bottom: 4px solid red;
+      }
 
+      .four.icon-product-verkocht {
+        //border-right: 1px solid green;
+        //border-width: 0px 1px 0px 0px;
+        //border-style: double;
+        //border-color: red; //$border-color-base;
+        //border-top: double black;// $border-color-base;// green;
+      }
+
+      .five {
+        flex: 380px;
+        padding-left: 8px;
+        margin-right: 8px;
+        display: flex;
+        flex-direction: row;
       }
       .six {
-        flex: 80px;
+        flex: 120px;
       }
       .seven {
-        flex: 60px;
+        flex: 100px;
       }
       .eight {
-       //flex: 24px;
+        //flex: 24px;
+        display: none;
       }
       .nine {
-       flex:50px;
-       }
+        flex: 0 0 90px;
+        display: none;
+      }
+
       .ten {
-        flex:220px; 
-        //visibility: hidden; //met display none verspringt het.
+        flex: 120px;
+        padding-left: 20px;
+        display: none; //visibility: hidden; //met display none verspringt het.
       }
-      .one, .two, .seven, .nine {
-       text-align: right;
-       padding-right: 12px;        
+      .one,
+      .two,
+      .seven,
+      .nine {
+        text-align: right;
+        padding-right: 12px;
       }
-      .six, .nine { 
+      .six,
+      .nine {
         img {
-          max-height: 30px;
+          max-height: 34px;
+          max-width: 120px;
         }
       }
     }
-    .left, .middle, .right {
+    .left,
+    .middle,
+    .right {
       display: flex;
       flex-direction: row;
-      justify-content: start;
       align-items: center;
-    } 
-    .left {
-      flex: 275px;
-    }
-    .middle {
-      flex: 390px;
     }
     .right {
-      flex:294px;
+      justify-content: right;
+    }
+    .left {
+      flex: 200px;
+      padding-right: 8px;
+    }
+    .middle {
+      flex: 680px;
+    }
+    .right {
+      flex: 200px;
+      padding-left: 8px;
     }
   }
 
-    .first_layer .middle {
-      //background-color: $background-color-2;
-      font-weight: bold;
-      } 
-    .first_layer .middle {
-      border-width: 2px 2px 0px 2px;
-      border-style:  solid;
-      border-color: $border-color-base;
-      cursor: pointer;
-    } 
-    .other_layer .middle {
-      border-width: 0px 2px 0px 2px;
-      border-style:  solid;
-      border-color: $border-color-base;
-    }
-    .l_eigenaar .middle, .l_ev .middle {
-      border-bottom: 1px solid $border-color-base;
-    }
-  
+  .other_layer:first-child .five {
+    //moet ik nog iets voor vinden)
+    //font-weight: bold;
+  }
+  .first_layer .middle {
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    border-color: $border-color-base;
+    cursor: pointer;
+  }
+  .other_layer .middle {
+    border-width: 0px 2px 0px 2px;
+    border-style: solid;
+    border-color: $border-color-base;
+  }
+  .ledger_type.l_journaals .other_layer .middle {
+    border-bottom: 1px solid $border-color-base;
+  }
+
+  .ledger_type.l_ev .other_layer:last-child .middle {
+    border-bottom: 6px solid $border-color-base;
+  }
+
+  .first_layer .five {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
   .btn_vraagteken {
     //position: absolute;
     //left: -36px;
     //top: -21px;
+    z-index: 2;
     margin-right: 2px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: hsl(60, 90%, 50%);
+    background-color: hsl(60, 90%, 100%);
     text-align: center;
     font-size: 17px;
     cursor: pointer;
-    border: 2px solid hsl(60, 60%, 50%)
+    border: 2px solid hsl(60, 60%, 50%);
   }
-    .btn_vraagteken:hover {
-      background-color: hsl(60, 100%, 50%);
+  .btn_vraagteken:hover {
+    background-color: hsl(60, 100%, 100%);
+  }
+  .attention_yellowbackground {
+    background-color: yellow !important;
+  }
+  .l_product_dienstverlenend .middle,
+  .l_functionele_kosten .middle,
+  .l_kostensoorten .middle,
+  .l_verkochte_producten .gbr .middle {
+    cursor: pointer;
+  }
+  .fotoMidden {
+    width: 230px;
+  }
+
+  .other_layer .five {
+    cursor: pointer;
+  }
+  .gek {
+    font-size: 34px;
+  }
+
+  .other_layer_close {
+    //display: none;
+  }
+
+  //START
+
+  .ledger_type:last-child .other_layer:last-child .middle {
+    //border-bottom: 11px solid red;
+  }
+  //ZICHTBAARHEID
+  // .l_verkochte_producten .verkocht_wrap,
+  // .l_journaals,
+  // .l_klanten,
+  // .l_leveranciers,
+  // .l_functionele_kosten,
+  // .l_personeel,
+  // .l_personeel_overeenkomsten,
+  // .l_kostensoorten,
+  // .l_overheid,
+  // .l_eigenaar,
+  // .l_ev,
+  // .l_fp,
+  // .l_product_dienstverlenend,
+  // .l_knowhow {
+  //   display: none;
+  // }
+
+  //KLEUREN
+  //processen
+  .l_omzet .middle .five {
+    background-color: $bgomzet;
+  }
+  .l_inkw_vd_omzet .middle .five {
+    background-color: $bginput;
+  }
+  .l_bedrijfskosten .middle .five {
+    background-color: $bgkosten;
+  }
+  .l_winst .middle .five {
+    background-color: $bgwinst;
+    //color: white;
+  }
+  .l_vennootschapsbelasting .middle .five,
+  .l_dividend .middle .five {
+    background-color: $bgnonwinst;
+    //color: white;
+  }
+  .l_winst_nbd .middle .five {
+    //background-color: $bgwinst_nbd;
+    //color: white;
+  }
+  //voorraden
+  .l_klanten,
+  .l_leveranciers {
+    .middle {
+      background-color: $bgovereenkomst !important;
     }
-    .attention_yellowbackground {
-      background-color: yellow !important;
+  }
+  .l_geld .middle {
+    background-color: $bggeld;
+  }
+  .l_verkochte_producten .middle {
+    background-color: $bgoutput;
+  }
+  .l_product_dienstverlenend {
+    .middle {
+      background-color: $bginternuit;
     }
-   .l_product_dienstverlenend .middle, 
-   .l_functionele_kosten .middle,
-   .l_kostensoorten .middle {
-     cursor: pointer;
-   }
+  }
+  .l_functionele_kosten,
+  .l_kostensoorten {
+    .middle {
+      background-color: $bgttkosten;
+    }
+  }
+  .l_vla,
+  .l_va,
+  .l_kosten,
+  .l_personeel,
+  .l_knowhow {
+    .middle {
+      background-color: $bginput;
+    }
+  }
+  .l_ev .middle {
+    background-color: $background-color-1;
+  }
+  .bg_kleur_winst {
+    background-color: purple;
+  }
+  .l_personeel_overeenkomsten,
+  .l_overheid,
+  .l_eigenaar,
+  .l_fp {
+    .middle {
+      background-color: $gray1;
+    }
+  }
+  .middle.winst {
+    background-color: $bgwinst;
+  }
+  .l_functionele_kosten {
+    .six {
+      background-color: $bgplanning;
+      padding-left: 8px;
+    }
+  }
+  .bgplanning {
+    background-color: $bgplanning;
+    padding-left: 8px;
+    margin: 2px 0px;
+    //padding-top: -2px;
+    //border-bottom: 1px solid $border-color-base;
+  }
 
-
-   .l_vla .other_layer {
-     cursor: pointer;
-   }
-.gek {
-  font-size: 34px;
-}
-
-.other_layer_close {
-  display: none;
-}
- 
-     .bg_kleur_overeenkomst {
-       background-color: $bgovereenkomst !important;
-     }
-     .bg_kleur_geld {
-       background-color: $bggeld;
-     }
- 
-     .bg_kleur_verkocht {
-       background-color: $bgoutput;// hsl(0, 100%, 96%)
-     }
-     .bg_kleur_kosten {
-       background-color: $bginternuit;// hsl(25, 100%, 96%);
-      }
-     .bg_kleur_input{
-       background-color: $bginput; // hsl(111, 100%, 96%);
-       }
-     
-     .bg_kleur_ev {
-       background-color: $bgwinst;
-     }
-     .bg_kleur_winst {
-       background-color: purple;
-     }
-
-     .bg_kleur_belasting_eigenaar {
-       background-color:$bgbelasting_eigenaar !important;
-     }
-  
-  @mixin hulprondje {cursor: pointer;  
-     width: 24px;
+  @mixin hulprondje {
+    cursor: pointer;
+    width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: hsl(60, 90%, 50%);
-    border: 2px solid hsl(60, 60%, 50%);    
+    border: 2px solid hsl(60, 60%, 50%);
   }
 
-   .ledger_type .other_layer .four:hover {
-     width: 24px;
-     background-color: $background-color-2;
-     @include hulprondje;
+  .ledger_type .other_layer .four:hover {
+    width: 24px;
+    background-color: $background-color-2;
+    @include hulprondje;
     text-align: center;
     cursor: pointer;
+  }
+  .ledger_type .other_layer .four:hover:before {
+    content: '?';
+    font-size: 20px;
+    //padding-left: 8px;
+  }
 
-    
-   }
-    .ledger_type .other_layer .four:hover:before {
-      content: "?";
-      font-size: 20px;
-      //padding-left: 8px;
-    }
-} 
+  .other_layer.uitklapbaar {
+    font-weight: bold;
+  }
+}
 
 .journaals_voor_organisatie {
   justify-content: center !important;
 }
 
+// MENS
 
+.artwork-klappers {
+  position: absolute;
+  left: 300px;
+  top: 3px;
+  width: 115px;
+}
 
+.orgx .styled-select select {
+  max-width: 100px !important;
+}
 
+.orgscontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+}
 
+//transform: scale(0.5,0.5);
+.org {
+  position: relative;
+  top: 24px;
+  padding-bottom: 24px;
+  //padding-right: 300px;
+  //padding-left: 200px;
+  //background-color: #3500ff;
+}
 
+.container-movie,
+.header-org,
+.movie-org {
+  z-index: 1;
+}
 
+.container-movie {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 67px;
+  //left: 2px;
+  width: $breedte_organisatie - 1px;
+  height: 623px;
+  background-color: white;
+  display: none;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: $border-color-base;
+}
 
+.movieheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 0px 4px 24px;
+  align-items: center;
+  height: 42px;
+  background-color: $background-color-2;
+}
 
+.movie-org iframe {
+  width: $breedte_organisatie - 3px;
+  height: $breedte_organisatie/1.73;
+}
 
+.orgbuttons {
+  position: absolute;
+  top: -45px;
+  text-transform: uppercase;
+  //font-size: 14px;
+  color: $text-color-grey;
+}
 
+.groupshow {
+}
 
+.timeshow {
+  //border: 1px solid $border-color-base;
+  //background-color: $bg-verleden;
+}
 
+.timeshow,
+.groupshow {
+  position: absolute;
+  left: 10px;
+  z-index: -10;
+  width: 1330px;
+  height: 660px;
+  padding: 8px;
+}
 
+.timeshowheader {
+  position: absolute;
+  left: 24px;
+  top: 59px;
+  justify-content: flex-start;
+  width: 1230px;
+  //padding: 12px;
+  //font-size: 16px;
+  //font-weight: bold;
+  //text-align: center;
+}
 
+.geld,
+.overheid,
+.finprod {
+  //  height: 32px;
+}
 
+.bedrijfsprocessen-b,
+.bedrijfsprocessen-ac {
+  background-color: $background-color-2;
+  font-weight: bold;
+  flex: 0 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+.bedrijfsprocessen-b {
+  //is nodig voor hoogte
+  flex: 0 0 33px;
+}
 
+.orgheader,
+.overeenkomsten,
+.geld,
+.overheid,
+.finprod,
+.orgbuttons {
+  width: $breedte_organisatie;
+}
 
+.overeenkomsten .rijtje .klein {
+  width: 100px;
+}
 
+.a,
+.b,
+.c {
+  height: 450px;
+}
 
+.a1,
+.a2 {
+  flex-grow: 1;
+}
 
+.a,
+.c {
+  width: 180px;
+}
 
-
-
-
-
-
-
-
-
-
-
-  .artwork-klappers {
-      position: absolute;
-      left: 300px;
-      top: 3px;
-      width: 115px;
-  }
-  
-  .orgx .styled-select select {
-      max-width: 100px!important;
-  }
-  
-  .orgscontainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 24px;
-  }
-  
-  //transform: scale(0.5,0.5);
-  .org {
+.b {
+  width: $breedte_b;
+  .kostprijsberekening {
+    background-color: white;
+    flex: auto;
+    div {
       position: relative;
-      top: 24px;
-      padding-bottom: 24px;
-      //padding-right: 300px;
-      //padding-left: 200px;
-      //background-color: #3500ff;
+      padding: 0px 0px 0px 0px;
+      margin: 10px 10px 10px 10px;
+    }
   }
-  
-  .container-movie,
-  .header-org,
-  .movie-org {
-      z-index: 1;
+  .k-iwo,
+  .k-bdv,
+  .k-ink,
+  .k-ovh {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $border-color-base;
   }
-  
-  .container-movie {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      top: 67px;
-      //left: 2px;
-      width: $breedte_organisatie - 1px;
-      height: 623px;
-      background-color: white;
-      display: none;
-      border-style: solid;
-      border-width: 0px 1px 1px 1px;
-      border-color: $border-color-base;
+  .k-vrk {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: $border-color-base;
   }
-  
-  .movieheader {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 4px 0px 4px 24px;
-      align-items: center;
-      height: 42px;
-      background-color: $background-color-2;
+  .verhoogd {
+    margin: 0px 0px 0px 8px;
+    padding: 4px 5px 4px 5px;
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    color: $text-color-grey;
+    //font-size: 12px;
   }
-  
-  .movie-org iframe {
-      width: $breedte_organisatie - 3px;    
-      height: $breedte_organisatie/1.73;
+  .k-vrk,
+  .k-alg {
+    margin: 0px 4px 0px 4px !important;
   }
-  
-  .orgbuttons {
-      position: absolute;
-      top: -45px;
-      text-transform: uppercase;
-      //font-size: 14px;
-      color: $text-color-grey;
+  .k-iwo {
+    height: 90px;
   }
-  
-  .groupshow {}
-  
-  .timeshow {
-      //border: 1px solid $border-color-base;
-      //background-color: $bg-verleden;
+  .k-ink,
+  .k-vrk,
+  .k-alg {
+    //font-size: 14px;
+    font-weight: normal;
+    .pijlwaarde {
+      margin-top: -5px;
+      margin-bottom: 2px;
+    }
   }
-  
-  .timeshow,
-  .groupshow {
-      position: absolute;
-      left: 10px;
-      z-index: -10;
-      width: 1330px;
-      height: 660px;
-      padding: 8px;
+  .k-bdv,
+  .k-ovh {
+    padding-top: 4px !important;
+    //padding-left: 2px !important;
   }
-  
-  .timeshowheader {
-      position: absolute;
-      left: 24px;
-      top: 59px;
-      justify-content: flex-start;
-      width: 1230px;
-      //padding: 12px;
-      //font-size: 16px;
-      //font-weight: bold;
-      //text-align: center;
+  .k-ovh {
+    font-weight: normal;
+    //height: 133px;
   }
-  
-  .geld,
-  .overheid,
-  .finprod {
-      //  height: 32px;
+}
+
+.org-all,
+.start,
+.a,
+.b,
+.c,
+.toewijzing,
+.a1,
+.a2,
+a1a2 > .a1,
+a1a2 > .a2 .kolom,
+.pijlwaarde {
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+.abc,
+.itemheader,
+.orgheader,
+.itembody,
+.a1a2,
+.orgbuttons,
+.pijluitleg,
+.rij {
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rijtje {
+  div {
+    display: inline;
+    padding: 0px 0px 0px 8px;
   }
- 
-  
-  .bedrijfsprocessen-b,
-  .bedrijfsprocessen-ac {
-      background-color: $background-color-2;      
-      font-weight: bold;
-      flex: 0 0 32px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+}
+
+.a1a2 > .a1,
+.a1a2 > .a2 {
+  align-items: center;
+}
+
+.itemheader,
+.itembodygeld {
+  justify-content: flex-start;
+}
+.itemheader {
+  background-color: $background-color-2;
+}
+.itemheader > div {
+  margin: 1px 4px;
+}
+.itemheader > div:not(.icon) {
+  margin-top: 3px !important;
+}
+.itembody > div {
+  padding: 1px 0px 0px 4px;
+  color: red;
+}
+
+.start .rij {
+  //justify-content: space-between;
+  align-items: center;
+  .kolom {
+    width: 300px;
   }
-  
-  .bedrijfsprocessen-b { //is nodig voor hoogte
-      flex: 0 0 33px;
+  .boekhoudboeken {
+    height: 100px;
   }
-  
-  .orgheader,
+}
+
+.org-all {
+  align-items: center;
+}
+
+.orgbuttons {
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 12px;
+}
+
+.itembody {
+  //van items in organisatie
+  padding: 0px 0px 0px 0px;
+  > img {
+    max-width: 140px;
+    max-height: 50px;
+    padding-bottom: 4px;
+  }
+  .randlinks {
+    //voor verkocht boord
+    padding-left: 12px;
+  }
+}
+
+.geld img {
+  max-width: 50px;
+}
+
+.interieur {
+  width: 130px !important;
+  max-height: 70px !important;
+}
+
+.orgheader {
+  background-color: $background-color-1;
+  justify-content: space-between;
+  align-items: center;
+  :nth-child(2) {
+    //movie button
+    flex: 0 1 34px;
+  }
+  :nth-child(3) {
+    // naam organisatie
+    flex: 12 1 auto;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+  :nth-child(4) {
+    //bedrijfstak
+    flex: 0 1 134px;
+    padding-left: 12px;
+  }
+  :nth-child(5) {
+    //sector
+    flex: 0 1 65px;
+    padding: 4px 0px 2px 6px;
+    //color: white;
+    height: 41px;
+  }
+  .Huishoudens {
+    background-color: $huishouden;
+  }
+  .Vennootschappen {
+    background-color: $nv;
+  }
+  .Overheid {
+    background-color: $overheid;
+  }
+  .Financiële_instelling {
+    background-color: $financieel;
+  }
+}
+.overzicht-rente {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 195px;
+  :nth-child(1) {
+    flex: 0 1 177px;
+  }
+  :nth-child(2) {
+    flex: 0 1 auto;
+    transform: scale(0.8, 0.8);
+  }
+  :nth-child(3) {
+    flex: 3 1 auto;
+    text-align: right;
+  }
+}
+
+.orgscontainer {
   .overeenkomsten,
   .geld,
   .overheid,
   .finprod,
-  .orgbuttons,
-  {
-      width: $breedte_organisatie;
-  }
-  
-  .overeenkomsten .rijtje .klein {
-      width: 100px;
-  }
-  
-  .a,
-  .b,
-  .c {
-      height: 450px;
-  }
-  
-  .a1,
-  .a2 {
-      flex-grow: 1;
-  }
-  
-  .a,
-  .c,
-  {
-      width: 180px;
-  }
-  
-  .b {
-      width: $breedte_b;
-      .kostprijsberekening {
-          background-color: white;
-          flex: auto;
-          div {
-              position: relative;
-              padding: 0px 0px 0px 0px;
-              margin: 10px 10px 10px 10px;
-          }
-      }
-      .k-iwo,
-      .k-bdv,
-      .k-ink,
-      .k-ovh {
-          border-style: solid;
-          border-width: 1px 1px 1px 1px;
-          border-color: $border-color-base;
-      }
-      .k-vrk {
-          border-style: solid;
-          border-width: 0px 0px 1px 0px;
-          border-color: $border-color-base;
-      }
-      .verhoogd {
-          margin: 0px 0px 0px 8px;
-          padding: 4px 5px 4px 5px;
-          position: absolute;
-          top: -10px;
-          background-color: white;
-          color: $text-color-grey;
-          //font-size: 12px;
-      }
-      .k-vrk,
-      .k-alg {
-          margin: 0px 4px 0px 4px !important;
-      }
-      .k-iwo {
-          height: 90px;
-      }
-      .k-ink,
-      .k-vrk,
-      .k-alg {
-          //font-size: 14px;
-          font-weight: normal;
-          .pijlwaarde {
-              margin-top: -5px;
-              margin-bottom: 2px;
-          }
-      }
-      .k-bdv,
-      .k-ovh {
-          padding-top: 4px !important;
-          //padding-left: 2px !important;
-      }
-      .k-ovh {
-          font-weight: normal;
-          //height: 133px;
-      }
-  }
-  
-  .org-all,
-  .start,
-  .a,
-  .b,
-  .c,
+  .actvlot,
+  .actvast,
+  .tekoop,
+  .knowhow,
+  .kosten,
+  .pers,
   .toewijzing,
-  .a1,
-  .a2,
-  a1a2>.a1,
-  a1a2>.a2 .kolom,
-  .pijlwaarde {
-      display: -webkit-flex;
-      flex-direction: column;
+  .winkel .reclame,
+  .service,
+  .admin {
+    background-color: white;
   }
-  
-  .abc,
-  .itemheader,
-  .orgheader,
-  .itembody,
-  .a1a2,
-  .orgbuttons,
-  .pijluitleg,
-  .rij {
-      display: -webkit-flex;
-      flex-direction: row;
-      align-items: center;
-  }
-  
-  .rijtje {
-      div {
-          display: inline;
-          padding: 0px 0px 0px 8px;
-      }
-  }
-  
-  .a1a2>.a1,
-  .a1a2>.a2 {
-      align-items: center;
-  }
-  
-  .itemheader,
-  .itembodygeld,
-  {
-      justify-content: flex-start;
-  }
-  .itemheader {
-    background-color: $background-color-2;    
-  }
-  .itemheader > div {
-    margin: 1px 4px;
-  }
-  .itemheader > div:not(.icon) {
-    margin-top: 3px !important;
-  }
- .itembody > div {
-    padding: 1px 0px 0px 4px;
-    color: red;
-  }
-
-  .start .rij {
-      //justify-content: space-between;
-      align-items: center;
-      .kolom {
-          width: 300px;
-      }
-      .boekhoudboeken {
-        height: 100px;
-      }
-  }
-  
-  .org-all {
-      align-items: center;
-  }
-
-  .orgbuttons {
-      justify-content: space-around;
-      align-items: center;
-      position: relative;
-      top: 0px;
-      left: 0px;
-      padding-bottom: 12px;
-  }
-  
- 
-  .itembody {
-      //van items in organisatie
-      padding: 0px 0px 0px 0px;
-      > img {
-          max-width: 140px;
-          max-height: 50px;
-          padding-bottom: 4px;
-      }
-      .randlinks { //voor verkocht boord
-            padding-left: 12px;
-          }
-  }
-
-  
-  
-  .geld img {
-      max-width: 50px;
-  }
-  
-  .interieur {
-      width: 130px!important;
-      max-height: 70px!important;
-  }
-  
-
-  
-  .orgheader {
-      background-color: $background-color-1;
-      justify-content: space-between;
-      align-items: center;      
-      :nth-child(2) { //movie button
-          flex: 0 1 34px;
-      }
-      :nth-child(3) { // naam organisatie
-          flex: 12 1 auto;
-          font-size: 18px;
-          text-align: center;
-          font-weight: bold;
-      }
-      :nth-child(4) { //bedrijfstak
-          flex: 0 1 134px;
-          padding-left: 12px;
-      }
-      :nth-child(5) { //sector
-          flex: 0 1 65px;
-          padding: 4px 0px 2px 6px;
-          //color: white;
-          height: 41px;
-      }
-      .Huishoudens {
-          background-color: $huishouden;        
-      }
-      .Vennootschappen {
-          background-color: $nv;        
-      }
-      .Overheid {
-          background-color: $overheid;        
-      }
-      .Financiële_instelling {
-          background-color: $financieel;        
-      }
-  }
-  .overzicht-rente {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 195px;
-    :nth-child(1) {
-      flex: 0 1 177px;
-    }
-    :nth-child(2) {
-      flex: 0 1 auto;
-      transform: scale(0.8, 0.8);
-    }
-    :nth-child(3) {
-      flex: 3 1 auto; 
-      text-align: right;
-    }
-  }
-  
-  
-  .orgscontainer {
-      .overeenkomsten,
-      .geld,
-      .overheid,
-      .finprod,
-      .actvlot,
-      .actvast,
-      .tekoop,
-      .knowhow,
-      .kosten,
-      .pers,
-      .toewijzing,
-      .winkel
-      .reclame,
-      .service,
-      .admin {
-          background-color: white;
-      }
-      .overeenkomsten,
-      .geld,
-      .overheid,
-      .finprod,
-      .actvlot,
-      .actvast,
-      .kosten,
-      .kostprijs,
-      .verkoopprijs,
-      .producten,
-      .service,
-      .winkel,
-      .reclame,
-      .knowhow,
-      .toewijzing,
-      .listnaam,
-      .listitems,
-      .pers,
-      .admin,
-      .orgheader {
-          //padding: 8px 4px 4px 8px;
-          flex-grow: 1;
-      }
-      .tekoop,
-      {
-          //padding: 8px 4px 4px 8px;
-          flex: 2 0 100px;
-      }
-      .orgheader,
-      .itemheader,
-      .orgnaam,
-      .overeenkomsten,
-      .geld,
-      .overheid,
-      .finprod,
-      .actvlot,
-      .actvast,
-      .kosten,
-      .kostprijs,
-      .verkoopprijs,
-      .producten,
-      .tekoop,
-      .service,
-      .winkel,
-      .reclame,
-      .knowhow,
-      .toewijzing,
-      .listnaam,
-      .listitems,
-      .pers,
-      .admin,
-      {
-          position: relative;
-      }
-      .overeenkomsten,
-      .geld,
-      .overheid,
-      .finprod,
-      .actvlot,
-      #actvast,
-      #kosten,
-      #pers,
-      #b1,
-      #b2,
-      #tekoop,
-      .winkel,
-      .reclame,
-      .service,
-      .knowhow,
-      #admin,
-      .vergroting {
-          //  cursor: pointer;
-      }
-  }
-  
-  .tw {
-      //box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
-      color: green;
-      height: 38px;
-      margin: 3px 8px 8px 8px;
-      //margin-top: 8px;
-      //align-items: center;
-     
-  } 
-  .tw.itemheader {
-      //background-color: $orange;        
-      }
-  .opvallendeachtergrond {
-    background-color: lightyellow;
-  }
-  
-  .tw-waarde {
-      padding-left: 32px;
-      //font-size: 12px;
-  }
-  
-  .listhoofd {
-      padding: 4px 0px 8px 8px;
-  }
-  
-  .listnaam {
-      //van b1 en b2
-      padding: 4px 0px 0px 8px;
-  }
-  
-  .listitems {
-      padding: 0px 0px 0px 20px;
-      //font-size: 12px;
-  }
-  
-  .vergroting .header {
-      // van vergroting
-      //font-weight: bold;
-      text-align: center;
-      height: 36px;
-      padding-top: 8px;
-  }
-  
-  .proef {
-      display: none;
-      background-color: red;
-      width: 600px;
-      height: 480px;
-      border-style: solid;
-      border-width: 1px 1px 1px 1px;
-      border-color: $border-color-base;
-      box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.47);
-  }
-  
-  .overzichtsfoto-div {
-      position: absolute;
-      top: 147px;
-      z-index: 1;
-      width: $breedte_organisatie - 1px;
-      height: 1100px;
-      background-color: white;
-      border-style: solid;
-      border-width: 0px 1px 1px 1px;
-      border-color: $border-color-base;
-  }
-  
-  .overzichtsfoto-img {
-      width: $breedte_organisatie - 2px;
-      //height: 600px;
-  }
-  
-  .tekoop {}
-  
-
-  
-  .vergroting {
-      display: -webkit-flex;
-      flex-direction: column;
-      display: none;
-      background-color: $background-color-2;
-      width: 370px;
-      height: 400px;
-      border: 1px solid $border-color-base;
-      z-index: 1;
-      box-shadow: 0px 0px 38px 0px rgba(1, 0, 0, 0.47);
-      //box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.2);
-      
-  }
-
- 
-  .vergroting-tekoop {
-      justify-content: flex-start;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      >:nth-child(2),
-      >:nth-child(3) {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          border-bottom: 1px solid $border-color-base;
-          padding: 8px;
-      }
-      .artworkbrood {
-          width: 150px;
-          max-height: 130px;
-      }
-      .artworkbolletje {
-          width: 90px;
-          height: 80px;
-      }
-  }
- 
-  
-  .a .artwork,
-  .c .artwork {
-      //height: 46px;
-  }
-  
-  .reclame .vergroting {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 230px;
-      >:nth-child(2) {
-          width: 360px;
-      }
-  }
-  .admin .vergroting {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 290px;
-      height: 270px;
-      >:nth-child(2) {
-          width: 97%;
-      }
-  }
-  
-  .volledigegrootte {
-      max-width: 500px;
-      max-height: 450px;
-  }
-  
-  .pijllinks,
-  .pijlrechts,
-  {
-      display: none;
-  }
-   
+  .overeenkomsten,
   .geld,
   .overheid,
   .finprod,
   .actvlot,
   .actvast,
   .kosten,
+  .kostprijs,
+  .verkoopprijs,
+  .producten,
+  .service,
+  .winkel,
+  .reclame,
+  .knowhow,
+  .toewijzing,
+  .listnaam,
+  .listitems,
   .pers,
-  .container-ev,
+  .admin,
+  .orgheader {
+    //padding: 8px 4px 4px 8px;
+    flex-grow: 1;
+  }
+  .tekoop {
+    //padding: 8px 4px 4px 8px;
+    flex: 2 0 100px;
+  }
+  .orgheader,
+  .itemheader,
   .orgnaam,
-  {
-      >.pijllinks {
-          //width: 120px;
-          position: absolute;
-          left: -160px;
-      }
-  }
-
- .geld .pijlrechts,
- .overheid .pijlrechts {
-   position: absolute;
-    left: 784px;
-  }
-
-  .container-ev,
+  .overeenkomsten,
+  .geld,
+  .overheid,
+  .finprod,
+  .actvlot,
+  .actvast,
+  .kosten,
+  .kostprijs,
+  .verkoopprijs,
+  .producten,
   .tekoop,
+  .service,
+  .winkel,
+  .reclame,
+  .knowhow,
+  .toewijzing,
+  .listnaam,
+  .listitems,
+  .pers,
+  .admin {
+    position: relative;
+  }
+  .overeenkomsten,
+  .geld,
+  .overheid,
+  .finprod,
+  .actvlot,
+  #actvast,
+  #kosten,
+  #pers,
+  #b1,
+  #b2,
+  #tekoop,
+  .winkel,
   .reclame,
   .service,
   .knowhow,
-  .winkel,
-  .admin,
-  .total-right {
-      > .pijlrechts {
-          margin-top: -2px;
-          width: 230px;
-          position: absolute;
-          left: 214px;
-      }
+  #admin,
+  .vergroting {
+    //  cursor: pointer;
   }
+}
 
-  
-  .org .item {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .pijluitleg {
+.tw {
+  //box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.47);
+  color: green;
+  height: 38px;
+  margin: 3px 8px 8px 8px;
+  //margin-top: 8px;
+  //align-items: center;
+}
+.tw.itemheader {
+  //background-color: $orange;
+}
+.opvallendeachtergrond {
+  background-color: lightyellow;
+}
+
+.tw-waarde {
+  padding-left: 32px;
+  //font-size: 12px;
+}
+
+.listhoofd {
+  padding: 4px 0px 8px 8px;
+}
+
+.listnaam {
+  //van b1 en b2
+  padding: 4px 0px 0px 8px;
+}
+
+.listitems {
+  padding: 0px 0px 0px 20px;
+  //font-size: 12px;
+}
+
+.vergroting .header {
+  // van vergroting
+  //font-weight: bold;
+  text-align: center;
+  height: 36px;
+  padding-top: 8px;
+}
+
+.proef {
+  display: none;
+  background-color: red;
+  width: 600px;
+  height: 480px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: $border-color-base;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.47);
+}
+
+.overzichtsfoto-div {
+  position: absolute;
+  top: 147px;
+  z-index: 1;
+  width: $breedte_organisatie - 1px;
+  height: 1100px;
+  background-color: white;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: $border-color-base;
+}
+
+.overzichtsfoto-img {
+  width: $breedte_organisatie - 2px;
+  //height: 600px;
+}
+
+.tekoop {
+}
+
+.vergroting {
+  display: -webkit-flex;
+  flex-direction: column;
+  display: none;
+  background-color: $background-color-2;
+  width: 370px;
+  height: 400px;
+  border: 1px solid $border-color-base;
+  z-index: 1;
+  box-shadow: 0px 0px 38px 0px rgba(1, 0, 0, 0.47);
+  //box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.2);
+}
+
+.vergroting-tekoop {
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  > :nth-child(2),
+  > :nth-child(3) {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width: 120px; 
-    //      height: 40px;
-    // background-color:yellow;
-  }  
+    border-bottom: 1px solid $border-color-base;
+    padding: 8px;
+  }
+  .artworkbrood {
+    width: 150px;
+    max-height: 130px;
+  }
+  .artworkbolletje {
+    width: 90px;
+    height: 80px;
+  }
+}
 
-.pijllinks, .pijlrechts, .middenlinks,
-.middenmidden, .middenrechts, .winstonderdeel {
-    color: $procescolor;
+.a .artwork,
+.c .artwork {
+  //height: 46px;
+}
+
+.reclame .vergroting {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 230px;
+  > :nth-child(2) {
+    width: 360px;
+  }
+}
+.admin .vergroting {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 290px;
+  height: 270px;
+  > :nth-child(2) {
+    width: 97%;
+  }
+}
+
+.volledigegrootte {
+  max-width: 500px;
+  max-height: 450px;
+}
+
+.pijllinks,
+.pijlrechts {
+  display: none;
+}
+
+.geld,
+.overheid,
+.finprod,
+.actvlot,
+.actvast,
+.kosten,
+.pers,
+.container-ev,
+.orgnaam {
+  > .pijllinks {
+    //width: 120px;
+    position: absolute;
+    left: -160px;
+  }
+}
+
+.geld .pijlrechts,
+.overheid .pijlrechts {
+  position: absolute;
+  left: 784px;
+}
+
+.container-ev,
+.tekoop,
+.reclame,
+.service,
+.knowhow,
+.winkel,
+.admin,
+.total-right {
+  > .pijlrechts {
+    margin-top: -2px;
+    width: 230px;
+    position: absolute;
+    left: 214px;
+  }
+}
+
+.org .item {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.pijluitleg {
+  justify-content: space-between;
+  width: 120px;
+  //      height: 40px;
+  // background-color:yellow;
+}
+
+.pijllinks,
+.pijlrechts,
+.middenlinks,
+.middenmidden,
+.middenrechts,
+.winstonderdeel {
+  color: $procescolor;
 }
 
 .gbrrekeningen {
@@ -951,692 +1059,740 @@
   justify-content: space-between;
 }
 
-  .c .itemheader {
-    margin-left: 1px;
-  }
+.c .itemheader {
+  margin-left: 1px;
+}
 
-  .itemheaderfinprod{
-    //padding-top: 1px;
-  }
-  .overheid .pijluitleg {
-    margin-top: -6px;  
-  }  
+.itemheaderfinprod {
+  //padding-top: 1px;
+}
+.overheid .pijluitleg {
+  margin-top: -6px;
+}
 
-  .pijlwaarde div {
-    justify-content: flex-end;
-  }  
-  .pijlwaarde div,
-  .waardeinvestering {
-      padding: 2px;
-  }  
-  .pijluitlegwoord {
-    color: $text-color-grey;
-      padding: 0px 0px 0px 0px;
-      //font-style: italic;
-      cursor: pointer;
-      margin-top: -6px;
-      //background-color:yellow;
-  } 
+.pijlwaarde div {
+  justify-content: flex-end;
+}
+.pijlwaarde div,
+.waardeinvestering {
+  padding: 2px;
+}
+.pijluitlegwoord {
+  color: $text-color-grey;
+  padding: 0px 0px 0px 0px;
+  //font-style: italic;
+  cursor: pointer;
+  margin-top: -6px;
+  //background-color:yellow;
+}
 
-  .pijluitlegwoord, .uitlegproces {
-    //font-size: 14px;
-  }
+.pijluitlegwoord,
+.uitlegproces {
+  //font-size: 14px;
+}
 
-  
-  .waardeinvestering {
-      background-color: $bg-verleden;
-      position: absolute;
-      top: 21px;
-      left: -0px;
-  }
-  
-  
- .middenlinks {
-   position: absolute;
-   left: 184px;
-   width: 102px;
-   display: none;
- } 
- .middenmidden {
-   position: absolute;
-   left: 310px;
-   width: 122px;
-   display: none;
-   //background-color: $background-color-2;
- } 
- 
- .middenrechtscontainer {
-   display: flex;
-   flex-direction: column;
-   position: absolute;
-   left: -115px;
-   width: 110px;
-   display: none;
- }
- .middenrechts {
- }
+.waardeinvestering {
+  background-color: $bg-verleden;
+  position: absolute;
+  top: 21px;
+  left: -0px;
+}
 
-  .uitlegproces {
-     //color: darkblue;
-     //font-style: italic;
-     }   
+.middenlinks {
+  position: absolute;
+  left: 184px;
+  width: 102px;
+  display: none;
+}
+.middenmidden {
+  position: absolute;
+  left: 310px;
+  width: 122px;
+  display: none;
+  //background-color: $background-color-2;
+}
 
- .flexrow {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
- }
- .flexcolumn {
-   display: flex;
-   flex-direction: column;
+.middenrechtscontainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -115px;
+  width: 110px;
+  display: none;
+}
+.middenrechts {
+}
 
- }
+.uitlegproces {
+  //color: darkblue;
+  //font-style: italic;
+}
 
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
 
-   .uitlegproces{     
-   color: $text-color-grey;
-     margin-top:  -4px;
-     margin-bottom: 4px; 
+.uitlegproces {
+  color: $text-color-grey;
+  margin-top: -4px;
+  margin-bottom: 4px;
 
-     line-height: 1.1;
-     //font-size: 12px;
-   }
+  line-height: 1.1;
+  //font-size: 12px;
+}
 
 .foto_spullen {
   display: flex;
   flex-direction: row;
 }
 
-
 .container-ev-display {
   display: none;
 }
-  .container-ev-column {
-      display: flex;
-      flex-direction: column;
-      //align-items: center;
-      top: 10px;
-          padding-bottom: 24px;
-          padding-top: 22px;
-              .itemheader {
-              border-width: 1px 1px 0px 1px;
-              border-style: solid;
-              border-color: $border-color-base;           
-              }
-              .itemheader + div {
-              padding-left: 0px !important;                     
-              }
+.container-ev-column {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  top: 10px;
+  padding-bottom: 24px;
+  padding-top: 22px;
+  .itemheader {
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: $border-color-base;
   }
-  
-  .container-ev {
-      //display: flex;
-      //flex-direction: row;
-      //align-items: center;
-      //position: relative;
-      .bar-ev {
-          display: flex;
-          flex-direction: row;
-          .wl,
-          .wm,
-          .wr
-          {
-              flex: 1 0 50%;
-              border-width: 1px 0px 1px 1px;
-              border-style: solid;
-              border-color: $border-color-base;
-              padding: 4px 0px 4px 8px;
-              //background-color: purple;  
-          }
-          .wr {
-              border: 1px solid $border-color-base !important;
-          }
-          .wm {
-            width: $breedte_b;
-            align-items: center;
-          }
-      }
+  .itemheader + div {
+    padding-left: 0px !important;
   }
+}
 
-  .winstonderdeel {
+.container-ev {
+  //display: flex;
+  //flex-direction: row;
+  //align-items: center;
+  //position: relative;
+  .bar-ev {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    :nth-child(1) {
-      flex: 0 0 180px;
-    }
-    :nth-child(2) {
-      flex: 0 1 48px;
-    }
-    :nth-child(3) {
-      flex: 0 0 70px;
-      //background-color: yellow;
-      text-align: right;
-    }
-
-  }
-    .winstonderdeel.toename-ev{
-      //font-weight: bold;
-      //text-decoration: underline; 
-    }
-  
-
-  .abc,
-  {
+    .wl,
+    .wm,
+    .wr {
+      flex: 1 0 50%;
+      border-width: 1px 0px 1px 1px;
       border-style: solid;
-      border-width: 0px 0px 1px 0px;
       border-color: $border-color-base;
+      padding: 4px 0px 4px 8px;
+      //background-color: purple;
+    }
+    .wr {
+      border: 1px solid $border-color-base !important;
+    }
+    .wm {
+      width: $breedte_b;
+      align-items: center;
+    }
   }
+}
 
-.bedrijfsprocessen-b, .bedrijfsprocessen-ac {
+.winstonderdeel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  :nth-child(1) {
+    flex: 0 0 180px;
+  }
+  :nth-child(2) {
+    flex: 0 1 48px;
+  }
+  :nth-child(3) {
+    flex: 0 0 70px;
+    //background-color: yellow;
+    text-align: right;
+  }
+}
+.winstonderdeel.toename-ev {
+  //font-weight: bold;
+  //text-decoration: underline;
+}
+
+.abc {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: $border-color-base;
+}
+
+.bedrijfsprocessen-b,
+.bedrijfsprocessen-ac {
   background-color: $background-color-1;
 }
 
-  .orgheader,
-  .overeenkomsten,
-  .geld,
-  .overheid,
-  .finprod,
-  .bedrijfsprocessen-ac,
-  .actvlot,
-  .actvast,
-  .kosten,
-  .tekoop,
-  .service,
-  .winkel,
-  .reclame,
-  .knowhow,
-  {
-      border-style: solid;
-      border-width: 1px 1px 0px 1px;
-      border-color: $border-color-base;
-  }
-  
-  .pers,
-  .admin,
-  {
-      border-style: solid;
-      border-width: 1px 1px 0px 1px;
-      border-color: $border-color-base;
-  }
-  
-  .a1 {
-      border-style: solid;
-      border-width: 0px 1px 1px 0px;
-      border-color: $border-color-base;
-  }
-  
-  .a2,
-  .header-org,
-  .kostprijsberekening {
-      border-style: solid;
-      border-width: 0px 0px 1px 0px;
-      border-color: $border-color-base;
-  }
-  
-  .toewijzing,
-  .bedrijfsprocessen-b {
-      border-style: solid;
-      border-width: 1px 0px 1px 0px;
-      border-color: $border-color-base;
-  }
-  .bedrijfsprocessen-b {
-    //font-style: italic;
-  }
-  
-  .ovrcontainer,
-  .ovr {
-      display: -webkit-flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  .ovrcontainer {
-      margin-top: 50px;
-  }
-  
-  .ovrcontainer {
-      position: absolute;
-      left: 100px;
-  }
-  
-  .ovr {
-      -webkit-justify-content: center;
-      border: 1px solid $border-color-base;
-      padding: 8px 0px 8px 0px;
-  }
-  
-  .ovrheader {
-      //font-size: 14px;
-      border: solid;
-      border-color: $border-color-base;
-      background-color: $background-color-1;
-      border-width: 1px 1px 0px 1px;
-  }
-  
-  .ovrprijs {
-      //font-size: 14px;
-      border: solid;
-      border-color: $border-color-base;
-      background-color: $background-color-2;
-      border-width: 0px 1px 1px 1px;
-  }
-  
-  .ovrheader,
-  .ovrprijs {
-      text-align: center;
-  }
-  
-  .ovrartwork {
-      max-width: 50px;
-      max-height: 40px;
-  }
-  
-  .ovr,
-  .ovrheader,
-  .ovrprijs {
-      width: 150px;
-  }
+.orgheader,
+.overeenkomsten,
+.geld,
+.overheid,
+.finprod,
+.bedrijfsprocessen-ac,
+.actvlot,
+.actvast,
+.kosten,
+.tekoop,
+.service,
+.winkel,
+.reclame,
+.knowhow {
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  border-color: $border-color-base;
+}
 
+.pers,
+.admin {
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  border-color: $border-color-base;
+}
 
+.a1 {
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  border-color: $border-color-base;
+}
 
-  .icon-prod-pos {
-    background-color: $bgwinst;
-  }
+.a2,
+.header-org,
+.kostprijsberekening {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: $border-color-base;
+}
 
-  .winstonderdeel .icon-rente-neg,
-  .winstonderdeel .icon-belasting-neg,
-  .winstonderdeel .icon-dividend {
-    background-color: $bgoutput;
-  }
+.toewijzing,
+.bedrijfsprocessen-b {
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-color: $border-color-base;
+}
+.bedrijfsprocessen-b {
+  //font-style: italic;
+}
 
-  
-  
-  // DRY 
-  .bold {
-      font-weight: bold;
+.ovrcontainer,
+.ovr {
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ovrcontainer {
+  margin-top: 50px;
+}
+
+.ovrcontainer {
+  position: absolute;
+  left: 100px;
+}
+
+.ovr {
+  -webkit-justify-content: center;
+  border: 1px solid $border-color-base;
+  padding: 8px 0px 8px 0px;
+}
+
+.ovrheader {
+  //font-size: 14px;
+  border: solid;
+  border-color: $border-color-base;
+  background-color: $background-color-1;
+  border-width: 1px 1px 0px 1px;
+}
+
+.ovrprijs {
+  //font-size: 14px;
+  border: solid;
+  border-color: $border-color-base;
+  background-color: $background-color-2;
+  border-width: 0px 1px 1px 1px;
+}
+
+.ovrheader,
+.ovrprijs {
+  text-align: center;
+}
+
+.ovrartwork {
+  max-width: 50px;
+  max-height: 40px;
+}
+
+.ovr,
+.ovrheader,
+.ovrprijs {
+  width: 150px;
+}
+
+.icon-prod-pos {
+  background-color: $bgwinst;
+}
+
+.winstonderdeel .icon-rente-neg,
+.winstonderdeel .icon-belasting-neg,
+.winstonderdeel .icon-dividend {
+  background-color: $bgoutput;
+}
+
+// DRY
+.bold {
+  font-weight: bold;
+}
+
+.groen,
+.winstweergave {
+  color: $orange !important;
+  font-weight: bold;
+}
+
+.titelverslaglegging {
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  //font-size: 14px;
+  //font-weight: bold;
+  color: black; // $text-color-grey;
+  //margin-bottom: 8px;
+}
+
+// BAKKER 2
+.container-bdtuitgebreid.bakker2q {
+  margin-top: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  //height: 560px;
+  width: 1205px;
+  .titel-sector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    color: white;
+    font-size: $fontSize;
+    padding: 8px;
+    border-width: 0px 0px 1px 0px;
   }
-  
-  .groen,
-  .winstweergave {
-      color: $orange !important;
-      font-weight: bold;
+  .sectoruitgebreid {
+    margin: 0px 0px 12px 0px;
   }
-  
-  .titelverslaglegging {
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      //font-size: 14px;
-      //font-weight: bold;
-      color: black; // $text-color-grey;
-      //margin-bottom: 8px; 
-  }
-  
-  // BAKKER 2
-  .container-bdtuitgebreid.bakker2q {
-      margin-top: 12px;
-      background-color: white;
+  .onderdeel {
+    position: relative;
+    .midden {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      //height: 560px;
-      width: 1205px;
-      .titel-sector {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          height: 30px;
-          color: white;
-          font-size: $fontSize;
-          padding: 8px;
-          border-width: 0px 0px 1px 0px;
+      position: relative;
+      border-style: solid;
+      border-width: 0px 1px 1px 1px;
+      border-color: $border-color-base;
+      width: 200px;
+      height: 32px;
+      padding: 2px;
+      .mleft {
+        padding-left: 16px;
+        width: 150px;
+        .icon {
+        }
+        .beschrijving1 {
+          position: absolute;
+          top: 8px;
+          left: 0px;
+        }
       }
-      .sectoruitgebreid {
-          margin: 0px 0px 12px 0px;
+      .mright {
+        .icon {
+        }
+        .beschrijving1 {
+        }
       }
-      .onderdeel {
-          position: relative;
-          .midden {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              position: relative;
-              border-style: solid;
-              border-width: 0px 1px 1px 1px;
-              border-color: $border-color-base;
-              width: 200px;
-              height: 32px;
-              padding: 2px;
-              .mleft {
-                  padding-left: 16px;
-                  width: 150px;
-                  .icon {}
-                  .beschrijving1 {
-                      position: absolute;
-                      top: 8px;
-                      left: 0px;
-                  }
-              }
-              .mright {
-                  .icon {}
-                  .beschrijving1 {}
-              }
-          }
-          .left {
-              position: absolute;
-              top: 0px;
-              left: -490px;
-              display: flex;
-              flex-direction: row-reverse;
-              align-items: center;
-              .icon {
-                  width: 50px;
-              }
-              .naam {
-                  width: 200px;
-              }
-              .waarde {
-                  width: 90px;
-                  text-align: right;
-                  padding-right: 24px;
-              }
-              .waarde::before {
-                  //content: '\20AC  '
-              }
-              .sect {
-                  width: 20px;
-              }
-              .bdt {
-                  width: 50px;
-              }
-              .beschrijving2 {
-                  width: 70px;
-              }
-          }
-          .right {
-              position: absolute;
-              top: 0px;
-              left: 210px;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              .icon {
-                  width: 50px;
-              }
-              .naam {
-                  width: 150px;
-              }
-              .waarde {
-                  width: 100px;
-                  text-align: right;
-                  padding-right: 24px;
-              }
-              .sect {
-                  width: 20px;
-              }
-              .bdt {
-                  width: 60px;
-              }
-              .beschrijving2 {
-                  width: 90px
-              }
-          }
-          .ev {
-              border-style: solid;
-              border-width: 0px 0px 1px 0px !important;
-              border-color: $border-color-base;
-          }
-      }
-      .beschrijving2 {
-          visibility: hidden;
-      }
-  }
-  
-  // FIFA
-  .container-fifa {
-      //height: 560px;
-      width: 1205px;
-      margin-top: 12px;
-      .container-bdtuitgebreid {
-          display: flex;
-          flex-direction: column;
-          //justify-content: flex-start;
-          align-items: center;
-      }
-      .titel-sector {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          //height: 30px;
-          color: white;
-          font-size: 16px;
-          border-style: solid;
-          border-width: 1px 1px 1px 1px;
-          border-color: $border-color-base;
-          width: 200px;
-      }
-      .sectoruitgebreid {
-          margin: 12px 0px 12px 0px;
-      }
-      .onderdeel {
-          position: relative;
-          .midden {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              position: relative;
-              border-style: solid;
-              border-width: 0px 1px 1px 1px;
-              border-color: $border-color-base;
-              width: 200px;
-              height: 32px;
-              padding: 2px;
-              .mleft {
-                  padding-left: 16px;
-                  width: 150px;
-                  .icon {}
-                  .beschrijving1 {
-                      position: absolute;
-                      top: 8px;
-                      left: 0px;
-                  }
-              }
-              .mright {
-                  .icon {}
-                  .beschrijving1 {}
-              }
-          }
-          .left {
-              position: absolute;
-              top: 0px;
-              left: -490px;
-              display: flex;
-              flex-direction: row-reverse;
-              align-items: center;
-              .icon {
-                  width: 50px;
-              }
-              .naam {
-                  width: 200px;
-              }
-              .waarde {
-                  width: 90px;
-                  text-align: right;
-                  padding-right: 24px;
-              }
-              .waarde::before {
-                  //content: '\20AC  '
-              }
-              .sect {
-                  width: 20px;
-              }
-              .bdt {
-                  width: 50px;
-              }
-              .beschrijving2 {
-                  width: 70px;
-              }
-          }
-          .right {
-              position: absolute;
-              top: 0px;
-              left: 210px;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              .icon {
-                  width: 50px;
-              }
-              .naam {
-                  width: 250px;
-              }
-              .waarde {
-                  width: 140px;
-                  text-align: right;
-                  padding-right: 24px;
-              }
-              .sect {
-                  width: 20px;
-              }
-              .bdt {
-                  width: 60px;
-              }
-              .beschrijving2 {
-                  width: 90px
-              }
-          }
-          .ev {
-              border-style: solid;
-              border-width: 0px 0px 1px 0px !important;
-              border-color: $border-color-base;
-          }
-      }
-      .beschrijving2 {
-          visibility: hidden;
-      }
-  }
-  
-  .dashed {
-      border-style: dashed;
-      border-width: 1px 1px 1px 1px;
-      border-color: $border-color-dark;
-  }
-  
-  .gezamenlijkproduct {
-      margin-top: 24px;
+    }
+    .left {
+      position: absolute;
+      top: 0px;
+      left: -490px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
       align-items: center;
-      .container-bdtuitgebreid {
-          border-style: dashed;
-          border-width: 1px 1px 1px 1px !important;
-          border-color: $border-color-dark;
-          padding: 10px;
+      .icon {
+        width: 50px;
       }
-      .titel-sector {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          height: 90px;
-          font-size: 16px;
-          padding: 8px;
-          border-style: solid;
-          border-width: 1px 1px 1px 1px;
-          border-color: $border-color-base;
-          color: black;
-          background-color: $background-color-2;
+      .naam {
+        width: 200px;
       }
+      .waarde {
+        width: 90px;
+        text-align: right;
+        padding-right: 24px;
+      }
+      .waarde::before {
+        //content: '\20AC  '
+      }
+      .sect {
+        width: 20px;
+      }
+      .bdt {
+        width: 50px;
+      }
+      .beschrijving2 {
+        width: 70px;
+      }
+    }
+    .right {
+      position: absolute;
+      top: 0px;
+      left: 210px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .icon {
+        width: 50px;
+      }
+      .naam {
+        width: 150px;
+      }
+      .waarde {
+        width: 100px;
+        text-align: right;
+        padding-right: 24px;
+      }
+      .sect {
+        width: 20px;
+      }
+      .bdt {
+        width: 60px;
+      }
+      .beschrijving2 {
+        width: 90px;
+      }
+    }
+    .ev {
+      border-style: solid;
+      border-width: 0px 0px 1px 0px !important;
+      border-color: $border-color-base;
+    }
   }
+  .beschrijving2 {
+    visibility: hidden;
+  }
+}
 
+// FIFA
+.container-fifa {
+  //height: 560px;
+  width: 1205px;
+  margin-top: 12px;
+  .container-bdtuitgebreid {
+    display: flex;
+    flex-direction: column;
+    //justify-content: flex-start;
+    align-items: center;
+  }
+  .titel-sector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    //height: 30px;
+    color: white;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $border-color-base;
+    width: 200px;
+  }
+  .sectoruitgebreid {
+    margin: 12px 0px 12px 0px;
+  }
+  .onderdeel {
+    position: relative;
+    .midden {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      border-style: solid;
+      border-width: 0px 1px 1px 1px;
+      border-color: $border-color-base;
+      width: 200px;
+      height: 32px;
+      padding: 2px;
+      .mleft {
+        padding-left: 16px;
+        width: 150px;
+        .icon {
+        }
+        .beschrijving1 {
+          position: absolute;
+          top: 8px;
+          left: 0px;
+        }
+      }
+      .mright {
+        .icon {
+        }
+        .beschrijving1 {
+        }
+      }
+    }
+    .left {
+      position: absolute;
+      top: 0px;
+      left: -490px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      .icon {
+        width: 50px;
+      }
+      .naam {
+        width: 200px;
+      }
+      .waarde {
+        width: 90px;
+        text-align: right;
+        padding-right: 24px;
+      }
+      .waarde::before {
+        //content: '\20AC  '
+      }
+      .sect {
+        width: 20px;
+      }
+      .bdt {
+        width: 50px;
+      }
+      .beschrijving2 {
+        width: 70px;
+      }
+    }
+    .right {
+      position: absolute;
+      top: 0px;
+      left: 210px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .icon {
+        width: 50px;
+      }
+      .naam {
+        width: 250px;
+      }
+      .waarde {
+        width: 140px;
+        text-align: right;
+        padding-right: 24px;
+      }
+      .sect {
+        width: 20px;
+      }
+      .bdt {
+        width: 60px;
+      }
+      .beschrijving2 {
+        width: 90px;
+      }
+    }
+    .ev {
+      border-style: solid;
+      border-width: 0px 0px 1px 0px !important;
+      border-color: $border-color-base;
+    }
+  }
+  .beschrijving2 {
+    visibility: hidden;
+  }
+}
 
+.dashed {
+  border-style: dashed;
+  border-width: 1px 1px 1px 1px;
+  border-color: $border-color-dark;
+}
 
-
+.gezamenlijkproduct {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .container-bdtuitgebreid {
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px !important;
+    border-color: $border-color-dark;
+    padding: 10px;
+  }
+  .titel-sector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 90px;
+    font-size: 16px;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $border-color-base;
+    color: black;
+    background-color: $background-color-2;
+  }
+}
 
 //  VERGROOT
 
-.gbr-vergroot { //start van big 1 grootboekrekening
-       //position: absolute !important;
-       top: 60px;
-       left: 75px;
-       background-color: white; 
-       padding: 24px;
-       border: 1px solid $border-color-base;        
-       //box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);       
-       width: 1100px;
-       z-index: 3;
-   .titel {
+.gbr-vergroot {
+  //start van big 1 grootboekrekening
+  //position: absolute !important;
+  top: 60px;
+  left: 75px;
+  background-color: white;
+  padding: 24px;
+  border: 1px solid $border-color-base;
+  //box-shadow: 0px 0px 100px 0px rgba(1,1,2,0.5);
+  width: 1100px;
+  z-index: 3;
+  .titel {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: bold;
+    :nth-child(1) {
+      flex: 0 0 40px;
+      margin-top: 4px;
+      margin-left: 8px;
+    }
+    :nth-child(2) {
+      flex: 0 0 150px;
+      margin-top: 6px;
+    }
+    :nth-child(3) {
+      flex: 0 0 260px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    :nth-child(4) {
+      flex: 0 0 30px;
+      margin-top: 3px;
+      margin-left: auto;
+    }
+  }
+  .header {
+    font-weight: bold;
+    margin-top: 24px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    > .rij {
       display: flex;
       flex-direction: row;
-      font-size: 16px;
-      font-weight: bold;
-      :nth-child(1) {flex: 0 0 40px; margin-top: 4px; margin-left: 8px}
-      :nth-child(2) {flex: 0 0 150px; margin-top: 6px;}
-      :nth-child(3) {flex: 0 0 260px; margin-top: 8px; font-size: 14px; font-weight: normal;}
-      :nth-child(4) {flex: 0 0 30px; margin-top: 3px;  margin-left: auto; }
-   }
-     .header {
-       font-weight: bold;
-       margin-top: 24px;
-     }
-     
-   .info {
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-     margin-bottom: 12px;
-     >.rij {
-     display: flex;
-     flex-direction: row;
-    :nth-child(1) {flex: 0 0 240px;}
-    :nth-child(2) {flex: 0 0 30px;}
-    :nth-child(3) {flex: 0 0 300px;}
-      }      
-   }
-   .info2 >.rij {
-     display: flex;
-     flex-direction: row;
-    :nth-child(1) {flex: 0 0 240px;}
-    :nth-child(2) {flex: 0 0 400px;}
-      }    
-
-   .gbr-row { //in gb
-       padding-left: 8px;
-       display: flex;
-       flex-direction: row; 
-       > div {       
-       padding-top: 4px;
-       }
-       .dd          {flex: 0 0 60px;}
-       .gbr-ovr     {flex: 0 0 100px;}
-       .beschrijving{flex: 0 0 150px;}
-       .icoon       {flex: 0 0 70px;}
-       .sign        {flex: 0 0 40px; text-align: center;} 
-       .gbr-w       {flex: 0 0 70px; text-align: right;}
-       .gbr-h       {flex: 0 0 60px; text-align: right;}
-       .gbr-p       {flex: 0 0 60px; text-align: right; padding-right: 12px;}
-       .ks          {flex: 0 0 200px;}
-       .kf          {flex: 0 0 200px;}
-   }
-   .gbr-rows-scroll .gbr-w::before {content: '€ ';}
-   .gbr-rows-scroll .gbr-p::before {content: '€ ';}
-
-   .gbr-row-header {font-weight: bold; 
-   height: 30px; 
-   padding-top: 3px;
-   border-bottom: 2px solid $border-color-base;}
-   .gbr-rows {
-    height: 360px;
+      :nth-child(1) {
+        flex: 0 0 240px;
+      }
+      :nth-child(2) {
+        flex: 0 0 30px;
+      }
+      :nth-child(3) {
+        flex: 0 0 300px;
+      }
     }
-   .gbr-rows-scroll {
-     height: 284px;
-     overflow-y: scroll;
-   }
- } //einde van big 1 grootboekrekening
+  }
+  .info2 > .rij {
+    display: flex;
+    flex-direction: row;
+    :nth-child(1) {
+      flex: 0 0 240px;
+    }
+    :nth-child(2) {
+      flex: 0 0 400px;
+    }
+  }
+
+  .gbr-row {
+    //in gb
+    padding-left: 8px;
+    display: flex;
+    flex-direction: row;
+    > div {
+      padding-top: 4px;
+    }
+    .dd {
+      flex: 0 0 60px;
+    }
+    .gbr-ovr {
+      flex: 0 0 100px;
+    }
+    .beschrijving {
+      flex: 0 0 150px;
+    }
+    .icoon {
+      flex: 0 0 70px;
+    }
+    .sign {
+      flex: 0 0 40px;
+      text-align: center;
+    }
+    .gbr-w {
+      flex: 0 0 70px;
+      text-align: right;
+    }
+    .gbr-h {
+      flex: 0 0 60px;
+      text-align: right;
+    }
+    .gbr-p {
+      flex: 0 0 60px;
+      text-align: right;
+      padding-right: 12px;
+    }
+    .ks {
+      flex: 0 0 200px;
+    }
+    .kf {
+      flex: 0 0 200px;
+    }
+  }
+  .gbr-rows-scroll .gbr-w::before {
+    content: '€ ';
+  }
+  .gbr-rows-scroll .gbr-p::before {
+    content: '€ ';
+  }
+
+  .gbr-row-header {
+    font-weight: bold;
+    height: 30px;
+    padding-top: 3px;
+    border-bottom: 2px solid $border-color-base;
+  }
+  .gbr-rows {
+    height: 360px;
+  }
+  .gbr-rows-scroll {
+    height: 284px;
+    overflow-y: scroll;
+  }
+} //einde van big 1 grootboekrekening

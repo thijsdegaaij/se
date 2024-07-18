@@ -1,11 +1,10 @@
 <script type="text/javascript">
-
-$(document).ready(function() { 
+$(document).ready(function() {
     // navbar actions  
 
 
 
-// Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
+    // Hoofdnavigatie: NL, MENSEN, ORGANISATIES, MARKTEN
 
     $(document.body).on("click", ".btn-nederlandview, .btn-les2", function() {
         $(".navheaders .navbtn").removeClass(" btngeselecteerd");
@@ -34,37 +33,29 @@ $(document).ready(function() {
 
 
 });
-
 </script>
-<div class="simulatiegame_text">Simulatie van de Nederlandse economie</div>
-<div class="navb"> 
-  <!-- lijn hier nodig, blijft altijd staan --> 
-    
 
-  <!-- LOGO -->
-   
-
-  <!-- simrows aanklikken; jquery bij orgdivsion.html!! -->
-     <div class="navheading">
+<div class="navb">
+    <!-- lijn hier nodig, blijft altijd staan -->
+    <!-- LOGO -->
+    <!-- simrows aanklikken; jquery bij orgdivsion.html!! -->
+    <div class="navheading">
         <div class="navheaders">
-          <div class="navbtn btn-nederlandview  btngeselecteerd">Land</div>
-          <div class="navbtn btn-mensview ">Mens</div>
-          <div class="navbtn btn-organisatieview ">Organisatie</div>
-          <div class="navbtn btn-marktview ">Markt</div>           
+            <div class="navbtn btn-nederlandview  btngeselecteerd">Land</div>
+            <div class="navbtn btn-mensview ">Mens</div>
+            <div class="navbtn btn-organisatieview ">Organisatie</div>
+            <div class="navbtn btn-marktview ">Markt</div>
         </div>
-  <div class="lijn_navb"></div> 
-
-      <!-- Zoek concepten -->
-          <div class="concept">
-            <div >
-              <input id="typeahead searchField" type="text" class="form-control typeahead" placeholder="Zoek begrippenuitleg"/>
+        <div class="lijn_navb"></div>
+        <!-- Zoek concepten -->
+        <div class="concept">
+            <div>
+                <input id="typeahead searchField" type="text" class="form-control typeahead" placeholder="Zoek begrippenuitleg" />
             </div>
             <div id="concept-nav-expmenu" class="expmenu inactive display-ai">
             </div>
-            <div id="concept-nav-triangle" class="triangle inactive display-ai"> 
-            </div> 
-          </div>
-
+            <div id="concept-nav-triangle" class="triangle inactive display-ai">
+            </div>
+        </div>
     </div>
 </div>
-

@@ -1,4 +1,46 @@
 
+.voorblad_render {
+  position:absolute;
+  left: 200px;
+  top: 100px;
+  z-index:999;
+  width: 1200px;
+  height: 1000px;
+  background-color: beige;
+  padding: 24px 48px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+.titel {
+  font-weight: bold;
+}
+
+  .logo {
+    text-align: center;
+    font-size: 48px;
+  }
+  .ondertitel {
+    text-align: center;
+    font-size: 24px;
+  }
+  .introtekst {
+    padding-top: 48px;
+  }
+  .partners {
+    padding-top: 48px;
+    .titel {
+
+    }
+    .partner {
+      padding: 12px;
+    }
+    .zwarte_achtergrond {
+      background-color: black;
+    }
+  }
+}
+  
+
+
     //dropdown-css van bavotasan.com
     .styled-select select {
         background: transparent;
@@ -55,16 +97,121 @@ rood {
   }
 }
 
-
-.simulatiegame_text {
+.lessonassignmentspace {
+  width: $left;
+  height: 122px;
+  top: 100px;
   background-color: $background-color-1;
-  font-size: 32px;
-  color: $text-color-base;
-  //text-align: center;
+  //border-bottom: 1px solid $border-color-base;
+}
+
+
+
+
+.logoIntro {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  //z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: $left;
+  background-color: $background-color-1;
   border-bottom: 1px solid $border-color-base;
   border-left: 1px solid $border-color-base;
-  letter-spacing: 2px;
-  padding: 12px 19px;
+  //letter-spacing: 2px;
+  .logo_se {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 8px 32px;
+    width: $left;
+    border-bottom: solid 1px $border-color-base;
+    .logo {
+      font-size: 28px;
+      letter-spacing: 3px;
+      width: 350px;
+      //ecolor: blue;
+      //font-weight: bold;
+      cursor: pointer;
+
+    }
+
+
+/* user */
+    .plaatjenaam { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     > div {
+      padding: 0px 7px 0px 7px;
+    } 
+  .img-learner {
+    margin-top: 0px;
+    margin-left: 0px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  }
+  }
+
+
+  /*  GAME PUNTEN */
+
+.game_points {
+    width: $left;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 26px;
+   
+   /* level */
+  .level{
+    display: flex;
+    flex-direction: row-reverse;
+    width: $left;
+    justify-content:space-between;
+    padding: 8px 7px;
+
+  }
+  .navtext {
+    text-align: center;
+    color: $text-color-base;
+    cursor: pointer;
+  }
+  .navtext:hover {
+    color: $text-color-dark;
+  }
+  //Situation overview
+    .sito {
+        display: -webkit-flex;
+        flex-direction: column;
+
+
+      .line {
+        display: -webkit-flex;
+        flex-direction: row;
+        color: $text-color-base;
+        padding: 12px 48px 12px 48px; 
+        border-bottom: solid 1px $border-color-light;
+      }
+      .leftside {
+        width: 200px;
+
+      }
+      .rightside {
+        img {
+          max-width: 700px;
+          }
+      }
+    }
+
+}
+
+
+
 
 }
 
@@ -85,7 +232,7 @@ rood {
 
   .lijn_navb {
     position: absolute;
-    top: 43px;
+    top: 32px;
     //left: $left;
     height: 1px;
     width: 1250px;
@@ -108,19 +255,21 @@ rood {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    font-size: 1.8em;
     //height: 48px;
     //margin-top: 5px;
+    //padding-left: 24px;
     div:first-child {
       border-left: 1px solid $border-color-base;      
     }
     div {
       height: 100%;
-      padding: 12px 18px 10px;
-      border-right: 1px solid $border-color-base;
+      padding: 6px 18px 4px;
+      //border-right: 1px solid $border-color-base;
       color: $kop2;
       font-size: $fontSizeHeader;
       //letter-spacing: .5pt;
-      text-transform: uppercase;
+      //text-transform: uppercase;
     }
   }
 
@@ -128,13 +277,14 @@ rood {
   .navheaders .btngeselecteerd  {
     //text-decoration: underline;
     //color: white;
-    background-color: $background-color-2; // $text-color-base;
+    color: blue;
   }
   .navheaders div:hover {
     //font-weight: bold;
     //color: white;
-    background-color: $background-color-2; // $text-color-base;
+    //background-color: $background-color-2; // $text-color-base;
     cursor: pointer;
+    text-decoration: underline;
   }
   .concept {
     display: flex;
@@ -269,26 +419,26 @@ rood {
     .navbtn {
       display: flex;
       align-items: center;
-      padding: 12px 18px 10px 18px;
+      padding: 4px 18px 0px 18px;
       color: $text-color-base;
       border-right: 1px solid $border-color-base !important;
       color: $kop2;
       font-size: $fontSizeHeader;
       cursor: pointer;
       height: 100%;
-      text-transform: uppercase;
+      //text-transform: uppercase;
     } 
     .navbtn:hover {
       background-color: $background-color-2;
     }
     .btngeselecteerd {
-      background-color: $background-color-2 !important;
+      //background-color: $background-color-2 !important;
     }
 }
 
 .navbtn .btngeselecteerd,
 .navbtn.btngeselecteerd {
-      background-color: $background-color-2;
+      //background-color: $background-color-2;
     }
 
 .bedrijfskolomxx{ //voor bedrijfskolom 100% te zetten

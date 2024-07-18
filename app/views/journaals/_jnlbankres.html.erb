@@ -1,45 +1,45 @@
 <% if @jnl_bank_search %>
-<div class="overeenkomst">
-    <div class="inkoop-ovr">
-        <div class="head">
-            <div class="text">Afschrift</div>
-        </div>
-        <div class="body">
-            <div class="inline">
-                <div class="blok">
-                    <div class="text">Boeknummer</div>
-                    <input class="form" type="text" name="boeknummer" value="<%= @jnl_bank_search.boeknummer %>">
+    <div class="overeenkomst">
+        <div class="inkoop-ovr">
+            <div class="head">
+                <div class="text">Afschrift</div>
+            </div>
+            <div class="body">
+                <div class="inline">
+                    <div class="blok">
+                        <div class="text">Boeknummer</div>
+                        <input class="form" type="text" name="boeknummer" value="<%= @jnl_bank_search.boeknummer %>">
+                    </div>
+                    <div class="blok">
+                        <div class="text">Datum</div>
+                        <input class="form" type="text" name="datum" value="<%= @jnl_bank_search.datum %>">
+                    </div>
                 </div>
-                <div class="blok">
-                    <div class="text">Datum</div>
-                    <input class="form" type="text" name="datum" value="<%= @jnl_bank_search.datum %>">
+                <div class="inline">
+                    <div class="blok">
+                        <div class="text">Leverancier</div>
+                        <input class="form" type="text" name="leverancier" value="<%= @jnl_bank_search.leverancier %>">
+                    </div>
+                    <div class="blok">
+                        <div class="text">Klant</div>
+                        <input class="form" type="text" name="klant" value="<%= @jnl_bank_search.klant %>">
+                    </div>
+                </div>
+                <div class="inline">
+                    <div class="blok">
+                        <div class="text">Bedrag incl. BTW</div>
+                        <input class="form euro" type="text" name="bedrag_inc_btw" value="<%= @jnl_bank_search.bedrag_inc_btw %>">
+                    </div>
+                    <div class="blok">
+                        <div class="text">Valuta </div>
+                        <input class="form" type="text" name="valuta" value="<%= @jnl_bank_search.valuta %>">
+                    </div>
                 </div>
             </div>
-            <div class="inline">
-                <div class="blok">
-                    <div class="text">Leverancier</div>
-                    <input class="form" type="text" name="leverancier" value="<%= @jnl_bank_search.leverancier %>">
-                </div>
-                <div class="blok">
-                    <div class="text">Klant</div>
-                    <input class="form" type="text" name="klant" value="<%= @jnl_bank_search.klant %>">
-                </div>
+            <div class="scrollyvoorwaarden">
+                <div>Afschrift informatie</div>
+                <%= simple_format(@jnl_bank_search.voorwaarden) %>
             </div>
-            <div class="inline">
-                <div class="blok">
-                    <div class="text">Bedrag incl. BTW</div>
-                    <input class="form euro" type="text" name="bedrag_inc_btw" value="<%= @jnl_bank_search.bedrag_inc_btw %>">
-                </div>
-                <div class="blok">
-                    <div class="text">Valuta </div>
-                    <input class="form" type="text" name="valuta" value="<%= @jnl_bank_search.valuta %>">
-                </div>
-            </div>
-        </div>
-        <div class="scrollyvoorwaarden">
-            <div>Afschrift informatie</div>
-            <%= simple_format(@jnl_bank_search.voorwaarden) %>
         </div>
     </div>
-</div>
-<% end %>
+    <% end %>

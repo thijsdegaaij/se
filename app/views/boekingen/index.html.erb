@@ -5,10 +5,11 @@
 <table class="cmsTabel">
   <thead>
     <tr>
+      <td>id</td>
       <td>Boekingtype</td>
       <td>Organisatie</td>
-      <td>Grootboekrekening</td>
       <td>Grootboektype</td>
+      <td>Grootboekrekening</td>
       <td>Journaal</td>
       <td>Product</td>
       <td>Datum</td>
@@ -25,10 +26,11 @@
   <tbody>
     <% @boekingen.each do |boeking| %>
       <tr>
+        <td><%= boeking.id %></td>
         <td><%= boeking.boekingtype %></td>
         <td><%= boeking.organisatie.naam %></td>
-        <td><%= boeking.grootboekrekening.naam %></td>
         <td><%= boeking.grootboekrekening.grootboektype.naam %></td>
+        <td><%= boeking.grootboekrekening.naam %></td>
         <% if boeking.journaal %>
           <td><%= boeking.journaal.boeknummer %></td>
         <% else %>

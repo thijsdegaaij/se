@@ -26,12 +26,12 @@ text-align:center;
 
 
 .header_laag {//Titel met Markt
-  display: flex;
+  display: none; //flex;
   flex-direction: row;
   justify-content: center;
-  font-weight: bold;
+  //font-weight: bold;
   font-size: 26px;
-  padding: 36px 0px 12px;
+  padding: 24px 0px 12px;
 }
 
 
@@ -275,7 +275,7 @@ text-align:center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightyellow; //$background-color-2;
+  background-color: $bgovereenkomst; //$background-color-2;
   border-width: 1px 1px 1px 1px; 
   border-style: solid;
   border-color: $border-color-base;

@@ -58,9 +58,11 @@
 
 	thead td {
 		text-align: left;
-		font-size: 16px;
+		height: 48px;
+		font-size: 14px;
 		padding: 6px 6px 6px 2px;
-		background-color: $background-color-2;
+		background-color: red;
+		//background-color: $background-color-2;
 		font-weight: bold;
 		font-size: 13px;
 	    border-style: solid;

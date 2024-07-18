@@ -1,30 +1,33 @@
 <script src='js/proto.js'>
 </script>
-
+    <div class="voorblad_render displaynone">
+        <%= render template: "oldstviews/voorblad" %>
+    </div>
 <div class="lessonassignmentspace"></div>
-        <!-- Peter -->
-          <div class="game_points">
-              <div id="btn-teacher" class=" teacher button flex-row"> 
-                <div class="plaatjenaam">
-                  <div class="plaatje"><img class="img-learner" src="/images/people/pasfoto/jongen.jpeg"></div>
-                  <div class="navtext">Peter</div> 
-                  <div class="icon icon-dropdown" ></div>
-                </div>
-                <div id="teacher-nav-expmenu" class="expmenu displaynone">{{>teacher}}</div>
-                <div id="teacher-nav-triangle" class="triangle displaynone"> </div> 
-              </div>
-
-
-          <!-- level -->
-              <div class="level flex-row">
-                <div class="navtext">Level: 1,04 / 27</div>
-                <div class="navtext">Beheersing: 8,3</div>
-                <div class="navtext">3 havo</div>
-              </div>
-          </div>
-<div class="logo-se">
-    <img src="/images/logos/Logo_economieInDeKlas.png" alt="SuperEconomics">
+<div class="logoIntro">
+    <div class="logo_se">
+        <div class="logo">SuperEconomie</div>
+        <div id="btn-teacher" class=" teacher button flex-row">
+            <div class="plaatjenaam">
+                <div class="plaatje"><img class="img-learner" src="/images/people/pasfoto/jongen.jpeg"></div>
+                <div class="navtext">Peter</div>
+                <div class="icon icon-dropdown"></div>
+            </div>
+            <div id="teacher-nav-expmenu" class="expmenu displaynone">{{>teacher}}</div>
+            <div id="teacher-nav-triangle" class="triangle displaynone"> </div>
+        </div>
+        <div class="inlogButton"></div>
+    </div>
+    <div class="game_points">
+        <!-- level -->
+        <div class="level">
+            <div class="navtext">Level: 21 / 27</div>
+            <div class="navtext">Beheersing: 8,3</div>
+            <div class="navtext">6 vwo</div>
+        </div>
+    </div>
 </div>
+<!-- Peter -->
 <div class="contain assignments_cc  ">
     <%= render template: "oldstviews/inc_assignments" %>
 </div>
@@ -39,22 +42,14 @@
     <div class="simrow orgdivision displaynone">
         <%= render template: "oldstviews/inc_orgdivision" %>
     </div>
-    <div class="simrow mensen displaynone">
+    <div class="simrow mensen ">
         <%= render template: "oldstviews/inc_people" %>
     </div>
     <div class="simrow markets displaynone ">
         <%= render template: "oldstviews/inc_markets" %>
     </div>
-    <div class="simrow simrow-organisations ">
-        <%= render template: "organisaties/h_organisatie" %> <!-- organisatie -->
-    </div>
-    <div id="journaals" class="simrow accountingintern  "> 
-        <%= render template: "journaals/h_journaal" %>
-    </div>
-    <div id="journaals" class="simrow accountingintern  "> <!-- thijs grootboekvormen -->
-        <%= render template: "journaals/thijs" %>
-    </div>
-    <div class="simrow accountingextern ">
-        <%= render template: "oldstviews/inc_accextern" %>
+    <div class="simrow simrow-organisations displaynone">
+        <%= render template: "organisaties/h_organisatie" %>
+            <!-- navigatie; verder niets. organisatie -->
     </div>
 </div>

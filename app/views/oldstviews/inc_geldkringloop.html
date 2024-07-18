@@ -34,16 +34,10 @@ $(document).ready(function() {
 
 
     // Geldkringloop
-    $(document.body).on("click", ".btn-geld", function() {
-        //$(".sectoruitgebreid").show();
-        $(".notmoney").hide();
-        $(".btn-geld").addClass("bold");
-        $(".btn-geldGD").removeClass("bold");
-    });
+   
     $(document.body).on("click", ".btn-geldGD", function() {
-        $(".btn-geld").removeClass("bold");
-        $(".btn-geldGD").addClass("bold");
-        $(".notmoney").show();
+        $(".btn-geldGD").toggleClass("bold");
+        $(".notmoney").toggle();
     });
 
 
@@ -97,16 +91,16 @@ $(document).ready(function() {
         <div class="navbtn btn-notmoney button">Re&euml;le sfeer</div>
     </div> -->
     <div class="pagnav">
-        <div class="pagtitel">Geldkringloop</div>
+        <div class="header_laag">Sectoren</div>
     </div>
     <div class="pagbuttons">
-        <div class="btn-geld">geld</div>
-        <div class="btn-geldGD">geld, goederen en diensten</div>
+        <div class="btn-geld">geldkringloop</div>
+        <div class="btn-geldGD">totale kringloop</div>
     </div>
     <div class="flex-columncenter">      
         <div class="container-sectorenuitgebreid">
             <div class="sectoruitgebreid gezinnen">
-                <div class="titel-sector">Gezinnen</div>
+                <div class="titel-sector">Huishoudens</div>
                 <div class="onderdeel geldc">
                     <div>
                     <div class="midden">
@@ -123,10 +117,9 @@ $(document).ready(function() {
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="C">C </div>
-                            <div class="I">I</div>
-                            <div class="B">B </div>
-                            <div class="S-premie">S-premie</div>
+                            <div class="Y-arbeid">Y-arbeid</div> 
+                            <div class="Y-kapitaal">Y-kapitaal</div> 
+                            <div class="S-uitkering">S-uitkering</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -136,9 +129,10 @@ $(document).ready(function() {
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="Y-arbeid">Y-arbeid</div> 
-                            <div class="Y-kapitaal">Y-kapitaal</div> 
-                            <div class="S-uitkering">S-uitkering</div> 
+                            <div class="C">C </div>
+                            <div class="I">I</div>
+                            <div class="B">B </div>
+                            <div class="S-premie">S-premie</div> 
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -333,10 +327,8 @@ $(document).ready(function() {
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="Y-arbeid">Y-arbeid</div>
-                            <div class="Y-kapitaal">Y-kapitaal</div>
+                            <div class="C">C</div>
                             <div class="I">I </div>
-                            <div class="B">B</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -346,8 +338,10 @@ $(document).ready(function() {
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="C">C</div>
+                            <div class="Y-arbeid">Y-arbeid</div>
+                            <div class="Y-kapitaal">Y-kapitaal</div>
                             <div class="I">I </div>
+                            <div class="B">B</div>
                             </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -570,8 +564,7 @@ $(document).ready(function() {
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="I">I</div>
-                            <div class="(O-B)">O-B</div>
+                            <div class="S">S</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -581,7 +574,8 @@ $(document).ready(function() {
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="S">S</div>
+                            <div class="I">I</div>
+                            <div class="(O-B)">O-B</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -692,8 +686,9 @@ $(document).ready(function() {
                     <div class="left">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="O">O </div>
-                            <div class="S-uitkering">S-uitkering</div>
+                            <div class="B">B </div>
+                            <div class="OB">O-B </div>
+                            <div class="S-premie">S-premie</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>
@@ -703,9 +698,8 @@ $(document).ready(function() {
                     <div class="right">
                         <div class="icon icon-geldpijl"></div>
                         <div class="naam">
-                            <div class="B">B </div>
-                            <div class="OB">O-B </div>
-                            <div class="S-premie">S-premie</div>
+                            <div class="O">O </div>
+                            <div class="S-uitkering">S-uitkering</div>
                         </div>
                         <div class="waarde"></div>
                         <div class="sect"></div>

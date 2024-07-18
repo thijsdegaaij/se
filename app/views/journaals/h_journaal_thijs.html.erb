@@ -24,25 +24,35 @@ $('#jnl_intern').change(function() {
     <div class="inboeken-all">
         <div class="journaals">
             <div class="header">Journaals</div>
-            <div class="btns">
-                <div class="btn-inboeken verkoop button bold">verkoop</div>
-                <div class="btn-inboeken inkoop button ">inkoop</div>
-                <div class="btn-inboeken bank button">bank</div>
-                <div class="btn-inboeken leveringen button">leveringen</div>
-                <div class="btn-inboeken intern button">intern</div>
+            <div class="btnsthijs">
+                <div class="overeenkomsten_laag">Overeenkomsten:
+                    <div class="btn-inboeken inkoop button bold">inkoop</div>
+                    <div class="btn-inboeken verkoop button ">verkoop</div>
+
+                </div>
+                <div class="leveringen_laag">Leveringen extern:
+                    <div class="btn-inboeken leveringen_uit button">uit</div>
+                    <div class="btn-inboeken leveringen_in button">in</div>
+                    <div class="btn-inboeken bank button">bank</div>
+                </div>
+                <div class="interne_boekingen_laag">Intern:
+                    <div class="btn-inboeken intern_overeenkomsten button">planning</div>
+                    <div class="btn-inboeken intern_boekingen button">realisatie</div>
+                    <div class="btn-inboeken intern_procedures button ">procedures</div>
+                </div>
             </div>
         </div>
         <div>
             <!-- verkoopboek -->
             <%= render 'journaals/jnlverkoop' %>
-                <!-- inkoopboek -->
-                <%= render 'journaals/jnlinkoop' %>
-                    <!-- bankboek -->
-                    <%= render 'journaals/jnlbank' %>
-                        <!-- leveringen -->
-                        <%= render 'journaals/jnllevering' %>
-                            <!-- Interne boekingen -->
-                            <%= render 'journaals/jnlintern' %>
+            <!-- inkoopboek -->
+            <%= render 'journaals/jnlinkoop' %>
+            <!-- bankboek -->
+            <%= render 'journaals/jnlbank' %>
+            <!-- leveringen -->
+            <%= render 'journaals/jnllevering' %>
+            <!-- Interne boekingen -->
+            <%= render 'journaals/jnlintern' %>
         </div>
     </div>
     <div class="kopje displaynone">Inboeken</div>

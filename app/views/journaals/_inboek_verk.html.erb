@@ -3,11 +3,11 @@
 
 <%= form_for Boeking.new, :remote => true, :url => {:controller => 'boekingen', :action => "create_bkn" } do |f| %>
 
-  <%= f.text_field :boekingtype, value: "J", style: "display: none;" %>
+  <%= f.text_field :boekingtype, value: "J", style: "display: inline;" %>
 
-  <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: none;" %>
+  <%= f.number_field :organisatie_id, value: session[:org_id], style: "display: inline;" %>
 
-  <%= f.number_field :journaal_id, value: session[:jnl_verk_id], style: "display: none;" %>
+  <%= f.number_field :journaal_id, value: session[:jnl_verk_id], style: "display: inline;" %>
   
   <div class="boeking_column">
       <div class="boeking_row">   

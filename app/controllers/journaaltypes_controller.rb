@@ -6,7 +6,7 @@ class JournaaltypesController < ApplicationController
   # GET /journaaltypes
   # GET /journaaltypes.json
   def index
-    @journaaltypes = Journaaltype.all.order(:naam)
+    @journaaltypes = Journaaltype.all.order(:id)
   end
 
   # GET /journaaltypes/1

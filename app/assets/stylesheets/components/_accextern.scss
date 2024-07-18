@@ -14,9 +14,11 @@
   	}
   }
   .row-balansrr {
+  	display: flex;
     justify-content: center;
     margin-top: 4px;
   }
+
 
   .container-scontro {
     padding: 12px 12px 12px 12px;
@@ -52,14 +54,26 @@
 		  }
 	  }
   .debetcredit {
+  	display: flex;
+  	flex-direction: row;
+
+    .debet, .credit {
+      display: flex;
+      flex-direction: column;    	
+    }
+
     .debet {
       padding: 8px 8px 8px 8px ;
       border-right: 1px solid $border-color-base;
-    
+    }   
     .credit {
       padding: 8px 8px 8px 16px;
-      //color: beige;
     }
+    .regel  {
+      display: flex;
+      flex-direction: row;
+    }
+
     .regel .naam {
       width: 170px;
     }
@@ -77,11 +91,7 @@
           text-decoration: underline;
       }
     }
-    }
-    .credit {
-    	padding: 8px;
-    	.naam {width: 150px;}
-    }
+    
   }
   
  .color-balans {

@@ -164,7 +164,7 @@
 
 .simulation {
     position: absolute;
-    //top: -122px;
+    top: 0px;
     left: $left;
     width: 1250px;    
     display: flex;
@@ -224,22 +224,22 @@
 }
 
 .bggeld {
-    background-color: $bggeld !important;
+    //background-color: $bggeld !important;
 }
 
 .bgoutput {
-    background-color: $bgoutput!important;
+    //background-color: $bgoutput!important;
 }
  
 .bginput {
-    background-color: $bginput!important;
+    //background-color: $bginput!important;
 }
  
 .bginternin {
     background-color: $bginternin!important;
 } 
 .bginternuit {
-    background-color: $bginternuit!important;
+    //background-color: $bginternuit!important;
 }
 .bgwinst {
     background-color: $bgwinst;

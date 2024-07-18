@@ -11,10 +11,6 @@
   <%= @boeking.organisatie.naam %>
 </p>
 
-<p>
-  <strong>Grootboekrekening:</strong>
-  <%= @boeking.grootboekrekening.naam %>
-</p>
 
 <% if @boeking.journaal %>
   <p>
@@ -25,7 +21,12 @@
   <p>
    <strong>Interne boeking</strong>
   </p>
-<% end %>
+<% end
+
+<p>
+  <strong>Grootboekrekening:</strong>
+  <%= @boeking.grootboekrekening.naam %>
+</p> %>
 
 
 <p>

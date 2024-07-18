@@ -700,11 +700,11 @@ a {
 .icon-gevoelens {
   background-image: url("/images/icons/icon_gevoelens.png"); }
 
-.icon-kosten {
-  background-image: url("/images/icons/icon_kosten.png"); }
-
 .icon-lijf {
   background-image: url("/images/icons/icon_lijf.png"); }
+
+.icon-zintuig {
+  background-image: url("/images/icons/icon_zintuig.png"); }
 
 .icon-mens {
   background-image: url("/images/icons/icon_mens.png"); }
@@ -730,17 +730,11 @@ a {
 .icon-pijlnaarboven {
   background-image: url("/images/icons/icon_pijlnaarboven.png"); }
 
-.icon-wet {
-  background-image: url("/images/icons/icon_wet_overeenkomst.png"); }
-
-.icon-overeenkomst {
-  background-image: url("/images/icons/icon_overeenkomst.png"); }
+.icon-kosten {
+  background-image: url("/images/icons/icon_kosten.png"); }
 
 .icon-rechtgeld {
   background-image: url("/images/icons/icon_recht.png"); }
-
-.icon-plicht {
-  background-image: url("/images/icons/icon_plicht.png"); }
 
 .icon-productie {
   background-image: url("/images/icons/icon_productie.png"); }
@@ -784,6 +778,9 @@ a {
 
 .icon-kosten {
   background-image: url("/images/icons/icon_kosten-15.png"); }
+
+.icon-tussenKosten {
+  background-image: url("/images/icons/icon_tussenKosten.png"); }
 
 .icon-personeelkosten {
   background-image: url("/images/icons/icon_personeelkosten.png"); }
@@ -892,6 +889,12 @@ a {
 .icon-geldplichtneg {
   background-image: url("/images/icons/icon_geldplichtneg.png"); }
 
+.icon-bij {
+  background-image: url("/images/icons/icon_proces_bij.png"); }
+
+.icon-af {
+  background-image: url("/images/icons/icon_proces_af.png"); }
+
 .icon-neg {
   background-image: url("/images/icons/icon_neg.png"); }
 
@@ -928,8 +931,11 @@ a {
 .icon-kindje {
   background-image: url("/images/people/figuren/figuren_kindje.png"); }
 
-.icon-product-verkocht {
-  background-image: url("/images/icons/icon_product-verkocht.png"); }
+.icon-vierkant_dubbel {
+  background-image: url("/images/icons/icon_vierkant_dubbel.png"); }
+
+.icon-rondje_dubbel {
+  background-image: url("/images/icons/icon_rondje_dubbel.png"); }
 
 .icon-product-leeg {
   background-image: url("/images/icons/icon_product-leeg.png"); }
@@ -952,9 +958,6 @@ a {
 .icon-recept {
   background-image: url("/images/icons/icon_recept.png"); }
 
-.icon-reclame {
-  background-image: url("/images/icons/icon_reclame.png"); }
-
 .icon-winkel {
   background-image: url("/images/icons/icon_winkel.png"); }
 
@@ -966,6 +969,45 @@ a {
 
 .icon-werkelijkheid {
   background-image: url("/images/icons/icon_nu.png"); }
+
+.icon-informatie {
+  background-image: url("/images/icons/icon_informatie1.png"); }
+
+.icon-informatie_i {
+  background-image: url("/images/icons/icon_informatie2.png"); }
+
+.icon-informatie_t {
+  background-image: url("/images/icons/icon_technologie.png"); }
+
+.icon-informatie_w {
+  background-image: url("/images/icons/icon_wijsheid.png"); }
+
+.icon-diploma {
+  background-image: url("/images/icons/icon_diploma.png"); }
+
+.icon-overeenkomst {
+  background-image: url("/images/icons/icon_overeenkomst1.png"); }
+
+.icon-reclame {
+  background-image: url("/images/icons/icon_reclame1.png"); }
+
+.icon-boekhouding {
+  background-image: url("/images/icons/icon_boekhouding1.png"); }
+
+.icon-kennis {
+  background-image: url("/images/icons/icon_kennis1.png"); }
+
+.icon-wet {
+  background-image: url("/images/icons/icon_wet1.png"); }
+
+.icon-rechtPlicht {
+  background-image: url("/images/icons/icon_rechtPlicht.png"); }
+
+.icon-plicht {
+  background-image: url("/images/icons/icon_plicht.png"); }
+
+.icon-recht {
+  background-image: url("/images/icons/icon_recht.png"); }
 
 .rotate180 {
   transform: rotate(180deg); }
@@ -1135,12 +1177,11 @@ a {
   text-align: center; }
 
 .header_laag {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
-  font-weight: bold;
   font-size: 26px;
-  padding: 36px 0px 12px; }
+  padding: 24px 0px 12px; }
 
 .container-markt {
   display: flex;
@@ -1311,7 +1352,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightyellow;
+  background-color: #F4F3F3;
   border-width: 1px 1px 1px 1px;
   border-style: solid;
   border-color: #CCCCCC; }
@@ -1365,6 +1406,33 @@ a {
 .berekeningenmarkt .titel {
   padding: 24px; }
 
+.voorblad_render {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  z-index: 999;
+  width: 1200px;
+  height: 1000px;
+  background-color: beige;
+  padding: 24px 48px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  .voorblad_render .titel {
+    font-weight: bold; }
+  .voorblad_render .logo {
+    text-align: center;
+    font-size: 48px; }
+  .voorblad_render .ondertitel {
+    text-align: center;
+    font-size: 24px; }
+  .voorblad_render .introtekst {
+    padding-top: 48px; }
+  .voorblad_render .partners {
+    padding-top: 48px; }
+    .voorblad_render .partners .partner {
+      padding: 12px; }
+    .voorblad_render .partners .zwarte_achtergrond {
+      background-color: black; }
+
 .styled-select select {
   background: transparent;
   padding: 0px 0px 0px 5px;
@@ -1412,14 +1480,81 @@ rood {
     height: auto;
     opacity: 0.5; }
 
-.simulatiegame_text {
+.lessonassignmentspace {
+  width: 650px;
+  height: 122px;
+  top: 100px;
+  background-color: #edeae3; }
+
+.logoIntro {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 650px;
   background-color: #edeae3;
-  font-size: 32px;
-  color: #666666;
   border-bottom: 1px solid #CCCCCC;
   border-left: 1px solid #CCCCCC;
-  letter-spacing: 2px;
-  padding: 12px 19px; }
+  /*  GAME PUNTEN */ }
+  .logoIntro .logo_se {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+    width: 650px;
+    border-bottom: solid 1px #CCCCCC;
+    /* user */ }
+    .logoIntro .logo_se .logo {
+      font-size: 28px;
+      letter-spacing: 3px;
+      width: 350px;
+      cursor: pointer; }
+    .logoIntro .logo_se .plaatjenaam {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .logoIntro .logo_se .plaatjenaam > div {
+        padding: 0px 7px 0px 7px; }
+      .logoIntro .logo_se .plaatjenaam .img-learner {
+        margin-top: 0px;
+        margin-left: 0px;
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%; }
+  .logoIntro .game_points {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 26px;
+    /* level */ }
+    .logoIntro .game_points .level {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 650px;
+      justify-content: space-between;
+      padding: 8px 7px; }
+    .logoIntro .game_points .navtext {
+      text-align: center;
+      color: #666666;
+      cursor: pointer; }
+    .logoIntro .game_points .navtext:hover {
+      color: #343434; }
+    .logoIntro .game_points .sito {
+      display: -webkit-flex;
+      flex-direction: column; }
+      .logoIntro .game_points .sito .line {
+        display: -webkit-flex;
+        flex-direction: row;
+        color: #666666;
+        padding: 12px 48px 12px 48px;
+        border-bottom: solid 1px #E8E7E7; }
+      .logoIntro .game_points .sito .leftside {
+        width: 200px; }
+      .logoIntro .game_points .sito .rightside img {
+        max-width: 700px; }
 
 .navb {
   display: flex;
@@ -1434,7 +1569,7 @@ rood {
   /* space */ }
   .navb .lijn_navb {
     position: absolute;
-    top: 43px;
+    top: 32px;
     height: 1px;
     width: 1250px;
     background-color: #CCCCCC; }
@@ -1450,21 +1585,20 @@ rood {
     background-color: #edeae3;
     display: flex;
     flex-direction: row;
-    align-items: stretch; }
+    align-items: stretch;
+    font-size: 1.8em; }
     .navb .navheaders div:first-child {
       border-left: 1px solid #CCCCCC; }
     .navb .navheaders div {
       height: 100%;
-      padding: 12px 18px 10px;
-      border-right: 1px solid #CCCCCC;
+      padding: 6px 18px 4px;
       color: #666666;
-      font-size: 16px;
-      text-transform: uppercase; }
+      font-size: 18px; }
   .navb .navheaders .btngeselecteerd {
-    background-color: #F4F3F3; }
+    color: blue; }
   .navb .navheaders div:hover {
-    background-color: #F4F3F3;
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: underline; }
   .navb .concept {
     display: flex;
     align-items: center;
@@ -1557,22 +1691,15 @@ rood {
   .navtwee .navbtn, .navdrie .navbtn {
     display: flex;
     align-items: center;
-    padding: 12px 18px 10px 18px;
+    padding: 4px 18px 0px 18px;
     color: #666666;
     border-right: 1px solid #CCCCCC !important;
     color: #666666;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    height: 100%;
-    text-transform: uppercase; }
+    height: 100%; }
   .navtwee .navbtn:hover, .navdrie .navbtn:hover {
     background-color: #F4F3F3; }
-  .navtwee .btngeselecteerd, .navdrie .btngeselecteerd {
-    background-color: #F4F3F3 !important; }
-
-.navbtn .btngeselecteerd,
-.navbtn.btngeselecteerd {
-  background-color: #F4F3F3; }
 
 .bedrijfskolomxx {
   width: 1250px; }
@@ -1602,17 +1729,18 @@ rood {
 .one_org_wrap {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 48px; }
   .one_org_wrap .btn_boven_organisatie {
     position: absolute;
-    top: 100px;
-    left: 48px;
+    top: 106px;
+    left: 24px;
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
     justify-content: space-between;
     width: 200px;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #9A9A9A; }
     .one_org_wrap .btn_boven_organisatie :first-child {
       text-transform: uppercase;
       font-weight: bold; }
@@ -1623,57 +1751,106 @@ rood {
     .one_org_wrap .headerorg .five {
       font-size: 18px;
       font-weight: bold; }
-  .one_org_wrap .eigen_vermogen {
-    margin-top: 24px; }
   .one_org_wrap .ledger_type {
     width: 1190px; }
-    .one_org_wrap .ledger_type .movie_org, .one_org_wrap .ledger_type .foto_org {
+    .one_org_wrap .ledger_type .show {
+      display: block;
+      position: absolute;
+      left: 580px;
+      top: 108px; }
+    .one_org_wrap .ledger_type .movie_org,
+    .one_org_wrap .ledger_type .foto_org {
       position: absolute;
       top: 270px;
       left: 300px;
       z-index: 1;
       width: 900px;
       height: 700px; }
-    .one_org_wrap .ledger_type .first_layer, .one_org_wrap .ledger_type .other_layer {
+    .one_org_wrap .ledger_type .one_org_wrap:last-child {
+      background-color: red;
+      font-size: 33px; }
+    .one_org_wrap .ledger_type .first_layer,
+    .one_org_wrap .ledger_type .other_layer {
       display: flex;
-      flex-direction: row;
-      justify-content: start; }
-      .one_org_wrap .ledger_type .first_layer .one, .one_org_wrap .ledger_type .other_layer .one {
-        flex: 1 0 200px;
+      flex-direction: row; }
+      .one_org_wrap .ledger_type .first_layer .one,
+      .one_org_wrap .ledger_type .other_layer .one {
+        flex: 1 0 100px;
         display: none; }
-      .one_org_wrap .ledger_type .first_layer .two, .one_org_wrap .ledger_type .other_layer .two {
-        flex: 1 0 50px; }
-      .one_org_wrap .ledger_type .first_layer .four, .one_org_wrap .ledger_type .other_layer .four {
-        flex: 24px; }
-      .one_org_wrap .ledger_type .first_layer .five, .one_org_wrap .ledger_type .other_layer .five {
-        flex: 260px;
-        margin-left: 10px; }
-      .one_org_wrap .ledger_type .first_layer .six, .one_org_wrap .ledger_type .other_layer .six {
-        flex: 80px; }
-      .one_org_wrap .ledger_type .first_layer .seven, .one_org_wrap .ledger_type .other_layer .seven {
-        flex: 60px; }
-      .one_org_wrap .ledger_type .first_layer .nine, .one_org_wrap .ledger_type .other_layer .nine {
-        flex: 50px; }
-      .one_org_wrap .ledger_type .first_layer .ten, .one_org_wrap .ledger_type .other_layer .ten {
-        flex: 220px; }
-      .one_org_wrap .ledger_type .first_layer .one, .one_org_wrap .ledger_type .first_layer .two, .one_org_wrap .ledger_type .first_layer .seven, .one_org_wrap .ledger_type .first_layer .nine, .one_org_wrap .ledger_type .other_layer .one, .one_org_wrap .ledger_type .other_layer .two, .one_org_wrap .ledger_type .other_layer .seven, .one_org_wrap .ledger_type .other_layer .nine {
+      .one_org_wrap .ledger_type .first_layer .two,
+      .one_org_wrap .ledger_type .other_layer .two {
+        flex: 1 0 50px;
+        display: none; }
+      .one_org_wrap .ledger_type .first_layer .three,
+      .one_org_wrap .ledger_type .other_layer .three {
+        display: none; }
+      .one_org_wrap .ledger_type .first_layer .four,
+      .one_org_wrap .ledger_type .other_layer .four {
+        flex: 24px;
+        padding-left: 6px; }
+        .one_org_wrap .ledger_type .first_layer .four :last-child,
+        .one_org_wrap .ledger_type .other_layer .four :last-child {
+          font-size: 33px; }
+      .one_org_wrap .ledger_type .first_layer .four:last-child,
+      .one_org_wrap .ledger_type .other_layer .four:last-child {
+        border-bottom: 4px solid red; }
+      .one_org_wrap .ledger_type .first_layer .five,
+      .one_org_wrap .ledger_type .other_layer .five {
+        flex: 380px;
+        padding-left: 8px;
+        margin-right: 8px;
+        display: flex;
+        flex-direction: row; }
+      .one_org_wrap .ledger_type .first_layer .six,
+      .one_org_wrap .ledger_type .other_layer .six {
+        flex: 120px; }
+      .one_org_wrap .ledger_type .first_layer .seven,
+      .one_org_wrap .ledger_type .other_layer .seven {
+        flex: 100px; }
+      .one_org_wrap .ledger_type .first_layer .eight,
+      .one_org_wrap .ledger_type .other_layer .eight {
+        display: none; }
+      .one_org_wrap .ledger_type .first_layer .nine,
+      .one_org_wrap .ledger_type .other_layer .nine {
+        flex: 0 0 90px;
+        display: none; }
+      .one_org_wrap .ledger_type .first_layer .ten,
+      .one_org_wrap .ledger_type .other_layer .ten {
+        flex: 120px;
+        padding-left: 20px;
+        display: none; }
+      .one_org_wrap .ledger_type .first_layer .one,
+      .one_org_wrap .ledger_type .first_layer .two,
+      .one_org_wrap .ledger_type .first_layer .seven,
+      .one_org_wrap .ledger_type .first_layer .nine,
+      .one_org_wrap .ledger_type .other_layer .one,
+      .one_org_wrap .ledger_type .other_layer .two,
+      .one_org_wrap .ledger_type .other_layer .seven,
+      .one_org_wrap .ledger_type .other_layer .nine {
         text-align: right;
         padding-right: 12px; }
-      .one_org_wrap .ledger_type .first_layer .six img, .one_org_wrap .ledger_type .first_layer .nine img, .one_org_wrap .ledger_type .other_layer .six img, .one_org_wrap .ledger_type .other_layer .nine img {
-        max-height: 30px; }
-    .one_org_wrap .ledger_type .left, .one_org_wrap .ledger_type .middle, .one_org_wrap .ledger_type .right {
+      .one_org_wrap .ledger_type .first_layer .six img,
+      .one_org_wrap .ledger_type .first_layer .nine img,
+      .one_org_wrap .ledger_type .other_layer .six img,
+      .one_org_wrap .ledger_type .other_layer .nine img {
+        max-height: 34px;
+        max-width: 120px; }
+    .one_org_wrap .ledger_type .left,
+    .one_org_wrap .ledger_type .middle,
+    .one_org_wrap .ledger_type .right {
       display: flex;
       flex-direction: row;
-      justify-content: start;
       align-items: center; }
-    .one_org_wrap .ledger_type .left {
-      flex: 275px; }
-    .one_org_wrap .ledger_type .middle {
-      flex: 390px; }
     .one_org_wrap .ledger_type .right {
-      flex: 294px; }
-  .one_org_wrap .first_layer .middle {
-    font-weight: bold; }
+      justify-content: right; }
+    .one_org_wrap .ledger_type .left {
+      flex: 200px;
+      padding-right: 8px; }
+    .one_org_wrap .ledger_type .middle {
+      flex: 680px; }
+    .one_org_wrap .ledger_type .right {
+      flex: 200px;
+      padding-left: 8px; }
   .one_org_wrap .first_layer .middle {
     border-width: 2px 2px 0px 2px;
     border-style: solid;
@@ -1683,48 +1860,86 @@ rood {
     border-width: 0px 2px 0px 2px;
     border-style: solid;
     border-color: #CCCCCC; }
-  .one_org_wrap .l_eigenaar .middle, .one_org_wrap .l_ev .middle {
+  .one_org_wrap .ledger_type.l_journaals .other_layer .middle {
     border-bottom: 1px solid #CCCCCC; }
+  .one_org_wrap .ledger_type.l_ev .other_layer:last-child .middle {
+    border-bottom: 6px solid #CCCCCC; }
+  .one_org_wrap .first_layer .five {
+    text-transform: uppercase;
+    font-weight: bold; }
   .one_org_wrap .btn_vraagteken {
+    z-index: 2;
     margin-right: 2px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #f2f20d;
+    background-color: white;
     text-align: center;
     font-size: 17px;
     cursor: pointer;
     border: 2px solid #cccc33; }
   .one_org_wrap .btn_vraagteken:hover {
-    background-color: yellow; }
+    background-color: white; }
   .one_org_wrap .attention_yellowbackground {
     background-color: yellow !important; }
   .one_org_wrap .l_product_dienstverlenend .middle,
   .one_org_wrap .l_functionele_kosten .middle,
-  .one_org_wrap .l_kostensoorten .middle {
+  .one_org_wrap .l_kostensoorten .middle,
+  .one_org_wrap .l_verkochte_producten .gbr .middle {
     cursor: pointer; }
-  .one_org_wrap .l_vla .other_layer {
+  .one_org_wrap .fotoMidden {
+    width: 230px; }
+  .one_org_wrap .other_layer .five {
     cursor: pointer; }
   .one_org_wrap .gek {
     font-size: 34px; }
-  .one_org_wrap .other_layer_close {
-    display: none; }
-  .one_org_wrap .bg_kleur_overeenkomst {
-    background-color: #fdfde7 !important; }
-  .one_org_wrap .bg_kleur_geld {
-    background-color: #e6f0ff; }
-  .one_org_wrap .bg_kleur_verkocht {
-    background-color: #ffe6e6; }
-  .one_org_wrap .bg_kleur_kosten {
-    background-color: #f2e9e9; }
-  .one_org_wrap .bg_kleur_input {
-    background-color: #E8E7E7; }
-  .one_org_wrap .bg_kleur_ev {
+  .one_org_wrap .l_omzet .middle .five {
+    background-color: #d4e8d7; }
+  .one_org_wrap .l_inkw_vd_omzet .middle .five {
+    background-color: #ffe9e9; }
+  .one_org_wrap .l_bedrijfskosten .middle .five {
+    background-color: #efe1e1; }
+  .one_org_wrap .l_winst .middle .five {
+    background-color: rgba(160, 75, 143, 0.3); }
+  .one_org_wrap .l_vennootschapsbelasting .middle .five,
+  .one_org_wrap .l_dividend .middle .five {
+    background-color: rgba(210, 73, 70, 0.3); }
+  .one_org_wrap .l_klanten .middle,
+  .one_org_wrap .l_leveranciers .middle {
+    background-color: #F4F3F3 !important; }
+  .one_org_wrap .l_geld .middle {
+    background-color: rgba(181, 204, 232, 0.32); }
+  .one_org_wrap .l_verkochte_producten .middle {
+    background-color: rgba(126, 201, 131, 0.12); }
+  .one_org_wrap .l_product_dienstverlenend .middle {
+    background-color: rgba(126, 201, 131, 0.12); }
+  .one_org_wrap .l_functionele_kosten .middle,
+  .one_org_wrap .l_kostensoorten .middle {
+    background-color: rgba(145, 64, 64, 0.15); }
+  .one_org_wrap .l_vla .middle,
+  .one_org_wrap .l_va .middle,
+  .one_org_wrap .l_kosten .middle,
+  .one_org_wrap .l_personeel .middle,
+  .one_org_wrap .l_knowhow .middle {
+    background-color: #ffe9e9; }
+  .one_org_wrap .l_ev .middle {
     background-color: #edeae3; }
   .one_org_wrap .bg_kleur_winst {
     background-color: purple; }
-  .one_org_wrap .bg_kleur_belasting_eigenaar {
-    background-color: #edf7ef !important; }
+  .one_org_wrap .l_personeel_overeenkomsten .middle,
+  .one_org_wrap .l_overheid .middle,
+  .one_org_wrap .l_eigenaar .middle,
+  .one_org_wrap .l_fp .middle {
+    background-color: #F4F3F3; }
+  .one_org_wrap .middle.winst {
+    background-color: rgba(160, 75, 143, 0.3); }
+  .one_org_wrap .l_functionele_kosten .six {
+    background-color: #f5f8d3;
+    padding-left: 8px; }
+  .one_org_wrap .bgplanning {
+    background-color: #f5f8d3;
+    padding-left: 8px;
+    margin: 2px 0px; }
   .one_org_wrap .ledger_type .other_layer .four:hover {
     width: 24px;
     background-color: #F4F3F3;
@@ -1737,8 +1952,10 @@ rood {
     text-align: center;
     cursor: pointer; }
   .one_org_wrap .ledger_type .other_layer .four:hover:before {
-    content: "?";
+    content: '?';
     font-size: 20px; }
+  .one_org_wrap .other_layer.uitklapbaar {
+    font-weight: bold; }
 
 .journaals_voor_organisatie {
   justify-content: center !important; }
@@ -2040,8 +2257,7 @@ a1a2 > .a2 .kolom,
 .orgscontainer .kosten,
 .orgscontainer .pers,
 .orgscontainer .toewijzing,
-.orgscontainer .winkel
-.reclame,
+.orgscontainer .winkel .reclame,
 .orgscontainer .service,
 .orgscontainer .admin {
   background-color: white; }
@@ -2236,8 +2452,12 @@ a1a2 > .a2 .kolom,
   justify-content: space-between;
   width: 120px; }
 
-.pijllinks, .pijlrechts, .middenlinks,
-.middenmidden, .middenrechts, .winstonderdeel {
+.pijllinks,
+.pijlrechts,
+.middenlinks,
+.middenmidden,
+.middenrechts,
+.winstonderdeel {
   color: #343434; }
 
 .horizontale_split {
@@ -2361,7 +2581,8 @@ a1a2 > .a2 .kolom,
   border-width: 0px 0px 1px 0px;
   border-color: #CCCCCC; }
 
-.bedrijfsprocessen-b, .bedrijfsprocessen-ac {
+.bedrijfsprocessen-b,
+.bedrijfsprocessen-ac {
   background-color: #edeae3; }
 
 .orgheader,
@@ -2450,12 +2671,12 @@ a1a2 > .a2 .kolom,
   width: 150px; }
 
 .icon-prod-pos {
-  background-color: #edeae3; }
+  background-color: rgba(160, 75, 143, 0.3); }
 
 .winstonderdeel .icon-rente-neg,
 .winstonderdeel .icon-belasting-neg,
 .winstonderdeel .icon-dividend {
-  background-color: #ffe6e6; }
+  background-color: rgba(126, 201, 131, 0.12); }
 
 .bold {
   font-weight: bold; }
@@ -2878,72 +3099,6 @@ table.tablesorter thead tr .headerSortDown {
   color: #fff;
   background-color: #0097cf; }
 
-/*  GAME PUNTEN */
-.game_points {
-  position: fixed;
-  width: 650px;
-  display: flex;
-  flex-direction: row;
-  padding: 10px 26px;
-  /* user */
-  /* level */ }
-  .game_points .plaatjenaam {
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-    .game_points .plaatjenaam > div {
-      padding: 0px 7px 0px 7px; }
-    .game_points .plaatjenaam .img-learner {
-      margin-top: 0px;
-      margin-left: 0px;
-      max-width: 50px;
-      max-height: 50px;
-      border-radius: 50%; }
-  .game_points .level {
-    width: 458px;
-    justify-content: space-between;
-    padding-left: 63px; }
-  .game_points .navtext {
-    text-align: center;
-    color: #666666;
-    cursor: pointer; }
-  .game_points .navtext:hover {
-    color: #343434; }
-  .game_points .sito {
-    display: -webkit-flex;
-    flex-direction: column; }
-    .game_points .sito .line {
-      display: -webkit-flex;
-      flex-direction: row;
-      color: #666666;
-      padding: 12px 48px 12px 48px;
-      border-bottom: solid 1px #E8E7E7; }
-    .game_points .sito .leftside {
-      width: 200px; }
-    .game_points .sito .rightside img {
-      max-width: 700px; }
-
-.logo-se {
-  display: none;
-  position: fixed;
-  top: 4px;
-  left: 0px;
-  margin: 5px 0px 0px 32px; }
-  .logo-se img {
-    height: 35px;
-    opacity: 0.8;
-    width: 520px;
-    height: auto;
-    opacity: 0.5; }
-
-.lessonassignmentspace {
-  position: fixed;
-  width: 650px;
-  top: 0px;
-  height: 122px;
-  background-color: #edeae3;
-  border-bottom: 1px solid #CCCCCC; }
-
 .game_btn,
 .lessons_btn,
 .assignments_btn {
@@ -2976,14 +3131,15 @@ table.tablesorter thead tr .headerSortDown {
   height: 100%;
   width: 650px;
   position: fixed;
-  top: 115px;
+  top: 175px;
   background-color: #edeae3;
   overflow: visible; }
 
 .lessons,
 .assignments {
   position: relative;
-  padding: 0px 32px 0px 32px; }
+  padding: 0px 32px 0px 32px;
+  border-top: 1px solid #CCCCCC; }
   .lessons img,
   .assignments img {
     max-width: 510px; }
@@ -3120,9 +3276,12 @@ table.tablesorter thead tr .headerSortDown {
   left: 70px; }
 
 .mens-natuur-organisaties {
+  width: 1150px;
   position: relative;
-  top: 24px;
-  padding: 12px;
+  margin-top: 48px;
+  border-width: 0px 1px 0px 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
   background: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
   background-position: bottom;
   background-size: 3px 1px;
@@ -3133,45 +3292,54 @@ table.tablesorter thead tr .headerSortDown {
   background-size: 1px 3px;
   background-repeat: repeat-y; }
 
-.mensen.bgoutput, .natuur.bgoutput {
+.mensen.bgoutput,
+.natuur.bgoutput {
+  display: none;
   position: absolute;
   transform: rotate(180deg);
   top: 94px; }
 
 .mensen.bginput {
+  display: none;
   position: absolute;
   top: 118px;
   transform: rotate(180deg); }
 
 .mensen.bginput.in {
+  display: none;
   position: absolute;
   top: 94px;
   left: 55px;
   transform: rotate(0deg); }
 
 .natuur.bginput {
+  display: none;
   position: absolute;
   top: 118px;
   transform: rotate(180deg); }
 
 .natuur.bginput.in {
+  display: none;
   position: absolute;
   top: 94px;
   left: 55px;
   transform: rotate(0deg); }
 
 .organisaties.bgoutput {
+  display: none;
   position: absolute;
   transform: rotate(180deg);
   top: -26px; }
 
 .organisaties.bgoutput.uitlinks {
+  display: none;
   position: absolute;
   transform: rotate(0deg);
   top: 118px;
   left: 55px; }
 
 .organisaties.bgoutput.uitrechts {
+  display: none;
   position: absolute;
   transform: rotate(90deg);
   top: 47px;
@@ -3179,7 +3347,7 @@ table.tablesorter thead tr .headerSortDown {
 
 .lijn-eigendom {
   position: absolute;
-  border-left: 6px dotted #CCCCCC;
+  border-left: 6px dotted red;
   top: 94px;
   left: 200px;
   height: 48px;
@@ -3188,84 +3356,97 @@ table.tablesorter thead tr .headerSortDown {
   padding-left: 8px; }
 
 .organisaties.bgoutput.uitrechts {
+  display: none;
   position: absolute;
   transform: rotate(0deg);
   top: 118px;
   left: 55px; }
 
 .btn-inputoutput {
+  display: none;
   position: absolute;
   left: 500px;
   top: 60px; }
 
 .cont-natuurmens {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1px; }
+  flex-direction: column-reverse;
+  justify-content: space-between; }
   .cont-natuurmens .natuurleft,
   .cont-natuurmens .mensleft {
-    border-width: 1px 1px 1px 1px;
+    border-width: 0px 0px 0px 0px;
     border-style: solid;
     border-color: #CCCCCC;
-    position: relative;
-    margin-bottom: 12px; }
+    position: relative; }
     .cont-natuurmens .natuurleft > div:nth-child(1),
     .cont-natuurmens .mensleft > div:nth-child(1) {
-      border-width: 0px 1px 1px 0px;
+      display: flex;
+      flex-direction: row;
+      border-width: 1px 0px 0px 0px;
       border-style: solid;
       border-color: #CCCCCC;
-      background-color: #F4F3F3;
-      padding: 8px 0px 0px 4px;
-      height: 36px; }
+      padding: 4px 0px 0px 4px;
+      height: 24px; }
       .cont-natuurmens .natuurleft > div:nth-child(1) div,
       .cont-natuurmens .mensleft > div:nth-child(1) div {
-        margin-right: 12px; }
+        margin-right: 19px; }
   .cont-natuurmens .line {
     display: flex;
     flex-direction: row;
-    align-items: center; }
-    .cont-natuurmens .line .person img {
-      max-height: 56px;
-      padding: 2px 18px 2px 18px;
-      border-radius: 50%; }
-    .cont-natuurmens .line .person:hover, .cont-natuurmens .line .natuurleft div:hover {
+    justify-content: left;
+    align-items: center;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding-bottom: 12px; }
+    .cont-natuurmens .line .person {
+      cursor: pointer; }
+      .cont-natuurmens .line .person img {
+        max-height: 56px;
+        padding: 2px 18px 2px 18px;
+        border-radius: 50%; }
+    .cont-natuurmens .line .person:hover,
+    .cont-natuurmens .line .natuurleft div:hover {
       background-color: #F4F3F3; }
     .cont-natuurmens .line .foto-ik {
       padding: 0px 0px 0px 4px;
       transform: scale(0.8, 0.8); }
 
-.mens-natuur-organisaties {
-  width: 1150px; }
-
 .cont-organisaties-totaal {
   display: flex;
   flex-direction: column;
-  position: relative;
-  border: 1px solid #CCCCCC;
-  margin-top: 24px; }
+  margin-top: 4px;
+  margin-right: 1px; }
 
 .titel-eigendommen {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 4px 0px 0px 8px;
-  height: 36px;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: #CCCCCC;
-  background-color: #F4F3F3; }
+  height: 24px;
+  margin-bottom: 18px; }
   .titel-eigendommen div {
-    margin-right: 12px; }
+    margin-right: 16px; }
   .titel-eigendommen .titel_icoon {
+    margin-left: 4px;
     display: flex;
     flex-direction: row;
     align-items: center; }
   .titel-eigendommen .buttons {
-    margin-left: 400px;
+    margin-left: 124px;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: space-between;
+    width: unset;
+    text-transform: uppercase; }
+
+.producten_header {
+  display: flex;
+  margin-left: 251px; }
+
+.productenPlusOrganisaties {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between; }
 
 .cont-organisaties-all {
   display: flex;
@@ -3278,22 +3459,24 @@ table.tablesorter thead tr .headerSortDown {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  border-bottom: 1px solid #CCCCCC; }
+  margin-left: 4px;
+  margin-right: 1px; }
 
 .container-nederland {
   position: relative; }
 
 .titel-nederland {
+  display: none;
   margin: 8px 0px 0px 8px;
   font-size: 14px; }
 
 .image-bedrijfstakken {
-  padding-bottom: 4px;
-  margin-left: 160px; }
+  padding: 12px 0px; }
   .image-bedrijfstakken img {
     height: 100%; }
 
 .kopjebedrijfstakken {
+  visibility: hidden;
   position: absolute;
   top: 32px;
   left: 8px;
@@ -3343,19 +3526,120 @@ table.tablesorter thead tr .headerSortDown {
     position: absolute;
     z-index: -2; }
 
+.producten_container {
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 16px; }
+  .producten_container .huishouding .artwork {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .producten_container .titel_producten {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px 0px 8px;
+    height: 36px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #CCCCCC; }
+    .producten_container .titel_producten div {
+      margin-right: 12px; }
+
+.producten_container {
+  border-left: 2px solid #CCCCCC; }
+
+.cont-bedrijfstakproducten {
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #CCCCCC;
+  height: 510px;
+  padding-left: 16px; }
+
+.part {
+  position: relative; }
+  .part .branche {
+    position: relative; }
+    .part .branche .text {
+      padding: 0px 0px 12px 0px; }
+    .part .branche .artwork {
+      display: none;
+      padding: 4px 0px 0px 0px; }
+    .part .branche img {
+      max-height: 40px;
+      max-width: 20px; }
+  .part .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+    .part .products .oneproduct {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #CCCCCC; }
+      .part .products .oneproduct .text {
+        color: #343434;
+        padding: 12px 0px 8px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: left; }
+        .part .products .oneproduct .text :nth-child(1) {
+          order: 2;
+          text-transform: uppercase; }
+        .part .products .oneproduct .text :nth-child(2) {
+          order: 1; }
+      .part .products .oneproduct .artwork {
+        padding: 0px 2px 4px 2px; }
+        .part .products .oneproduct .artwork img {
+          max-width: 280px;
+          max-height: 205px; }
+      .part .products .oneproduct .artwork.maxima {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
+        background-size: 250px 130px !important;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .part .products .oneproduct .artwork.peter {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
+        background-size: 250px 130px;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .part .products .oneproduct .artwork.bakker {
+        background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+        width: 100%; }
+  .part .oneproduct .text:hover {
+    background-color: #F4F3F3;
+    cursor: pointer; }
+
 .cont-sct {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  border-bottom: 1px solid #CCCCCC; }
+  align-items: left; }
   .cont-sct .sct-nederland {
     position: relative;
     display: flex;
     flex-direction: column; }
   .cont-sct .rij {
     display: -webkit-flex;
-    flex-direction: row;
+    flex-direction: column;
     -webkit-justify-content: space-around; }
   .cont-sct .sector,
   .cont-sct .sector > .title,
@@ -3367,16 +3651,16 @@ table.tablesorter thead tr .headerSortDown {
     flex-direction: column;
     -webkit-justify-content: space-between;
     -webkit-align-items: center;
-    height: 200px;
-    margin: 12px 24px 12px 24px;
+    margin: 0px 24px 0px 47px;
     border-width: 1px 1px 1px 1px; }
     .cont-sct .sector > div {
-      width: 235px; }
+      width: 255px; }
     .cont-sct .sector .title {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: center;
+      text-align: left;
+      font-weight: bold;
       height: 30px;
       padding: 8px;
       border-width: 0px 0px 1px 0px; }
@@ -3385,6 +3669,7 @@ table.tablesorter thead tr .headerSortDown {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      height: 24px;
       padding: auto;
       background-color: white;
       padding-left: 8px;
@@ -3403,150 +3688,98 @@ table.tablesorter thead tr .headerSortDown {
     .cont-sct .sector .financieel {
       background-color: #82dfed; }
 
-.producten_container {
-  border-width: 0px 0px 0px 0px;
-  border-style: solid;
-  border-color: #CCCCCC; }
-  .producten_container .titel_producten {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0px 0px 8px;
-    height: 36px;
-    width: 100%;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: #CCCCCC; }
-    .producten_container .titel_producten div {
-      margin-right: 12px; }
-
-.cont-bedrijfstakproducten {
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: #CCCCCC; }
-
-.part {
-  position: relative; }
-  .part .branche {
-    position: relative; }
-    .part .branche .text {
-      color: black;
-      padding: 8px 0px 0px 8px; }
-    .part .branche .artwork {
-      display: none;
-      padding: 4px 0px 8px 0px; }
-    .part .branche img {
-      max-height: 40px;
-      max-width: 260px; }
-  .part .products {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    height: 245px;
-    overflow-x: hidden; }
-    .part .products .oneproduct {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 48px; }
-      .part .products .oneproduct .text {
-        color: #343434;
-        text-align: center;
-        padding: 12px 0px 8px 8px;
-        width: 100%;
-        display: flex;
-        flex-direction: column; }
-        .part .products .oneproduct .text :nth-child(1) {
-          order: 2; }
-        .part .products .oneproduct .text :nth-child(2) {
-          order: 1;
-          font-weight: bold; }
-      .part .products .oneproduct .artwork {
-        padding: 0px 2px 8px 2px; }
-        .part .products .oneproduct .artwork img {
-          max-width: 320px;
-          height: 175px; }
-      .part .products .oneproduct .artwork.maxima {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur1.jpeg");
-        background-size: 250px 130px;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column; }
-      .part .products .oneproduct .artwork.peter {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur2.jpeg");
-        background-size: 250px 130px;
-        background-repeat: no-repeat;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-      .part .products .oneproduct .artwork.bakker {
-        background-image: url("/images/C/huishoudens/spullenHuis/interieur3.jpeg");
-        background-size: cover;
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        background-repeat: no-repeat;
-        width: 100%; }
-      .part .products .oneproduct .artwork.small img {
-        max-width: 190px; }
-  .part .oneproduct .text:hover {
-    background-color: #F4F3F3;
-    cursor: pointer; }
-
-.container-producten {
-  position: relative;
+.productsoorten_container {
   display: flex;
   flex-direction: column;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: #CCCCCC;
-  position: relative; }
+  padding-left: 50px; }
+  .productsoorten_container .eersteRij, .productsoorten_container .tweedeRij {
+    display: flex;
+    flex-direction: row; }
+  .productsoorten_container .tweedeRij {
+    padding-top: 2px; }
+  .productsoorten_container .productsoort {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    align-items: left;
+    width: 240px; }
+    .productsoorten_container .productsoort .titel, .productsoorten_container .productsoort .rij, .productsoorten_container .productsoort .boventitel {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      padding-top: 12px; }
+      .productsoorten_container .productsoort .titel .icon, .productsoorten_container .productsoort .rij .icon, .productsoorten_container .productsoort .boventitel .icon {
+        width: 32px; }
+      .productsoorten_container .productsoort .titel .uitleg, .productsoorten_container .productsoort .rij .uitleg, .productsoorten_container .productsoort .boventitel .uitleg {
+        padding-left: 4px; }
+    .productsoorten_container .productsoort .titel, .productsoorten_container .productsoort .rij {
+      cursor: pointer; }
+      .productsoorten_container .productsoort .titel :hover, .productsoorten_container .productsoort .rij :hover {
+        background-color: #CCCCCC; }
+    .productsoorten_container .productsoort .boventitel {
+      text-transform: uppercase; }
+      .productsoorten_container .productsoort .boventitel .uitleg {
+        text-align: left;
+        padding-left: 0px; }
+    .productsoorten_container .productsoort .rij {
+      display: flex;
+      flex-direction: row; }
+
+.container-producten {
+  display: flex;
+  flex-direction: column;
+  align-items: left; }
   .container-producten .titel {
+    display: none;
     border-width: 0px 0px 0px 0px;
     border-style: solid;
-    border-color: #CCCCCC;
-    padding: 8px 0px 0px 8px;
-    height: 36px; }
+    border-color: #CCCCCC; }
 
 .productenrij {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: left;
+  align-items: left; }
+  .productenrij .borderleft {
+    display: none; }
   .productenrij .productitem {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    flex: 1 1 auto; }
+    cursor: pointer; }
     .productenrij .productitem .tekst {
-      padding: 8px 0px 8px 0px; }
+      padding: 0px 0px 8px 9px; }
     .productenrij .productitem .image {
       margin: 0px 0px 8px 0px !important; }
     .productenrij .productitem .border {
+      display: none;
       padding-top: 4px;
       width: 100%; }
     .productenrij .productitem .pijlen {
-      display: flex;
+      display: none;
       flex-direction: row;
       margin-top: -8px; }
     .productenrij .productitem .specifiek1 {
       font-style: italic;
       padding: 8px 0px 0px 0px; }
     .productenrij .productitem .pijl {
+      display: none;
       transform: rotate(90deg);
       margin-top: 6px;
-      background-color: #ffe6e6; }
+      background-color: rgba(126, 201, 131, 0.12); }
   .productenrij .productitem:hover {
     background-color: #F4F3F3; }
 
 .scheidslijn {
   width: 1350px;
-  border-style: dashed;
+  border-style: solid;
   border-width: 3px 0px 0px 0px;
   border-color: #edeae3;
   margin: 24px 0px 24px 0px; }
+
+.hr_geldkringloop {
+  margin-top: 24px; }
 
 .maparbeid {
   display: flex;
@@ -3594,29 +3827,26 @@ table.tablesorter thead tr .headerSortDown {
   position: relative;
   width: 1300px;
   margin-top: 24px; }
-
-.btns-intern {
-  position: absolute;
-  top: 4px;
-  left: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 400px;
-  text-transform: uppercase;
-  color: #9A9A9A;
-  font-size: 14px; }
-
-.accounting-all, .accounting-extern,
-.debet, .credit, .regel .bedrag {
-  display: flex;
-  flex-direction: column; }
-
-.row-balansrr, .debetcredit, .regel,
-.btns-accounting,
-.titel, .container-rr .titel {
-  display: flex;
-  flex-direction: row; }
+  .accounting-all .btns-intern {
+    position: absolute;
+    top: 4px;
+    left: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    text-transform: uppercase;
+    color: #9A9A9A;
+    font-size: 14px; }
+  .accounting-all .accounting-all, .accounting-all .accounting-extern,
+  .accounting-all .debet, .accounting-all .credit, .accounting-all .regel .bedrag {
+    display: flex;
+    flex-direction: column; }
+  .accounting-all .row-balansrr, .accounting-all .debetcredit, .accounting-all .regel,
+  .accounting-all .btns-accounting,
+  .accounting-all .titel, .accounting-all .container-rr .titel {
+    display: flex;
+    flex-direction: row; }
 
 .accounting-intern {
   left: 0px;
@@ -3780,7 +4010,7 @@ table.tablesorter thead tr .headerSortDown {
   color: #9A9A9A; }
 
 .boeking_titel {
-  padding: 0px 0px 24px 0px;
+  padding: 0px 0px 8px 0px;
   font-size: 18px;
   color: #9A9A9A; }
 
@@ -3836,20 +4066,41 @@ table.tablesorter thead tr .headerSortDown {
     font-weight: bold; }
 
 .journaals_kort {
-  padding-bottom: 8px; }
-
-.journaals_kort .journaals {
-  display: contents;
-  padding-top: 0px; }
-
-.journaals_kort .btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-top: 0px;
-  margin-bottom: 8px;
-  padding-right: 0px; }
+  padding-bottom: 8px;
+  width: 500px; }
+  .journaals_kort .journaals {
+    display: contents;
+    padding-top: 0px; }
+  .journaals_kort .btnsthijs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 0px 18px 0px; }
+    .journaals_kort .btnsthijs .overeenkomsten_laag, .journaals_kort .btnsthijs .leveringen_laag,
+    .journaals_kort .btnsthijs .interne_boekingen_laag {
+      display: flex;
+      flex-direction: row;
+      margin-top: 4px; }
+      .journaals_kort .btnsthijs .overeenkomsten_laag .button, .journaals_kort .btnsthijs .leveringen_laag .button,
+      .journaals_kort .btnsthijs .interne_boekingen_laag .button {
+        padding: 0px 6px;
+        margin: 0px 6px;
+        text-transform: uppercase; }
+  .journaals_kort .inkoop, .journaals_kort .verkoop {
+    background-color: #F4F3F3; }
+  .journaals_kort .bank {
+    background-color: rgba(181, 204, 232, 0.32); }
+  .journaals_kort .leveringen_uit {
+    background-color: #e8f3ea; }
+  .journaals_kort .leveringen_in {
+    background-color: #efe1e1; }
+  .journaals_kort .intern_boekingen {
+    background-color: rgba(145, 64, 64, 0.15); }
+  .journaals_kort .intern_overeenkomsten {
+    background-color: #f5f8d3; }
+  .journaals_kort .intern_procedures {
+    background-color: #f8f0d3; }
 
 .inboekveld {
   background-color: yellowgreen; }
@@ -3865,10 +4116,13 @@ table.tablesorter thead tr .headerSortDown {
     border: 25px solid white;
     left: -25px;
     background-color: white; }
+    .inboekingsmogelijkheden .inboek table {
+      border-width: 0px; }
     .inboekingsmogelijkheden .inboek thead {
-      background-color: #fdfde7; }
+      background-color: #edeae3; }
     .inboekingsmogelijkheden .inboek th, .inboekingsmogelijkheden .inboek td {
-      padding: 8px 4px; }
+      padding: 8px 4px;
+      border-width: 0px; }
     .inboekingsmogelijkheden .inboek tr:nth-child(odd) td {
       background: none repeat scroll 0 0 #F4F3F3; }
   .inboekingsmogelijkheden .header {
@@ -3985,7 +4239,7 @@ table.tablesorter thead tr .headerSortDown {
       flex: 0 0 200px; }
 
 .overeenkomst .inkoop-ovr {
-  background-color: lightyellow;
+  background-color: white;
   width: 380px;
   border: 1px solid #CCCCCC;
   border-radius: 6px;
@@ -4277,6 +4531,7 @@ table.tablesorter thead tr .headerSortDown {
       color: #9A9A9A;
       font-size: 12px; }
   .accounting-extern .row-balansrr {
+    display: flex;
     justify-content: center;
     margin-top: 4px; }
   .accounting-extern .container-scontro {
@@ -4304,27 +4559,32 @@ table.tablesorter thead tr .headerSortDown {
       justify-content: space-between;
       width: 460px;
       font-size: 14px; }
-  .accounting-extern .debetcredit .debet {
-    padding: 8px 8px 8px 8px;
-    border-right: 1px solid #CCCCCC; }
-    .accounting-extern .debetcredit .debet .credit {
+  .accounting-extern .debetcredit {
+    display: flex;
+    flex-direction: row; }
+    .accounting-extern .debetcredit .debet, .accounting-extern .debetcredit .credit {
+      display: flex;
+      flex-direction: column; }
+    .accounting-extern .debetcredit .debet {
+      padding: 8px 8px 8px 8px;
+      border-right: 1px solid #CCCCCC; }
+    .accounting-extern .debetcredit .credit {
       padding: 8px 8px 8px 16px; }
-    .accounting-extern .debetcredit .debet .regel .naam {
+    .accounting-extern .debetcredit .regel {
+      display: flex;
+      flex-direction: row; }
+    .accounting-extern .debetcredit .regel .naam {
       width: 170px; }
-    .accounting-extern .debetcredit .debet .regel .bedrag {
+    .accounting-extern .debetcredit .regel .bedrag {
       width: 90px;
       align-items: flex-end; }
-    .accounting-extern .debetcredit .debet .regel.vrij {
+    .accounting-extern .debetcredit .regel.vrij {
       flex: 1 0 5px; }
-    .accounting-extern .debetcredit .debet .regel.eind {
+    .accounting-extern .debetcredit .regel.eind {
       padding-top: 5px;
       border-top: 1px solid #CCCCCC; }
-      .accounting-extern .debetcredit .debet .regel.eind > .bedrag {
+      .accounting-extern .debetcredit .regel.eind > .bedrag {
         text-decoration: underline; }
-  .accounting-extern .debetcredit .credit {
-    padding: 8px; }
-    .accounting-extern .debetcredit .credit .naam {
-      width: 150px; }
   .accounting-extern .color-balans {
     background-color: #feffc7; }
   .accounting-extern .container-staffel {
@@ -4755,10 +5015,13 @@ table.tablesorter thead tr .headerSortDown {
   left: 150px;
   width: 180px; }
 
+.orgshow {
+  display: flex;
+  flex-direction: column-reverse; }
+
 .ervaringmenspijl {
-  transform: rotate(180deg);
   margin-left: 540px;
-  background-color: #E8E7E7; }
+  background-color: #ffe9e9; }
 
 .cont-mens {
   margin-top: 12px;
@@ -4926,15 +5189,10 @@ table.tablesorter thead tr .headerSortDown {
 .maxima .arbeid {
   width: 60px !important; }
 
-.maxima .lijst-vrijetijd {
+.maxima .lijst-vrijetijd, .maxima .lijst-arbeid {
   position: absolute;
-  top: -90px;
-  left: 840px; }
-
-.maxima .lijst-arbeid {
-  position: absolute;
-  top: -90px;
-  left: 840px; }
+  top: -0px;
+  left: 550px; }
 
 .orgindeling-eigendommen {
   position: relative;
@@ -5230,6 +5488,7 @@ table.tablesorter thead tr .headerSortDown {
   top: 20px; }
 
 .pagnav {
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5244,16 +5503,17 @@ table.tablesorter thead tr .headerSortDown {
 
 .pagbuttons {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
   align-items: center;
   text-transform: uppercase;
   cursor: pointer;
   color: #666666; }
   .pagbuttons div {
-    margin: 0px 24px 0px 24px; }
+    margin: 0px 6px 0px 6px; }
 
 .container-sectorenuitgebreid {
-  padding: 24px 0px 4px 0px;
+  padding: 10px 0px 4px 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -5266,7 +5526,7 @@ table.tablesorter thead tr .headerSortDown {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 30px;
+    height: 28px;
     font-size: 14px;
     padding: 8px;
     border-color: #CCCCCC;
@@ -5288,7 +5548,7 @@ table.tablesorter thead tr .headerSortDown {
       border-style: solid;
       border-width: 0px 1px 1px 1px;
       border-color: #CCCCCC;
-      height: 32px;
+      height: 26px;
       padding: 2px; }
       .container-sectorenuitgebreid .onderdeel .midden .mleft {
         padding-left: 16px;
@@ -5384,9 +5644,10 @@ table.tablesorter thead tr .headerSortDown {
   background-color: #F4F3F3; }
 .cmsTabel thead td {
   text-align: left;
-  font-size: 16px;
+  height: 48px;
+  font-size: 14px;
   padding: 6px 6px 6px 2px;
-  background-color: #F4F3F3;
+  background-color: red;
   font-weight: bold;
   font-size: 13px;
   border-style: solid;
@@ -5580,6 +5841,7 @@ table.tablesorter thead tr .headerSortDown {
 
 .simulation {
   position: absolute;
+  top: 0px;
   left: 650px;
   width: 1250px;
   display: flex;
@@ -5624,23 +5886,11 @@ table.tablesorter thead tr .headerSortDown {
 .adinput {
   color: #8a7766; }
 
-.bggeld {
-  background-color: #e6f0ff !important; }
-
-.bgoutput {
-  background-color: #ffe6e6 !important; }
-
-.bginput {
-  background-color: #E8E7E7 !important; }
-
 .bginternin {
-  background-color: #f2e9e9 !important; }
-
-.bginternuit {
-  background-color: #f2e9e9 !important; }
+  background-color: #e8f3ea !important; }
 
 .bgwinst {
-  background-color: #edeae3; }
+  background-color: rgba(160, 75, 143, 0.3); }
 
 .icon.bgoutput, .icon.bginput {
   padding-left: 8px;

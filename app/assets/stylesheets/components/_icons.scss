@@ -78,8 +78,8 @@
 .icon-ervaring           {background-image: url('/images/icons/icon_ervaring.png'); }
 .icon-gedachten          {background-image: url('/images/icons/icon_gedachten.png'); }
 .icon-gevoelens          {background-image: url('/images/icons/icon_gevoelens.png'); }
-.icon-kosten             {background-image: url('/images/icons/icon_kosten.png'); }
 .icon-lijf               {background-image: url('/images/icons/icon_lijf.png'); }
+.icon-zintuig            {background-image: url('/images/icons/icon_zintuig.png'); }
 .icon-mens               {background-image: url('/images/icons/icon_mens.png'); }
 .icon-mens-org           {background-image: url('/images/icons/icon_mens_org.png'); }
 .icon-mens-mv            {background-image: url('/images/icons/icon_mens_mv.png'); }
@@ -91,10 +91,9 @@
 
 
 
-.icon-wet                 {background-image: url('/images/icons/icon_wet_overeenkomst.png'); }
-.icon-overeenkomst        {background-image: url('/images/icons/icon_overeenkomst.png'); }
+.icon-kosten             {background-image: url('/images/icons/icon_kosten.png'); }
+
 .icon-rechtgeld          {background-image: url('/images/icons/icon_recht.png'); }
-.icon-plicht             {background-image: url('/images/icons/icon_plicht.png'); }
 .icon-productie          {background-image: url('/images/icons/icon_productie.png'); }
 .icon-techniek           {background-image: url('/images/icons/icon_recept_T.png'); }
 .icon-plichtgeld         {background-image: url('/images/icons/icon_plicht_geld.png'); height: 22px;}
@@ -109,7 +108,9 @@
 .icon-relatief           {background-image: url('/images/icons/icon_relatief.png'); }
 .icon-situatie           {background-image: url('/images/icons/icon_situatie.png'); }
 
+
 .icon-kosten             {background-image: url('/images/icons/icon_kosten-15.png'); }
+.icon-tussenKosten       {background-image: url('/images/icons/icon_tussenKosten.png'); }
 .icon-personeelkosten    {background-image: url('/images/icons/icon_personeelkosten.png'); }
 .icon-personeelproduct   {background-image: url('/images/icons/icon_personeel-product.png'); }
 
@@ -158,6 +159,11 @@
 .icon-geldplichtneg      {background-image: url('/images/icons/icon_geldplichtneg.png'); }
 
 
+.icon-bij               {background-image: url('/images/icons/icon_proces_bij.png'); }
+.icon-af               {background-image: url('/images/icons/icon_proces_af.png'); }
+
+
+
 .icon-neg      {background-image: url('/images/icons/icon_neg.png'); }
 .icon-pos      {background-image: url('/images/icons/icon_pos.png'); }
 
@@ -176,7 +182,8 @@
 .icon-kindje             {background-image: url('/images/people/figuren/figuren_kindje.png'); }
 
 
-.icon-product-verkocht   {background-image: url('/images/icons/icon_product-verkocht.png'); }
+.icon-vierkant_dubbel    {background-image: url('/images/icons/icon_vierkant_dubbel.png'); }
+.icon-rondje_dubbel      {background-image: url('/images/icons/icon_rondje_dubbel.png'); }
 .icon-product-leeg       {background-image: url('/images/icons/icon_product-leeg.png'); }
 .icon-product-geproduceerd {background-image: url('/images/icons/icon_product-geproduceerd.png'); }
 
@@ -186,7 +193,6 @@
 .icon-informatie         {background-image: url('/images/icons/icon_informatie.png'); }
 .icon-receptT            {background-image: url('/images/icons/icon_recept_T.png'); }
 .icon-recept             {background-image: url('/images/icons/icon_recept.png'); }
-.icon-reclame            {background-image: url('/images/icons/icon_reclame.png'); }
 
 .icon-winkel              {background-image: url('/images/icons/icon_winkel.png'); }
 
@@ -195,6 +201,28 @@
 .icon-consumentenproduct  {background-image: url('/images/icons/icon_consumentenproduct.png'); }
 
 .icon-werkelijkheid        {background-image: url('/images/icons/icon_nu.png'); }
+
+
+
+
+
+
+.icon-informatie        {background-image: url('/images/icons/icon_informatie1.png'); }
+.icon-informatie_i      {background-image: url('/images/icons/icon_informatie2.png'); }
+.icon-informatie_t      {background-image: url('/images/icons/icon_technologie.png'); }
+.icon-informatie_w      {background-image: url('/images/icons/icon_wijsheid.png'); }
+.icon-diploma           {background-image: url('/images/icons/icon_diploma.png'); }
+.icon-overeenkomst      {background-image: url('/images/icons/icon_overeenkomst1.png'); }
+.icon-reclame           {background-image: url('/images/icons/icon_reclame1.png'); }
+.icon-boekhouding       {background-image: url('/images/icons/icon_boekhouding1.png'); }
+.icon-kennis            {background-image: url('/images/icons/icon_kennis1.png'); }
+.icon-wet               {background-image: url('/images/icons/icon_wet1.png'); }
+
+
+.icon-rechtPlicht       {background-image: url('/images/icons/icon_rechtPlicht.png');}
+.icon-plicht            {background-image: url('/images/icons/icon_plicht.png'); }
+.icon-recht             {background-image: url('/images/icons/icon_recht.png'); }
+
 
 
 .rotate180 {

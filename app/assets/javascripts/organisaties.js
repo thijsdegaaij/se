@@ -1,32 +1,6 @@
 var ready = function() {
 
-    //select
-    /*kleuren in organisatie*/
-    /*START*/
 
-    // $(".other_layer").toggle(); //alle other_layers uit
-
-    // $(".l_journaals").toggle(); //overeenkomstne uit
-    $(".l_overheid, .l_eigenaar, .l_ev").toggle(); //belastingen, eigenaar en EV uit
-    /*kleuren uit*/
-    $(".l_journaals .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_klanten .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_leveranciers .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_verkochte_producten .first_layer .middle").toggleClass("bg_kleur_verkocht");
-    $(".l_functionele_kosten .first_layer .middle, .l_product_dienstverlenend .first_layer .middle, .l_kostensoorten .first_layer .middle").toggleClass("bg_kleur_kosten");
-    $(".l_vla .first_layer .middle, .l_va .first_layer .middle, .l_kosten .first_layer .middle, .l_personeel .first_layer .middle, .l_fp .first_layer .middle").toggleClass("bg_kleur_input");
-    $(".l_overheid .first_layer .middle, .l_eigenaar .first_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
-    $(".l_geld .first_layer .middle").toggleClass("bg_kleur_geld");
-    $(".l_ev .first_layer .middle").toggleClass("bg_kleur_ev");
-    $(".l_journaals .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_klanten .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_leveranciers .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    $(".l_verkochte_producten .other_layer .middle").toggleClass("bg_kleur_verkocht");
-    $(".l_functionele_kosten .other_layer .middle, .l_product_dienstverlenend .other_layer .middle, .l_kostensoorten .other_layer .middle").toggleClass("bg_kleur_kosten");
-    $(".l_vla .other_layer .middle, .l_va .other_layer .middle, .l_kosten .other_layer .middle, .l_personeel .other_layer .middle, .l_fp .other_layer .middle").toggleClass("bg_kleur_input");
-    $(".l_overheid .other_layer .middle, .l_eigenaar .other_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
-    $(".l_geld .other_layer .middle").toggleClass("bg_kleur_geld");
-    $(".l_ev .other_layer .middle").toggleClass("bg_kleur_ev");
     /*andere beginvoorwaarden*/
     $('.orgx .lesinhoud').hide();
     $('.orgx .welkom').show();
@@ -46,37 +20,58 @@ var ready = function() {
     })
 
 
-    /*VERTIKAAL VERTIKAAL*/
+    /*ORG_VERTIKAAL*/
     /* KNOPPEN BOVEN BAKKER*/
 
     /*Grootboekrekeningen*/
-    $(".btn_boven_organisatie .btnorg1").click(function() { // klein
+    $(".btn_boven_organisatie .btnorg1").click(function() {
         $(".other_layer").toggle();
     });
     /*processen*/
-    $(".btn_boven_organisatie .btnorg8").click(function() { // klein
-        $(".other_layer .two, .other_layer .ten").toggle();
+    $(".btn_boven_organisatie .btnorg8").click(function() {
+        $(".other_layer .one, .other_layer .ten").toggle();
     });
-    /*dienstverlenende producten*/
-    $(".btn_boven_organisatie .btnorg2").click(function() { // klein
-        $(".l_functionele_kosten, .l_product_dienstverlenend, .l_kostensoorten").toggle();
+    /*kostenstructuur*/
+    $(".btn_boven_organisatie .btnorg2").click(function() {
+        $(".l_totale_kosten, .l_functionele_kosten, .l_kostensoorten").toggle();
     });
     /*leveranciers en klanten*/
-    $(".btn_boven_organisatie .btnorg3").click(function() { // klein
+    $(".btn_boven_organisatie .btnorg3").click(function() {
         $(".l_leveranciers, .l_klanten").toggle();
     });
-    /*leveranciers en klanten*/
-    $(".btn_boven_organisatie .btnorg6").click(function() { // overeenkomsten
+    /*overeenkomsten*/
+    $(".btn_boven_organisatie .btnorg6").click(function() {
         $(".l_journaals").toggle();
     });
-    /*leveranciers en klanten*/
-    $(".btn_boven_organisatie .btnorg7").click(function() { // belastingen en eigenaar
-        $(".l_overheid, .l_eigenaar").toggle();
+
+    /* dienstverlenende producten*/
+    $(".btn_boven_organisatie .btnorg10").click(function() {
+        $(".l_product_dienstverlenend").toggle();
     });
-    $(".btn_boven_organisatie .btnorg4").click(function() { // waarde
+
+    /*knowhow*/
+    $(".btn_boven_organisatie .btnorg12").click(function() {
+        $(".l_knowhow").toggle();
+    });
+
+    /*personeel en kennis*/
+    $(".btn_boven_organisatie .btnorg11").click(function() {
+        $(".l_personeel").toggle();
+    });
+    /*belastingen en eigenaar*/
+    $(".btn_boven_organisatie .btnorg7").click(function() {
+        $(".l_overheid, .l_eigenaar, .l_personeel_overeenkomsten").toggle();
+    });
+    /*financiele producten*/
+    $(".btn_boven_organisatie .btnorg9").click(function() {
+        $(".l_fp").toggle();
+    });
+    /*eigenaar*/
+    $(".btn_boven_organisatie .btnorg4").click(function() {
         $(".l_ev").toggle();
     });
 
+    /*FOTO EN VIDEO*/
    $(".headerorg .btn-overzichtsfoto").click(function() { // waarde
         $(".foto_org").toggle();
     });
@@ -96,28 +91,6 @@ var ready = function() {
     }
 
 
-    /*KLEUREN*/
-    $(".btn_boven_organisatie .btnorg5").click(function() { // waarde
-        $(".l_journaals .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-        $(".l_klanten .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-        $(".l_leveranciers .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
-        $(".l_verkochte_producten .first_layer .middle").toggleClass("bg_kleur_verkocht");
-        $(".l_functionele_kosten .first_layer .middle, .l_product_dienstverlenend .first_layer .middle, .l_kostensoorten .first_layer .middle").toggleClass("bg_kleur_kosten");
-        $(".l_vla .first_layer .middle, .l_va .first_layer .middle, .l_kosten .first_layer .middle, .l_personeel .first_layer .middle, .l_fp .first_layer .middle").toggleClass("bg_kleur_input");
-        $(".l_overheid .first_layer .middle, .l_eigenaar .first_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
-        $(".l_geld .first_layer .middle").toggleClass("bg_kleur_geld");
-        $(".l_ev .first_layer .middle").toggleClass("bg_kleur_ev");
-        $(".l_journaals .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-        $(".l_verkochte_producten .other_layer .middle").toggleClass("bg_kleur_verkocht");
-        $(".l_functionele_kosten .other_layer .middle, .l_product_dienstverlenend .other_layer .middle, .l_kostensoorten .other_layer .middle").toggleClass("bg_kleur_kosten");
-        $(".l_vla .other_layer .middle, .l_va .other_layer .middle, .l_kosten .other_layer .middle, .l_personeel .other_layer .middle, .l_fp .other_layer .middle").toggleClass("bg_kleur_input");
-        $(".l_overheid .other_layer .middle, .l_eigenaar .other_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
-        $(".l_geld .other_layer .middle").toggleClass("bg_kleur_geld");
-        $(".l_ev .other_layer .middle").toggleClass("bg_kleur_ev");
-        $(".l_klanten .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-        $(".l_leveranciers .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
-    });
-
     //  Grootboekrekening Voorraad brood
     $(document.body).on("click", ".l_vla .other_layer", function() {
         $(".grootboek-rails").toggleClass("displaynone");
@@ -125,24 +98,73 @@ var ready = function() {
 
 
     //YELLOW BUTTONS
-    $(".l_verkochte_producten .icon-product-geproduceerd").hover(function() { // processen
+    $(".l_verkochte_producten .gele_uitleg .icon-bij").hover(function() { // processen
         $(".l_va .other_layer .nine, .l_va .other_layer .ten, .l_kosten .other_layer .nine, .l_kosten .other_layer .ten, .l_personeel .other_layer .nine, .l_personeel .other_layer .ten, .l_rente .middle, .l_vla .nine, .l_vla .ten").toggleClass("attention_yellowbackground");
+
     });
 
-    /*  UITKLAPPEN dienstverlenendeVoorbeelden*/
-    $(".l_product_dienstverlenend .middle").click(function() { // processen
+    //UITKLAPPEN
+    //  overeenkomsten
+    $(".l_journaals .first_layer .middle").click(function() {
+        $(" .l_journaals .other_layer").toggle();
+    });//  verkochte producten
+    $(".l_verkochte_producten .other_layer.gbr .middle").click(function() {
+        $(" .verkocht_wrap").toggle();
+        $(".l_verkochte_producten .gbr .eight, .l_verkochte_producten .gbr .nine").toggle();
+    });
+    //   totale kosten
+    $(".l_totale_kosten .first_layer .middle").click(function() {
+        $(" .totale_kosten_wrap").toggle();
+    });
+    //  dienstverlenendeVoorbeelden
+    $(".l_product_dienstverlenend .first_layer .middle").click(function() {
         $(" .dienstverlenende_voorbeelden_wrap").toggle();
     });
-
-    /* UITKLAPPEN Functionele kosten*/
-    $(".l_functionele_kosten .middle").click(function() { // processen
+    //  Functionele kosten
+    $(".l_functionele_kosten .first_layer .middle").click(function() {
         $(".functionele_kosten_wrap").toggle();
     });
-
-    /* UITKLAPPEN Kostensoorten*/
-    $(".l_kostensoorten .middle").click(function() { // processen
+    //  Kostensoorten
+    $(".l_kostensoorten .first_layer .middle").click(function() {
         $(".kostensoorten_wrap").toggle();
     });
+
+
+    /*
+    KLEUREN
+    $(".btn_boven_organisatie .btnorg5").click(function() { // waarde
+        $(".l_journaals .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
+        $(".l_klanten .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
+        $(".l_leveranciers .first_layer .middle").toggleClass("bg_kleur_overeenkomst");
+        $(".l_verkochte_producten .first_layer .middle").toggleClass("bg_kleur_verkocht");
+        $(".l_totale_kosten .first_layer .middle, .l_functionele_kosten .first_layer .middle, .l_product_dienstverlenend .first_layer .middle, .l_kostensoorten .first_layer .middle").toggleClass("bg_kleur_kosten");
+        $(".l_vla .first_layer .middle, .l_va .first_layer .middle, .l_kosten .first_layer .middle, .l_personeel .first_layer .middle, .l_fp .first_layer .middle").toggleClass("bg_kleur_input");
+        $(".l_overheid .first_layer .middle, .l_eigenaar .first_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
+        $(".l_geld .first_layer .middle").toggleClass("bg_kleur_geld");
+        $(".l_ev .first_layer .middle").toggleClass("bg_kleur_ev");
+        $(".l_journaals .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
+        $(".l_verkochte_producten .other_layer .middle").toggleClass("bg_kleur_verkocht");
+        $(".l_totale_kosten .other_layer .middle, .l_functionele_kosten .other_layer .middle, .l_product_dienstverlenend .other_layer .middle, .l_kostensoorten .other_layer .middle").toggleClass("bg_kleur_kosten");
+        $(".l_vla .other_layer .middle, .l_va .other_layer .middle, .l_kosten .other_layer .middle, .l_personeel .other_layer .middle, .l_fp .other_layer .middle").toggleClass("bg_kleur_input");
+        $(".l_overheid .other_layer .middle, .l_eigenaar .other_layer .middle").toggleClass("bg_kleur_belasting_eigenaar");
+        $(".l_geld .other_layer .middle").toggleClass("bg_kleur_geld");
+        $(".l_ev .other_layer .middle").toggleClass("bg_kleur_ev");
+        $(".l_klanten .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
+        $(".l_leveranciers .other_layer .middle").toggleClass("bg_kleur_overeenkomst");
+    });*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

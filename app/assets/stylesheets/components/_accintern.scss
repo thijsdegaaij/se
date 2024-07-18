@@ -7,7 +7,7 @@
 	position: relative;
 	width: 1300px;
 	margin-top: 24px;
-}
+
 .btns-intern { 
     position: absolute;
     top: 4px;
@@ -32,7 +32,7 @@
   flex-direction: row;
   //justify-content: center;  
 }
-
+}
 
 
 //  INTERN
@@ -249,7 +249,7 @@
   	}
 }
 .boeking_titel {
-	padding: 0px 0px 24px 0px;
+	padding: 0px 0px 8px 0px;
 	font-size: 18px;
 	color: $text-color-grey;
 }
@@ -277,6 +277,7 @@
    //border-bottom: 1px solid $border-color-base;  
    padding-top:36px;
    height: 500px;
+   //background-color: red;
    
    .header {
    	position: absolute;
@@ -324,22 +325,53 @@
 }
 .journaals_kort {
 	padding-bottom: 8px;
+	width: 500px;
 
-}
-.journaals_kort .journaals {
-	display: contents;
-	padding-top:0px;
-	
-}
-.journaals_kort .btns {
-	display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    //background-color: red;
-    margin-top: 0px;
-    margin-bottom: 8px;
-    padding-right: 0px;
+	 .journaals {
+		display: contents;
+		padding-top:0px;
+
+	}
+	.btnsthijs {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		margin: 0px 0px 18px 0px;
+		.overeenkomsten_laag, .leveringen_laag,
+		.interne_boekingen_laag {
+			display: flex;
+			flex-direction: row;
+			margin-top: 4px;
+			.button {
+				padding: 0px 6px;
+				margin: 0px 6px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.inkoop, .verkoop {
+		background-color: $gray1;
+	}
+	.bank {
+		background-color: $bggeld;
+	}
+	.leveringen_uit {
+		background-color: $bginternin;
+	}
+	.leveringen_in {
+		background-color: $bgkosten;
+	}
+	.intern_boekingen {
+		background-color: $bgttkosten;
+	}
+	.intern_overeenkomsten {
+		background-color: $bgplanning;
+	}
+	.intern_procedures {
+		background-color: $bgprocedures;
+	}
+
 }
 
  
@@ -360,11 +392,14 @@
 		border: 25px solid white;
 		left: -25px;
 		background-color: white;
+		//border-width: 0px;
+		table {border-width: 0px;}
 		thead {
-			background-color: $bgovereenkomst;
+			background-color: $background-color-1;
 		}
 		th, td {
 			padding: 8px 4px;
+			border-width: 0px;
 		}
 		tr:nth-child(odd) td {
     background: none repeat scroll 0 0 $gray1;
@@ -450,7 +485,7 @@
 
 .overeenkomst {  
      .inkoop-ovr {
-        background-color: lightyellow;   
+        background-color:white; //$bgovereenkomst ;   
 		width: 380px; 
 		border: 1px solid $border-color-base;  
 		border-radius: 6px;	

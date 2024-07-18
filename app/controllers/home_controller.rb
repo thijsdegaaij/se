@@ -124,7 +124,6 @@ class HomeController < ApplicationController
     @boekingen_vla = @organisatie_search.boekingen.where("grootboekrekening_id = ?", 10)
 
  
-      # TOTALE VOORRADEN DOOR THIJS
       # Geld
       @geld = 0
       @geld= calc_boekproces(@organisatie_search, [1,2])[2] # inkomen + uitgaven
@@ -133,19 +132,25 @@ class HomeController < ApplicationController
       # Overheid
       @overheid = 0
       @overheid= calc_boekproces(@organisatie_search, [7,8,9,10])[2] # nog te belaten btw + nog te ontvangen btw + vennootschapsb.
-      logger.debug(": #{@overigekosten}")
-      
+      logger.debug(": #{@overigekosten}")      
             
-      # OUTPUT GROOTBOEK
       # Inkoopwaarde van de omzet
       @inkw_vd_omzet = 0
       @inkw_vd_omzet = calc_boekproces(@organisatie_search, 24)[1]
       logger.debug("INKOOPWAARDE VAN DE OMZET: #{@inkw_vd_omzet}")
+
       
       # Bedrijfskosten
       @inkoopkosten= calc_boekproces(@organisatie_search, [25])[1]
       @verkoopkosten= calc_boekproces(@organisatie_search, [26])[1]
       @algemenekosten= calc_boekproces(@organisatie_search, [27])[1]
+
+
+      # Geplande Bedrijfskosten
+      @geplande_inkoopkosten= @inkoopkosten - 3000
+      @geplande_verkoopkosten= @verkoopkosten
+      @geplande_algemenekosten= @algemenekosten
+      @geplande_bedrijfskosten= @geplande_inkoopkosten + @geplande_verkoopkosten + @geplande_algemenekosten
 
       @bedrijfskosten = 0
       @bedrijfskosten= calc_boekproces(@organisatie_search, [25,26,27])[1]
@@ -156,11 +161,19 @@ class HomeController < ApplicationController
       @omzet= calc_boekproces(@organisatie_search, 29)[1]
       logger.debug("OMZET: #{@omzet}")
      
+      @geplande_omzet= @omzet + 40000
+
+      @geplande_inkw_vd_omzet= @geplande_omzet/2
+
+      # lening
+      @lening = 0
+      @lening = calc_boekproces(@organisatie_search, 5)[2]
+      logger.debug("BELASTINGEN: #{@belastingen}")
 
      
       # inkomsten / door thijs
       @inkomsten = 0
-      @inkomsten= calc_boekproces(@organisatie_search, 1)[0]
+      @inkomsten= (calc_boekproces(@organisatie_search, 1)[0] - @lening)
       logger.debug("OMZET: #{@omzet}")
 
 
@@ -206,6 +219,8 @@ class HomeController < ApplicationController
       @basiswinst = 0
       @basiswinst = @omzet - @inkw_vd_omzet - @bedrijfskosten
       logger.debug("BASISWINST: #{@basiswinst}")
+
+      @geplande_basiswinst = @geplande_omzet - @geplande_inkw_vd_omzet - @geplande_bedrijfskosten
       
       # Overige kosten 
       @rente = 0
@@ -235,12 +250,12 @@ class HomeController < ApplicationController
       
       #Eigen vermogen grootboek
       # Start EV
-      @ev_start = 4000
+      @ev_start = 0
       # Netto winst voor belasting
       @nettowinstvb = @basiswinst + @rente
 
       #  belasting
-      @belasting_org = - @nettowinstvb/4
+      @belasting_org = - @nettowinstvb/5
       # Netto winst na belasting
       @nettowinstnb = @nettowinstvb + @belasting_org
       # Eind EV

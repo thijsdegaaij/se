@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 //select
-    $('.mensenxx #mensalgemeen').hide();
+    $('.mensenxx #mensalgemeen').show();
     $(' .mensenxx #mensmaxima').show();
     $('.mensenxx .orgonderdelen').change(function() {
         $('.mensenxx .orgshow').hide();
@@ -89,10 +89,10 @@ $(document).ready(function() {
 			
 			<div id="mensmaxima" class="orgshow">
 		<!-- beleving -->
-				<div class="cont-mens-display ">
+				<div class="cont-mens-display  ">
 				    <div class="cont-mens"> 
 				        <div class="titelz button">
-				        	<div class="titel">Input (behoeften)</div><!-- 
+				        	<div class="titel">Input</div><!-- 
 					        <div class=" styled-select">
 					            <select class="orgonderdelen">
 					                <option value="mensmaxima">Mountainbiken</option>
@@ -141,7 +141,7 @@ $(document).ready(function() {
 				                                <div class="tekst">Behoeften (vraag)</div>
 				                            </div>
 				                            <div class="beschrijving">
-				                                <div class="bes displaynone">
+				                                <div class="bes ">
 				                                    <ul>
 				                                        <li>Snel vertrekken bij mooi weer</li>
 				                                        <li>Vriendin meenemen</li>
@@ -158,7 +158,7 @@ $(document).ready(function() {
 				                                <div class="tekst">Ideaal (doel)</div>
 				                            </div>
 				                            <div class="beschrijving">
-				                                <div class="bes displaynone">
+				                                <div class="bes ">
 				                                    <ul>
 				                                        <li>Zonneschijn</li>
 				                                        <li>Lol maken</li>
@@ -172,9 +172,9 @@ $(document).ready(function() {
 				                            <div class="titel button">
 				                                 <div class="icon icon-reclame"></div>
 				                                <div class="tekst">Reclame</div>
-				                            </div>hkfghfhjk
+				                            </div>
 				                            <div class="beschrijving">
-				                                <div class="bes displaynone">
+				                                <div class="bes ">
 				                                    <img src="../images/ervaringen/mountainbikereclame.png">
 				                                </div>
 				                            </div>
@@ -189,41 +189,13 @@ $(document).ready(function() {
 		<!-- Maxima persoon -->
 				<div  class=" orgindeling-perspectief-maxima">
 				    <div class="orgindeling-perspectief maxima">
-				        <div class="titelnl">Mens</div>
+				        <div class="titelnl displaynone">Mens</div>
 				        <div class="kleur">
 				            <div class="titelperspectief">Perspectief van:</div>
 				           <div class="leftmiddleright">
 				            <div class="titel">Maxima Mulder</div>
-				            <div class="deel1">
-				                <div class="middle button">
-				                    <div class="mleft">
-				                        <div class="mens"><img src="/images/people/figuren/figuren_maxima.png"></div>
-				                        <div class="one"></div>
-				                    </div>
-				                    <div class="mright">
-				                        <div class="iconwide icon-pos"></div>
-				                        <div class="beschrijving"></div>
-				                    </div>
-				                </div>
-				                <div class="left input">
-				                    <div class="icon icon-dienstintern bginput"></div>
-				                    <div class="two button">input (behoeften)</div>
-				                    <div class="three"></div>
-				                    <div class="four"></div>
-				                    <div class="five"></div>
-				                    <div class="six"></div>
-				                </div>
-				                <div class="right">
-				                    <div class="icon icon-arbeidintern bgoutput"></div>
-				                    <div class="two vrijetijd button ">output (vrije-tijd, </div>
-				                    <div class="three arbeid button "> arbeid)</div>
-				                    <div class="four"></div>
-				                    <div class="five"></div>
-				                    <div class="six"></div>
-				                </div>
-				            </div>
-				            <div class="deel2 displaynone">
-				                <div class="middle">
+				            <div class="deel2 ">
+				                <div class="middle"><!-- 
 				                    <div class="mleft">
 				                        <div class="icon icon-pijlnaarboven bginput"></div>
 				                        <div class="one"></div>
@@ -247,7 +219,7 @@ $(document).ready(function() {
 					                    <div class="four"></div>
 					                    <div class="five"></div>
 					                    <div class="six"></div>
-				                	</div>
+				                	</div> -->
 				                </div>
 				                <div class="middle">
 				                    <div class="mleft">
@@ -332,8 +304,36 @@ $(document).ready(function() {
 				                    </div>
 				                </div>
 				            </div>
+				            <div class="deel1">
+				                <div class="middle button">
+				                    <div class="mleft">
+				                        <div class="mens"><img src="/images/people/figuren/figuren_maxima.png"></div>
+				                        <div class="one"></div>
+				                    </div>
+				                    <div class="mright">
+				                        <div class="iconwide icon-pos"></div>
+				                        <div class="beschrijving"></div>
+				                    </div>
+				                </div>
+				                <div class="left input">
+				                    <div class="icon icon-dienstintern bginput"></div>
+				                    <div class="two button">input (behoeften)</div>
+				                    <div class="three"></div>
+				                    <div class="four"></div>
+				                    <div class="five"></div>
+				                    <div class="six"></div>
+				                </div>
+				                <div class="right">
+				                    <div class="icon icon-arbeidintern bgoutput"></div>
+				                    <div class="two vrijetijd button ">output (vrije-tijd, </div>
+				                    <div class="three arbeid button "> arbeid)</div>
+				                    <div class="four"></div>
+				                    <div class="five"></div>
+				                    <div class="six"></div>
+				                </div>
+				            </div>
 				            <div class="orgindeling-eigendommen button">
-				                <div>Eigendommen</div>
+				                <div>huishouden uit</div>
 				            </div>
 				            </div>
 				        </div> 
@@ -350,7 +350,7 @@ $(document).ready(function() {
 
 
 			<div id="mensalgemeen" class="orgshow">
-				<div>Hallo algemeen</div>			   
+				<!-- <div>Hallo algemeen</div>			    -->
 			</div>
 			<div id="niemand" class="orgshow">
 				<div></div>			   

@@ -17,13 +17,14 @@ $('#jnl_intern').change(function() {
     $("#search_jnlintern_submit").click();
 });
 </script>
+<hr>
 <div class="header_laag">
     Interne verslaglegging</div>
 <div class="">
     <div class="flex-rowstart ">
         <div class="navdrie ">
-            <div class="navbtn btngrootboek btngeselecteerd">Grootboek</div>
-            <div class="navbtn btninboeken ">Journaals inboeken</div>
+            <div class="navbtn btninboeken btngeselecteerd">Journaals inboeken</div>
+            <div class="navbtn btngrootboek ">Grootboek</div>
             <div class="navbtn btnkostprijs ">Berekeningen</div>
         </div>
         <div class="flex-columncenter">
@@ -45,8 +46,9 @@ $('#jnl_intern').change(function() {
                             <div class="btn-inboeken intern button">Interne Boekingen</div>
                         </div>
                         <div>
+                            <!-- JOURNAALS -->
                             <!-- inkoopboek -->
-                            <%= render 'journaals/jnlinkoop' %>
+                            <%= render 'journaals/jnlinkoop'%>
                                 <!-- verkoopboek -->
                                 <%= render 'journaals/jnlverkoop' %>
                                     <!-- bankboek -->
@@ -59,6 +61,7 @@ $('#jnl_intern').change(function() {
                         <div class="klappers"></div>
                     </div>
                 </div>
+                
                 <div class="boekin inkoop">
                     <div class="inboekingsmogelijkheden inkoop">
                         <div id="search_bkninkoop_results">

@@ -26,6 +26,10 @@
     <p><%= f.select :grootboekrekening_id, Grootboekrekening.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
   </div> 
   <div class="field">
+    <p><%= f.label "Boekproces" %></p>
+    <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+  </div>
+  <div class="field">
     <p><%= f.label "Journaal" %></p>
     <p><%= f.select :journaal_id, Journaal.all.collect{|t| [t.boeknummer, t.id]}, { :include_blank => false } %></p>
   </div>
@@ -43,23 +47,19 @@
   </div>
   <div class="field">
     <%= f.label :bij_af %><br>
-    <%= f.text_field :bij_af %>
-  </div>
-  <div class="field">
-    <p><%= f.label "Boekproces" %></p>
-    <p><%= f.select :boekproces_id, Boekproces.all.collect{|t| [t.naam, t.id]}, { :include_blank => false } %></p>
+    <%= f.text_field :bij_af %><br>
   </div>
   <div class="field">
     <%= f.label :waarde %><br>
-    <%= f.number_field :waarde %>
+    <%= f.number_field :waarde %><br>
   </div>
   <div class="field">
     <%= f.label :p_inkoop %><br>
-    <%= f.number_field :p_inkoop %>
+    <%= f.number_field :p_inkoop %><br>
   </div>
   <div class="field">
     <%= f.label :hoeveelheid %><br>
-    <%= f.number_field :hoeveelheid %>
+    <%= f.number_field :hoeveelheid %><br>
   </div>
   <div class="actions">
     <%= f.submit %>
